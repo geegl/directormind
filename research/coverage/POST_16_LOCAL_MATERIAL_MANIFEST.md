@@ -1,6 +1,6 @@
 # Post-16 Local Material Manifest
 
-Updated: 2026-08-30 22:22 +08:00
+Updated: 2026-08-31
 
 This manifest is a local receipt audit for `POST_16_ACQUISITION_BACKLOG.md`. It records source identity, container facts, and evidence-readiness only. It does not promote filenames, title cards, burned subtitles, synopsis, or locator estimates into shot or sound evidence.
 
@@ -33,7 +33,7 @@ This manifest is a local receipt audit for `POST_16_ACQUISITION_BACKLOG.md`. It 
 | *Children of Men* (2006) | `人类之子.mp4` | `01:40:25.253`; AVC `856x480`; `30.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_MATCH`: three separated picture samples match the intended work | `LOCAL_PRESENT_BOUNDARY_REFINING`: moving-car ambush and passenger/vehicle/exterior state continuity; lower resolution limits micro-expression claims |
 | *Moonlight* (2016) | canonical local file; raw release label omitted | `01:50:25.118`; AVC `1920x1080`; `23.976 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_MATCH`: separated picture samples match the intended work and final-period meeting | `LOCAL_PRESENT_BOUNDARY_REFINING`: restaurant reunion, service-action buffer, distance, gaze, and restrained reconciliation |
 | *Bodyguard* S01E01 | `贴身保镖01.mp4` | `00:57:39.167`; AVC `856x480`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: train-bomb negotiation across suspect, passengers, police, marksmen, and remote command; lower resolution limits micro-expression claims |
-| *Mr. Robot* S04E07 | canonical local file; raw release label omitted | `00:56:13.504`; AVC `1920x1080`; `23.976 fps`; AAC `6ch/48 kHz` | `LOCAL_VISUAL_TARGET_MATCH`: separated picture samples match the intended three-person session; exact season/episode remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: coercive session, adjacent-room threat, memory reveal, and three-party power changes |
+| *Mr. Robot* S04E07 | canonical local file; raw release label omitted | `00:56:13.504`; AVC `1920x1080`; `23.976 fps`; AAC `6ch/48 kHz` | `LOCAL_VISUAL_TARGET_MATCH`: separated picture samples match the intended work and selected room sequence; exact season/episode remains filename/context-supplied | `VISUAL_EVIDENCE_COMPLETE`: selected single-room edit envelope `00:32:16.643–00:48:49.927` end-exclusive, 201 complete visible shots; opening mouth-area object state, high/elevated room registration, recurring multi-body/zone coverage, folder/page appearances, one visible sheet separation, late clean-single concentration and final fade are recorded; coercion, memory, identity, ontology, psychology, roles, dialogue, sound and hidden joins remain script-gated, INFERRED, or UNKNOWN |
 
 ## Resolved wrong receipt and replacement
 
@@ -62,7 +62,7 @@ The former receipt was readable, but repeated picture samples did not match the 
 8. *Children of Men* — moving-vehicle continuity, hidden-transition uncertainty, and severe-event state tracking.
 9. *Unbelievable* S01E02 — 77-shot exterior-to-vehicle sequence with nine shots at another visible location; picture supports spatial-handoff and post-interval re-registration candidates, while a parallel-thread function remains INFERRED and consent, non-coercion, trust, interview roles, and dialogue remain unproven.
 10. *Bodyguard* S01E01 — multi-authority remote coordination inside a restricted public space.
-11. *Mr. Robot* S04E07 — coercive three-party session and memory-driven scene reclassification.
+11. *Mr. Robot* S04E07 — 201-shot single-room multi-body audit complete; semantic participant count, coercion, memory, identity, psychology, roles and sound remain unproven.
 12. *Moonlight* — restrained reunion, service-action buffer, and minimum-action intimacy.
 13. *The Haunting of Hill House* S01E06 and *True Detective* S01E04 — two different continuous-geography stress tests.
 14. *Sound of Metal* — retain for an audio-capable subjective-sound audit; picture alone cannot answer its primary research question.
