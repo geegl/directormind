@@ -6,7 +6,7 @@ This began as a download and acquisition queue, not a replacement for the canoni
 
 Reference catalog: 57 works or exact television episodes (18 Tier A, 23 Tier B, 16 Tier C).
 
-Acquisition state: `PAUSED_CLOSED_CORPUS`. The user closed the current working pool at 28 complete local files plus five final downloads already in progress: *Sicario*, *Children of Men*, *Moonlight*, *Bodyguard* S01E01, and *Mr. Robot* S04E07. No other row in this backlog is an active download request unless the user explicitly reopens acquisition.
+Acquisition state: `CLOSED_EXCEPT_AUTHORIZED_SICARIO_REPLACEMENT`. The local folder currently contains 32 identity-matched media files. A former file supplied for *Sicario* visibly contained an unrelated work; the user removed it and authorized one correct replacement download. *Children of Men*, *Moonlight*, *Bodyguard* S01E01, and *Mr. Robot* S04E07 match their targets. Every other absent row is currently unavailable and skipped. No other backlog item is an active download request unless the user explicitly reopens acquisition.
 
 Local receipt and wrong-source status are tracked separately in `POST_16_LOCAL_MATERIAL_MANIFEST.md`; a locally present file is still only `BOUNDARY_REFINING` until picture-based scene verification is complete.
 
@@ -17,7 +17,7 @@ Ranges below are `LOCATOR_ESTIMATE` unless a row explicitly identifies an exact 
 | 场景问题 | 作品与片段 | 建议范围 | 定位锚点 |
 |---|---|---|---|
 | 受限资源下的多人程序性解题 | 《阿波罗13号》(1995) 方孔接圆管的二氧化碳过滤器方案 | `约 01:20:00–01:22:30` | 地面团队把仅有材料倒在桌上，任务从口头危机转为可见的物件组合与远程教学；与《熊家餐馆》的“程序崩溃”形成成功反例。 |
-| 蒙太奇压缩多年关系变化 | 《公民凯恩》(1941) 早餐桌蒙太奇 | `本地版约 00:51:50–00:54:05` | 同一餐桌、服装、距离和剪辑节奏逐段变化，把关系疏离压缩成数分钟；声音与精确自然切点仍待本地核验。 |
+| 蒙太奇压缩多次关系状态变化 | 《公民凯恩》(1941) 早餐桌蒙太奇 | `本地版 00:51:52.000–00:54:13.750` | 已核验完整转场包络、27 个连续 edit/shot units、六套可见状态包与五个水平拖影/画面重叠桥；精确经过多久、关系因果和全部声音仍为 UNKNOWN。 |
 | 平等群体中的少数立场形成 | 《十二怒汉》(1957) 第一次表决与唯一反对票 | `约 00:09:00–00:14:00` | 规则宣布、依次表态、手势计数、唯一未举手者被全桌重新观看；补“非正式权威”而非董事会正式权力。 |
 | 视觉化的程序性共同推理 | 《火线》S01E04 “Old Cases” 犯罪现场复勘 | `本地版 00:44:59.542–00:50:41.042` | 已核验完整连续场景与 68 个可见镜头：接近、进入、记录材料、测量/位置复演、表面测试、跨窗到庭院搜索；音频未直接审听，不能声称“极少对白”。 |
 | 技术解释转为可视因果证明 | 《切尔诺贝利》S01E05 审判中的反应堆失控重建 | `约 00:41:30–00:54:30` | 证物模型/图示、证词与过去事件交替，技术信息最终指向责任归属；补“解释不是停戏”的边界。 |
@@ -88,7 +88,7 @@ These exact episodes add serial-drama, restricted-space, subjective-memory, and 
 
 ## Acquisition and execution rules
 
-- Acquisition is paused. Allow only the five already-declared downloads to finish; do not request or start any other backlog title unless the user reopens the pool.
+- Acquisition is closed except for the one user-authorized replacement of the rejected *Sicario* receipt. The folder currently contains 32 identity-matched files; do not wait for, request, or start any other absent backlog title unless the user explicitly reopens the pool.
 - If acquisition is later reopened, obtain the full film or the exact full episode named in the table from a lawful source the user is entitled to access.
 - Keep media outside the repository. Do not commit stills, keyframes, contact sheets, subtitles, scripts, or long dialogue.
 - Tier labels now guide analysis priority only; they do not authorize additional downloads.

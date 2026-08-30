@@ -20,8 +20,9 @@ Updated: 2026-08-30
 | The Bear S01E07 visual evidence | CANDIDATE / EXACT VISIBLE-SHOT BOUNDARY / SOUND UNKNOWN |
 | Nobody (2021) bus visual evidence | CANDIDATE / 128 COMPLETE VISIBLE SHOTS / EXACT NATURAL BOUNDARY / SOUND UNKNOWN |
 | The Wire S01E04 “Old Cases” visual evidence | CANDIDATE / 68 COMPLETE VISIBLE SHOTS / EXACT NATURAL BOUNDARY / SOUND UNKNOWN |
+| Citizen Kane breakfast montage visual evidence | CANDIDATE / 27 COMPLETE EDIT-SHOT UNITS / EXACT SELECTED TRANSITION ENVELOPE / SOUND UNKNOWN |
 | Canonical first-16 local material | 15 PRESENT / 1 USER-SKIPPED / 0 PENDING DOWNLOAD |
-| Closed local corpus | 28 COMPLETE LOCAL FILES / 5 USER-DECLARED FINAL DOWNLOADS NOT YET FILESYSTEM-VISIBLE / 33 FINAL POOL / FURTHER ACQUISITION PAUSED |
+| Closed local corpus | 32 IDENTITY-MATCHED LOCAL FILES / 1 USER-AUTHORIZED SICARIO REPLACEMENT DOWNLOAD PENDING / ALL OTHER ABSENT TITLES SKIPPED |
 | Private 36-episode forward test | STRUCTURALLY_VERIFIED, not publicly reproducible |
 | Cross-work scene-problem coverage | SPARSE |
 | Seedance/H3 adapters | OUT_OF_SCOPE |
@@ -29,7 +30,7 @@ Updated: 2026-08-30
 
 ## Next research objective
 
-Work through the user-approved closed corpus without per-scene approval. `research/coverage/FIRST_16_SCENES.md` retains the canonical first batch: *Fleabag* S02E01 is explicitly skipped, the other 15 targets are present, and the extra *Brooklyn Nine-Nine* S05E03–04 file is retained because S05E04 contains a useful proposal-reveal scene. `research/coverage/POST_16_LOCAL_MATERIAL_MANIFEST.md` tracks 12 complete later sources and five final user-declared downloads: *Sicario*, *Children of Men*, *Moonlight*, *Bodyguard* S01E01, and *Mr. Robot* S04E07. Acquisition is paused after those five; all other backlog rows are reference-only. Prioritize information gain and counterexamples, and never promote a locator estimate until local picture verification.
+Work through the user-approved closed corpus without per-scene approval. `research/coverage/FIRST_16_SCENES.md` retains the canonical first batch: *Fleabag* S02E01 is explicitly skipped, the other 15 targets are present, and the extra *Brooklyn Nine-Nine* S05E03–04 file is retained because S05E04 contains a useful proposal-reveal scene. `research/coverage/POST_16_LOCAL_MATERIAL_MANIFEST.md` tracks 16 identity-matched later sources. The final arrivals for *Children of Men*, *Moonlight*, *Bodyguard* S01E01, and *Mr. Robot* S04E07 match their targets. A former file supplied for *Sicario* visibly contained an unrelated Japanese ensemble work; the user removed it and authorized one correct replacement download, which must pass picture identity before entering evidence. The folder currently contains 32 identity-matched files; every other absent title is skipped rather than awaited or requested. Prioritize information gain and counterexamples, and never promote a locator estimate until local picture verification.
 
 ## Promotion gate
 
