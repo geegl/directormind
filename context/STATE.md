@@ -24,7 +24,7 @@ Updated: 2026-08-30
 
 ## Next research objective
 
-Select the next scenes by coverage gap and contrast value. The immediate priority is not more cozy-supernatural dialogue; it is evidence for scene problems currently unsupported by Good Omens, especially public revelation, interrogation/threat, procedural competence, suspense/information asymmetry, action under AI constraints, and group power changes.
+Complete the user-approved corpus in `research/coverage/FIRST_16_SCENES.md`. Work through every locally available source without per-scene approval, keep unavailable items in one material manifest, and do not select a second wave until all 16 are complete or explicitly blocked by missing lawful source media.
 
 ## Promotion gate
 
