@@ -16,7 +16,7 @@ Time ranges are locator estimates. Every agent must verify the local edition aga
 | `TED-DARTS` | *Ted Lasso* S01E08, darts reversal | Underestimated character proves concealed competence | `00:20:55–00:25:25` | LOCAL_PRESENT_BOUNDARY_REFINING |
 | `GETOUT-HYPNOSIS` | *Get Out* (2017), hypnosis and Sunken Place | Polite conversation becomes subjective coercion | Current local edition: `00:31:15.333–00:36:47.750` | LOCAL_READY |
 | `AQP-BIRTH` | *A Quiet Place* (2018), labor and fireworks diversion | Sound-led suspense and separated action | `00:48:40–00:53:40` | LOCAL_PRESENT_BOUNDARY_REFINING |
-| `NOBODY-BUS` | *Nobody* (2021), bus fight | One-against-many action causality | `00:27:00–00:30:30` | LOCAL_PRESENT_BOUNDARY_REFINING |
+| `NOBODY-BUS` | *Nobody* (2021), bus fight | One-against-many action causality | Current local edition: `00:24:53.000–00:32:16.267` | EVIDENCE_COMPLETE_VISUAL_V0.1 / SOUND_UNKNOWN (`NOBODY-2021-BUS-001`) |
 | `MARRIAGE-ARGUMENT` | *Marriage Story* (2019), apartment argument | Two-person conflict escalation and collapse | `01:35:00–01:41:10` | LOCAL_PRESENT_BOUNDARY_REFINING |
 | `KNIVES-WILL` | *Knives Out* (2019), will reading | Public revelation and distributed witness reactions | `01:08:45–01:12:30` | LOCAL_PRESENT_BOUNDARY_REFINING |
 | `TLOU-BEDROOM` | *The Last of Us* S01E06, bedroom rejection | Proxy parent-child rupture | `00:41:10–00:43:40` | LOCAL_PRESENT_WITH_OVERLAY |

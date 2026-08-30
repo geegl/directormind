@@ -6,6 +6,8 @@ This is a download and acquisition queue, not an active replacement for the cano
 
 Current queue: 57 works or exact television episodes (18 Tier A, 23 Tier B, 16 Tier C).
 
+Local receipt and wrong-source status are tracked separately in `POST_16_LOCAL_MATERIAL_MANIFEST.md`; a locally present file is still only `BOUNDARY_REFINING` until picture-based scene verification is complete.
+
 All ranges below are `LOCATOR_ESTIMATE`. They help locate a scene after a lawful full-length film or full episode is available locally; they are not shot evidence. Local edition boundaries must be verified from picture and sound before any evidence file is written.
 
 ## Tier A — fill the largest evidence gaps first

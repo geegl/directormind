@@ -11,7 +11,7 @@ This is a research queue, not a claim that these rows exhaust directing.
 | Interrogation / threat / coercive power | One Good Omens pressure scene | HIGH | Contrast institutional interrogation, intimate threat, and physical containment |
 | Procedural competence / work / diagnosis | The Bear S01E07: one visible continuous shot, visual-only evidence | HIGH | Add direct sound audit and a successful-procedure contrast; test when small object state changes still require inserts |
 | Suspense and audience information asymmetry | Method-level only | HIGH | POV restriction, withheld space, sound-before-image, and reveal thresholds |
-| Action, pursuit, and impact | No real-shot evidence | HIGH | AI-safe geography, action continuity, anticipation-impact-aftermath, fallback cuts |
+| Action, pursuit, and impact | *Nobody* bus scene: one complete 128-visible-shot local audit, visual-only candidate evidence | HIGH | Direct sound audit; add a continuous-action contrast and a larger moving-geography pursuit; test threat/source → preparation → contact → result → recovery plus person/object state ledgers on original material |
 | Horror and supernatural rule revelation | Limited Good Omens evidence | HIGH | Dread escalation, off-screen space, negative space, and effect restraint |
 | Group power change / ensemble hierarchy | Limited triad evidence | HIGH | Masters versus singles, witness order, entrances, exits, and coalition visibility |
 | Romantic tension / intimacy without payoff | Private forward test only | MEDIUM | Distance, interruption, consent/readability, gaze, and reaction timing |

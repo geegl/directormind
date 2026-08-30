@@ -18,8 +18,9 @@ Updated: 2026-08-30
 | Good Omens evidence | CANDIDATE / PARTLY FRAME-UNVERIFIED |
 | Good Omens transfer rules | CANDIDATE, not universal |
 | The Bear S01E07 visual evidence | CANDIDATE / EXACT VISIBLE-SHOT BOUNDARY / SOUND UNKNOWN |
+| Nobody (2021) bus visual evidence | CANDIDATE / 128 COMPLETE VISIBLE SHOTS / EXACT NATURAL BOUNDARY / SOUND UNKNOWN |
 | Canonical first-16 local material | 15 PRESENT / 1 USER-SKIPPED / 0 PENDING DOWNLOAD |
-| Post-16 acquisition backlog | DOWNLOAD CANDIDATES ONLY / LOCATOR ESTIMATES |
+| Post-16 acquisition backlog | 6 TIER-A LOCAL PRESENT / 51 NOT YET COMPLETED / LOCATOR ESTIMATES; correct *Apollo 13* (1995) is visible only as an incomplete download |
 | Private 36-episode forward test | STRUCTURALLY_VERIFIED, not publicly reproducible |
 | Cross-work scene-problem coverage | SPARSE |
 | Seedance/H3 adapters | OUT_OF_SCOPE |
@@ -27,7 +28,7 @@ Updated: 2026-08-30
 
 ## Next research objective
 
-Complete the user-approved corpus in `research/coverage/FIRST_16_SCENES.md`. Work through every locally available source without per-scene approval and track local status in `research/coverage/FIRST_16_LOCAL_MATERIAL_MANIFEST.md`. *Fleabag* S02E01 is explicitly skipped because the user cannot obtain it; the other 15 canonical targets are locally present. The user-requested `research/coverage/POST_16_ACQUISITION_BACKLOG.md` supports lawful acquisition only and does not replace first-corpus execution priority.
+Complete the user-approved corpus in `research/coverage/FIRST_16_SCENES.md`. Work through every locally available source without per-scene approval and track local status in `research/coverage/FIRST_16_LOCAL_MATERIAL_MANIFEST.md`. *Fleabag* S02E01 is explicitly skipped because the user cannot obtain it; the other 15 canonical targets are locally present. Six Tier-A post-16 sources are now complete locally and tracked in `research/coverage/POST_16_LOCAL_MATERIAL_MANIFEST.md`; the correct *Apollo 13* (1995) remains incomplete. These sources may supply high-information contrasts after each current evidence unit, but locator estimates remain unpromoted until local picture verification.
 
 ## Promotion gate
 

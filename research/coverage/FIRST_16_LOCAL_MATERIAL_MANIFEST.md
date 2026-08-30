@@ -23,7 +23,7 @@ Current count:
 | `TED-DARTS` | `足球教练_第一季_2020_EP08_HD1080P_X264_AAC_English_CHS_ENG_BDYS.mp4` | LOCAL_PRESENT | Correct S01E08 file is now visible locally; scene identity and exact boundary pending. |
 | `GETOUT-HYPNOSIS` | `逃出绝命镇.mp4` | LOCAL_READY | Verified local range `00:31:15.333–00:36:47.750`. |
 | `AQP-BIRTH` | `寂静之地.mp4` | LOCAL_PRESENT | Labor is visible by `00:50:18`; the action continues beyond the original `00:53:40` estimate. Fireworks, birth, and final boundary still require calibration. |
-| `NOBODY-BUS` | `小人物.mp4` | LOCAL_PRESENT | Newly visible locally; target bus scene and exact boundaries pending. |
+| `NOBODY-BUS` | `小人物.mp4` | EVIDENCE_COMPLETE_VISUAL_V0.1 / SOUND_UNKNOWN | Verified natural local range `00:24:53.000–00:32:16.267`; 128 manually accepted visible shots. Strong for action causality/geography/state ledgers, PARTIAL for micro-performance and sound because the source is `856x480` and audio was not auditioned; see `NOBODY-2021-BUS-001`. |
 | `MARRIAGE-ARGUMENT` | `婚姻故事.mp4` | LOCAL_PRESENT | Argument is underway by `01:34:00`, continues through roughly `01:41:36`, and has ended by `01:42:00`. Exact boundary pending. |
 | `KNIVES-WILL` | `利刃出鞘.mp4` | LOCAL_PRESENT | Will-room setup is present by `01:07:21`; reveal and reaction cascade run to before the exterior cut near `01:12:00`. Exact boundary pending. |
 | `TLOU-BEDROOM` | `最后生还者.mp4` | LOCAL_PRESENT_WITH_OVERLAY | Correct S01E06 scene; local argument is approximately `00:40:15–00:44:00`, with an exterior cut by `00:44:15`. A persistent top-edge source overlay is present. |
