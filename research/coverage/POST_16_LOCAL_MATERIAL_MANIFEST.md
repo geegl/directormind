@@ -1,6 +1,6 @@
 # Post-16 Local Material Manifest
 
-Updated: 2026-08-30 14:27 +08:00
+Updated: 2026-08-30 15:22 +08:00
 
 This manifest is a local receipt audit for `POST_16_ACQUISITION_BACKLOG.md`. It records source identity, container facts, and evidence-readiness only. It does not promote filenames, title cards, burned subtitles, synopsis, or locator estimates into shot or sound evidence.
 
@@ -23,7 +23,7 @@ This manifest is a local receipt audit for `POST_16_ACQUISITION_BACKLOG.md`. It 
 | *Andor* S01E10 | `安多S01E10.mp4` | `00:42:47.750`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_TARGET_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: prison uprising/broadcast and distributed command transfer |
 | *Better Call Saul* S03E05 | `风骚律师S03E05.mp4` | `00:49:20.417`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_SERIES_AND_SEASON_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: public evidence reveal, witness reaction, and status reclassification |
 | *The Bear* S02E07 | `熊家餐馆S02E07.mp4` | `00:34:55.917`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_AND_TARGET_MATCH`; exact season/episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: training-to-live-service competence and delegated authority; contrast to S01E07 breakdown |
-| *Apollo 13* (1995) | canonical local file; raw release label omitted | `02:19:51.077`; AVC `1920x1080`; `23.976 fps`; two AAC `6ch/24 kHz` tracks | `LOCAL_VISUAL_WORK_VERIFIED`: narrative NASA mission film with Tom Hanks is visibly present; audio-language allocation is unverified | `LOCAL_PRESENT_BOUNDARY_REFINING`: limited-material filter construction; successful remote procedure |
+| *Apollo 13* (1995) | canonical local file; raw release label omitted | `02:19:51.077`; AVC `1920x1080`; `23.976 fps`; two HE-AAC/SBR `5.1` tracks with `24 kHz` core/container signal and `48 kHz` SBR extension signal | `LOCAL_VISUAL_WORK_VERIFIED`: narrative NASA mission film with Tom Hanks is visibly present; audio-language allocation and audible content are unverified | `VISUAL_EVIDENCE_COMPLETE`: `01:20:01.130–01:21:07.321`, 12 complete visible shots across one location handoff; material sorting begins, but later prototype completion, teaching, installation, and success are outside the evidence |
 | *The Martian* (2015) | `2015.火星救援.mp4` | `02:21:37.619`; AVC `1280x720`; `23.976 fps`; AAC `2ch/24 kHz` | `LOCAL_VISUAL_WORK_MATCH`: Mars/HAB setting and selected procedure section are visibly present | `LOCAL_PRESENT_BOUNDARY_REFINING`: procedure plan → visible failure → correction |
 | *True Detective* S01E04 | `真探S01E04.mp4` | `00:57:03.875`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_TARGET_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: continuous moving-geography assault/withdrawal sequence |
 | *Unbelievable* S01E02 | `难以置信S01E02.mp4` | `00:46:15.334`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_TARGET_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: trauma-informed interview as coercive-interrogation counterexample |
@@ -54,7 +54,7 @@ The former receipt was readable, but repeated picture samples did not match the 
 1. *Citizen Kane* — first real-shot montage/time-compression evidence in the current map.
 2. *The Bear* S02E07 — same-world successful-procedure contrast to the completed S01E07 breakdown.
 3. *Better Call Saul* S03E05 — public proof, witness reaction, and object-driven identity reclassification.
-4. *Apollo 13* — constrained-material successful procedure and remote teaching.
+4. *Apollo 13* — assessment-to-material-work handoff visual evidence complete; later prototype, remote teaching, installation, and result require separate evidence.
 5. *Chernobyl* S01E05 — technical reconstruction across present testimony and past action.
 6. *Andor* S01E10 — ensemble action and command transfer across multiple zones.
 7. *The Martian* — procedure failure and recovery.
