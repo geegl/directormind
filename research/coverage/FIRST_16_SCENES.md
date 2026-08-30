@@ -8,7 +8,7 @@ Time ranges are locator estimates. Every agent must verify the local edition aga
 
 | ID | Work and scene | Scene problem | Locator estimate | Current material status |
 |---|---|---|---|---|
-| `TSN-OPEN` | *The Social Network* (2010), opening breakup | Fast dialogue and power transfer | `00:00:00–00:07:30` | LOCAL_READY |
+| `TSN-OPEN` | *The Social Network* (2010), opening exchange; breakup/power meaning is script-gated | Stable opposing singles, variable holds, secondary-prop boundary and sequential terminal occupancy changes | Current local edition: `00:00:00.000–00:04:03.618` | EVIDENCE_COMPLETE_VISUAL_V0.1 / 91 COMPLETE VISIBLE SHOTS / DIALOGUE, BREAKUP AND POWER TRANSFER SCRIPT-GATED / SOUND_UNKNOWN (`THE-SOCIAL-NETWORK-2010-OPENING-EXCHANGE-001`) |
 | `DWP-CERULEAN` | *The Devil Wears Prada* (2006), cerulean correction | Script-gated correction turn with visible object and ensemble-attention setup | Current local edition: `00:19:36.000–00:21:24.917` | EVIDENCE_COMPLETE_VISUAL_V0.1 / 26 COMPLETE VISIBLE SHOTS / SOUND_UNKNOWN (`THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001`) |
 | `SUCCESSION-VOTE` | *Succession* S01E06, board no-confidence vote | Failed coalition and procedural status reversal | Current local edition: `00:47:03.500–00:52:33.042` | EVIDENCE_COMPLETE_V0.1 on PR #1 |
 | `FLEABAG-DINNER` | *Fleabag* S02E01, engagement dinner opening | Family ensemble and subtext reaction chain | `00:02:44–00:07:00` | USER_SKIPPED_SOURCE_UNAVAILABLE |
