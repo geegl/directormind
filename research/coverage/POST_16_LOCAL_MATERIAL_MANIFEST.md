@@ -1,6 +1,6 @@
 # Post-16 Local Material Manifest
 
-Updated: 2026-08-30 17:30 +08:00
+Updated: 2026-08-30 22:22 +08:00
 
 This manifest is a local receipt audit for `POST_16_ACQUISITION_BACKLOG.md`. It records source identity, container facts, and evidence-readiness only. It does not promote filenames, title cards, burned subtitles, synopsis, or locator estimates into shot or sound evidence.
 
@@ -27,7 +27,7 @@ This manifest is a local receipt audit for `POST_16_ACQUISITION_BACKLOG.md`. It 
 | *Sicario* (2015) | `边境杀手.mp4`; raw release label omitted | `02:01:20.340`; AVC Main `1920x1080`; `24.000 fps`; AAC-LC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_VERIFIED`: the source card, separated principal-character samples, and intended convoy/checkpoint material match the canonical work | `VISUAL_EVIDENCE_COMPLETE`: `00:33:03.042–00:38:01.292` end-exclusive, 96 contiguous visible shots; flash/motion/occlusion/dust false positives rejected; sound, first-shot attribution, and hit ownership remain UNKNOWN |
 | *The Martian* (2015) | `2015.火星救援.mp4` | `02:21:37.619`; AVC `1280x720`; `23.976 fps`; AAC `2ch/24 kHz` | `LOCAL_VISUAL_WORK_MATCH`: Mars/HAB setting and selected procedure section are visibly present | `LOCAL_PRESENT_BOUNDARY_REFINING`: procedure plan → visible failure → correction |
 | *True Detective* S01E04 | `真探S01E04.mp4` | `00:57:03.875`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_TARGET_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: continuous moving-geography assault/withdrawal sequence |
-| *Unbelievable* S01E02 | `难以置信S01E02.mp4` | `00:46:15.334`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_TARGET_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: trauma-informed interview as coercive-interrogation counterexample |
+| *Unbelievable* S01E02 | `难以置信S01E02.mp4` | video track `00:46:15.333`; container approximately `00:46:15.342`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_TARGET_MATCH`; exact episode number remains filename-supplied | `VISUAL_EVIDENCE_COMPLETE`: selected sequence `00:05:20.875–00:11:50.250` end-exclusive, 77 complete visible shots; exterior pair coverage, one same-direction vehicle approach/open-door boundary shot, a subsequent established two-person cabin state, recurring cabin geometry, nine other-location shots, and an editorial return to a two-person vehicle relation view are recorded; `P-B`'s complete ingress is not visible and a parallel-thread reading remains INFERRED, while permission, consent, non-coercion, trust, professional roles, conversation content, reaction causes, simultaneity, dialogue, sound, and hidden joins remain UNKNOWN or script-gated |
 | *The Haunting of Hill House* S01E06 | `鬼入侵S01E06.mp4` | `00:56:40.834`; HEVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_AND_TARGET_VERIFIED`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: funeral-home ensemble long-take and time-state transitions |
 | *Sound of Metal* | canonical local file; raw release label omitted | `02:00:46.698`; AVC `1920x1080`; `23.976 fps`; AAC `2ch/48 kHz` | `LOCAL_VISUAL_WORK_MATCH`; picture matches the work but the audio was not directly auditioned | `LOCAL_PRESENT_SOUND_UNAUDITED`: subjective-hearing target remains `UNKNOWN` until an audio-capable evidence pass |
 | *Children of Men* (2006) | `人类之子.mp4` | `01:40:25.253`; AVC `856x480`; `30.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_MATCH`: three separated picture samples match the intended work | `LOCAL_PRESENT_BOUNDARY_REFINING`: moving-car ambush and passenger/vehicle/exterior state continuity; lower resolution limits micro-expression claims |
@@ -60,7 +60,7 @@ The former receipt was readable, but repeated picture samples did not match the 
 6. *Andor* S01E10 — ensemble action and command transfer across multiple zones.
 7. *The Martian* — procedure failure and recovery.
 8. *Children of Men* — moving-vehicle continuity, hidden-transition uncertainty, and severe-event state tracking.
-9. *Unbelievable* S01E02 — non-coercive interview counterexample.
+9. *Unbelievable* S01E02 — 77-shot exterior-to-vehicle sequence with nine shots at another visible location; picture supports spatial-handoff and post-interval re-registration candidates, while a parallel-thread function remains INFERRED and consent, non-coercion, trust, interview roles, and dialogue remain unproven.
 10. *Bodyguard* S01E01 — multi-authority remote coordination inside a restricted public space.
 11. *Mr. Robot* S04E07 — coercive three-party session and memory-driven scene reclassification.
 12. *Moonlight* — restrained reunion, service-action buffer, and minimum-action intimacy.
