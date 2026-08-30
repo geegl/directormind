@@ -18,7 +18,7 @@ Time ranges are locator estimates. Every agent must verify the local edition aga
 | `AQP-BIRTH` | *A Quiet Place* (2018), labor and fireworks diversion | Sound-led suspense and separated action | `00:48:40–00:53:40` | LOCAL_PRESENT_BOUNDARY_REFINING |
 | `NOBODY-BUS` | *Nobody* (2021), bus fight | One-against-many action causality | Current local edition: `00:24:53.000–00:32:16.267` | EVIDENCE_COMPLETE_VISUAL_V0.1 / SOUND_UNKNOWN (`NOBODY-2021-BUS-001`) |
 | `MARRIAGE-ARGUMENT` | *Marriage Story* (2019), apartment argument | Two-person conflict escalation and collapse | `01:35:00–01:41:10` | LOCAL_PRESENT_BOUNDARY_REFINING |
-| `KNIVES-WILL` | *Knives Out* (2019), will reading | Public revelation and distributed witness reactions | Current local edition: `01:07:10.733–01:12:44.567`; interior core `01:07:19.267–01:11:37.400` | LOCAL_PRESENT_EXACT_ENVELOPE_VERIFIED / SHOT_TABLE_PENDING |
+| `KNIVES-WILL` | *Knives Out* (2019), will-reading sequence | Common-room paper turn, distributed body-state changes, and spatial spillover | Current local edition: `01:07:10.733–01:12:44.567`; interior core `01:07:19.267–01:11:37.400` | EVIDENCE_COMPLETE_VISUAL_V0.1 / 108 COMPLETE VISIBLE SHOTS / SOUND_UNKNOWN (`KNIVES-OUT-2019-WILL-READING-001`) |
 | `TLOU-BEDROOM` | *The Last of Us* S01E06, bedroom rejection | Proxy parent-child rupture | `00:41:10–00:43:40` | LOCAL_PRESENT_WITH_OVERLAY |
 | `HOTD-THRONE` | *House of the Dragon* S01E08, throne-room entrance | Protector arrival changes ensemble power | `00:39:05–00:42:40` | LOCAL_PRESENT_BOUNDARY_REFINING |
 | `BRIDGERTON-BANE` | *Bridgerton* S02E05, desire confession | Romantic tension without contact or payoff | `00:42:55–00:44:10` | LOCAL_PRESENT_BOUNDARY_REFINING |
