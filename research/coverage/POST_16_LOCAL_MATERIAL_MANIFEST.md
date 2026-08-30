@@ -1,40 +1,66 @@
 # Post-16 Local Material Manifest
 
-Updated: 2026-08-30 12:32 +08:00
+Updated: 2026-08-30 13:03 +08:00
 
-This manifest is a local receipt audit for `POST_16_ACQUISITION_BACKLOG.md`. It records source identity and container facts only. It does not promote locator estimates, subtitles, title cards, or synopsis into shot evidence.
+This manifest is a local receipt audit for `POST_16_ACQUISITION_BACKLOG.md`. It records source identity, container facts, and evidence-readiness only. It does not promote filenames, title cards, burned subtitles, synopsis, or locator estimates into shot or sound evidence.
 
-## Current snapshot
+## Final acquisition closure
 
-- Local full-length post-16 sources present: `6`.
-- All six currently present sources are Tier A targets.
-- Correct *Apollo 13* (1995) source completed: `NO`; one filename-identifiable 1995 download is currently incomplete.
-- Incomplete download artifacts visible in the Movie directory: `1` (`.qkdownloading`).
-- The previously observed `Apollo Thirteen: Survival` documentary was removed by the user and is not counted.
+- Complete readable sources in the local `Movie/` corpus: `28` (`16` files from the first-corpus batch, including the retained *Brooklyn Nine-Nine* S05E03–04 double episode, plus `12` post-16 sources).
+- Post-16 complete sources: `12`.
+- User-declared final downloads not yet visible anywhere in the scanned filesystem: `5`.
+- Closed working corpus after those downloads complete: `33` local media files.
+- Acquisition is paused after those five declared downloads. The larger backlog remains a research reference, not an active download request.
+- The earlier *Apollo Thirteen: Survival* documentary was deleted by the user. The completed local source is now the correct *Apollo 13* (1995) narrative feature.
+- Raw downloader host labels, release strings, and source-site branding are intentionally omitted below. Media remains local and is never committed.
 
-| Target | Local filename | Container audit | Identity check | Scene-problem status |
+## Complete post-16 sources
+
+| Target | Local receipt | Container audit | Identity boundary | Scene-problem status |
 |---|---|---|---|---|
-| *Citizen Kane* (1941) | `公民凯恩.mp4` | `01:59:23.834`; `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_IDENTITY_VERIFIED`: opening source card and visible main title identify *Citizen Kane* | `LOCAL_PRESENT_BOUNDARY_REFINING`: breakfast-table marriage montage; montage/time-compression gap |
-| *The Wire* S01E04 | `火线S01E04.mp4` | `00:59:28.875`; `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_IDENTITY_VERIFIED`: opening source card explicitly identifies Season 1 Episode 4 | `LOCAL_PRESENT_BOUNDARY_REFINING`: “Old Cases” crime-scene reconstruction; minimal-dialogue procedural reasoning gap |
-| *Chernobyl* S01E05 | `切尔诺贝利S01E05.mp4` | `01:08:24.960`; `1920x1080`; `25.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_IDENTITY_VERIFIED`: opening source card explicitly identifies Episode 5 | `LOCAL_PRESENT_BOUNDARY_REFINING`: trial/reactor reconstruction; technical explanation made visually causal |
-| *Andor* S01E10 | `安多S01E10.mp4` | `00:42:47.750`; `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_IDENTITY_VERIFIED`: visible episode content and full-episode duration match the named local source; exact scene locator remains unpromoted | `LOCAL_PRESENT_BOUNDARY_REFINING`: prison uprising and broadcast; command transfer across group action |
-| *Better Call Saul* S03E05 | `风骚律师S03E05.mp4` | `00:49:20.417`; `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_IDENTITY_VERIFIED`: opening source card explicitly identifies Season 3 Episode 5; the hearing, battery reveal, and visible aftermath are present around `00:36:00–00:47:30` | `LOCAL_PRESENT_BOUNDARY_REFINING`: “Chicanery” public proof and witness self-reclassification; natural scene boundary still requires a complete cut audit |
-| *The Bear* S02E07 | `熊家餐馆S02E07.mp4` | `00:34:55.917`; `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_IDENTITY_VERIFIED`: opening source card explicitly identifies Season 2 Episode 7; the dinner-service competence sequence is visible around `00:15:00–00:22:00` | `LOCAL_PRESENT_BOUNDARY_REFINING`: training transfers into live service and delegated authority; successful-procedure contrast to S01E07 breakdown |
-| *Apollo 13* (1995) | `阿波罗13号…1995…mp4.qkdownloading` (sanitized local temporary name) | `INCOMPLETE_DOWNLOAD`; `501,219,328` bytes at `12:32:47 +08:00`; no container audit | Filename identifies the intended 1995 feature, but identity has not been verified from picture and the incomplete file is not evidence | `DOWNLOAD_IN_PROGRESS_DO_NOT_ANALYZE`; the prior `01:38:13` documentary was the wrong work and has been deleted |
+| *Citizen Kane* (1941) | `公民凯恩.mp4` | `01:59:23.834`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_IDENTITY_VERIFIED`: visible source card and main title identify the work | `LOCAL_PRESENT_BOUNDARY_REFINING`: breakfast-table montage is locally visible around `00:51:50–00:54:05`; exact natural cuts still pending |
+| *The Wire* S01E04 | `火线S01E04.mp4` | `00:59:28.875`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_AND_TARGET_MATCH`; exact season/episode number remains filename-supplied | `VISUAL_EVIDENCE_COMPLETE`: “Old Cases” `00:44:59.542–00:50:41.042`, 68 manually accepted visible shots; all sound remains `UNKNOWN` |
+| *Chernobyl* S01E05 | `切尔诺贝利S01E05.mp4` | `01:08:24.960`; AVC `1920x1080`; `25.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_AND_TARGET_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: trial/reactor reconstruction; technical explanation converted to visible causality |
+| *Andor* S01E10 | `安多S01E10.mp4` | `00:42:47.750`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_TARGET_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: prison uprising/broadcast and distributed command transfer |
+| *Better Call Saul* S03E05 | `风骚律师S03E05.mp4` | `00:49:20.417`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_SERIES_AND_SEASON_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: public evidence reveal, witness reaction, and status reclassification |
+| *The Bear* S02E07 | `熊家餐馆S02E07.mp4` | `00:34:55.917`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_AND_TARGET_MATCH`; exact season/episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: training-to-live-service competence and delegated authority; contrast to S01E07 breakdown |
+| *Apollo 13* (1995) | canonical local file; raw release label omitted | `02:19:51.077`; AVC `1920x1080`; `23.976 fps`; two AAC `6ch/24 kHz` tracks | `LOCAL_VISUAL_WORK_VERIFIED`: narrative NASA mission film with Tom Hanks is visibly present; audio-language allocation is unverified | `LOCAL_PRESENT_BOUNDARY_REFINING`: limited-material filter construction; successful remote procedure |
+| *The Martian* (2015) | `2015.火星救援.mp4` | `02:21:37.619`; AVC `1280x720`; `23.976 fps`; AAC `2ch/24 kHz` | `LOCAL_VISUAL_WORK_MATCH`: Mars/HAB setting and selected procedure section are visibly present | `LOCAL_PRESENT_BOUNDARY_REFINING`: procedure plan → visible failure → correction |
+| *True Detective* S01E04 | `真探S01E04.mp4` | `00:57:03.875`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_TARGET_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: continuous moving-geography assault/withdrawal sequence |
+| *Unbelievable* S01E02 | `难以置信S01E02.mp4` | `00:46:15.334`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_TARGET_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: trauma-informed interview as coercive-interrogation counterexample |
+| *The Haunting of Hill House* S01E06 | `鬼入侵S01E06.mp4` | `00:56:40.834`; HEVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_AND_TARGET_VERIFIED`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: funeral-home ensemble long-take and time-state transitions |
+| *Sound of Metal* | canonical local file; raw release label omitted | `02:00:46.698`; AVC `1920x1080`; `23.976 fps`; AAC `2ch/48 kHz` | `LOCAL_VISUAL_WORK_MATCH`; picture matches the work but the audio was not directly auditioned | `LOCAL_PRESENT_SOUND_UNAUDITED`: subjective-hearing target remains `UNKNOWN` until an audio-capable evidence pass |
 
-## Locator discipline
+## Declared final downloads
 
-- The acquisition backlog ranges remain `LOCATOR_ESTIMATE` until each local edition receives a complete visible-cut audit and natural-boundary check.
-- The local files contain burned bilingual subtitles and/or source overlays. They may help navigation but cannot prove framing, movement, sound, edit motivation, or performance facts.
-- An audio track existing in the container does not prove that original dialogue or ambience is preserved; it must be directly auditioned.
-- No source media, still, frame, contact sheet, subtitle, dialogue transcript, or private material from this audit is committed.
+None of these five targets was visible as a complete or temporary file in `Movie/` or the scanned `Downloads/` tree at the snapshot time. Their status comes from the user's current download queue and must not be treated as local-media evidence yet.
 
-## Next evidence order
+| ID | Canonical target | Status |
+|---|---|---|
+| `SICARIO-2015` | *Sicario* (2015), as identified by the user | `USER_DECLARED_IN_PROGRESS_NOT_FILESYSTEM_VISIBLE` |
+| `CHILDREN-OF-MEN-2006` | *Children of Men* (2006) | `USER_DECLARED_IN_PROGRESS_NOT_FILESYSTEM_VISIBLE` |
+| `MOONLIGHT-2016` | *Moonlight* (2016) | `USER_DECLARED_IN_PROGRESS_NOT_FILESYSTEM_VISIBLE` |
+| `BODYGUARD-S01E01` | *Bodyguard* S01E01 | `USER_DECLARED_IN_PROGRESS_NOT_FILESYSTEM_VISIBLE` |
+| `MR-ROBOT-S04E07` | *Mr. Robot* S04E07 | `USER_DECLARED_IN_PROGRESS_NOT_FILESYSTEM_VISIBLE` |
 
-1. *The Wire* S01E04 — compact successful-procedure contrast to the visual-only *The Bear* breakdown; high information gain per minute.
-2. *The Bear* S02E07 — same-world successful-procedure and competence-transfer contrast to the completed S01E07 breakdown evidence.
-3. *Citizen Kane* — first real-shot montage/time-compression evidence in the current map.
-4. *Better Call Saul* S03E05 — public evidence, witness reclassification, and distributed courtroom reaction; a useful object-reveal contrast to intimate betrayal.
-5. *Chernobyl* S01E05 — longer technical-explanation/public-accountability sequence; boundary must distinguish present testimony from reconstructed past action.
-6. *Andor* S01E10 — high-value ensemble/action sample, but larger shot and state ledger than the first five.
-7. *Apollo 13* (1995) — audit immediately after the temporary download becomes a complete, picture-verifiable file.
+## Locator and evidence discipline
+
+- Backlog ranges remain `LOCATOR_ESTIMATE` until the local edition receives a complete visible-cut audit and natural-boundary check; *The Wire* row is the current explicit exception for visual boundaries only.
+- A filename, burned subtitle, synopsis, or release label cannot prove framing, movement, editing, performance, sound, or a scene boundary.
+- An audio stream existing in the container does not prove language, mix, preserved ambience, or subjective sound design; those require direct audition.
+- No source media, frame, contact sheet, subtitle, dialogue transcript, raw downloader label, or private material from this audit is committed.
+
+## Evidence order within the closed corpus
+
+1. *Citizen Kane* — first real-shot montage/time-compression evidence in the current map.
+2. *The Bear* S02E07 — same-world successful-procedure contrast to the completed S01E07 breakdown.
+3. *Better Call Saul* S03E05 — public proof, witness reaction, and object-driven identity reclassification.
+4. *Apollo 13* — constrained-material successful procedure and remote teaching.
+5. *Chernobyl* S01E05 — technical reconstruction across present testimony and past action.
+6. *Andor* S01E10 — ensemble action and command transfer across multiple zones.
+7. *The Martian* — procedure failure and recovery.
+8. *Unbelievable* S01E02 — non-coercive interview counterexample.
+9. *The Haunting of Hill House* S01E06 and *True Detective* S01E04 — two different continuous-geography stress tests.
+10. *Sound of Metal* — retain for an audio-capable subjective-sound audit; picture alone cannot answer its primary research question.
+
+The five declared final downloads enter this order only after a complete file becomes visible and its picture identity is verified. No further acquisition is requested.

@@ -2,22 +2,24 @@
 
 Updated: 2026-08-30
 
-This is a download and acquisition queue, not an active replacement for the canonical first corpus. The works are ordered by scene-problem information gain rather than director, genre, popularity, or surface style.
+This began as a download and acquisition queue, not a replacement for the canonical first corpus. The works remain ordered by scene-problem information gain rather than director, genre, popularity, or surface style.
 
-Current queue: 57 works or exact television episodes (18 Tier A, 23 Tier B, 16 Tier C).
+Reference catalog: 57 works or exact television episodes (18 Tier A, 23 Tier B, 16 Tier C).
+
+Acquisition state: `PAUSED_CLOSED_CORPUS`. The user closed the current working pool at 28 complete local files plus five final downloads already in progress: *Sicario*, *Children of Men*, *Moonlight*, *Bodyguard* S01E01, and *Mr. Robot* S04E07. No other row in this backlog is an active download request unless the user explicitly reopens acquisition.
 
 Local receipt and wrong-source status are tracked separately in `POST_16_LOCAL_MATERIAL_MANIFEST.md`; a locally present file is still only `BOUNDARY_REFINING` until picture-based scene verification is complete.
 
-All ranges below are `LOCATOR_ESTIMATE`. They help locate a scene after a lawful full-length film or full episode is available locally; they are not shot evidence. Local edition boundaries must be verified from picture and sound before any evidence file is written.
+Ranges below are `LOCATOR_ESTIMATE` unless a row explicitly identifies an exact locally verified visual boundary and its evidence file. Estimates help locate a scene after a lawful full-length film or full episode is available locally; they are not shot evidence. Picture and sound claims must be verified separately before an evidence file states them.
 
 ## Tier A — fill the largest evidence gaps first
 
 | 场景问题 | 作品与片段 | 建议范围 | 定位锚点 |
 |---|---|---|---|
 | 受限资源下的多人程序性解题 | 《阿波罗13号》(1995) 方孔接圆管的二氧化碳过滤器方案 | `约 01:20:00–01:22:30` | 地面团队把仅有材料倒在桌上，任务从口头危机转为可见的物件组合与远程教学；与《熊家餐馆》的“程序崩溃”形成成功反例。 |
-| 蒙太奇压缩多年关系变化 | 《公民凯恩》(1941) 早餐桌蒙太奇 | `约 00:53:30–00:56:00` | 同一餐桌、服装、距离、对白温度和剪辑节奏逐段变化，把婚姻疏离压缩成数分钟。 |
+| 蒙太奇压缩多年关系变化 | 《公民凯恩》(1941) 早餐桌蒙太奇 | `本地版约 00:51:50–00:54:05` | 同一餐桌、服装、距离和剪辑节奏逐段变化，把关系疏离压缩成数分钟；声音与精确自然切点仍待本地核验。 |
 | 平等群体中的少数立场形成 | 《十二怒汉》(1957) 第一次表决与唯一反对票 | `约 00:09:00–00:14:00` | 规则宣布、依次表态、手势计数、唯一未举手者被全桌重新观看；补“非正式权威”而非董事会正式权力。 |
-| 极少对白的程序性共同推理 | 《火线》S01E04 “Old Cases” 犯罪现场复勘 | `约 00:45:00–00:47:10` | 两名侦探以视线、位置复演、测量和有限感叹词重建弹道；检验无解释性对白时如何保持因果可读。 |
+| 视觉化的程序性共同推理 | 《火线》S01E04 “Old Cases” 犯罪现场复勘 | `本地版 00:44:59.542–00:50:41.042` | 已核验完整连续场景与 68 个可见镜头：接近、进入、记录材料、测量/位置复演、表面测试、跨窗到庭院搜索；音频未直接审听，不能声称“极少对白”。 |
 | 技术解释转为可视因果证明 | 《切尔诺贝利》S01E05 审判中的反应堆失控重建 | `约 00:41:30–00:54:30` | 证物模型/图示、证词与过去事件交替，技术信息最终指向责任归属；补“解释不是停戏”的边界。 |
 | 群体行动中的命令权交接 | 《安多》S01E10 “One Way Out” 越狱与广播讲话 | `约 00:24:00–00:34:30` | 个体行动扩散成多层空间的集体推进，广播权从策划者转交给能号召人群的人。 |
 | 公开质证中证物改变证人身份 | 《风骚律师》S03E05 “Chicanery” 电池揭示与 Chuck 失控 | `约 00:40:05–00:48:15` | 隐藏证物先改变观众判断，再诱发证人自我暴露；补“物证—反应—身份重分类”的完整链。 |
@@ -86,11 +88,12 @@ These exact episodes add serial-drama, restricted-space, subjective-memory, and 
 
 ## Acquisition and execution rules
 
-- Download the full film or the exact full episode named in the table, using a lawful source the user is entitled to access.
+- Acquisition is paused. Allow only the five already-declared downloads to finish; do not request or start any other backlog title unless the user reopens the pool.
+- If acquisition is later reopened, obtain the full film or the exact full episode named in the table from a lawful source the user is entitled to access.
 - Keep media outside the repository. Do not commit stills, keyframes, contact sheets, subtitles, scripts, or long dialogue.
-- Tier A should be acquired before Tier B when storage or download time is constrained.
+- Tier labels now guide analysis priority only; they do not authorize additional downloads.
 - Within Tier C, start with *True Detective* S01E04, *The Haunting of Hill House* S01E06, *Mindhunter* S01E02, *Mr. Robot* S04E07, *Unbelievable* S01E02, *Bodyguard* S01E01, *Russian Doll* S01E08, *The Good Place* S01E13, *The Terror* S01E01, and *Shōgun* S01E09; these ten have the least mechanism overlap with one another.
-- A downloaded work is not automatically evidence-worthy. The Root Agent must verify scene continuity, local time boundaries, dialogue/ambience integrity, and non-duplication before shot logging.
+- A downloaded work is not automatically evidence-worthy. Before visual shot logging, the Root Agent must verify scene continuity, local picture boundaries, and non-duplication. Dialogue, ambience, music, effects, and sound-led edit claims additionally require direct audition.
 - One continuous scene produces one evidence file. A single scene may only propose candidate rules; it cannot establish a universal directing law.
 
 ## Public locator references
