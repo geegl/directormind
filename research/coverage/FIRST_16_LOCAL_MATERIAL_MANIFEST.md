@@ -6,7 +6,8 @@ This manifest records only what can currently be opened from the local movie dir
 
 Current count:
 
-- 15 canonical sources are locally present, including the already completed *Succession* source.
+- 14 canonical targets are locally present and visually matched, including the already completed *Succession* source.
+- 1 additional local file is present but target-scene rejected: the file named as *Better Call Saul* S01E09 does not contain the requested Chuck/Jimmy betrayal scene; its exact episode identity remains UNKNOWN.
 - 1 canonical source, *Fleabag* S02E01, is `USER_SKIPPED_SOURCE_UNAVAILABLE`.
 - 0 canonical sources remain pending download.
 - The additional combined *Brooklyn Nine-Nine* S05E03–04 file is not the requested S05E14, but S05E04 contains a useful second-wave scene and should be retained.
@@ -19,9 +20,9 @@ Current count:
 | `DWP-CERULEAN` | `穿普拉达的女王_The_Devil_Wears_Prada_2006_BD720P_X264_AAC_English_CHS_ENG.mp4` | EVIDENCE_COMPLETE_VISUAL_V0.1 / SOUND_UNKNOWN | Verified natural local envelope `00:19:36.000–00:21:24.917` end-exclusive (`2614f / 108.917s`), 26 complete visible shots. The former `00:20:14.833` start is `S013` and omits the visible object/state/room-attention setup; see `THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001`. Authority, correction, color knowledge, dialogue, reaction causes and outcome remain script-gated, INFERRED, or UNKNOWN. |
 | `SUCCESSION-VOTE` | `继承之战S01E06.mp4` | EVIDENCE_COMPLETE_V0.1 | Verified local range `00:47:03.500–00:52:33.042`; evidence is on PR #1. |
 | `FLEABAG-DINNER` | — | USER_SKIPPED_SOURCE_UNAVAILABLE | User confirmed the episode cannot be downloaded. Do not block the corpus on this scene and do not substitute subtitles or synopsis. |
-| `BCS-CHUCK` | `风骚律师S01E09.mp4` | LOCAL_PRESENT | Reveal is visible around `00:42:00–00:43:20` in this edition; the corpus locator estimate runs into the following scene. Exact boundary pending. |
+| `BCS-CHUCK` | `风骚律师S01E09.mp4` | LOCAL_FILE_PRESENT_TARGET_SCENE_REJECTED | Picture audit of the target and late ranges does not show the requested Chuck/Jimmy betrayal reveal. Visible late material belongs to other sequences; the filename supplies S01E09, but exact episode identity is UNKNOWN. Do not create target evidence or substitute a different scene under this ID. |
 | `TED-DARTS` | `足球教练_第一季_2020_EP08_HD1080P_X264_AAC_English_CHS_ENG_BDYS.mp4` | LOCAL_PRESENT | Correct S01E08 file is now visible locally; scene identity and exact boundary pending. |
-| `GETOUT-HYPNOSIS` | `逃出绝命镇.mp4` | LOCAL_READY | Verified local range `00:31:15.333–00:36:47.750`. |
+| `GETOUT-HYPNOSIS` | `逃出绝命镇.mp4` | EVIDENCE_COMPLETE_VISUAL_V0.1 / SOUND_UNKNOWN | Verified natural envelope `00:31:15.333–00:36:47.750` end-exclusive (`7978f / 332.417s`), 74 complete visible shots. Picture supports warm-room relation/face coverage, visually similar handled-object and hand appearances, cool-room and black-field image-state changes, one continuous scale transform and later room/black-field alternation; hypnosis, coercion, consent, object causality, cross-cut identity, subjective function and sound remain script-gated, INFERRED, or UNKNOWN. See `GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001`. |
 | `AQP-BIRTH` | `寂静之地.mp4` | LOCAL_PRESENT | Labor is visible by `00:50:18`; the action continues beyond the original `00:53:40` estimate. Fireworks, birth, and final boundary still require calibration. |
 | `NOBODY-BUS` | `小人物.mp4` | EVIDENCE_COMPLETE_VISUAL_V0.1 / SOUND_UNKNOWN | Verified natural local range `00:24:53.000–00:32:16.267`; 128 manually accepted visible shots. Strong for action causality/geography/state ledgers, PARTIAL for micro-performance and sound because the source is `856x480` and audio was not auditioned; see `NOBODY-2021-BUS-001`. |
 | `MARRIAGE-ARGUMENT` | `婚姻故事.mp4` | LOCAL_PRESENT | Argument is underway by `01:34:00`, continues through roughly `01:41:36`, and has ended by `01:42:00`. Exact boundary pending. |
