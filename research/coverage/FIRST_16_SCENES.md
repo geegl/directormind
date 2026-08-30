@@ -23,7 +23,7 @@ Time ranges are locator estimates. Every agent must verify the local edition aga
 | `HOTD-THRONE` | *House of the Dragon* S01E08, throne-room entrance | Protector arrival changes ensemble power | `00:39:05–00:42:40` | LOCAL_PRESENT_BOUNDARY_REFINING |
 | `BRIDGERTON-BANE` | *Bridgerton* S02E05, desire confession | Romantic tension without contact or payoff | `00:42:55–00:44:10` | LOCAL_PRESENT_BOUNDARY_REFINING |
 | `BEAR-ORDERS` | *The Bear* S01E07, continuous kitchen breakdown | Continuous multi-person procedural breakdown | Current local edition: `00:02:22.768–00:19:31.379` | EVIDENCE_COMPLETE_VISUAL_V0.1 / SOUND_UNKNOWN |
-| `B99-CONFESSION` | *Brooklyn Nine-Nine* S05E14, confession strategy | Ego bait and self-incrimination | `00:19:45–00:21:35` episode-relative estimate | LOCAL_PRESENT_IN_S05E13-14_COMBINED_FILE |
+| `B99-CONFESSION` | *Brooklyn Nine-Nine* S05E14, confession strategy | Script-gated pride bait/self-incrimination with visible ownership transfer and delayed observer coverage | Combined-file `00:41:32.458–00:42:32.792`; derived second-program picture-local `00:19:41.375–00:20:41.708` | EVIDENCE_COMPLETE_VISUAL_V0.1 / 22 COMPLETE VISIBLE SHOTS / CONFESSION AND TACTIC SCRIPT-GATED / SOUND_UNKNOWN (`B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001`) |
 
 ## Execution rule
 

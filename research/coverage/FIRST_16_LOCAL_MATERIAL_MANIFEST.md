@@ -31,7 +31,7 @@ Current count:
 | `HOTD-THRONE` | `龙之家族S01E08.mp4` | LOCAL_PRESENT | Newly visible locally. The plea, Viserys entrance, throne walk, and ruling occupy approximately `00:35:50–00:44:50`; select the continuous evidence boundary before shot logging. |
 | `BRIDGERTON-BANE` | `布里奇顿S02E05.mp4` | LOCAL_PRESENT | Target interaction begins around `00:42:25`; confession and near-contact continue through roughly `00:44:30`, with aftermath to about `00:45:10`. Exact boundary pending. |
 | `BEAR-ORDERS` | `熊家餐馆S01E07.mp4` | EVIDENCE_COMPLETE_VISUAL_V0.1 / SOUND_UNKNOWN | Verified local range `00:02:22.768–00:19:31.379`: one visible shot from the interior hard cut to the credits hard cut. Invisible stitching and all sound facts remain `UNKNOWN`; see `BEAR-S01E07-REVIEW-001`. |
-| `B99-CONFESSION` | `神烦警探S05E13-14.mp4` | LOCAL_PRESENT | S05E14 “The Box” is now present in a two-episode combined file. Verify the episode split and translate episode-relative locators before shot logging. |
+| `B99-CONFESSION` | `神烦警探S05E13-14.mp4` | EVIDENCE_COMPLETE_VISUAL_V0.1 / SOUND_UNKNOWN | Verified combined-file envelope `00:41:32.458–00:42:32.792` end-exclusive (`1448f / 60.333s`), 22 complete visible shots. The second program's first photographic frame is combined `F31466 / 00:21:51.083`; the selected range derives to picture-local `00:19:41.375–00:20:41.708`, without claiming equivalence to an independent broadcast master. Picture supports short D1/P alternation, one relation reset, a `17.125s` P hold, delayed O singles and a mobile D1/O tail. Pride, baiting, confession, guilt, truth, roles, reaction causes, dialogue and sound remain script-gated, INFERRED, or UNKNOWN; see `B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001`. |
 
 ## Additional local source retention decision
 
