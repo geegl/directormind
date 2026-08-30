@@ -1,15 +1,15 @@
 # Post-16 Local Material Manifest
 
-Updated: 2026-08-30 15:22 +08:00
+Updated: 2026-08-30 15:48 +08:00
 
 This manifest is a local receipt audit for `POST_16_ACQUISITION_BACKLOG.md`. It records source identity, container facts, and evidence-readiness only. It does not promote filenames, title cards, burned subtitles, synopsis, or locator estimates into shot or sound evidence.
 
 ## Current corpus closure
 
-- Complete identity-matched files currently in the local `Movie/` corpus: `32` (`16` files from the first-corpus batch, including the retained *Brooklyn Nine-Nine* S05E03–04 double episode, plus `16` post-16 sources).
-- Current identity-matched sources: `32`; current identity-rejected files: `0`; user-authorized replacement downloads not yet filesystem-visible: `1`.
-- The former *Sicario* receipt failed picture identity and was removed by the user. One correct replacement is authorized and in progress; it remains outside the evidence pool until a completed file passes picture audit.
-- Acquisition is closed except for that replacement. Anything else absent from `Movie/` is currently unavailable and skipped. The larger backlog remains a research reference, not an active download request.
+- Complete identity-matched files currently in the local `Movie/` corpus: `33` (`16` files from the first-corpus batch, including the retained *Brooklyn Nine-Nine* S05E03–04 double episode, plus `17` post-16 sources).
+- Current identity-matched sources: `33`; current identity-rejected files: `0`; pending downloads: `0`.
+- The former *Sicario* receipt failed picture identity and was removed by the user. Its completed replacement passed separated-picture identity checks and is now admitted to the evidence pool.
+- Acquisition is closed. Anything absent from `Movie/` is currently unavailable and skipped. The larger backlog remains a research reference, not an active download request.
 - The earlier *Apollo Thirteen: Survival* documentary was deleted by the user. The completed local source is now the correct *Apollo 13* (1995) narrative feature.
 - Raw downloader host labels, release strings, and source-site branding are intentionally omitted below. Media remains local and is never committed.
 
@@ -24,6 +24,7 @@ This manifest is a local receipt audit for `POST_16_ACQUISITION_BACKLOG.md`. It 
 | *Better Call Saul* S03E05 | `风骚律师S03E05.mp4` | `00:49:20.417`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_SERIES_AND_SEASON_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: public evidence reveal, witness reaction, and status reclassification |
 | *The Bear* S02E07 | `熊家餐馆S02E07.mp4` | `00:34:55.917`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_AND_TARGET_MATCH`; exact season/episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: training-to-live-service competence and delegated authority; contrast to S01E07 breakdown |
 | *Apollo 13* (1995) | canonical local file; raw release label omitted | `02:19:51.077`; AVC `1920x1080`; `23.976 fps`; two HE-AAC/SBR `5.1` tracks with `24 kHz` core/container signal and `48 kHz` SBR extension signal | `LOCAL_VISUAL_WORK_VERIFIED`: narrative NASA mission film with Tom Hanks is visibly present; audio-language allocation and audible content are unverified | `VISUAL_EVIDENCE_COMPLETE`: `01:20:01.130–01:21:07.321`, 12 complete visible shots across one location handoff; material sorting begins, but later prototype completion, teaching, installation, and success are outside the evidence |
+| *Sicario* (2015) | `边境杀手.mp4`; raw release label omitted | `02:01:20.340`; AVC Main `1920x1080`; `24.000 fps`; AAC-LC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_VERIFIED`: the source card, separated principal-character samples, and intended convoy/checkpoint material match the canonical work | `VISUAL_EVIDENCE_COMPLETE`: `00:33:03.042–00:38:01.292` end-exclusive, 96 contiguous visible shots; flash/motion/occlusion/dust false positives rejected; sound, first-shot attribution, and hit ownership remain UNKNOWN |
 | *The Martian* (2015) | `2015.火星救援.mp4` | `02:21:37.619`; AVC `1280x720`; `23.976 fps`; AAC `2ch/24 kHz` | `LOCAL_VISUAL_WORK_MATCH`: Mars/HAB setting and selected procedure section are visibly present | `LOCAL_PRESENT_BOUNDARY_REFINING`: procedure plan → visible failure → correction |
 | *True Detective* S01E04 | `真探S01E04.mp4` | `00:57:03.875`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_TARGET_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: continuous moving-geography assault/withdrawal sequence |
 | *Unbelievable* S01E02 | `难以置信S01E02.mp4` | `00:46:15.334`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_TARGET_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: trauma-informed interview as coercive-interrogation counterexample |
@@ -34,13 +35,13 @@ This manifest is a local receipt audit for `POST_16_ACQUISITION_BACKLOG.md`. It 
 | *Bodyguard* S01E01 | `贴身保镖01.mp4` | `00:57:39.167`; AVC `856x480`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: train-bomb negotiation across suspect, passengers, police, marksmen, and remote command; lower resolution limits micro-expression claims |
 | *Mr. Robot* S04E07 | canonical local file; raw release label omitted | `00:56:13.504`; AVC `1920x1080`; `23.976 fps`; AAC `6ch/48 kHz` | `LOCAL_VISUAL_TARGET_MATCH`: separated picture samples match the intended three-person session; exact season/episode remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: coercive session, adjacent-room threat, memory reveal, and three-party power changes |
 
-## Rejected receipt and authorized replacement
+## Resolved wrong receipt and replacement
 
-The former receipt was readable, but repeated picture samples did not match the intended canonical work. The user removed it and started one replacement download. The historical audit is retained only to prevent the wrong source from being treated as evidence.
+The former receipt was readable, but repeated picture samples did not match the intended canonical work. The user removed it. The replacement is complete and verified; the historical audit remains only to prevent the old wrong source from being treated as evidence.
 
 | Intended target | Receipt state | Container audit | Picture audit | Execution status |
 |---|---|---|---|---|
-| *Sicario* (2015) | `FORMER_LOCAL_RECEIPT_REMOVED`; raw downloader label omitted | Former file: `01:28:13.321`; AVC `720x312`; `29.970 fps`; AAC `2ch/48 kHz` | `CANONICAL_IDENTITY_REJECTED`: early, middle, and late decoded frames showed an unrelated Japanese interior ensemble work | `USER_AUTHORIZED_REPLACEMENT_IN_PROGRESS_NOT_FILESYSTEM_VISIBLE`; no *Sicario* shot fact may be claimed until the replacement passes picture identity |
+| *Sicario* (2015) | `FORMER_LOCAL_RECEIPT_REMOVED`; replacement verified separately above; raw downloader labels omitted | Former file: `01:28:13.321`; AVC `720x312`; `29.970 fps`; AAC `2ch/48 kHz` | `FORMER_CANONICAL_IDENTITY_REJECTED`: early, middle, and late decoded frames showed an unrelated Japanese interior ensemble work | `RESOLVED_BY_VERIFIED_REPLACEMENT`; only the new `02:01:20.340` source may support evidence |
 
 ## Locator and evidence discipline
 
@@ -66,4 +67,4 @@ The former receipt was readable, but repeated picture samples did not match the 
 13. *The Haunting of Hill House* S01E06 and *True Detective* S01E04 — two different continuous-geography stress tests.
 14. *Sound of Metal* — retain for an audio-capable subjective-sound audit; picture alone cannot answer its primary research question.
 
-*Sicario* remains excluded while its one authorized replacement is incomplete. No other acquisition is requested; all other absent works are skipped until the user explicitly reopens the corpus.
+*Sicario* is admitted from the verified replacement and its first complete picture-only scene audit is recorded as `SICARIO-2015-BORDER-CHECKPOINT-001`. No acquisition is requested; all absent works are skipped until the user explicitly reopens the corpus.

@@ -6,7 +6,7 @@ This began as a download and acquisition queue, not a replacement for the canoni
 
 Reference catalog: 57 works or exact television episodes (18 Tier A, 23 Tier B, 16 Tier C).
 
-Acquisition state: `CLOSED_EXCEPT_AUTHORIZED_SICARIO_REPLACEMENT`. The local folder currently contains 32 identity-matched media files. A former file supplied for *Sicario* visibly contained an unrelated work; the user removed it and authorized one correct replacement download. *Children of Men*, *Moonlight*, *Bodyguard* S01E01, and *Mr. Robot* S04E07 match their targets. Every other absent row is currently unavailable and skipped. No other backlog item is an active download request unless the user explicitly reopens acquisition.
+Acquisition state: `CLOSED_LOCAL_CORPUS`. The local folder currently contains 33 identity-matched media files. The completed replacement for *Sicario* passed picture identity; the former wrong receipt remains only as a historical anti-regression note in the local manifest. Every absent row is currently unavailable and skipped. No backlog item is an active download request unless the user explicitly reopens acquisition.
 
 Local receipt and wrong-source status are tracked separately in `POST_16_LOCAL_MATERIAL_MANIFEST.md`; a locally present file is still only `BOUNDARY_REFINING` until picture-based scene verification is complete.
 
@@ -23,7 +23,7 @@ Ranges below are `LOCATOR_ESTIMATE` unless a row explicitly identifies an exact 
 | 技术解释转为可视因果证明 | 《切尔诺贝利》S01E05 审判中的反应堆失控重建 | `约 00:41:30–00:54:30` | 证物模型/图示、证词与过去事件交替，技术信息最终指向责任归属；补“解释不是停戏”的边界。 |
 | 群体行动中的命令权交接 | 《安多》S01E10 “One Way Out” 越狱与广播讲话 | `约 00:24:00–00:34:30` | 个体行动扩散成多层空间的集体推进，广播权从策划者转交给能号召人群的人。 |
 | 公开质证中证物改变证人身份 | 《风骚律师》S03E05 “Chicanery” 电池揭示与 Chuck 失控 | `约 00:40:05–00:48:15` | 隐藏证物先改变观众判断，再诱发证人自我暴露；补“物证—反应—身份重分类”的完整链。 |
-| 封闭空间中的行动预判与爆发 | 《边境杀手》(2015) 边境车队堵车与伏击 | `约 00:31:30–00:36:30` | 受限车内 POV、后视镜/侧窗威胁、开门前等待和短促交火；与长距离追逐形成空间反例。 |
+| 封闭空间中的行动预判与爆发 | 《边境杀手》(2015) 边境车队堵车与交火 | `本地版 00:33:03.042–00:38:01.292` | 已核验完整场景包络与 96 个连续可见镜头：城市高空空间重置→多车路网/堵塞→多车窗分布式观察→人/车门/枪形物状态转移→可见接触与结果→车辆恢复前行。人工审计已排除枪火、甩动、遮挡和尘土误报；声音、先发/命中归属仍为 UNKNOWN。 |
 | 长镜头中的车内多人动作地理 | 《人类之子》(2006) 车内伏击 | `约 00:32:00–00:35:50` | 同一移动空间内座位关系、视线、外部威胁和人物伤亡连续重排；适合研究隐性转接与 AI 降级。 |
 | 敌方主观视角制造信息不对称 | 《沉默的羔羊》(1991) 黑暗地下室追逐 | `约 01:42:50–01:50:00` | 观众可见、角色不可见；夜视主观镜头与角色搜索行为制造不公平信息优势。 |
 | 主观听觉突然改变现实可读性 | 《金属之声》(2019) 初次严重失聪 | `约 00:09:20–00:15:45` | 表演仍在继续，但声音从客观混音转为受损主观感知；检验声音 POV 如何先于解释建立危机。 |
@@ -88,7 +88,7 @@ These exact episodes add serial-drama, restricted-space, subjective-memory, and 
 
 ## Acquisition and execution rules
 
-- Acquisition is closed except for the one user-authorized replacement of the rejected *Sicario* receipt. The folder currently contains 32 identity-matched files; do not wait for, request, or start any other absent backlog title unless the user explicitly reopens the pool.
+- Acquisition is closed. The folder currently contains 33 identity-matched files and no pending download; do not wait for, request, or start any absent backlog title unless the user explicitly reopens the pool.
 - If acquisition is later reopened, obtain the full film or the exact full episode named in the table from a lawful source the user is entitled to access.
 - Keep media outside the repository. Do not commit stills, keyframes, contact sheets, subtitles, scripts, or long dialogue.
 - Tier labels now guide analysis priority only; they do not authorize additional downloads.

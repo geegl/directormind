@@ -22,8 +22,9 @@ Updated: 2026-08-30
 | The Wire S01E04 “Old Cases” visual evidence | CANDIDATE / 68 COMPLETE VISIBLE SHOTS / EXACT NATURAL BOUNDARY / SOUND UNKNOWN |
 | Citizen Kane breakfast montage visual evidence | CANDIDATE / 27 COMPLETE EDIT-SHOT UNITS / EXACT SELECTED TRANSITION ENVELOPE / SOUND UNKNOWN |
 | Apollo 13 constrained-material handoff visual evidence | CANDIDATE / 12 COMPLETE VISIBLE SHOTS / EXACT TWO-LOCATION SEQUENCE / SOUND UNKNOWN / LATER SUCCESS NOT COVERED |
+| Sicario border-checkpoint convoy visual evidence | CANDIDATE / 96 COMPLETE VISIBLE SHOTS / EXACT SCENE ENVELOPE / SOUND UNKNOWN |
 | Canonical first-16 local material | 15 PRESENT / 1 USER-SKIPPED / 0 PENDING DOWNLOAD |
-| Closed local corpus | 32 IDENTITY-MATCHED LOCAL FILES / 1 USER-AUTHORIZED SICARIO REPLACEMENT DOWNLOAD PENDING / ALL OTHER ABSENT TITLES SKIPPED |
+| Closed local corpus | 33 IDENTITY-MATCHED LOCAL FILES / 0 PENDING DOWNLOAD / ALL OTHER ABSENT TITLES SKIPPED |
 | Private 36-episode forward test | STRUCTURALLY_VERIFIED, not publicly reproducible |
 | Cross-work scene-problem coverage | SPARSE |
 | Seedance/H3 adapters | OUT_OF_SCOPE |
@@ -31,7 +32,7 @@ Updated: 2026-08-30
 
 ## Next research objective
 
-Work through the user-approved closed corpus without per-scene approval. `research/coverage/FIRST_16_SCENES.md` retains the canonical first batch: *Fleabag* S02E01 is explicitly skipped, the other 15 targets are present, and the extra *Brooklyn Nine-Nine* S05E03–04 file is retained because S05E04 contains a useful proposal-reveal scene. `research/coverage/POST_16_LOCAL_MATERIAL_MANIFEST.md` tracks 16 identity-matched later sources. The final arrivals for *Children of Men*, *Moonlight*, *Bodyguard* S01E01, and *Mr. Robot* S04E07 match their targets. A former file supplied for *Sicario* visibly contained an unrelated Japanese ensemble work; the user removed it and authorized one correct replacement download, which must pass picture identity before entering evidence. The folder currently contains 32 identity-matched files; every other absent title is skipped rather than awaited or requested. *Apollo 13* now supplies exact visual evidence for an assessment-to-material-work handoff, but the selected sequence ends at sorting onset and cannot prove later construction, remote teaching, installation, or success. Prioritize information gain and counterexamples, and never promote a locator estimate until local picture verification.
+Work through the user-approved closed corpus without per-scene approval. `research/coverage/FIRST_16_SCENES.md` retains the canonical first batch: *Fleabag* S02E01 is explicitly skipped, the other 15 targets are present, and the extra *Brooklyn Nine-Nine* S05E03–04 file is retained because S05E04 contains a useful proposal-reveal scene. `research/coverage/POST_16_LOCAL_MATERIAL_MANIFEST.md` tracks 17 identity-matched later sources. The completed replacement for *Sicario* (2015) passed separated-picture identity checks; its border-checkpoint grouped-vehicle sequence now has a complete 96-shot visual audit over the exact local envelope `00:33:03.042–00:38:01.292`, with sound and first-shot/hit attribution still unknown. The folder currently contains 33 identity-matched files; every absent title is skipped rather than awaited or requested. *Apollo 13* supplies exact visual evidence for an assessment-to-material-work handoff, but its selected sequence ends at sorting onset and cannot prove later construction, remote teaching, installation, or success. Prioritize information gain and counterexamples, and never promote a locator estimate until local picture verification.
 
 ## Promotion gate
 
