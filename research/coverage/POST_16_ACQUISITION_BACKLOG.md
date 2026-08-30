@@ -6,7 +6,7 @@ This began as a download and acquisition queue, not a replacement for the canoni
 
 Reference catalog: 57 works or exact television episodes (18 Tier A, 23 Tier B, 16 Tier C).
 
-Acquisition state: `CLOSED_LOCAL_CORPUS`. The local folder currently contains 33 identity-matched media files. The completed replacement for *Sicario* passed picture identity; the former wrong receipt remains only as a historical anti-regression note in the local manifest. Every absent row is currently unavailable and skipped. No backlog item is an active download request unless the user explicitly reopens acquisition.
+Acquisition state: `CLOSED_LOCAL_CORPUS`. The local folder currently contains 33 media files: 32 accepted or retained target-work sources, one target-scene rejection, and zero pending downloads. The completed replacement for *Sicario* passed picture identity; the former wrong receipt remains only as a historical anti-regression note in the local manifest. Every absent row is currently unavailable and skipped. No backlog item is an active download request unless the user explicitly reopens acquisition.
 
 Local receipt and wrong-source status are tracked separately in `POST_16_LOCAL_MATERIAL_MANIFEST.md`; a locally present file is still only `BOUNDARY_REFINING` until picture-based scene verification is complete.
 
@@ -75,7 +75,7 @@ These exact episodes add serial-drama, restricted-space, subjective-memory, and 
 | 多人物封闭空间中的物件状态、身体锚点与长时屏幕占有 | 《黑客军团》S04E07 “407 Proxy Authentication Required” 单室段 | `00:32:16.643–00:48:49.927` | 201镜精确选定包络：开场口部物件状态、高位房间登记、多人物/区域复现、文件页状态、后段长单人持留与淡出；强迫、记忆、身份、心理、角色、对白和声音均未由画面证明。 |
 | 敏感双人对谈的空间交接与异地插入后重登记 | 《难以置信》S01E02 首次车内双人段 | `00:05:20.875–00:11:50.250` | 77镜精确选定包络：外景关系、同向接近车辆、开放车门/玻璃遮挡、随后建立的双人车内状态、九镜异地画面及车内重登记。`P-B`的完整入车过程不可见；把异地画面理解为平行故事线仍属推断。画面也不能证明请求许可、同意、非胁迫、信任、访谈角色或对白内容，这些只能由锁定剧本或独立证据触发。 |
 | 平静取证突然变成狭窄住宅求生 | 《东城梦魇》S01E05 “Illusions” Potts 住宅 | `约 00:46:30–00:56:00` | 入屋询问因线索转为伏击与营救；补对白无缝转动作、楼层关系、武器归属和被困者声音定位。 |
-| 狭窄公共空间中的多权威远程协同 | 《贴身保镖》S01E01 火车炸弹谈判 | `约 00:08:55–00:21:25` | David 接近嫌疑人，在警方、狙击手和拆弹人员介入下谈判；需保住枪线、乘客、炸弹与无线电线程。 |
+| 狭窄公共空间中的多节点人物、物件与门槛状态 | 《贴身保镖》S01E01 所选车厢/异地/外部编辑包络 | `本地版 00:08:46.458–00:21:34.167` | 已核验 211 个完整可见镜头：受限两人关系与手/物状态、多个不同房间状/车厢状/外部节点、头盔装束群体的门槛状态、光学样图像、后段近距手/物覆盖和外部门口/层级重置。起点为内部选定切点，源为 `856×480`，不支持微表情确定性；跨切身份/地点/物件、实体接触、警察/权威、爆炸或医疗含义、谈判、远程协同、命令、因果、结果、对白和声音均为 INFERRED、UNKNOWN 或脚本门控。 |
 | 无对白失败流程中的道具与空间状态账本 | 《雷普利》S01E05 “V Lucio” 搬运尸体至处理车辆 | `约 00:45:30–00:56:20` | 楼梯、电梯、车辆和痕迹处理反复失败/返工；检验钥匙、门、车和污迹连续性。 |
 | 主观记忆中跨年代、身份与空间的连续穿行 | 《守望者》S01E06 “This Extraordinary Being” Nostalgia 记忆段 | `约 00:18:30–00:32:00` | Angela 进入 Will 的记忆并经历身份形成事件；补“主观连续、客观时空不连续”的 IR 标记。 |
 | 平行现实汇合前的人物状态连续性 | 《轮回派对》S01E08 “Ariadne” 双线汇合至游行 | `约 00:25:30–00:29:25` | 两个时间状态分别行动并汇入游行；检验同角色跨现实的服装、同伴、认知和目标账本。 |
@@ -88,11 +88,11 @@ These exact episodes add serial-drama, restricted-space, subjective-memory, and 
 
 ## Acquisition and execution rules
 
-- Acquisition is closed. The folder currently contains 33 identity-matched files and no pending download; do not wait for, request, or start any absent backlog title unless the user explicitly reopens the pool.
+- Acquisition is closed. The folder currently contains 33 media files: 32 accepted or retained target-work sources, one target-scene rejection, and no pending download. Do not wait for, request, or start any absent backlog title unless the user explicitly reopens the pool.
 - If acquisition is later reopened, obtain the full film or the exact full episode named in the table from a lawful source the user is entitled to access.
 - Keep media outside the repository. Do not commit stills, keyframes, contact sheets, subtitles, scripts, or long dialogue.
 - Tier labels now guide analysis priority only; they do not authorize additional downloads.
-- Within Tier C, start with *True Detective* S01E04, *The Haunting of Hill House* S01E06, *Mindhunter* S01E02, *Mr. Robot* S04E07, *Unbelievable* S01E02, *Bodyguard* S01E01, *Russian Doll* S01E08, *The Good Place* S01E13, *The Terror* S01E01, and *Shōgun* S01E09; these ten have the least mechanism overlap with one another.
+- Historical Tier C priority placed *True Detective* S01E04, *The Haunting of Hill House* S01E06, *Mindhunter* S01E02, *Mr. Robot* S04E07, *Unbelievable* S01E02, *Bodyguard* S01E01, *Russian Doll* S01E08, *The Good Place* S01E13, *The Terror* S01E01, and *Shōgun* S01E09 in a low-overlap order. Completed local entries are no longer an active queue; absent titles remain skipped while acquisition is closed.
 - A downloaded work is not automatically evidence-worthy. Before visual shot logging, the Root Agent must verify scene continuity, local picture boundaries, and non-duplication. Dialogue, ambience, music, effects, and sound-led edit claims additionally require direct audition.
 - One continuous scene produces one evidence file. A single scene may only propose candidate rules; it cannot establish a universal directing law.
 
