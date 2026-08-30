@@ -9,7 +9,7 @@ Time ranges are locator estimates. Every agent must verify the local edition aga
 | ID | Work and scene | Scene problem | Locator estimate | Current material status |
 |---|---|---|---|---|
 | `TSN-OPEN` | *The Social Network* (2010), opening breakup | Fast dialogue and power transfer | `00:00:00–00:07:30` | LOCAL_READY |
-| `DWP-CERULEAN` | *The Devil Wears Prada* (2006), cerulean correction | Calm authority redirects group status | Current local edition: `00:20:14.833–00:21:24.917` | LOCAL_READY |
+| `DWP-CERULEAN` | *The Devil Wears Prada* (2006), cerulean correction | Script-gated correction turn with visible object and ensemble-attention setup | Current local edition: `00:19:36.000–00:21:24.917` | EVIDENCE_COMPLETE_VISUAL_V0.1 / 26 COMPLETE VISIBLE SHOTS / SOUND_UNKNOWN (`THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001`) |
 | `SUCCESSION-VOTE` | *Succession* S01E06, board no-confidence vote | Failed coalition and procedural status reversal | Current local edition: `00:47:03.500–00:52:33.042` | EVIDENCE_COMPLETE_V0.1 on PR #1 |
 | `FLEABAG-DINNER` | *Fleabag* S02E01, engagement dinner opening | Family ensemble and subtext reaction chain | `00:02:44–00:07:00` | USER_SKIPPED_SOURCE_UNAVAILABLE |
 | `BCS-CHUCK` | *Better Call Saul* S01E09, Chuck reveal | Intimate betrayal and relationship reclassification | `00:43:23–00:46:25` | LOCAL_READY |
