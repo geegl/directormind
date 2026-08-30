@@ -9,7 +9,7 @@ This is a research queue, not a claim that these rows exhaust directing.
 | Three-person alliance and outsider reaction | Good Omens bookshop | MEDIUM | Add equal-status triad and shifting-coalition contrasts |
 | Public revelation / proof / status reversal | Ten-series mechanism only | HIGH | Real-shot evidence for staging witness hierarchy, reveal timing, and reaction chain |
 | Interrogation / threat / coercive power | One Good Omens pressure scene | HIGH | Contrast institutional interrogation, intimate threat, and physical containment |
-| Procedural competence / work / diagnosis | No real-shot evidence | HIGH | How process stays legible without exposition or repetitive inserts |
+| Procedural competence / work / diagnosis | The Bear S01E07: one visible continuous shot, visual-only evidence | HIGH | Add direct sound audit and a successful-procedure contrast; test when small object state changes still require inserts |
 | Suspense and audience information asymmetry | Method-level only | HIGH | POV restriction, withheld space, sound-before-image, and reveal thresholds |
 | Action, pursuit, and impact | No real-shot evidence | HIGH | AI-safe geography, action continuity, anticipation-impact-aftermath, fallback cuts |
 | Horror and supernatural rule revelation | Limited Good Omens evidence | HIGH | Dread escalation, off-screen space, negative space, and effect restraint |

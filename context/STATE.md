@@ -17,6 +17,9 @@ Updated: 2026-08-30
 | Compiler validator | WORKING_BASELINE |
 | Good Omens evidence | CANDIDATE / PARTLY FRAME-UNVERIFIED |
 | Good Omens transfer rules | CANDIDATE, not universal |
+| The Bear S01E07 visual evidence | CANDIDATE / EXACT VISIBLE-SHOT BOUNDARY / SOUND UNKNOWN |
+| Canonical first-16 local material | 15 PRESENT / 1 USER-SKIPPED / 0 PENDING DOWNLOAD |
+| Post-16 acquisition backlog | DOWNLOAD CANDIDATES ONLY / LOCATOR ESTIMATES |
 | Private 36-episode forward test | STRUCTURALLY_VERIFIED, not publicly reproducible |
 | Cross-work scene-problem coverage | SPARSE |
 | Seedance/H3 adapters | OUT_OF_SCOPE |
@@ -24,7 +27,7 @@ Updated: 2026-08-30
 
 ## Next research objective
 
-Complete the user-approved corpus in `research/coverage/FIRST_16_SCENES.md`. Work through every locally available source without per-scene approval, keep unavailable items in one material manifest, and do not select a second wave until all 16 are complete or explicitly blocked by missing lawful source media.
+Complete the user-approved corpus in `research/coverage/FIRST_16_SCENES.md`. Work through every locally available source without per-scene approval and track local status in `research/coverage/FIRST_16_LOCAL_MATERIAL_MANIFEST.md`. *Fleabag* S02E01 is explicitly skipped because the user cannot obtain it; the other 15 canonical targets are locally present. The user-requested `research/coverage/POST_16_ACQUISITION_BACKLOG.md` supports lawful acquisition only and does not replace first-corpus execution priority.
 
 ## Promotion gate
 
