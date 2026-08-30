@@ -1,6 +1,6 @@
 # Post-16 Local Material Manifest
 
-Updated: 2026-08-30 15:48 +08:00
+Updated: 2026-08-30 17:30 +08:00
 
 This manifest is a local receipt audit for `POST_16_ACQUISITION_BACKLOG.md`. It records source identity, container facts, and evidence-readiness only. It does not promote filenames, title cards, burned subtitles, synopsis, or locator estimates into shot or sound evidence.
 
@@ -22,7 +22,7 @@ This manifest is a local receipt audit for `POST_16_ACQUISITION_BACKLOG.md`. It 
 | *Chernobyl* S01E05 | `切尔诺贝利S01E05.mp4` | `01:08:24.960`; AVC `1920x1080`; `25.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_AND_TARGET_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: trial/reactor reconstruction; technical explanation converted to visible causality |
 | *Andor* S01E10 | `安多S01E10.mp4` | `00:42:47.750`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_TARGET_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: prison uprising/broadcast and distributed command transfer |
 | *Better Call Saul* S03E05 | `风骚律师S03E05.mp4` | `00:49:20.417`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_SERIES_AND_SEASON_MATCH`; exact episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: public evidence reveal, witness reaction, and status reclassification |
-| *The Bear* S02E07 | `熊家餐馆S02E07.mp4` | `00:34:55.917`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_AND_TARGET_MATCH`; exact season/episode number remains filename-supplied | `LOCAL_PRESENT_BOUNDARY_REFINING`: training-to-live-service competence and delegated authority; contrast to S01E07 breakdown |
+| *The Bear* S02E07 | `熊家餐馆S02E07.mp4` | `00:34:55.917`; AVC `1920x1080`; `24.000 fps`; AAC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_AND_TARGET_MATCH`; exact season/episode number remains filename-supplied | `VISUAL_EVIDENCE_COMPLETE`: selected edited sequence `00:18:27.917–00:22:14.333`, 114 complete visible shots; hard-cut zone changes, ordered large/small/arranged object-form views, table placement, seated-face coverage, and later work-area expression/gesture views are visible; task handoff, success, receipt, material lineage, authorization, exact task semantics, reaction causes, and sound remain INFERRED or UNKNOWN as marked |
 | *Apollo 13* (1995) | canonical local file; raw release label omitted | `02:19:51.077`; AVC `1920x1080`; `23.976 fps`; two HE-AAC/SBR `5.1` tracks with `24 kHz` core/container signal and `48 kHz` SBR extension signal | `LOCAL_VISUAL_WORK_VERIFIED`: narrative NASA mission film with Tom Hanks is visibly present; audio-language allocation and audible content are unverified | `VISUAL_EVIDENCE_COMPLETE`: `01:20:01.130–01:21:07.321`, 12 complete visible shots across one location handoff; material sorting begins, but later prototype completion, teaching, installation, and success are outside the evidence |
 | *Sicario* (2015) | `边境杀手.mp4`; raw release label omitted | `02:01:20.340`; AVC Main `1920x1080`; `24.000 fps`; AAC-LC `2ch/44.1 kHz` | `LOCAL_VISUAL_WORK_VERIFIED`: the source card, separated principal-character samples, and intended convoy/checkpoint material match the canonical work | `VISUAL_EVIDENCE_COMPLETE`: `00:33:03.042–00:38:01.292` end-exclusive, 96 contiguous visible shots; flash/motion/occlusion/dust false positives rejected; sound, first-shot attribution, and hit ownership remain UNKNOWN |
 | *The Martian* (2015) | `2015.火星救援.mp4` | `02:21:37.619`; AVC `1280x720`; `23.976 fps`; AAC `2ch/24 kHz` | `LOCAL_VISUAL_WORK_MATCH`: Mars/HAB setting and selected procedure section are visibly present | `LOCAL_PRESENT_BOUNDARY_REFINING`: procedure plan → visible failure → correction |
@@ -53,8 +53,8 @@ The former receipt was readable, but repeated picture samples did not match the 
 ## Evidence order within the closed corpus
 
 1. *Citizen Kane* — first real-shot montage/time-compression evidence in the current map.
-2. *The Bear* S02E07 — same-world successful-procedure contrast to the completed S01E07 breakdown.
-3. *Better Call Saul* S03E05 — public proof, witness reaction, and object-driven identity reclassification.
+2. *The Bear* S02E07 — 114-shot visual audit complete; the task-loop and success-coded contrast are inferences from picture ordering, and all proposed mechanisms remain single-source candidates.
+3. *Better Call Saul* S03E05 — next priority: public proof, witness reaction, and object-driven identity reclassification.
 4. *Apollo 13* — assessment-to-material-work handoff visual evidence complete; later prototype, remote teaching, installation, and result require separate evidence.
 5. *Chernobyl* S01E05 — technical reconstruction across present testimony and past action.
 6. *Andor* S01E10 — ensemble action and command transfer across multiple zones.
