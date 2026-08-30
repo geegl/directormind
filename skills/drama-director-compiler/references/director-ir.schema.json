@@ -1,0 +1,286 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "director-ir.schema.json",
+  "title": "Drama Director IR v0.2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "execution_medium",
+    "project_id",
+    "episode_id",
+    "source_script",
+    "target_duration_seconds",
+    "duration_tolerance_seconds",
+    "aspect_ratio",
+    "status",
+    "dialogue_must_be_verbatim",
+    "generation_authorized",
+    "publication_authorized",
+    "director_grammar_path",
+    "visual_style_pack_path",
+    "source_facts",
+    "scenes",
+    "source_coverage",
+    "unresolved"
+  ],
+  "properties": {
+    "schema_version": {"const": "director-ir/0.2"},
+    "execution_medium": {"const": "AI_PHOTOREAL_HUMAN"},
+    "project_id": {"type": "string", "minLength": 1},
+    "episode_id": {"type": "string", "pattern": "^EP[0-9]{2}$"},
+    "source_script": {"type": "string", "minLength": 1},
+    "target_duration_seconds": {"type": "number", "exclusiveMinimum": 0},
+    "duration_tolerance_seconds": {"type": "number", "minimum": 0},
+    "aspect_ratio": {"type": "string", "minLength": 1},
+    "status": {"type": "string", "minLength": 1},
+    "dialogue_must_be_verbatim": {"type": "boolean"},
+    "generation_authorized": {"type": "boolean"},
+    "publication_authorized": {"type": "boolean"},
+    "director_grammar_path": {"type": "string", "minLength": 1},
+    "visual_style_pack_path": {"type": ["string", "null"]},
+    "source_facts": {"type": "object"},
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/scene"}
+    },
+    "source_coverage": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/coverage"}
+    },
+    "unresolved": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "scene": {
+      "type": "object",
+      "required": [
+        "scene_id",
+        "source_scene",
+        "title",
+        "duration_seconds",
+        "location",
+        "time_of_day",
+        "allowed_characters",
+        "narrative_goal",
+        "dramatic_engine",
+        "pov",
+        "audience_information",
+        "spatial_plan",
+        "shots"
+      ],
+      "properties": {
+        "scene_id": {"type": "string", "pattern": "^EP[0-9]{2}-SC[0-9]{2}$"},
+        "source_scene": {"type": "string", "minLength": 1},
+        "title": {"type": "string", "minLength": 1},
+        "duration_seconds": {"type": "number", "exclusiveMinimum": 0},
+        "location": {"type": "string", "minLength": 1},
+        "time_of_day": {"type": "string", "minLength": 1},
+        "allowed_characters": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "narrative_goal": {"type": "string", "minLength": 1},
+        "dramatic_engine": {"type": "object"},
+        "pov": {"type": "object"},
+        "audience_information": {"type": "object"},
+        "spatial_plan": {"type": "object"},
+        "shots": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/shot"}}
+      }
+    },
+    "shot": {
+      "type": "object",
+      "required": [
+        "shot_id",
+        "order",
+        "duration_seconds",
+        "narrative_goal",
+        "source_refs",
+        "allowed_characters",
+        "shot_type",
+        "framing",
+        "camera_angle",
+        "camera_motion",
+        "camera_start",
+        "camera_path",
+        "camera_end",
+        "focus_strategy",
+        "blocking",
+        "performance_beats",
+        "dialogue",
+        "visible_text",
+        "audio",
+        "edit_in",
+        "edit_out",
+        "continuity_in",
+        "continuity_out",
+        "constraints",
+        "ai_complexity",
+        "fallback",
+        "execution_plan",
+        "reference_plan",
+        "visual_style_module",
+        "evidence_rule_ids",
+        "evidence_status",
+        "confidence"
+      ],
+      "properties": {
+        "shot_id": {"type": "string", "pattern": "^EP[0-9]{2}-SC[0-9]{2}-SH[0-9]{2}$"},
+        "order": {"type": "integer", "minimum": 1},
+        "duration_seconds": {"type": "number", "exclusiveMinimum": 0},
+        "narrative_goal": {"type": "string", "minLength": 1},
+        "source_refs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "allowed_characters": {"type": "array", "items": {"type": "string"}},
+        "shot_type": {"type": "string", "minLength": 1},
+        "framing": {"type": "string", "minLength": 1},
+        "camera_angle": {"type": "string", "minLength": 1},
+        "camera_motion": {"type": "object"},
+        "camera_start": {"type": "string", "minLength": 1},
+        "camera_path": {"$ref": "#/$defs/cameraPath"},
+        "camera_end": {"type": "string", "minLength": 1},
+        "focus_strategy": {"type": "string", "minLength": 1},
+        "blocking": {"type": "string", "minLength": 1},
+        "performance_beats": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "dialogue": {"type": "array", "items": {"$ref": "#/$defs/dialogue"}},
+        "visible_text": {"type": "array", "items": {"type": "string"}},
+        "audio": {"type": "object"},
+        "edit_in": {"type": "string", "minLength": 1},
+        "edit_out": {"type": "string", "minLength": 1},
+        "continuity_in": {"type": "string", "minLength": 1},
+        "continuity_out": {"type": "string", "minLength": 1},
+        "constraints": {"$ref": "#/$defs/constraints"},
+        "ai_complexity": {"$ref": "#/$defs/complexity"},
+        "fallback": {"type": ["string", "null"]},
+        "execution_plan": {"$ref": "#/$defs/executionPlan"},
+        "reference_plan": {"$ref": "#/$defs/referencePlan"},
+        "visual_style_module": {"type": "string", "minLength": 1},
+        "evidence_rule_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "evidence_status": {"enum": ["OBSERVED", "INFERRED", "HYPOTHESIS", "UNKNOWN", "METHOD_REFERENCE"]},
+        "confidence": {"enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]}
+      }
+    },
+    "dialogue": {
+      "type": "object",
+      "required": ["speaker", "text", "verbatim"],
+      "properties": {
+        "speaker": {"type": "string", "minLength": 1},
+        "text": {"type": "string", "minLength": 1},
+        "verbatim": {"type": "boolean"}
+      }
+    },
+    "cameraPath": {
+      "type": "object",
+      "required": ["mode", "direction", "speed", "distance", "stability", "trigger"],
+      "properties": {
+        "mode": {"type": "string", "minLength": 1},
+        "direction": {"type": "string", "minLength": 1},
+        "speed": {"type": "string", "minLength": 1},
+        "distance": {"type": "string", "minLength": 1},
+        "stability": {"type": "string", "minLength": 1},
+        "trigger": {"type": "string", "minLength": 1}
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "required": ["must_hold", "changes_here", "must_not_appear"],
+      "properties": {
+        "must_hold": {"type": "array", "items": {"type": "string"}},
+        "changes_here": {"type": "array", "items": {"type": "string"}},
+        "must_not_appear": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "complexity": {
+      "type": "object",
+      "required": ["camera", "performance", "continuity", "reasons"],
+      "properties": {
+        "camera": {"enum": ["LOW", "MEDIUM", "HIGH"]},
+        "performance": {"enum": ["LOW", "MEDIUM", "HIGH"]},
+        "continuity": {"enum": ["LOW", "MEDIUM", "HIGH"]},
+        "reasons": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "executionPlan": {
+      "type": "object",
+      "required": ["base_generation", "composite_layers", "state_versions", "continuity_owners", "fallback_route"],
+      "properties": {
+        "base_generation": {
+          "type": "object",
+          "required": ["mode", "owns"],
+          "properties": {
+            "mode": {"enum": ["AI_VIDEO", "IMAGE_TO_VIDEO", "STILL", "NONE"]},
+            "owns": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "composite_layers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["layer_id", "type", "description", "trigger", "continuity_key"],
+            "properties": {
+              "layer_id": {"type": "string", "minLength": 1},
+              "type": {"enum": ["SHADOW", "LIQUID", "SURFACE_STATE", "TEXT", "VFX", "OTHER"]},
+              "description": {"type": "string", "minLength": 1},
+              "trigger": {"type": "string", "minLength": 1},
+              "continuity_key": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "state_versions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["state_id", "subject", "state", "owner", "effective_from"],
+            "properties": {
+              "state_id": {"type": "string", "minLength": 1},
+              "subject": {"type": "string", "minLength": 1},
+              "state": {"type": "string", "minLength": 1},
+              "owner": {"enum": ["BASE_GENERATION", "COMPOSITE", "EDIT", "AUDIO", "SHARED"]},
+              "effective_from": {"type": "string", "minLength": 1},
+              "carry_forward": {"type": "boolean"}
+            }
+          }
+        },
+        "continuity_owners": {
+          "type": "object",
+          "required": ["identity", "surface", "prop", "environment"],
+          "properties": {
+            "identity": {"enum": ["BASE_GENERATION", "COMPOSITE", "EDIT", "AUDIO", "SHARED"]},
+            "surface": {"enum": ["BASE_GENERATION", "COMPOSITE", "EDIT", "AUDIO", "SHARED"]},
+            "prop": {"enum": ["BASE_GENERATION", "COMPOSITE", "EDIT", "AUDIO", "SHARED"]},
+            "environment": {"enum": ["BASE_GENERATION", "COMPOSITE", "EDIT", "AUDIO", "SHARED"]}
+          }
+        },
+        "fallback_route": {
+          "type": "object",
+          "required": ["decision", "action"],
+          "properties": {
+            "decision": {"enum": ["NONE", "SPLIT_GENERATION", "ROUTE_POST", "EDIT_RESTRUCTURE"]},
+            "action": {"type": "string"}
+          }
+        }
+      }
+    },
+    "referencePlan": {
+      "type": "object",
+      "required": ["required", "reference_type", "reference_id", "status", "rights_status", "scope", "inherit", "exclude"],
+      "properties": {
+        "required": {"type": "boolean"},
+        "reference_type": {"enum": ["NONE", "SCENE_MASTER", "SHOT_GOLDEN", "ASSET_STATE"]},
+        "reference_id": {"type": ["string", "null"]},
+        "status": {"enum": ["PLANNED", "APPROVED", "NOT_REQUIRED"]},
+        "rights_status": {"enum": ["PROJECT_ORIGINAL", "NOT_APPLICABLE"]},
+        "scope": {"type": "string"},
+        "inherit": {"type": "array", "items": {"type": "string"}},
+        "exclude": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": ["source_ref", "description", "status", "covered_by", "notes"],
+      "properties": {
+        "source_ref": {"type": "string", "minLength": 1},
+        "description": {"type": "string", "minLength": 1},
+        "status": {"enum": ["covered", "omitted", "altered", "unknown"]},
+        "covered_by": {"type": "array", "items": {"type": "string"}},
+        "notes": {"type": "string"}
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+
+# Source media and extracted visual material stay local. This is a public repo.
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+*.wav
+*.mp3
+*.m4a
+*.aac
+*.flac
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+contact-sheets/
+frames/
+media/
+
+# Project-private scripts and generated production packages are not research inputs.
+private/
+local/
+outputs/
