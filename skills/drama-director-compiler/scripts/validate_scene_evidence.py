@@ -65,12 +65,17 @@ AUDIO_DIRECTIVE_RE = re.compile(
     r"ambience|noise|alarm|ring|tone)\b[^.\n]{0,100}\b(?:add|use|insert|introduce|play|mute|drop|fade|enter|"
     r"bridge|cut|synchronize|trigger|drive|underscore|hold)\b|"
     r"\b(?:audio|sound|sounds|cue|score|music|silence|voice|dialogue|ambience|noise|alarm|ring|tone)\b"
-    r"[^.\n]{0,60}\b(?:should|must)\s+(?:enter|begin|start|precede|lead)\b)",
+    r"[^.\n]{0,60}\b(?:should|must)\s+(?:enter|begin|start|precede|lead)\b|"
+    r"\bbring\s+in\b[^.\n]{0,60}\b(?:audio|sound|sounds|cue|score|music|silence|voice|dialogue|"
+    r"ambience|noise|alarm|ring|tone)\b|"
+    r"\bbring\b[^.\n]{0,60}\b(?:audio|sound|sounds|cue|score|music|silence|voice|dialogue|"
+    r"ambience|noise|alarm|ring|tone)\b[^.\n]{0,20}\bin\b)",
     re.IGNORECASE,
 )
 AUDIO_UNCERTAINTY_RE = re.compile(
     r"\b(?:unknown|unverified|not (?:directly )?observed|not (?:directly )?auditioned|blocked|"
-    r"not part of this candidate|no audio rule)\b",
+    r"not part of this candidate|outside (?:this|the) candidate|excluded from (?:this|the) candidate|"
+    r"does not depend on (?:audio|sound|score|music)|no audio rule)\b",
     re.IGNORECASE,
 )
 AUDIO_TERM_RE = re.compile(
@@ -94,14 +99,21 @@ UNKNOWN_FACT_STOPWORDS = {
     "unproven", "unverified", "verified", "visible", "was", "were", "whether", "with",
 }
 SAFE_UNKNOWN_BOUNDARY_RE = re.compile(
-    r"\b(?:does not|do not|must not|should not|without|avoid)\b[^.\n]{0,80}"
-    r"\b(?:depend|assum|assert|treat|identify|confirm|require)\w*\b",
+    r"(?:\b(?:does not|do not|must not|should not|without|avoid)\b[^.\n]{0,80}"
+    r"\b(?:depend|assum|assert|treat|identify|confirm|require)\w*\b|"
+    r"\b(?:no|without|avoid|do not|must not|should not)\b[^.\n]{0,80}"
+    r"\b(?:physical\s+)?(?:contact|touch|joined? hands?)\b)",
     re.IGNORECASE,
 )
 UNKNOWN_FACT_ALIAS_PATTERNS = {
     "axis": re.compile(r"\b(?:axis|180[- ]degree|screen direction|line of action)\b", re.IGNORECASE),
     "identity": re.compile(
         r"\b(?:identity|same (?:person|individual|body|appearance)|continuing (?:person|individual|appearance))\b",
+        re.IGNORECASE,
+    ),
+    "contact": re.compile(
+        r"\b(?:physical contact|contact|touch(?:es|ed|ing)?|hands? (?:join(?:ed|ing)?|touch(?:ed|ing)?|"
+        r"meet(?:s|ing)?)|(?:join(?:ed|ing)?|hold(?:s|ing)?) hands?|reach(?:es|ed|ing)? first)\b",
         re.IGNORECASE,
     ),
 }
@@ -363,10 +375,11 @@ def _term_occurs(text: str, term: str) -> bool:
 
 
 def _has_unauditioned_audio_assertion(text: str) -> bool:
-    """Reject any audio-domain rule sentence that does not itself state uncertainty."""
+    """Reject an audio-domain rule clause that does not itself state uncertainty."""
     for sentence in re.split(r"[.!?;\n]+", text):
-        if AUDIO_TERM_RE.search(sentence) and AUDIO_UNCERTAINTY_RE.search(sentence) is None:
-            return True
+        for clause in re.split(r"\b(?:but|however|yet|although)\b", sentence, flags=re.IGNORECASE):
+            if AUDIO_TERM_RE.search(clause) and AUDIO_UNCERTAINTY_RE.search(clause) is None:
+                return True
     return False
 
 
@@ -393,8 +406,10 @@ def _fact_tokens(text: str) -> set[str]:
 def _rule_asserts_unknown_fact(unknown_text: str, operational_text: str) -> bool:
     """Detect a close factual restatement; broad semantic inference remains a human review boundary."""
     unknown_tokens = _fact_tokens(unknown_text)
-    has_known_anchor = any(anchor in unknown_tokens for anchor in UNKNOWN_FACT_ALIAS_PATTERNS)
-    if len(unknown_tokens) < 2 and not has_known_anchor:
+    active_alias_patterns = [
+        pattern for pattern in UNKNOWN_FACT_ALIAS_PATTERNS.values() if pattern.search(unknown_text)
+    ]
+    if len(unknown_tokens) < 2 and not active_alias_patterns:
         return False
     for sentence in re.split(r"[.!?;\n]+", operational_text):
         clauses = re.split(r"\b(?:but|however|yet|although)\b", sentence, flags=re.IGNORECASE)
@@ -404,10 +419,7 @@ def _rule_asserts_unknown_fact(unknown_text: str, operational_text: str) -> bool
             shared = unknown_tokens.intersection(_fact_tokens(clause))
             if len(shared) >= 2 and len(shared) / len(unknown_tokens) >= 0.5:
                 return True
-            if any(
-                anchor in unknown_tokens and pattern.search(clause)
-                for anchor, pattern in UNKNOWN_FACT_ALIAS_PATTERNS.items()
-            ):
+            if any(pattern.search(clause) for pattern in active_alias_patterns):
                 return True
     return False
 

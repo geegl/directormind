@@ -563,6 +563,7 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
         values = (
             "Audio remains unknown, but let the score enter before the image.",
             "Audio remains unknown, but the music should begin before the image.",
+            "Audio remains unknown, but bring in the music before the image.",
         )
         for field in ("director_decision", "audio_logic"):
             for value in values:
@@ -588,6 +589,7 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
         values = (
             "Whether score entry precedes the image remains unknown.",
             "Let audio remain unknown and outside this candidate.",
+            "Audio remains unknown, but music timing is outside this candidate.",
         )
         for value in values:
             with self.subTest(value=value):
@@ -657,6 +659,45 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
                 self.assertIn("RULE-ASSERTS-UNKNOWN-FACT", error_codes(evidence))
 
                 evidence["candidate_rules"][0]["promotion_status"] = "BLOCKED_BY_UNKNOWN"
+                self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
+
+    def test_unknown_contact_cannot_reappear_as_physical_direction(self) -> None:
+        values = (
+            ("Physical contact remains unknown.", "Keep their hands joined throughout the exchange."),
+            ("Who initiates physical contact remains unknown.", "Have P-A reach first."),
+        )
+        for unknown_value, rule_value in values:
+            with self.subTest(unknown_value=unknown_value, rule_value=rule_value):
+                evidence = make_valid_evidence()
+                evidence["unknowns"][0].update(
+                    statement=unknown_value,
+                    scope="SCENE",
+                    blocks_rule_ids=[],
+                )
+                evidence["candidate_rules"][0]["blocking"] = rule_value
+                report = validate_evidence(evidence, SCHEMA)
+                self.assertTrue(
+                    any(
+                        issue["code"] == "RULE-ASSERTS-UNKNOWN-FACT"
+                        and issue["path"] == "$.candidate_rules[0].promotion_status"
+                        for issue in report["issues"]
+                    )
+                )
+
+    def test_unknown_contact_may_remain_an_explicit_non_dependency(self) -> None:
+        values = (
+            "Use a visible gap and do not depend on physical contact.",
+            "No physical contact is required.",
+        )
+        for value in values:
+            with self.subTest(value=value):
+                evidence = make_valid_evidence()
+                evidence["unknowns"][0].update(
+                    statement="Physical contact remains unknown.",
+                    scope="SCENE",
+                    blocks_rule_ids=[],
+                )
+                evidence["candidate_rules"][0]["blocking"] = value
                 self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
 
     def test_unknown_blocks_rule_promotion(self) -> None:
