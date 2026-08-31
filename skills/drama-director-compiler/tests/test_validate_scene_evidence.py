@@ -1,0 +1,695 @@
+#!/usr/bin/env python3
+"""Minimum regression tests for validate_scene_evidence.py."""
+
+from __future__ import annotations
+
+import contextlib
+import io
+import json
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+from typing import Any
+
+
+SKILL_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(SKILL_ROOT / "scripts"))
+
+from validate_scene_evidence import load_json, main, validate_evidence  # noqa: E402
+
+
+SCHEMA = load_json(SKILL_ROOT / "references" / "scene-evidence.schema.json")
+EVIDENCE_ID = "TEST-WORK-SCENE-001"
+
+
+def time_point(seconds: float, frame: int) -> dict[str, Any]:
+    hours = int(seconds // 3600)
+    minutes = int((seconds % 3600) // 60)
+    remaining = seconds % 60
+    return {
+        "timecode": f"{hours:02d}:{minutes:02d}:{remaining:06.3f}",
+        "seconds": seconds,
+        "frame": frame,
+        "pts": frame,
+        "time_base": "1/24",
+    }
+
+
+def claim(claim_id: str, value: str, source_refs: list[str], status: str = "PICTURE_OBSERVED") -> dict[str, Any]:
+    return {
+        "claim_id": claim_id,
+        "status": status,
+        "value": value,
+        "source_refs": source_refs,
+        "notes": "Synthetic project-original validator fixture.",
+    }
+
+
+def risk(level: str = "LOW") -> dict[str, Any]:
+    return {
+        "camera": {"level": level, "reasons": ["Synthetic camera test state."]},
+        "performance": {"level": "LOW", "reasons": ["Synthetic performance test state."]},
+        "continuity": {"level": "LOW", "reasons": ["Synthetic continuity test state."]},
+    }
+
+
+def fallback(camera: str | None = None) -> dict[str, Any]:
+    return {
+        "camera": camera,
+        "performance": None,
+        "continuity": None,
+        "project_original_only": True,
+    }
+
+
+def make_shot(order: int, start: float, end: float) -> dict[str, Any]:
+    shot_id = f"{EVIDENCE_ID}-S{order:03d}"
+    prefix = f"S{order:03d}"
+    return {
+        "shot_id": shot_id,
+        "order": order,
+        "completeness": "COMPLETE_VISIBLE_SHOT",
+        "start": time_point(start, int(round(start * 24))),
+        "end": time_point(end, int(round(end * 24))),
+        "duration": end - start,
+        "shot_size": claim(f"{prefix}-SIZE", "A neutral project-original relation view is visible.", [shot_id]),
+        "camera_height": claim(f"{prefix}-HEIGHT", "Camera height is visually stable within the shot.", [shot_id]),
+        "camera_angle": claim(f"{prefix}-ANGLE", "A neutral eye-level-like angle is visible.", [shot_id]),
+        "camera_motion": claim(f"{prefix}-MOTION", "Frame edges remain stable in the sampled interval.", [shot_id]),
+        "camera_start": claim(f"{prefix}-CAM-START", "The opening composition contains two abstract bodies.", [shot_id]),
+        "camera_path": claim(f"{prefix}-CAM-PATH", "No discrete camera-path change is visible.", [shot_id]),
+        "camera_end": claim(f"{prefix}-CAM-END", "The closing composition retains the same visible zone.", [shot_id]),
+        "focus_strategy": claim(f"{prefix}-FOCUS", "Both primary body regions remain readable.", [shot_id]),
+        "spatial_zone": [claim(f"{prefix}-ZONE", "Project-original zone Z-A is visible.", [shot_id])],
+        "axis_and_screen_direction": claim(f"{prefix}-AXIS", "Left/right screen positions remain readable within the shot.", [shot_id]),
+        "abstract_role_labels": [],
+        "blocking": claim(f"{prefix}-BLOCK", "Two bodies occupy separate sides of the frame.", [shot_id]),
+        "visible_action": claim(f"{prefix}-ACTION", "One head turns while the other body remains seated.", [shot_id]),
+        "visible_state_in": claim(f"{prefix}-STATE-IN", "Both bodies are visible at shot start.", [shot_id]),
+        "visible_state_out": claim(f"{prefix}-STATE-OUT", "Both bodies remain visible at shot end.", [shot_id]),
+        "event_or_reaction": claim(f"{prefix}-EVENT", "A head-direction change is visible; cause is unknown.", [shot_id]),
+        "performance_beat": claim(f"{prefix}-PERF", "Head and hand positions change within the shot.", [shot_id]),
+        "edit_in": claim(f"{prefix}-EDIT-IN", "The shot begins at a visible edit boundary.", [shot_id]),
+        "edit_out": claim(f"{prefix}-EDIT-OUT", "The shot ends at a visible edit boundary.", [shot_id]),
+        "cut_motivation": claim(f"{prefix}-CUT-MOTIVE", "The edit may redistribute visible information.", [shot_id], "INFERRED"),
+        "narrative_function": claim(f"{prefix}-FUNCTION", "The view may preserve spatial legibility.", [shot_id], "INFERRED"),
+        "picture_status": "PICTURE_OBSERVED",
+        "audio_status": "AUDIO_UNKNOWN",
+        "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+        "AI_complexity": risk(),
+        "fallback": fallback(),
+        "unknowns": ["Exact identity, dialogue, sound, intention, and production method remain unknown."],
+    }
+
+
+def make_valid_evidence() -> dict[str, Any]:
+    shot_1 = f"{EVIDENCE_ID}-S001"
+    shot_2 = f"{EVIDENCE_ID}-S002"
+    unknown_audio_claims = {
+        key: claim(f"AUDIO-{index:02d}", "Audio was not directly observed.", [], "UNKNOWN")
+        for index, key in enumerate(
+            (
+                "dialogue_overlap",
+                "silence_intervals",
+                "ambience",
+                "score_entry",
+                "score_exit",
+                "sound_before_image",
+                "offscreen_sound",
+                "sound_bridge",
+                "subjective_sound",
+                "object_sound",
+                "audio_information_change",
+            ),
+            start=1,
+        )
+    }
+    return {
+        "schema_version": "scene-evidence/0.1",
+        "evidence_id": EVIDENCE_ID,
+        "work_id": "TEST-WORK",
+        "scene_problem": {
+            "primary": "DIALOGUE_POWER_TRANSFER",
+            "secondary": [],
+            "status": "INFERRED",
+            "source_refs": [shot_1, shot_2],
+        },
+        "scene_unit_type": "NATURAL_CONTINUOUS_SCENE",
+        "boundary_status": "NATURAL_START_END_VERIFIED",
+        "boundary_evidence": claim("BOUNDARY-EVIDENCE", "Visible edit boundaries contain the selected scene.", [shot_1, shot_2]),
+        "production_take_status": "PRODUCTION_METHOD_UNKNOWN",
+        "source_identity_status": "SOURCE_OR_FILENAME_SUPPLIED",
+        "source_start": time_point(0.0, 0),
+        "source_end": time_point(2.0, 48),
+        "duration": 2.0,
+        "time_tolerance_seconds": 0.001,
+        "picture_evidence_status": "PICTURE_OBSERVED",
+        "audio_evidence_status": "AUDIO_UNKNOWN",
+        "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+        "scene_dramatic_structure": {
+            "start_state": claim("DS-START", "Two abstract bodies share a project-original zone.", [shot_1]),
+            "objectives": [claim("DS-OBJECTIVE", "A possible information objective is inferred.", [shot_1], "INFERRED")],
+            "obstacle": claim("DS-OBSTACLE", "The obstacle is not established by picture.", [], "UNKNOWN"),
+            "event_point": claim("DS-EVENT", "A visible head-direction change occurs.", [shot_1]),
+            "reaction_point": claim("DS-REACTION", "A later body-state change occurs.", [shot_2]),
+            "turn": claim("DS-TURN", "The ordered changes may form a turn.", [shot_1, shot_2], "INFERRED"),
+            "end_state": claim("DS-END", "The bodies occupy a changed visible relation.", [shot_2]),
+        },
+        "spatial_geometry": claim("SCENE-GEOMETRY", "One project-original zone with two screen sides is visible.", [shot_1, shot_2]),
+        "axis": claim("SCENE-AXIS", "A consistent screen-side relation is inferred across the cut.", [shot_1, shot_2], "INFERRED"),
+        "POV": claim("SCENE-POV", "The coverage is inferred to be action-aligned rather than optical POV.", [shot_1, shot_2], "INFERRED"),
+        "audience_information": claim("SCENE-AUDIENCE", "The audience sees both body-state changes.", [shot_1, shot_2]),
+        "shots": [make_shot(1, 0.0, 1.0), make_shot(2, 1.0, 2.0)],
+        "stats": {
+            "unit": "VISIBLE_SHOT",
+            "shot_count": 2,
+            "total_duration": 2.0,
+            "mean_duration": 1.0,
+            "median_duration": 1.0,
+            "duration_bins": {"1_to_lt_2": 2},
+        },
+        "audio_audit": {
+            **unknown_audio_claims,
+            "audio_unknowns": ["All semantic sound facts remain unknown."],
+        },
+        "text_anchors": [],
+        "methods": [
+            {
+                "method_id": "METHOD-SYNTHETIC-FIXTURE",
+                "method_type": "STRUCTURAL_CONVERSION",
+                "status": "REPOSITORY_REPRODUCIBLE",
+                "description": "Generate a project-original in-memory Scene Evidence fixture for validator tests.",
+                "repository_command": "python3 -m unittest discover -s skills/drama-director-compiler/tests",
+                "tool_version_status": "VERSION_RECORDED",
+                "source_refs": [],
+                "unknowns": [],
+            }
+        ],
+        "auxiliary_evidence": [],
+        "continuity_tracks": [],
+        "candidate_rules": [
+            {
+                "candidate_rule_id": "TEST-C01-RELATION-COVERAGE",
+                "canonical_rule_family": "RELATION-COVERAGE",
+                "scene_problem": "DIALOGUE_POWER_TRANSFER",
+                "trigger": "A locked project-original script requires two body-state changes to remain legible.",
+                "required_story_facts": [{"claim_id": "DS-START"}],
+                "director_decision": "Use project-original relation coverage that preserves both screen sides.",
+                "coverage": "One relation view followed by one changed body-state view.",
+                "blocking": "Assign neutral side A and side B positions in a project-original set.",
+                "POV_effect": "Keep audience access to both visible state changes.",
+                "edit_logic": "Cut only after the first visible state is registered.",
+                "pacing": "Let each state remain readable without prescribing a source-derived duration.",
+                "audio_logic": claim("RULE-AUDIO", "Audio remains unknown and is not part of this candidate.", [], "UNKNOWN"),
+                "continuity": "Preserve project-original side and body-state ledgers.",
+                "AI_risk": risk(),
+                "fallback": fallback(),
+                "applicable_when": ["Both state changes are locked project facts."],
+                "not_applicable_when": ["Only one body state must be shown."],
+                "failure_modes": ["A cut erases the screen-side relation."],
+                "counterexample_status": "UNKNOWN",
+                "counterexample_ids": [],
+                "source_method_ids": ["METHOD-SYNTHETIC-FIXTURE"],
+                "evidence_scene_ids": [EVIDENCE_ID],
+                "evidence_shot_ids": [shot_1, shot_2],
+                "evidence_auxiliary_ids": [],
+                "within_source_confidence": "HIGH",
+                "transfer_confidence": "LOW",
+                "execution_confidence": "MEDIUM",
+                "promotion_status": "SINGLE_WORK_CANDIDATE",
+                "evidence_status": "HYPOTHESIS",
+            }
+        ],
+        "unknowns": [
+            {
+                "unknown_id": "UNKNOWN-AUDIO",
+                "statement": "Dialogue, ambience, score, and sound causality are unknown.",
+                "scope": "AUDIO",
+                "blocks_rule_ids": [],
+            }
+        ],
+        "rights_boundary": {
+            "media_committed": False,
+            "subtitles_committed": False,
+            "scripts_or_long_dialogue_committed": False,
+            "contains_absolute_local_paths": False,
+            "contains_media_hashes": False,
+            "reference_surface_terms": ["blue teapot"],
+            "surface_inventory_status": "HUMAN_REVIEWED_COMPLETE",
+            "prohibited_transfer_content": ["Reference characters, locations, props, dialogue, and signature compositions."],
+            "notes": "Only project-original synthetic validator content is included.",
+        },
+        "validation_status": "NOT_VALIDATED",
+        "validation_warnings": [],
+    }
+
+
+def add_signal_auxiliary(evidence: dict[str, Any], method_status: str = "MANUAL_REVIEW_RECORDED") -> str:
+    method_id = "METHOD-SIGNAL-001"
+    auxiliary_id = "AUX-SIGNAL-001"
+    evidence["audio_evidence_status"] = "SIGNAL_MEASURED_NOT_AUDITIONED"
+    for shot in evidence["shots"]:
+        shot["audio_status"] = "SIGNAL_MEASURED_NOT_AUDITIONED"
+    evidence["methods"].append(
+        {
+            "method_id": method_id,
+            "method_type": "DECODED_SIGNAL_MEASUREMENT",
+            "status": method_status,
+            "description": "Synthetic decoded-signal measurement fixture.",
+            "repository_command": None,
+            "tool_version_status": "VERSION_RECORDED",
+            "source_refs": [],
+            "unknowns": ["Signal semantics remain unknown."],
+        }
+    )
+    evidence["auxiliary_evidence"].append(
+        {
+            "auxiliary_id": auxiliary_id,
+            "kind": "DECODED_SIGNAL_THRESHOLD_GROUP",
+            "status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+            "start": time_point(0.0, 0),
+            "end": time_point(1.0, 24),
+            "method_id": method_id,
+            "measurements": {"synthetic_level": -12.0},
+            "source_refs": [f"{EVIDENCE_ID}-S001"],
+            "unknowns": ["Sound source, meaning, and perception remain unknown."],
+        }
+    )
+    evidence["candidate_rules"][0]["evidence_auxiliary_ids"] = [auxiliary_id]
+    return auxiliary_id
+
+
+def replace_claim_status(value: Any, old: str, new: str) -> None:
+    if isinstance(value, dict):
+        if {"claim_id", "status", "value", "source_refs"}.issubset(value) and value.get("status") == old:
+            value["status"] = new
+        for child in value.values():
+            replace_claim_status(child, old, new)
+    elif isinstance(value, list):
+        for child in value:
+            replace_claim_status(child, old, new)
+
+
+def error_codes(evidence: dict[str, Any]) -> set[str]:
+    report = validate_evidence(evidence, SCHEMA)
+    return {issue["code"] for issue in report["issues"] if issue["level"] == "error"}
+
+
+class SceneEvidenceValidatorTests(unittest.TestCase):
+    def test_valid_scene_evidence_passes(self) -> None:
+        report = validate_evidence(make_valid_evidence(), SCHEMA)
+        self.assertTrue(report["passed"], json.dumps(report["issues"], ensure_ascii=False, indent=2))
+
+    def test_cli_accepts_valid_scene_evidence(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            evidence_path = Path(directory) / "scene-evidence.json"
+            evidence_path.write_text(json.dumps(make_valid_evidence(), ensure_ascii=False), encoding="utf-8")
+            stdout = io.StringIO()
+            with contextlib.redirect_stdout(stdout):
+                result = main([str(evidence_path)])
+            report = json.loads(stdout.getvalue())
+        self.assertEqual(result, 0)
+        self.assertEqual(report["status"], "PASS_STRUCTURAL")
+        self.assertTrue(report["structural_validation_is_not_creative_approval"])
+        self.assertEqual(report["total_scenes"], 1)
+        self.assertEqual(report["passed"], 1)
+        self.assertEqual(report["failed"], 0)
+        self.assertEqual(report["warnings"], [])
+        self.assertEqual(report["total_shots"], 2)
+        self.assertEqual(report["failed_scene_ids"], [])
+        self.assertEqual(report["failed_rule_ids"], [])
+        self.assertEqual(report["results"][0]["path"], "scene-evidence.json")
+
+    def test_shot_gap_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["shots"][1]["start"] = time_point(1.1, 26)
+        evidence["shots"][1]["duration"] = 0.9
+        self.assertIn("SHOT-GAP", error_codes(evidence))
+
+    def test_shot_overlap_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["shots"][1]["start"] = time_point(0.9, 22)
+        evidence["shots"][1]["duration"] = 1.1
+        self.assertIn("SHOT-OVERLAP", error_codes(evidence))
+
+    def test_missing_shot_reference_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["candidate_rules"][0]["evidence_shot_ids"].append(f"{EVIDENCE_ID}-S999")
+        self.assertIn("RULE-SHOT-REF-MISSING", error_codes(evidence))
+
+    def test_unknown_promoted_to_required_fact_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["scene_dramatic_structure"]["start_state"]["status"] = "UNKNOWN"
+        evidence["scene_dramatic_structure"]["start_state"]["source_refs"] = []
+        self.assertIn("RULE-REQUIRES-UNKNOWN", error_codes(evidence))
+
+    def test_high_risk_without_fallback_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["shots"][0]["AI_complexity"]["camera"]["level"] = "HIGH"
+        evidence["shots"][0]["fallback"]["camera"] = None
+        self.assertIn("HIGH-RISK-NO-FALLBACK", error_codes(evidence))
+
+    def test_missing_non_applicability_fails(self) -> None:
+        evidence = make_valid_evidence()
+        del evidence["candidate_rules"][0]["not_applicable_when"]
+        report = validate_evidence(evidence, SCHEMA)
+        self.assertTrue(
+            any(
+                issue["code"] == "SCHEMA-REQUIRED"
+                and issue["path"] == "$.candidate_rules[0].not_applicable_when"
+                for issue in report["issues"]
+            )
+        )
+
+    def test_single_source_general_default_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["candidate_rules"][0]["promotion_status"] = "GENERAL_DEFAULT"
+        self.assertIn("RULE-EMBEDDED-PROMOTION", error_codes(evidence))
+
+    def test_audio_rule_without_observed_audio_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["candidate_rules"][0]["audio_logic"] = claim(
+            "RULE-AUDIO", "A sound cue drives the cut.", [f"{EVIDENCE_ID}-S001"], "INFERRED"
+        )
+        self.assertIn("RULE-AUDIO-WITHOUT-EVIDENCE", error_codes(evidence))
+
+    def test_reference_surface_term_in_rule_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["candidate_rules"][0]["director_decision"] += " Place the blue teapot at center frame."
+        self.assertIn("RULE-SURFACE-COPY", error_codes(evidence))
+
+    def test_inferred_self_reference_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["scene_dramatic_structure"]["objectives"][0]["source_refs"] = ["DS-OBJECTIVE"]
+        codes = error_codes(evidence)
+        self.assertIn("CLAIM-SELF-REFERENCE", codes)
+        self.assertIn("INFERRED-NO-OBSERVED-SOURCE", codes)
+
+    def test_inferred_method_only_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["scene_dramatic_structure"]["objectives"][0]["source_refs"] = [
+            "METHOD-SYNTHETIC-FIXTURE"
+        ]
+        self.assertIn("INFERRED-NO-OBSERVED-SOURCE", error_codes(evidence))
+
+    def test_unknown_audio_directive_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["audio_audit"]["offscreen_sound"]["value"] = (
+            "Audio remains unknown; add an offscreen sound cue that drives the cut."
+        )
+        self.assertIn("AUDIO-UNKNOWN-HIDES-DIRECTIVE", error_codes(evidence))
+
+    def test_unknown_rule_audio_directive_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["candidate_rules"][0]["audio_logic"]["value"] = (
+            "Audio remains unknown; add an offscreen sound cue that drives the cut."
+        )
+        self.assertIn("RULE-AUDIO-UNKNOWN-HIDES-DIRECTIVE", error_codes(evidence))
+
+    def test_operational_audio_directive_without_audition_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["candidate_rules"][0]["director_decision"] += " Add a sound cue before the image change."
+        self.assertIn("RULE-AUDIO-DIRECTIVE-WITHOUT-EVIDENCE", error_codes(evidence))
+
+    def test_blocked_direct_audition_cannot_prove_audio_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["audio_evidence_status"] = "AUDIO_OBSERVED"
+        evidence["methods"].append(
+            {
+                "method_id": "METHOD-BLOCKED-AUDIO",
+                "method_type": "AUDIO_DIRECT_AUDITION",
+                "status": "BLOCKED",
+                "description": "Direct audition was not performed.",
+                "repository_command": None,
+                "tool_version_status": "NOT_APPLICABLE",
+                "source_refs": [],
+                "unknowns": ["All semantic audio remains unknown."],
+            }
+        )
+        self.assertIn("AUDIO-OBSERVED-NO-DIRECT-METHOD", error_codes(evidence))
+
+    def test_blocked_picture_method_cannot_prove_observation(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["methods"].append(
+            {
+                "method_id": "METHOD-BLOCKED-PICTURE",
+                "method_type": "PICTURE_FRAME_REVIEW",
+                "status": "BLOCKED",
+                "description": "Picture review was not completed.",
+                "repository_command": None,
+                "tool_version_status": "NOT_APPLICABLE",
+                "source_refs": [],
+                "unknowns": ["Picture observation remains unverified."],
+            }
+        )
+        evidence["boundary_evidence"]["source_refs"] = ["METHOD-BLOCKED-PICTURE"]
+        self.assertIn("PICTURE-SOURCE-TRACK", error_codes(evidence))
+
+    def test_audio_auxiliary_requires_direct_audition_method(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["audio_evidence_status"] = "AUDIO_OBSERVED"
+        evidence["methods"].append(
+            {
+                "method_id": "METHOD-DIRECT-AUDIO",
+                "method_type": "AUDIO_DIRECT_AUDITION",
+                "status": "MANUAL_REVIEW_RECORDED",
+                "description": "Synthetic direct-audition method fixture.",
+                "repository_command": None,
+                "tool_version_status": "NOT_APPLICABLE",
+                "source_refs": [],
+                "unknowns": [],
+            }
+        )
+        evidence["auxiliary_evidence"].append(
+            {
+                "auxiliary_id": "AUX-AUDIO-001",
+                "kind": "AUDIO_AUDIT_EVENT",
+                "status": "AUDIO_OBSERVED",
+                "start": time_point(0.0, 0),
+                "end": time_point(1.0, 24),
+                "method_id": "METHOD-SYNTHETIC-FIXTURE",
+                "measurements": {},
+                "source_refs": [f"{EVIDENCE_ID}-S001"],
+                "unknowns": [],
+            }
+        )
+        self.assertIn("AUXILIARY-AUDIO-METHOD", error_codes(evidence))
+
+    def test_malformed_rights_boundary_reports_schema_error(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["rights_boundary"] = "bogus"
+        self.assertIn("SCHEMA-TYPE", error_codes(evidence))
+
+    def test_home_absolute_path_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["validation_warnings"] = ["See /home/alice/private/notes.txt"]
+        self.assertIn("PUBLIC-ABSOLUTE-PATH", error_codes(evidence))
+
+    def test_zero_tolerance_rejects_one_millisecond_mismatch(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["time_tolerance_seconds"] = 0
+        evidence["shots"][1]["start"]["timecode"] = "00:00:01.001"
+        self.assertIn("TIMECODE-SECONDS-MISMATCH", error_codes(evidence))
+
+    def test_within_shot_track_cannot_span_two_shots(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["continuity_tracks"] = [
+            {
+                "track_id": "TRACK-PERSON-001",
+                "track_kind": "PERSON_APPEARANCE",
+                "status": "WITHIN_SHOT_OBSERVED",
+                "statement": "Two shots are incorrectly grouped as one observed identity.",
+                "source_refs": [f"{EVIDENCE_ID}-S001", f"{EVIDENCE_ID}-S002"],
+                "unknowns": [],
+            }
+        ]
+        self.assertIn("TRACK-WITHIN-SHOT-SOURCE-COUNT", error_codes(evidence))
+
+    def test_surface_term_uses_word_boundaries(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["rights_boundary"]["reference_surface_terms"] = ["bus"]
+        evidence["candidate_rules"][0]["director_decision"] += " Preserve business-state legibility."
+        self.assertNotIn("RULE-SURFACE-COPY", error_codes(evidence))
+
+    def test_external_scene_ids_cannot_fake_embedded_promotion(self) -> None:
+        evidence = make_valid_evidence()
+        rule = evidence["candidate_rules"][0]
+        rule["promotion_status"] = "GENERAL_DEFAULT"
+        rule["counterexample_status"] = "VERIFIED_SAME_TRIGGER_FAILURE"
+        rule["counterexample_ids"] = ["FAKE-COUNTEREXAMPLE"]
+        rule["evidence_scene_ids"] = [EVIDENCE_ID, "FAKE-SCENE-2", "FAKE-SCENE-3"]
+        codes = error_codes(evidence)
+        self.assertIn("RULE-EMBEDDED-PROMOTION", codes)
+        self.assertIn("RULE-EXTERNAL-SCENE-REF", codes)
+        self.assertIn("RULE-EMBEDDED-COUNTEREXAMPLE", codes)
+
+    def test_fake_verified_counterexample_fails_even_without_promotion(self) -> None:
+        evidence = make_valid_evidence()
+        rule = evidence["candidate_rules"][0]
+        rule["counterexample_status"] = "VERIFIED_SAME_TRIGGER_FAILURE"
+        rule["counterexample_ids"] = ["FAKE-COUNTEREXAMPLE"]
+        self.assertIn("RULE-EMBEDDED-COUNTEREXAMPLE", error_codes(evidence))
+
+    def test_signal_dependent_rule_must_be_blocked(self) -> None:
+        evidence = make_valid_evidence()
+        add_signal_auxiliary(evidence)
+        self.assertIn("RULE-SIGNAL-OR-SOUND-UNKNOWN-NOT-BLOCKED", error_codes(evidence))
+        evidence["candidate_rules"][0]["promotion_status"] = "BLOCKED_BY_UNKNOWN"
+        self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
+
+    def test_sound_led_rule_without_audition_must_be_blocked(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["scene_problem"]["primary"] = "SOUND_LED_CAUSALITY"
+        evidence["candidate_rules"][0]["scene_problem"] = "SOUND_LED_CAUSALITY"
+        self.assertIn("RULE-SIGNAL-OR-SOUND-UNKNOWN-NOT-BLOCKED", error_codes(evidence))
+
+    def test_alarm_first_audio_directive_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["candidate_rules"][0]["audio_logic"]["value"] = (
+            "Audio remains unknown. On the alarm sound, cut immediately."
+        )
+        self.assertIn("RULE-AUDIO-UNKNOWN-HIDES-DIRECTIVE", error_codes(evidence))
+        evidence = make_valid_evidence()
+        evidence["candidate_rules"][0]["director_decision"] = "When the alarm sounds, cut immediately."
+        self.assertIn("RULE-AUDIO-DIRECTIVE-WITHOUT-EVIDENCE", error_codes(evidence))
+
+    def test_score_entry_audio_directive_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["candidate_rules"][0]["director_decision"] = "Let the score enter before the image."
+        self.assertIn("RULE-AUDIO-DIRECTIVE-WITHOUT-EVIDENCE", error_codes(evidence))
+
+    def test_unknown_blocks_rule_promotion(self) -> None:
+        evidence = make_valid_evidence()
+        rule_id = evidence["candidate_rules"][0]["candidate_rule_id"]
+        evidence["unknowns"][0]["blocks_rule_ids"] = [rule_id]
+        self.assertIn("UNKNOWN-RULE-NOT-BLOCKED", error_codes(evidence))
+
+    def test_unknown_register_must_state_uncertainty(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["unknowns"][0]["statement"] = "The same person returns across the cut."
+        self.assertIn("UNKNOWN-STATEMENT-ASSERTS-FACT", error_codes(evidence))
+
+    def test_blocked_signal_method_cannot_support_inference(self) -> None:
+        evidence = make_valid_evidence()
+        auxiliary_id = add_signal_auxiliary(evidence, "BLOCKED")
+        evidence["candidate_rules"][0]["promotion_status"] = "BLOCKED_BY_UNKNOWN"
+        evidence["scene_dramatic_structure"]["objectives"][0]["source_refs"] = [auxiliary_id]
+        codes = error_codes(evidence)
+        self.assertIn("AUXILIARY-SIGNAL-METHOD-STATUS", codes)
+        self.assertIn("INFERRED-NO-OBSERVED-SOURCE", codes)
+
+    def test_unverified_picture_shots_cannot_support_inference(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["picture_evidence_status"] = "PICTURE_UNVERIFIED"
+        for shot in evidence["shots"]:
+            shot["picture_status"] = "PICTURE_UNVERIFIED"
+        replace_claim_status(evidence, "PICTURE_OBSERVED", "INFERRED")
+        self.assertIn("INFERRED-NO-OBSERVED-SOURCE", error_codes(evidence))
+
+    def test_signal_cannot_prove_subjective_semantics(self) -> None:
+        evidence = make_valid_evidence()
+        auxiliary_id = add_signal_auxiliary(evidence)
+        evidence["candidate_rules"][0]["promotion_status"] = "BLOCKED_BY_UNKNOWN"
+        objective = evidence["scene_dramatic_structure"]["objectives"][0]
+        objective["value"] = "The signal proves subjective hearing loss and audience emotion."
+        objective["source_refs"] = [f"{EVIDENCE_ID}-S001", auxiliary_id]
+        self.assertIn("SIGNAL-CANNOT-PROVE-SEMANTICS", error_codes(evidence))
+
+    def test_additional_absolute_paths_and_media_extensions_fail(self) -> None:
+        cases = (
+            "/opt/private/notes.txt",
+            "path=/Users/alice/private/notes.txt",
+            "scene.webm",
+            "scene.m2ts",
+        )
+        for value in cases:
+            with self.subTest(value=value):
+                evidence = make_valid_evidence()
+                evidence["validation_warnings"] = [value]
+                codes = error_codes(evidence)
+                expected = "PUBLIC-MEDIA-OR-SUBTITLE" if value.endswith((".webm", ".m2ts")) else "PUBLIC-ABSOLUTE-PATH"
+                self.assertIn(expected, codes)
+
+    def test_surface_copy_in_ai_risk_and_plural_fails(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["candidate_rules"][0]["AI_risk"]["camera"]["reasons"].append(
+            "Match the blue teapots exactly."
+        )
+        self.assertIn("RULE-SURFACE-COPY", error_codes(evidence))
+
+    def test_shot_track_status_conflicts_fail(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["shots"][0]["picture_status"] = "PICTURE_UNVERIFIED"
+        self.assertIn("SHOT-PICTURE-CLAIM-CONFLICT", error_codes(evidence))
+
+        evidence = make_valid_evidence()
+        evidence["shots"][0]["audio_status"] = "AUDIO_OBSERVED"
+        self.assertIn("SHOT-AUDIO-STATUS-CONFLICT", error_codes(evidence))
+
+        evidence = make_valid_evidence()
+        evidence["shots"][0]["text_anchor_status"] = "TEXT_ANCHOR_VERIFIED"
+        self.assertIn("SHOT-TEXT-STATUS-CONFLICT", error_codes(evidence))
+
+    def test_verified_text_status_requires_anchor(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["text_anchor_status"] = "TEXT_ANCHOR_VERIFIED"
+        self.assertIn("TEXT-STATUS-NO-ANCHOR", error_codes(evidence))
+
+    def test_verified_text_anchor_requires_review_method(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["text_anchor_status"] = "TEXT_ANCHOR_VERIFIED"
+        evidence["text_anchors"] = [
+            {
+                "anchor_id": "TEXT-ANCHOR-001",
+                "status": "TEXT_ANCHOR_VERIFIED",
+                "source_type": "SCRIPT",
+                "paraphrase": "Synthetic text anchor.",
+                "speaker_status": "UNKNOWN",
+                "start": time_point(0.0, 0),
+                "end": time_point(1.0, 24),
+            }
+        ]
+        self.assertIn("TEXT-ANCHOR-NO-REVIEW-METHOD", error_codes(evidence))
+
+    def test_declared_warnings_are_preserved_in_report(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["validation_warnings"] = ["Human review remains pending."]
+        report = validate_evidence(evidence, SCHEMA)
+        self.assertEqual(report["warning_count"], 1)
+        self.assertEqual(report["issues"][-1]["code"], "EVIDENCE-DECLARED-WARNING")
+
+    def test_load_error_counts_as_scene(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            valid_path = Path(directory) / "valid.scene-evidence.json"
+            invalid_path = Path(directory) / "invalid.scene-evidence.json"
+            valid_path.write_text(json.dumps(make_valid_evidence()), encoding="utf-8")
+            invalid_path.write_text("{", encoding="utf-8")
+            stdout = io.StringIO()
+            with contextlib.redirect_stdout(stdout):
+                result = main([str(valid_path), str(invalid_path)])
+            report = json.loads(stdout.getvalue())
+        self.assertEqual(result, 1)
+        self.assertEqual(report["total_scenes"], 2)
+        self.assertEqual(report["passed"], 1)
+        self.assertEqual(report["failed"], 1)
+
+    def test_method_source_reference_must_resolve(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["methods"][0]["source_refs"] = ["BOGUS-REF"]
+        self.assertIn("METHOD-SOURCE-REF-MISSING", error_codes(evidence))
+
+    def test_rule_method_must_be_active(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["methods"][0]["status"] = "BLOCKED"
+        evidence["methods"][0]["repository_command"] = None
+        self.assertIn("RULE-METHOD-INACTIVE", error_codes(evidence))
+
+    def test_shot_id_must_use_evidence_namespace(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["shots"][0]["shot_id"] = "OTHER-NAMESPACE-S001"
+        self.assertIn("SHOT-ID-NAMESPACE", error_codes(evidence))
+
+
+if __name__ == "__main__":
+    unittest.main()

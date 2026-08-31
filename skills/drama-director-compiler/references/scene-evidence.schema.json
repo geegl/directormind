@@ -1,0 +1,820 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "scene-evidence.schema.json",
+  "title": "DirectorMind Scene Evidence v0.1",
+  "description": "Machine-readable, model-neutral evidence extracted from one selected source scene or editorial envelope. It is research evidence, not a generation authorization.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "evidence_id",
+    "work_id",
+    "scene_problem",
+    "scene_unit_type",
+    "boundary_status",
+    "boundary_evidence",
+    "production_take_status",
+    "source_identity_status",
+    "source_start",
+    "source_end",
+    "duration",
+    "time_tolerance_seconds",
+    "picture_evidence_status",
+    "audio_evidence_status",
+    "text_anchor_status",
+    "scene_dramatic_structure",
+    "spatial_geometry",
+    "axis",
+    "POV",
+    "audience_information",
+    "shots",
+    "stats",
+    "audio_audit",
+    "text_anchors",
+    "methods",
+    "auxiliary_evidence",
+    "continuity_tracks",
+    "candidate_rules",
+    "unknowns",
+    "rights_boundary",
+    "validation_status",
+    "validation_warnings"
+  ],
+  "properties": {
+    "schema_version": {"const": "scene-evidence/0.1"},
+    "evidence_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+    "work_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+    "scene_problem": {"$ref": "#/$defs/sceneProblem"},
+    "scene_unit_type": {
+      "enum": [
+        "NATURAL_CONTINUOUS_SCENE",
+        "CONTIGUOUS_EDITORIAL_SEQUENCE",
+        "PARALLEL_INTERCUT_SEQUENCE",
+        "SINGLE_VISIBLE_TAKE",
+        "SELECTED_INTERNAL_ENVELOPE"
+      ]
+    },
+    "boundary_status": {
+      "enum": [
+        "NATURAL_START_END_VERIFIED",
+        "START_INTERNAL_END_VERIFIED",
+        "START_VERIFIED_END_INTERNAL",
+        "BOTH_INTERNAL_SELECTED",
+        "BOUNDARY_UNKNOWN"
+      ]
+    },
+    "boundary_evidence": {"$ref": "#/$defs/evidenceClaim"},
+    "production_take_status": {
+      "enum": [
+        "VISIBLE_CONTINUITY_ONLY",
+        "PRODUCTION_TAKE_VERIFIED",
+        "PRODUCTION_METHOD_UNKNOWN"
+      ]
+    },
+    "source_identity_status": {
+      "enum": [
+        "PICTURE_VERIFIED",
+        "SOURCE_SUPPLIED_PICTURE_CORROBORATED",
+        "SOURCE_OR_FILENAME_SUPPLIED",
+        "UNKNOWN"
+      ]
+    },
+    "source_start": {"$ref": "#/$defs/timePoint"},
+    "source_end": {"$ref": "#/$defs/timePoint"},
+    "duration": {"type": "number", "exclusiveMinimum": 0},
+    "time_tolerance_seconds": {"type": "number", "minimum": 0, "maximum": 0.01},
+    "picture_evidence_status": {
+      "enum": ["PICTURE_OBSERVED", "PICTURE_PARTIAL", "PICTURE_UNVERIFIED"]
+    },
+    "audio_evidence_status": {
+      "enum": [
+        "AUDIO_OBSERVED",
+        "SIGNAL_MEASURED_NOT_AUDITIONED",
+        "BLOCKED_DIRECT_AUDITION",
+        "AUDIO_UNKNOWN"
+      ]
+    },
+    "text_anchor_status": {
+      "enum": [
+        "TEXT_ANCHOR_VERIFIED",
+        "TEXT_ANCHOR_PARTIAL",
+        "TEXT_ANCHOR_NOT_USED",
+        "TEXT_ANCHOR_UNKNOWN"
+      ]
+    },
+    "scene_dramatic_structure": {"$ref": "#/$defs/dramaticStructure"},
+    "spatial_geometry": {"$ref": "#/$defs/evidenceClaim"},
+    "axis": {"$ref": "#/$defs/evidenceClaim"},
+    "POV": {"$ref": "#/$defs/evidenceClaim"},
+    "audience_information": {"$ref": "#/$defs/evidenceClaim"},
+    "shots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/shot"}
+    },
+    "stats": {"$ref": "#/$defs/stats"},
+    "audio_audit": {"$ref": "#/$defs/audioAudit"},
+    "text_anchors": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/textAnchor"}
+    },
+    "methods": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/methodRecord"}
+    },
+    "auxiliary_evidence": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/auxiliaryEvidence"}
+    },
+    "continuity_tracks": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/continuityTrack"}
+    },
+    "candidate_rules": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/candidateRule"}
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/unknown"}
+    },
+    "rights_boundary": {"$ref": "#/$defs/rightsBoundary"},
+    "validation_status": {
+      "enum": ["NOT_VALIDATED", "VALIDATED", "BLOCKED", "INVALID", "HUMAN_REVIEW_PENDING"]
+    },
+    "validation_warnings": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    }
+  },
+  "$defs": {
+    "sceneProblemValue": {
+      "enum": [
+        "DIALOGUE_POWER_TRANSFER",
+        "RELATIONSHIP_FRACTURE",
+        "PUBLIC_REVELATION",
+        "GROUP_POWER_CHANGE",
+        "PROCEDURAL_COMPETENCE",
+        "PROCEDURAL_COLLAPSE",
+        "INTERROGATION",
+        "SUBJECTIVE_COERCION",
+        "SUSPENSE_INFORMATION_ASYMMETRY",
+        "ACTION_CAUSALITY",
+        "HORROR_RULE_REVELATION",
+        "ROMANTIC_PROXIMITY",
+        "SOUND_LED_CAUSALITY",
+        "MONTAGE_TIME_COMPRESSION",
+        "ENSEMBLE_REACTION_CHAIN",
+        "SILENT_AFTERMATH"
+      ]
+    },
+    "sceneProblem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary", "secondary", "status", "source_refs"],
+      "properties": {
+        "primary": {"$ref": "#/$defs/sceneProblemValue"},
+        "secondary": {
+          "type": "array",
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/sceneProblemValue"}
+        },
+        "status": {"enum": ["TEXT_ANCHOR", "INFERRED", "UNKNOWN"]},
+        "source_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "timePoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["timecode", "seconds"],
+      "properties": {
+        "timecode": {
+          "type": "string",
+          "pattern": "^[0-9]{2,}:[0-5][0-9]:[0-5][0-9](?:\\.[0-9]{1,9})?$"
+        },
+        "seconds": {"type": "number", "minimum": 0},
+        "frame": {"type": ["integer", "null"], "minimum": 0},
+        "pts": {"type": ["integer", "null"]},
+        "time_base": {"type": ["string", "null"], "pattern": "^[1-9][0-9]*/[1-9][0-9]*$"}
+      }
+    },
+    "evidenceClaim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "status", "value", "source_refs"],
+      "properties": {
+        "claim_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+        "status": {
+          "enum": ["PICTURE_OBSERVED", "AUDIO_OBSERVED", "TEXT_ANCHOR", "INFERRED", "UNKNOWN"]
+        },
+        "value": {"type": "string", "minLength": 1},
+        "source_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "notes": {"type": "string"}
+      }
+    },
+    "dramaticStructure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "start_state",
+        "objectives",
+        "obstacle",
+        "event_point",
+        "reaction_point",
+        "turn",
+        "end_state"
+      ],
+      "properties": {
+        "start_state": {"$ref": "#/$defs/evidenceClaim"},
+        "objectives": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/evidenceClaim"}
+        },
+        "obstacle": {"$ref": "#/$defs/evidenceClaim"},
+        "event_point": {"$ref": "#/$defs/evidenceClaim"},
+        "reaction_point": {"$ref": "#/$defs/evidenceClaim"},
+        "turn": {"$ref": "#/$defs/evidenceClaim"},
+        "end_state": {"$ref": "#/$defs/evidenceClaim"}
+      }
+    },
+    "roleLabel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "appearance_id",
+        "functional_role",
+        "status",
+        "appearance_identity_status",
+        "appearance_track_id",
+        "source_refs"
+      ],
+      "properties": {
+        "appearance_id": {"type": "string", "pattern": "^[A-Z][A-Z0-9._-]+$"},
+        "functional_role": {
+          "enum": [
+            "authority",
+            "challenger",
+            "witness",
+            "swing_member",
+            "outsider",
+            "protector",
+            "target",
+            "operator",
+            "investigator",
+            "receiver",
+            "absent_mover",
+            "decision_owner",
+            "UNKNOWN"
+          ]
+        },
+        "status": {"enum": ["TEXT_ANCHOR", "INFERRED", "UNKNOWN"]},
+        "appearance_identity_status": {
+          "enum": [
+            "PICTURE_OBSERVED_WITHIN_SHOT",
+            "INFERRED_ACROSS_CUTS",
+            "UNKNOWN"
+          ]
+        },
+        "appearance_track_id": {"type": ["string", "null"], "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+        "source_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "riskLevel": {"enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL", "UNKNOWN"]},
+    "riskDimension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "reasons"],
+      "properties": {
+        "level": {"$ref": "#/$defs/riskLevel"},
+        "reasons": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "aiComplexity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["camera", "performance", "continuity"],
+      "properties": {
+        "camera": {"$ref": "#/$defs/riskDimension"},
+        "performance": {"$ref": "#/$defs/riskDimension"},
+        "continuity": {"$ref": "#/$defs/riskDimension"}
+      }
+    },
+    "fallback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["camera", "performance", "continuity", "project_original_only"],
+      "properties": {
+        "camera": {"type": ["string", "null"]},
+        "performance": {"type": ["string", "null"]},
+        "continuity": {"type": ["string", "null"]},
+        "project_original_only": {"const": true}
+      }
+    },
+    "shot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "shot_id",
+        "order",
+        "completeness",
+        "start",
+        "end",
+        "duration",
+        "shot_size",
+        "camera_height",
+        "camera_angle",
+        "camera_motion",
+        "camera_start",
+        "camera_path",
+        "camera_end",
+        "focus_strategy",
+        "spatial_zone",
+        "axis_and_screen_direction",
+        "abstract_role_labels",
+        "blocking",
+        "visible_action",
+        "visible_state_in",
+        "visible_state_out",
+        "event_or_reaction",
+        "performance_beat",
+        "edit_in",
+        "edit_out",
+        "cut_motivation",
+        "narrative_function",
+        "picture_status",
+        "audio_status",
+        "text_anchor_status",
+        "AI_complexity",
+        "fallback",
+        "unknowns"
+      ],
+      "properties": {
+        "shot_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]*-S[0-9]{3,4}$"},
+        "order": {"type": "integer", "minimum": 1},
+        "completeness": {
+          "enum": [
+            "COMPLETE_VISIBLE_SHOT",
+            "PARTIAL_AT_START",
+            "PARTIAL_AT_END",
+            "PARTIAL_AT_BOTH",
+            "EDIT_UNIT_NOT_SHOT"
+          ]
+        },
+        "start": {"$ref": "#/$defs/timePoint"},
+        "end": {"$ref": "#/$defs/timePoint"},
+        "duration": {"type": "number", "exclusiveMinimum": 0},
+        "shot_size": {"$ref": "#/$defs/evidenceClaim"},
+        "camera_height": {"$ref": "#/$defs/evidenceClaim"},
+        "camera_angle": {"$ref": "#/$defs/evidenceClaim"},
+        "camera_motion": {"$ref": "#/$defs/evidenceClaim"},
+        "camera_start": {"$ref": "#/$defs/evidenceClaim"},
+        "camera_path": {"$ref": "#/$defs/evidenceClaim"},
+        "camera_end": {"$ref": "#/$defs/evidenceClaim"},
+        "focus_strategy": {"$ref": "#/$defs/evidenceClaim"},
+        "spatial_zone": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/evidenceClaim"}
+        },
+        "axis_and_screen_direction": {"$ref": "#/$defs/evidenceClaim"},
+        "abstract_role_labels": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/roleLabel"}
+        },
+        "blocking": {"$ref": "#/$defs/evidenceClaim"},
+        "visible_action": {"$ref": "#/$defs/evidenceClaim"},
+        "visible_state_in": {"$ref": "#/$defs/evidenceClaim"},
+        "visible_state_out": {"$ref": "#/$defs/evidenceClaim"},
+        "event_or_reaction": {"$ref": "#/$defs/evidenceClaim"},
+        "performance_beat": {"$ref": "#/$defs/evidenceClaim"},
+        "edit_in": {"$ref": "#/$defs/evidenceClaim"},
+        "edit_out": {"$ref": "#/$defs/evidenceClaim"},
+        "cut_motivation": {"$ref": "#/$defs/evidenceClaim"},
+        "narrative_function": {"$ref": "#/$defs/evidenceClaim"},
+        "picture_status": {"enum": ["PICTURE_OBSERVED", "PICTURE_PARTIAL", "PICTURE_UNVERIFIED"]},
+        "audio_status": {
+          "enum": [
+            "AUDIO_OBSERVED",
+            "SIGNAL_MEASURED_NOT_AUDITIONED",
+            "BLOCKED_DIRECT_AUDITION",
+            "AUDIO_UNKNOWN"
+          ]
+        },
+        "text_anchor_status": {
+          "enum": [
+            "TEXT_ANCHOR_VERIFIED",
+            "TEXT_ANCHOR_PARTIAL",
+            "TEXT_ANCHOR_NOT_USED",
+            "TEXT_ANCHOR_UNKNOWN"
+          ]
+        },
+        "AI_complexity": {"$ref": "#/$defs/aiComplexity"},
+        "fallback": {"$ref": "#/$defs/fallback"},
+        "unknowns": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unit", "shot_count", "total_duration", "mean_duration", "median_duration", "duration_bins"],
+      "properties": {
+        "unit": {"enum": ["VISIBLE_SHOT", "EDIT_UNIT"]},
+        "shot_count": {"type": "integer", "minimum": 1},
+        "total_duration": {"type": "number", "exclusiveMinimum": 0},
+        "mean_duration": {"type": "number", "exclusiveMinimum": 0},
+        "median_duration": {"type": "number", "exclusiveMinimum": 0},
+        "duration_bins": {
+          "type": "object",
+          "additionalProperties": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "audioAudit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dialogue_overlap",
+        "silence_intervals",
+        "ambience",
+        "score_entry",
+        "score_exit",
+        "sound_before_image",
+        "offscreen_sound",
+        "sound_bridge",
+        "subjective_sound",
+        "object_sound",
+        "audio_information_change",
+        "audio_unknowns"
+      ],
+      "properties": {
+        "dialogue_overlap": {"$ref": "#/$defs/evidenceClaim"},
+        "silence_intervals": {"$ref": "#/$defs/evidenceClaim"},
+        "ambience": {"$ref": "#/$defs/evidenceClaim"},
+        "score_entry": {"$ref": "#/$defs/evidenceClaim"},
+        "score_exit": {"$ref": "#/$defs/evidenceClaim"},
+        "sound_before_image": {"$ref": "#/$defs/evidenceClaim"},
+        "offscreen_sound": {"$ref": "#/$defs/evidenceClaim"},
+        "sound_bridge": {"$ref": "#/$defs/evidenceClaim"},
+        "subjective_sound": {"$ref": "#/$defs/evidenceClaim"},
+        "object_sound": {"$ref": "#/$defs/evidenceClaim"},
+        "audio_information_change": {"$ref": "#/$defs/evidenceClaim"},
+        "audio_unknowns": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "textAnchor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["anchor_id", "status", "source_type", "paraphrase", "speaker_status", "start", "end"],
+      "properties": {
+        "anchor_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+        "status": {"enum": ["TEXT_ANCHOR_VERIFIED", "TEXT_ANCHOR_PARTIAL", "TEXT_ANCHOR_UNKNOWN"]},
+        "source_type": {"enum": ["SUBTITLE", "SCRIPT", "ASR", "OTHER"]},
+        "paraphrase": {"type": "string", "minLength": 1},
+        "speaker_status": {"enum": ["VERIFIED", "INFERRED", "UNKNOWN"]},
+        "start": {"$ref": "#/$defs/timePoint"},
+        "end": {"$ref": "#/$defs/timePoint"}
+      }
+    },
+    "methodRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method_id",
+        "method_type",
+        "status",
+        "description",
+        "repository_command",
+        "tool_version_status",
+        "source_refs",
+        "unknowns"
+      ],
+      "properties": {
+        "method_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+        "method_type": {
+          "enum": [
+            "PICTURE_FRAME_REVIEW",
+            "AUDIO_DIRECT_AUDITION",
+            "DECODED_SIGNAL_MEASUREMENT",
+            "TEXT_ANCHOR_REVIEW",
+            "PRODUCTION_METHOD_VERIFICATION",
+            "STRUCTURAL_CONVERSION",
+            "OTHER"
+          ]
+        },
+        "status": {
+          "enum": [
+            "REPOSITORY_REPRODUCIBLE",
+            "MANUAL_REVIEW_RECORDED",
+            "TEMP_ONLY_EVIDENCE_REMOVED",
+            "BLOCKED",
+            "UNKNOWN"
+          ]
+        },
+        "description": {"type": "string", "minLength": 1},
+        "repository_command": {"type": ["string", "null"]},
+        "tool_version_status": {"enum": ["VERSION_RECORDED", "VERSION_UNKNOWN", "NOT_APPLICABLE"]},
+        "source_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "unknowns": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "auxiliaryEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "auxiliary_id",
+        "kind",
+        "status",
+        "start",
+        "end",
+        "method_id",
+        "measurements",
+        "source_refs",
+        "unknowns"
+      ],
+      "properties": {
+        "auxiliary_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+        "kind": {
+          "enum": [
+            "DECODED_SIGNAL_THRESHOLD_GROUP",
+            "DECODED_SIGNAL_LOCAL_CONTRAST_MARKER",
+            "PICTURE_CUT_AUDIT",
+            "AUDIO_AUDIT_EVENT",
+            "OTHER"
+          ]
+        },
+        "status": {
+          "enum": [
+            "PICTURE_OBSERVED",
+            "AUDIO_OBSERVED",
+            "SIGNAL_MEASURED_NOT_AUDITIONED",
+            "TEXT_ANCHOR",
+            "INFERRED",
+            "UNKNOWN"
+          ]
+        },
+        "start": {"$ref": "#/$defs/timePoint"},
+        "end": {"$ref": "#/$defs/timePoint"},
+        "method_id": {"type": "string", "minLength": 1},
+        "measurements": {
+          "type": "object",
+          "additionalProperties": {
+            "type": ["string", "number", "integer", "boolean", "null"]
+          }
+        },
+        "source_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "unknowns": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "continuityTrack": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["track_id", "track_kind", "status", "statement", "source_refs", "unknowns"],
+      "properties": {
+        "track_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+        "track_kind": {
+          "enum": [
+            "PERSON_APPEARANCE",
+            "BODY_PART_APPEARANCE",
+            "OBJECT_APPEARANCE",
+            "SPATIAL_ZONE",
+            "VEHICLE_APPEARANCE",
+            "LIGHT_OR_SIGNAL_APPEARANCE",
+            "OTHER"
+          ]
+        },
+        "status": {"enum": ["WITHIN_SHOT_OBSERVED", "CROSS_CUT_INFERRED", "UNKNOWN"]},
+        "statement": {"type": "string", "minLength": 1},
+        "source_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "unknowns": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "factRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id"],
+      "properties": {
+        "claim_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"}
+      }
+    },
+    "candidateRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_rule_id",
+        "canonical_rule_family",
+        "scene_problem",
+        "trigger",
+        "required_story_facts",
+        "director_decision",
+        "coverage",
+        "blocking",
+        "POV_effect",
+        "edit_logic",
+        "pacing",
+        "audio_logic",
+        "continuity",
+        "AI_risk",
+        "fallback",
+        "applicable_when",
+        "not_applicable_when",
+        "failure_modes",
+        "counterexample_status",
+        "counterexample_ids",
+        "source_method_ids",
+        "evidence_scene_ids",
+        "evidence_shot_ids",
+        "evidence_auxiliary_ids",
+        "within_source_confidence",
+        "transfer_confidence",
+        "execution_confidence",
+        "promotion_status",
+        "evidence_status"
+      ],
+      "properties": {
+        "candidate_rule_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+        "canonical_rule_family": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+        "scene_problem": {"$ref": "#/$defs/sceneProblemValue"},
+        "trigger": {"type": "string", "minLength": 1},
+        "required_story_facts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/factRef"}
+        },
+        "director_decision": {"type": "string", "minLength": 1},
+        "coverage": {"type": "string", "minLength": 1},
+        "blocking": {"type": "string", "minLength": 1},
+        "POV_effect": {"type": "string", "minLength": 1},
+        "edit_logic": {"type": "string", "minLength": 1},
+        "pacing": {"type": "string", "minLength": 1},
+        "audio_logic": {"$ref": "#/$defs/evidenceClaim"},
+        "continuity": {"type": "string", "minLength": 1},
+        "AI_risk": {"$ref": "#/$defs/aiComplexity"},
+        "fallback": {"$ref": "#/$defs/fallback"},
+        "applicable_when": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "not_applicable_when": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "failure_modes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "counterexample_status": {
+          "enum": [
+            "UNKNOWN",
+            "PENDING",
+            "VERIFIED_SAME_TRIGGER_DIFFERENT_MECHANISM",
+            "VERIFIED_SAME_TRIGGER_FAILURE",
+            "NOT_APPLICABLE_BOUNDARY"
+          ]
+        },
+        "counterexample_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "source_method_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "evidence_scene_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "evidence_shot_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "evidence_auxiliary_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "within_source_confidence": {"enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]},
+        "transfer_confidence": {"enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]},
+        "execution_confidence": {"enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]},
+        "promotion_status": {
+          "enum": [
+            "SINGLE_WORK_CANDIDATE",
+            "CROSS_WORK_SUPPORTED",
+            "GENERAL_DEFAULT",
+            "REJECTED",
+            "BLOCKED_BY_UNKNOWN"
+          ]
+        },
+        "evidence_status": {"const": "HYPOTHESIS"}
+      }
+    },
+    "unknown": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unknown_id", "statement", "scope", "blocks_rule_ids"],
+      "properties": {
+        "unknown_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+        "statement": {"type": "string", "minLength": 1},
+        "scope": {"enum": ["SCENE", "SHOT", "AUDIO", "TEXT", "RULE", "PRODUCTION"]},
+        "blocks_rule_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "rightsBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "media_committed",
+        "subtitles_committed",
+        "scripts_or_long_dialogue_committed",
+        "contains_absolute_local_paths",
+        "contains_media_hashes",
+        "reference_surface_terms",
+        "surface_inventory_status",
+        "prohibited_transfer_content",
+        "notes"
+      ],
+      "properties": {
+        "media_committed": {"const": false},
+        "subtitles_committed": {"const": false},
+        "scripts_or_long_dialogue_committed": {"const": false},
+        "contains_absolute_local_paths": {"const": false},
+        "contains_media_hashes": {"const": false},
+        "reference_surface_terms": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 2}
+        },
+        "surface_inventory_status": {"enum": ["HUMAN_REVIEWED_COMPLETE", "PENDING"]},
+        "prohibited_transfer_content": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "notes": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}
