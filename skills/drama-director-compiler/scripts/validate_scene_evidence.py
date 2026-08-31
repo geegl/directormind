@@ -33,7 +33,17 @@ ABSOLUTE_PATH_RE = re.compile(
 )
 MEDIA_OR_SUBTITLE_RE = re.compile(
     r"\.(?:mp4|mkv|mov|avi|m4v|webm|m2ts|mts|mpg|mpeg|wmv|flv|wav|mp3|m4a|aac|"
-    r"flac|ogg|opus|aiff?|png|jpe?g|webp|gif|bmp|tiff?|srt|ass|vtt)(?:\b|$)",
+    r"flac|ogg|opus|aiff?|png|jpe?g|heic|heif|webp|gif|bmp|tiff?|srt|ssa|ass|vtt)(?:\b|$)",
+    re.IGNORECASE,
+)
+DATA_URI_RE = re.compile(
+    r"\bdata:[a-z0-9.+-]+/[a-z0-9.+-]+(?:;[^,\s]*)?,",
+    re.IGNORECASE,
+)
+CREDENTIAL_RE = re.compile(
+    r"(?:-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|"
+    r"\bauthorization\s*:\s*bearer\s+[A-Za-z0-9._~+/=-]{8,}\b|"
+    r"\b(?:api[_ -]?key|access[_ -]?token|client[_ -]?secret)\s*[:=]\s*[^\s,;]{8,})",
     re.IGNORECASE,
 )
 FINGERPRINT_LABEL_RE = re.compile(r"\b(?:sha(?:-?1|-?256|-?512)?|md5)\b", re.IGNORECASE)
@@ -49,11 +59,13 @@ PICTURE_SEMANTIC_LEAK_RE = re.compile(
     re.IGNORECASE,
 )
 AUDIO_DIRECTIVE_RE = re.compile(
-    r"(?:\b(?:add|use|insert|introduce|play|mute|drop|fade|bridge|cut|synchronize|trigger|drive|"
+    r"(?:\b(?:add|use|insert|introduce|play|mute|drop|fade|bridge|cut|synchronize|trigger|drive|enter|"
     r"underscore|hold)\b[^.\n]{0,100}\b(?:audio|sound|sounds|cue|score|music|silence|voice|dialogue|"
     r"ambience|noise|alarm|ring|tone)\b|\b(?:audio|sound|sounds|cue|score|music|silence|voice|dialogue|"
-    r"ambience|noise|alarm|ring|tone)\b[^.\n]{0,100}\b(?:add|use|insert|introduce|play|mute|drop|fade|"
-    r"bridge|cut|synchronize|trigger|drive|underscore|hold)\b)",
+    r"ambience|noise|alarm|ring|tone)\b[^.\n]{0,100}\b(?:add|use|insert|introduce|play|mute|drop|fade|enter|"
+    r"bridge|cut|synchronize|trigger|drive|underscore|hold)\b|"
+    r"\b(?:audio|sound|sounds|cue|score|music|silence|voice|dialogue|ambience|noise|alarm|ring|tone)\b"
+    r"[^.\n]{0,60}\b(?:should|must)\s+(?:enter|begin|start|precede|lead)\b)",
     re.IGNORECASE,
 )
 AUDIO_UNCERTAINTY_RE = re.compile(
@@ -75,6 +87,24 @@ SIGNAL_SEMANTIC_LEAK_RE = re.compile(
     r"effect|experience)|emotion|reaction cause|sound source|dialogue|intelligibility|diagnosis)\b",
     re.IGNORECASE,
 )
+UNKNOWN_FACT_STOPWORDS = {
+    "a", "an", "and", "are", "at", "be", "been", "being", "by", "cannot", "confirmed",
+    "directly", "established", "exact", "for", "from", "if", "in", "is", "not", "of", "on",
+    "or", "picture", "remain", "that", "the", "this", "to", "unknown", "unconfirmed",
+    "unproven", "unverified", "verified", "visible", "was", "were", "whether", "with",
+}
+SAFE_UNKNOWN_BOUNDARY_RE = re.compile(
+    r"\b(?:does not|do not|must not|should not|without|avoid)\b[^.\n]{0,80}"
+    r"\b(?:depend|assum|assert|treat|identify|confirm|require)\w*\b",
+    re.IGNORECASE,
+)
+UNKNOWN_FACT_ALIAS_PATTERNS = {
+    "axis": re.compile(r"\b(?:axis|180[- ]degree|screen direction|line of action)\b", re.IGNORECASE),
+    "identity": re.compile(
+        r"\b(?:identity|same (?:person|individual|body|appearance)|continuing (?:person|individual|appearance))\b",
+        re.IGNORECASE,
+    ),
+}
 
 
 def load_json(path: Path) -> Any:
@@ -294,6 +324,10 @@ def _validate_public_boundary(evidence: dict[str, Any], issues: list[dict[str, s
             add_issue(issues, "error", "PUBLIC-ABSOLUTE-PATH", path, "absolute local path is prohibited")
         if MEDIA_OR_SUBTITLE_RE.search(text):
             add_issue(issues, "error", "PUBLIC-MEDIA-OR-SUBTITLE", path, "media or subtitle filename is prohibited")
+        if DATA_URI_RE.search(text):
+            add_issue(issues, "error", "PUBLIC-DATA-URI", path, "embedded data payload is prohibited")
+        if CREDENTIAL_RE.search(text):
+            add_issue(issues, "error", "PUBLIC-CREDENTIAL", path, "credential-like material is prohibited")
         if FINGERPRINT_LABEL_RE.search(text) or LONG_HEX_RE.search(text):
             add_issue(issues, "error", "PUBLIC-FINGERPRINT", path, "media fingerprint material is prohibited")
         if RELEASE_LABEL_RE.search(text):
@@ -318,7 +352,7 @@ def _operational_rule_text(rule: dict[str, Any]) -> str:
         rule.get("fallback"),
         (rule.get("audio_logic") or {}).get("value") if isinstance(rule.get("audio_logic"), dict) else None,
     ]
-    return " ".join(text for _, text in _walk_strings(values)).lower()
+    return ". ".join(text for _, text in _walk_strings(values)).lower()
 
 
 def _term_occurs(text: str, term: str) -> bool:
@@ -333,6 +367,48 @@ def _has_unauditioned_audio_assertion(text: str) -> bool:
     for sentence in re.split(r"[.!?;\n]+", text):
         if AUDIO_TERM_RE.search(sentence) and AUDIO_UNCERTAINTY_RE.search(sentence) is None:
             return True
+    return False
+
+
+def _fact_tokens(text: str) -> set[str]:
+    """Return conservative content tokens for matching an active UNKNOWN to rule prose."""
+    result: set[str] = set()
+    for raw_token in re.findall(r"[a-z0-9]+", text.lower().replace("-", " ")):
+        if raw_token in UNKNOWN_FACT_STOPWORDS:
+            continue
+        token = raw_token
+        if token.endswith("ies") and len(token) > 4:
+            token = f"{token[:-3]}y"
+        elif token.endswith("ing") and len(token) > 5:
+            token = token[:-3]
+        elif token.endswith("ed") and len(token) > 4:
+            token = token[:-2]
+        elif token.endswith("s") and len(token) > 4 and not token.endswith(("ss", "is", "us")):
+            token = token[:-1]
+        if len(token) > 1 and token not in UNKNOWN_FACT_STOPWORDS:
+            result.add(token)
+    return result
+
+
+def _rule_asserts_unknown_fact(unknown_text: str, operational_text: str) -> bool:
+    """Detect a close factual restatement; broad semantic inference remains a human review boundary."""
+    unknown_tokens = _fact_tokens(unknown_text)
+    has_known_anchor = any(anchor in unknown_tokens for anchor in UNKNOWN_FACT_ALIAS_PATTERNS)
+    if len(unknown_tokens) < 2 and not has_known_anchor:
+        return False
+    for sentence in re.split(r"[.!?;\n]+", operational_text):
+        clauses = re.split(r"\b(?:but|however|yet|although)\b", sentence, flags=re.IGNORECASE)
+        for clause in clauses:
+            if GENERAL_UNCERTAINTY_RE.search(clause) or SAFE_UNKNOWN_BOUNDARY_RE.search(clause):
+                continue
+            shared = unknown_tokens.intersection(_fact_tokens(clause))
+            if len(shared) >= 2 and len(shared) / len(unknown_tokens) >= 0.5:
+                return True
+            if any(
+                anchor in unknown_tokens and pattern.search(clause)
+                for anchor, pattern in UNKNOWN_FACT_ALIAS_PATTERNS.items()
+            ):
+                return True
     return False
 
 
@@ -1078,6 +1154,23 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
                 "production-take verification requires a recorded production-method verification source",
             )
 
+    unknown_fact_sources: list[tuple[str, str]] = []
+    for claim_path, claim in claims.values():
+        value = claim.get("value")
+        if (
+            claim.get("status") == "UNKNOWN"
+            and isinstance(value, str)
+            and not claim_path.startswith("$.audio_audit.")
+            and ".audio_logic" not in claim_path
+        ):
+            unknown_fact_sources.append((claim_path, value))
+    for unknown_index, item in enumerate(
+        evidence.get("unknowns", []) if isinstance(evidence.get("unknowns"), list) else []
+    ):
+        statement = item.get("statement") if isinstance(item, dict) else None
+        if isinstance(statement, str):
+            unknown_fact_sources.append((f"$.unknowns[{unknown_index}].statement", statement))
+
     rules = evidence.get("candidate_rules") if isinstance(evidence.get("candidate_rules"), list) else []
     rule_ids: set[str] = set()
     rule_by_id: dict[str, dict[str, Any]] = {}
@@ -1203,6 +1296,23 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
         _validate_risk_fallback(rule, path, issues)
 
         operational_text = _operational_rule_text(rule)
+        if promotion != "BLOCKED_BY_UNKNOWN":
+            matched_unknown_path = next(
+                (
+                    unknown_path
+                    for unknown_path, unknown_text in unknown_fact_sources
+                    if _rule_asserts_unknown_fact(unknown_text, operational_text)
+                ),
+                None,
+            )
+            if matched_unknown_path is not None:
+                add_issue(
+                    issues,
+                    "error",
+                    "RULE-ASSERTS-UNKNOWN-FACT",
+                    f"{path}.promotion_status",
+                    f"operational rule text closely restates active UNKNOWN at {matched_unknown_path}; keep the rule blocked or remove the assertion",
+                )
         if audio_status != "AUDIO_OBSERVED" and (
             AUDIO_DIRECTIVE_RE.search(operational_text) or _has_unauditioned_audio_assertion(operational_text)
         ):

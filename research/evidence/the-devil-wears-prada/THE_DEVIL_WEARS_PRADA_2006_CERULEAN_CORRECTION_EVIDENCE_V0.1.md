@@ -195,4 +195,3 @@ All four rules are `HYPOTHESIS / SINGLE-SOURCE CANDIDATE`. Their semantic trigge
 ### Do not copy
 
 Do not copy characters, costumes, garment colors/combinations, office production design, props, dialogue, scene events, exact blocking, recognizable compositions, or performance imitation. Transfer only abstract decision logic: trigger registration, selective attention ownership, stable spatial sides, state-led reaction priority, work-object lineage, long-performance risk, terminal-owner conditions, UNKNOWN boundaries, and model-neutral fallbacks.
-

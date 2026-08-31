@@ -559,6 +559,106 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
         evidence["candidate_rules"][0]["director_decision"] = "Let the score enter before the image."
         self.assertIn("RULE-AUDIO-DIRECTIVE-WITHOUT-EVIDENCE", error_codes(evidence))
 
+    def test_unknown_clause_cannot_hide_score_directive(self) -> None:
+        values = (
+            "Audio remains unknown, but let the score enter before the image.",
+            "Audio remains unknown, but the music should begin before the image.",
+        )
+        for field in ("director_decision", "audio_logic"):
+            for value in values:
+                with self.subTest(field=field, value=value):
+                    evidence = make_valid_evidence()
+                    if field == "audio_logic":
+                        evidence["candidate_rules"][0][field]["value"] = value
+                        expected_path = "$.candidate_rules[0].audio_logic.value"
+                        expected_code = "RULE-AUDIO-UNKNOWN-HIDES-DIRECTIVE"
+                    else:
+                        evidence["candidate_rules"][0][field] = value
+                        expected_path = "$.candidate_rules[0]"
+                        expected_code = "RULE-AUDIO-DIRECTIVE-WITHOUT-EVIDENCE"
+                    report = validate_evidence(evidence, SCHEMA)
+                    self.assertTrue(
+                        any(
+                            issue["code"] == expected_code and issue["path"] == expected_path
+                            for issue in report["issues"]
+                        )
+                    )
+
+    def test_uncertain_score_entry_without_directive_remains_valid(self) -> None:
+        values = (
+            "Whether score entry precedes the image remains unknown.",
+            "Let audio remain unknown and outside this candidate.",
+        )
+        for value in values:
+            with self.subTest(value=value):
+                evidence = make_valid_evidence()
+                evidence["candidate_rules"][0]["audio_logic"]["value"] = value
+                self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
+
+    def test_unknown_axis_cannot_reappear_as_rule_fact(self) -> None:
+        values = (
+            ("The exact cross-cut axis remains unknown.", "Maintain the same 180-degree axis across every cut."),
+            ("The exact cross-cut axis remains unknown.", "The exact cross-cut axis remains unknown, but maintain the same cross-cut axis across every cut."),
+            ("The axis remains unknown.", "Maintain the same 180-degree axis across every cut."),
+        )
+        for unknown_value, rule_value in values:
+            with self.subTest(unknown_value=unknown_value, rule_value=rule_value):
+                evidence = make_valid_evidence()
+                evidence["axis"].update(
+                    status="UNKNOWN",
+                    value=unknown_value,
+                    source_refs=[],
+                )
+                evidence["candidate_rules"][0]["continuity"] = rule_value
+                report = validate_evidence(evidence, SCHEMA)
+                self.assertTrue(
+                    any(
+                        issue["code"] == "RULE-ASSERTS-UNKNOWN-FACT"
+                        and issue["path"] == "$.candidate_rules[0].promotion_status"
+                        for issue in report["issues"]
+                    )
+                )
+
+    def test_rule_may_repeat_unknown_as_an_explicit_boundary(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["axis"].update(
+            status="UNKNOWN",
+            value="The exact cross-cut axis remains unknown.",
+            source_refs=[],
+        )
+        evidence["candidate_rules"][0]["continuity"] = "The exact cross-cut axis remains unknown."
+        self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
+
+        evidence = make_valid_evidence()
+        evidence["unknowns"][0].update(
+            statement="Cross-cut identity remains unknown.",
+            scope="SCENE",
+            blocks_rule_ids=[],
+        )
+        evidence["candidate_rules"][0]["continuity"] = (
+            "Use coverage that does not depend on cross-cut identity."
+        )
+        self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
+
+    def test_unregistered_identity_unknown_cannot_reappear_in_rule(self) -> None:
+        statements = (
+            "Whether the same person returns across the cut remains unknown.",
+            "Identity remains unknown.",
+        )
+        for statement in statements:
+            with self.subTest(statement=statement):
+                evidence = make_valid_evidence()
+                evidence["unknowns"][0].update(
+                    statement=statement,
+                    scope="SCENE",
+                    blocks_rule_ids=[],
+                )
+                evidence["candidate_rules"][0]["continuity"] = "The same person returns across the cut."
+                self.assertIn("RULE-ASSERTS-UNKNOWN-FACT", error_codes(evidence))
+
+                evidence["candidate_rules"][0]["promotion_status"] = "BLOCKED_BY_UNKNOWN"
+                self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
+
     def test_unknown_blocks_rule_promotion(self) -> None:
         evidence = make_valid_evidence()
         rule_id = evidence["candidate_rules"][0]["candidate_rule_id"]
@@ -610,6 +710,32 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
                 codes = error_codes(evidence)
                 expected = "PUBLIC-MEDIA-OR-SUBTITLE" if value.endswith((".webm", ".m2ts")) else "PUBLIC-ABSOLUTE-PATH"
                 self.assertIn(expected, codes)
+
+    def test_additional_public_boundary_payloads_fail(self) -> None:
+        cases = (
+            ("contact-sheet.heic", "PUBLIC-MEDIA-OR-SUBTITLE"),
+            ("subtitles.ssa", "PUBLIC-MEDIA-OR-SUBTITLE"),
+            ("data:image/png;base64,AAAA", "PUBLIC-DATA-URI"),
+            ("data:image/svg+xml,%3Csvg%3E", "PUBLIC-DATA-URI"),
+            ("data:text/vtt,WEBVTT", "PUBLIC-DATA-URI"),
+            ("-----BEGIN PRIVATE KEY-----", "PUBLIC-CREDENTIAL"),
+            ("Authorization: Bearer test-fixture-token", "PUBLIC-CREDENTIAL"),
+        )
+        for value, expected_code in cases:
+            with self.subTest(value=value):
+                evidence = make_valid_evidence()
+                evidence["validation_warnings"] = [value]
+                report = validate_evidence(evidence, SCHEMA)
+                self.assertTrue(
+                    any(
+                        issue["code"] == expected_code
+                        and issue["path"] == "$.validation_warnings[0]"
+                        for issue in report["issues"]
+                    )
+                )
+        evidence = make_valid_evidence()
+        evidence["validation_warnings"] = ["Bearer credentials are prohibited from public evidence."]
+        self.assertNotIn("PUBLIC-CREDENTIAL", error_codes(evidence))
 
     def test_surface_copy_in_ai_risk_and_plural_fails(self) -> None:
         evidence = make_valid_evidence()
