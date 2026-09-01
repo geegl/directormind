@@ -52,7 +52,7 @@ After a contributor writes a Scene Evidence JSON unit, running the repository va
 - Completed by the later authorized closed-corpus task: A3 deterministic conversion, A5 closure of 13 absent-artifact claims, B3 full report, explicit C1–C4 blocked-audio records, and the 33-source retention register. The working tree contains 30 JSON units, 2,255 Shot/edit units, and 120 non-operational legacy-rule lineage records.
 - Validation result: schema syntax, Python compile, converter generation and `--check`, 66 unit/CLI tests, and full Scene Evidence validation pass. The report records 30 passed, 0 failed, 0 errors, and 69 warnings preserved. A fresh final independent read-only review returned PASS with no must-fix issue.
 - Known issues: no source replay or direct semantic audio audition; 197 rows lack explicit legacy frame endpoints, 1,944 lack explicit PTS/time base, and 513 high-risk rows lack a source-specific legacy fallback. These values remain visible rather than guessed.
-- Next single action: record the completed closed-corpus work in one isolated local commit. Do not update PR #3, merge, push, deploy, publish, promote rules, or delete source media in this task.
+- Successor state: the isolated closed-corpus commit exists. The user-approved 33-source generalization task in `context/THIRD_PARTY_GENERALIZATION_AUDIT_TASK.md` is active; its separate external-action gates remain in force.
 
 Rollback for this repair: revert only the isolated latest local repair commit with a normal Git revert. If it is later pushed or merged, use the same revert-commit approach and, after merge, a new pull request. Do not rewrite shared history.
 
@@ -71,9 +71,9 @@ Only these states are allowed:
 
 - `python3 -m json.tool skills/drama-director-compiler/references/scene-evidence.schema.json` — PASS.
 - Python in-memory compile / AST parse for the validator and tests — PASS.
-- `python3 -m unittest discover -s skills/drama-director-compiler/tests -v` — PASS, 53 tests after the latest local repair.
+- `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s skills/drama-director-compiler/tests -v` — PASS, 66 tests for the completed closed-corpus baseline.
 - The legacy-audit table check — PASS: 30 data rows, ten data columns per row, 2,255 Shot/edit units, 120 rules, and 13 broken artifact claims.
-- The earlier independent PASS was superseded by a later read-only review that reproduced contact/initiator UNKNOWN leakage and `bring in` unauditioned-music leakage. Those cases now have paired repository tests and pass locally; a fresh independent verdict on the latest working tree is pending.
+- The earlier independent PASS was superseded by a later read-only review that reproduced contact/initiator UNKNOWN leakage and an unauditioned-music directive leakage. Those cases now have paired repository tests and pass locally. A subsequent non-writing read-only reviewer reran the 66-test closed-corpus baseline and issued PASS; later phases require their own fresh review.
 
 Remaining validation boundary: these checks do not replay source media, directly audition audio, prove legacy picture observations, demonstrate audience effect, or constitute creative approval. Thirty canonical conversion JSON units now exist under the later task authorization, but their legacy rules remain non-operational and reference-surface review remains a human boundary before any promotion.
 
@@ -93,7 +93,7 @@ Remaining validation boundary: these checks do not replay source media, directly
 | A1 | VERIFIED_DONE | Add `skills/drama-director-compiler/references/scene-evidence.schema.json` with all required top-level fields and the five explicit `scene_unit_type` values. | JSON syntax check and independent 33/33 top-level field review passed. |
 | A2 | VERIFIED_DONE | Standardize every Shot field: identity/time, camera start/path/end, focus, zone/axis, abstract roles, blocking/action/states, event/reaction, performance, edits, motivation/function, evidence tracks, three-axis AI risk, fallback, and unknowns. | Independent 33/33 Shot-field review and validator fixture passed. |
 | A3 | VERIFIED_DONE | Convert the existing 30 local-source evidence units to schema-valid `scene-evidence.json`, one per work directory. | 30 JSON files pass deterministic converter check and full validator; 2,255 Shot/edit units and 120 legacy-rule lineage records; no new source work. |
-| A4 | TODO | Add deterministic `render_scene_evidence.py`; JSON becomes the sole machine fact source and refreshes Markdown summary, shot table, statistics, candidate rules, UNKNOWN, and boundary. | Renderer round-trip/determinism test and generated sections match JSON. |
+| A4 | VERIFIED_DONE | Add deterministic `render_scene_evidence.py`; JSON becomes the sole machine fact source and refreshes a separate generated Markdown summary, shot table, statistics, candidate rules, UNKNOWN, and boundary without overwriting legacy Markdown. | 30/30 generated files pass renderer round-trip/determinism; non-overwrite regression and independent read-only audit pass. |
 | A5 | VERIFIED_DONE | Resolve the 13 missing claims found in B99, HOTD, Marriage Story, Mr. Robot, DWP, TLOU, and The Martian by committing rights-safe original analysis artifacts or replacing those references with `scene-evidence.json`. | Regression verifies 13 explicit absence records across seven files, same-stem JSON/report pointers, and zero stale existence claims. |
 
 ## B. Reproducible validation
@@ -103,7 +103,7 @@ Remaining validation boundary: these checks do not replay source media, directly
 | B1 | VERIFIED_DONE | Add `validate_scene_evidence.py` covering schema, shot identity/timing, provenance, UNKNOWN leakage, rule references/boundaries, HIGH-risk fallback, surface-copy guards, and public-repository prohibitions. | Repair code rejects the repository's scoped UNKNOWN-rule, same-sentence sound-directive, HEIC/SSA, data-payload, and credential-format cases while preserving explicit safe boundaries; broad unlisted semantic paraphrase remains human-reviewed. |
 | B2 | VERIFIED_DONE | Add minimum tests: valid evidence, gap, overlap, missing Shot ref, UNKNOWN promotion, HIGH without fallback, missing non-applicability, single-source GENERAL_DEFAULT, audio rule without observed audio, and reference-surface leakage. | 66/66 unit and CLI tests pass, including migration, legacy-lineage, frame/PTS, fallback, path-scrub, and artifact-closure regressions; fresh independent review passed. |
 | B3 | VERIFIED_DONE | Validate all 30 Scene Evidence JSON files and write `research/validation/scene-evidence-validation.json` with errors and warnings preserved. | `passed=30`, `failed=0`, `error_count=0`, `warning_count=69`; warning rows remain visible. |
-| B4 | TODO | Remove or replace unreproducible validation claims, including bare `760 checks` and independent-pass statements without command, versioned validator, and repository report. | Claim-to-report/reference audit returns zero broken claims. |
+| B4 | VERIFIED_DONE | Remove or replace unreproducible validation claims and independent-pass statements without command, versioned validator, and repository report. | Claim register maps current claims to commands and reports; 77-test full suite and independent Phase 1 audit pass. |
 
 ## C. Multimodal evidence boundaries
 
@@ -171,9 +171,9 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| J1 | TODO | Reduce `context/STATE.md` to phase, counts, blockers, latest validation, next step, and authoritative links. | Independent review confirms no per-work duplication. |
-| J2 | TODO | Declare the five authoritative sources: Scene JSON, candidate index, support matrix, Grammar v0.2, and STATE. | Broken-reference scan passes. |
-| J3 | TODO | Make Post-16 files material catalogs only, not simultaneous status/rule/completion authorities. | Responsibility audit passes. |
+| J1 | VERIFIED_DONE | Reduce `context/STATE.md` to phase, counts, blockers, latest validation, next step, and authoritative links. | STATE is 65 lines with no per-work duplication; state-contract tests and independent review pass. |
+| J2 | VERIFIED_DONE | Declare the five intended authoritative locations and whether each is active or planned: Scene JSON, candidate index, support matrix, Grammar v0.2, and STATE. | STATE declares all five without pretending planned artifacts exist; state-contract test passes. |
+| J3 | VERIFIED_DONE | Make acquisition and coverage files material catalogs only, not simultaneous status/rule/completion authorities. | Five catalog boundary headers and responsibility tests pass; independent review confirms no competing authority claim. |
 
 ## K. Succession / PR #1 integration
 
@@ -214,4 +214,4 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 ## Current next action
 
-Closed-corpus completion is independently reviewed and ready for one isolated local commit. Do not begin A4 or the remaining grammar/routing/forward-test/CI/PR phases, and do not merge PR #3.
+Create the isolated local Phase 1 commit, then begin D/E/F candidate normalization and promotion-gate work. Do not push, close a PR, merge, deploy, publish, or delete media.

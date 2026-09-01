@@ -1,5 +1,10 @@
 # Scene-Problem Coverage Map
 
+Authority boundary: this is a research-gap catalog, not the canonical source for
+per-scene facts, candidate promotion, runtime rules, or project completion.
+Canonical scene facts live in `research/evidence/**/*.scene-evidence.json`;
+current phase and counts live in `context/STATE.md`.
+
 This is a research queue, not a claim that these rows exhaust directing.
 
 | Scene problem | Current evidence | Priority | What must be learned next |

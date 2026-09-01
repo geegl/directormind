@@ -2,85 +2,65 @@
 
 Updated: 2026-09-01
 
-## Verified baseline
+## Active phase
 
-- The private originating project compiled 36/36 locked episodes into 567 Director IR shots and passed its structural validators. Those proprietary scripts and IR files are intentionally absent from this public repository.
-- Two private Golden Cases tested dialogue-driven misdirection and compressed-space emotional/physical comedy. Their reusable execution lessons are summarized in `context/research-seeds/PROJECT_FORWARD_TEST_LESSONS.md`.
-- Four Good Omens scene reports support seven reference-transfer candidates. Several source-label, speaker, motion-statistic, and universal-language errors were corrected during audit.
-- The public compiler package contains the general contract, schema, validator, renderer, visual-module binding helpers, and continuity helpers. Project-hardcoded compilation scripts were intentionally excluded.
+The user-approved 33-source generalization Goal is active on `codex/macos-first16-local-batch`.
 
-## Closed-corpus completion checkpoint
+Phase 1 is complete and independently reviewed: canonical JSON is the sole machine fact source, generated review Markdown is deterministic and non-overwriting, validation claims are reproducible, and project state is compact. Phase 2 candidate normalization is next.
 
-- Local acquisition remains closed at `33` video files (approximately `52G`); no source was added, changed, moved, or deleted in the completion task.
-- The `30` current-local legacy evidence units now have deterministic adjacent Scene Evidence JSON: `2,255` Shot/edit units and `120` candidate-rule lineage records. Full structural validation passes `30/30` with `0` errors and `69` warnings preserved.
-- The converted candidate rows remain non-operational and `BLOCKED_BY_UNKNOWN`; all scene problems are conservatively `UNKNOWN`. Explicit legacy timing preserves `2,058` frame ranges and `311` PTS/time-base ranges; missing timing is not guessed.
-- Direct audio remains incomplete: `29` scenes are `BLOCKED_DIRECT_AUDITION`, and *Sound of Metal* is `SIGNAL_MEASURED_NOT_AUDITIONED`. The one-time review sheet is `research/validation/HUMAN_AUDIO_REVIEW_SHEET.md`.
-- All `33` local sources have a disposition in `research/validation/CLOSED_CORPUS_33_STATUS.md`: `32 RETAIN`, `1 DELETE_CANDIDATE_PENDING_USER_CONFIRMATION`, `0 DELETED`.
-- The known `13` absent TSV/ledger claims are explicit absence records rather than false present-artifact claims. The reproducible result and rollback boundary are in `research/validation/CLOSED_CORPUS_COMPLETION_REPORT.md`.
+No new reference work, media operation, remote update, merge, deployment or publication is authorized.
 
-## Evidence status
+## Verified counts
 
-| Area | Status |
-|---|---|
-| General IR contract | WORKING_BASELINE |
-| Compiler validator | WORKING_BASELINE |
-| Good Omens evidence | CANDIDATE / PARTLY FRAME-UNVERIFIED |
-| Good Omens transfer rules | CANDIDATE, not universal |
-| The Devil Wears Prada garment-room correction visual evidence | CANDIDATE / 26 COMPLETE VISIBLE SHOTS / EXACT NATURAL EDIT ENVELOPE / AUTHORITY AND CORRECTION SCRIPT-GATED / SOUND UNKNOWN |
-| The Social Network (2010) opening two-person visual evidence | CANDIDATE / 91 COMPLETE VISIBLE SHOTS / EXACT SOURCE-START ENVELOPE / DIALOGUE, BREAKUP AND POWER TRANSFER SCRIPT-GATED / SOUND UNKNOWN |
-| Marriage Story (2019) apartment visual evidence | CANDIDATE / 85 COMPLETE VISIBLE SHOTS / EXACT NATURAL EDIT ENVELOPE / ARGUMENT, COLLAPSE, APOLOGY AND RELATIONSHIP SCRIPT-GATED / SOUND UNKNOWN |
-| Get Out (2017) room-to-black-field visual evidence | CANDIDATE / 74 COMPLETE VISIBLE SHOTS / EXACT NATURAL EDIT ENVELOPE / HYPNOSIS AND COERCION SCRIPT-GATED / SUBJECTIVE FUNCTION INFERRED / SOUND UNKNOWN |
-| A Quiet Place (2018) selected multi-location picture evidence | CANDIDATE / 34 COMPLETE VISIBLE SHOTS / EXACT SELECTED CONTIGUOUS ENVELOPE / NOT A COMPLETE NATURAL SCENE / CHILDBIRTH, FIREWORKS AND SOUND CAUSALITY UNKNOWN OR SCRIPT-GATED / SOUND UNKNOWN |
-| House of the Dragon S01E08 hall-ingress visual evidence | CANDIDATE / 68 COMPLETE VISIBLE SHOTS / EXACT SELECTED CONTIGUOUS ENVELOPE / NOT A COMPLETE NATURAL HALL SCENE / AUTHORITY, PROTECTION, KINSHIP, ADJUDICATION AND OUTCOME SCRIPT-GATED / SOUND UNKNOWN |
-| Bridgerton S02E05 contained-proximity visual evidence | CANDIDATE / 41 COMPLETE VISIBLE SHOTS / EXACT ACTUAL-PTS SINGLE-ROOM EDIT ENVELOPE / ROMANCE, DESIRE, REFUSAL, CONSENT, CONTACT AND OUTCOME SCRIPT-GATED OR UNKNOWN / SOUND UNKNOWN |
-| The Last of Us local-source bedroom visual evidence | CANDIDATE / 27 COMPLETE VISIBLE SHOTS / EXACT SELECTED EDIT ENVELOPE / TOP OVERLAY AND BURNED-SUBTITLE BANDS PRESENT; COVERED PIXELS UNKNOWN / SEASON-EPISODE SOURCE-SUPPLIED / RELATIONSHIP, REFUSAL, TRAUMA, DIALOGUE AND SOUND SCRIPT-GATED OR UNKNOWN |
-| Ted Lasso S01E08 pub/board visual evidence | CANDIDATE / 147 COMPLETE VISIBLE SHOTS / EXACT SELECTED EDIT ENVELOPE / DISTINCT-LOCATION THREAD FUNCTION INFERRED / GAME AND REVERSAL SCRIPT-GATED / SOUND UNKNOWN |
-| Brooklyn Nine-Nine S05E14 interrogation end-beat visual evidence | CANDIDATE / 22 COMPLETE VISIBLE SHOTS / EXACT COMBINED-FILE ENVELOPE / SECOND-PROGRAM PICTURE-LOCAL DERIVATION EXPLICIT / CONFESSION AND TACTIC SCRIPT-GATED / SOUND UNKNOWN |
-| The Bear S01E07 visual evidence | CANDIDATE / EXACT VISIBLE-SHOT BOUNDARY / SOUND UNKNOWN |
-| The Bear S02E07 task closed-loop visual evidence | CANDIDATE / 114 COMPLETE VISIBLE SHOTS / EXACT SELECTED EDIT ENVELOPE / TASK LOOP INFERRED / SOUND UNKNOWN |
-| Better Call Saul S03E05 public-proof visual evidence | CANDIDATE / 105 COMPLETE VISIBLE SHOTS / EXACT SELECTED EDIT ENVELOPE / SOUND UNKNOWN |
-| Unbelievable S01E02 exterior-to-vehicle visual evidence | CANDIDATE / 77 COMPLETE VISIBLE SHOTS / EXACT SELECTED EDIT ENVELOPE / PARALLEL-THREAD READING INFERRED / ETHICAL MEANING SCRIPT-GATED / SOUND UNKNOWN |
-| Knives Out (2019) common-room turn and spatial-spillover visual evidence | CANDIDATE / 108 COMPLETE VISIBLE SHOTS / EXACT SELECTED SEQUENCE / PUBLIC-STATUS TRIGGER SCRIPT-GATED / SOUND UNKNOWN |
-| Mr. Robot S04E07 single-room multi-body visual evidence | CANDIDATE / 201 COMPLETE VISIBLE SHOTS / EXACT SELECTED SINGLE-ROOM EDIT ENVELOPE / COERCION, MEMORY, IDENTITY AND ROLES SCRIPT-GATED / SOUND UNKNOWN |
-| Nobody (2021) bus visual evidence | CANDIDATE / 128 COMPLETE VISIBLE SHOTS / EXACT NATURAL BOUNDARY / SOUND UNKNOWN |
-| The Wire S01E04 “Old Cases” visual evidence | CANDIDATE / 68 COMPLETE VISIBLE SHOTS / EXACT NATURAL BOUNDARY / SOUND UNKNOWN |
-| Citizen Kane breakfast montage visual evidence | CANDIDATE / 27 COMPLETE EDIT-SHOT UNITS / EXACT SELECTED TRANSITION ENVELOPE / SOUND UNKNOWN |
-| Apollo 13 constrained-material handoff visual evidence | CANDIDATE / 12 COMPLETE VISIBLE SHOTS / EXACT TWO-LOCATION SEQUENCE / SOUND UNKNOWN / LATER SUCCESS NOT COVERED |
-| Chernobyl S01E05 formal-room/process-reconstruction visual evidence | CANDIDATE / 205 COMPLETE VISIBLE SHOTS / EXACT SELECTED CONTIGUOUS ENVELOPE / NOT THE FULL NATURAL SCENE / TECHNICAL TRUTH, CHRONOLOGY AND RESPONSIBILITY SCRIPT-GATED OR UNKNOWN / SOUND UNKNOWN |
-| The Martian (2015) multi-space object-state editorial-sequence visual evidence | CANDIDATE / 59 COMPLETE VISIBLE SHOTS / EXACT SELECTED CONTIGUOUS EDIT ENVELOPE / MULTI-SPACE CHRONOLOGY AND CAUSALITY INFERRED OR UNKNOWN / PROCEDURE, SCIENCE, FAILURE, REVISION, RECOVERY AND SUCCESS SCRIPT-GATED OR UNKNOWN / SOUND UNKNOWN |
-| Andor S01E10 selected multi-zone group-state visual evidence | CANDIDATE / 121 COMPLETE VISIBLE SHOTS / EXACT SELECTED CONTIGUOUS EDIT ENVELOPE / START IS AN INTERNAL SELECTED CUT / CROSS-ZONE CAUSALITY, COMMAND, RALLY, AUTHORITY, BROADCAST AND ESCAPE SCRIPT-GATED OR UNKNOWN / SOUND UNKNOWN |
-| Moonlight (2016) two-appearance multi-zone visual evidence | CANDIDATE / 79 COMPLETE VISIBLE SHOTS / EXACT SELECTED EDITORIAL PROBLEM ENVELOPE / COMPLETE NATURAL DRAMATIC-SCENE BOUNDARIES NOT PICTURE-PROVEN / RELATIONSHIP, REUNION, RECONCILIATION, DESIRE, SERVICE MEANING AND EMOTION SCRIPT-GATED OR UNKNOWN / SOUND UNKNOWN |
-| Sicario border-checkpoint convoy visual evidence | CANDIDATE / 96 COMPLETE VISIBLE SHOTS / EXACT SCENE ENVELOPE / SOUND UNKNOWN |
-| Children of Men moving-car/exterior-disruption visual evidence | CANDIDATE / 1 COMPLETE VISIBLE SHOT / 0 ACCEPTED INTERNAL CUTS / EXACT SELECTED CONTINUOUS VISIBLE-SHOT ENVELOPE / NOT THE FULL NATURAL SCENE / HIDDEN STITCH AND SINGLE-PRODUCTION-TAKE STATUS UNKNOWN / SOUND UNKNOWN |
-| True Detective S01E04 multi-zone mobile-route visual evidence | CANDIDATE / 1 COMPLETE VISIBLE SHOT / 0 ACCEPTED INTERNAL CUTS / EXACT SELECTED COMPLETE VISIBLE-SHOT ENVELOPE / COMPLETE NATURAL DRAMATIC-SCENE BOUNDARIES UNKNOWN / HIDDEN STITCH AND SINGLE-PRODUCTION-TAKE STATUS UNKNOWN / SOUND UNKNOWN |
-| The Haunting of Hill House S01E06 ensemble continuous-reframing visual evidence | CANDIDATE / 1 COMPLETE VISIBLE SHOT / 0 ACCEPTED INTERNAL CUTS / EXACT SELECTED ANALYTICAL ENVELOPE / ENDPOINT IS INTERNAL AND NOT A NATURAL CUT-OUT / HIDDEN STITCH, SINGLE-PRODUCTION-TAKE STATUS, CROSS-STATE IDENTITY, LOCATION AND CHRONOLOGY UNKNOWN / SOUND UNKNOWN |
-| Bodyguard S01E01 selected restricted-space visual evidence | CANDIDATE / 211 COMPLETE VISIBLE SHOTS / EXACT SELECTED CONTIGUOUS EDIT ENVELOPE `00:08:46.458–00:21:34.167` / INTERNAL SELECTED START / 856×480 MICRO-EXPRESSION LIMITED / POLICE, EXPLOSIVE OR MEDICAL MEANING, NEGOTIATION, REMOTE COMMAND, ROLES, CONTACT, DIALOGUE AND SOUND SCRIPT-GATED OR UNKNOWN |
-| Sound of Metal selected signal-state / picture-edit editorial-envelope evidence | CANDIDATE / 25 COMPLETE VISIBLE SHOTS / 24 INTERNAL VISIBLE CUTS / EXACT SELECTED CONTIGUOUS EDITORIAL ENVELOPE `00:09:21.352458–00:15:52.534917` / NOT A NATURAL DRAMATIC SCENE / DECODED-SIGNAL STATISTICS ONLY, NOT DIRECTLY AUDITIONED / SOUND SOURCE, DIALOGUE, HEARING STATE, TINNITUS, SUBJECTIVE POV, CAUSALITY AND REACTION CAUSE UNKNOWN |
-| Canonical first-16 local material | 14 TARGET-PRESENT / 1 TARGET-SCENE REJECTED / 1 USER-SKIPPED / 0 PENDING DOWNLOAD |
-| Closed local corpus | 33 LOCAL MEDIA FILES / 32 RETAIN / 1 TARGET-SCENE-UNUSABLE DELETE CANDIDATE PENDING USER CONFIRMATION / 0 DELETED / 0 PENDING DOWNLOAD |
-| Public evidence documents | 31 SOURCE-EVIDENCE MARKDOWN FILES EXCLUDING TEMPLATE / 30 CURRENT-LOCAL-SOURCE SCENE FILES + 1 GOOD OMENS CONSOLIDATED BASELINE / 30 DETERMINISTIC SCENE EVIDENCE JSON UNITS |
-| Private 36-episode forward test | STRUCTURALLY_VERIFIED, not publicly reproducible |
-| Cross-work scene-problem coverage | SPARSE |
-| Seedance/H3 adapters | OUT_OF_SCOPE |
-| Generated-result validator | OUT_OF_SCOPE |
+| Item | Current verified value |
+|---|---:|
+| Local source dispositions | 33 |
+| Canonical current-local Scene Evidence JSON | 30 |
+| Shot/edit units | 2,255 |
+| Legacy candidate identities | 120 |
+| Structural Scene Evidence passes | 30/30 |
+| Structural errors | 0 |
+| Preserved warnings | 69 |
+| Current unit/CLI tests including Phase 1 | 77 |
+| Directly auditioned semantic-audio scenes | 0 |
+| Source media deleted by the closed-corpus task | 0 |
 
-## Next research objective
+The 120 candidate identities remain non-operational and `BLOCKED_BY_UNKNOWN`. All current scene-problem classifications remain `UNKNOWN`. Twenty-nine scenes remain `BLOCKED_DIRECT_AUDITION`; *Sound of Metal* remains `SIGNAL_MEASURED_NOT_AUDITIONED`.
 
-Do not add reference works. The closed-corpus conversion is complete at the structural/evidence-lineage level. The next safe human decision is whether to directly audition the 30 selected envelopes or first create and verify a private local-only selected-scene preservation bundle before any full-source deletion decision. *Succession* integration, the extra B99 source, and the target-scene-rejected BCS source remain explicit separate dispositions; no automatic deletion, rule promotion, push, merge, deploy, or publication is authorized.
+## Authoritative sources
 
-Work through the user-approved closed corpus without per-scene approval. `research/coverage/FIRST_16_SCENES.md` retains the canonical first batch: *Fleabag* S02E01 is explicitly skipped; the local file named as *Better Call Saul* S01E09 does not contain the requested Chuck/Jimmy betrayal scene and is target-scene rejected; the extra *Brooklyn Nine-Nine* S05E03–04 file is retained because S05E04 contains a useful proposal-reveal scene. `research/coverage/POST_16_LOCAL_MATERIAL_MANIFEST.md` tracks 17 later sources. *The Social Network* supplies 91 complete visible shots over `00:00:00.000–00:04:03.618`; the picture verifies an opening shared relation, stable opposing-single recurrence, variable measured holds, limited vessel-hand states and two terminal occupancy changes, while dialogue pace, breakup, power transfer, relationship, reaction causes and sound remain script-gated, INFERRED, or UNKNOWN. *Marriage Story* supplies 85 complete visible shots over `01:31:15.958–01:41:26.792`; the picture verifies apartment route/space registration, stable seated anchors, reopened multi-zone movement, longer ownership handoffs and a terminal two-level/proximity relation view, while argument, collapse, apology, relationship, power, emotion, contact/assistance, dialogue and sound remain script-gated, INFERRED, or UNKNOWN. *The Devil Wears Prada* supplies 26 complete visible shots over `00:19:36.000–00:21:24.917`; authority, correction, color knowledge, dialogue, reaction causes and outcome remain script-gated, INFERRED, or UNKNOWN. *Get Out* supplies 74 complete visible shots over `00:31:15.333–00:36:47.750`; picture proves warm-room coverage, handled-object/hand appearances, cool-room and black-field image states, but hypnosis, coercion, object causality, cross-space identity, subjective function and sound remain script-gated, INFERRED, or UNKNOWN. *A Quiet Place* supplies 34 complete visible shots over the selected contiguous envelope `00:48:28.167–00:53:48.208`; picture verifies grouped body, zone, object, radial-light and final two-body contact states, while the natural scene boundaries, simultaneity, childbirth, fireworks, sound, reaction causality and cross-cut identity remain script-gated, INFERRED, or UNKNOWN. *House of the Dragon* S01E08 supplies 68 complete visible shots over the selected contiguous envelope `00:38:14.167–00:43:04.083`; picture verifies ensemble registration, doorway reveal, long-axis travel, threshold/contact/object/seating states and later distributed person/group coverage, while the complete natural hall boundary, authority, protection, kinship, adjudication, outcome, dialogue and sound remain script-gated, INFERRED, or UNKNOWN. *Bridgerton* S02E05 supplies 41 complete visible shots over actual source PTS `00:42:07.380–00:45:11.998`; picture verifies single-room registration, stable opposing coverage, visible approach, close two-person image relations, hand/head image states, withdrawal and a final room reset, while romance, desire, refusal, consent, three-dimensional contact, dialogue, reaction causes, sound and relationship outcome remain script-gated, INFERRED, or UNKNOWN. *The Last of Us* local source supplies 27 complete visible shots over `00:39:48.667–00:42:29.833`; picture verifies exterior/threshold/room registration, standing/seated then standing/standing level changes, stable opposing coverage, one object-state insert and terminal threshold-directed movement. Season/episode identity is source/manifest-supplied, not picture-proven; the top overlay and burned-subtitle band leave covered pixels UNKNOWN, while relationship, refusal, trauma, completed exit, dialogue, reaction causes and sound remain script-gated, INFERRED, or UNKNOWN. *Ted Lasso* S01E08 supplies a 147-shot contiguous selected envelope over `00:19:24.288–00:26:10.527`; the picture verifies pub/board/object/person order, a distinct-location block, anchor-first return, long person singles and later distributed body/contact states, while the game, wager, skill, score, biography, result/reversal, shared stimulus, thread function and sound remain script-gated, INFERRED, or UNKNOWN. *Brooklyn Nine-Nine* S05E14 supplies 22 complete visible shots over combined-file `00:41:32.458–00:42:32.792`, with an explicit derived second-program picture-local range `00:19:41.375–00:20:41.708`; the picture verifies short alternation, a relation reset, a `17.125s` P hold, delayed O coverage and a mobile tail, while pride, baiting, confession, guilt, truth, roles, reaction causes, dialogue and sound remain script-gated, INFERRED, or UNKNOWN. *The Bear* S02E07 supplies a 114-shot visual audit over `00:18:27.917–00:22:14.333`; its task-loop, success, receipt, ownership, and material-lineage meanings remain inferred. The completed *Better Call Saul* S03E05 picture-only audit supplies a 105-shot selected public-proof envelope over `00:39:15.083–00:48:34.833` end-exclusive. *Unbelievable* S01E02 supplies a 77-shot selected envelope over `00:05:20.875–00:11:50.250`; complete ingress remains UNKNOWN and the parallel-thread reading remains INFERRED. *Knives Out* `KNIVES-WILL` supplies 108 complete visible units over `01:07:10.733–01:12:44.567`; public-status meaning, paper meaning, relationships, reaction causes, outcome, dialogue, sound, and hidden joins remain script-gated, INFERRED, or UNKNOWN. *Mr. Robot* S04E07 supplies 201 complete visible shots over `00:32:16.643–00:48:49.927`; the picture verifies a recurring single-room container, multi-body/zone coverage, an opening mouth-area object state, folder/page appearances, one visible sheet separation, late clean-single concentration and a final fade, while coercion, memory, identity, ontology, psychology, roles, dialogue and sound remain script-gated, INFERRED, or UNKNOWN. Independent reviews for *A Quiet Place*, *House of the Dragon* S01E08, *Bridgerton* S02E05 and *The Last of Us* local source are complete. Every absent title is skipped rather than awaited or requested. Never promote a locator estimate until local picture verification.
+These are the only intended completion authorities. A planned source does not become authoritative until its schema, artifact and tests are checked in and validated.
 
-Latest integrated post-16 unit: *Sound of Metal* supplies 25 complete visible shots over the selected no-gap editorial/problem envelope `00:09:21.352458–00:15:52.534917`. Picture and decoded-signal measurements are recorded independently. The signal ledger contains mathematical 0.5s threshold-regime groups and separate 50ms-grid local contrast markers; the source was NOT DIRECTLY AUDITIONED, marker onset/accuracy is UNKNOWN, and temporal adjacency does not prove a shared trigger or edit causality. The envelope spans multiple visible settings and is not a natural dramatic scene. Sound source, dialogue/intelligibility, hearing loss, tinnitus, subjective auditory POV, diagnosis/procedure, reaction cause, roles and audience effect remain UNKNOWN or locked-script-gated. Four rules remain single-source HYPOTHESIS candidates. This closes the local post-16 evidence queue at 17/17; structural validation is not creative approval or rule promotion.
+| Authority | Path | Current status |
+|---|---|---|
+| Per-scene facts | `research/evidence/**/*.scene-evidence.json` | ACTIVE — 30 canonical JSON units |
+| Candidate-rule lineage and grouping | `research/grammar/candidate_rule_index.json` | PLANNED — not yet present |
+| Cross-work support and contrary evidence | `research/grammar/cross_work_support_matrix.json` | PLANNED — not yet present |
+| Runtime directing rules | `research/grammar/director_grammar_v0.2.json` | PLANNED — not yet present |
+| Phase, counts, blockers and next step | `context/STATE.md` | ACTIVE |
 
-## Promotion gate
+Generated `*.scene-evidence.generated.md` files are deterministic review views of canonical JSON, not separate fact sources. Legacy evidence Markdown remains immutable migration provenance. Coverage and acquisition files are material catalogs only.
 
-A candidate rule may become a reusable default only after:
+## Current blockers
 
-1. at least two independent scene sources or one source plus a strong counterexample;
-2. exact shot/timecode evidence;
-3. explicit trigger and non-applicability conditions;
-4. an AI-execution risk and fallback;
-5. a forward test on original material;
-6. human review of the creative result.
+- Candidate Rule Schema, normalized index and support matrix do not yet exist.
+- No candidate has passed cross-work promotion gates.
+- Runtime Grammar v0.2 and routing are not yet implemented.
+- Original positive/non-applicable forward tests do not yet exist.
+- Existing *Succession* evidence remains isolated in the older PR and must be migrated through current contracts.
+- Automated repository checks and final independent audit are not complete.
+- Source replay and direct semantic-audio audition remain outside this Goal; structural validation cannot prove the original picture observations, sound semantics, creative quality or audience response.
 
-No item in this repository is a production green light.
+## Latest validation
+
+- Closed-corpus converter check: PASS — 30 scenes, 2,255 Shot/edit units, 120 candidate identities.
+- Current unit/CLI suite: PASS — 77 tests including Phase 1 renderer and state-contract regressions.
+- Full Scene Evidence validation: PASS_STRUCTURAL — 30 passed, 0 failed, 0 errors, 69 warnings.
+- Phase 1 renderer: PASS locally — 30 generated files match canonical JSON, round-trip deterministically, and preserve every legacy Markdown file.
+- Phase 1 independent read-only audit: PASS — no must-fix finding remains.
+
+The current command-to-claim evidence is `research/validation/VALIDATION_CLAIM_REGISTER.md`. The versioned closed-corpus evidence is `research/validation/CLOSED_CORPUS_COMPLETION_REPORT.md` and `research/validation/scene-evidence-validation.json`. A structural pass is not human creative approval.
+
+## Next single action
+
+Create the isolated local Phase 1 commit, then build the Candidate Rule Schema, normalized 120-lineage index, cross-work support matrix and promotion gates without promoting UNKNOWN-dependent rules.

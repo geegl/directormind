@@ -2,6 +2,12 @@
 
 Updated: 2026-08-31
 
+Authority boundary: this file is a local-material receipt catalog only. It does
+not authoritatively report current evidence completion, candidate promotion,
+runtime rules, or project phase. Canonical scene facts live in
+`research/evidence/**/*.scene-evidence.json`; current phase and counts live in
+`context/STATE.md`.
+
 This manifest is a local receipt audit for `POST_16_ACQUISITION_BACKLOG.md`. It records source identity, container facts, and evidence-readiness only. It does not promote filenames, title cards, burned subtitles, synopsis, or locator estimates into shot or sound evidence.
 
 ## Current corpus closure

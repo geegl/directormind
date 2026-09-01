@@ -2,6 +2,12 @@
 
 Updated: 2026-08-31
 
+Authority boundary: this file is a material and locator catalog only. It does not
+authoritatively report current evidence completion, candidate promotion, runtime
+rules, or project phase. Canonical scene facts live in
+`research/evidence/**/*.scene-evidence.json`; current phase and counts live in
+`context/STATE.md`.
+
 This is the user-approved first corpus. Finish these 16 scenes before selecting a second wave. The number 16 is a delivery scope, not evidence that the set is universal or market-complete.
 
 Time ranges are locator estimates. Every agent must verify the local edition against visual/dialogue anchors before treating a range as shot evidence.

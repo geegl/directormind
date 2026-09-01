@@ -2,6 +2,11 @@
 
 Updated: 2026-08-31
 
+Authority boundary: this manifest is a local-material receipt catalog. It is not
+the current evidence, rule-promotion, runtime-grammar, or completion authority.
+Canonical scene facts live in `research/evidence/**/*.scene-evidence.json`;
+current phase and counts live in `context/STATE.md`.
+
 This manifest records only what can currently be opened from the local movie directory. It does not place media in the repository and does not promote locator estimates to shot evidence.
 
 Current count:

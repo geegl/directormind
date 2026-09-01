@@ -58,7 +58,7 @@ Every one of the 33 local sources has an explicit disposition. The 30 current lo
 - Not completed by design: direct audio audition, source-media replay, candidate-rule promotion, *Succession* integration, analysis of the extra B99 source, source deletion, push, merge, deploy, or publication.
 - Known risk: deleting originals before direct audio review or a verified local-only preservation substitute would remove the only complete route to re-check sound and some picture claims.
 - Final independent result: PASS after independently rerunning converter `--check`, 66 tests, full Scene Evidence validation, schema/Python checks, boundary scans, and whitespace checks. No must-fix issue remains.
-- Next single action: create one isolated local commit on the existing `codex/macos-first16-local-batch` branch; do not push, merge, deploy, publish, or delete media.
+- Successor state: the isolated local closed-corpus commit exists and remains the preserved baseline. The separately approved generalization task is now active; it does not authorize push, merge, deploy, publication, or media deletion.
 
 ## Rollback
 

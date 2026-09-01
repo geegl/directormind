@@ -2,6 +2,13 @@
 
 Updated: 2026-08-31
 
+Authority boundary: this closed backlog is a historical acquisition and locator
+catalog only. It is not an active download queue and does not authoritatively
+report evidence completion, candidate promotion, runtime rules, or project
+phase. Canonical scene facts live in
+`research/evidence/**/*.scene-evidence.json`; current phase and counts live in
+`context/STATE.md`.
+
 This began as a download and acquisition queue, not a replacement for the canonical first corpus. The works remain ordered by scene-problem information gain rather than director, genre, popularity, or surface style.
 
 Reference catalog: 57 works or exact television episodes (18 Tier A, 23 Tier B, 16 Tier C).
