@@ -1,0 +1,495 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "candidate-director-rule.schema.json",
+  "title": "DirectorMind Candidate Director Rule v0.1",
+  "description": "A normalized, evidence-linked candidate. It is not executable unless every promotion gate passes.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "candidate_rule_id",
+    "canonical_rule_family",
+    "family_assignment_status",
+    "relation_to_family",
+    "source",
+    "scene_problem",
+    "functional_roles",
+    "operational_contract",
+    "confidence",
+    "supporting_relations",
+    "applicability_evidence",
+    "unknown_dependencies",
+    "counterexamples",
+    "promotion",
+    "rights_boundary",
+    "legacy_lineage"
+  ],
+  "properties": {
+    "schema_version": {"const": "candidate-director-rule/0.1"},
+    "candidate_rule_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+    "canonical_rule_family": {"type": "string", "pattern": "^[A-Z][A-Z0-9._-]+$"},
+    "family_assignment_status": {
+      "enum": [
+        "ROOT_REVIEWED_TEXTUAL_CLUSTER",
+        "DETERMINISTIC_TEXTUAL_CLUSTER_PENDING_HUMAN_REVIEW",
+        "UNCLUSTERED_PENDING_HUMAN_REVIEW"
+      ]
+    },
+    "relation_to_family": {
+      "enum": ["SUPPORTS", "NARROWS", "CONTRADICTS", "COUNTEREXAMPLE", "DUPLICATE"]
+    },
+    "source": {"$ref": "#/$defs/source"},
+    "scene_problem": {"$ref": "#/$defs/sceneProblem"},
+    "functional_roles": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/role"}
+    },
+    "operational_contract": {"$ref": "#/$defs/operationalContract"},
+    "confidence": {"$ref": "#/$defs/confidence"},
+    "supporting_relations": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/supportingRelation"}
+    },
+    "applicability_evidence": {"$ref": "#/$defs/applicabilityEvidence"},
+    "unknown_dependencies": {"$ref": "#/$defs/unknownDependencies"},
+    "counterexamples": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/counterexample"}
+    },
+    "promotion": {"$ref": "#/$defs/promotion"},
+    "rights_boundary": {"$ref": "#/$defs/rightsBoundary"},
+    "legacy_lineage": {"$ref": "#/$defs/legacyLineage"}
+  },
+  "$defs": {
+    "sceneProblemValue": {
+      "enum": [
+        "DIALOGUE_POWER_TRANSFER",
+        "RELATIONSHIP_FRACTURE",
+        "PUBLIC_REVELATION",
+        "GROUP_POWER_CHANGE",
+        "PROCEDURAL_COMPETENCE",
+        "PROCEDURAL_COLLAPSE",
+        "INTERROGATION",
+        "SUBJECTIVE_COERCION",
+        "SUSPENSE_INFORMATION_ASYMMETRY",
+        "ACTION_CAUSALITY",
+        "HORROR_RULE_REVELATION",
+        "ROMANTIC_PROXIMITY",
+        "SOUND_LED_CAUSALITY",
+        "MONTAGE_TIME_COMPRESSION",
+        "ENSEMBLE_REACTION_CHAIN",
+        "SILENT_AFTERMATH",
+        "LEGACY_SCENE_PROBLEM"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "work_id",
+        "evidence_id",
+        "source_candidate_rule_id",
+        "source_method_ids",
+        "evidence_shot_ids"
+      ],
+      "properties": {
+        "work_id": {"type": "string", "minLength": 1},
+        "evidence_id": {"type": "string", "minLength": 1},
+        "source_candidate_rule_id": {"type": "string", "minLength": 1},
+        "source_method_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "evidence_shot_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "sceneProblem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary", "secondary", "status", "source_refs", "lineage_label"],
+      "properties": {
+        "primary": {"$ref": "#/$defs/sceneProblemValue"},
+        "secondary": {
+          "type": "array",
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/sceneProblemValue"}
+        },
+        "status": {"enum": ["TEXT_ANCHOR", "INFERRED", "UNKNOWN"]},
+        "source_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "lineage_label": {"$ref": "#/$defs/sceneProblemValue"}
+      }
+    },
+    "role": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["appearance_id", "functional_role", "status", "source_refs"],
+      "properties": {
+        "appearance_id": {"type": "string", "minLength": 1},
+        "functional_role": {
+          "enum": [
+            "authority",
+            "challenger",
+            "witness",
+            "swing_member",
+            "outsider",
+            "protector",
+            "target",
+            "operator",
+            "investigator",
+            "receiver",
+            "absent_mover",
+            "decision_owner",
+            "UNKNOWN"
+          ]
+        },
+        "status": {"enum": ["TEXT_ANCHOR", "INFERRED", "UNKNOWN"]},
+        "source_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "operationalContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "trigger",
+        "required_story_facts",
+        "director_decision",
+        "coverage",
+        "blocking",
+        "pacing",
+        "edit_logic",
+        "continuity",
+        "audio_logic",
+        "applicable_when",
+        "not_applicable_when",
+        "failure_modes",
+        "ai_risk",
+        "fallback"
+      ],
+      "properties": {
+        "trigger": {"type": "string", "minLength": 1},
+        "required_story_facts": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        },
+        "director_decision": {"type": "string", "minLength": 1},
+        "coverage": {"type": "string", "minLength": 1},
+        "blocking": {"type": "string", "minLength": 1},
+        "pacing": {"type": "string", "minLength": 1},
+        "edit_logic": {"type": "string", "minLength": 1},
+        "continuity": {"type": "string", "minLength": 1},
+        "audio_logic": {"$ref": "#/$defs/evidenceClaim"},
+        "applicable_when": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "not_applicable_when": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "failure_modes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "ai_risk": {"$ref": "#/$defs/aiRisk"},
+        "fallback": {"$ref": "#/$defs/fallback"}
+      }
+    },
+    "evidenceClaim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "status", "value", "source_refs", "notes"],
+      "properties": {
+        "claim_id": {"type": "string", "minLength": 1},
+        "status": {
+          "enum": [
+            "PICTURE_OBSERVED",
+            "AUDIO_OBSERVED",
+            "TEXT_ANCHOR",
+            "SIGNAL_MEASURED_NOT_AUDITIONED",
+            "INFERRED",
+            "UNKNOWN"
+          ]
+        },
+        "value": {"type": "string", "minLength": 1},
+        "source_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "notes": {"type": "string"}
+      }
+    },
+    "riskDimension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "reasons"],
+      "properties": {
+        "level": {"enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL", "UNKNOWN"]},
+        "reasons": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "aiRisk": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["camera", "performance", "continuity"],
+      "properties": {
+        "camera": {"$ref": "#/$defs/riskDimension"},
+        "performance": {"$ref": "#/$defs/riskDimension"},
+        "continuity": {"$ref": "#/$defs/riskDimension"}
+      }
+    },
+    "fallback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["camera", "performance", "continuity", "project_original_only"],
+      "properties": {
+        "camera": {"type": ["string", "null"]},
+        "performance": {"type": ["string", "null"]},
+        "continuity": {"type": ["string", "null"]},
+        "project_original_only": {"const": true}
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["within_source", "transfer", "execution"],
+      "properties": {
+        "within_source": {"enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]},
+        "transfer": {"enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]},
+        "execution": {"enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]}
+      }
+    },
+    "unknownDependencies": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scene_problem",
+        "audio",
+        "functional_roles",
+        "natural_scene_boundary"
+      ],
+      "properties": {
+        "scene_problem": {"type": "boolean"},
+        "audio": {"type": "boolean"},
+        "functional_roles": {"type": "boolean"},
+        "natural_scene_boundary": {"type": "boolean"}
+      }
+    },
+    "supportingRelation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relation_id",
+        "status",
+        "relation",
+        "same_trigger_status",
+        "source_candidate_rule_id",
+        "work_id",
+        "evidence_id",
+        "source_refs",
+        "review_status",
+        "review_id",
+        "review_ref",
+        "notes"
+      ],
+      "properties": {
+        "relation_id": {"type": "string", "minLength": 1},
+        "status": {"enum": ["VERIFIED", "UNKNOWN"]},
+        "relation": {"enum": ["SUPPORTS", "NARROWS", "CONTRADICTS", "DUPLICATE"]},
+        "same_trigger_status": {
+          "enum": ["VERIFIED_SAME_TRIGGER", "DIFFERENT_TRIGGER", "UNKNOWN"]
+        },
+        "source_candidate_rule_id": {"type": "string", "minLength": 1},
+        "work_id": {"type": "string", "minLength": 1},
+        "evidence_id": {"type": "string", "minLength": 1},
+        "source_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "review_status": {"enum": ["HUMAN_VERIFIED", "NOT_REVIEWED"]},
+        "review_id": {"type": ["string", "null"]},
+        "review_ref": {"type": ["string", "null"]},
+        "notes": {"type": "string", "minLength": 1}
+      }
+    },
+    "applicabilityEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "source_refs", "notes"],
+      "properties": {
+        "status": {"enum": ["VERIFIED", "UNKNOWN"]},
+        "source_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "notes": {"type": "string", "minLength": 1}
+      }
+    },
+    "counterexample": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "counterexample_id",
+        "status",
+        "same_trigger_status",
+        "relation",
+        "source_candidate_rule_id",
+        "work_id",
+        "evidence_id",
+        "source_refs",
+        "review_status",
+        "review_id",
+        "review_ref",
+        "notes"
+      ],
+      "properties": {
+        "counterexample_id": {"type": ["string", "null"]},
+        "status": {"enum": ["VERIFIED", "BOUNDARY_ONLY", "UNKNOWN"]},
+        "same_trigger_status": {"enum": ["VERIFIED_SAME_TRIGGER", "DIFFERENT_TRIGGER", "UNKNOWN"]},
+        "relation": {"enum": ["CONTRADICTS", "COUNTEREXAMPLE", "NARROWS", "UNKNOWN"]},
+        "source_candidate_rule_id": {"type": ["string", "null"]},
+        "work_id": {"type": ["string", "null"]},
+        "evidence_id": {"type": ["string", "null"]},
+        "source_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "review_status": {"enum": ["HUMAN_VERIFIED", "NOT_REVIEWED"]},
+        "review_id": {"type": ["string", "null"]},
+        "review_ref": {"type": ["string", "null"]},
+        "notes": {"type": "string", "minLength": 1}
+      }
+    },
+    "promotion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "reasons",
+        "verified_support_work_count",
+        "verified_same_trigger_counterexample_count",
+        "original_forward_test_count",
+        "original_forward_tests",
+        "human_director_review",
+        "unknown_dependency_present"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "SINGLE_WORK_CANDIDATE",
+            "CROSS_WORK_SUPPORTED",
+            "GENERAL_DEFAULT",
+            "REJECTED",
+            "BLOCKED_BY_UNKNOWN"
+          ]
+        },
+        "reasons": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "verified_support_work_count": {"type": "integer", "minimum": 1},
+        "verified_same_trigger_counterexample_count": {"type": "integer", "minimum": 0},
+        "original_forward_test_count": {"type": "integer", "minimum": 0},
+        "original_forward_tests": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/forwardTest"}
+        },
+        "human_director_review": {"$ref": "#/$defs/humanReview"},
+        "unknown_dependency_present": {"type": "boolean"}
+      }
+    },
+    "forwardTest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["test_case_id", "status", "source_ref"],
+      "properties": {
+        "test_case_id": {"type": "string", "minLength": 1},
+        "status": {"enum": ["PASS", "FAIL", "HUMAN_REVIEW_PENDING"]},
+        "source_ref": {"type": "string", "minLength": 1}
+      }
+    },
+    "humanReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "review_id", "source_ref"],
+      "properties": {
+        "status": {"enum": ["APPROVED", "NOT_APPROVED"]},
+        "review_id": {"type": ["string", "null"]},
+        "source_ref": {"type": ["string", "null"]}
+      }
+    },
+    "rightsBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_lineage_only", "surface_copy_allowed", "runtime_authorized"],
+      "properties": {
+        "evidence_lineage_only": {"const": true},
+        "surface_copy_allowed": {"const": false},
+        "runtime_authorized": {"type": "boolean"}
+      }
+    },
+    "legacyLineage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "trigger",
+        "directing_decision",
+        "coverage",
+        "blocking",
+        "pacing_edit",
+        "sound",
+        "applicability",
+        "non_applicability",
+        "failure_mode",
+        "counterexample",
+        "unknown",
+        "ai_risk",
+        "fallback",
+        "evidence_shots",
+        "confidence"
+      ],
+      "properties": {
+        "trigger": {"type": "string"},
+        "directing_decision": {"type": "string"},
+        "coverage": {"type": "string"},
+        "blocking": {"type": "string"},
+        "pacing_edit": {"type": "string"},
+        "sound": {"type": "string"},
+        "applicability": {"type": "string"},
+        "non_applicability": {"type": ["string", "null"]},
+        "failure_mode": {"type": "string"},
+        "counterexample": {"type": "string"},
+        "unknown": {"type": "string"},
+        "ai_risk": {"type": "string"},
+        "fallback": {"type": "string"},
+        "evidence_shots": {"type": "string"},
+        "confidence": {"type": "string"}
+      }
+    }
+  }
+}

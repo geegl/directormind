@@ -118,28 +118,28 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| D1 | TODO | Add functional role labels alongside appearance aliases; roles require scene facts or text anchors and otherwise remain UNKNOWN. | All converted scenes validate role provenance. |
-| D2 | TODO | Use one canonical `scene_problem` primary enum and at most two secondary values; do not create work-specific synonyms. | Schema enum and corpus-wide uniqueness audit. |
+| D1 | VERIFIED_DONE | Add functional role labels alongside appearance aliases; roles require scene facts or text anchors and otherwise remain UNKNOWN. | Corpus-wide audit finds no evidence-backed role label; all 2,255 empty role-label arrays and 120 empty candidate-role arrays remain explicit non-claims. Validator rejects unsupported, fake-ref or hardened UNKNOWN roles; final independent Phase 2 review PASS. |
+| D2 | VERIFIED_DONE | Use one canonical `scene_problem` primary enum and at most two secondary values; do not create work-specific synonyms. | Candidate schema reuses one enum; all 30 current classifications remain canonical `LEGACY_SCENE_PROBLEM / UNKNOWN`, with no secondary synonym or proving source ref; final independent Phase 2 review PASS. |
 
 ## E. Candidate-rule normalization
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| E1 | TODO | Add `candidate-director-rule.schema.json` with the complete required rule contract. | Schema and tests. |
-| E2 | TODO | Split `within_source_confidence`, `transfer_confidence`, and `execution_confidence`. | No legacy single confidence remains in canonical JSON. |
-| E3 | TODO | Build `research/grammar/candidate_rule_index.json`, group synonyms into canonical families, preserve lineage, and label SUPPORTS/NARROWS/CONTRADICTS/COUNTEREXAMPLE/DUPLICATE. | All source candidate IDs resolve exactly once. |
-| E4 | TODO | Build the cross-work support matrix in JSON and Markdown. | Deterministic JSON-to-Markdown comparison passes. |
-| E5 | TODO | Require real same-trigger contrary evidence before promotion; `counterexample UNKNOWN` cannot support promotion. | Promotion validator and matrix audit pass. |
+| E1 | VERIFIED_DONE | Add `candidate-director-rule.schema.json` with the complete required rule contract. | Strict candidate schema is applied to all 120 instances; nested audio/risk/fallback, support, applicability, counterexample, forward-test and human-review records validate; final independent Phase 2 review PASS. |
+| E2 | VERIFIED_DONE | Split `within_source_confidence`, `transfer_confidence`, and `execution_confidence`. | All 120 normalized candidates contain exactly the three confidence axes; every current value remains `UNKNOWN`; legacy scalar text appears only inside preserved lineage; final independent Phase 2 review PASS. |
+| E3 | VERIFIED_DONE | Build `research/grammar/candidate_rule_index.json`, group synonyms into canonical families, preserve lineage, and label SUPPORTS/NARROWS/CONTRADICTS/COUNTEREXAMPLE/DUPLICATE. | Deterministic builder resolves all 120 unique source IDs exactly once into 16 families and preserves every legacy field; two candidate-by-candidate read-only passes accepted 80 assignments and corrected 40 keyword collisions; family assignment is explicitly not promotion evidence; final independent Phase 2 review PASS. |
+| E4 | VERIFIED_DONE | Build the cross-work support matrix in JSON and Markdown. | Deterministic JSON and generated Markdown match across 16 families and 120 candidates; final independent Phase 2 review PASS. |
+| E5 | VERIFIED_DONE | Require real same-trigger contrary evidence before promotion; `counterexample UNKNOWN` cannot support promotion. | Validator recounts only cited same-family, unrelated-work, `VERIFIED_SAME_TRIGGER` records backed by a structured named review; declared counts and the hypothetical Martian boundary cannot self-promote; current verified count is zero; final independent Phase 2 review PASS. |
 
 ## F. Promotion discipline
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| F1 | TODO | Restrict `promotion_status` to SINGLE_WORK_CANDIDATE, CROSS_WORK_SUPPORTED, GENERAL_DEFAULT, REJECTED, or BLOCKED_BY_UNKNOWN. | Schema validation. |
-| F2 | TODO | Keep complete one-work rules at SINGLE_WORK_CANDIDATE and outside runtime defaults. | Candidate index/runtime grammar separation test. |
-| F3 | TODO | CROSS_WORK_SUPPORTED requires two unrelated works, same trigger, a real contrary/boundary case, and no hidden key UNKNOWN. | Promotion validator plus matrix evidence. |
-| F4 | TODO | GENERAL_DEFAULT requires three unrelated works, same-trigger counterexample, two original forward tests, and human director approval. | Promotion validator plus forward-test/human-review references. |
-| F5 | TODO | Block rules dependent on UNKNOWN audio, role function, or natural-scene boundary. | Negative tests and zero invalid promotions. |
+| F1 | VERIFIED_DONE | Restrict `promotion_status` to SINGLE_WORK_CANDIDATE, CROSS_WORK_SUPPORTED, GENERAL_DEFAULT, REJECTED, or BLOCKED_BY_UNKNOWN. | Candidate schema and validator enforce only the five states; final independent Phase 2 review PASS. |
+| F2 | VERIFIED_DONE | Keep complete one-work rules at SINGLE_WORK_CANDIDATE and outside runtime defaults. | Negative regression proves a one-work candidate cannot set runtime authorization; final independent Phase 2 review PASS. |
+| F3 | VERIFIED_DONE | CROSS_WORK_SUPPORTED requires two unrelated works, same trigger, a real contrary/boundary case, and no hidden key UNKNOWN. | Family work count is never accepted as support. Validator derives support count only from cited same-family records with an exact structured review, recounts contrary cases, derives four UNKNOWN axes and rejects forged IDs/refs/counts/path traversal; final independent Phase 2 review PASS. |
+| F4 | VERIFIED_DONE | GENERAL_DEFAULT requires three unrelated works, same-trigger counterexample, two original forward tests, and human director approval. | Counts are recomputed from distinct confined packages and exact manifests; approval requires a confined exact JSON record; traversal, type confusion, token and ID-reuse attacks fail; final independent Phase 2 review PASS. |
+| F5 | VERIFIED_DONE | Block rules dependent on UNKNOWN audio, role function, or natural-scene boundary. | Explicit derived dependency axes and negative tests block audio, role and natural-boundary UNKNOWN; all 120 current candidates remain blocked and runtime-authorized count is zero; final independent Phase 2 review PASS. |
 
 ## G. General Director Grammar v0.2
 
@@ -214,4 +214,4 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 ## Current next action
 
-Create the isolated local Phase 1 commit, then begin D/E/F candidate normalization and promotion-gate work. Do not push, close a PR, merge, deploy, publish, or delete media.
+Create the isolated local Phase 2 commit, then begin G/H runtime Grammar v0.2 and routing with zero promoted evidence rules. Do not push, close a PR, merge, deploy, publish, or delete media.

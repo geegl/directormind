@@ -6,7 +6,7 @@ Updated: 2026-09-01
 
 The user-approved 33-source generalization Goal is active on `codex/macos-first16-local-batch`.
 
-Phase 1 is complete and independently reviewed: canonical JSON is the sole machine fact source, generated review Markdown is deterministic and non-overwriting, validation claims are reproducible, and project state is compact. Phase 2 candidate normalization is next.
+Phases 1 and 2 are complete and independently reviewed. Every candidate identity and legacy field is preserved, textual mechanism grouping is deterministic and reviewed, and no UNKNOWN-dependent candidate is executable. Phase 3 runtime Grammar v0.2 and routing is next.
 
 No new reference work, media operation, remote update, merge, deployment or publication is authorized.
 
@@ -21,7 +21,10 @@ No new reference work, media operation, remote update, merge, deployment or publ
 | Structural Scene Evidence passes | 30/30 |
 | Structural errors | 0 |
 | Preserved warnings | 69 |
-| Current unit/CLI tests including Phase 1 | 77 |
+| Current unit/CLI tests including Phase 2 | 107 |
+| Normalized candidate identities | 120 |
+| Textual mechanism families | 16 |
+| Runtime-authorized evidence rules | 0 |
 | Directly auditioned semantic-audio scenes | 0 |
 | Source media deleted by the closed-corpus task | 0 |
 
@@ -34,8 +37,8 @@ These are the only intended completion authorities. A planned source does not be
 | Authority | Path | Current status |
 |---|---|---|
 | Per-scene facts | `research/evidence/**/*.scene-evidence.json` | ACTIVE — 30 canonical JSON units |
-| Candidate-rule lineage and grouping | `research/grammar/candidate_rule_index.json` | PLANNED — not yet present |
-| Cross-work support and contrary evidence | `research/grammar/cross_work_support_matrix.json` | PLANNED — not yet present |
+| Candidate-rule lineage and grouping | `research/grammar/candidate_rule_index.json` | ACTIVE — 120 candidates in 16 reviewed non-promotional textual families |
+| Cross-work support and contrary evidence | `research/grammar/cross_work_support_matrix.json` | ACTIVE — deterministic JSON/Markdown, zero eligible families |
 | Runtime directing rules | `research/grammar/director_grammar_v0.2.json` | PLANNED — not yet present |
 | Phase, counts, blockers and next step | `context/STATE.md` | ACTIVE |
 
@@ -43,8 +46,7 @@ Generated `*.scene-evidence.generated.md` files are deterministic review views o
 
 ## Current blockers
 
-- Candidate Rule Schema, normalized index and support matrix do not yet exist.
-- No candidate has passed cross-work promotion gates.
+- No candidate has passed cross-work promotion gates; zero promotion is the evidence-correct result for the current corpus.
 - Runtime Grammar v0.2 and routing are not yet implemented.
 - Original positive/non-applicable forward tests do not yet exist.
 - Existing *Succession* evidence remains isolated in the older PR and must be migrated through current contracts.
@@ -54,13 +56,16 @@ Generated `*.scene-evidence.generated.md` files are deterministic review views o
 ## Latest validation
 
 - Closed-corpus converter check: PASS — 30 scenes, 2,255 Shot/edit units, 120 candidate identities.
-- Current unit/CLI suite: PASS — 77 tests including Phase 1 renderer and state-contract regressions.
+- Current unit/CLI suite: PASS — 107 tests including Phase 2 lineage, matrix, provenance and adversarial promotion-gate regressions.
 - Full Scene Evidence validation: PASS_STRUCTURAL — 30 passed, 0 failed, 0 errors, 69 warnings.
 - Phase 1 renderer: PASS locally — 30 generated files match canonical JSON, round-trip deterministically, and preserve every legacy Markdown file.
 - Phase 1 independent read-only audit: PASS — no must-fix finding remains.
+- Candidate index builder check: PASS — 120 candidates, 16 root-reviewed textual mechanism families, 40 corrected keyword collisions and zero promoted.
+- Candidate-rule validation: PASS — 120 candidates, 16 families, zero errors and zero runtime-authorized rules.
+- Phase 2 independent read-only audit: PASS after replaying the two prior failed snapshots' count, provenance and path-traversal attacks.
 
 The current command-to-claim evidence is `research/validation/VALIDATION_CLAIM_REGISTER.md`. The versioned closed-corpus evidence is `research/validation/CLOSED_CORPUS_COMPLETION_REPORT.md` and `research/validation/scene-evidence-validation.json`. A structural pass is not human creative approval.
 
 ## Next single action
 
-Create the isolated local Phase 1 commit, then build the Candidate Rule Schema, normalized 120-lineage index, cross-work support matrix and promotion gates without promoting UNKNOWN-dependent rules.
+Build Director Grammar v0.2 and routing over the eligible set; the current correct eligible set is empty, so routing must return `NO_APPLICABLE_RULE` without inventing a default.
