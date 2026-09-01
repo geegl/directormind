@@ -512,6 +512,32 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
         evidence["candidate_rules"][0]["director_decision"] += " Preserve business-state legibility."
         self.assertNotIn("RULE-SURFACE-COPY", error_codes(evidence))
 
+    def test_non_legacy_rule_requires_story_fact(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["candidate_rules"][0]["required_story_facts"] = []
+        self.assertIn("RULE-STORY-FACT-REQUIRED", error_codes(evidence))
+
+    def test_legacy_lineage_cannot_assert_operational_story_fact(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["candidate_rules"][0]["legacy_migration"] = {
+            "trigger": "",
+            "directing_decision": "",
+            "coverage": "",
+            "blocking": "",
+            "pacing_edit": "",
+            "sound": "",
+            "applicability": "",
+            "non_applicability": None,
+            "failure_mode": "",
+            "counterexample": "",
+            "unknown": "",
+            "ai_risk": "",
+            "fallback": "",
+            "evidence_shots": "",
+            "confidence": "",
+        }
+        self.assertIn("LEGACY-RULE-OPERATIONAL-FACT", error_codes(evidence))
+
     def test_external_scene_ids_cannot_fake_embedded_promotion(self) -> None:
         evidence = make_valid_evidence()
         rule = evidence["candidate_rules"][0]

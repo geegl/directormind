@@ -1,6 +1,10 @@
 # DirectorMind Generalization Remediation Checklist
 
-Updated: 2026-08-31
+Updated: 2026-09-01
+
+## 2026-09-01 authorized closed-corpus completion
+
+The Phase 1 task card below is retained as historical scope. The later user-approved task `context/CLOSED_CORPUS_COMPLETION_TASK.md` explicitly authorized A3, A5, B3, the blocked-audio artifacts under C1–C4, and the 33-source retention decision without adding reference works. That later authorization supersedes the earlier “do not begin A3” stop line only for those named items; A4 and the remaining grammar/routing/forward-test/CI/PR work stay out of scope.
 
 ## Task card
 
@@ -45,10 +49,10 @@ After a contributor writes a Scene Evidence JSON unit, running the repository va
 - Current sole implementer/writer: `/root`; prior sub-agents performed read-only corpus and validator reviews only.
 - Completed before this repair: checklist, 30-file audit report, Scene Evidence schema, standard-library validator, and 45 validator tests.
 - Completed in this repair: UNKNOWN-to-rule (including contact/initiator aliases), unauditioned-score-directive (including `bring in` phrasing), HEIC/SSA, data-payload, and credential-format guards; eight new test methods with paired cases; three raw release-label cells neutralized; one trailing blank line removed. PR #3 was not modified by the latest local repair.
-- Not completed: canonical conversion of the 30 files and all later A3–M work.
-- Validation result: schema JSON syntax, Python AST parse, and 53 unit/CLI tests pass. The latest local repair still requires a fresh independent read-only re-review before its status can be represented as independently accepted.
-- Known issues: the legacy corpus has 13 broken artifact claims, 152 high-equivalent-risk Shot rows without fallback, 1,096 Shot rows without three-axis AI risk, no direct audio audit, and no three-confidence Candidate Rule.
-- Next single action: run a fresh independent read-only re-review of the latest local repair. Do not start A3, update PR #3, or merge it without explicit authorization.
+- Completed by the later authorized closed-corpus task: A3 deterministic conversion, A5 closure of 13 absent-artifact claims, B3 full report, explicit C1–C4 blocked-audio records, and the 33-source retention register. The working tree contains 30 JSON units, 2,255 Shot/edit units, and 120 non-operational legacy-rule lineage records.
+- Validation result: schema syntax, Python compile, converter generation and `--check`, 66 unit/CLI tests, and full Scene Evidence validation pass. The report records 30 passed, 0 failed, 0 errors, and 69 warnings preserved. A fresh final independent read-only review returned PASS with no must-fix issue.
+- Known issues: no source replay or direct semantic audio audition; 197 rows lack explicit legacy frame endpoints, 1,944 lack explicit PTS/time base, and 513 high-risk rows lack a source-specific legacy fallback. These values remain visible rather than guessed.
+- Next single action: record the completed closed-corpus work in one isolated local commit. Do not update PR #3, merge, push, deploy, publish, promote rules, or delete source media in this task.
 
 Rollback for this repair: revert only the isolated latest local repair commit with a normal Git revert. If it is later pushed or merged, use the same revert-commit approach and, after merge, a new pull request. Do not rewrite shared history.
 
@@ -71,7 +75,7 @@ Only these states are allowed:
 - The legacy-audit table check — PASS: 30 data rows, ten data columns per row, 2,255 Shot/edit units, 120 rules, and 13 broken artifact claims.
 - The earlier independent PASS was superseded by a later read-only review that reproduced contact/initiator UNKNOWN leakage and `bring in` unauditioned-music leakage. Those cases now have paired repository tests and pass locally; a fresh independent verdict on the latest working tree is pending.
 
-Remaining validation boundary: these checks do not replay source media, directly audition audio, prove legacy picture observations, demonstrate audience effect, or constitute creative approval. No canonical per-scene JSON exists yet; A3 and later work remain outside this phase. Reference-surface inventory completeness still requires human review during migration.
+Remaining validation boundary: these checks do not replay source media, directly audition audio, prove legacy picture observations, demonstrate audience effect, or constitute creative approval. Thirty canonical conversion JSON units now exist under the later task authorization, but their legacy rules remain non-operational and reference-surface review remains a human boundary before any promotion.
 
 ## Startup and corpus freeze
 
@@ -88,27 +92,27 @@ Remaining validation boundary: these checks do not replay source media, directly
 |---|---|---|---|
 | A1 | VERIFIED_DONE | Add `skills/drama-director-compiler/references/scene-evidence.schema.json` with all required top-level fields and the five explicit `scene_unit_type` values. | JSON syntax check and independent 33/33 top-level field review passed. |
 | A2 | VERIFIED_DONE | Standardize every Shot field: identity/time, camera start/path/end, focus, zone/axis, abstract roles, blocking/action/states, event/reaction, performance, edits, motivation/function, evidence tracks, three-axis AI risk, fallback, and unknowns. | Independent 33/33 Shot-field review and validator fixture passed. |
-| A3 | TODO | Convert the existing 30 local-source evidence units to schema-valid `scene-evidence.json`, one per work directory. | 30+ JSON files pass the full validator; no new source work is added. |
+| A3 | VERIFIED_DONE | Convert the existing 30 local-source evidence units to schema-valid `scene-evidence.json`, one per work directory. | 30 JSON files pass deterministic converter check and full validator; 2,255 Shot/edit units and 120 legacy-rule lineage records; no new source work. |
 | A4 | TODO | Add deterministic `render_scene_evidence.py`; JSON becomes the sole machine fact source and refreshes Markdown summary, shot table, statistics, candidate rules, UNKNOWN, and boundary. | Renderer round-trip/determinism test and generated sections match JSON. |
-| A5 | TODO | Resolve the 13 missing claims found in B99, HOTD, Marriage Story, Mr. Robot, DWP, TLOU, and The Martian by committing rights-safe original analysis artifacts or replacing those references with `scene-evidence.json`. | Broken-reference scan returns zero. |
+| A5 | VERIFIED_DONE | Resolve the 13 missing claims found in B99, HOTD, Marriage Story, Mr. Robot, DWP, TLOU, and The Martian by committing rights-safe original analysis artifacts or replacing those references with `scene-evidence.json`. | Regression verifies 13 explicit absence records across seven files, same-stem JSON/report pointers, and zero stale existence claims. |
 
 ## B. Reproducible validation
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
 | B1 | VERIFIED_DONE | Add `validate_scene_evidence.py` covering schema, shot identity/timing, provenance, UNKNOWN leakage, rule references/boundaries, HIGH-risk fallback, surface-copy guards, and public-repository prohibitions. | Repair code rejects the repository's scoped UNKNOWN-rule, same-sentence sound-directive, HEIC/SSA, data-payload, and credential-format cases while preserving explicit safe boundaries; broad unlisted semantic paraphrase remains human-reviewed. |
-| B2 | VERIFIED_DONE | Add minimum tests: valid evidence, gap, overlap, missing Shot ref, UNKNOWN promotion, HIGH without fallback, missing non-applicability, single-source GENERAL_DEFAULT, audio rule without observed audio, and reference-surface leakage. | 53/53 unit and CLI tests pass, including eight repair test methods with positive/negative subcases; fresh independent review of the latest repair remains pending. |
-| B3 | TODO | Validate all 30 Scene Evidence JSON files and write `research/validation/scene-evidence-validation.json` with errors and warnings preserved. | `failed=0`; warning rows remain visible. |
+| B2 | VERIFIED_DONE | Add minimum tests: valid evidence, gap, overlap, missing Shot ref, UNKNOWN promotion, HIGH without fallback, missing non-applicability, single-source GENERAL_DEFAULT, audio rule without observed audio, and reference-surface leakage. | 66/66 unit and CLI tests pass, including migration, legacy-lineage, frame/PTS, fallback, path-scrub, and artifact-closure regressions; fresh independent review passed. |
+| B3 | VERIFIED_DONE | Validate all 30 Scene Evidence JSON files and write `research/validation/scene-evidence-validation.json` with errors and warnings preserved. | `passed=30`, `failed=0`, `error_count=0`, `warning_count=69`; warning rows remain visible. |
 | B4 | TODO | Remove or replace unreproducible validation claims, including bare `760 checks` and independent-pass statements without command, versioned validator, and repository report. | Claim-to-report/reference audit returns zero broken claims. |
 
 ## C. Multimodal evidence boundaries
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| C1 | TODO | Separate `PICTURE_OBSERVED`, `AUDIO_OBSERVED`, `TEXT_ANCHOR`, `INFERRED`, and `UNKNOWN`; text anchors cannot prove picture, performance, edit, composition, or mix. | Schema fields, validator restrictions, and tests. |
-| C2 | TODO | Add the required audio-audit fields: overlap, silence, ambience, score in/out, sound-before-image, offscreen sound, bridge, subjective sound, object sound, information change, and unknowns. | Schema and converted evidence contain all fields, including explicit UNKNOWN/BLOCKED values. |
-| C3 | TODO | Directly audit the eight audio-priority scenes, or mark `BLOCKED_DIRECT_AUDITION`, suppress audio rules, and emit a one-time human audio review sheet. | Timecoded review evidence or explicit blocked artifact per scene. |
-| C4 | TODO | Keep Sound of Metal at `SIGNAL_MEASURED_NOT_AUDITIONED`; hearing loss, tinnitus, subjective hearing, source, information access, emotion, and audience effect remain unproven; audio rules remain blocked until direct audition. | Scene JSON, rule index, and validator agree. |
+| C1 | VERIFIED_DONE | Separate `PICTURE_OBSERVED`, `AUDIO_OBSERVED`, `TEXT_ANCHOR`, `INFERRED`, and `UNKNOWN`; text anchors cannot prove picture, performance, edit, composition, or mix. | Converted corpus, schema restrictions, validator, and regression tests preserve the separation; text anchors remain unused in this migration. |
+| C2 | VERIFIED_DONE | Add the required audio-audit fields: overlap, silence, ambience, score in/out, sound-before-image, offscreen sound, bridge, subjective sound, object sound, information change, and unknowns. | All 30 converted units contain the complete audit structure with explicit unknown/blocked values. |
+| C3 | VERIFIED_DONE | Directly audit the eight audio-priority scenes, or mark `BLOCKED_DIRECT_AUDITION`, suppress audio rules, and emit a one-time human audio review sheet. | Authorized blocked branch used: 29 `BLOCKED_DIRECT_AUDITION`, one signal-only unit, 30-row timecoded human review sheet; no semantic audio rule is authorized. |
+| C4 | VERIFIED_DONE | Keep Sound of Metal at `SIGNAL_MEASURED_NOT_AUDITIONED`; hearing loss, tinnitus, subjective hearing, source, information access, emotion, and audience effect remain unproven; audio rules remain blocked until direct audition. | Scene JSON, validator, converter test, and audio sheet agree. |
 
 ## D. Abstract roles and scene problems
 
@@ -193,7 +197,7 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| M1 | TODO | Deliver 30+ Scene Evidence JSON files. | Corpus count validation. |
+| M1 | VERIFIED_DONE | Deliver 30+ Scene Evidence JSON files. | Closed-corpus requirement is exactly 30 current-local JSON files; deterministic count validation passes. |
 | M2 | TODO | Deliver Scene Evidence schema, validator, and renderer. | Tests and reports pass. |
 | M3 | TODO | Deliver Candidate Rule schema/index and cross-work matrix JSON/Markdown. | Rule/matrix validation passes. |
 | M4 | TODO | Deliver Director Grammar v0.2 and updated Skill routing/conflict logic/tests. | Grammar/routing tests pass. |
@@ -202,12 +206,12 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 ## Current blockers and known defects
 
-- Existing Markdown is not yet a machine fact source; no local-source `scene-evidence.json` exists.
-- Legacy field names, rule widths, evidence statuses, AI-risk axes, fallbacks, and reference links vary across the 30 files.
-- Some legacy validation claims depended on deleted temporary assets or validators and are not reproducible from the repository.
+- The 30 JSON units are deterministic machine-readable conversions, but legacy candidate semantics remain non-operational lineage pending human review.
+- Explicit frame/PTS and legacy fallback gaps remain visible; converter warnings prohibit treating provisional values as source-proven facts.
+- The known 13 absent legacy artifacts are closed as explicit absence records; broader historical claims outside this closed register were not re-proved.
 - Direct semantic audio audition is absent; signal measurement is not semantic sound evidence.
 - PR #1 cannot be merged unchanged because it contains prohibited media-hash material and older evidence semantics.
 
 ## Current next action
 
-Stop and wait for the next explicit phase instruction. Do not begin A3 and do not merge PR #3.
+Closed-corpus completion is independently reviewed and ready for one isolated local commit. Do not begin A4 or the remaining grammar/routing/forward-test/CI/PR phases, and do not merge PR #3.

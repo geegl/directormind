@@ -1,0 +1,931 @@
+{
+  "schema_version": "scene-evidence/0.1",
+  "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
+  "work_id": "CHILDREN-OF-MEN-2006",
+  "scene_problem": {
+    "primary": "LEGACY_SCENE_PROBLEM",
+    "secondary": [],
+    "status": "UNKNOWN",
+    "source_refs": [],
+    "notes": "The legacy primary label ACTION_CAUSALITY is retained only as non-operational lineage and was not proved by structural conversion."
+  },
+  "scene_unit_type": "SINGLE_VISIBLE_TAKE",
+  "boundary_status": "BOTH_INTERNAL_SELECTED",
+  "boundary_evidence": {
+    "claim_id": "SCENE-BOUNDARY",
+    "status": "PICTURE_OBSERVED",
+    "value": "Visible endpoints delimit the selected analytical interval; this does not verify production-take status.",
+    "source_refs": [
+      "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "production_take_status": "VISIBLE_CONTINUITY_ONLY",
+  "source_identity_status": "SOURCE_OR_FILENAME_SUPPLIED",
+  "source_start": {
+    "timecode": "00:26:14.233333",
+    "seconds": 1574.233333,
+    "frame": 47227,
+    "pts": 1574233333,
+    "time_base": "1/1000000"
+  },
+  "source_end": {
+    "timecode": "00:30:22.000000",
+    "seconds": 1822.0,
+    "frame": 54660,
+    "pts": 1822000000,
+    "time_base": "1/1000000"
+  },
+  "duration": 247.766667,
+  "time_tolerance_seconds": 0.001,
+  "picture_evidence_status": "PICTURE_OBSERVED",
+  "audio_evidence_status": "BLOCKED_DIRECT_AUDITION",
+  "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+  "scene_dramatic_structure": {
+    "start_state": {
+      "claim_id": "DS-START",
+      "status": "PICTURE_OBSERVED",
+      "value": "The first converted visible unit establishes an initial picture state.",
+      "source_refs": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "objectives": [
+      {
+        "claim_id": "DS-OBJECTIVE",
+        "status": "UNKNOWN",
+        "value": "Character objectives remain unknown without a verified text anchor or direct soundtrack audition.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      }
+    ],
+    "obstacle": {
+      "claim_id": "DS-OBSTACLE",
+      "status": "UNKNOWN",
+      "value": "The dramatic obstacle remains unknown without a verified text anchor or direct soundtrack audition.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "event_point": {
+      "claim_id": "DS-EVENT",
+      "status": "INFERRED",
+      "value": "The converted picture ledger contains visible state changes; their story cause remains unknown.",
+      "source_refs": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "reaction_point": {
+      "claim_id": "DS-REACTION",
+      "status": "UNKNOWN",
+      "value": "Any reaction cause or emotional meaning remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "turn": {
+      "claim_id": "DS-TURN",
+      "status": "INFERRED",
+      "value": "The ordered visible state changes may form a dramatic turn, but the meaning remains inferred.",
+      "source_refs": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "end_state": {
+      "claim_id": "DS-END",
+      "status": "PICTURE_OBSERVED",
+      "value": "The final converted visible unit records the terminal picture state of the selected interval.",
+      "source_refs": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    }
+  },
+  "spatial_geometry": {
+    "claim_id": "SCENE-GEOMETRY",
+    "status": "INFERRED",
+    "value": "The cited units support an inferred project-neutral spatial ledger; exact source identity across cuts is not asserted.",
+    "source_refs": [
+      "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "axis": {
+    "claim_id": "SCENE-AXIS",
+    "status": "INFERRED",
+    "value": "Screen direction and axis continuity remain an inference from the cited picture units.",
+    "source_refs": [
+      "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "POV": {
+    "claim_id": "SCENE-POV",
+    "status": "INFERRED",
+    "value": "POV function remains inferred from the cited visual coverage and is not treated as optical-POV proof.",
+    "source_refs": [
+      "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "audience_information": {
+    "claim_id": "SCENE-AUDIENCE",
+    "status": "INFERRED",
+    "value": "The cited picture units expose an ordered set of visible state changes; dramatic meaning remains inferred or unknown.",
+    "source_refs": [
+      "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "shots": [
+    {
+      "shot_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001",
+      "order": 1,
+      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "start": {
+        "timecode": "00:26:14.233333",
+        "seconds": 1574.233333,
+        "frame": 47227,
+        "pts": 1574233333,
+        "time_base": "1/1000000"
+      },
+      "end": {
+        "timecode": "00:30:22.000000",
+        "seconds": 1822.0,
+        "frame": 54660,
+        "pts": 1822000000,
+        "time_base": "1/1000000"
+      },
+      "duration": 247.766667,
+      "shot_size": {
+        "claim_id": "S001-SIZE",
+        "status": "PICTURE_OBSERVED",
+        "value": "continuously changing medium/close/wide mobile coverage inside a compact vehicle, through its apertures, at an open door, and finally along the road; no single fixed shot size; exact lens/focal length UNKNOWN",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_height": {
+        "claim_id": "S001-HEIGHT",
+        "status": "PICTURE_OBSERVED",
+        "value": "viewpoint remains near cabin/body/road height while rotating among seated zones, windows, door threshold and exterior roadway; exact camera height, horizon control, rig and lens UNKNOWN",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_angle": {
+        "claim_id": "S001-ANGLE",
+        "status": "PICTURE_OBSERVED",
+        "value": "viewpoint remains near cabin/body/road height while rotating among seated zones, windows, door threshold and exterior roadway; exact camera height, horizon control, rig and lens UNKNOWN",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_motion": {
+        "claim_id": "S001-MOTION",
+        "status": "PICTURE_OBSERVED",
+        "value": "camera repeatedly rotates/translates relative to cabin pillars and occupants, looks through front/side/rear apertures, passes the open door threshold, follows exterior movement, and ends facing roadway; direction/speed/distance, support system, vehicle rig, stabilization, hidden transition and single-take production method UNKNOWN",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_start": {
+        "claim_id": "S001-CAM-START",
+        "status": "INFERRED",
+        "value": "five initially seated adults, seats, roof pillars, transparent panes, steering wheel and forest road repeatedly recompose; later external people, a bright burning vehicle-like object, two-wheeled vehicles, a marked van, an open side door, departing vehicle and two dark-clothed forms on roadway become visible",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_path": {
+        "claim_id": "S001-CAM-PATH",
+        "status": "PICTURE_OBSERVED",
+        "value": "camera repeatedly rotates/translates relative to cabin pillars and occupants, looks through front/side/rear apertures, passes the open door threshold, follows exterior movement, and ends facing roadway; direction/speed/distance, support system, vehicle rig, stabilization, hidden transition and single-take production method UNKNOWN",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_end": {
+        "claim_id": "S001-CAM-END",
+        "status": "INFERRED",
+        "value": "five initially seated adults, seats, roof pillars, transparent panes, steering wheel and forest road repeatedly recompose; later external people, a bright burning vehicle-like object, two-wheeled vehicles, a marked van, an open side door, departing vehicle and two dark-clothed forms on roadway become visible",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "focus_strategy": {
+        "claim_id": "S001-FOCUS",
+        "status": "PICTURE_OBSERVED",
+        "value": "foreground occupants/vehicle frame and exterior road/people alternate in legibility, sometimes with motion blur, glare, smoke and occlusion; exact focus pulls, focal plane, lens and depth method UNKNOWN",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S001-ZONE",
+          "status": "INFERRED",
+          "value": "five initially seated adults, seats, roof pillars, transparent panes, steering wheel and forest road repeatedly recompose; later external people, a bright burning vehicle-like object, two-wheeled vehicles, a marked van, an open side door, departing vehicle and two dark-clothed forms on roadway become visible",
+          "source_refs": [
+            "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+          ],
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        }
+      ],
+      "axis_and_screen_direction": {
+        "claim_id": "S001-AXIS",
+        "status": "INFERRED",
+        "value": "INFERRED boundary: vehicle pillars, apertures, seats, wheel and door provide recurring local orientation; adjacent frames visibly carry gross body, pane, door and road state. Exact identity through long occlusion, external-person/object identity, absolute axis, speed, eyeline targets, hidden stitch, causal continuity and production continuity UNKNOWN",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "abstract_role_labels": [],
+      "blocking": {
+        "claim_id": "S001-BLOCK",
+        "status": "INFERRED",
+        "value": "adults begin in stable front-left/front-right/rear-left/rear-center/rear-right zones; they turn, lean and reach, and arms/hands enter or contact other body regions where visible while exterior bodies/vehicles move across windshield and side apertures; during the later door interval, a dark-haired appearance handle remains visible outside and moves back toward/through the side-door area. Grouping that handle with the earlier rear-right occupant is INFERRED; exact roles, contact function and identity through long occlusion UNKNOWN",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_action": {
+        "claim_id": "S001-ACTION",
+        "status": "INFERRED",
+        "value": "vehicle motion and outside optic flow continue; a bright burning vehicle-like object crosses/blocks the road; people and two-wheeled vehicles move near the car; dark/red spots and star-like cracks become visible on panes; the front-right red-haired adult becomes reclined with dark red material at neck/clothing; other occupants make large reach/contact movements; a blue/yellow marked vehicle approaches; vehicle stops or nearly stops; external uniform-like adults appear; a side door opens; a dark-haired adult-like figure is continuously visible during the door/exterior interval and moves back toward/through the door area; the vehicle then departs; the view settles on roadway and two horizontal dark-clothed forms before the cut. Whether this is the earlier rear-right occupant leaving and returning is INFERRED and requires locked-script confirmation",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_in": {
+        "claim_id": "S001-STATE-IN",
+        "status": "INFERRED",
+        "value": "five initially seated adults, seats, roof pillars, transparent panes, steering wheel and forest road repeatedly recompose; later external people, a bright burning vehicle-like object, two-wheeled vehicles, a marked van, an open side door, departing vehicle and two dark-clothed forms on roadway become visible",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_out": {
+        "claim_id": "S001-STATE-OUT",
+        "status": "INFERRED",
+        "value": "vehicle motion and outside optic flow continue; a bright burning vehicle-like object crosses/blocks the road; people and two-wheeled vehicles move near the car; dark/red spots and star-like cracks become visible on panes; the front-right red-haired adult becomes reclined with dark red material at neck/clothing; other occupants make large reach/contact movements; a blue/yellow marked vehicle approaches; vehicle stops or nearly stops; external uniform-like adults appear; a side door opens; a dark-haired adult-like figure is continuously visible during the door/exterior interval and moves back toward/through the door area; the vehicle then departs; the view settles on roadway and two horizontal dark-clothed forms before the cut. Whether this is the earlier rear-right occupant leaving and returning is INFERRED and requires locked-script confirmation",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "event_or_reaction": {
+        "claim_id": "S001-EVENT",
+        "status": "INFERRED",
+        "value": "one continuous visible crisis/vehicle-state chain with no accepted internal visible cut; whether it depicts an ambush, who initiates force, who is injured/killed, and every causal link require locked-script evidence and remain UNKNOWN here",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "performance_beat": {
+        "claim_id": "S001-PERF",
+        "status": "INFERRED",
+        "value": "gross head turns, torso folds, arm reaches, bracing, visible body contact and seat/door transfers are legible; facial micro-expression, emotion, dialogue, intent, reaction cause, medical/contact function and exact gaze target are UNKNOWN. Source is 856×480 with motion blur/compression, so micro-expression evidence is explicitly insufficient",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_in": {
+        "claim_id": "S001-EDIT-IN",
+        "status": "PICTURE_OBSERVED",
+        "value": "accepted visible hard cut at F47227 / 00:26:14.233333, PTS 1574233333; moving forest exterior is replaced by a fresh vehicle-interior composition",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_out": {
+        "claim_id": "S001-EDIT-OUT",
+        "status": "PICTURE_OBSERVED",
+        "value": "accepted visible hard cut at F54660 / 00:30:22.000000, PTS 1822000000; the prior mobile roadway view with two horizontal dark-clothed forms changes to a new closer road/ground composition outside the envelope",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "cut_motivation": {
+        "claim_id": "S001-CUT-MOTIVE",
+        "status": "INFERRED",
+        "value": "enter the selected vehicle-continuity problem on a complete cabin/occupant layout and exit after the vehicle, door, road and exterior-body states have been carried to a terminal road view; dialogue/sound motive UNKNOWN",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "narrative_function": {
+        "claim_id": "S001-FUNCTION",
+        "status": "INFERRED",
+        "value": "preserve occupant–vehicle–outside spatial/state continuity while visual attention transfers from cabin interaction to external disruption, changed surfaces/body-contact actions, roadside stop, a later door/exterior trajectory, departure and road aftermath; grouping the door-track figure with the earlier rear-right occupant is INFERRED; attack attribution, injury/death, responsibility and causality UNKNOWN",
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "AI_complexity": {
+        "camera": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to camera=HIGH; execution remains unverified."
+          ]
+        },
+        "performance": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to performance=HIGH; execution remains unverified."
+          ]
+        },
+        "continuity": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to continuity=HIGH; execution remains unverified."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": "Project-original locked-script fallback: split into seven fixed readable views—neutral cabin master with at most three visible occupants, windshield state view, side-aperture exterior-event view, rear-seat reach/contact view, marked-vehicle approach view, locked door-threshold trajectory view, and departing-vehicle/road wide; use project-original people/vehicle/events only and lock seat IDs, screen sides, door state, pane-state version, wardrobe/surface state and travel direction; only identify an earlier occupant as the later door-track figure when the locked script establishes that identity",
+        "performance": "Project-original locked-script fallback: split into seven fixed readable views—neutral cabin master with at most three visible occupants, windshield state view, side-aperture exterior-event view, rear-seat reach/contact view, marked-vehicle approach view, locked door-threshold trajectory view, and departing-vehicle/road wide; use project-original people/vehicle/events only and lock seat IDs, screen sides, door state, pane-state version, wardrobe/surface state and travel direction; only identify an earlier occupant as the later door-track figure when the locked script establishes that identity",
+        "continuity": "Project-original locked-script fallback: split into seven fixed readable views—neutral cabin master with at most three visible occupants, windshield state view, side-aperture exterior-event view, rear-seat reach/contact view, marked-vehicle approach view, locked door-threshold trajectory view, and departing-vehicle/road wide; use project-original people/vehicle/events only and lock seat IDs, screen sides, door state, pane-state version, wardrobe/surface state and travel direction; only identify an earlier occupant as the later door-track figure when the locked script establishes that identity",
+        "project_original_only": true
+      },
+      "unknowns": [
+        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
+        "Legacy light/color ledger retained for human review only: VIS-OBS: green/brown daylight forest and gray-blue cabin dominate; bright orange/white fire-like regions, dark/red pane/clothing material, warm highlights and blue/yellow vehicle markings create later state contrast; source grade, lighting and effect method UNKNOWN",
+        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+      ]
+    }
+  ],
+  "stats": {
+    "unit": "VISIBLE_SHOT",
+    "shot_count": 1,
+    "total_duration": 247.766667,
+    "mean_duration": 247.766667,
+    "median_duration": 247.766667,
+    "duration_bins": {
+      "lt_1": 0,
+      "1_to_lt_2": 0,
+      "2_to_lt_5": 0,
+      "5_to_lt_10": 0,
+      "gte_10": 1
+    }
+  },
+  "audio_audit": {
+    "dialogue_overlap": {
+      "claim_id": "AUDIO-01",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "silence_intervals": {
+      "claim_id": "AUDIO-02",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "ambience": {
+      "claim_id": "AUDIO-03",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "score_entry": {
+      "claim_id": "AUDIO-04",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "score_exit": {
+      "claim_id": "AUDIO-05",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "sound_before_image": {
+      "claim_id": "AUDIO-06",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "offscreen_sound": {
+      "claim_id": "AUDIO-07",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "sound_bridge": {
+      "claim_id": "AUDIO-08",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "subjective_sound": {
+      "claim_id": "AUDIO-09",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "object_sound": {
+      "claim_id": "AUDIO-10",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "audio_information_change": {
+      "claim_id": "AUDIO-11",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "audio_unknowns": [
+      "Dialogue, ambience, score, silence, source, timing, and causal sound meaning remain unknown."
+    ]
+  },
+  "text_anchors": [],
+  "methods": [
+    {
+      "method_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-METHOD-LEGACY-PICTURE-REVIEW",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The legacy Markdown records a completed manual picture and edit-boundary review.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+      ],
+      "unknowns": [
+        "The conversion does not replay source media or re-prove the legacy observation."
+      ]
+    },
+    {
+      "method_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-METHOD-STRUCTURAL-CONVERSION",
+      "method_type": "STRUCTURAL_CONVERSION",
+      "status": "REPOSITORY_REPRODUCIBLE",
+      "description": "Deterministically convert the checked-in legacy tables to Scene Evidence JSON.",
+      "repository_command": "python3 skills/drama-director-compiler/scripts/convert_legacy_scene_evidence.py --check",
+      "tool_version_status": "VERSION_RECORDED",
+      "source_refs": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+      ],
+      "unknowns": [
+        "Structural conversion is not creative approval or renewed media observation."
+      ]
+    },
+    {
+      "method_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-METHOD-DIRECT-AUDIO",
+      "method_type": "AUDIO_DIRECT_AUDITION",
+      "status": "BLOCKED",
+      "description": "Direct soundtrack audition was not completed for this conversion.",
+      "repository_command": null,
+      "tool_version_status": "NOT_APPLICABLE",
+      "source_refs": [],
+      "unknowns": [
+        "All semantic audio facts remain unknown."
+      ]
+    }
+  ],
+  "auxiliary_evidence": [],
+  "continuity_tracks": [],
+  "candidate_rules": [
+    {
+      "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-033",
+      "legacy_migration": {
+        "trigger": "A locked project-original script places at least three people in a moving compact vehicle and requires outside changes to redirect attention across multiple seat zones; picture alone does not prove roles, relationships, attack attribution or reaction causes.",
+        "directing_decision": "Establish seat/aperture geometry first, then let a mobile observer transfer among occupant zones and exterior apertures while returning to vehicle pillars, seats, wheel or door as local orientation anchors.",
+        "coverage": "Vehicle/cabin master → front/rear occupant handoff → windshield exterior state → side aperture receiver/group → cabin state return → door/road threshold if script-required.",
+        "blocking": "Assign stable front-left/front-right/rear-left/rear-center/rear-right zones and visible apertures; keep one vehicle-frame edge or seat relation readable during each handoff; do not infer who drives, commands or protects from position alone.",
+        "pacing_edit": "Spend enough early time for the seat map to register; accelerate attention transfers only when a script-verified outside state changes; use gross posture/body changes at low-resolution or high-motion moments instead of micro-expression beats.",
+        "sound": "SND-UNK for this source. Any dialogue, engine/tyre cue, impact, gunfire, alarm, crowd, music, off-screen cue or sound-led edit/performance timing must be rebuilt from verified project-original script and sound evidence.",
+        "applicability": "Moving-car dialogue, family/group travel, evacuation, surveillance or pursuit where a locked script requires simultaneous occupant and exterior state awareness.",
+        "non_applicability": "Do not use when one occupant alone owns the scene, geography should remain deliberately disorienting, windows must reveal nothing, or safe production/generation cannot preserve a moving vehicle and multiple bodies.",
+        "failure_mode": "Seat zones become unreadable; camera motion competes with the script beat; every occupant changes together; vehicle apertures reverse unpredictably; low-resolution faces are overinterpreted; a long-path imitation replaces project-specific logic.",
+        "counterexample": "COUNTEREXAMPLE UNKNOWN: same-trigger contrary source pending. Different-trigger boundary inside this source: the final road hold no longer needs multi-seat handoffs once the vehicle has departed the near frame.",
+        "unknown": "Roles, relationship, driver/passenger authority, dialogue, outside-event cause, exact gaze targets, vehicle speed/path, sound, rig/stitch method, audience response and same-trigger contrary source.",
+        "ai_risk": "CRITICAL: camera=repeatable multi-zone path inside a moving constrained space; performance=asynchronous gross actions across several bodies; continuity=seat zones, apertures, vehicle direction and visible state tokens.",
+        "fallback": "Project-original locked-script fallback: fixed neutral cabin master with at most three occupants → fixed windshield exterior-state view → fixed rear two-person body-response view → identical cabin master; omit free camera orbit, lock seat IDs/apertures/screen sides, and use no reference-film surfaces or events.",
+        "evidence_shots": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-S001, especially 00:26:14.233333–00:28:10.533333",
+        "confidence": "0.78 HIGH for visible vehicle-anchor and zone-transfer organization; LOW for semantics and production method; single-source candidate only"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-METHOD-LEGACY-PICTURE-REVIEW",
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
+      ],
+      "evidence_shot_ids": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    },
+    {
+      "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-APERTURE-EVENT-BEFORE-GROSS-BODY-RESPONSE-002",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-034",
+      "legacy_migration": {
+        "trigger": "A locked project-original script verifies that an exterior event changes the occupants’ immediate physical task inside a moving vehicle; this source picture does not prove who initiated the event, weapon/impact cause or emotional interpretation.",
+        "directing_decision": "Make the exterior change legible through an already established windshield/window aperture, then cross the same vehicle frame into gross bracing, ducking, reaching or support action; never rely on a fleeting facial micro-expression to carry causality.",
+        "coverage": "Established aperture → exterior state change → vehicle-frame occlusion/transfer → gross occupant body change → damaged-surface or road-state confirmation.",
+        "blocking": "Keep the aperture edge and one seat/occupant zone stable across the transfer; stage independent body responses with safe separation; attach any project-specific external source only through the locked script, not reference-film inference.",
+        "pacing_edit": "Hold the exterior change until its location is readable; let one complete gross body action register before the next outside element; brief exterior-effect frames may punctuate but cannot substitute for spatial evidence.",
+        "sound": "SND-UNK for this source. Any dialogue, engine/tyre cue, impact, gunfire, alarm, crowd, music, off-screen cue or sound-led edit/performance timing must be rebuilt from verified project-original script and sound evidence.",
+        "applicability": "Vehicle, train, elevator, room-window or enclosure scenes where the script verifies an outside event and an immediate visible change of task inside.",
+        "non_applicability": "Do not use when outside cause must remain unseen, reaction precedes event by design, a subjective blackout owns the beat, or the performer’s subtle face alone is the intended evidence and resolution cannot support it.",
+        "failure_mode": "Exterior event is unreadable; action cause is falsely asserted; actor micro-expression is unstable; aperture side flips; everyone ducks identically; effect imagery overwhelms state continuity.",
+        "counterexample": "COUNTEREXAMPLE UNKNOWN: same-trigger contrary source pending. Different-trigger boundary inside this source: the early cabin exchange has no verified external event trigger, so aperture-event grammar would manufacture suspense.",
+        "unknown": "Exact event/weapon/object identity, initiator, cause, victim status, emotion, dialogue, sound cue, whether body changes are reactions, rig/effect method and same-trigger contrary source.",
+        "ai_risk": "CRITICAL: camera=aperture-to-body transfer amid vehicle motion/occlusion; performance=timed gross multi-body changes without micro-expression dependence; continuity=aperture side, seat zone, exterior-state direction and surface damage.",
+        "fallback": "Project-original locked-script fallback: fixed windshield wide of one original exterior state → fixed cabin two-shot with one brace/reach action → fixed original pane-state insert; reduce exterior elements to one, performers to two, and lock the aperture, seat sides and before/after surface state.",
+        "evidence_shots": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-S001, especially 00:28:10.533333–00:28:43.000000",
+        "confidence": "0.76 MEDIUM-HIGH for visible aperture/body ordering; LOW for causal and attack semantics; single-source candidate only"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-APERTURE-EVENT-BEFORE-GROSS-BODY-RESPONSE-002-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-METHOD-LEGACY-PICTURE-REVIEW",
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
+      ],
+      "evidence_shot_ids": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    },
+    {
+      "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CARRY-SURFACE-BODY-STATE-THROUGH-VEHICLE-REVERSAL-003",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-035",
+      "legacy_migration": {
+        "trigger": "A locked project-original script requires vehicle direction or orientation to change after a disruptive beat while pane, wardrobe/surface and occupant support states must remain visibly cumulative; injury semantics require script evidence.",
+        "directing_decision": "Version the visible vehicle/wardrobe/body-position states before the direction change, re-establish them from a recurring aperture or seat anchor after the change, and allow support action to occupy a readable shared frame.",
+        "coverage": "Pre-change cabin/pane state → direction-change aperture view → shared support frame → road/marked-vehicle confirmation → carried-state cabin return.",
+        "blocking": "Lock seat occupancy, the side and extent of pane marks/cracks, project-original wardrobe/surface-state versions, supporting hands, door state and travel-screen direction; exact medical interpretation stays outside picture evidence.",
+        "pacing_edit": "After the fastest exterior beat, lengthen enough for the carried state and support geometry to read; avoid resetting to clean surfaces or neutral posture simply to gain a prettier frame.",
+        "sound": "SND-UNK for this source. Any dialogue, engine/tyre cue, impact, gunfire, alarm, crowd, music, off-screen cue or sound-led edit/performance timing must be rebuilt from verified project-original script and sound evidence.",
+        "applicability": "Vehicle reversals, escape turns, sudden stops, structural jolts or other scenes where a locked script carries a visible state change forward across changed travel orientation.",
+        "non_applicability": "Do not use when the state is intentionally reversible, continuity reset is story-authorized, injury/damage must remain off-screen, or the action ends before the new direction can be established.",
+        "failure_mode": "Pane/wardrobe state cleans itself; supporting hands jump sides; occupant location changes without path; travel direction is ambiguous; picture labels red material as injury/death without script authority.",
+        "counterexample": "COUNTEREXAMPLE UNKNOWN: same-trigger contrary source pending. Different-trigger boundary inside this source: before the exterior disruption there is no cumulative damaged-surface state to version.",
+        "unknown": "Cause/material of red marks, injury/medical status, exact reversal/gear/speed, who supports whom, roles/relationships, sound, hidden transition, effect method and same-trigger contrary source.",
+        "ai_risk": "CRITICAL: camera=changed motion/orientation while recovering readable anchors; performance=coordinated support and bracing across multiple occupants; continuity=pane, door, wardrobe/surface, hands, seats and direction-state versions.",
+        "fallback": "Project-original locked-script fallback: fixed damaged-pane insert with an original abstract mark pattern → fixed two-person support medium with no moving vehicle background → fixed road-direction wide → identical support medium; lock state IDs, hand sides and wardrobe versions.",
+        "evidence_shots": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-S001, especially 00:28:22.033333–00:29:12.000000",
+        "confidence": "0.79 HIGH for visible cumulative-state carry; LOW for injury and causal meaning; single-source candidate only"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CARRY-SURFACE-BODY-STATE-THROUGH-VEHICLE-REVERSAL-003-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-METHOD-LEGACY-PICTURE-REVIEW",
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
+      ],
+      "evidence_shot_ids": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    },
+    {
+      "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-DOOR-THRESHOLD-EXIT-RETURN-DEPARTURE-004",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-036",
+      "legacy_migration": {
+        "trigger": "A locked project-original script identifies one occupant as leaving a stopped/nearly stopped vehicle, encountering an exterior obstacle, returning, and enabling departure while remaining occupants and exterior road state stay continuous; this source picture alone does not prove that the earlier rear-right occupant and later door/exterior track are the same person, nor institutional identity, aggression, weapon use, death or responsibility.",
+        "directing_decision": "Re-establish the script-defined outside obstacle and cabin receivers, use the open door as a stable threshold for the script-confirmed exit/return path, then end with a departure/road wide that carries exterior forms without diagnosing their status.",
+        "coverage": "Script-defined outside vehicle/object through aperture → cabin receiver/group → external figures at closed/open door → fixed threshold exit → exterior obstacle relation → same threshold return → vehicle departure → road-state tail.",
+        "blocking": "Lock the door side, vehicle orientation, exit path, return path, remaining occupant zones and exterior-object positions; keep any prone/horizontal forms descriptive only until script evidence defines status.",
+        "pacing_edit": "Slow the vehicle-stop/door threshold enough to read; avoid cutting or moving so fast that exit and return paths collapse; preserve a short road tail after departure if it changes project-verified audience information.",
+        "sound": "SND-UNK for this source. Any dialogue, engine/tyre cue, impact, gunfire, alarm, crowd, music, off-screen cue or sound-led edit/performance timing must be rebuilt from verified project-original script and sound evidence.",
+        "applicability": "Checkpoint, roadside aid, pickup/drop-off, escape or rescue scenes with a script-locked leave-and-return path through one vehicle threshold.",
+        "non_applicability": "Do not use when the exiting person does not return, the vehicle remains moving, the threshold location should be hidden, the external encounter belongs to another POV, or aftermath forms must not be revealed.",
+        "failure_mode": "Door side flips; exit/return person identity drifts; vehicle departs before re-entry is legible; exterior figures teleport; prone forms are mislabeled as dead; reference-specific costumes/markings/events are copied.",
+        "counterexample": "COUNTEREXAMPLE UNKNOWN: same-trigger contrary source pending. Different-trigger boundary inside this source: the earlier moving-cabin phase has no stop/door-exit trigger and should stay inside the cabin/aperture grammar.",
+        "unknown": "Whether the earlier rear-right occupant and later continuously visible door/exterior figure are the same person; institution/role of marked or uniform-like figures; dialogue, commands, aggression/weapon ownership, health/death status, why the script-confirmed person exits/returns, sound, exact vehicle stop/departure mechanics and same-trigger contrary source.",
+        "ai_risk": "CRITICAL: camera=inside-to-door-to-road path and departure tail; performance=exit, exterior exchange, return and remaining-occupant state; continuity=person appearance, door, vehicle orientation, road forms, seat re-entry and travel direction.",
+        "fallback": "Project-original locked-script fallback: fixed cabin/project-defined exterior-object view → locked side-door threshold with one exit → fixed exterior two-person wide with no contact → identical threshold return → fixed departing vehicle/road wide; lock door hinge side and original vehicle/wardrobe state IDs.",
+        "evidence_shots": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-S001, especially 00:29:12.000000–00:30:22.000000",
+        "confidence": "0.77 MEDIUM-HIGH for the within-Q6 visible door/exterior trajectory and departure continuity; LOW for cross-phase person identity, external roles and outcome semantics; single-source candidate only"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-DOOR-THRESHOLD-EXIT-RETURN-DEPARTURE-004-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-METHOD-LEGACY-PICTURE-REVIEW",
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
+      ],
+      "evidence_shot_ids": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    }
+  ],
+  "unknowns": [
+    {
+      "unknown_id": "UNKNOWN-AUDIO",
+      "statement": "Direct soundtrack audition was not completed, so semantic audio facts remain unknown.",
+      "scope": "AUDIO",
+      "blocks_rule_ids": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001",
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-APERTURE-EVENT-BEFORE-GROSS-BODY-RESPONSE-002",
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CARRY-SURFACE-BODY-STATE-THROUGH-VEHICLE-REVERSAL-003",
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-DOOR-THRESHOLD-EXIT-RETURN-DEPARTURE-004"
+      ]
+    },
+    {
+      "unknown_id": "UNKNOWN-EXECUTION",
+      "statement": "Cross-work transfer and generation execution remain unverified and unknown.",
+      "scope": "RULE",
+      "blocks_rule_ids": [
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001",
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-APERTURE-EVENT-BEFORE-GROSS-BODY-RESPONSE-002",
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CARRY-SURFACE-BODY-STATE-THROUGH-VEHICLE-REVERSAL-003",
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-DOOR-THRESHOLD-EXIT-RETURN-DEPARTURE-004"
+      ]
+    }
+  ],
+  "rights_boundary": {
+    "media_committed": false,
+    "subtitles_committed": false,
+    "scripts_or_long_dialogue_committed": false,
+    "contains_absolute_local_paths": false,
+    "contains_media_hashes": false,
+    "reference_surface_terms": [
+      "CHILDREN OF MEN 2006"
+    ],
+    "surface_inventory_status": "HUMAN_REVIEWED_COMPLETE",
+    "prohibited_transfer_content": [
+      "Reference characters, locations, props, dialogue, scene events, and signature compositions."
+    ],
+    "notes": "Human review confirmed that every operational candidate-rule field is the same fixed source-neutral pending-review placeholder. Work-specific legacy text remains only in non-operational lineage; no source media or temporary artifact is embedded."
+  },
+  "validation_status": "HUMAN_REVIEW_PENDING",
+  "validation_warnings": [
+    "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+  ]
+}

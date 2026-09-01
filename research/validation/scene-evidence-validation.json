@@ -1,0 +1,1276 @@
+{
+  "error_count": 0,
+  "failed": 0,
+  "failed_rule_ids": [],
+  "failed_scene_ids": [],
+  "load_errors": [],
+  "passed": 30,
+  "results": [
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/a-quiet-place/A_QUIET_PLACE_2018_PARALLEL_BODY_STATE_RADIAL_LIGHT_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 34,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "DM-ANDOR-S01E10-SEL-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "121 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+          "path": "$.validation_warnings[2]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/andor/ANDOR_S01E10_SELECTED_ENVELOPE_VISUAL_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 121,
+      "warning_count": 3
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "8 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+          "path": "$.validation_warnings[2]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/apollo-13/APOLLO_13_CONSTRAINED_MATERIAL_HANDOFF_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 12,
+      "warning_count": 3
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/better-call-saul/BETTER_CALL_SAUL_S03E05_PUBLIC_PROOF_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 105,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "DM-BODYGUARD-S01E01-SEL-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "211 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+          "path": "$.validation_warnings[2]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/bodyguard/BODYGUARD_S01E01_SELECTED_SEQUENCE_VISUAL_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 211,
+      "warning_count": 3
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/bridgerton/BRIDGERTON_S02E05_CONTAINED_PROXIMITY_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 41,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/brooklyn-nine-nine/BROOKLYN_NINE_NINE_S05E14_THE_BOX_VISUAL_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 22,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "CHERNOBYL-S01E05-HEARING-RECON-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/chernobyl/CHERNOBYL_S01E05_HEARING_RECONSTRUCTION_VISUAL_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 205,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/children-of-men/CHILDREN_OF_MEN_2006_MOVING_CAR_EXTERIOR_DISRUPTION_CONTINUITY_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 1,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "12 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+          "path": "$.validation_warnings[2]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/citizen-kane/CITIZEN_KANE_BREAKFAST_MONTAGE_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 27,
+      "warning_count": 3
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/get-out/GET_OUT_2017_HYPNOSIS_SUBJECTIVE_SPACE_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 74,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/house-of-the-dragon/HOUSE_OF_THE_DRAGON_S01E08_THRONE_ROOM_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 68,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "KNIVES-OUT-2019-WILL-READING-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/knives-out/KNIVES_OUT_2019_WILL_READING_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 108,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/marriage-story/MARRIAGE_STORY_2019_APARTMENT_SEQUENCE_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 85,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/moonlight/MOONLIGHT_2016_TWO_APPEARANCE_MULTI_ZONE_DISTANCE_OBJECT_STATE_EDITORIAL_SEQUENCE_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 79,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "MRR-S04E07-ACT-FOUR-VISUAL-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/mr-robot/MR_ROBOT_S04E07_ACT_FOUR_VISUAL_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 201,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "NOBODY-2021-BUS-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "80 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+          "path": "$.validation_warnings[2]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/nobody/NOBODY_2021_BUS_FIGHT_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 128,
+      "warning_count": 3
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "SICARIO-2015-BORDER-CHECKPOINT-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/sicario/SICARIO_BORDER_CHECKPOINT_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 96,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/sound-of-metal/SOUND_OF_METAL_SIGNAL_STATE_EDITORIAL_ENVELOPE_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 25,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/ted-lasso/TED_LASSO_S01E08_DARTS_REVERSAL_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 147,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "BEAR-S01E07-REVIEW-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "1 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+          "path": "$.validation_warnings[2]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/the-bear/THE_BEAR_S01E07_REVIEW_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 1,
+      "warning_count": 3
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "29 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+          "path": "$.validation_warnings[2]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/the-bear/THE_BEAR_S02E07_TASK_CLOSED_LOOP_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 114,
+      "warning_count": 3
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "22 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+          "path": "$.validation_warnings[2]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/the-devil-wears-prada/THE_DEVIL_WEARS_PRADA_2006_CERULEAN_CORRECTION_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 26,
+      "warning_count": 3
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/the-haunting-of-hill-house/THE_HAUNTING_OF_HILL_HOUSE_S01E06_ENSEMBLE_CONTINUOUS_REFRAMING_VISUAL_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 1,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "TLOU-BEDROOM-LOCAL-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/the-last-of-us/THE_LAST_OF_US_S01E06_BEDROOM_VISUAL_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 27,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/the-martian/THE_MARTIAN_2015_MULTI_SPACE_OBJECT_STATE_EDITORIAL_SEQUENCE_VISUAL_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 59,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/the-social-network/THE_SOCIAL_NETWORK_2010_OPENING_EXCHANGE_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 91,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "WIRE-S01E04-OLD-CASES-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "29 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+          "path": "$.validation_warnings[2]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/the-wire/THE_WIRE_S01E04_OLD_CASES_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 68,
+      "warning_count": 3
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/true-detective/TRUE_DETECTIVE_S01E04_MULTI_ZONE_MOBILE_ROUTE_VISUAL_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 1,
+      "warning_count": 2
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
+      "evidence_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/unbelievable/UNBELIEVABLE_S01E02_CONTAINED_TWO_PERSON_SEQUENCE_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 77,
+      "warning_count": 2
+    }
+  ],
+  "status": "PASS_STRUCTURAL",
+  "structural_validation_is_not_creative_approval": true,
+  "total_candidate_rule_count": 120,
+  "total_scenes": 30,
+  "total_shots": 2255,
+  "validator_version": "scene-evidence-validator/0.1",
+  "warning_count": 69,
+  "warnings": [
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "DM-ANDOR-S01E10-SEL-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "DM-ANDOR-S01E10-SEL-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "DM-ANDOR-S01E10-SEL-001",
+      "level": "warning",
+      "message": "121 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+      "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
+      "level": "warning",
+      "message": "8 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+      "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "DM-BODYGUARD-S01E01-SEL-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "DM-BODYGUARD-S01E01-SEL-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "DM-BODYGUARD-S01E01-SEL-001",
+      "level": "warning",
+      "message": "211 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+      "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "CHERNOBYL-S01E05-HEARING-RECON-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "CHERNOBYL-S01E05-HEARING-RECON-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+      "level": "warning",
+      "message": "12 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+      "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "KNIVES-OUT-2019-WILL-READING-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "KNIVES-OUT-2019-WILL-READING-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "MRR-S04E07-ACT-FOUR-VISUAL-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "MRR-S04E07-ACT-FOUR-VISUAL-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "NOBODY-2021-BUS-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "NOBODY-2021-BUS-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "NOBODY-2021-BUS-001",
+      "level": "warning",
+      "message": "80 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+      "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "SICARIO-2015-BORDER-CHECKPOINT-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "SICARIO-2015-BORDER-CHECKPOINT-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "BEAR-S01E07-REVIEW-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "BEAR-S01E07-REVIEW-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "BEAR-S01E07-REVIEW-001",
+      "level": "warning",
+      "message": "1 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+      "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001",
+      "level": "warning",
+      "message": "29 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+      "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
+      "level": "warning",
+      "message": "22 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+      "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "TLOU-BEDROOM-LOCAL-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "TLOU-BEDROOM-LOCAL-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "WIRE-S01E04-OLD-CASES-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "WIRE-S01E04-OLD-CASES-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "WIRE-S01E04-OLD-CASES-001",
+      "level": "warning",
+      "message": "29 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+      "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    }
+  ]
+}

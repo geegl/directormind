@@ -138,7 +138,7 @@
 
 ### Person, region and object ledgers
 
-Canonical picture-only ledgers are in `STATE_LEDGERS.md`. Key transfer boundaries:
+Legacy migration source: the phase, shot, and person/region/object ledgers embedded in this Markdown. `ABSENT_LEGACY_ARTIFACT`: `STATE_LEDGERS.md` is not present in the repository and is not an evidence source. The same-stem `HOUSE_OF_THE_DRAGON_S01E08_THRONE_ROOM_EVIDENCE_V0.1.scene-evidence.json` is the deterministic machine-readable conversion output; its current structural result is recorded in `research/validation/scene-evidence-validation.json`. Key transfer boundaries:
 
 - `P-A-like`, `P-F-like`, `P-G-like` and all person labels are recurrence aliases, not proven identity/role.
 - `DOOR-A-like` is visibly open at reveal, but no opening action is shown.

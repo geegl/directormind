@@ -166,7 +166,8 @@
         "SOUND_LED_CAUSALITY",
         "MONTAGE_TIME_COMPRESSION",
         "ENSEMBLE_REACTION_CHAIN",
-        "SILENT_AFTERMATH"
+        "SILENT_AFTERMATH",
+        "LEGACY_SCENE_PROBLEM"
       ]
     },
     "sceneProblem": {
@@ -186,7 +187,8 @@
           "type": "array",
           "uniqueItems": true,
           "items": {"type": "string", "minLength": 1}
-        }
+        },
+        "notes": {"type": "string", "minLength": 1}
       }
     },
     "timePoint": {
@@ -646,9 +648,55 @@
         "claim_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"}
       }
     },
+    "legacyRuleMigration": {
+      "type": "object",
+      "description": "Non-operational, lossless lineage copied from one legacy Candidate Rule row. These fields are migration data, not directing instructions or authorization.",
+      "additionalProperties": false,
+      "required": [
+        "trigger",
+        "directing_decision",
+        "coverage",
+        "blocking",
+        "pacing_edit",
+        "sound",
+        "applicability",
+        "non_applicability",
+        "failure_mode",
+        "counterexample",
+        "unknown",
+        "ai_risk",
+        "fallback",
+        "evidence_shots",
+        "confidence"
+      ],
+      "properties": {
+        "trigger": {"type": "string"},
+        "directing_decision": {"type": "string"},
+        "coverage": {"type": "string"},
+        "blocking": {"type": "string"},
+        "pacing_edit": {"type": "string"},
+        "sound": {"type": "string"},
+        "applicability": {"type": "string"},
+        "non_applicability": {"type": ["string", "null"]},
+        "failure_mode": {"type": "string"},
+        "counterexample": {"type": "string"},
+        "unknown": {"type": "string"},
+        "ai_risk": {"type": "string"},
+        "fallback": {"type": "string"},
+        "evidence_shots": {"type": "string"},
+        "confidence": {"type": "string"}
+      }
+    },
     "candidateRule": {
       "type": "object",
       "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {"required": ["legacy_migration"]},
+          "then": {"properties": {"required_story_facts": {"maxItems": 0}}},
+          "else": {"properties": {"required_story_facts": {"minItems": 1}}}
+        }
+      ],
       "required": [
         "candidate_rule_id",
         "canonical_rule_family",
@@ -683,11 +731,11 @@
       "properties": {
         "candidate_rule_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
         "canonical_rule_family": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+        "legacy_migration": {"$ref": "#/$defs/legacyRuleMigration"},
         "scene_problem": {"$ref": "#/$defs/sceneProblemValue"},
         "trigger": {"type": "string", "minLength": 1},
         "required_story_facts": {
           "type": "array",
-          "minItems": 1,
           "items": {"$ref": "#/$defs/factRef"}
         },
         "director_decision": {"type": "string", "minLength": 1},

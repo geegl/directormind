@@ -1227,7 +1227,26 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
                     f"rule cannot rely on inactive method: {method_id}",
                 )
 
-        for fact_index, fact_ref in enumerate(rule.get("required_story_facts", []) if isinstance(rule.get("required_story_facts"), list) else []):
+        required_story_facts = rule.get("required_story_facts") if isinstance(rule.get("required_story_facts"), list) else []
+        has_legacy_migration = isinstance(rule.get("legacy_migration"), dict)
+        if has_legacy_migration and required_story_facts:
+            add_issue(
+                issues,
+                "error",
+                "LEGACY-RULE-OPERATIONAL-FACT",
+                f"{path}.required_story_facts",
+                "a non-operational legacy lineage row cannot assert an operational story prerequisite",
+            )
+        elif not has_legacy_migration and not required_story_facts:
+            add_issue(
+                issues,
+                "error",
+                "RULE-STORY-FACT-REQUIRED",
+                f"{path}.required_story_facts",
+                "an operational candidate rule requires at least one supported story fact",
+            )
+
+        for fact_index, fact_ref in enumerate(required_story_facts):
             claim_id = fact_ref.get("claim_id") if isinstance(fact_ref, dict) else None
             if claim_id not in claims:
                 add_issue(issues, "error", "RULE-FACT-REF-MISSING", f"{path}.required_story_facts[{fact_index}]", f"unknown claim ID: {claim_id}")

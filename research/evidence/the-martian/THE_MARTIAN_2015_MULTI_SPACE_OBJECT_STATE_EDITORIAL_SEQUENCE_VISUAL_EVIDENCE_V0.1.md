@@ -32,7 +32,7 @@
 
 ## C. Complete shot table
 
-- The exact `59 × 24` shot table is embedded in Section J and mirrored in the TSV.
+- The exact `59 × 24` shot table embedded in Section J is the legacy migration source. `ABSENT_LEGACY_ARTIFACT`: the previously claimed Shot-table TSV mirror is not present in the repository and is not an evidence source. The same-stem `THE_MARTIAN_2015_MULTI_SPACE_OBJECT_STATE_EDITORIAL_SEQUENCE_VISUAL_EVIDENCE_V0.1.scene-evidence.json` is the deterministic machine-readable conversion output; its current structural result is recorded in `research/validation/scene-evidence-validation.json`.
 - Coverage: `59` contiguous shots, `58` internal hard cuts, no representative-sample gaps.
 - Time convention: PTS-derived frame index at `24000/1001`; every start is inclusive and every end is exclusive.
 - Manual evidence: all `179` over-inclusive metric candidates were inspected as full-picture `F-1 → F` pairs; all accepted shots were reviewed at early/mid/late samples; all shots longer than seven seconds were sampled about once per second; four high-motion/ambiguous intervals received denser micro-review.
@@ -65,7 +65,7 @@
 
 ## G. Transfer candidates
 
-- The exact `4 × 16` candidate table is embedded in Section K and mirrored in the TSV.
+- The exact `4 × 16` candidate table embedded in Section K is the legacy migration source. `ABSENT_LEGACY_ARTIFACT`: the previously claimed Candidate-table TSV mirror is not present in the repository and is not an evidence source.
 - All four are `HYPOTHESIS`, single-source only and locked-script-gated. Each states applicability, non-applicability, failure, hypothetical counterexample, `UNKNOWN`, camera/performance/continuity AI risk, project-original fallback, shot references and confidence.
 
 ## H. Boundary

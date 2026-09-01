@@ -161,7 +161,7 @@ All four rules are `HYPOTHESIS / SINGLE-SOURCE CANDIDATE`. Their semantic trigge
 
 ### VERIFIED FACT / OBSERVED
 
-- Exact `F28224–F30838` selected envelope, `2,614` contiguous frames, `26` manually accepted visible shots, `25` internal hard cuts, and exact row-level timecodes in the TSV.
+- Exact `F28224–F30838` selected envelope, `2,614` contiguous frames, `26` manually accepted visible shots, `25` internal hard cuts, and exact row-level timecodes in the embedded legacy Markdown shot table. `ABSENT_LEGACY_ARTIFACT`: no separate exact-row TSV is present in the repository or used as an evidence source. The same-stem `THE_DEVIL_WEARS_PRADA_2006_CERULEAN_CORRECTION_EVIDENCE_V0.1.scene-evidence.json` is the deterministic machine-readable conversion output; its current structural result is recorded in `research/validation/scene-evidence-validation.json`.
 - One single-room work sequence with recurring people, stable cross-room zones, a moving garment/object reveal, a target-side face/gaze state, group attention redistribution, reciprocal side coverage, selected witness views, longer foreground/shared performance units, visible garment/belt-like object updates, a group reset, and a hard cut to a different visible location.
 - Local picture/container properties and the existence of an audio stream; no audible content was verified.
 

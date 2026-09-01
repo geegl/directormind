@@ -30,7 +30,7 @@
 
 ## C. Complete shot table
 
-- The exact 24-column complete shot table is embedded in Section J; the TSV remains a machine-checkable mirror.
+- The exact 24-column complete shot table embedded in Section J is the legacy migration source. `ABSENT_LEGACY_ARTIFACT`: the previously claimed Shot-table TSV mirror is not present in the repository and is not an evidence source. The same-stem `THE_LAST_OF_US_S01E06_BEDROOM_VISUAL_EVIDENCE_V0.1.scene-evidence.json` is the deterministic machine-readable conversion output; its current structural result is recorded in `research/validation/scene-evidence-validation.json`.
 - Coverage: `27` contiguous shots, no representative-sample gaps.
 - Time convention: frame index is PTS-derived at exact 24 fps; every shot start is inclusive and every shot end is exclusive.
 - Manual evidence: every accepted cut was checked as a full-picture `F-1 → F` pair; every shot was then reviewed at early/mid/late full-picture samples.
@@ -63,7 +63,7 @@
 
 ## G. Transfer candidates
 
-- The exact 16-field candidate table is embedded in Section K; the TSV remains a machine-checkable mirror.
+- The exact 16-field candidate table embedded in Section K is the legacy migration source. `ABSENT_LEGACY_ARTIFACT`: the previously claimed Candidate-table TSV mirror is not present in the repository and is not an evidence source.
 - All four are `HYPOTHESIS`, single-source only, and locked-script-gated. Each includes non-applicability, failure, counterexample, `UNKNOWN`, AI risk, fallback, evidence shots and confidence.
 
 ## H. Boundary
