@@ -65,7 +65,7 @@ class PhaseOneStateContractTests(unittest.TestCase):
         self.assertEqual(len(rows), 57)
         self.assertEqual(
             Counter(status for _, status in rows),
-            Counter({"TODO": 13, "VERIFIED_DONE": 44}),
+            Counter({"TODO": 8, "VERIFIED_DONE": 49}),
         )
         self.assertNotIn(
             "Closed-corpus completion is independently reviewed and ready for one isolated local commit",

@@ -64,7 +64,13 @@ def render_shot_script(ir: dict[str, Any]) -> str:
             locked = dialogue_text(shot["dialogue"])
             if shot["visible_text"]:
                 locked += f"<br>TEXT: {joined(shot['visible_text'])}"
-            connection = f"IN: {esc(shot['edit_in'])}<br>OUT: {esc(shot['edit_out'])}"
+            audio = shot.get("audio") if isinstance(shot.get("audio"), dict) else {}
+            audio_text = esc(audio.get("status", "UNKNOWN"))
+            if audio.get("instruction"):
+                audio_text += f": {esc(audio['instruction'])}"
+            if audio.get("source_refs"):
+                audio_text += f"<br>AUDIO REF: {joined(audio['source_refs'])}"
+            connection = f"AUDIO: {audio_text}<br>IN: {esc(shot['edit_in'])}<br>OUT: {esc(shot['edit_out'])}"
             execution = shot["execution_plan"]
             layer_types = [layer["type"] for layer in execution["composite_layers"]]
             state_ids = [state["state_id"] for state in execution["state_versions"]]

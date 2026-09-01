@@ -1,0 +1,440 @@
+{
+  "aspect_ratio": "16:9",
+  "dialogue_must_be_verbatim": true,
+  "director_grammar_path": "research/grammar/director_grammar_v0.2.json",
+  "duration_tolerance_seconds": 0,
+  "episode_id": "EP01",
+  "execution_medium": "AI_PHOTOREAL_HUMAN",
+  "generation_authorized": false,
+  "project_id": "FORWARD-TEST-ORIGINAL-SOUND-SUSPENSE",
+  "publication_authorized": false,
+  "scenes": [
+    {
+      "allowed_characters": [
+        "ARCHIVE_CARETAKER"
+      ],
+      "audience_information": {
+        "locked_fact_ids": [
+          "FACT-01",
+          "FACT-02",
+          "FACT-03"
+        ]
+      },
+      "dramatic_engine": {
+        "goal": "separate receipt of a verified sound cue from later source confirmation",
+        "objectives": [
+          "locate and identify the pulse"
+        ],
+        "obstacle": "the source begins outside the visible area",
+        "stakes": "the caretaker must decide whether the archive needs intervention",
+        "subtext": "uncertainty ends only when the ordinary source is visible",
+        "tactic_change": "listening becomes a directed search"
+      },
+      "duration_seconds": 15,
+      "location": "sealed document storage room",
+      "narrative_goal": "separate receipt of a verified sound cue from later source confirmation",
+      "pov": {
+        "character": "ENSEMBLE_NEUTRAL",
+        "identification_level": "STRUCTURAL_TEST_ONLY"
+      },
+      "routing_result": {
+        "applied_constraint_ids": [
+          "PC-DIALOGUE-TEXT-LOCK",
+          "PC-LOCKED-STORY-AUTHORITY",
+          "PC-MODEL-INDEPENDENT-IR",
+          "PC-ORIGINAL-ASSETS",
+          "PC-SOURCE-COVERAGE",
+          "SC-AUTHORIZATION-GATES",
+          "SC-HIGH-RISK-FALLBACK",
+          "SC-HUMAN-REVIEW",
+          "SC-NO-SUBJECT-SHORTCUT",
+          "SC-NO-SURFACE-COPY",
+          "SC-NO-UNKNOWN-PROMOTION"
+        ],
+        "case_id": "ORIGINAL-SOUND-SUSPENSE",
+        "conflict_trace": [],
+        "eligible_rule_ids": [],
+        "human_review_status": "HUMAN_REVIEW_PENDING",
+        "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+        "rejected_rules": [],
+        "rights_boundary": {
+          "subject_matter_used_for_selection": false,
+          "surface_copy_allowed": false
+        },
+        "scene_problem": "SOUND_LED_CAUSALITY",
+        "schema_version": "director-routing-result/0.1",
+        "selected_rules": [],
+        "selection_count": 0,
+        "status": "NO_APPLICABLE_RULE"
+      },
+      "scene_id": "EP01-SC01",
+      "shots": [
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "ARCHIVE_CARETAKER"
+          ],
+          "audio": {
+            "instruction": "Play exactly two equal project-original timer pulses before the wall panel is visible.",
+            "source_refs": [
+              "locked-script.md#FACT-01"
+            ],
+            "status": "PROJECT_ORIGINAL_LOCKED"
+          },
+          "blocking": "Two identical timer pulses are heard while the caretaker remains still and the wall panel stays closed.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-01"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-01"
+            ],
+            "must_hold": [
+              "A project-original timer emits two verified pulses before its source is visible."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-01",
+          "continuity_out": "state after FACT-01",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "A project-original timer emits two verified pulses before its source is visible.",
+          "order": 1,
+          "performance_beats": [
+            "Two identical timer pulses are heard while the caretaker remains still and the wall panel stays closed."
+          ],
+          "reference_plan": {
+            "exclude": [
+              "research stills",
+              "source-work surfaces"
+            ],
+            "inherit": [
+              "identity",
+              "geometry"
+            ],
+            "reference_id": "REF-SOUND-SUSPENSE-SH01",
+            "reference_type": "SHOT_GOLDEN",
+            "required": true,
+            "rights_status": "PROJECT_ORIGINAL",
+            "scope": "project-original identity and geometry only",
+            "status": "PLANNED"
+          },
+          "shot_id": "EP01-SC01-SH01",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-01"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        },
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "ARCHIVE_CARETAKER"
+          ],
+          "audio": {
+            "instruction": "Play one matching project-original pulse while the timer source remains outside the visible area.",
+            "source_refs": [
+              "locked-script.md#FACT-02"
+            ],
+            "status": "PROJECT_ORIGINAL_LOCKED"
+          },
+          "blocking": "A third pulse leads the caretaker to the panel; the source remains outside the visible area.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-02"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-02"
+            ],
+            "must_hold": [
+              "The caretaker follows the repeated pulse toward a closed wall panel."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-02",
+          "continuity_out": "state after FACT-02",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "The caretaker follows the repeated pulse toward a closed wall panel.",
+          "order": 2,
+          "performance_beats": [
+            "A third pulse leads the caretaker to the panel; the source remains outside the visible area."
+          ],
+          "reference_plan": {
+            "exclude": [],
+            "inherit": [],
+            "reference_id": null,
+            "reference_type": "NONE",
+            "required": false,
+            "rights_status": "NOT_APPLICABLE",
+            "scope": "",
+            "status": "NOT_REQUIRED"
+          },
+          "shot_id": "EP01-SC01-SH02",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-02"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        },
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "ARCHIVE_CARETAKER"
+          ],
+          "audio": {
+            "instruction": "End the final matching pulse as the timer and normal ventilation indicator become visible together.",
+            "source_refs": [
+              "locked-script.md#FACT-03"
+            ],
+            "status": "PROJECT_ORIGINAL_LOCKED"
+          },
+          "blocking": "The caretaker opens the panel and the timer flashes beside the normal ventilation indicator.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-03"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-03"
+            ],
+            "must_hold": [
+              "Opening the panel reveals the timer beside a normal ventilation-cycle indicator."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-03",
+          "continuity_out": "state after FACT-03",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "Opening the panel reveals the timer beside a normal ventilation-cycle indicator.",
+          "order": 3,
+          "performance_beats": [
+            "The caretaker opens the panel and the timer flashes beside the normal ventilation indicator."
+          ],
+          "reference_plan": {
+            "exclude": [],
+            "inherit": [],
+            "reference_id": null,
+            "reference_type": "NONE",
+            "required": false,
+            "rights_status": "NOT_APPLICABLE",
+            "scope": "",
+            "status": "NOT_REQUIRED"
+          },
+          "shot_id": "EP01-SC01-SH03",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-03"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        }
+      ],
+      "source_scene": "locked-script.md",
+      "spatial_plan": {
+        "close_positions": "the final locked beat positions",
+        "geometry": "simple project-original working area",
+        "primary_axis": "one stable readable axis"
+      },
+      "time_of_day": "UNSPECIFIED_AND_NOT_REQUIRED",
+      "title": "The Archive Vent Timer"
+    }
+  ],
+  "schema_version": "director-ir/0.2",
+  "source_coverage": [
+    {
+      "covered_by": [
+        "EP01-SC01-SH01"
+      ],
+      "description": "A project-original timer emits two verified pulses before its source is visible.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "covered"
+    },
+    {
+      "covered_by": [
+        "EP01-SC01-SH02"
+      ],
+      "description": "The caretaker follows the repeated pulse toward a closed wall panel.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "covered"
+    },
+    {
+      "covered_by": [
+        "EP01-SC01-SH03"
+      ],
+      "description": "Opening the panel reveals the timer beside a normal ventilation-cycle indicator.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "covered"
+    }
+  ],
+  "source_facts": {
+    "continuity_output": [
+      "Keep every project-original participant, prop and position consistent across this test scene."
+    ],
+    "cross_episode_state_in": [],
+    "cross_episode_state_out": [],
+    "source_unit_count": 3
+  },
+  "source_script": "examples/forward-tests/ORIGINAL-SOUND-SUSPENSE/locked-script.md",
+  "status": "HUMAN_REVIEW_PENDING",
+  "target_duration_seconds": 15,
+  "unresolved": [
+    "Human creative review has not been performed."
+  ],
+  "visual_style_pack_path": null
+}

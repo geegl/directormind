@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "forward-test-index.schema.json",
+  "title": "DirectorMind project-original forward-test index v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "status",
+    "grammar_path",
+    "candidate_index_path",
+    "support_matrix_path",
+    "promotion_ready_family_count",
+    "promotion_ready_family_ids",
+    "required_positive_boundary_pairs",
+    "completed_positive_cases",
+    "completed_boundary_cases",
+    "missing_family_ids",
+    "required_scene_problem_coverage",
+    "cases"
+  ],
+  "properties": {
+    "schema_version": {"const": "forward-test-index/0.1"},
+    "status": {"enum": ["NO_ELIGIBLE_FAMILIES", "FAMILY_COVERAGE_COMPLETE"]},
+    "grammar_path": {"const": "research/grammar/director_grammar_v0.2.json"},
+    "candidate_index_path": {"const": "research/grammar/candidate_rule_index.json"},
+    "support_matrix_path": {"const": "research/grammar/cross_work_support_matrix.json"},
+    "promotion_ready_family_count": {"type": "integer", "minimum": 0},
+    "promotion_ready_family_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "required_positive_boundary_pairs": {"type": "integer", "minimum": 0},
+    "completed_positive_cases": {"type": "integer", "minimum": 0},
+    "completed_boundary_cases": {"type": "integer", "minimum": 0},
+    "missing_family_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "required_scene_problem_coverage": {
+      "type": "array",
+      "minItems": 6,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "TWO_PARTY_POWER_TRANSFER",
+          "MULTI_PARTICIPANT_PUBLIC_REVELATION",
+          "PROCEDURE_SUCCESS_AND_FAILURE",
+          "ONE_TO_MANY_ACTION",
+          "NON_CONTACT_RELATION_TENSION",
+          "SOUND_DRIVEN_SUSPENSE"
+        ]
+      }
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 7,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "test_case_id",
+          "package_path",
+          "scene_problem",
+          "coverage_tags",
+          "test_mode",
+          "positive_for_family_ids",
+          "boundary_for_family_ids",
+          "expected_routing_status",
+          "expected_selection_count",
+          "human_review_status"
+        ],
+        "properties": {
+          "test_case_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9-]+$"},
+          "package_path": {"type": "string", "pattern": "^examples/forward-tests/[A-Z0-9][A-Z0-9-]+$"},
+          "scene_problem": {"type": "string", "minLength": 1},
+          "coverage_tags": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "test_mode": {"enum": ["ZERO_ELIGIBLE_PROBE", "POSITIVE", "BOUNDARY_OR_NON_APPLICABLE"]},
+          "positive_for_family_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "boundary_for_family_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "expected_routing_status": {"enum": ["SELECTED", "NO_APPLICABLE_RULE"]},
+          "expected_selection_count": {"type": "integer", "minimum": 0, "maximum": 4},
+          "human_review_status": {"const": "HUMAN_REVIEW_PENDING"}
+        }
+      }
+    }
+  }
+}

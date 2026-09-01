@@ -1,0 +1,57 @@
+{
+  "case_id": "ORIGINAL-ACTION-CAUSALITY",
+  "dramatic_structure": {
+    "goal": "preserve one visible cause and the distinct responses of a group",
+    "objectives": [
+      "clear the rack path",
+      "stop the rack safely"
+    ],
+    "obstacle": "the rack is already moving",
+    "stakes": "the marked route must be cleared before intervention",
+    "subtext": "the lead acts only after every response is visible",
+    "tactic_change": "warning becomes coordinated clearance and then restraint"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "cause_effect_chain",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "A loose wheel stop lets an unpowered equipment rack begin rolling."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "one_to_many_response",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "The floor lead signals three crew members to clear three marked lanes."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "safe_resolution",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "The floor lead pushes a floor chock into the rack path after all three lanes are clear."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "cause_effect_chain",
+    "one_to_many_response"
+  ],
+  "scene_problem": {
+    "primary": "ACTION_CAUSALITY",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "safe_physical_action"
+  ],
+  "unknown_fact_types": []
+}

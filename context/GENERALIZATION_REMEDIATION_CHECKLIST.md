@@ -162,10 +162,10 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| I1 | TODO | Create rights-safe original test scripts for six required scene problems without rewriting reference plots. | Originality/surface-guard review. |
-| I2 | TODO | Run a positive and boundary/non-applicable case for every promotion-ready family. | Forward-test index is complete. |
-| I3 | TODO | Emit each required `examples/forward-tests/<case-id>/` package. | Package validator passes. |
-| I4 | TODO | Mark unreviewed output `HUMAN_REVIEW_PENDING`; never label it production-ready or a winner. | Status scan passes. |
+| I1 | VERIFIED_DONE | Create rights-safe original test scripts for six required scene problems without rewriting reference plots. | Eight original packages cover the six explicit task-card problems plus relationship-fracture and no-specialized-rule probes; automated surface guards and a fresh independent read-only content review found no evident reference-surface or plot rewrite. Absolute originality remains a human/legal boundary. |
+| I2 | VERIFIED_DONE | Run a positive and boundary/non-applicable case for every promotion-ready family. | The validator live-recounts zero promotion-ready families, zero required pairs, zero positive/boundary claims and zero missing families. All eight packages are truthfully labeled `ZERO_ELIGIBLE_PROBE`; any future eligible family makes this coverage fail until distinct positive and boundary packages exist. |
+| I3 | VERIFIED_DONE | Emit each required `examples/forward-tests/<case-id>/` package. | Eight packages contain every required artifact plus reproducible manifests/routing inputs; live Grammar -> router -> complete IR -> renderer -> package/report binding passes deterministically. |
+| I4 | VERIFIED_DONE | Mark unreviewed output `HUMAN_REVIEW_PENDING`; never label it production-ready or a winner. | All eight manifests, routing results, IRs and exact review records remain `HUMAN_REVIEW_PENDING`; generation/publication stay false and contradictory appended approvals fail validation. |
 
 ## J. State and single source of truth
 
@@ -201,7 +201,7 @@ Remaining validation boundary: these checks do not replay source media, directly
 | M2 | VERIFIED_DONE | Deliver Scene Evidence schema, validator, and renderer. | Phase 1 tests, deterministic reports and independent review pass. |
 | M3 | VERIFIED_DONE | Deliver Candidate Rule schema/index and cross-work matrix JSON/Markdown. | Phase 2 rule/matrix validation and final independent review pass. |
 | M4 | VERIFIED_DONE | Deliver Director Grammar v0.2 and updated Skill routing/conflict logic/tests. | Grammar/routing schemas, validators, eight cases, IR integration tests and Phase 3 independent review pass. |
-| M5 | TODO | Deliver original forward-test packages. | Forward-test validation and human-review statuses pass. |
+| M5 | VERIFIED_DONE | Deliver original forward-test packages. | Eight deterministic packages, six required problem tags, zero false positive selections, 31 preserved visual-binding warnings and Phase 4 independent review PASS. |
 | M6 | TODO | Deliver full validation, independent audit, reduced STATE, clean Succession integration, CI, and updated PR description. | Checklist contains no TODO/IN_PROGRESS/BLOCKED item; user decides whether to merge. |
 
 ## Current blockers and known defects
@@ -211,8 +211,8 @@ Remaining validation boundary: these checks do not replay source media, directly
 - The known 13 absent legacy artifacts are closed as explicit absence records; broader historical claims outside this closed register were not re-proved.
 - Direct semantic audio audition is absent; signal measurement is not semantic sound evidence.
 - PR #1 cannot be merged unchanged because it contains prohibited media-hash material and older evidence semantics.
-- The runtime grammar is active but correctly contains zero evidence rules because none of the 120 candidates passes the promotion gates; real positive selection therefore remains unproved until evidence becomes eligible.
+- The runtime grammar is active but correctly contains zero evidence rules because none of the 120 candidates passes the promotion gates; all eight original packages therefore prove the no-ready/no-applicable branch, while a real positive selection remains unproved until evidence becomes eligible.
 
 ## Current next action
 
-Build the Phase 4 rights-safe original forward-test packages. Because no family is promotion-ready, prove the no-ready-family and `NO_APPLICABLE_RULE` paths without fabricating a positive runtime selection. Do not push, close a PR, merge, deploy, publish, or delete media.
+Integrate the existing 88-shot *Succession* evidence through the current Scene Evidence, candidate-index and support-matrix contracts without merging or closing the older PR. Do not push, close a PR, merge, deploy, publish, or delete media.

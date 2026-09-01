@@ -1,0 +1,438 @@
+{
+  "aspect_ratio": "16:9",
+  "dialogue_must_be_verbatim": true,
+  "director_grammar_path": "research/grammar/director_grammar_v0.2.json",
+  "duration_tolerance_seconds": 0,
+  "episode_id": "EP01",
+  "execution_medium": "AI_PHOTOREAL_HUMAN",
+  "generation_authorized": false,
+  "project_id": "FORWARD-TEST-ORIGINAL-PROCEDURE",
+  "publication_authorized": false,
+  "scenes": [
+    {
+      "allowed_characters": [
+        "GARDEN_OPERATOR",
+        "CHECKER"
+      ],
+      "audience_information": {
+        "locked_fact_ids": [
+          "FACT-01",
+          "FACT-02",
+          "FACT-03"
+        ]
+      },
+      "dramatic_engine": {
+        "goal": "show a procedure fail honestly and then recover through the approved fallback",
+        "objectives": [
+          "complete the irrigation handoff"
+        ],
+        "obstacle": "the final reading is unreliable",
+        "stakes": "the garden cannot be left on automatic control",
+        "subtext": "competence is shown by stopping at uncertainty",
+        "tactic_change": "routine verification becomes fallback verification"
+      },
+      "duration_seconds": 15,
+      "location": "rooftop garden service bay",
+      "narrative_goal": "show a procedure fail honestly and then recover through the approved fallback",
+      "pov": {
+        "character": "ENSEMBLE_NEUTRAL",
+        "identification_level": "STRUCTURAL_TEST_ONLY"
+      },
+      "routing_result": {
+        "applied_constraint_ids": [
+          "PC-DIALOGUE-TEXT-LOCK",
+          "PC-LOCKED-STORY-AUTHORITY",
+          "PC-MODEL-INDEPENDENT-IR",
+          "PC-ORIGINAL-ASSETS",
+          "PC-SOURCE-COVERAGE",
+          "SC-AUTHORIZATION-GATES",
+          "SC-HIGH-RISK-FALLBACK",
+          "SC-HUMAN-REVIEW",
+          "SC-NO-SUBJECT-SHORTCUT",
+          "SC-NO-SURFACE-COPY",
+          "SC-NO-UNKNOWN-PROMOTION"
+        ],
+        "case_id": "ORIGINAL-PROCEDURE",
+        "conflict_trace": [],
+        "eligible_rule_ids": [],
+        "human_review_status": "HUMAN_REVIEW_PENDING",
+        "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+        "rejected_rules": [],
+        "rights_boundary": {
+          "subject_matter_used_for_selection": false,
+          "surface_copy_allowed": false
+        },
+        "scene_problem": "PROCEDURAL_COMPETENCE",
+        "schema_version": "director-routing-result/0.1",
+        "selected_rules": [],
+        "selection_count": 0,
+        "status": "NO_APPLICABLE_RULE"
+      },
+      "scene_id": "EP01-SC01",
+      "shots": [
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "GARDEN_OPERATOR",
+            "CHECKER"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "The operator points to the valve mark, then the pressure mark, preserving the approved order.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-01"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-01"
+            ],
+            "must_hold": [
+              "The operator must verify valve, pressure, then flow in that order."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-01",
+          "continuity_out": "state after FACT-01",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "The operator must verify valve, pressure, then flow in that order.",
+          "order": 1,
+          "performance_beats": [
+            "The operator points to the valve mark, then the pressure mark, preserving the approved order."
+          ],
+          "reference_plan": {
+            "exclude": [
+              "research stills",
+              "source-work surfaces"
+            ],
+            "inherit": [
+              "identity",
+              "geometry"
+            ],
+            "reference_id": "REF-PROCEDURE-SH01",
+            "reference_type": "SHOT_GOLDEN",
+            "required": true,
+            "rights_status": "PROJECT_ORIGINAL",
+            "scope": "project-original identity and geometry only",
+            "status": "PLANNED"
+          },
+          "shot_id": "EP01-SC01-SH01",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-01"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        },
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "GARDEN_OPERATOR",
+            "CHECKER"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "The flow needle oscillates; both people stop before signing and mark the reading invalid.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-02"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-02"
+            ],
+            "must_hold": [
+              "The first flow reading cannot be confirmed and the handoff stops."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-02",
+          "continuity_out": "state after FACT-02",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "The first flow reading cannot be confirmed and the handoff stops.",
+          "order": 2,
+          "performance_beats": [
+            "The flow needle oscillates; both people stop before signing and mark the reading invalid."
+          ],
+          "reference_plan": {
+            "exclude": [],
+            "inherit": [],
+            "reference_id": null,
+            "reference_type": "NONE",
+            "required": false,
+            "rights_status": "NOT_APPLICABLE",
+            "scope": "",
+            "status": "NOT_REQUIRED"
+          },
+          "shot_id": "EP01-SC01-SH02",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-02"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        },
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "GARDEN_OPERATOR",
+            "CHECKER"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "The operator fits the approved spare gauge, obtains a stable flow mark, and the checker signs.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-03"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-03"
+            ],
+            "must_hold": [
+              "A project-original spare gauge produces a stable reading and the checker signs the handoff."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-03",
+          "continuity_out": "state after FACT-03",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "A project-original spare gauge produces a stable reading and the checker signs the handoff.",
+          "order": 3,
+          "performance_beats": [
+            "The operator fits the approved spare gauge, obtains a stable flow mark, and the checker signs."
+          ],
+          "reference_plan": {
+            "exclude": [],
+            "inherit": [],
+            "reference_id": null,
+            "reference_type": "NONE",
+            "required": false,
+            "rights_status": "NOT_APPLICABLE",
+            "scope": "",
+            "status": "NOT_REQUIRED"
+          },
+          "shot_id": "EP01-SC01-SH03",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-03"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        }
+      ],
+      "source_scene": "locked-script.md",
+      "spatial_plan": {
+        "close_positions": "the final locked beat positions",
+        "geometry": "simple project-original working area",
+        "primary_axis": "one stable readable axis"
+      },
+      "time_of_day": "UNSPECIFIED_AND_NOT_REQUIRED",
+      "title": "The Third Irrigation Check"
+    }
+  ],
+  "schema_version": "director-ir/0.2",
+  "source_coverage": [
+    {
+      "covered_by": [
+        "EP01-SC01-SH01"
+      ],
+      "description": "The operator must verify valve, pressure, then flow in that order.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "covered"
+    },
+    {
+      "covered_by": [
+        "EP01-SC01-SH02"
+      ],
+      "description": "The first flow reading cannot be confirmed and the handoff stops.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "covered"
+    },
+    {
+      "covered_by": [
+        "EP01-SC01-SH03"
+      ],
+      "description": "A project-original spare gauge produces a stable reading and the checker signs the handoff.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "covered"
+    }
+  ],
+  "source_facts": {
+    "continuity_output": [
+      "Keep every project-original participant, prop and position consistent across this test scene."
+    ],
+    "cross_episode_state_in": [],
+    "cross_episode_state_out": [],
+    "source_unit_count": 3
+  },
+  "source_script": "examples/forward-tests/ORIGINAL-PROCEDURE/locked-script.md",
+  "status": "HUMAN_REVIEW_PENDING",
+  "target_duration_seconds": 15,
+  "unresolved": [
+    "Human creative review has not been performed."
+  ],
+  "visual_style_pack_path": null
+}

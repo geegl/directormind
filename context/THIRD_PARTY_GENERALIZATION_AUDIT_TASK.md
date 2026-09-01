@@ -127,12 +127,12 @@ Only one writer may own a mutable file at a time. Root is the sole accountable i
 ## Current status
 
 - Current accountable implementer: root agent, sole integrator. No other writer may edit the same mutable file concurrently.
-- Completed: first-party closed-corpus task plus independently reviewed Phases 1 through 3; 44/57 requirements are `VERIFIED_DONE`.
-- Remaining: 13/57 requirements covering original forward-test packages, *Succession*, automated checks and final audit.
-- Current validation: 30 Scene Evidence JSON files; 2,255 Shot/edit units; 120 normalized but non-operational candidate lineages; 16 candidate-by-candidate reviewed textual mechanism families; 131 tests passing; candidate and grammar validation zero errors and zero runtime-authorized rules; eight routing cases return `NO_APPLICABLE_RULE` without padding; Scene Evidence 30/30 structural passes, zero errors and 69 visible warnings.
+- Completed: first-party closed-corpus task plus independently reviewed Phases 1 through 4; 49/57 requirements are `VERIFIED_DONE`.
+- Remaining: 8/57 requirements covering *Succession*, automated checks and final audit/delivery.
+- Current validation: 30 Scene Evidence JSON files; 2,255 Shot/edit units; 120 normalized but non-operational candidate lineages; 16 candidate-by-candidate reviewed textual mechanism families; 144 tests passing; candidate and grammar validation zero errors and zero runtime-authorized rules; eight original packages cover six required scene problems and return `NO_APPLICABLE_RULE` without padding; Scene Evidence 30/30 structural passes, zero errors and 69 visible warnings.
 - Known boundaries: all current scene problems remain UNKNOWN; direct semantic audio is absent; no candidate is yet authorized as an executable cross-work rule.
 - Remote boundary: no push, PR closure or merge is authorized by this card.
-- Next single action: create the Phase 4 rights-safe original forward-test packages and prove the no-ready-family/no-applicable paths without fabricating a positive selection.
+- Next single action: integrate the existing 88-shot *Succession* evidence through current contracts without merging or closing the older PR.
 
 ## Rollback
 
