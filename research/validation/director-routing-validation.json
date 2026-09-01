@@ -1,0 +1,67 @@
+{
+  "case_count": 8,
+  "cases": [
+    {
+      "case_id": "ORIGINAL-ACTION-CAUSALITY",
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+      "selection_count": 0,
+      "status": "NO_APPLICABLE_RULE"
+    },
+    {
+      "case_id": "ORIGINAL-NO-APPLICABLE-RULE",
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+      "selection_count": 0,
+      "status": "NO_APPLICABLE_RULE"
+    },
+    {
+      "case_id": "ORIGINAL-POWER-DIALOGUE",
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+      "selection_count": 0,
+      "status": "NO_APPLICABLE_RULE"
+    },
+    {
+      "case_id": "ORIGINAL-PROCEDURE",
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+      "selection_count": 0,
+      "status": "NO_APPLICABLE_RULE"
+    },
+    {
+      "case_id": "ORIGINAL-PROXIMITY-TENSION",
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+      "selection_count": 0,
+      "status": "NO_APPLICABLE_RULE"
+    },
+    {
+      "case_id": "ORIGINAL-PUBLIC-REVEAL",
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+      "selection_count": 0,
+      "status": "NO_APPLICABLE_RULE"
+    },
+    {
+      "case_id": "ORIGINAL-RELATIONSHIP-FRACTURE",
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+      "selection_count": 0,
+      "status": "NO_APPLICABLE_RULE"
+    },
+    {
+      "case_id": "ORIGINAL-SOUND-SUSPENSE",
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+      "selection_count": 0,
+      "status": "NO_APPLICABLE_RULE"
+    }
+  ],
+  "error_count": 0,
+  "issues": [],
+  "no_applicable_rule_count": 8,
+  "schema_version": "director-routing-validation/0.1",
+  "selected_rule_count": 0,
+  "status": "PASS"
+}

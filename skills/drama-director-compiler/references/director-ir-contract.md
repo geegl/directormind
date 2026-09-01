@@ -27,6 +27,7 @@ Each scene contains:
 - dramatic engine: objectives, obstacle, stakes, open/close tactics, trigger, subtext;
 - POV character, identification level, and audience information;
 - spatial plan: geometry, axis, zones, entrances/exits, anchors, opening and closing positions;
+- the validated Grammar v0.2 `routing_result`, kept at `HUMAN_REVIEW_PENDING` until human approval;
 - ordered shots.
 
 Use I/L/A staging as a planning vocabulary, not a mandatory pose. Establish a new axis only through visible movement, a camera crossing, or a new interacting subject.
@@ -47,7 +48,7 @@ Each shot contains:
 - `execution_plan` that assigns base generation, composite layers, state versions, continuity ownership, and a typed fallback route;
 - `reference_plan` that declares any project-original reference frame requirement and its inherit/exclude scope;
 - visual module ID or `UNRESOLVED`;
-- Director Grammar evidence rule IDs, evidence status, and confidence.
+- Director Grammar evidence rule IDs, evidence status, and confidence. Across one scene, the union of Shot evidence IDs must exactly equal the embedded routing result's selected IDs. The arrays may be empty only when that result is `NO_APPLICABLE_RULE`; project and safety constraints remain active and must not be disguised as evidence rule IDs.
 
 One shot has one primary narrative goal and no more than one primary camera movement. Static is a valid camera decision. `Top-Down` is an angle, not a movement. Rack focus is a focus change, not a zoom or dolly.
 
@@ -105,4 +106,4 @@ Research-only film stills can inform the visual style pack but cannot be named a
 
 ## Validation boundary
 
-The validator checks shape, IDs, duration, evidence references, source coverage, placeholders, authorization, and fallback presence. It cannot judge acting quality, whether reported reference shots are accurate, or whether the visual style is aesthetically successful.
+The validator checks shape, IDs, duration, evidence references, source coverage, placeholders, authorization, and fallback presence. For Grammar v0.2, zero evidence rules is a valid constraints-only handoff. It cannot judge acting quality, whether reported reference shots are accurate, or whether the visual style is aesthetically successful.

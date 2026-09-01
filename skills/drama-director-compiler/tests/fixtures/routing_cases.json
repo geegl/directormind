@@ -1,0 +1,98 @@
+[
+  {
+    "schema_version": "director-routing-input/0.1",
+    "case_id": "ORIGINAL-POWER-DIALOGUE",
+    "rights_boundary": {"project_original": true, "contains_private_script": false, "contains_reference_surface": false},
+    "locked_facts": [{"fact_id": "F-POWER-1", "fact_type": "authority_shift", "value": "control changes after a verified answer", "status": "LOCKED", "source_ref": "ORIGINAL-POWER-DIALOGUE#FACT-1"}],
+    "unknown_fact_types": [],
+    "dramatic_structure": {"goal": "make a change of control readable", "objectives": ["obtain a binding answer"], "obstacle": "the answer can be delayed", "stakes": "a group decision remains unsettled", "tactic_change": "question becomes a formal choice", "subtext": "control depends on who can end the exchange"},
+    "scene_problem": {"primary": "POWER_DIALOGUE", "secondary": [], "status": "LOCKED"},
+    "routing_signals": ["authority_shift"],
+    "priority_constraints": [],
+    "subject_matter_tags": ["meeting"]
+  },
+  {
+    "schema_version": "director-routing-input/0.1",
+    "case_id": "ORIGINAL-RELATIONSHIP-FRACTURE",
+    "rights_boundary": {"project_original": true, "contains_private_script": false, "contains_reference_surface": false},
+    "locked_facts": [{"fact_id": "F-FRACTURE-1", "fact_type": "departure", "value": "one participant leaves after declining repair", "status": "LOCKED", "source_ref": "ORIGINAL-RELATIONSHIP-FRACTURE#FACT-1"}],
+    "unknown_fact_types": [],
+    "dramatic_structure": {"goal": "show an attempted repair fail", "objectives": ["restore cooperation"], "obstacle": "trust is not restored", "stakes": "the partnership may end", "tactic_change": "appeal becomes departure", "subtext": "staying would imply consent"},
+    "scene_problem": {"primary": "RELATIONSHIP_FRACTURE", "secondary": [], "status": "LOCKED"},
+    "routing_signals": ["departure"],
+    "priority_constraints": [],
+    "subject_matter_tags": ["partnership"]
+  },
+  {
+    "schema_version": "director-routing-input/0.1",
+    "case_id": "ORIGINAL-PUBLIC-REVEAL",
+    "rights_boundary": {"project_original": true, "contains_private_script": false, "contains_reference_surface": false},
+    "locked_facts": [{"fact_id": "F-REVEAL-1", "fact_type": "audience_information_change", "value": "a verified result becomes visible to the assembled group", "status": "LOCKED", "source_ref": "ORIGINAL-PUBLIC-REVEAL#FACT-1"}],
+    "unknown_fact_types": [],
+    "dramatic_structure": {"goal": "make receipt of public information legible", "objectives": ["present a verified result"], "obstacle": "the group expects a different outcome", "stakes": "the next vote depends on receipt", "tactic_change": "private confidence becomes public proof", "subtext": "the room must acknowledge the same fact"},
+    "scene_problem": {"primary": "PUBLIC_REVEAL", "secondary": [], "status": "LOCKED"},
+    "routing_signals": ["audience_information_change"],
+    "priority_constraints": [],
+    "subject_matter_tags": ["assembly"]
+  },
+  {
+    "schema_version": "director-routing-input/0.1",
+    "case_id": "ORIGINAL-PROCEDURE",
+    "rights_boundary": {"project_original": true, "contains_private_script": false, "contains_reference_surface": false},
+    "locked_facts": [{"fact_id": "F-PROCEDURE-1", "fact_type": "ordered_steps", "value": "three verified checks must occur in order", "status": "LOCKED", "source_ref": "ORIGINAL-PROCEDURE#FACT-1"}],
+    "unknown_fact_types": [],
+    "dramatic_structure": {"goal": "keep an ordered process understandable", "objectives": ["complete all checks"], "obstacle": "one reading remains ambiguous", "stakes": "the handoff cannot proceed", "tactic_change": "routine check becomes manual verification", "subtext": "competence is tested by the exception"},
+    "scene_problem": {"primary": "PROCEDURE", "secondary": [], "status": "LOCKED"},
+    "routing_signals": ["ordered_steps"],
+    "priority_constraints": [],
+    "subject_matter_tags": ["workplace"]
+  },
+  {
+    "schema_version": "director-routing-input/0.1",
+    "case_id": "ORIGINAL-ACTION-CAUSALITY",
+    "rights_boundary": {"project_original": true, "contains_private_script": false, "contains_reference_surface": false},
+    "locked_facts": [{"fact_id": "F-ACTION-1", "fact_type": "cause_effect_chain", "value": "a failed latch releases a moving load", "status": "LOCKED", "source_ref": "ORIGINAL-ACTION-CAUSALITY#FACT-1"}],
+    "unknown_fact_types": [],
+    "dramatic_structure": {"goal": "preserve action causality", "objectives": ["stop the moving load"], "obstacle": "the first restraint fails", "stakes": "the path must be cleared", "tactic_change": "holding becomes redirecting", "subtext": "the response must follow the visible failure"},
+    "scene_problem": {"primary": "ACTION_CAUSALITY", "secondary": [], "status": "LOCKED"},
+    "routing_signals": ["cause_effect_chain"],
+    "priority_constraints": [],
+    "subject_matter_tags": ["physical_action"]
+  },
+  {
+    "schema_version": "director-routing-input/0.1",
+    "case_id": "ORIGINAL-PROXIMITY-TENSION",
+    "rights_boundary": {"project_original": true, "contains_private_script": false, "contains_reference_surface": false},
+    "locked_facts": [{"fact_id": "F-PROXIMITY-1", "fact_type": "distance_change", "value": "an unseen mover enters the protected zone", "status": "LOCKED", "source_ref": "ORIGINAL-PROXIMITY-TENSION#FACT-1"}],
+    "unknown_fact_types": [],
+    "dramatic_structure": {"goal": "make decreasing safe distance readable", "objectives": ["remain undetected"], "obstacle": "the approach path narrows", "stakes": "movement would expose the hiding place", "tactic_change": "retreat becomes stillness", "subtext": "distance matters more than identity"},
+    "scene_problem": {"primary": "PROXIMITY_TENSION", "secondary": [], "status": "LOCKED"},
+    "routing_signals": ["distance_change"],
+    "priority_constraints": [],
+    "subject_matter_tags": ["suspense"]
+  },
+  {
+    "schema_version": "director-routing-input/0.1",
+    "case_id": "ORIGINAL-SOUND-SUSPENSE",
+    "rights_boundary": {"project_original": true, "contains_private_script": false, "contains_reference_surface": false},
+    "locked_facts": [{"fact_id": "F-SOUND-1", "fact_type": "audible_information", "value": "a project-original alert is heard before its source is shown", "status": "LOCKED", "source_ref": "ORIGINAL-SOUND-SUSPENSE#FACT-1"}],
+    "unknown_fact_types": [],
+    "dramatic_structure": {"goal": "separate receipt of a cue from source confirmation", "objectives": ["locate the alert"], "obstacle": "the source remains outside the visible area", "stakes": "a response must be chosen before confirmation", "tactic_change": "listening becomes searching", "subtext": "uncertainty exists only until the source is verified"},
+    "scene_problem": {"primary": "SOUND_SUSPENSE", "secondary": [], "status": "LOCKED"},
+    "routing_signals": ["audible_information"],
+    "priority_constraints": [],
+    "subject_matter_tags": ["offscreen_event"]
+  },
+  {
+    "schema_version": "director-routing-input/0.1",
+    "case_id": "ORIGINAL-NO-APPLICABLE-RULE",
+    "rights_boundary": {"project_original": true, "contains_private_script": false, "contains_reference_surface": false},
+    "locked_facts": [{"fact_id": "F-NONE-1", "fact_type": "simple_arrival", "value": "a participant reaches the marked point", "status": "LOCKED", "source_ref": "ORIGINAL-NO-APPLICABLE-RULE#FACT-1"}],
+    "unknown_fact_types": [],
+    "dramatic_structure": {"goal": "record a simple arrival", "objectives": ["reach the mark"], "obstacle": "none", "stakes": "the next beat waits", "tactic_change": "movement ends", "subtext": "none asserted"},
+    "scene_problem": {"primary": "NO_SPECIALIZED_PROBLEM", "secondary": [], "status": "LOCKED"},
+    "routing_signals": ["simple_arrival"],
+    "priority_constraints": [],
+    "subject_matter_tags": []
+  }
+]

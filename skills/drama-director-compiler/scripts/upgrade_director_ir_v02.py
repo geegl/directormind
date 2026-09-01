@@ -9,9 +9,6 @@ import json
 from pathlib import Path
 from typing import Any
 
-from validate_director_ir import go01_triggered, go07_triggered
-
-
 def merge(base: dict[str, Any], override: dict[str, Any]) -> dict[str, Any]:
     result = copy.deepcopy(base)
     for key, value in override.items():
@@ -150,11 +147,6 @@ def main() -> int:
                 shot["execution_plan"]["continuity_owners"]["prop"] = "SHARED"
 
             shot["camera_start"], shot["camera_path"], shot["camera_end"] = camera_contract(shot)
-            if "GO-01" in shot["evidence_rule_ids"] and not go01_triggered(shot):
-                shot["evidence_rule_ids"].remove("GO-01")
-            if "GO-07" in shot["evidence_rule_ids"] and not go07_triggered(shot):
-                shot["evidence_rule_ids"].remove("GO-07")
-
     extra = sorted(set(shot_overrides) - seen_shots)
     if extra:
         raise SystemExit(f"override contains unknown shots: {extra}")

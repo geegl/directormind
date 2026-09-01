@@ -145,18 +145,18 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| G1 | TODO | Add `research/grammar/director_grammar_v0.2.json` containing only CROSS_WORK_SUPPORTED, GENERAL_DEFAULT, and required project/safety constraints. | Grammar validator passes; no single-work runtime default. |
-| G2 | TODO | Include the complete v0.2 rule field contract. | Schema/validator pass. |
-| G3 | TODO | Remove reference-work-driven operational wording; work names may appear only in evidence lineage. | Surface-copy/name scan passes. |
+| G1 | VERIFIED_DONE | Add `research/grammar/director_grammar_v0.2.json` containing only CROSS_WORK_SUPPORTED, GENERAL_DEFAULT, and required project/safety constraints. | Grammar validator independently recounts the eligible set and passes with five project constraints, six safety constraints, zero evidence rules, and no single-work runtime default; Phase 3 independent review PASS. |
+| G2 | VERIFIED_DONE | Include the complete v0.2 rule field contract. | Strict grammar schema and validator cover applicability, triggers, required facts, non-applicability, confidence, audio dependency, risk/fallback, conflict priority, evidence lineage, routing review and authorization; positive/negative contract tests pass. |
+| G3 | VERIFIED_DONE | Remove reference-work-driven operational wording; work names may appear only in evidence lineage. | Full and short work-title plus evidence-ID surface scans pass outside confined lineage; the independent review reproduced the short-title attack and confirmed rejection. |
 
 ## H. `drama-director-compiler` routing
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| H1 | TODO | Update the Skill with locked facts -> dramatic structure -> scene problem -> eligible rules -> 2-4 selections -> conflict resolution -> Director IR -> validation -> human review. | Skill diff plus routing tests. |
-| H2 | TODO | Implement the fixed nine-level conflict priority from locked facts through provider limitations. | Conflict-order tests. |
-| H3 | TODO | Check trigger, required facts, non-applicability, conflicts, and subject-matter similarity misuse. | Negative routing tests. |
-| H4 | TODO | Add routing tests for power dialogue, fracture, public reveal, procedure, action, proximity, sound suspense, and no-applicable-rule; select at most 2-4 and copy no surface element. | Eight routing cases pass. |
+| H1 | VERIFIED_DONE | Update the Skill with locked facts -> dramatic structure -> scene problem -> eligible rules -> 0-4 selections -> conflict resolution -> Director IR -> validation -> human review. | Skill contract follows the required order, permits zero only as `NO_APPLICABLE_RULE`, embeds the routing result in Grammar v0.2 IR, and keeps every unreviewed result at `HUMAN_REVIEW_PENDING`; routing and IR tests pass. |
+| H2 | VERIFIED_DONE | Implement the fixed nine-level conflict priority from locked facts through provider limitations. | Grammar schema, router and conflict-order tests enforce the exact nine-level sequence; independent review confirms lower-priority rules cannot override higher-priority constraints. |
+| H3 | VERIFIED_DONE | Check trigger, required facts, non-applicability, conflicts, and subject-matter similarity misuse. | Negative routing tests reject missing/empty required-fact mappings, non-applicability hits, conflicts, subject-only matches and forged authority; Phase 3 independent review PASS. |
+| H4 | VERIFIED_DONE | Add routing tests for power dialogue, fracture, public reveal, procedure, action, proximity, sound suspense, and no-applicable-rule; select at most 2-4 when applicable, allow zero, and copy no surface element. | Eight rights-safe original routing cases pass through the real CLI; the current zero-rule grammar returns eight truthful `NO_APPLICABLE_RULE` results and zero selected rules without padding. |
 
 ## I. Project-original forward tests
 
@@ -198,9 +198,9 @@ Remaining validation boundary: these checks do not replay source media, directly
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
 | M1 | VERIFIED_DONE | Deliver 30+ Scene Evidence JSON files. | Closed-corpus requirement is exactly 30 current-local JSON files; deterministic count validation passes. |
-| M2 | TODO | Deliver Scene Evidence schema, validator, and renderer. | Tests and reports pass. |
-| M3 | TODO | Deliver Candidate Rule schema/index and cross-work matrix JSON/Markdown. | Rule/matrix validation passes. |
-| M4 | TODO | Deliver Director Grammar v0.2 and updated Skill routing/conflict logic/tests. | Grammar/routing tests pass. |
+| M2 | VERIFIED_DONE | Deliver Scene Evidence schema, validator, and renderer. | Phase 1 tests, deterministic reports and independent review pass. |
+| M3 | VERIFIED_DONE | Deliver Candidate Rule schema/index and cross-work matrix JSON/Markdown. | Phase 2 rule/matrix validation and final independent review pass. |
+| M4 | VERIFIED_DONE | Deliver Director Grammar v0.2 and updated Skill routing/conflict logic/tests. | Grammar/routing schemas, validators, eight cases, IR integration tests and Phase 3 independent review pass. |
 | M5 | TODO | Deliver original forward-test packages. | Forward-test validation and human-review statuses pass. |
 | M6 | TODO | Deliver full validation, independent audit, reduced STATE, clean Succession integration, CI, and updated PR description. | Checklist contains no TODO/IN_PROGRESS/BLOCKED item; user decides whether to merge. |
 
@@ -211,7 +211,8 @@ Remaining validation boundary: these checks do not replay source media, directly
 - The known 13 absent legacy artifacts are closed as explicit absence records; broader historical claims outside this closed register were not re-proved.
 - Direct semantic audio audition is absent; signal measurement is not semantic sound evidence.
 - PR #1 cannot be merged unchanged because it contains prohibited media-hash material and older evidence semantics.
+- The runtime grammar is active but correctly contains zero evidence rules because none of the 120 candidates passes the promotion gates; real positive selection therefore remains unproved until evidence becomes eligible.
 
 ## Current next action
 
-Create the isolated local Phase 2 commit, then begin G/H runtime Grammar v0.2 and routing with zero promoted evidence rules. Do not push, close a PR, merge, deploy, publish, or delete media.
+Build the Phase 4 rights-safe original forward-test packages. Because no family is promotion-ready, prove the no-ready-family and `NO_APPLICABLE_RULE` paths without fabricating a positive runtime selection. Do not push, close a PR, merge, deploy, publish, or delete media.
