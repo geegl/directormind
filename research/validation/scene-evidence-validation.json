@@ -4,7 +4,7 @@
   "failed_rule_ids": [],
   "failed_scene_ids": [],
   "load_errors": [],
-  "passed": 30,
+  "passed": 31,
   "results": [
     {
       "candidate_rule_count": 4,
@@ -495,6 +495,36 @@
     {
       "candidate_rule_count": 4,
       "error_count": 0,
+      "evidence_id": "SUCCESSION-S01E06-BOARD-VOTE-001",
+      "failed_rule_ids": [],
+      "issues": [
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+          "path": "$.validation_warnings[0]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "86 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+          "path": "$.validation_warnings[2]"
+        }
+      ],
+      "passed": true,
+      "path": "research/evidence/succession/SUCCESSION_S01E06_BOARD_VOTE_EVIDENCE_V0.1.scene-evidence.json",
+      "shot_count": 88,
+      "warning_count": 3
+    },
+    {
+      "candidate_rule_count": 4,
+      "error_count": 0,
       "evidence_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001",
       "failed_rule_ids": [],
       "issues": [
@@ -783,11 +813,11 @@
   ],
   "status": "PASS_STRUCTURAL",
   "structural_validation_is_not_creative_approval": true,
-  "total_candidate_rule_count": 120,
-  "total_scenes": 30,
-  "total_shots": 2255,
+  "total_candidate_rule_count": 124,
+  "total_scenes": 31,
+  "total_shots": 2343,
   "validator_version": "scene-evidence-validator/0.1",
-  "warning_count": 69,
+  "warning_count": 72,
   "warnings": [
     {
       "code": "EVIDENCE-DECLARED-WARNING",
@@ -1089,6 +1119,27 @@
       "level": "warning",
       "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
       "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "SUCCESSION-S01E06-BOARD-VOTE-001",
+      "level": "warning",
+      "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+      "path": "$.validation_warnings[0]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "SUCCESSION-S01E06-BOARD-VOTE-001",
+      "level": "warning",
+      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "SUCCESSION-S01E06-BOARD-VOTE-001",
+      "level": "warning",
+      "message": "86 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+      "path": "$.validation_warnings[2]"
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",

@@ -4,7 +4,7 @@ Updated: 2026-09-01
 
 Status: `HUMAN_REVIEW_REQUIRED`
 
-This is the one-time human audio-review sheet for the 30 current local-source Scene Evidence Markdown files. It does not cover the Good Omens baseline, add a reference work, replace the visual audits, or authorize any grammar rule. No soundtrack was auditioned while this sheet was prepared.
+This is the one-time human audio-review sheet for the 31 current local-source Scene Evidence Markdown files. It does not cover the Good Omens baseline, add a reference work, replace the visual audits, or authorize any grammar rule. No soundtrack was auditioned while this sheet was prepared.
 
 The source-local start and end below are the end-exclusive analytical-envelope endpoints already recorded in the corresponding evidence files. They are review locators, not a claim that legacy displayed timing has been rebuilt into canonical JSON timing. Subtitles, scripts, synopses, filenames, and signal measurements must not substitute for listening.
 
@@ -59,6 +59,7 @@ For each item, record `PRESENT`, `ABSENT`, or `UNKNOWN`. `ABSENT` requires liste
 | 28 | `WIRE-S01E04-OLD-CASES-001` | `00:44:59.542` | `00:50:41.042` | `BLOCKED_DIRECT_AUDITION` | `U1–U10 ALL` | Interior/exterior procedural coverage may mix dialogue, overlap, footsteps, small-object handling, room/exterior ambience, off-screen voices, silence, score, and bridges. Heard exclamations or object sounds do not alone prove identity, roles, search logic, measurement, factual inference, or reaction cause. |
 | 29 | `TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001` | `00:49:06.000` | `00:55:00.500` | `BLOCKED_DIRECT_AUDITION` | `U1–U10 ALL` | A long multi-zone moving shot may contain dialogue/radio-like material, engines, footsteps, gunfire-like transients, impacts, sirens, off-screen cues, ambience changes, silence, and score. Cross-occlusion source identity and action causality remain uncertain, and audio continuity cannot rule out hidden joins. |
 | 30 | `UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001` | `00:05:20.875` | `00:11:50.250` | `BLOCKED_DIRECT_AUDITION` | `U1–U10 ALL` | Parallel/intercut coverage requires careful speaker and ambience tracking across cuts. Record dialogue overlap, off-screen voice, silence, score, and bridge bounds without assuming cross-thread identity, simultaneity, causal relation, ingress, role, or ethical meaning. |
+| 31 | `SUCCESSION-S01E06-BOARD-VOTE-001` | `00:47:03.500` | `00:52:33.042` | `BLOCKED_DIRECT_AUDITION` | `U1–U10 ALL` | The selected room/route intercut may use dialogue, phone treatment, overlap, ambience, silence, score, off-screen cues and entry/exit bridges. Listening may establish audible events and timing only; vote, coalition, authority, procedural outcome, simultaneity and causal reactions remain separate interpretations. |
 
 ## How to record a completed audition
 
@@ -71,4 +72,4 @@ A row remains blocked until the complete envelope has been listened to and the r
 5. For `SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1`, cite decoded-signal measurements only as separate auxiliary evidence. Do not use them to name, explain, or confirm an audible semantic event.
 6. Re-run the Scene Evidence validator after recording audio claims. A passing structure check is not human creative approval or permission to promote an audio rule.
 
-Until those records exist, none of these 30 evidence units may emit a directly observed semantic audio rule.
+Until those records exist, none of these 31 evidence units may emit a directly observed semantic audio rule.

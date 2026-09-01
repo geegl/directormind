@@ -13,12 +13,11 @@ This register covers the 33 media files currently in the closed local corpus. A 
 - Accepted or retained sources: `32/33`.
 - Target-scene-rejected sources: `1/33`.
 - Pending downloads: `0`.
-- Current-branch local-source evidence units: `30`; each has a legacy Markdown source and adjacent deterministic Scene Evidence JSON. *Succession* evidence exists only on old PR #1 and is not in the current branch, while the retained extra B99 source and rejected BCS source have no current evidence file.
+- Current-branch local-source evidence units: `31`; each has a rights-safe Markdown migration source and adjacent deterministic Scene Evidence JSON. The retained extra B99 source and rejected BCS source have no current evidence file.
 
 ## Status vocabulary
 
 - `CURRENT_LOCAL_EVIDENCE`: a legacy Scene Evidence Markdown file and adjacent deterministic Scene Evidence JSON exist in the current branch; the JSON passes the repository structural validator. This does not prove source replay, direct audio audition, creative approval, or cross-work rule validity.
-- `PR_ONLY_EVIDENCE`: evidence exists on old PR #1 but is not integrated in the current branch.
 - `NO_SCENE_EVIDENCE`: no Scene Evidence file exists for this local source.
 - `BLOCKED_DIRECT_AUDITION`: audio has not been directly auditioned and cannot support an observed semantic sound claim.
 - `SIGNAL_MEASURED_NOT_AUDITIONED`: decoded-signal measurements exist, but nobody directly auditioned the audio and no semantic sound conclusion is established.
@@ -27,7 +26,6 @@ This register covers the 33 media files currently in the closed local corpus. A 
 Deletion blockers used below:
 
 - `G2`: direct sound audit or an explicitly accepted local-only preservation substitute is incomplete.
-- `G4`: accepted evidence is not integrated in the current branch.
 - `G5`: the retained source has no complete evidence unit yet.
 - `G6`: the requested target scene was rejected; final source-retention/deletion disposition still requires explicit user approval.
 
@@ -37,7 +35,7 @@ Deletion blockers used below:
 |---:|---|---|---|---|---|---|---|---|
 | 1 | First | *The Social Network* (2010) | ACCEPTED_TARGET | `THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001` / CURRENT_LOCAL_EVIDENCE | Complete visual envelope / 91 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |
 | 2 | First | *The Devil Wears Prada* (2006) | ACCEPTED_TARGET | `THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001` / CURRENT_LOCAL_EVIDENCE | Complete visual envelope / 26 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |
-| 3 | First | *Succession* S01E06 | ACCEPTED_TARGET | `SUC-S1E6-BOARD-VOTE-01` / PR_ONLY_EVIDENCE | Old PR evidence complete / 88 shots; absent from current branch | NOT_DIRECTLY_AUDITIONED | NO | G2, G4 |
+| 3 | First | *Succession* S01E06 | ACCEPTED_TARGET | `SUCCESSION-S01E06-BOARD-VOTE-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual ledger / 88 visible shots; four candidate lineages remain blocked | BLOCKED_DIRECT_AUDITION | NO | G2 |
 | 4 | First | *Better Call Saul* S01E09-labelled source | TARGET_SCENE_REJECTED / exact episode identity UNKNOWN | NO_SCENE_EVIDENCE | Requested Chuck/Jimmy target scene not present in audited ranges | TARGET_SCENE_NOT_AVAILABLE / SOURCE_AUDIO_NOT_AUDITIONED | NO | G6 |
 | 5 | First | *Ted Lasso* S01E08 | ACCEPTED_TARGET | `TED-LASSO-S01E08-DARTS-REVERSAL-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 147 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |
 | 6 | First | *Get Out* (2017) | ACCEPTED_TARGET | `GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001` / CURRENT_LOCAL_EVIDENCE | Complete visual envelope / 74 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |
@@ -71,8 +69,7 @@ Deletion blockers used below:
 
 ## Current retention recommendation
 
-- `RETAIN_FOR_REAUDIT`: `30` current-local evidence sources. Their picture analysis is preserved in JSON, but direct sound audition is incomplete and the full source remains the only complete route to re-check picture or sound.
-- `RETAIN_UNTIL_EVIDENCE_INTEGRATED`: `1` *Succession* source whose accepted evidence is not present on the current branch.
+- `RETAIN_FOR_REAUDIT`: `31` current-local evidence sources. Their picture analysis is preserved in JSON, but direct sound audition is incomplete and the full source remains the only complete route to re-check picture or sound.
 - `RETAIN_UNTIL_ANALYZE_OR_ABANDON`: `1` extra *Brooklyn Nine-Nine* source with no complete evidence unit.
 - `DELETE_CANDIDATE_PENDING_USER_CONFIRMATION`: `1` *Better Call Saul* S01E09-labelled source. It is unusable for the requested target scene, but it is not deleted or authorized for deletion by this report.
 
@@ -104,8 +101,8 @@ No original is currently declared safe for direct deletion. A source can enter a
 | Post-16 rows | 17 |
 | Accepted or retained | 32 |
 | Target-scene rejected | 1 |
-| Current-local evidence | 30 |
-| Old-PR-only evidence | 1 |
+| Current-local evidence | 31 |
+| Old-PR-only evidence | 0 |
 | No scene evidence | 2 |
 | Directly auditioned | 0 |
 | Signal measured but not auditioned | 1 |
@@ -114,4 +111,4 @@ No original is currently declared safe for direct deletion. A source can enter a
 | Pending downloads | 0 |
 | Currently authorized for direct deletion | 0 |
 
-The arithmetic closes: `16 + 17 = 33`, `32 + 1 = 33`, and `30 + 1 + 2 = 33`.
+The arithmetic closes: `16 + 17 = 33`, `32 + 1 = 33`, and `31 + 0 + 2 = 33`.

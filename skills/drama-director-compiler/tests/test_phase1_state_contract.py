@@ -65,13 +65,28 @@ class PhaseOneStateContractTests(unittest.TestCase):
         self.assertEqual(len(rows), 57)
         self.assertEqual(
             Counter(status for _, status in rows),
-            Counter({"TODO": 8, "VERIFIED_DONE": 49}),
+            Counter({"TODO": 5, "BLOCKED": 1, "VERIFIED_DONE": 51}),
         )
         self.assertNotIn(
             "Closed-corpus completion is independently reviewed and ready for one isolated local commit",
             checklist,
         )
         self.assertNotIn("fresh independent verdict on the latest working tree is pending", checklist)
+
+    def test_succession_is_current_without_weakening_external_gates(self) -> None:
+        state = (CONTEXT / "STATE.md").read_text(encoding="utf-8")
+        scene_map = (COVERAGE / "SCENE_PROBLEM_MAP.md").read_text(encoding="utf-8")
+        status = (
+            REPO_ROOT / "research" / "validation" / "CLOSED_CORPUS_33_STATUS.md"
+        ).read_text(encoding="utf-8")
+        self.assertIn("31 canonical JSON units", state)
+        self.assertIn("124 candidates", state)
+        self.assertIn("Authority boundary:", scene_map)
+        self.assertIn("Succession", scene_map)
+        self.assertIn("`SUCCESSION-S01E06-BOARD-VOTE-001` / CURRENT_LOCAL_EVIDENCE", status)
+        self.assertIn("Closing PR #1 requires a separate explicit user confirmation", (
+            CONTEXT / "THIRD_PARTY_GENERALIZATION_AUDIT_TASK.md"
+        ).read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

@@ -10,7 +10,7 @@ Turn the existing 33-source research corpus into a verifiable, safely routable D
 
 ## Why this work exists
 
-The closed corpus already has 33 explicit source dispositions. Thirty current-local analyses have deterministic Scene Evidence JSON containing 2,255 Shot/edit units and 120 non-operational legacy candidate lineages. One *Succession* analysis remains isolated in the older PR, and two other sources retain explicit non-integration dispositions.
+The closed corpus has 33 explicit source dispositions. Thirty-one current-local analyses now have deterministic Scene Evidence JSON containing 2,343 Shot/edit units and 124 non-operational legacy candidate lineages. The existing *Succession* analysis has been migrated through the current contracts without merging the older PR; two other sources retain explicit non-integration dispositions.
 
 The remaining problem is not acquisition. The repository cannot yet decide reproducibly which candidate logic is supported across unrelated works, when it is inapplicable, how conflicts are resolved, or which rules may safely enter runtime routing. The existing candidate rows are research lineage, not executable directing instructions.
 
@@ -108,17 +108,17 @@ Only one writer may own a mutable file at a time. Root is the sole accountable i
 ## Completion criteria
 
 - [ ] Existing users receive correct rule selection or `NO_APPLICABLE_RULE` for original scenes.
-- [ ] The 30 canonical JSON units remain deterministic at 2,255 Shot/edit units and 120 source candidate identities unless an independently proven discrepancy is approved.
+- [x] The original 30 canonical JSON units remain unchanged; the existing *Succession* ledger adds exactly 88 Shot units and four blocked candidate identities for a deterministic 31 / 2,343 / 124 current total.
 - [ ] The renderer is deterministic, round-trippable and incapable of overwriting legacy Markdown.
-- [ ] All 120 source candidate IDs resolve exactly once in the Candidate Rule Index.
+- [x] All 124 source candidate IDs resolve exactly once in the Candidate Rule Index.
 - [ ] Candidate schema, confidence dimensions, support relations, contrary evidence and promotion gates validate.
 - [ ] UNKNOWN audio, functional roles and natural-scene boundaries cannot leak into promoted rules.
 - [ ] Director Grammar v0.2 contains only eligible rules and no reference-work surface instructions.
 - [ ] Routing selects no more than two to four eligible rules and rejects merely similar or non-applicable rules.
 - [ ] Every promotion-ready family has original positive and non-applicable tests; no-ready-family and no-applicable-rule outcomes are also tested.
 - [ ] Unreviewed creative outputs remain `HUMAN_REVIEW_PENDING`.
-- [ ] Legacy Markdown and original media remain unchanged.
-- [ ] *Succession* is integrated through the current contracts without merging the old PR.
+- [x] The original 30 legacy Markdown documents and original media remain unchanged; the migrated *Succession* input is a sanitized rights-safe ledger.
+- [x] *Succession* is integrated through the current contracts without merging the old PR.
 - [ ] Existing and new local tests pass; CI is defined but no push occurs without confirmation.
 - [ ] Final validation records zero contract errors and preserves all warnings.
 - [ ] A non-writing read-only agent issues the final technical verdict and lists unverified boundaries.
@@ -127,12 +127,12 @@ Only one writer may own a mutable file at a time. Root is the sole accountable i
 ## Current status
 
 - Current accountable implementer: root agent, sole integrator. No other writer may edit the same mutable file concurrently.
-- Completed: first-party closed-corpus task plus independently reviewed Phases 1 through 4; 49/57 requirements are `VERIFIED_DONE`.
-- Remaining: 8/57 requirements covering *Succession*, automated checks and final audit/delivery.
-- Current validation: 30 Scene Evidence JSON files; 2,255 Shot/edit units; 120 normalized but non-operational candidate lineages; 16 candidate-by-candidate reviewed textual mechanism families; 144 tests passing; candidate and grammar validation zero errors and zero runtime-authorized rules; eight original packages cover six required scene problems and return `NO_APPLICABLE_RULE` without padding; Scene Evidence 30/30 structural passes, zero errors and 69 visible warnings.
+- Completed: first-party closed-corpus task and independently reviewed Phases 1 through 5; 51/57 requirements are `VERIFIED_DONE`.
+- Remaining: automated checks, final validation/audit/delivery, plus the separately gated external decision on old PR closure.
+- Current validation: 31 Scene Evidence JSON files; 2,343 Shot/edit units; 124 normalized but non-operational candidate lineages; 16 reviewed textual mechanism families; 147 tests pass; candidate and Scene validation have zero errors and zero runtime-authorized rules; Scene Evidence is 31/31 with 72 visible warnings.
 - Known boundaries: all current scene problems remain UNKNOWN; direct semantic audio is absent; no candidate is yet authorized as an executable cross-work rule.
 - Remote boundary: no push, PR closure or merge is authorized by this card.
-- Next single action: integrate the existing 88-shot *Succession* evidence through current contracts without merging or closing the older PR.
+- Next single action: seal Phase 5 in an isolated local commit, then complete Phase 6 local automation and final validation without pushing or closing the older PR.
 
 ## Rollback
 

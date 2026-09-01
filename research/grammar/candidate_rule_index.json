@@ -16013,6 +16013,659 @@
         "source_refs": [],
         "status": "UNKNOWN"
       },
+      "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C01",
+      "canonical_rule_family": "RECEIVER-AND-REACTION-DISTRIBUTION",
+      "confidence": {
+        "execution": "UNKNOWN",
+        "transfer": "UNKNOWN",
+        "within_source": "UNKNOWN"
+      },
+      "counterexamples": [
+        {
+          "counterexample_id": null,
+          "evidence_id": null,
+          "notes": "The pivotal SWING is often held in shared frames (S018/S050/S052/S060/S062), not always a clean voting single; later singles S065/S067 are reserved for sharper change.",
+          "relation": "NARROWS",
+          "review_id": null,
+          "review_ref": null,
+          "review_status": "NOT_REVIEWED",
+          "same_trigger_status": "UNKNOWN",
+          "source_candidate_rule_id": null,
+          "source_refs": [],
+          "status": "BOUNDARY_ONLY",
+          "work_id": null
+        }
+      ],
+      "family_assignment_status": "ROOT_REVIEWED_TEXTUAL_CLUSTER",
+      "functional_roles": [],
+      "legacy_lineage": {
+        "ai_risk": "Many identities and eyelines make continuity HIGH; simultaneous gestures make performance HIGH.",
+        "applicability": "Board votes, councils, juries, partnership decisions with visible positions.",
+        "blocking": "Keep voters seated unless a story event changes status; make the challenged authority's continued presence explicit.",
+        "confidence": "LOW — one source",
+        "counterexample": "The pivotal SWING is often held in shared frames (S018/S050/S052/S060/S062), not always a clean voting single; later singles S065/S067 are reserved for sharper change.",
+        "coverage": "Sparse master at resets; singles for explicit positions; shared frames for witnessed hesitation.",
+        "directing_decision": "Establish seat hierarchy, then alternate result-bearing gestures with the authority and the listeners whose reactions can change the count.",
+        "evidence_shots": "S002, S004, S012, S014, S018, S050, S052, S060, S062, S065, S067",
+        "failure_mode": "Overcutting turns members into anonymous faces; equal coverage falsely equalizes narrative weight.",
+        "fallback": "One wide master for vote order, fixed singles for only decisive votes/reactions, and off-screen names for non-decisive positions.",
+        "non_applicability": "Secret ballots, anonymous remote polls, or scenes where the audience should not know individual positions.",
+        "pacing_edit": "Cut on a hand, name/position, look, or change of procedural state; do not give every vote equal duration.",
+        "sound": "UNKNOWN from this source; preserve legible speaker handoff and do not invent a score rule.",
+        "trigger": "A formal small/medium group decision makes individual positions public and socially risky.",
+        "unknown": "Exact spoken overlap, chair authority, and sound-led handoffs need audio audit."
+      },
+      "operational_contract": {
+        "ai_risk": {
+          "camera": {
+            "level": "UNKNOWN",
+            "reasons": [
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+            ]
+          },
+          "continuity": {
+            "level": "UNKNOWN",
+            "reasons": [
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+            ]
+          },
+          "performance": {
+            "level": "UNKNOWN",
+            "reasons": [
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+            ]
+          }
+        },
+        "applicable_when": [
+          "No applicability condition is authorized before human review."
+        ],
+        "audio_logic": {
+          "claim_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C01-AUDIO",
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+          "source_refs": [],
+          "status": "UNKNOWN",
+          "value": "Pending human review; audio remains unknown and no audio instruction is authorized."
+        },
+        "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+        "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+        "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+        "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+        "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+        "failure_modes": [
+          "Applying this migrated lineage row as an operational rule before human review."
+        ],
+        "fallback": {
+          "camera": null,
+          "continuity": null,
+          "performance": null,
+          "project_original_only": true
+        },
+        "not_applicable_when": [
+          "No non-applicability boundary is authorized before human review."
+        ],
+        "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+        "required_story_facts": [],
+        "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration."
+      },
+      "promotion": {
+        "human_director_review": {
+          "review_id": null,
+          "source_ref": null,
+          "status": "NOT_APPROVED"
+        },
+        "original_forward_test_count": 0,
+        "original_forward_tests": [],
+        "reasons": [
+          "Canonical scene problem remains UNKNOWN.",
+          "No evidence-backed functional role is available.",
+          "Within-source, transfer and execution confidence remain UNKNOWN.",
+          "No unrelated same-trigger verified counterexample is registered."
+        ],
+        "status": "BLOCKED_BY_UNKNOWN",
+        "unknown_dependency_present": true,
+        "verified_same_trigger_counterexample_count": 0,
+        "verified_support_work_count": 1
+      },
+      "relation_to_family": "NARROWS",
+      "rights_boundary": {
+        "evidence_lineage_only": true,
+        "runtime_authorized": false,
+        "surface_copy_allowed": false
+      },
+      "scene_problem": {
+        "lineage_label": "GROUP_POWER_CHANGE",
+        "primary": "LEGACY_SCENE_PROBLEM",
+        "secondary": [],
+        "source_refs": [],
+        "status": "UNKNOWN"
+      },
+      "schema_version": "candidate-director-rule/0.1",
+      "source": {
+        "evidence_id": "SUCCESSION-S01E06-BOARD-VOTE-001",
+        "evidence_shot_ids": [
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S002",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S004",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S012",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S014",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S018",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S050",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S052",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S060",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S062",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S065",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S067"
+        ],
+        "source_candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C01",
+        "source_method_ids": [
+          "SUCCESSION-S01E06-BOARD-VOTE-001-METHOD-LEGACY-PICTURE-REVIEW",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-METHOD-STRUCTURAL-CONVERSION"
+        ],
+        "work_id": "SUCCESSION-S01E06"
+      },
+      "supporting_relations": [],
+      "unknown_dependencies": {
+        "audio": true,
+        "functional_roles": true,
+        "natural_scene_boundary": true,
+        "scene_problem": true
+      }
+    },
+    {
+      "applicability_evidence": {
+        "notes": "No natural-scene non-applicability boundary is authorized before human review.",
+        "source_refs": [],
+        "status": "UNKNOWN"
+      },
+      "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C02",
+      "canonical_rule_family": "MULTI-THREAD-STATE-INTERCUT",
+      "confidence": {
+        "execution": "UNKNOWN",
+        "transfer": "UNKNOWN",
+        "within_source": "UNKNOWN"
+      },
+      "counterexamples": [
+        {
+          "counterexample_id": null,
+          "evidence_id": null,
+          "notes": "S029 is an empty route insert whose necessity is uncertain; it may be removable without changing the event.",
+          "relation": "NARROWS",
+          "review_id": null,
+          "review_ref": null,
+          "review_status": "NOT_REVIEWED",
+          "same_trigger_status": "UNKNOWN",
+          "source_candidate_rule_id": null,
+          "source_refs": [],
+          "status": "BOUNDARY_ONLY",
+          "work_id": null
+        }
+      ],
+      "family_assignment_status": "ROOT_REVIEWED_TEXTUAL_CLUSTER",
+      "functional_roles": [],
+      "legacy_lineage": {
+        "ai_risk": "Cross-location identity/state continuity HIGH; walking plus phone performance MEDIUM/HIGH.",
+        "applicability": "Real-time meetings, rescue coordination, hearings, operations with a late/remote decision owner.",
+        "blocking": "Give the absent mover a clear travel direction and visible access obstacles; do not let phone speech erase distance.",
+        "confidence": "MEDIUM as a candidate, not a default",
+        "counterexample": "S029 is an empty route insert whose necessity is uncertain; it may be removable without changing the event.",
+        "coverage": "Stable room axis plus a small route vocabulary: entrance, corridor/elevator, threshold.",
+        "directing_decision": "Intercut only when the absent route changes or the room's decision state changes; let each location create pressure on the other.",
+        "evidence_shots": "S008–S011, S028–S030, S038, S041, S044, S064, S070–S074",
+        "failure_mode": "Decorative travel inserts stall the scene without changing either state; too many locations break causal clarity.",
+        "fallback": "Keep the boardroom master and two route shots; carry the mover as off-screen phone voice for intermediate beats; reveal threshold arrival in a fixed wide.",
+        "non_applicability": "When absence itself is a reveal, when locations are not simultaneous, or when a valid proxy removes the obstacle.",
+        "pacing_edit": "Longer travel shots can accumulate delay; room returns should reveal a new vote, retreat, or pressure state.",
+        "sound": "Phone filtering/bridges are UNKNOWN here and must be verified before transfer.",
+        "trigger": "A decisive meeting proceeds while its organizer is physically absent but causally connected.",
+        "unknown": "Exact phone audibility, line overlap, and whether room participants hear MOVER at every cut."
+      },
+      "operational_contract": {
+        "ai_risk": {
+          "camera": {
+            "level": "UNKNOWN",
+            "reasons": [
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+            ]
+          },
+          "continuity": {
+            "level": "UNKNOWN",
+            "reasons": [
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+            ]
+          },
+          "performance": {
+            "level": "UNKNOWN",
+            "reasons": [
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+            ]
+          }
+        },
+        "applicable_when": [
+          "No applicability condition is authorized before human review."
+        ],
+        "audio_logic": {
+          "claim_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C02-AUDIO",
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+          "source_refs": [],
+          "status": "UNKNOWN",
+          "value": "Pending human review; audio remains unknown and no audio instruction is authorized."
+        },
+        "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+        "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+        "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+        "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+        "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+        "failure_modes": [
+          "Applying this migrated lineage row as an operational rule before human review."
+        ],
+        "fallback": {
+          "camera": null,
+          "continuity": null,
+          "performance": null,
+          "project_original_only": true
+        },
+        "not_applicable_when": [
+          "No non-applicability boundary is authorized before human review."
+        ],
+        "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+        "required_story_facts": [],
+        "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration."
+      },
+      "promotion": {
+        "human_director_review": {
+          "review_id": null,
+          "source_ref": null,
+          "status": "NOT_APPROVED"
+        },
+        "original_forward_test_count": 0,
+        "original_forward_tests": [],
+        "reasons": [
+          "Canonical scene problem remains UNKNOWN.",
+          "No evidence-backed functional role is available.",
+          "Within-source, transfer and execution confidence remain UNKNOWN.",
+          "No unrelated same-trigger verified counterexample is registered."
+        ],
+        "status": "BLOCKED_BY_UNKNOWN",
+        "unknown_dependency_present": true,
+        "verified_same_trigger_counterexample_count": 0,
+        "verified_support_work_count": 1
+      },
+      "relation_to_family": "NARROWS",
+      "rights_boundary": {
+        "evidence_lineage_only": true,
+        "runtime_authorized": false,
+        "surface_copy_allowed": false
+      },
+      "scene_problem": {
+        "lineage_label": "GROUP_POWER_CHANGE",
+        "primary": "LEGACY_SCENE_PROBLEM",
+        "secondary": [],
+        "source_refs": [],
+        "status": "UNKNOWN"
+      },
+      "schema_version": "candidate-director-rule/0.1",
+      "source": {
+        "evidence_id": "SUCCESSION-S01E06-BOARD-VOTE-001",
+        "evidence_shot_ids": [
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S008",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S009",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S010",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S011",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S028",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S029",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S030",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S070",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S071",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S072",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S073",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S074",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S038",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S041",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S044",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S064"
+        ],
+        "source_candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C02",
+        "source_method_ids": [
+          "SUCCESSION-S01E06-BOARD-VOTE-001-METHOD-LEGACY-PICTURE-REVIEW",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-METHOD-STRUCTURAL-CONVERSION"
+        ],
+        "work_id": "SUCCESSION-S01E06"
+      },
+      "supporting_relations": [],
+      "unknown_dependencies": {
+        "audio": true,
+        "functional_roles": true,
+        "natural_scene_boundary": true,
+        "scene_problem": true
+      }
+    },
+    {
+      "applicability_evidence": {
+        "notes": "No natural-scene non-applicability boundary is authorized before human review.",
+        "source_refs": [],
+        "status": "UNKNOWN"
+      },
+      "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C03",
+      "canonical_rule_family": "RECEIVER-AND-REACTION-DISTRIBUTION",
+      "confidence": {
+        "execution": "UNKNOWN",
+        "transfer": "UNKNOWN",
+        "within_source": "UNKNOWN"
+      },
+      "counterexamples": [
+        {
+          "counterexample_id": null,
+          "evidence_id": null,
+          "notes": "The scene itself uses singles S014/S024/S065/S067, so shared framing is not sufficient by itself.",
+          "relation": "NARROWS",
+          "review_id": null,
+          "review_ref": null,
+          "review_status": "NOT_REVIEWED",
+          "same_trigger_status": "UNKNOWN",
+          "source_candidate_rule_id": null,
+          "source_refs": [],
+          "status": "BOUNDARY_ONLY",
+          "work_id": null
+        }
+      ],
+      "family_assignment_status": "ROOT_REVIEWED_TEXTUAL_CLUSTER",
+      "functional_roles": [],
+      "legacy_lineage": {
+        "ai_risk": "Group-frame performance and identity continuity HIGH.",
+        "applicability": "Votes, family councils, team mutiny, alliance formation where others watch the choice.",
+        "blocking": "Keep neighboring witnesses readable through foreground, profile, or same-row placement.",
+        "confidence": "LOW — one source with internal counterexample",
+        "counterexample": "The scene itself uses singles S014/S024/S065/S067, so shared framing is not sufficient by itself.",
+        "coverage": "Two/three-shot or row composition for pressure; single for decisive retreat/commitment.",
+        "directing_decision": "Alternate shared frames that expose social pressure with a clean single only when the member's state materially changes.",
+        "evidence_shots": "S014, S018, S024, S050, S052, S054, S057, S060, S062, S065, S067, S077",
+        "failure_mode": "Face becomes too small in a group frame, or compulsory close-ups instruct emotion rather than reveal change.",
+        "fallback": "Use one stable two-shot with pressured member and nearest witness, plus one short clean reaction at the decisive beat.",
+        "non_applicability": "Private decisions, secret ballots, or scenes where the member does not affect outcome.",
+        "pacing_edit": "Protect small posture changes; do not cut a reaction after every line.",
+        "sound": "UNKNOWN; dialogue and silence timing require audio audit.",
+        "trigger": "A pivotal coalition member is deciding under visible peer/authority pressure.",
+        "unknown": "Which exact line triggers each micro-reaction; subtle focus changes."
+      },
+      "operational_contract": {
+        "ai_risk": {
+          "camera": {
+            "level": "UNKNOWN",
+            "reasons": [
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+            ]
+          },
+          "continuity": {
+            "level": "UNKNOWN",
+            "reasons": [
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+            ]
+          },
+          "performance": {
+            "level": "UNKNOWN",
+            "reasons": [
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+            ]
+          }
+        },
+        "applicable_when": [
+          "No applicability condition is authorized before human review."
+        ],
+        "audio_logic": {
+          "claim_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C03-AUDIO",
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+          "source_refs": [],
+          "status": "UNKNOWN",
+          "value": "Pending human review; audio remains unknown and no audio instruction is authorized."
+        },
+        "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+        "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+        "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+        "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+        "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+        "failure_modes": [
+          "Applying this migrated lineage row as an operational rule before human review."
+        ],
+        "fallback": {
+          "camera": null,
+          "continuity": null,
+          "performance": null,
+          "project_original_only": true
+        },
+        "not_applicable_when": [
+          "No non-applicability boundary is authorized before human review."
+        ],
+        "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+        "required_story_facts": [],
+        "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration."
+      },
+      "promotion": {
+        "human_director_review": {
+          "review_id": null,
+          "source_ref": null,
+          "status": "NOT_APPROVED"
+        },
+        "original_forward_test_count": 0,
+        "original_forward_tests": [],
+        "reasons": [
+          "Canonical scene problem remains UNKNOWN.",
+          "No evidence-backed functional role is available.",
+          "Within-source, transfer and execution confidence remain UNKNOWN.",
+          "No unrelated same-trigger verified counterexample is registered."
+        ],
+        "status": "BLOCKED_BY_UNKNOWN",
+        "unknown_dependency_present": true,
+        "verified_same_trigger_counterexample_count": 0,
+        "verified_support_work_count": 1
+      },
+      "relation_to_family": "NARROWS",
+      "rights_boundary": {
+        "evidence_lineage_only": true,
+        "runtime_authorized": false,
+        "surface_copy_allowed": false
+      },
+      "scene_problem": {
+        "lineage_label": "GROUP_POWER_CHANGE",
+        "primary": "LEGACY_SCENE_PROBLEM",
+        "secondary": [],
+        "source_refs": [],
+        "status": "UNKNOWN"
+      },
+      "schema_version": "candidate-director-rule/0.1",
+      "source": {
+        "evidence_id": "SUCCESSION-S01E06-BOARD-VOTE-001",
+        "evidence_shot_ids": [
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S014",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S018",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S024",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S050",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S052",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S054",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S057",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S060",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S062",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S065",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S067",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S077"
+        ],
+        "source_candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C03",
+        "source_method_ids": [
+          "SUCCESSION-S01E06-BOARD-VOTE-001-METHOD-LEGACY-PICTURE-REVIEW",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-METHOD-STRUCTURAL-CONVERSION"
+        ],
+        "work_id": "SUCCESSION-S01E06"
+      },
+      "supporting_relations": [],
+      "unknown_dependencies": {
+        "audio": true,
+        "functional_roles": true,
+        "natural_scene_boundary": true,
+        "scene_problem": true
+      }
+    },
+    {
+      "applicability_evidence": {
+        "notes": "No natural-scene non-applicability boundary is authorized before human review.",
+        "source_refs": [],
+        "status": "UNKNOWN"
+      },
+      "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C04",
+      "canonical_rule_family": "THRESHOLD-AND-ROUTE-CONTINUITY",
+      "confidence": {
+        "execution": "UNKNOWN",
+        "transfer": "UNKNOWN",
+        "within_source": "UNKNOWN"
+      },
+      "counterexamples": [
+        {
+          "counterexample_id": null,
+          "evidence_id": null,
+          "notes": "Some consequences are delivered through reaction/collection rather than showing every person exit (S085/S088).",
+          "relation": "NARROWS",
+          "review_id": null,
+          "review_ref": null,
+          "review_status": "NOT_REVIEWED",
+          "same_trigger_status": "UNKNOWN",
+          "source_candidate_rule_id": null,
+          "source_refs": [],
+          "status": "BOUNDARY_ONLY",
+          "work_id": null
+        }
+      ],
+      "family_assignment_status": "ROOT_REVIEWED_TEXTUAL_CLUSTER",
+      "functional_roles": [],
+      "legacy_lineage": {
+        "ai_risk": "Multi-character entrances/exits and threshold continuity HIGH.",
+        "applicability": "Corporate removal, expulsion, arrest, tribunal, team ejection, controlled breakup with real authority.",
+        "blocking": "Define who stays seated, who stands, who crosses, and who controls the doorway.",
+        "confidence": "LOW — one source",
+        "counterexample": "Some consequences are delivered through reaction/collection rather than showing every person exit (S085/S088).",
+        "coverage": "Command single, objective movement wide, losing-side aftermath.",
+        "directing_decision": "After the decision, translate verbal power into a threshold, exit, incoming enforcement body, or changed seating/standing relation.",
+        "evidence_shots": "S075, S084, S085, S086, S087, S088",
+        "failure_mode": "Sudden security arrival becomes melodramatic or geographically impossible; many moving bodies overload continuity.",
+        "fallback": "Split into locked command close, separate fixed doorway exit, fixed wide of staff arrival, and one losing-side reaction.",
+        "non_applicability": "Symbolic disagreements, reversible votes, or scenes where enforcement is legally/physically impossible.",
+        "pacing_edit": "Do not prolong enforcement after the new hierarchy is readable; end on consequence rather than redundant victory.",
+        "sound": "UNKNOWN here; do not assume score or silence.",
+        "trigger": "A formal loss of status is immediately enforceable in physical space.",
+        "unknown": "Exact off-screen order, staff entrance cue, and whether sound precedes S086."
+      },
+      "operational_contract": {
+        "ai_risk": {
+          "camera": {
+            "level": "UNKNOWN",
+            "reasons": [
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+            ]
+          },
+          "continuity": {
+            "level": "UNKNOWN",
+            "reasons": [
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+            ]
+          },
+          "performance": {
+            "level": "UNKNOWN",
+            "reasons": [
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+            ]
+          }
+        },
+        "applicable_when": [
+          "No applicability condition is authorized before human review."
+        ],
+        "audio_logic": {
+          "claim_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C04-AUDIO",
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+          "source_refs": [],
+          "status": "UNKNOWN",
+          "value": "Pending human review; audio remains unknown and no audio instruction is authorized."
+        },
+        "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+        "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+        "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+        "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+        "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+        "failure_modes": [
+          "Applying this migrated lineage row as an operational rule before human review."
+        ],
+        "fallback": {
+          "camera": null,
+          "continuity": null,
+          "performance": null,
+          "project_original_only": true
+        },
+        "not_applicable_when": [
+          "No non-applicability boundary is authorized before human review."
+        ],
+        "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+        "required_story_facts": [],
+        "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration."
+      },
+      "promotion": {
+        "human_director_review": {
+          "review_id": null,
+          "source_ref": null,
+          "status": "NOT_APPROVED"
+        },
+        "original_forward_test_count": 0,
+        "original_forward_tests": [],
+        "reasons": [
+          "Canonical scene problem remains UNKNOWN.",
+          "No evidence-backed functional role is available.",
+          "Within-source, transfer and execution confidence remain UNKNOWN.",
+          "No unrelated same-trigger verified counterexample is registered."
+        ],
+        "status": "BLOCKED_BY_UNKNOWN",
+        "unknown_dependency_present": true,
+        "verified_same_trigger_counterexample_count": 0,
+        "verified_support_work_count": 1
+      },
+      "relation_to_family": "NARROWS",
+      "rights_boundary": {
+        "evidence_lineage_only": true,
+        "runtime_authorized": false,
+        "surface_copy_allowed": false
+      },
+      "scene_problem": {
+        "lineage_label": "GROUP_POWER_CHANGE",
+        "primary": "LEGACY_SCENE_PROBLEM",
+        "secondary": [],
+        "source_refs": [],
+        "status": "UNKNOWN"
+      },
+      "schema_version": "candidate-director-rule/0.1",
+      "source": {
+        "evidence_id": "SUCCESSION-S01E06-BOARD-VOTE-001",
+        "evidence_shot_ids": [
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S075",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S084",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S085",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S086",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S087",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S088"
+        ],
+        "source_candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C04",
+        "source_method_ids": [
+          "SUCCESSION-S01E06-BOARD-VOTE-001-METHOD-LEGACY-PICTURE-REVIEW",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-METHOD-STRUCTURAL-CONVERSION"
+        ],
+        "work_id": "SUCCESSION-S01E06"
+      },
+      "supporting_relations": [],
+      "unknown_dependencies": {
+        "audio": true,
+        "functional_roles": true,
+        "natural_scene_boundary": true,
+        "scene_problem": true
+      }
+    },
+    {
+      "applicability_evidence": {
+        "notes": "No natural-scene non-applicability boundary is authorized before human review.",
+        "source_refs": [],
+        "status": "UNKNOWN"
+      },
       "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C01-REGISTER-PUBLIC-OBJECT-CONTEST-GEOMETRY",
       "canonical_rule_family": "SPATIAL-REGISTRATION-AND-RESET",
       "confidence": {
@@ -21000,12 +21653,14 @@
       "member_candidate_ids": [
         "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C02-GROUP-PARALLEL-THREADS-BY-VISIBLE-STATE-CHANGE",
         "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C02",
-        "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C02"
+        "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C02",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C02"
       ],
       "work_ids": [
         "A-QUIET-PLACE-2018",
         "ANDOR-S01E10",
-        "BODYGUARD-S01E01"
+        "BODYGUARD-S01E01",
+        "SUCCESSION-S01E06"
       ]
     },
     {
@@ -21099,6 +21754,8 @@
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-SEATED-ANCHOR-THEN-SELECTIVE-RECEIPT-004",
         "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C02-DISTRIBUTE-SCREEN-OWNERSHIP-WHEN-BODIES-DIVERGE",
         "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C02-MULTI-WINDOW-DISTRIBUTED-THREAT-PUZZLE",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C01",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C03",
         "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C01-REGISTER-TRIGGER-OBJECT-BEFORE-ATTENTION-CASCADE"
       ],
       "work_ids": [
@@ -21109,6 +21766,7 @@
         "HOUSE-OF-THE-DRAGON-S01E08",
         "KNIVES-OUT-2019",
         "SICARIO-2015",
+        "SUCCESSION-S01E06",
         "THE-BEAR-S02E07",
         "THE-DEVIL-WEARS-PRADA-2006"
       ]
@@ -21240,6 +21898,7 @@
         "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
         "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS",
         "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C03-READINESS-TO-DEPLOYMENT-STATE-LEDGER",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C04",
         "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE",
         "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C01",
         "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C04",
@@ -21257,6 +21916,7 @@
         "KNIVES-OUT-2019",
         "MARRIAGE-STORY-2019",
         "SICARIO-2015",
+        "SUCCESSION-S01E06",
         "THE-LAST-OF-US-S01E06",
         "THE-SOCIAL-NETWORK-2010",
         "TRUE-DETECTIVE-S01E04",
@@ -21271,7 +21931,7 @@
     "surface_copy_allowed": false
   },
   "schema_version": "candidate-rule-index/0.1",
-  "source_candidate_count": 120,
-  "source_scene_count": 30,
+  "source_candidate_count": 124,
+  "source_scene_count": 31,
   "status": "EVIDENCE_LINEAGE_ONLY"
 }

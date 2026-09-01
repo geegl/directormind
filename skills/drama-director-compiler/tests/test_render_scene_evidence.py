@@ -37,8 +37,8 @@ class SceneEvidenceRendererTests(unittest.TestCase):
         cls.source = cls.sources[0]
         cls.evidence = load_evidence(cls.source)
 
-    def test_closed_corpus_has_thirty_canonical_sources(self) -> None:
-        self.assertEqual(len(self.sources), 30)
+    def test_current_corpus_has_thirty_one_canonical_sources(self) -> None:
+        self.assertEqual(len(self.sources), 31)
 
     def test_render_is_deterministic_and_round_trips_displayed_facts(self) -> None:
         first = render_evidence(self.evidence)
@@ -84,7 +84,7 @@ class SceneEvidenceRendererTests(unittest.TestCase):
             with contextlib.redirect_stdout(io.StringIO()):
                 self.assertEqual(main(["--output-root", str(output_root)]), 0)
             rendered = sorted(output_root.rglob(f"*{GENERATED_SUFFIX}"))
-            self.assertEqual(len(rendered), 30)
+            self.assertEqual(len(rendered), 31)
             with contextlib.redirect_stdout(io.StringIO()):
                 self.assertEqual(
                     main(["--output-root", str(output_root), "--check"]),

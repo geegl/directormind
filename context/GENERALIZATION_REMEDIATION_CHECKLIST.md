@@ -118,17 +118,17 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| D1 | VERIFIED_DONE | Add functional role labels alongside appearance aliases; roles require scene facts or text anchors and otherwise remain UNKNOWN. | Corpus-wide audit finds no evidence-backed role label; all 2,255 empty role-label arrays and 120 empty candidate-role arrays remain explicit non-claims. Validator rejects unsupported, fake-ref or hardened UNKNOWN roles; final independent Phase 2 review PASS. |
-| D2 | VERIFIED_DONE | Use one canonical `scene_problem` primary enum and at most two secondary values; do not create work-specific synonyms. | Candidate schema reuses one enum; all 30 current classifications remain canonical `LEGACY_SCENE_PROBLEM / UNKNOWN`, with no secondary synonym or proving source ref; final independent Phase 2 review PASS. |
+| D1 | VERIFIED_DONE | Add functional role labels alongside appearance aliases; roles require scene facts or text anchors and otherwise remain UNKNOWN. | Corpus-wide audit finds no evidence-backed role label; all 2,343 empty role-label arrays and 124 empty candidate-role arrays remain explicit non-claims. Validator rejects unsupported, fake-ref or hardened UNKNOWN roles; Phase 2 baseline and Phase 5 migration checks pass. |
+| D2 | VERIFIED_DONE | Use one canonical `scene_problem` primary enum and at most two secondary values; do not create work-specific synonyms. | Candidate schema reuses one enum; all 31 current classifications remain canonical `LEGACY_SCENE_PROBLEM / UNKNOWN`, with no secondary synonym or proving source ref. |
 
 ## E. Candidate-rule normalization
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| E1 | VERIFIED_DONE | Add `candidate-director-rule.schema.json` with the complete required rule contract. | Strict candidate schema is applied to all 120 instances; nested audio/risk/fallback, support, applicability, counterexample, forward-test and human-review records validate; final independent Phase 2 review PASS. |
-| E2 | VERIFIED_DONE | Split `within_source_confidence`, `transfer_confidence`, and `execution_confidence`. | All 120 normalized candidates contain exactly the three confidence axes; every current value remains `UNKNOWN`; legacy scalar text appears only inside preserved lineage; final independent Phase 2 review PASS. |
-| E3 | VERIFIED_DONE | Build `research/grammar/candidate_rule_index.json`, group synonyms into canonical families, preserve lineage, and label SUPPORTS/NARROWS/CONTRADICTS/COUNTEREXAMPLE/DUPLICATE. | Deterministic builder resolves all 120 unique source IDs exactly once into 16 families and preserves every legacy field; two candidate-by-candidate read-only passes accepted 80 assignments and corrected 40 keyword collisions; family assignment is explicitly not promotion evidence; final independent Phase 2 review PASS. |
-| E4 | VERIFIED_DONE | Build the cross-work support matrix in JSON and Markdown. | Deterministic JSON and generated Markdown match across 16 families and 120 candidates; final independent Phase 2 review PASS. |
+| E1 | VERIFIED_DONE | Add `candidate-director-rule.schema.json` with the complete required rule contract. | Strict candidate schema is applied to all 124 instances; nested audio/risk/fallback, support, applicability, counterexample, forward-test and human-review records validate. |
+| E2 | VERIFIED_DONE | Split `within_source_confidence`, `transfer_confidence`, and `execution_confidence`. | All 124 normalized candidates contain exactly the three confidence axes; every current value remains `UNKNOWN`; legacy scalar text appears only inside preserved lineage. |
+| E3 | VERIFIED_DONE | Build `research/grammar/candidate_rule_index.json`, group synonyms into canonical families, preserve lineage, and label SUPPORTS/NARROWS/CONTRADICTS/COUNTEREXAMPLE/DUPLICATE. | Deterministic builder resolves all 124 unique source IDs exactly once into 16 families and preserves every legacy field; the original 120 assignments remain unchanged and the four *Succession* assignments are explicit reviewed overrides; family assignment is not promotion evidence. |
+| E4 | VERIFIED_DONE | Build the cross-work support matrix in JSON and Markdown. | Deterministic JSON and generated Markdown match across 16 families and 124 candidates; all relations remain non-promotional. |
 | E5 | VERIFIED_DONE | Require real same-trigger contrary evidence before promotion; `counterexample UNKNOWN` cannot support promotion. | Validator recounts only cited same-family, unrelated-work, `VERIFIED_SAME_TRIGGER` records backed by a structured named review; declared counts and the hypothetical Martian boundary cannot self-promote; current verified count is zero; final independent Phase 2 review PASS. |
 
 ## F. Promotion discipline
@@ -139,7 +139,7 @@ Remaining validation boundary: these checks do not replay source media, directly
 | F2 | VERIFIED_DONE | Keep complete one-work rules at SINGLE_WORK_CANDIDATE and outside runtime defaults. | Negative regression proves a one-work candidate cannot set runtime authorization; final independent Phase 2 review PASS. |
 | F3 | VERIFIED_DONE | CROSS_WORK_SUPPORTED requires two unrelated works, same trigger, a real contrary/boundary case, and no hidden key UNKNOWN. | Family work count is never accepted as support. Validator derives support count only from cited same-family records with an exact structured review, recounts contrary cases, derives four UNKNOWN axes and rejects forged IDs/refs/counts/path traversal; final independent Phase 2 review PASS. |
 | F4 | VERIFIED_DONE | GENERAL_DEFAULT requires three unrelated works, same-trigger counterexample, two original forward tests, and human director approval. | Counts are recomputed from distinct confined packages and exact manifests; approval requires a confined exact JSON record; traversal, type confusion, token and ID-reuse attacks fail; final independent Phase 2 review PASS. |
-| F5 | VERIFIED_DONE | Block rules dependent on UNKNOWN audio, role function, or natural-scene boundary. | Explicit derived dependency axes and negative tests block audio, role and natural-boundary UNKNOWN; all 120 current candidates remain blocked and runtime-authorized count is zero; final independent Phase 2 review PASS. |
+| F5 | VERIFIED_DONE | Block rules dependent on UNKNOWN audio, role function, or natural-scene boundary. | Explicit derived dependency axes and negative tests block audio, role and natural-boundary UNKNOWN; all 124 current candidates remain blocked and runtime-authorized count is zero. |
 
 ## G. General Director Grammar v0.2
 
@@ -180,9 +180,9 @@ Remaining validation boundary: these checks do not replay source media, directly
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
 | K1 | VERIFIED_DONE | Do not merge PR #1 unchanged. | Current task explicitly prohibits it; PR #1 remains separate. |
-| K2 | TODO | Cleanly migrate Succession: remove media hashes and hash-authorizing text, retain 88-shot evidence, add Scene JSON, candidate index, and support matrix entries. | Validator and forbidden-hash scan pass. |
-| K3 | TODO | Resolve `SCENE_PROBLEM_MAP.md` conflicts and keep only the current route. | Rebase/conflict review passes. |
-| K4 | TODO | Close PR #1 only after current-branch integration succeeds. | Current branch contains validated evidence; PR #1 is closed. |
+| K2 | VERIFIED_DONE | Cleanly migrate Succession: exclude prohibited media-fingerprint material and authorizing text, retain 88-shot evidence, add Scene JSON, candidate index, and support matrix entries. | 31-scene converter/renderer checks pass; Scene validation is 31/31 with 0 errors; candidate validation is 124/16 with 0 authorized; original 30 evidence files have no diff; fresh Phase 5 independent review PASS. |
+| K3 | VERIFIED_DONE | Resolve `SCENE_PROBLEM_MAP.md` conflicts and keep only the current route. | Current authority header is preserved; only the public-revelation and group-power catalog rows receive bounded picture/UNKNOWN updates; the old map was not merged; fresh Phase 5 independent review PASS. |
+| K4 | BLOCKED | Close PR #1 only after current-branch integration succeeds. | Local integration is ready, but closing the external PR requires the task card's separate explicit user confirmation. |
 
 ## L. CI and final validation
 
@@ -197,7 +197,7 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| M1 | VERIFIED_DONE | Deliver 30+ Scene Evidence JSON files. | Closed-corpus requirement is exactly 30 current-local JSON files; deterministic count validation passes. |
+| M1 | VERIFIED_DONE | Deliver 30+ Scene Evidence JSON files. | Current closed-corpus result is 31 JSON files after the in-scope *Succession* migration; deterministic count validation passes. |
 | M2 | VERIFIED_DONE | Deliver Scene Evidence schema, validator, and renderer. | Phase 1 tests, deterministic reports and independent review pass. |
 | M3 | VERIFIED_DONE | Deliver Candidate Rule schema/index and cross-work matrix JSON/Markdown. | Phase 2 rule/matrix validation and final independent review pass. |
 | M4 | VERIFIED_DONE | Deliver Director Grammar v0.2 and updated Skill routing/conflict logic/tests. | Grammar/routing schemas, validators, eight cases, IR integration tests and Phase 3 independent review pass. |
@@ -206,13 +206,13 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 ## Current blockers and known defects
 
-- The 30 JSON units are deterministic machine-readable conversions, but legacy candidate semantics remain non-operational lineage pending human review.
+- The 31 JSON units are deterministic machine-readable conversions, but legacy candidate semantics remain non-operational lineage pending human review.
 - Explicit frame/PTS and legacy fallback gaps remain visible; converter warnings prohibit treating provisional values as source-proven facts.
 - The known 13 absent legacy artifacts are closed as explicit absence records; broader historical claims outside this closed register were not re-proved.
 - Direct semantic audio audition is absent; signal measurement is not semantic sound evidence.
 - PR #1 cannot be merged unchanged because it contains prohibited media-hash material and older evidence semantics.
-- The runtime grammar is active but correctly contains zero evidence rules because none of the 120 candidates passes the promotion gates; all eight original packages therefore prove the no-ready/no-applicable branch, while a real positive selection remains unproved until evidence becomes eligible.
+- The runtime grammar is active but correctly contains zero evidence rules because none of the 124 candidates passes the promotion gates; all eight original packages therefore prove the no-ready/no-applicable branch, while a real positive selection remains unproved until evidence becomes eligible.
 
 ## Current next action
 
-Integrate the existing 88-shot *Succession* evidence through the current Scene Evidence, candidate-index and support-matrix contracts without merging or closing the older PR. Do not push, close a PR, merge, deploy, publish, or delete media.
+Seal Phase 5 in an isolated local commit, then complete Phase 6 local automation and final validation. Do not push, close a PR, merge, deploy, publish, or delete media.

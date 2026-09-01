@@ -4,12 +4,12 @@
     "Source media and semantic audio were not re-reviewed.",
     "UNKNOWN-dependent candidates remain blocked."
   ],
-  "candidate_count": 120,
+  "candidate_count": 124,
   "error_count": 0,
   "family_count": 16,
   "issues": [],
   "promotion_status_counts": {
-    "BLOCKED_BY_UNKNOWN": 120
+    "BLOCKED_BY_UNKNOWN": 124
   },
   "runtime_authorized_count": 0,
   "schema_version": "candidate-rule-validation/0.1",

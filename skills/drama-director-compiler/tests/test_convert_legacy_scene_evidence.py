@@ -53,15 +53,48 @@ LEGACY_FIELDS = {
     "confidence": "confidence",
 }
 
+FROZEN_ORIGINAL_ORDINALS = {
+    "ANDOR_S01E10_SELECTED_ENVELOPE_VISUAL_EVIDENCE_V0.1": 1,
+    "APOLLO_13_CONSTRAINED_MATERIAL_HANDOFF_EVIDENCE_V0.1": 5,
+    "A_QUIET_PLACE_2018_PARALLEL_BODY_STATE_RADIAL_LIGHT_EVIDENCE_V0.1": 9,
+    "BETTER_CALL_SAUL_S03E05_PUBLIC_PROOF_EVIDENCE_V0.1": 13,
+    "BODYGUARD_S01E01_SELECTED_SEQUENCE_VISUAL_EVIDENCE_V0.1": 17,
+    "BRIDGERTON_S02E05_CONTAINED_PROXIMITY_EVIDENCE_V0.1": 21,
+    "BROOKLYN_NINE_NINE_S05E14_THE_BOX_VISUAL_EVIDENCE_V0.1": 25,
+    "CHERNOBYL_S01E05_HEARING_RECONSTRUCTION_VISUAL_EVIDENCE_V0.1": 29,
+    "CHILDREN_OF_MEN_2006_MOVING_CAR_EXTERIOR_DISRUPTION_CONTINUITY_EVIDENCE_V0.1": 33,
+    "CITIZEN_KANE_BREAKFAST_MONTAGE_EVIDENCE_V0.1": 37,
+    "GET_OUT_2017_HYPNOSIS_SUBJECTIVE_SPACE_EVIDENCE_V0.1": 41,
+    "HOUSE_OF_THE_DRAGON_S01E08_THRONE_ROOM_EVIDENCE_V0.1": 45,
+    "KNIVES_OUT_2019_WILL_READING_EVIDENCE_V0.1": 49,
+    "MARRIAGE_STORY_2019_APARTMENT_SEQUENCE_EVIDENCE_V0.1": 53,
+    "MOONLIGHT_2016_TWO_APPEARANCE_MULTI_ZONE_DISTANCE_OBJECT_STATE_EDITORIAL_SEQUENCE_EVIDENCE_V0.1": 57,
+    "MR_ROBOT_S04E07_ACT_FOUR_VISUAL_EVIDENCE_V0.1": 61,
+    "NOBODY_2021_BUS_FIGHT_EVIDENCE_V0.1": 65,
+    "SICARIO_BORDER_CHECKPOINT_EVIDENCE_V0.1": 69,
+    "SOUND_OF_METAL_SIGNAL_STATE_EDITORIAL_ENVELOPE_EVIDENCE_V0.1": 73,
+    "TED_LASSO_S01E08_DARTS_REVERSAL_EVIDENCE_V0.1": 77,
+    "THE_BEAR_S01E07_REVIEW_EVIDENCE_V0.1": 81,
+    "THE_BEAR_S02E07_TASK_CLOSED_LOOP_EVIDENCE_V0.1": 85,
+    "THE_DEVIL_WEARS_PRADA_2006_CERULEAN_CORRECTION_EVIDENCE_V0.1": 89,
+    "THE_HAUNTING_OF_HILL_HOUSE_S01E06_ENSEMBLE_CONTINUOUS_REFRAMING_VISUAL_EVIDENCE_V0.1": 93,
+    "THE_LAST_OF_US_S01E06_BEDROOM_VISUAL_EVIDENCE_V0.1": 97,
+    "THE_MARTIAN_2015_MULTI_SPACE_OBJECT_STATE_EDITORIAL_SEQUENCE_VISUAL_EVIDENCE_V0.1": 101,
+    "THE_SOCIAL_NETWORK_2010_OPENING_EXCHANGE_EVIDENCE_V0.1": 105,
+    "THE_WIRE_S01E04_OLD_CASES_EVIDENCE_V0.1": 109,
+    "TRUE_DETECTIVE_S01E04_MULTI_ZONE_MOBILE_ROUTE_VISUAL_EVIDENCE_V0.1": 113,
+    "UNBELIEVABLE_S01E02_CONTAINED_TWO_PERSON_SEQUENCE_EVIDENCE_V0.1": 117,
+}
+
 
 class LegacySceneEvidenceConverterTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.sources = discover_sources()
 
-    def test_closed_register_has_exactly_thirty_sources(self) -> None:
-        self.assertEqual(len(SCENE_META), 30)
-        self.assertEqual(len(self.sources), 30)
+    def test_canonical_register_has_exactly_thirty_one_sources(self) -> None:
+        self.assertEqual(len(SCENE_META), 31)
+        self.assertEqual(len(self.sources), 31)
         self.assertEqual({path.stem for path in self.sources}, set(SCENE_META))
 
     def test_legacy_tables_have_expected_corpus_counts(self) -> None:
@@ -71,8 +104,8 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
             shot_rows, rule_rows = parse_tables(source.read_text(encoding="utf-8"))
             shots += len(shot_rows)
             rules += len(rule_rows)
-        self.assertEqual(shots, 2255)
-        self.assertEqual(rules, 120)
+        self.assertEqual(shots, 2343)
+        self.assertEqual(rules, 124)
 
     def test_path_scrubbing_preserves_slash_phrases_and_scrubs_real_local_paths(self) -> None:
         ordinary = "person/object lens/focus head/torso/arm accepted F-1/F boundary"
@@ -138,17 +171,69 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
             self.assertEqual(evidence["rights_boundary"]["surface_inventory_status"], "HUMAN_REVIEWED_COMPLETE")
             self.assertIn("fixed source-neutral pending-review placeholder", evidence["rights_boundary"]["notes"])
 
-        self.assertEqual(len(candidate_ids), 120)
+        self.assertEqual(len(candidate_ids), 124)
         self.assertEqual(len(candidate_ids), len(set(candidate_ids)))
         self.assertEqual(len(operational_signatures), 1)
         self.assertEqual(
             set(canonical_families),
-            {f"UNCLUSTERED-CANDIDATE-{index:03d}" for index in range(1, 121)},
+            {f"UNCLUSTERED-CANDIDATE-{index:03d}" for index in range(1, 125)},
         )
-        self.assertEqual(len(set(canonical_families)), 120)
+        self.assertEqual(len(set(canonical_families)), 124)
         statuses = [item["audio_evidence_status"] for item in converted]
-        self.assertEqual(statuses.count("BLOCKED_DIRECT_AUDITION"), 29)
+        self.assertEqual(statuses.count("BLOCKED_DIRECT_AUDITION"), 30)
         self.assertEqual(statuses.count("SIGNAL_MEASURED_NOT_AUDITIONED"), 1)
+
+    def test_existing_ordinals_are_frozen_and_succession_uses_new_slots(self) -> None:
+        self.assertEqual(
+            {
+                stem: ordinal
+                for stem, ordinal in SCENE_RULE_ORDINAL_START.items()
+                if not stem.startswith("SUCCESSION_")
+            },
+            FROZEN_ORIGINAL_ORDINALS,
+        )
+        self.assertEqual(
+            SCENE_RULE_ORDINAL_START[
+                "UNBELIEVABLE_S01E02_CONTAINED_TWO_PERSON_SEQUENCE_EVIDENCE_V0.1"
+            ],
+            117,
+        )
+        self.assertEqual(
+            SCENE_RULE_ORDINAL_START[
+                "SUCCESSION_S01E06_BOARD_VOTE_EVIDENCE_V0.1"
+            ],
+            121,
+        )
+
+    def test_succession_migration_preserves_eighty_eight_units_and_four_lineage_rows(self) -> None:
+        source = next(path for path in self.sources if path.stem.startswith("SUCCESSION_"))
+        shot_rows, rule_rows = parse_tables(source.read_text(encoding="utf-8"))
+        evidence = build_evidence(source)
+        self.assertEqual(len(shot_rows), 88)
+        self.assertEqual(len(rule_rows), 4)
+        self.assertEqual(len(evidence["shots"]), 88)
+        self.assertEqual(len(evidence["candidate_rules"]), 4)
+        self.assertEqual([shot["order"] for shot in evidence["shots"]], list(range(1, 89)))
+        self.assertAlmostEqual(evidence["duration"], 329.542, places=3)
+        for previous, following in zip(evidence["shots"], evidence["shots"][1:]):
+            self.assertEqual(previous["end"]["seconds"], following["start"]["seconds"])
+        self.assertEqual(
+            [row["rule_id"] for row in rule_rows],
+            ["SUC-C01", "SUC-C02", "SUC-C03", "SUC-C04"],
+        )
+        self.assertEqual(evidence["scene_problem"]["status"], "UNKNOWN")
+        self.assertEqual(evidence["audio_evidence_status"], "BLOCKED_DIRECT_AUDITION")
+        self.assertTrue(
+            all(rule["promotion_status"] == "BLOCKED_BY_UNKNOWN" for rule in evidence["candidate_rules"])
+        )
+        self.assertTrue(
+            all(not shot["abstract_role_labels"] for shot in evidence["shots"])
+        )
+        source_text = source.read_text(encoding="utf-8")
+        self.assertNotRegex(
+            source_text,
+            r"(?i)(/Users/|/Volumes/|/private/|file://|https?://|\.(?:mp4|mkv|mov|wav|mp3)\b)",
+        )
 
     def test_legacy_rule_lineage_is_field_for_field_lossless(self) -> None:
         for source in self.sources:
@@ -235,10 +320,10 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
                         for axis in high_axes:
                             self.assertIn(shot["shot_id"], shot["fallback"][axis])
         self.assertEqual(explicit_fallback_rows, 1579)
-        self.assertEqual(missing_fallback_rows, 676)
-        self.assertEqual(high_risk_rows, 1836)
-        self.assertEqual(high_risk_missing_fallback, 513)
-        self.assertEqual(high_axis_counts, {"camera": 948, "performance": 1702, "continuity": 1583})
+        self.assertEqual(missing_fallback_rows, 764)
+        self.assertEqual(high_risk_rows, 1922)
+        self.assertEqual(high_risk_missing_fallback, 599)
+        self.assertEqual(high_axis_counts, {"camera": 1034, "performance": 1788, "continuity": 1669})
 
     def test_sound_of_metal_signal_is_auxiliary_not_semantic_audio(self) -> None:
         source = next(path for path in self.sources if path.stem.startswith("SOUND_OF_METAL"))

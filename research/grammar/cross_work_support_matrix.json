@@ -1,5 +1,5 @@
 {
-  "candidate_count": 120,
+  "candidate_count": 124,
   "candidate_index_path": "research/grammar/candidate_rule_index.json",
   "families": [
     {
@@ -273,11 +273,11 @@
       ],
       "description": "Intercut separate zones or threads only on meaningful visible state updates.",
       "family_id": "MULTI-THREAD-STATE-INTERCUT",
-      "grouped_work_count": 3,
-      "member_count": 3,
+      "grouped_work_count": 4,
+      "member_count": 4,
       "promotion_eligibility": "BLOCKED_BY_UNKNOWN",
       "relation_counts": {
-        "NARROWS": 3
+        "NARROWS": 4
       },
       "relations": [
         {
@@ -300,6 +300,13 @@
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "BODYGUARD-S01E01"
+        },
+        {
+          "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C02",
+          "relation": "NARROWS",
+          "scene_problem_status": "UNKNOWN",
+          "unknown_dependency_present": true,
+          "work_id": "SUCCESSION-S01E06"
         }
       ],
       "verified_support_relation_ids": [],
@@ -573,11 +580,11 @@
       ],
       "description": "Choose receiver, observer, witness or reaction coverage only when the receiving state matters.",
       "family_id": "RECEIVER-AND-REACTION-DISTRIBUTION",
-      "grouped_work_count": 9,
-      "member_count": 10,
+      "grouped_work_count": 10,
+      "member_count": 12,
       "promotion_eligibility": "BLOCKED_BY_UNKNOWN",
       "relation_counts": {
-        "NARROWS": 10
+        "NARROWS": 12
       },
       "relations": [
         {
@@ -642,6 +649,20 @@
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "SICARIO-2015"
+        },
+        {
+          "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C01",
+          "relation": "NARROWS",
+          "scene_problem_status": "UNKNOWN",
+          "unknown_dependency_present": true,
+          "work_id": "SUCCESSION-S01E06"
+        },
+        {
+          "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C03",
+          "relation": "NARROWS",
+          "scene_problem_status": "UNKNOWN",
+          "unknown_dependency_present": true,
+          "work_id": "SUCCESSION-S01E06"
         },
         {
           "candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C01-REGISTER-TRIGGER-OBJECT-BEFORE-ATTENTION-CASCADE",
@@ -1009,11 +1030,11 @@
       ],
       "description": "Carry people, direction and state through routes, apertures and thresholds.",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "grouped_work_count": 13,
-      "member_count": 18,
+      "grouped_work_count": 14,
+      "member_count": 19,
       "promotion_eligibility": "BLOCKED_BY_UNKNOWN",
       "relation_counts": {
-        "NARROWS": 18
+        "NARROWS": 19
       },
       "relations": [
         {
@@ -1099,6 +1120,13 @@
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "SICARIO-2015"
+        },
+        {
+          "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C04",
+          "relation": "NARROWS",
+          "scene_problem_status": "UNKNOWN",
+          "unknown_dependency_present": true,
+          "work_id": "SUCCESSION-S01E06"
         },
         {
           "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE",

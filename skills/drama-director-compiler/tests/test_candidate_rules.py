@@ -104,8 +104,8 @@ class CandidateRuleContractTests(unittest.TestCase):
             candidate["candidate_rule_id"]: candidate
             for candidate in self.index["candidates"]
         }
-        self.assertEqual(len(self.sources), 30)
-        self.assertEqual(len(source_rules), 120)
+        self.assertEqual(len(self.sources), 31)
+        self.assertEqual(len(source_rules), 124)
         self.assertEqual(set(candidates), set(source_rules))
         for candidate_id, candidate in candidates.items():
             evidence, rule = source_rules[candidate_id]
@@ -171,7 +171,7 @@ class CandidateRuleContractTests(unittest.TestCase):
     def test_repository_candidate_validation_passes(self) -> None:
         report = validate_repository(copy.deepcopy(self.index), copy.deepcopy(self.matrix))
         self.assertEqual(report["status"], "PASS")
-        self.assertEqual(report["candidate_count"], 120)
+        self.assertEqual(report["candidate_count"], 124)
         self.assertEqual(report["family_count"], 16)
         self.assertEqual(report["runtime_authorized_count"], 0)
         self.assertEqual(report["error_count"], 0)
@@ -519,6 +519,10 @@ class CandidateRuleContractTests(unittest.TestCase):
             "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C02-REPEATED-BRIDGE-AS-ELLIPSIS-PUNCTUATION": "STATE-CHANGE-EDITING",
             "BEAR-S01E07-REVIEW-001-BEAR-C03-SUBTRACTIVE-AFTERMATH": "AFTERMATH-AND-TERMINAL-STATE",
             "WIRE-S01E04-OLD-CASES-001-WIRE-C04-LONG-TAKE-WHEN-CONTINUITY-IS-THE-PROOF": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+            "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C01": "RECEIVER-AND-REACTION-DISTRIBUTION",
+            "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C02": "MULTI-THREAD-STATE-INTERCUT",
+            "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C03": "RECEIVER-AND-REACTION-DISTRIBUTION",
+            "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C04": "THRESHOLD-AND-ROUTE-CONTINUITY",
         }
         by_id = {
             candidate["candidate_rule_id"]: candidate
@@ -531,11 +535,11 @@ class CandidateRuleContractTests(unittest.TestCase):
                 "ROOT_REVIEWED_TEXTUAL_CLUSTER",
             )
 
-    def test_family_review_covers_every_candidate_and_exactly_forty_overrides(self) -> None:
+    def test_family_review_covers_every_candidate_and_all_reviewed_overrides(self) -> None:
         candidate_ids = {
             candidate["candidate_rule_id"] for candidate in self.index["candidates"]
         }
-        self.assertEqual(len(FAMILY_OVERRIDES), 40)
+        self.assertEqual(len(FAMILY_OVERRIDES), 44)
         self.assertLessEqual(set(FAMILY_OVERRIDES), candidate_ids)
         self.assertEqual(
             {

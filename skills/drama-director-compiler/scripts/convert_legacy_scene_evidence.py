@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convert the closed 30-file legacy Scene Evidence corpus to canonical JSON.
+"""Convert the closed canonical legacy Scene Evidence corpus to JSON.
 
 The converter is intentionally conservative.  It treats the checked-in Markdown
 tables as migration input, never as fresh observation: semantic audio remains
@@ -137,6 +137,10 @@ SCENE_META: dict[str, SceneMeta] = {
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1", "SOUND-OF-METAL",
         "CONTIGUOUS_EDITORIAL_SEQUENCE", "BOTH_INTERNAL_SELECTED", "SOUND_LED_CAUSALITY",
     ),
+    "SUCCESSION_S01E06_BOARD_VOTE_EVIDENCE_V0.1": SceneMeta(
+        "SUCCESSION-S01E06-BOARD-VOTE-001", "SUCCESSION-S01E06",
+        "PARALLEL_INTERCUT_SEQUENCE", "BOTH_INTERNAL_SELECTED", "GROUP_POWER_CHANGE",
+    ),
     "TED_LASSO_S01E08_DARTS_REVERSAL_EVIDENCE_V0.1": SceneMeta(
         "TED-LASSO-S01E08-DARTS-REVERSAL-001", "TED-LASSO-S01E08",
         "PARALLEL_INTERCUT_SEQUENCE", "BOTH_INTERNAL_SELECTED", "DIALOGUE_POWER_TRANSFER",
@@ -216,9 +220,41 @@ PENDING_OPERATIONAL_FIELDS = {
     "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
     "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
 }
+# These ordinals are part of the canonical migration output. Keep the original
+# 30 allocations frozen; later current-corpus migrations receive a new range so
+# inserting a source cannot rewrite an existing Scene Evidence file.
 SCENE_RULE_ORDINAL_START = {
-    stem: scene_index * 4 + 1
-    for scene_index, stem in enumerate(sorted(SCENE_META))
+    "ANDOR_S01E10_SELECTED_ENVELOPE_VISUAL_EVIDENCE_V0.1": 1,
+    "APOLLO_13_CONSTRAINED_MATERIAL_HANDOFF_EVIDENCE_V0.1": 5,
+    "A_QUIET_PLACE_2018_PARALLEL_BODY_STATE_RADIAL_LIGHT_EVIDENCE_V0.1": 9,
+    "BETTER_CALL_SAUL_S03E05_PUBLIC_PROOF_EVIDENCE_V0.1": 13,
+    "BODYGUARD_S01E01_SELECTED_SEQUENCE_VISUAL_EVIDENCE_V0.1": 17,
+    "BRIDGERTON_S02E05_CONTAINED_PROXIMITY_EVIDENCE_V0.1": 21,
+    "BROOKLYN_NINE_NINE_S05E14_THE_BOX_VISUAL_EVIDENCE_V0.1": 25,
+    "CHERNOBYL_S01E05_HEARING_RECONSTRUCTION_VISUAL_EVIDENCE_V0.1": 29,
+    "CHILDREN_OF_MEN_2006_MOVING_CAR_EXTERIOR_DISRUPTION_CONTINUITY_EVIDENCE_V0.1": 33,
+    "CITIZEN_KANE_BREAKFAST_MONTAGE_EVIDENCE_V0.1": 37,
+    "GET_OUT_2017_HYPNOSIS_SUBJECTIVE_SPACE_EVIDENCE_V0.1": 41,
+    "HOUSE_OF_THE_DRAGON_S01E08_THRONE_ROOM_EVIDENCE_V0.1": 45,
+    "KNIVES_OUT_2019_WILL_READING_EVIDENCE_V0.1": 49,
+    "MARRIAGE_STORY_2019_APARTMENT_SEQUENCE_EVIDENCE_V0.1": 53,
+    "MOONLIGHT_2016_TWO_APPEARANCE_MULTI_ZONE_DISTANCE_OBJECT_STATE_EDITORIAL_SEQUENCE_EVIDENCE_V0.1": 57,
+    "MR_ROBOT_S04E07_ACT_FOUR_VISUAL_EVIDENCE_V0.1": 61,
+    "NOBODY_2021_BUS_FIGHT_EVIDENCE_V0.1": 65,
+    "SICARIO_BORDER_CHECKPOINT_EVIDENCE_V0.1": 69,
+    "SOUND_OF_METAL_SIGNAL_STATE_EDITORIAL_ENVELOPE_EVIDENCE_V0.1": 73,
+    "TED_LASSO_S01E08_DARTS_REVERSAL_EVIDENCE_V0.1": 77,
+    "THE_BEAR_S01E07_REVIEW_EVIDENCE_V0.1": 81,
+    "THE_BEAR_S02E07_TASK_CLOSED_LOOP_EVIDENCE_V0.1": 85,
+    "THE_DEVIL_WEARS_PRADA_2006_CERULEAN_CORRECTION_EVIDENCE_V0.1": 89,
+    "THE_HAUNTING_OF_HILL_HOUSE_S01E06_ENSEMBLE_CONTINUOUS_REFRAMING_VISUAL_EVIDENCE_V0.1": 93,
+    "THE_LAST_OF_US_S01E06_BEDROOM_VISUAL_EVIDENCE_V0.1": 97,
+    "THE_MARTIAN_2015_MULTI_SPACE_OBJECT_STATE_EDITORIAL_SEQUENCE_VISUAL_EVIDENCE_V0.1": 101,
+    "THE_SOCIAL_NETWORK_2010_OPENING_EXCHANGE_EVIDENCE_V0.1": 105,
+    "THE_WIRE_S01E04_OLD_CASES_EVIDENCE_V0.1": 109,
+    "TRUE_DETECTIVE_S01E04_MULTI_ZONE_MOBILE_ROUTE_VISUAL_EVIDENCE_V0.1": 113,
+    "UNBELIEVABLE_S01E02_CONTAINED_TWO_PERSON_SEQUENCE_EVIDENCE_V0.1": 117,
+    "SUCCESSION_S01E06_BOARD_VOTE_EVIDENCE_V0.1": 121,
 }
 
 
@@ -749,7 +785,7 @@ def _audio_audit() -> dict[str, Any]:
 def build_evidence(source: Path) -> dict[str, Any]:
     meta = SCENE_META.get(source.stem)
     if meta is None:
-        raise ValueError(f"source is not in the closed 30-file register: {source.name}")
+        raise ValueError(f"source is not in the canonical migration register: {source.name}")
     markdown = source.read_text(encoding="utf-8")
     shot_rows, rule_rows = parse_tables(markdown)
     missing_high_risk_fallbacks = sum(
@@ -974,8 +1010,10 @@ def discover_sources() -> list[Path]:
     missing = sorted(set(SCENE_META) - {path.stem for path in sources})
     if missing:
         raise ValueError(f"closed-corpus source(s) missing: {', '.join(missing)}")
-    if len(sources) != 30:
-        raise ValueError(f"expected 30 closed-corpus sources, found {len(sources)}")
+    if len(sources) != len(SCENE_META):
+        raise ValueError(
+            f"expected {len(SCENE_META)} canonical migration sources, found {len(sources)}"
+        )
     return sources
 
 
@@ -1029,7 +1067,7 @@ def run(sources: Sequence[Path], output_root: Path | None, check: bool) -> tuple
 
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("sources", nargs="*", type=Path, help="legacy Markdown source(s); defaults to the closed 30-file corpus")
+    parser.add_argument("sources", nargs="*", type=Path, help="legacy Markdown source(s); defaults to the canonical migration corpus")
     parser.add_argument("--output-root", type=Path, help="mirror generated files under this directory")
     parser.add_argument("--check", action="store_true", help="fail when generated files are absent or stale; do not write")
     args = parser.parse_args(argv)

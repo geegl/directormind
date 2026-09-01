@@ -2,7 +2,7 @@
 
 Updated: 2026-09-01
 
-Status: `PHASE_4_PASS / INDEPENDENT_READ_ONLY_REVIEW_PASS`
+Status: `PHASE_5_PASS / INDEPENDENT_READ_ONLY_REVIEW_PASS`
 
 This register is the reproducible source for current numerical pass claims. A
 command is evidence only for the boundary named in its row. Structural checks do
@@ -11,21 +11,21 @@ sound, and do not constitute creative approval.
 
 | Claim | Reproduction command | Versioned evidence | Current result | Boundary |
 |---|---|---|---|---|
-| Closed conversion is deterministic | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/convert_legacy_scene_evidence.py --check` | `convert_legacy_scene_evidence.py` and its tests | PASS — 30 scenes, 2,255 Shot/edit units, 120 candidate identities | Proves generated JSON equals the conservative legacy conversion; does not replay media |
-| Generated review Markdown is deterministic and round-trippable | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/render_scene_evidence.py --check` | `render_scene_evidence.py`, 30 `*.scene-evidence.generated.md` files and renderer tests | PASS — 30/30 generated files | Proves generated review fields equal canonical JSON and re-render identically |
+| Canonical conversion is deterministic | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/convert_legacy_scene_evidence.py --check` | `convert_legacy_scene_evidence.py` and its tests | PASS — 31 scenes, 2,343 Shot/edit units, 124 candidate identities | Proves generated JSON equals the conservative migration input; does not replay media |
+| Generated review Markdown is deterministic and round-trippable | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/render_scene_evidence.py --check` | `render_scene_evidence.py`, 31 `*.scene-evidence.generated.md` files and renderer tests | PASS — 31/31 generated files | Proves generated review fields equal canonical JSON and re-render identically |
 | Legacy Markdown is not overwritten by rendering | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest skills/drama-director-compiler/tests/test_render_scene_evidence.py -v` | Renderer non-overwrite regression | PASS | Compares all existing Markdown before and after temporary rendering |
-| Current repository unit/CLI behavior | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s skills/drama-director-compiler/tests -v` | Seven versioned test modules | PASS — 144 tests | Covers the current repository test surface; not source replay or audience evaluation |
-| Candidate normalization is deterministic | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/build_candidate_rule_index.py --check` | Candidate index, support matrix JSON/Markdown, builder and family review | PASS — 120 candidates in 16 reviewed textual mechanism families; 40 keyword collisions corrected | Family membership is textual similarity only and cannot authorize runtime use |
-| Candidate promotion gates | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_candidate_rules.py --report research/validation/candidate-rule-validation.json` | Candidate schema, validator, report and adversarial tests | PASS — 120 blocked, 0 runtime-authorized, 0 errors | Work, counterexample and test counts are independently recomputed from cited records; no UNKNOWN fact is inferred |
+| Current repository unit/CLI behavior | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s skills/drama-director-compiler/tests -v` | Seven versioned test modules | PASS — 147 tests | Covers the current repository test surface; not source replay or audience evaluation |
+| Candidate normalization is deterministic | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/build_candidate_rule_index.py --check` | Candidate index, support matrix JSON/Markdown, builder and family reviews | PASS — 124 candidates in 16 reviewed textual mechanism families; 44 explicit reviewed overrides | Family membership is textual similarity only and cannot authorize runtime use |
+| Candidate promotion gates | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_candidate_rules.py --report research/validation/candidate-rule-validation.json` | Candidate schema, validator, report and adversarial tests | PASS — 124 blocked, 0 runtime-authorized, 0 errors | Work, counterexample and test counts are independently recomputed from cited records; no UNKNOWN fact is inferred |
 | Candidate schema syntax | `python3 -m json.tool skills/drama-director-compiler/references/candidate-director-rule.schema.json` | Candidate Director Rule schema | PASS | JSON syntax plus repository contract tests; third-party schema engine not required |
 | Runtime grammar eligibility and safety | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_director_grammar.py --report research/validation/director-grammar-validation.json` | Grammar v0.2, strict schema, validator and report | PASS — 5 project constraints, 6 safety constraints, 0 eligible/runtime evidence rules, 0 errors | Independently recounts candidate eligibility and blocks single-work, UNKNOWN, surface-copy and unauditioned-audio instructions |
 | Runtime routing cases | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_director_routing_cases.py --report research/validation/director-routing-validation.json` | Rights-safe input/result schemas, router, eight fixtures and report | PASS — 8/8 cases, 8 `NO_APPLICABLE_RULE`, 0 selected rules | Proves honest zero-rule behavior and routing gates; does not prove a real positive selection because no candidate is eligible |
 | Original forward-test build | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/build_forward_tests.py --check` | Eight packages under `examples/forward-tests/` and deterministic builder | PASS — 8/8 packages match generated sources | Proves artifact determinism; package validation remains a separate claim |
 | Original forward-test repository | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_forward_tests.py --check` | Index schema, live validator and `forward-test-validation.json` | PASS — 6 required problems, 8 packages, 0 eligible families, 0 selected, 8 pending, 0 errors, 31 warnings | Proves the no-ready/no-applicable route and complete IR binding; does not claim a positive rule selection or creative approval |
-| Canonical Scene Evidence structure | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_scene_evidence.py research/evidence --quiet` | Validator `scene-evidence-validator/0.1` and `scene-evidence-validation.json` | PASS_STRUCTURAL — 30 passed, 0 failed, 0 errors, 69 warnings | Warnings remain visible; no direct semantic-audio claim is added |
+| Canonical Scene Evidence structure | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_scene_evidence.py research/evidence --quiet` | Validator `scene-evidence-validator/0.1` and `scene-evidence-validation.json` | PASS_STRUCTURAL — 31 passed, 0 failed, 0 errors, 72 warnings | Warnings remain visible; no direct semantic-audio claim is added |
 | Scene Evidence schema syntax | `python3 -m json.tool skills/drama-director-compiler/references/scene-evidence.schema.json` | Scene Evidence schema | PASS | JSON syntax only |
 | Versioned validation report syntax | `python3 -m json.tool research/validation/scene-evidence-validation.json` | Structural validation report | PASS | JSON syntax only |
-| Current task/status authority contract | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest skills/drama-director-compiler/tests/test_phase1_state_contract.py -v` | Approved task card, compact STATE, catalog headers and checklist | PASS — 4 tests | Does not complete planned rule artifacts |
+| Current task/status authority contract | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest skills/drama-director-compiler/tests/test_phase1_state_contract.py -v` | Approved task card, compact STATE, catalog headers and checklist | PASS — 5 tests | Confirms current counts/catalog route and preserves external-action gates |
 | Whitespace | `git diff --check` | Current local change set | PASS | Tracked textual diff only |
 
 ## Independent Phase 1 review
@@ -55,6 +55,15 @@ unauditioned-audio instruction attacks, then reran the targeted and full suites.
 PASS. The reviewer read all eight original scripts and replayed false-positive,
 private-path, fact-drift, work-title, approval, audio-loss and JSON Unicode-escape
 attacks against the complete Grammar-to-IR package chain.
+
+## Phase 5 local migration
+
+`research/validation/PHASE_5_SUCCESSION_MIGRATION.md` records the additive
+88-unit migration, frozen original ordinal allocations, four explicit family
+assignments, current-route catalog updates and local checks.
+`research/validation/PHASE_5_INDEPENDENT_AUDIT.md` records the fresh non-writing
+PASS and independently reproduces the no-drift, UNKNOWN/audio/runtime, count,
+rights and external-action boundaries.
 
 ## Claims not yet authorized
 
