@@ -47,7 +47,7 @@ class PhaseOneStateContractTests(unittest.TestCase):
         card = (CONTEXT / "THIRD_PARTY_GENERALIZATION_AUDIT_TASK.md").read_text(
             encoding="utf-8"
         )
-        self.assertIn("Status: `ACTIVE / USER_APPROVED`", card)
+        self.assertIn("Status: `LOCAL_COMPLETE / EXTERNAL_ACTIONS_GATED`", card)
         self.assertIn("First push to PR #3 requires a new explicit user confirmation", card)
         self.assertIn("Closing PR #1 requires a separate explicit user confirmation", card)
         self.assertIn("A valid grammar may contain zero promoted evidence rules", card)
@@ -65,7 +65,7 @@ class PhaseOneStateContractTests(unittest.TestCase):
         self.assertEqual(len(rows), 57)
         self.assertEqual(
             Counter(status for _, status in rows),
-            Counter({"TODO": 5, "BLOCKED": 1, "VERIFIED_DONE": 51}),
+            Counter({"BLOCKED": 1, "VERIFIED_DONE": 56}),
         )
         self.assertNotIn(
             "Closed-corpus completion is independently reviewed and ready for one isolated local commit",

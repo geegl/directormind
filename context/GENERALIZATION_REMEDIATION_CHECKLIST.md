@@ -171,7 +171,7 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| J1 | VERIFIED_DONE | Reduce `context/STATE.md` to phase, counts, blockers, latest validation, next step, and authoritative links. | STATE is 65 lines with no per-work duplication; state-contract tests and independent review pass. |
+| J1 | VERIFIED_DONE | Reduce `context/STATE.md` to phase, counts, blockers, latest validation, next step, and authoritative links. | STATE remains below the tested 100-line compact-state limit with no per-work duplication; state-contract tests and independent review pass. |
 | J2 | VERIFIED_DONE | Declare the five intended authoritative locations and whether each is active or planned: Scene JSON, candidate index, support matrix, Grammar v0.2, and STATE. | STATE declares all five without pretending planned artifacts exist; state-contract test passes. |
 | J3 | VERIFIED_DONE | Make acquisition and coverage files material catalogs only, not simultaneous status/rule/completion authorities. | Five catalog boundary headers and responsibility tests pass; independent review confirms no competing authority claim. |
 
@@ -188,10 +188,10 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| L1 | TODO | Add minimal GitHub CI for Skill validation, Python compile, all schemas/evidence/rules/grammar/forward tests, broken refs, media/path/hash prohibitions, and whitespace. | Required check passes on PR #3. |
-| L2 | TODO | Write `FINAL_GENERALIZATION_VALIDATION.json` with every required count and zero errors/broken refs/forbidden media/hashes. | Report passes its own schema and independent audit. |
-| L3 | TODO | Run quick validation, units, all Scene Evidence, all Grammar, forward tests, whitespace, and GitHub CI. | Commands and results recorded. |
-| L4 | TODO | Add `INDEPENDENT_GENERALIZATION_AUDIT.md` with verdict, P0/P1, non-blockers, unverified items, and merge decision. | Independent read-only reviewer issues PASS. |
+| L1 | VERIFIED_DONE | Add minimal GitHub CI for Skill validation, Python compile, all schemas/evidence/rules/grammar/forward tests, broken refs, scoped public-artifact prohibitions and whitespace. | Read-only workflow calls the same stdlib-only local runner with read-only repository permission; corrected quick/full commands and narrow independent re-review pass. Remote CI remains honestly `NOT_RUN_NO_PUSH`. |
+| L2 | VERIFIED_DONE | Write `FINAL_GENERALIZATION_VALIDATION.json` with every required count and zero errors, broken refs, prohibited repository files or scoped current-artifact string issues. | Live-runner-backed report passes its strict schema, identifies the 30 immutable legacy Markdown files as excluded provenance, labels external actions as non-machine-verified declarations, and records 33/31/2,343/124/16, 157 tests and 103 warnings; independent re-review PASS. |
+| L3 | VERIFIED_DONE | Run quick validation, units, all Scene Evidence, all Grammar, forward tests and whitespace through the local CI-equivalent command. | Corrected quick runner passes 16 checks; corrected full runner passes 18 checks including 157 tests and exact comparison of all five versioned validator reports; independent re-review PASS. No remote CI run is claimed because no push is authorized. |
+| L4 | VERIFIED_DONE | Add `INDEPENDENT_GENERALIZATION_AUDIT.md` with verdict, P0/P1, non-blockers, unverified items, and merge decision. | The first verdict failed three evidence defects; after correction, the same non-writing reviewer reran and attacked the live-evidence path and issued `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. |
 
 ## M. Final delivery
 
@@ -202,7 +202,7 @@ Remaining validation boundary: these checks do not replay source media, directly
 | M3 | VERIFIED_DONE | Deliver Candidate Rule schema/index and cross-work matrix JSON/Markdown. | Phase 2 rule/matrix validation and final independent review pass. |
 | M4 | VERIFIED_DONE | Deliver Director Grammar v0.2 and updated Skill routing/conflict logic/tests. | Grammar/routing schemas, validators, eight cases, IR integration tests and Phase 3 independent review pass. |
 | M5 | VERIFIED_DONE | Deliver original forward-test packages. | Eight deterministic packages, six required problem tags, zero false positive selections, 31 preserved visual-binding warnings and Phase 4 independent review PASS. |
-| M6 | TODO | Deliver full validation, independent audit, reduced STATE, clean Succession integration, CI, and updated PR description. | Checklist contains no TODO/IN_PROGRESS/BLOCKED item; user decides whether to merge. |
+| M6 | VERIFIED_DONE | Deliver full validation, independent audit, reduced STATE, clean Succession integration, CI, and updated PR description. | All local rows are complete and independently audited; K4 remains explicitly blocked as a separate external user decision. |
 
 ## Current blockers and known defects
 
@@ -215,4 +215,4 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 ## Current next action
 
-Seal Phase 5 in an isolated local commit, then complete Phase 6 local automation and final validation. Do not push, close a PR, merge, deploy, publish, or delete media.
+Await explicit user direction on the separately gated push and old pull-request closure. Do not push, close a PR, merge, deploy, publish, or delete media automatically.

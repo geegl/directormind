@@ -2,7 +2,7 @@
 
 Updated: 2026-09-01
 
-Status: `ACTIVE / USER_APPROVED`
+Status: `LOCAL_COMPLETE / EXTERNAL_ACTIONS_GATED`
 
 ## Task name
 
@@ -107,32 +107,32 @@ Only one writer may own a mutable file at a time. Root is the sole accountable i
 
 ## Completion criteria
 
-- [ ] Existing users receive correct rule selection or `NO_APPLICABLE_RULE` for original scenes.
+- [x] Existing users receive correct rule selection or `NO_APPLICABLE_RULE` for original scenes; the current zero-eligible grammar truthfully returns `NO_APPLICABLE_RULE` for all eight original cases.
 - [x] The original 30 canonical JSON units remain unchanged; the existing *Succession* ledger adds exactly 88 Shot units and four blocked candidate identities for a deterministic 31 / 2,343 / 124 current total.
-- [ ] The renderer is deterministic, round-trippable and incapable of overwriting legacy Markdown.
+- [x] The renderer is deterministic, round-trippable and incapable of overwriting legacy Markdown.
 - [x] All 124 source candidate IDs resolve exactly once in the Candidate Rule Index.
-- [ ] Candidate schema, confidence dimensions, support relations, contrary evidence and promotion gates validate.
-- [ ] UNKNOWN audio, functional roles and natural-scene boundaries cannot leak into promoted rules.
-- [ ] Director Grammar v0.2 contains only eligible rules and no reference-work surface instructions.
-- [ ] Routing selects no more than two to four eligible rules and rejects merely similar or non-applicable rules.
-- [ ] Every promotion-ready family has original positive and non-applicable tests; no-ready-family and no-applicable-rule outcomes are also tested.
-- [ ] Unreviewed creative outputs remain `HUMAN_REVIEW_PENDING`.
+- [x] Candidate schema, confidence dimensions, support relations, contrary evidence and promotion gates validate.
+- [x] UNKNOWN audio, functional roles and natural-scene boundaries cannot leak into promoted rules.
+- [x] Director Grammar v0.2 contains only eligible rules and no reference-work surface instructions.
+- [x] Routing selects no more than two to four eligible rules and rejects merely similar or non-applicable rules.
+- [x] Every promotion-ready family has original positive and non-applicable tests; no-ready-family and no-applicable-rule outcomes are also tested.
+- [x] Unreviewed creative outputs remain `HUMAN_REVIEW_PENDING`.
 - [x] The original 30 legacy Markdown documents and original media remain unchanged; the migrated *Succession* input is a sanitized rights-safe ledger.
 - [x] *Succession* is integrated through the current contracts without merging the old PR.
-- [ ] Existing and new local tests pass; CI is defined but no push occurs without confirmation.
-- [ ] Final validation records zero contract errors and preserves all warnings.
-- [ ] A non-writing read-only agent issues the final technical verdict and lists unverified boundaries.
-- [ ] Final delivery includes changes, behavioral evidence, check results, remaining risks, external side effects, resource use and rollback.
+- [x] Existing and new local tests pass; CI is defined but no push occurs without confirmation.
+- [x] Final validation records zero contract errors and preserves all warnings.
+- [x] A non-writing read-only agent issues the final technical verdict and lists unverified boundaries.
+- [x] Final delivery package includes changes, behavioral evidence, check results, remaining risks, external side effects, resource use and rollback.
 
 ## Current status
 
 - Current accountable implementer: root agent, sole integrator. No other writer may edit the same mutable file concurrently.
-- Completed: first-party closed-corpus task and independently reviewed Phases 1 through 5; 51/57 requirements are `VERIFIED_DONE`.
-- Remaining: automated checks, final validation/audit/delivery, plus the separately gated external decision on old PR closure.
-- Current validation: 31 Scene Evidence JSON files; 2,343 Shot/edit units; 124 normalized but non-operational candidate lineages; 16 reviewed textual mechanism families; 147 tests pass; candidate and Scene validation have zero errors and zero runtime-authorized rules; Scene Evidence is 31/31 with 72 visible warnings.
+- Completed: all locally authorized work; 56/57 requirements are `VERIFIED_DONE`, including independently reviewed Phases 1–6.
+- Remaining: K4 stays `BLOCKED` only because old pull-request closure is a separately gated external user decision. Push and all other remote actions also remain unperformed and unauthorized.
+- Current validation: corrected quick runner 16/16, full runner 18/18, 157 tests, final live-evidence report PASS and narrow independent read-only re-review PASS.
 - Known boundaries: all current scene problems remain UNKNOWN; direct semantic audio is absent; no candidate is yet authorized as an executable cross-work rule.
 - Remote boundary: no push, PR closure or merge is authorized by this card.
-- Next single action: seal Phase 5 in an isolated local commit, then complete Phase 6 local automation and final validation without pushing or closing the older PR.
+- Next single action: await explicit user direction on optional remote actions; do not push or close the older PR automatically.
 
 ## Rollback
 

@@ -2,7 +2,7 @@
 
 Updated: 2026-09-01
 
-Status: `PHASE_5_PASS / INDEPENDENT_READ_ONLY_REVIEW_PASS`
+Status: `FINAL_LOCAL_PASS / INDEPENDENT_READ_ONLY_REVIEW_PASS`
 
 This register is the reproducible source for current numerical pass claims. A
 command is evidence only for the boundary named in its row. Structural checks do
@@ -14,7 +14,7 @@ sound, and do not constitute creative approval.
 | Canonical conversion is deterministic | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/convert_legacy_scene_evidence.py --check` | `convert_legacy_scene_evidence.py` and its tests | PASS — 31 scenes, 2,343 Shot/edit units, 124 candidate identities | Proves generated JSON equals the conservative migration input; does not replay media |
 | Generated review Markdown is deterministic and round-trippable | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/render_scene_evidence.py --check` | `render_scene_evidence.py`, 31 `*.scene-evidence.generated.md` files and renderer tests | PASS — 31/31 generated files | Proves generated review fields equal canonical JSON and re-render identically |
 | Legacy Markdown is not overwritten by rendering | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest skills/drama-director-compiler/tests/test_render_scene_evidence.py -v` | Renderer non-overwrite regression | PASS | Compares all existing Markdown before and after temporary rendering |
-| Current repository unit/CLI behavior | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s skills/drama-director-compiler/tests -v` | Seven versioned test modules | PASS — 147 tests | Covers the current repository test surface; not source replay or audience evaluation |
+| Current repository unit/CLI behavior | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s skills/drama-director-compiler/tests -v` | Eight versioned test modules | PASS — 157 tests | Covers the current repository test surface; not source replay or audience evaluation |
 | Candidate normalization is deterministic | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/build_candidate_rule_index.py --check` | Candidate index, support matrix JSON/Markdown, builder and family reviews | PASS — 124 candidates in 16 reviewed textual mechanism families; 44 explicit reviewed overrides | Family membership is textual similarity only and cannot authorize runtime use |
 | Candidate promotion gates | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_candidate_rules.py --report research/validation/candidate-rule-validation.json` | Candidate schema, validator, report and adversarial tests | PASS — 124 blocked, 0 runtime-authorized, 0 errors | Work, counterexample and test counts are independently recomputed from cited records; no UNKNOWN fact is inferred |
 | Candidate schema syntax | `python3 -m json.tool skills/drama-director-compiler/references/candidate-director-rule.schema.json` | Candidate Director Rule schema | PASS | JSON syntax plus repository contract tests; third-party schema engine not required |
@@ -26,7 +26,15 @@ sound, and do not constitute creative approval.
 | Scene Evidence schema syntax | `python3 -m json.tool skills/drama-director-compiler/references/scene-evidence.schema.json` | Scene Evidence schema | PASS | JSON syntax only |
 | Versioned validation report syntax | `python3 -m json.tool research/validation/scene-evidence-validation.json` | Structural validation report | PASS | JSON syntax only |
 | Current task/status authority contract | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest skills/drama-director-compiler/tests/test_phase1_state_contract.py -v` | Approved task card, compact STATE, catalog headers and checklist | PASS — 5 tests | Confirms current counts/catalog route and preserves external-action gates |
+| Repository boundary audit | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_repository_boundaries.py --quiet` | Boundary validator and automation tests | PASS — zero whole-repository file/syntax/link issues and zero current-machine/runtime scoped string issues | Original 30 immutable legacy Markdown ledgers are explicitly excluded provenance; no whole-repository zero-string claim is made |
+| Final validation report | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/run_repository_checks.py` | Strict final-report schema, live runner evidence and deterministic JSON | PASS_LOCAL — 33 dispositions, 31 scenes, 2,343 units, 124 candidates, 16 families, 157 tests, zero validation errors and 103 preserved warnings | A missing or failed prerequisite produces `FAIL_LOCAL`; external actions are non-machine-verified declarations; remote CI remains not run |
+| Complete local automation | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/run_repository_checks.py` | Local runner, all builders/validators, temporary report comparison, tests and final report | PASS — 18 checks | Local CI-equivalent execution; does not claim a GitHub-hosted run |
+| Minimal CI definition | `.github/workflows/directormind-contracts.yml` | Read-only workflow calling the complete local runner | PRESENT_LOCAL_ONLY | No push occurred, therefore remote CI is `NOT_RUN_NO_PUSH` |
 | Whitespace | `git diff --check` | Current local change set | PASS | Tracked textual diff only |
+
+## Final independent review
+
+The first final audit rejected three evidence defects. After correction, a non-writing reviewer reran the full 18-check command, confirmed 157 executed tests, independently reproduced the final counts and injected failure into each of the 17 live prerequisites. Every failure produced `FAIL_LOCAL`; missing live evidence also failed. The resulting narrow verdict is `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. Unverified media, audio, positive-selection, remote-CI, external-action and creative-effect boundaries remain explicit in `INDEPENDENT_GENERALIZATION_AUDIT.md`.
 
 ## Independent Phase 1 review
 
@@ -68,7 +76,7 @@ rights and external-action boundaries.
 ## Claims not yet authorized
 
 - No candidate is an executable cross-work rule; the active runtime grammar therefore contains zero evidence rules.
-- No real positive routing selection or CI pass is claimed; all current forward-test packages exercise the honest zero-eligible branch.
+- No real positive routing selection or remote CI pass is claimed; all current forward-test packages exercise the honest zero-eligible branch.
 - No source media, semantic audio, creative quality or audience effect has been
   revalidated by these commands.
 - No remote PR state has been changed by this phase.

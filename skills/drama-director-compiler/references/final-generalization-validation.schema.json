@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://directormind.local/schemas/final-generalization-validation.schema.json",
+  "title": "DirectorMind Final Generalization Validation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "status",
+    "counts",
+    "checks",
+    "verification_evidence",
+    "external_actions",
+    "unverified_boundaries",
+    "errors"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "final-generalization-validation/0.2"
+    },
+    "status": {
+      "enum": ["PASS_LOCAL", "FAIL_LOCAL"]
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_dispositions",
+        "canonical_scenes",
+        "shot_edit_units",
+        "candidate_identities",
+        "candidate_families",
+        "blocked_candidates",
+        "cross_work_supported_candidates",
+        "general_default_candidates",
+        "rejected_candidates",
+        "duplicate_candidate_ids",
+        "eligible_candidates",
+        "runtime_rules",
+        "routing_cases",
+        "routing_no_applicable_rule_cases",
+        "routing_selected_rules",
+        "forward_packages",
+        "required_scene_problems",
+        "promotion_ready_families",
+        "forward_selected_rules",
+        "human_review_pending_packages",
+        "scene_warnings",
+        "forward_warnings",
+        "validation_errors",
+        "validation_warnings",
+        "unit_tests",
+        "broken_references",
+        "prohibited_repository_files",
+        "scoped_public_string_issues",
+        "excluded_historical_legacy_markdown",
+        "invalid_json_files",
+        "invalid_python_files",
+        "whitespace_errors",
+        "symlink_escapes"
+      ],
+      "properties": {
+        "source_dispositions": {"const": 33},
+        "canonical_scenes": {"const": 31},
+        "shot_edit_units": {"const": 2343},
+        "candidate_identities": {"const": 124},
+        "candidate_families": {"const": 16},
+        "blocked_candidates": {"const": 124},
+        "cross_work_supported_candidates": {"const": 0},
+        "general_default_candidates": {"const": 0},
+        "rejected_candidates": {"const": 0},
+        "duplicate_candidate_ids": {"const": 0},
+        "eligible_candidates": {"const": 0},
+        "runtime_rules": {"const": 0},
+        "routing_cases": {"const": 8},
+        "routing_no_applicable_rule_cases": {"const": 8},
+        "routing_selected_rules": {"const": 0},
+        "forward_packages": {"const": 8},
+        "required_scene_problems": {"const": 6},
+        "promotion_ready_families": {"const": 0},
+        "forward_selected_rules": {"const": 0},
+        "human_review_pending_packages": {"const": 8},
+        "scene_warnings": {"const": 72},
+        "forward_warnings": {"const": 31},
+        "validation_errors": {"const": 0},
+        "validation_warnings": {"const": 103},
+        "unit_tests": {"const": 157},
+        "broken_references": {"const": 0},
+        "prohibited_repository_files": {"const": 0},
+        "scoped_public_string_issues": {"const": 0},
+        "excluded_historical_legacy_markdown": {"const": 30},
+        "invalid_json_files": {"const": 0},
+        "invalid_python_files": {"const": 0},
+        "whitespace_errors": {"const": 0},
+        "symlink_escapes": {"const": 0}
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "json_syntax",
+        "python_compile",
+        "converter_determinism",
+        "renderer_determinism",
+        "candidate_index_determinism",
+        "scene_validation",
+        "candidate_validation",
+        "grammar_validation",
+        "routing_validation",
+        "forward_build_determinism",
+        "forward_validation",
+        "unit_suite",
+        "repository_boundaries",
+        "whitespace",
+        "versioned_reports",
+        "ci_workflow",
+        "remote_ci"
+      ],
+      "properties": {
+        "json_syntax": {"enum": ["PASS", "FAIL"]},
+        "python_compile": {"enum": ["PASS", "FAIL"]},
+        "converter_determinism": {"enum": ["PASS", "FAIL"]},
+        "renderer_determinism": {"enum": ["PASS", "FAIL"]},
+        "candidate_index_determinism": {"enum": ["PASS", "FAIL"]},
+        "scene_validation": {"enum": ["PASS_STRUCTURAL", "FAIL"]},
+        "candidate_validation": {"enum": ["PASS", "FAIL"]},
+        "grammar_validation": {"enum": ["PASS", "FAIL"]},
+        "routing_validation": {"enum": ["PASS", "FAIL"]},
+        "forward_build_determinism": {"enum": ["PASS", "FAIL"]},
+        "forward_validation": {"enum": ["PASS", "FAIL"]},
+        "unit_suite": {"enum": ["PASS", "FAIL"]},
+        "repository_boundaries": {"enum": ["PASS", "FAIL"]},
+        "whitespace": {"enum": ["PASS", "FAIL"]},
+        "versioned_reports": {"enum": ["PASS", "FAIL"]},
+        "ci_workflow": {"enum": ["LOCAL_COMMAND_PASS_WORKFLOW_NOT_HOSTED", "LOCAL_COMMAND_FAIL_WORKFLOW_NOT_HOSTED"]},
+        "remote_ci": {"const": "NOT_RUN_NO_PUSH"}
+      }
+    },
+    "verification_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "local_check_results",
+        "public_string_scan",
+        "historical_legacy_markdown",
+        "external_actions"
+      ],
+      "properties": {
+        "local_check_results": {"enum": ["LIVE_RUNNER_RESULTS", "NOT_PROVIDED"]},
+        "public_string_scan": {"const": "CURRENT_MACHINE_AND_RUNTIME_ARTIFACTS_ONLY"},
+        "historical_legacy_markdown": {"const": "EXCLUDED_IMMUTABLE_PROVENANCE_CONVERTED_OUTPUTS_VALIDATED"},
+        "external_actions": {"const": "EXECUTOR_DECLARATION_NOT_MACHINE_VERIFIED"}
+      }
+    },
+    "external_actions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pushed",
+        "old_pull_request_closed",
+        "merged",
+        "deployed",
+        "published",
+        "media_deleted"
+      ],
+      "properties": {
+        "pushed": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "verification"],
+          "properties": {
+            "status": {"const": "DECLARED_NOT_PERFORMED"},
+            "verification": {"const": "NOT_MACHINE_VERIFIED"}
+          }
+        },
+        "old_pull_request_closed": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "verification"],
+          "properties": {
+            "status": {"const": "DECLARED_NOT_PERFORMED"},
+            "verification": {"const": "NOT_MACHINE_VERIFIED"}
+          }
+        },
+        "merged": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "verification"],
+          "properties": {
+            "status": {"const": "DECLARED_NOT_PERFORMED"},
+            "verification": {"const": "NOT_MACHINE_VERIFIED"}
+          }
+        },
+        "deployed": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "verification"],
+          "properties": {
+            "status": {"const": "DECLARED_NOT_PERFORMED"},
+            "verification": {"const": "NOT_MACHINE_VERIFIED"}
+          }
+        },
+        "published": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "verification"],
+          "properties": {
+            "status": {"const": "DECLARED_NOT_PERFORMED"},
+            "verification": {"const": "NOT_MACHINE_VERIFIED"}
+          }
+        },
+        "media_deleted": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "verification"],
+          "properties": {
+            "status": {"const": "DECLARED_NOT_PERFORMED"},
+            "verification": {"const": "NOT_MACHINE_VERIFIED"}
+          }
+        }
+      }
+    },
+    "unverified_boundaries": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "errors": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    }
+  }
+}
