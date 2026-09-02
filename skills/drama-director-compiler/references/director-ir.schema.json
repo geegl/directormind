@@ -52,6 +52,118 @@
     "unresolved": {"type": "array", "items": {"type": "string"}}
   },
   "$defs": {
+    "sceneProblemValue": {
+      "enum": [
+        "DIALOGUE_POWER_TRANSFER",
+        "RELATIONSHIP_FRACTURE",
+        "PUBLIC_REVELATION",
+        "GROUP_POWER_CHANGE",
+        "PROCEDURAL_COMPETENCE",
+        "PROCEDURAL_COLLAPSE",
+        "INTERROGATION",
+        "SUBJECTIVE_COERCION",
+        "SUSPENSE_INFORMATION_ASYMMETRY",
+        "ACTION_CAUSALITY",
+        "HORROR_RULE_REVELATION",
+        "ROMANTIC_PROXIMITY",
+        "SOUND_LED_CAUSALITY",
+        "MONTAGE_TIME_COMPRESSION",
+        "ENSEMBLE_REACTION_CHAIN",
+        "SILENT_AFTERMATH",
+        "NO_SPECIALIZED_PROBLEM",
+        "LEGACY_SCENE_PROBLEM"
+      ]
+    },
+    "routingResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "case_id",
+        "status",
+        "scene_problem",
+        "applied_constraint_ids",
+        "eligible_rule_ids",
+        "selected_rules",
+        "rejected_rules",
+        "conflict_trace",
+        "selection_count",
+        "ir_handoff",
+        "human_review_status",
+        "rights_boundary"
+      ],
+      "properties": {
+        "schema_version": {"const": "director-routing-result/0.1"},
+        "case_id": {"type": "string", "minLength": 1},
+        "status": {"enum": ["SELECTED", "NO_APPLICABLE_RULE", "HUMAN_REVIEW_REQUIRED"]},
+        "scene_problem": {"$ref": "#/$defs/sceneProblemValue"},
+        "applied_constraint_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "eligible_rule_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "selected_rules": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["rule_id", "selection_reason_codes", "matched_fact_ids"],
+            "properties": {
+              "rule_id": {"type": "string", "minLength": 1},
+              "selection_reason_codes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+              "matched_fact_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+            }
+          }
+        },
+        "rejected_rules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["rule_id", "rejection_reason_codes", "missing_fact_types", "blocking_fact_ids", "conflicting_rule_ids"],
+            "properties": {
+              "rule_id": {"type": "string", "minLength": 1},
+              "rejection_reason_codes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+              "missing_fact_types": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+              "blocking_fact_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+              "conflicting_rule_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+            }
+          }
+        },
+        "conflict_trace": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["priority_level", "winner_id", "loser_id", "resolution_code"],
+            "properties": {
+              "priority_level": {"type": "string", "minLength": 1},
+              "winner_id": {"type": "string", "minLength": 1},
+              "loser_id": {"type": "string", "minLength": 1},
+              "resolution_code": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "selection_count": {"type": "integer", "minimum": 0, "maximum": 4},
+        "ir_handoff": {"enum": ["CONTINUE_WITH_SELECTED_RULES", "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY", "PAUSE_FOR_HUMAN"]},
+        "human_review_status": {"const": "HUMAN_REVIEW_PENDING"},
+        "rights_boundary": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["surface_copy_allowed", "subject_matter_used_for_selection"],
+          "properties": {
+            "surface_copy_allowed": {"const": false},
+            "subject_matter_used_for_selection": {"const": false}
+          }
+        }
+      }
+    },
+    "audioPlan": {
+      "type": "object",
+      "properties": {
+        "status": {"type": "string", "minLength": 1},
+        "instruction": {"type": ["string", "null"]},
+        "source_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }
+    },
     "scene": {
       "type": "object",
       "required": [
@@ -67,6 +179,8 @@
         "pov",
         "audience_information",
         "spatial_plan",
+        "routing_input",
+        "routing_result",
         "shots"
       ],
       "properties": {
@@ -82,6 +196,8 @@
         "pov": {"type": "object"},
         "audience_information": {"type": "object"},
         "spatial_plan": {"type": "object"},
+        "routing_input": {"type": ["object", "null"]},
+        "routing_result": {"$ref": "#/$defs/routingResult"},
         "shots": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/shot"}}
       }
     },
@@ -140,7 +256,7 @@
         "performance_beats": {"type": "array", "minItems": 1, "items": {"type": "string"}},
         "dialogue": {"type": "array", "items": {"$ref": "#/$defs/dialogue"}},
         "visible_text": {"type": "array", "items": {"type": "string"}},
-        "audio": {"type": "object"},
+        "audio": {"$ref": "#/$defs/audioPlan"},
         "edit_in": {"type": "string", "minLength": 1},
         "edit_out": {"type": "string", "minLength": 1},
         "continuity_in": {"type": "string", "minLength": 1},
@@ -151,7 +267,7 @@
         "execution_plan": {"$ref": "#/$defs/executionPlan"},
         "reference_plan": {"$ref": "#/$defs/referencePlan"},
         "visual_style_module": {"type": "string", "minLength": 1},
-        "evidence_rule_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "evidence_rule_ids": {"type": "array", "items": {"type": "string"}},
         "evidence_status": {"enum": ["OBSERVED", "INFERRED", "HYPOTHESIS", "UNKNOWN", "METHOD_REFERENCE"]},
         "confidence": {"enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]}
       }

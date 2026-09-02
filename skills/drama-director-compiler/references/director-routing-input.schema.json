@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "director-routing-input.schema.json",
+  "title": "DirectorMind rights-safe routing input v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "case_id",
+    "rights_boundary",
+    "locked_facts",
+    "unknown_fact_types",
+    "dramatic_structure",
+    "scene_problem",
+    "routing_signals",
+    "priority_constraints",
+    "subject_matter_tags"
+  ],
+  "properties": {
+    "schema_version": {"const": "director-routing-input/0.1"},
+    "case_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9-]+$"},
+    "rights_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["project_original", "contains_private_script", "contains_reference_surface"],
+      "properties": {
+        "project_original": {"const": true},
+        "contains_private_script": {"const": false},
+        "contains_reference_surface": {"const": false}
+      }
+    },
+    "locked_facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["fact_id", "fact_type", "value", "status", "source_ref"],
+        "properties": {
+          "fact_id": {"type": "string", "minLength": 1},
+          "fact_type": {"type": "string", "minLength": 1},
+          "value": {"type": "string", "minLength": 1},
+          "status": {"const": "LOCKED"},
+          "source_ref": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "unknown_fact_types": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "dramatic_structure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["goal", "objectives", "obstacle", "stakes", "tactic_change", "subtext"],
+      "properties": {
+        "goal": {"type": "string", "minLength": 1},
+        "objectives": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "obstacle": {"type": "string", "minLength": 1},
+        "stakes": {"type": "string", "minLength": 1},
+        "tactic_change": {"type": "string", "minLength": 1},
+        "subtext": {"type": "string", "minLength": 1}
+      }
+    },
+    "scene_problem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary", "secondary", "status"],
+      "properties": {
+        "primary": {"$ref": "#/$defs/sceneProblemValue"},
+        "secondary": {"type": "array", "maxItems": 2, "uniqueItems": true, "items": {"$ref": "#/$defs/sceneProblemValue"}},
+        "status": {"const": "LOCKED"}
+      }
+    },
+    "routing_signals": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "priority_constraints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["constraint_id", "priority_level", "statement", "blocked_rule_ids"],
+        "properties": {
+          "constraint_id": {"type": "string", "minLength": 1},
+          "priority_level": {
+            "enum": [
+              "LOCKED_STORY_FACTS",
+              "REVEAL_AND_INFORMATION_BOUNDARIES",
+              "SAFETY_AND_PROTECTED_PARTICIPANTS",
+              "CONTINUITY",
+              "SCENE_POV",
+              "SPATIAL_GEOGRAPHY_AND_AXIS",
+              "TRIGGER_SPECIFIC_DIRECTOR_RULES",
+              "VISUAL_STYLE",
+              "PROVIDER_LIMITATIONS"
+            ]
+          },
+          "statement": {"type": "string", "minLength": 1},
+          "blocked_rule_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    },
+    "subject_matter_tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    }
+  },
+  "$defs": {
+    "sceneProblemValue": {
+      "enum": [
+        "DIALOGUE_POWER_TRANSFER",
+        "RELATIONSHIP_FRACTURE",
+        "PUBLIC_REVELATION",
+        "GROUP_POWER_CHANGE",
+        "PROCEDURAL_COMPETENCE",
+        "PROCEDURAL_COLLAPSE",
+        "INTERROGATION",
+        "SUBJECTIVE_COERCION",
+        "SUSPENSE_INFORMATION_ASYMMETRY",
+        "ACTION_CAUSALITY",
+        "HORROR_RULE_REVELATION",
+        "ROMANTIC_PROXIMITY",
+        "SOUND_LED_CAUSALITY",
+        "MONTAGE_TIME_COMPRESSION",
+        "ENSEMBLE_REACTION_CHAIN",
+        "SILENT_AFTERMATH",
+        "NO_SPECIALIZED_PROBLEM",
+        "LEGACY_SCENE_PROBLEM"
+      ]
+    }
+  }
+}

@@ -1,6 +1,12 @@
 # Canonical First 16 Scene Corpus
 
-Updated: 2026-08-30
+Updated: 2026-08-31
+
+Authority boundary: this file is a material and locator catalog only. It does not
+authoritatively report current evidence completion, candidate promotion, runtime
+rules, or project phase. Canonical scene facts live in
+`research/evidence/**/*.scene-evidence.json`; current phase and counts live in
+`context/STATE.md`.
 
 This is the user-approved first corpus. Finish these 16 scenes before selecting a second wave. The number 16 is a delivery scope, not evidence that the set is universal or market-complete.
 
@@ -8,22 +14,22 @@ Time ranges are locator estimates. Every agent must verify the local edition aga
 
 | ID | Work and scene | Scene problem | Locator estimate | Current material status |
 |---|---|---|---|---|
-| `TSN-OPEN` | *The Social Network* (2010), opening breakup | Fast dialogue and power transfer | `00:00:00–00:07:30` | LOCAL_READY |
-| `DWP-CERULEAN` | *The Devil Wears Prada* (2006), cerulean correction | Calm authority redirects group status | Current local edition: `00:20:14.833–00:21:24.917` | LOCAL_READY |
-| `SUCCESSION-VOTE` | *Succession* S01E06, board no-confidence vote | Failed coalition and procedural status reversal | Current local edition: `00:47:03.500–00:52:33.042` | EVIDENCE_COMPLETE_V0.1 on PR #1 |
-| `FLEABAG-DINNER` | *Fleabag* S02E01, engagement dinner opening | Family ensemble and subtext reaction chain | `00:02:44–00:07:00` | MISSING_LOCAL_SOURCE |
-| `BCS-CHUCK` | *Better Call Saul* S01E09, Chuck reveal | Intimate betrayal and relationship reclassification | `00:43:23–00:46:25` | LOCAL_READY |
-| `TED-DARTS` | *Ted Lasso* S01E08, darts reversal | Underestimated character proves concealed competence | `00:20:55–00:25:25` | MISSING_LOCAL_SOURCE |
-| `GETOUT-HYPNOSIS` | *Get Out* (2017), hypnosis and Sunken Place | Polite conversation becomes subjective coercion | Current local edition: `00:31:15.333–00:36:47.750` | LOCAL_READY |
-| `AQP-BIRTH` | *A Quiet Place* (2018), labor and fireworks diversion | Sound-led suspense and separated action | `00:48:40–00:53:40` | MISSING_LOCAL_SOURCE |
-| `NOBODY-BUS` | *Nobody* (2021), bus fight | One-against-many action causality | `00:27:00–00:30:30` | MISSING_LOCAL_SOURCE |
-| `MARRIAGE-ARGUMENT` | *Marriage Story* (2019), apartment argument | Two-person conflict escalation and collapse | `01:35:00–01:41:10` | MISSING_LOCAL_SOURCE |
-| `KNIVES-WILL` | *Knives Out* (2019), will reading | Public revelation and distributed witness reactions | `01:08:45–01:12:30` | MISSING_LOCAL_SOURCE |
-| `TLOU-BEDROOM` | *The Last of Us* S01E06, bedroom rejection | Proxy parent-child rupture | `00:41:10–00:43:40` | MISSING_LOCAL_SOURCE |
-| `HOTD-THRONE` | *House of the Dragon* S01E08, throne-room entrance | Protector arrival changes ensemble power | `00:39:05–00:42:40` | MISSING_LOCAL_SOURCE |
-| `BRIDGERTON-BANE` | *Bridgerton* S02E05, desire confession | Romantic tension without contact or payoff | `00:42:55–00:44:10` | MISSING_LOCAL_SOURCE |
-| `BEAR-ORDERS` | *The Bear* S01E07, preorder collapse | Continuous multi-person procedural breakdown | `00:04:20–00:09:20` | MISSING_LOCAL_SOURCE |
-| `B99-CONFESSION` | *Brooklyn Nine-Nine* S05E14, confession strategy | Ego bait and self-incrimination | `00:19:45–00:21:35` | MISSING_LOCAL_SOURCE |
+| `TSN-OPEN` | *The Social Network* (2010), opening exchange; breakup/power meaning is script-gated | Stable opposing singles, variable holds, secondary-prop boundary and sequential terminal occupancy changes | Current local edition: `00:00:00.000–00:04:03.618` | EVIDENCE_COMPLETE_VISUAL_V0.1 / 91 COMPLETE VISIBLE SHOTS / DIALOGUE, BREAKUP AND POWER TRANSFER SCRIPT-GATED / SOUND_UNKNOWN (`THE-SOCIAL-NETWORK-2010-OPENING-EXCHANGE-001`) |
+| `DWP-CERULEAN` | *The Devil Wears Prada* (2006), cerulean correction | Script-gated correction turn with visible object and ensemble-attention setup | Current local edition: `00:19:36.000–00:21:24.917` | EVIDENCE_COMPLETE_VISUAL_V0.1 / 26 COMPLETE VISIBLE SHOTS / SOUND_UNKNOWN (`THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001`) |
+| `SUCCESSION-VOTE` | *Succession* S01E06, selected boardroom/route sequence; vote and authority meaning remain unproved | Visible long-table room and route separation, raised-hand gestures, seated/standing changes, threshold arrival and terminal movement | Current local edition: `00:47:03.500–00:52:33.042` | CURRENT_LOCAL_EVIDENCE / 88 COMPLETE VISIBLE SHOTS / FOUR NON-OPERATIONAL CANDIDATE LINEAGES / SOUND_UNKNOWN (`SUCCESSION-S01E06-BOARD-VOTE-001`) |
+| `FLEABAG-DINNER` | *Fleabag* S02E01, engagement dinner opening | Family ensemble and subtext reaction chain | `00:02:44–00:07:00` | USER_SKIPPED_SOURCE_UNAVAILABLE |
+| `BCS-CHUCK` | *Better Call Saul* S01E09, Chuck reveal | Intimate betrayal and relationship reclassification | `00:43:23–00:46:25` | LOCAL_FILE_PRESENT_TARGET_SCENE_REJECTED / EXACT EPISODE IDENTITY UNKNOWN |
+| `TED-DARTS` | *Ted Lasso* S01E08, pub/board sequence; competence reversal is script-gated | Public object/person ordering, distinct-location interruption and distributed post-result body-state candidate | Current local edition: `00:19:24.288–00:26:10.527` | EVIDENCE_COMPLETE_VISUAL_V0.1 / 147 COMPLETE VISIBLE SHOTS / THREAD FUNCTION INFERRED / SOUND_UNKNOWN (`TED-LASSO-S01E08-DARTS-REVERSAL-001`) |
+| `GETOUT-HYPNOSIS` | *Get Out* (2017), hypnosis and Sunken Place | Script-gated coercive turn with visible room-to-black-field image-state change | Current local edition: `00:31:15.333–00:36:47.750` | EVIDENCE_COMPLETE_VISUAL_V0.1 / 74 COMPLETE VISIBLE SHOTS / SOUND_UNKNOWN (`GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001`) |
+| `AQP-BIRTH` | *A Quiet Place* (2018), selected multi-location body-state/radial-light sequence; childbirth and fireworks readings are script-gated | Grouped picture-state progression and separated action; picture-only audit cannot verify sound | Current local edition: `00:48:28.167–00:53:48.208` | EVIDENCE_COMPLETE_VISUAL_V0.1 / 34 COMPLETE VISIBLE SHOTS / SELECTED CONTIGUOUS ENVELOPE, NOT A COMPLETE NATURAL SCENE / CHILDBIRTH, FIREWORKS AND SOUND CAUSALITY UNKNOWN OR SCRIPT-GATED / SOUND_UNKNOWN (`A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001`) |
+| `NOBODY-BUS` | *Nobody* (2021), bus fight | One-against-many action causality | Current local edition: `00:24:53.000–00:32:16.267` | EVIDENCE_COMPLETE_VISUAL_V0.1 / SOUND_UNKNOWN (`NOBODY-2021-BUS-001`) |
+| `MARRIAGE-ARGUMENT` | *Marriage Story* (2019), apartment sequence; argument/collapse meaning is script-gated | Two-person room geometry, stable anchors, reopened movement, ownership handoffs and terminal level/proximity state | Current local edition: `01:31:15.958–01:41:26.792` | EVIDENCE_COMPLETE_VISUAL_V0.1 / 85 COMPLETE VISIBLE SHOTS / ARGUMENT, COLLAPSE, APOLOGY AND RELATIONSHIP SCRIPT-GATED / SOUND_UNKNOWN (`MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001`) |
+| `KNIVES-WILL` | *Knives Out* (2019), will-reading sequence | Common-room paper turn, distributed body-state changes, and spatial spillover | Current local edition: `01:07:10.733–01:12:44.567`; interior core `01:07:19.267–01:11:37.400` | EVIDENCE_COMPLETE_VISUAL_V0.1 / 108 COMPLETE VISIBLE SHOTS / SOUND_UNKNOWN (`KNIVES-OUT-2019-WILL-READING-001`) |
+| `TLOU-BEDROOM` | *The Last of Us* S01E06 (source/manifest-supplied), selected exterior-to-bedroom sequence; rejection and relationship meaning are script-gated | Exterior/threshold registration, two-person room geometry, standing/seated level change, object-state insert and terminal threshold-directed movement | Current local edition: `00:39:48.667–00:42:29.833` | EVIDENCE_COMPLETE_VISUAL_V0.1 / 27 COMPLETE VISIBLE SHOTS / TOP OVERLAY AND BURNED-SUBTITLE BANDS PRESENT; COVERED PIXELS UNKNOWN / RELATIONSHIP, REFUSAL, TRAUMA, DIALOGUE AND SOUND SCRIPT-GATED OR UNKNOWN (`TLOU-BEDROOM-LOCAL-001`) |
+| `HOTD-THRONE` | *House of the Dragon* S01E08, selected hall-ingress/threshold/seating sequence; protector and power meanings are script-gated | Ensemble registration, long-axis travel, threshold/contact/object/seating states and distributed person coverage | Current local edition: `00:38:14.167–00:43:04.083` | EVIDENCE_COMPLETE_VISUAL_V0.1 / 68 COMPLETE VISIBLE SHOTS / SELECTED CONTIGUOUS ENVELOPE, NOT A COMPLETE NATURAL HALL SCENE / AUTHORITY, PROTECTION, KINSHIP, ADJUDICATION AND OUTCOME SCRIPT-GATED / SOUND_UNKNOWN (`HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001`) |
+| `BRIDGERTON-BANE` | *Bridgerton* S02E05, contained-proximity sequence; desire/confession meaning is script-gated | Single-room geometry, opposing coverage, distance compression, hand/head image relation, withdrawal and room reset | Current local edition actual PTS: `00:42:07.380–00:45:11.998` | EVIDENCE_COMPLETE_VISUAL_V0.1 / 41 COMPLETE VISIBLE SHOTS / ROMANCE, DESIRE, REFUSAL, CONSENT, PHYSICAL CONTACT AND OUTCOME SCRIPT-GATED OR UNKNOWN / SOUND_UNKNOWN (`BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001`) |
+| `BEAR-ORDERS` | *The Bear* S01E07, continuous kitchen breakdown | Continuous multi-person procedural breakdown | Current local edition: `00:02:22.768–00:19:31.379` | EVIDENCE_COMPLETE_VISUAL_V0.1 / SOUND_UNKNOWN |
+| `B99-CONFESSION` | *Brooklyn Nine-Nine* S05E14, confession strategy | Script-gated pride bait/self-incrimination with visible ownership transfer and delayed observer coverage | Combined-file `00:41:32.458–00:42:32.792`; derived second-program picture-local `00:19:41.375–00:20:41.708` | EVIDENCE_COMPLETE_VISUAL_V0.1 / 22 COMPLETE VISIBLE SHOTS / CONFESSION AND TACTIC SCRIPT-GATED / SOUND_UNKNOWN (`B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001`) |
 
 ## Execution rule
 

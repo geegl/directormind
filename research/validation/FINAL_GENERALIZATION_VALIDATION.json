@@ -1,0 +1,101 @@
+{
+  "checks": {
+    "candidate_index_determinism": "PASS",
+    "candidate_validation": "PASS",
+    "ci_workflow": "LOCAL_COMMAND_PASS_WORKFLOW_NOT_HOSTED",
+    "converter_determinism": "PASS",
+    "forward_build_determinism": "PASS",
+    "forward_validation": "PASS",
+    "grammar_validation": "PASS",
+    "json_syntax": "PASS",
+    "python_compile": "PASS",
+    "remote_ci": "POST_COMMIT_EXTERNAL_EVIDENCE_REQUIRED",
+    "renderer_determinism": "PASS",
+    "repository_boundaries": "PASS",
+    "routing_validation": "PASS",
+    "scene_validation": "PASS_STRUCTURAL",
+    "unit_suite": "PASS",
+    "versioned_reports": "PASS",
+    "whitespace": "PASS"
+  },
+  "counts": {
+    "blocked_candidates": 124,
+    "broken_references": 0,
+    "candidate_families": 16,
+    "candidate_identities": 124,
+    "canonical_scenes": 31,
+    "cross_work_supported_candidates": 0,
+    "duplicate_candidate_ids": 0,
+    "eligible_candidates": 0,
+    "excluded_historical_legacy_markdown": 30,
+    "forward_packages": 8,
+    "forward_selected_rules": 0,
+    "forward_warnings": 31,
+    "general_default_candidates": 0,
+    "human_review_pending_packages": 8,
+    "invalid_json_files": 0,
+    "invalid_python_files": 0,
+    "prohibited_repository_files": 0,
+    "promotion_ready_families": 0,
+    "rejected_candidates": 0,
+    "required_scene_problems": 6,
+    "routing_cases": 8,
+    "routing_no_applicable_rule_cases": 8,
+    "routing_selected_rules": 0,
+    "runtime_rules": 0,
+    "scene_warnings": 72,
+    "scoped_public_string_issues": 0,
+    "shot_edit_units": 2343,
+    "source_dispositions": 33,
+    "symlink_escapes": 0,
+    "unit_tests": 233,
+    "validation_errors": 0,
+    "validation_warnings": 103,
+    "whitespace_errors": 0
+  },
+  "errors": [],
+  "external_actions": {
+    "deployed": {
+      "status": "DECLARED_NOT_PERFORMED",
+      "verification": "NOT_MACHINE_VERIFIED"
+    },
+    "media_deleted": {
+      "status": "DECLARED_NOT_PERFORMED",
+      "verification": "NOT_MACHINE_VERIFIED"
+    },
+    "merged": {
+      "status": "DECLARED_NOT_PERFORMED",
+      "verification": "NOT_MACHINE_VERIFIED"
+    },
+    "old_pull_request_closed": {
+      "status": "VERSIONED_REPORT_DOES_NOT_ATTEST",
+      "verification": "VERIFY_LIVE_PR_STATE"
+    },
+    "published": {
+      "status": "DECLARED_NOT_PERFORMED",
+      "verification": "NOT_MACHINE_VERIFIED"
+    },
+    "pushed": {
+      "status": "VERSIONED_REPORT_DOES_NOT_ATTEST",
+      "verification": "VERIFY_LIVE_PR_STATE"
+    }
+  },
+  "schema_version": "final-generalization-validation/0.4",
+  "status": "PASS_LOCAL",
+  "unverified_boundaries": [
+    "SOURCE_MEDIA_NOT_REPLAYED",
+    "SEMANTIC_AUDIO_NOT_DIRECTLY_AUDITIONED",
+    "NO_ELIGIBLE_RULE_POSITIVE_SELECTION_AVAILABLE",
+    "CREATIVE_QUALITY_AND_AUDIENCE_EFFECT_NOT_PROVED",
+    "REMOTE_CI_RESULT_IS_POST_COMMIT_EXTERNAL_EVIDENCE",
+    "PULL_REQUEST_STATE_IS_POST_COMMIT_EXTERNAL_EVIDENCE",
+    "ORIGINAL_30_IMMUTABLE_LEGACY_MARKDOWN_EXCLUDED_FROM_SCOPED_STRING_SCAN",
+    "EXTERNAL_ACTION_DECLARATIONS_NOT_MACHINE_VERIFIED"
+  ],
+  "verification_evidence": {
+    "external_actions": "LIVE_PR_STATE_REQUIRED_FOR_REMOTE_ACTIONS",
+    "historical_legacy_markdown": "EXCLUDED_IMMUTABLE_PROVENANCE_CONVERTED_OUTPUTS_VALIDATED",
+    "local_check_results": "LIVE_RUNNER_RESULTS",
+    "public_string_scan": "CURRENT_MACHINE_AND_RUNTIME_ARTIFACTS_ONLY"
+  }
+}

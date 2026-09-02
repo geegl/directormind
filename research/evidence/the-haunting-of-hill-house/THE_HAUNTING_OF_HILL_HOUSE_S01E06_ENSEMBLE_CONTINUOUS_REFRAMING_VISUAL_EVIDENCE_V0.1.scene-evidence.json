@@ -1,0 +1,930 @@
+{
+  "schema_version": "scene-evidence/0.1",
+  "evidence_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1",
+  "work_id": "HILL-HOUSE-S01E06",
+  "scene_problem": {
+    "primary": "LEGACY_SCENE_PROBLEM",
+    "secondary": [],
+    "status": "UNKNOWN",
+    "source_refs": [],
+    "notes": "The legacy primary label ENSEMBLE_REACTION_CHAIN is retained only as non-operational lineage and was not proved by structural conversion."
+  },
+  "scene_unit_type": "SELECTED_INTERNAL_ENVELOPE",
+  "boundary_status": "START_VERIFIED_END_INTERNAL",
+  "boundary_evidence": {
+    "claim_id": "SCENE-BOUNDARY",
+    "status": "PICTURE_OBSERVED",
+    "value": "Visible endpoints delimit the selected analytical interval; this does not verify production-take status.",
+    "source_refs": [
+      "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "production_take_status": "PRODUCTION_METHOD_UNKNOWN",
+  "source_identity_status": "SOURCE_OR_FILENAME_SUPPLIED",
+  "source_start": {
+    "timecode": "00:01:19.625",
+    "seconds": 79.625,
+    "frame": 1911,
+    "pts": null,
+    "time_base": null
+  },
+  "source_end": {
+    "timecode": "00:16:32.000",
+    "seconds": 992.0,
+    "frame": 23807,
+    "pts": null,
+    "time_base": null
+  },
+  "duration": 912.375,
+  "time_tolerance_seconds": 0.001,
+  "picture_evidence_status": "PICTURE_PARTIAL",
+  "audio_evidence_status": "BLOCKED_DIRECT_AUDITION",
+  "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+  "scene_dramatic_structure": {
+    "start_state": {
+      "claim_id": "DS-START",
+      "status": "PICTURE_OBSERVED",
+      "value": "The first converted visible unit establishes an initial picture state.",
+      "source_refs": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "objectives": [
+      {
+        "claim_id": "DS-OBJECTIVE",
+        "status": "UNKNOWN",
+        "value": "Character objectives remain unknown without a verified text anchor or direct soundtrack audition.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      }
+    ],
+    "obstacle": {
+      "claim_id": "DS-OBSTACLE",
+      "status": "UNKNOWN",
+      "value": "The dramatic obstacle remains unknown without a verified text anchor or direct soundtrack audition.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "event_point": {
+      "claim_id": "DS-EVENT",
+      "status": "INFERRED",
+      "value": "The converted picture ledger contains visible state changes; their story cause remains unknown.",
+      "source_refs": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "reaction_point": {
+      "claim_id": "DS-REACTION",
+      "status": "UNKNOWN",
+      "value": "Any reaction cause or emotional meaning remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "turn": {
+      "claim_id": "DS-TURN",
+      "status": "INFERRED",
+      "value": "The ordered visible state changes may form a dramatic turn, but the meaning remains inferred.",
+      "source_refs": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "end_state": {
+      "claim_id": "DS-END",
+      "status": "PICTURE_OBSERVED",
+      "value": "The final converted visible unit records the terminal picture state of the selected interval.",
+      "source_refs": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    }
+  },
+  "spatial_geometry": {
+    "claim_id": "SCENE-GEOMETRY",
+    "status": "INFERRED",
+    "value": "The cited units support an inferred project-neutral spatial ledger; exact source identity across cuts is not asserted.",
+    "source_refs": [
+      "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "axis": {
+    "claim_id": "SCENE-AXIS",
+    "status": "INFERRED",
+    "value": "Screen direction and axis continuity remain an inference from the cited picture units.",
+    "source_refs": [
+      "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "POV": {
+    "claim_id": "SCENE-POV",
+    "status": "INFERRED",
+    "value": "POV function remains inferred from the cited visual coverage and is not treated as optical-POV proof.",
+    "source_refs": [
+      "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "audience_information": {
+    "claim_id": "SCENE-AUDIENCE",
+    "status": "INFERRED",
+    "value": "The cited picture units expose an ordered set of visible state changes; dramatic meaning remains inferred or unknown.",
+    "source_refs": [
+      "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "shots": [
+    {
+      "shot_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001",
+      "order": 1,
+      "completeness": "PARTIAL_AT_END",
+      "start": {
+        "timecode": "00:01:19.625",
+        "seconds": 79.625,
+        "frame": 1911,
+        "pts": null,
+        "time_base": null
+      },
+      "end": {
+        "timecode": "00:16:32.000",
+        "seconds": 992.0,
+        "frame": 23807,
+        "pts": null,
+        "time_base": null
+      },
+      "duration": 912.375,
+      "shot_size": {
+        "claim_id": "S001-SIZE",
+        "status": "PICTURE_OBSERVED",
+        "value": "continuously changing from object/body detail and medium shared frames through wide ensemble, following medium and new-space wide/medium configurations; no single fixed size",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_height": {
+        "claim_id": "S001-HEIGHT",
+        "status": "PICTURE_OBSERVED",
+        "value": "predominantly near standing/eye level with changing height and lateral relation; exact rig height, lens and support UNKNOWN",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_angle": {
+        "claim_id": "S001-ANGLE",
+        "status": "PICTURE_OBSERVED",
+        "value": "predominantly near standing/eye level with changing height and lateral relation; exact rig height, lens and support UNKNOWN",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_motion": {
+        "claim_id": "S001-MOTION",
+        "status": "PICTURE_OBSERVED",
+        "value": "prolonged continuous reframe with lateral arcs, forward/backward travel, pans/turns, body-follow and passes through doors/partial occlusion; motion direction and speed vary; exact stabilization, lens changes, hidden joins and production take structure UNKNOWN",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_start": {
+        "claim_id": "S001-CAM-START",
+        "status": "INFERRED",
+        "value": "an open padded coffin-like container and chair rows first anchor the pale interior; foreground bodies, doorframes and furniture repeatedly mask/reveal layered figures; after a dim corridor, dark timber stairs and a curved dark metal/wood structure replace the pale-room field without an accepted visible cut",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale green/gray first interior; several sudden broad brightness pulses preserve geometry; a dim corridor leads to a darker warm-brown timber interior; illumination causes, time of day, exposure strategy and grade UNKNOWN"
+      },
+      "camera_path": {
+        "claim_id": "S001-CAM-PATH",
+        "status": "PICTURE_OBSERVED",
+        "value": "prolonged continuous reframe with lateral arcs, forward/backward travel, pans/turns, body-follow and passes through doors/partial occlusion; motion direction and speed vary; exact stabilization, lens changes, hidden joins and production take structure UNKNOWN",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_end": {
+        "claim_id": "S001-CAM-END",
+        "status": "INFERRED",
+        "value": "an open padded coffin-like container and chair rows first anchor the pale interior; foreground bodies, doorframes and furniture repeatedly mask/reveal layered figures; after a dim corridor, dark timber stairs and a curved dark metal/wood structure replace the pale-room field without an accepted visible cut",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "focus_strategy": {
+        "claim_id": "S001-FOCUS",
+        "status": "PICTURE_OBSERVED",
+        "value": "foreground occluders and multi-plane figures alternately become readable while backgrounds remain variably legible; exact focus pulls, focal distance and depth method UNKNOWN",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S001-ZONE",
+          "status": "INFERRED",
+          "value": "an open padded coffin-like container and chair rows first anchor the pale interior; foreground bodies, doorframes and furniture repeatedly mask/reveal layered figures; after a dim corridor, dark timber stairs and a curved dark metal/wood structure replace the pale-room field without an accepted visible cut",
+          "source_refs": [
+            "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+          ],
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        }
+      ],
+      "axis_and_screen_direction": {
+        "claim_id": "S001-AXIS",
+        "status": "INFERRED",
+        "value": "interaction planes change through visible camera/body movement rather than an accepted cut; continuous on-screen routes support local action continuity; exact geometry and person identity through deep darkness/occlusion, temporal continuity, eyeline intention and cross-state identity are INFERRED/UNKNOWN",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "abstract_role_labels": [],
+      "blocking": {
+        "claim_id": "S001-BLOCK",
+        "status": "INFERRED",
+        "value": "multiple adult-presenting figures enter, exit, sit, stand, cross foreground and reform clusters around chair rows, a seating alcove and the coffin-like anchor; one gray-haired male-presenting figure is followed through a corridor; later adult-presenting and young-presenting figures become readable in the darker stair hall",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_action": {
+        "claim_id": "S001-ACTION",
+        "status": "INFERRED",
+        "value": "gradual reveal → hands near a still red-clad human form → departures and arrivals → repeated group reconfiguration → broad illumination pulses → upper-body contact where visible → group faces the central container → gray-haired figure walks through corridor/doorway → environment and apparent age mix change → two young-presenting figures become readable as a foreground adult moves laterally",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_in": {
+        "claim_id": "S001-STATE-IN",
+        "status": "INFERRED",
+        "value": "an open padded coffin-like container and chair rows first anchor the pale interior; foreground bodies, doorframes and furniture repeatedly mask/reveal layered figures; after a dim corridor, dark timber stairs and a curved dark metal/wood structure replace the pale-room field without an accepted visible cut",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_out": {
+        "claim_id": "S001-STATE-OUT",
+        "status": "INFERRED",
+        "value": "gradual reveal → hands near a still red-clad human form → departures and arrivals → repeated group reconfiguration → broad illumination pulses → upper-body contact where visible → group faces the central container → gray-haired figure walks through corridor/doorway → environment and apparent age mix change → two young-presenting figures become readable as a foreground adult moves laterally",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "event_or_reaction": {
+        "claim_id": "S001-EVENT",
+        "status": "INFERRED",
+        "value": "one sustained ensemble/master-like passage with no accepted internal visible cut; event-versus-reaction functions are INFERRED and no separate insert is present",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "performance_beat": {
+        "claim_id": "S001-PERF",
+        "status": "INFERRED",
+        "value": "gaze direction, posture, hand gestures, head lowering, standing/seated level changes and brief arm/upper-body contacts are visible; INFERRED: any response, consolation, hostility, grief or causal reaction; facial intention and dialogue-linked timing UNKNOWN",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_in": {
+        "claim_id": "S001-EDIT-IN",
+        "status": "PICTURE_OBSERVED",
+        "value": "gradual fade-in begins at F1911 / 00:01:19.625 from a near-black F1910; not classified as a hard cut",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_out": {
+        "claim_id": "S001-EDIT-OUT",
+        "status": "PICTURE_OBSERVED",
+        "value": "selected interval stops internally at F23808 / 00:16:32.000 after foreground lateral motion exposes two young-presenting figures enough to read simultaneously; the foreground adult remains partly visible, camera/blocking continue and no visible cut occurs at the endpoint",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "cut_motivation": {
+        "claim_id": "S001-CUT-MOTIVE",
+        "status": "INFERRED",
+        "value": "withholding visible cuts keeps geography, entrances and attention transfers inside one moving field; authorial intent, sound motivation, hidden stitching and whether the source was one production take are UNKNOWN",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "narrative_function": {
+        "claim_id": "S001-FUNCTION",
+        "status": "INFERRED",
+        "value": "accumulates and redistributes ensemble pressure, repeatedly returns attention to a central visible anchor, then carries a tracked figure through an obscured threshold into a changed environment/apparent-age configuration; relationship, chronology and psychological meaning UNKNOWN",
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "picture_status": "PICTURE_PARTIAL",
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "AI_complexity": {
+        "camera": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to camera=HIGH; execution remains unverified."
+          ]
+        },
+        "performance": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to performance=HIGH; execution remains unverified."
+          ]
+        },
+        "continuity": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to continuity=HIGH; execution remains unverified."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": "split into six fixed or single-axis project-original units with at most one simple move each; performance fallback: in project-original coverage, cap each unit at one entrance or one primary visible gesture and hold reactions in shared frames; continuity fallback: use a project-original zone map/scene master, approved state references and an explicit edit across the environment/time change",
+        "performance": "split into six fixed or single-axis project-original units with at most one simple move each; performance fallback: in project-original coverage, cap each unit at one entrance or one primary visible gesture and hold reactions in shared frames; continuity fallback: use a project-original zone map/scene master, approved state references and an explicit edit across the environment/time change",
+        "continuity": "split into six fixed or single-axis project-original units with at most one simple move each; performance fallback: in project-original coverage, cap each unit at one entrance or one primary visible gesture and hold reactions in shared frames; continuity fallback: use a project-original zone map/scene master, approved state references and an explicit edit across the environment/time change",
+        "project_original_only": true
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    }
+  ],
+  "stats": {
+    "unit": "VISIBLE_SHOT",
+    "shot_count": 1,
+    "total_duration": 912.375,
+    "mean_duration": 912.375,
+    "median_duration": 912.375,
+    "duration_bins": {
+      "lt_1": 0,
+      "1_to_lt_2": 0,
+      "2_to_lt_5": 0,
+      "5_to_lt_10": 0,
+      "gte_10": 1
+    }
+  },
+  "audio_audit": {
+    "dialogue_overlap": {
+      "claim_id": "AUDIO-01",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "silence_intervals": {
+      "claim_id": "AUDIO-02",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "ambience": {
+      "claim_id": "AUDIO-03",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "score_entry": {
+      "claim_id": "AUDIO-04",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "score_exit": {
+      "claim_id": "AUDIO-05",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "sound_before_image": {
+      "claim_id": "AUDIO-06",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "offscreen_sound": {
+      "claim_id": "AUDIO-07",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "sound_bridge": {
+      "claim_id": "AUDIO-08",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "subjective_sound": {
+      "claim_id": "AUDIO-09",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "object_sound": {
+      "claim_id": "AUDIO-10",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "audio_information_change": {
+      "claim_id": "AUDIO-11",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "audio_unknowns": [
+      "Dialogue, ambience, score, silence, source, timing, and causal sound meaning remain unknown."
+    ]
+  },
+  "text_anchors": [],
+  "methods": [
+    {
+      "method_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-METHOD-LEGACY-PICTURE-REVIEW",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The legacy Markdown records a completed manual picture and edit-boundary review.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+      ],
+      "unknowns": [
+        "Source-media facts remain unknown."
+      ]
+    },
+    {
+      "method_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-METHOD-STRUCTURAL-CONVERSION",
+      "method_type": "STRUCTURAL_CONVERSION",
+      "status": "REPOSITORY_REPRODUCIBLE",
+      "description": "Deterministically convert the checked-in legacy tables to Scene Evidence JSON.",
+      "repository_command": "python3 skills/drama-director-compiler/scripts/convert_legacy_scene_evidence.py --check",
+      "tool_version_status": "VERSION_RECORDED",
+      "source_refs": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+      ],
+      "unknowns": [
+        "Creative approval and renewed media observation remain unknown."
+      ]
+    },
+    {
+      "method_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-METHOD-DIRECT-AUDIO",
+      "method_type": "AUDIO_DIRECT_AUDITION",
+      "status": "BLOCKED",
+      "description": "Direct soundtrack audition was not completed for this conversion.",
+      "repository_command": null,
+      "tool_version_status": "NOT_APPLICABLE",
+      "source_refs": [],
+      "unknowns": [
+        "All semantic audio facts remain unknown."
+      ]
+    }
+  ],
+  "auxiliary_evidence": [],
+  "continuity_tracks": [],
+  "candidate_rules": [
+    {
+      "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C01",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-093",
+      "legacy_migration": {
+        "trigger": "LOCKED-SCRIPT-GATED: an original multi-person scene requires several authorized entrances, departures and alignment changes to alter who visually carries the scene while broad geography should remain available",
+        "directing_decision": "HYPOTHESIS: use one project-original moving shared master that reweights attention through body routes, foreground crossings and depth changes; do not copy this source's people, costumes, rooms, coffin-like objects, staircase, compositions or events",
+        "coverage": "Project-original geography reveal → shared medium/wide reframe → foreground-crossing attention transfer → stable group tableau → renewed route; add closer units only for locked-script information that cannot remain legible in the master",
+        "blocking": "Define three project-original zones and one safe carrier route; schedule one entrance/exit or height-state change at a time while inactive figures retain simple readable marks",
+        "pacing_edit": "Hold while each group state becomes visually readable; advance the camera only on an authorized blocking change; the source's 912.375s selected hold describes one clip and is not a target duration",
+        "sound": "SND-UNK: source audio was not auditioned; dialogue, overlap, silence, ambience, score and sound-led movement are UNKNOWN and must come only from the locked script/project audio plan",
+        "applicability": "Original locked scripts where ensemble spatial reconfiguration itself carries changing attention and actors/virtual agents can safely maintain a shared geography",
+        "non_applicability": "Exact private reactions, rapid comedy timing, safety-sensitive crowds, or a script-authorized reveal that must be withheld from other characters cannot remain in a broad shared field",
+        "failure_mode": "The moving field becomes shapeless, background faces invent reactions, entrances collide, the central beat loses priority, or AI identity/furniture drift destroys geography",
+        "counterexample": "HYPOTHETICAL / NOT SOURCE-OBSERVED: under the same ensemble-reweighting trigger, a fixed master plus selective reaction close-ups may preserve hierarchy better when one information-changing response must be privileged; same-trigger contrary source remains pending",
+        "unknown": "Source dialogue, objectives, relationships, conflict cause, reaction causality, sound, exact camera rig/lens, hidden joins, authorial intent and whether every observed reframe was necessary",
+        "ai_risk": "camera=HIGH for long multi-zone path and continuous reframing; performance=HIGH for many synchronized entrances/gestures; continuity=HIGH for identities, wardrobe, furniture, anchor and route state",
+        "fallback": "camera fallback: use six fixed or single-axis project-original coverage units; performance fallback: in project-original coverage, permit one entrance or one primary gesture per unit and hold other bodies neutral; continuity fallback: lock a project-original zone map/scene master and reset each cut on one approved anchor/wardrobe state",
+        "evidence_shots": "HILL-HOUSE-ECR-S001 (internal picture states 00:02:45–00:14:40)",
+        "confidence": "MEDIUM-HIGH for the observed continuous reweighting pattern; MEDIUM for single-source transfer; locked-script semantics remain gated"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C01-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-METHOD-LEGACY-PICTURE-REVIEW",
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1"
+      ],
+      "evidence_shot_ids": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    },
+    {
+      "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C02",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-094",
+      "legacy_migration": {
+        "trigger": "LOCKED-SCRIPT-GATED: an original ensemble scene contains one script-authorized visible attention anchor that several characters approach, leave and later face again",
+        "directing_decision": "HYPOTHESIS: establish the project-original anchor early, allow the camera to depart with changing people, then restore the anchor in later shared frames as a spatial checksum; never import this source's container, human form, room or event",
+        "coverage": "Anchor-and-body state reveal → carrier departure into group geography → intermediate group reframes → anchor return with widened ensemble relation",
+        "blocking": "Give the project-original anchor one stable zone and approach lane; preserve its screen/geographic relation when figures move so returns clarify rather than reset space",
+        "pacing_edit": "Let the initial anchor state register before leaving it and let the return hold long enough to compare group arrangement; durations are project-specific and not copied from the source",
+        "sound": "SND-UNK: source audio and sound bridges were not auditioned; all sound and dialogue timing are UNKNOWN",
+        "applicability": "Original locked scripts with a legally and narratively authorized physical attention anchor whose visible state genuinely matters across ensemble movements",
+        "non_applicability": "No approved visible anchor exists; the anchor would disclose a withheld fact; or repeated returns would overstate an incidental object",
+        "failure_mode": "The anchor becomes a copied prop, generated state drifts, repeated returns imply unapproved symbolism, or people appear to teleport relative to it",
+        "counterexample": "HYPOTHETICAL / NOT SOURCE-OBSERVED: with the same anchor-return trigger, an explicit insert plus static group master may be clearer when object state—not spatial pressure—is the only required information; same-trigger contrary source remains pending",
+        "unknown": "Source object's identity/status, ceremony, relationships, symbolism, dialogue, sound, exact chronology, camera intent and whether the repeated anchor was necessary",
+        "ai_risk": "camera=MEDIUM-HIGH for departures/returns; performance=MEDIUM for shared gaze/posture; continuity=HIGH for project-original anchor state, people, furniture and geography",
+        "fallback": "continuity fallback: use one approved project-original anchor wide and three fixed group setups keyed to the same project-original scene master; camera fallback: cut explicitly instead of reproducing the source path; performance fallback: require only one visible orientation change per setup",
+        "evidence_shots": "HILL-HOUSE-ECR-S001 (anchor states 00:01:19.625–00:02:45 and 00:13:30–00:14:40)",
+        "confidence": "MEDIUM for observed depart/return geometry and single-source transfer; semantic necessity UNKNOWN"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C02-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-METHOD-LEGACY-PICTURE-REVIEW",
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1"
+      ],
+      "evidence_shot_ids": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    },
+    {
+      "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C03",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-095",
+      "legacy_migration": {
+        "trigger": "LOCKED-SCRIPT-GATED: an original scene explicitly authorizes a change of location, time state or subjective state while preserving one approved visible carrier or concern across the transition",
+        "directing_decision": "HYPOTHESIS: follow a project-original carrier through a neutral doorway/occlusion, then reveal the authorized changed environment/configuration; label the connection as a designed transition, never claim a single take or conceal an unverified stitch; do not copy the source's people, rooms, doorway, route or story event",
+        "coverage": "Pre-threshold shared field → back/side follow on simple route → neutral dark or occluded threshold → new project-original wide with one retained directional cue",
+        "blocking": "Give the carrier an explicit exit mark and corresponding new-space entry direction; keep other figures clear of the threshold and reveal the new configuration only after the locked-script trigger",
+        "pacing_edit": "Allow a short readable threshold rather than a featureless long tunnel; if geography or chronology becomes ambiguous beyond the script's intent, use an explicit cut",
+        "sound": "SND-UNK: threshold ambience, dialogue, weather, impacts, silence, score and bridges were not auditioned and are UNKNOWN",
+        "applicability": "Original locked scripts that authorize the state/location/time change and benefit from perceptual carry rather than an explanatory cut",
+        "non_applicability": "The script requires strict continuous real-time causality, identity must be legally/auditably explicit, the new state is not authorized, or dark traversal creates accessibility/safety problems",
+        "failure_mode": "The carrier drifts identity, a hidden join becomes visibly unstable, the new state reads as accidental teleportation, or the transition implies chronology not in the locked script",
+        "counterexample": "HYPOTHETICAL / NOT SOURCE-OBSERVED: for the same authorized state-change trigger, a plainly visible hard cut on matched screen direction can be more honest and legible than an occlusion transition; same-trigger contrary source remains pending",
+        "unknown": "Whether the source changes time or place, cross-state identity, hidden stitch/VFX, production take structure, set adjacency, lens/support, dialogue, sound and psychological meaning",
+        "ai_risk": "camera=HIGH for a tracked threshold and exposure/geography change; performance=MEDIUM for carrier walk/turn; continuity=HIGH for project-original identity, direction, wardrobe and environment state",
+        "fallback": "camera fallback: end a fixed project-original follow at the doorway and start a separate fixed new-space wide; continuity fallback: use an explicit edit, matched body direction and approved project-original scene masters for both states; performance fallback: reduce the carrier action to walk-stop-look",
+        "evidence_shots": "HILL-HOUSE-ECR-S001 (threshold 00:14:40–00:15:54; new configuration 00:15:54–00:16:32)",
+        "confidence": "MEDIUM-HIGH for the observed no-visible-cut environment change; MEDIUM-LOW for transfer until cross-source counterevidence; production method remains UNKNOWN"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C03-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-METHOD-LEGACY-PICTURE-REVIEW",
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1"
+      ],
+      "evidence_shot_ids": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    },
+    {
+      "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C04",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-096",
+      "legacy_migration": {
+        "trigger": "LOCKED-SCRIPT-GATED: several original characters have simultaneous or overlapping visible responses, but only some responses change audience information enough to deserve priority",
+        "directing_decision": "HYPOTHESIS: keep lower-priority responses in project-original shared frames and reweight them by depth, body angle, height and foreground reveal; reserve a cut/close-up only for a locked-script response that changes understanding; do not copy the source's people, room, blocking path or compositions",
+        "coverage": "Readable shared master → depth reframe among two or three response planes → brief stable group state → optional single close-up only when information changes",
+        "blocking": "Place primary, secondary and witness bodies on separate depth/height marks; use one foreground crossing at a time and preserve at least one unobstructed information-bearing face/body",
+        "pacing_edit": "Hold each information-bearing body state long enough to read where visible; do not demand a new gesture from every background person and do not manufacture reaction shots after every line",
+        "sound": "SND-UNK: source dialogue, overlap, silence, score and cue-to-gaze timing are UNKNOWN; response timing must be derived from the locked script and original performance plan",
+        "applicability": "Original ensemble scenes where simultaneous body/gaze states are legible in a shared field and privacy is not story-critical",
+        "non_applicability": "A precise micro-expression changes the audience's interpretation, a response must be hidden from another character, or the frame cannot keep necessary faces/bodies legible",
+        "failure_mode": "Background performers overact, AI gaze drifts, foreground bodies hide the required response, or the audience cannot tell which state matters",
+        "counterexample": "HYPOTHETICAL / NOT SOURCE-OBSERVED: under the same multi-response trigger, a short reaction chain may be superior when each response reveals distinct locked-script information; same-trigger contrary source remains pending",
+        "unknown": "Source dialogue, exact response causes, internal emotion, relationship, micro-expression timing, sound, whether every visible posture is intentional and which response altered audience understanding",
+        "ai_risk": "camera=HIGH for continuous multi-plane reweighting; performance=HIGH for synchronized gaze/posture/contact; continuity=HIGH for identity, wardrobe, seating and eyeline geometry",
+        "fallback": "camera fallback: one fixed project-original master plus two stable two-shots and at most one information-changing close-up; performance fallback: in project-original coverage, assign one primary visible response per shot and neutral holds elsewhere; continuity fallback: use approved project-original eyeline/seat maps and reset bodies at explicit cuts",
+        "evidence_shots": "HILL-HOUSE-ECR-S001 (shared response planes 00:04:00–00:14:40)",
+        "confidence": "MEDIUM-HIGH for the observed shared-frame posture/gaze pattern; MEDIUM for single-source directing transfer; response semantics UNKNOWN"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C04-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-METHOD-LEGACY-PICTURE-REVIEW",
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1"
+      ],
+      "evidence_shot_ids": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    }
+  ],
+  "unknowns": [
+    {
+      "unknown_id": "UNKNOWN-AUDIO",
+      "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
+      "scope": "AUDIO",
+      "blocks_rule_ids": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C01",
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C02",
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C03",
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C04"
+      ]
+    },
+    {
+      "unknown_id": "UNKNOWN-EXECUTION",
+      "statement": "Cross-work transfer and generation execution remain unverified and unknown.",
+      "scope": "RULE",
+      "blocks_rule_ids": [
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C01",
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C02",
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C03",
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C04"
+      ]
+    }
+  ],
+  "rights_boundary": {
+    "media_committed": false,
+    "subtitles_committed": false,
+    "scripts_or_long_dialogue_committed": false,
+    "contains_absolute_local_paths": false,
+    "contains_media_hashes": false,
+    "reference_surface_terms": [
+      "HILL HOUSE S01E06"
+    ],
+    "surface_inventory_status": "HUMAN_REVIEWED_COMPLETE",
+    "prohibited_transfer_content": [
+      "Reference characters, locations, props, dialogue, scene events, and signature compositions."
+    ],
+    "notes": "Human review confirmed that every operational candidate-rule field is the same fixed source-neutral pending-review placeholder. Work-specific legacy text remains only in non-operational lineage; no source media or temporary artifact is embedded."
+  },
+  "validation_status": "HUMAN_REVIEW_PENDING",
+  "validation_warnings": [
+    "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+  ]
+}

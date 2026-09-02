@@ -1,0 +1,369 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "director-grammar.schema.json",
+  "title": "DirectorMind Runtime Grammar v0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "grammar_id",
+    "title",
+    "status",
+    "candidate_index_path",
+    "support_matrix_path",
+    "selection_policy",
+    "conflict_priority",
+    "project_constraints",
+    "safety_constraints",
+    "rules"
+  ],
+  "properties": {
+    "schema_version": {"const": "director-grammar/0.2"},
+    "grammar_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9-]+$"},
+    "title": {"type": "string", "minLength": 1},
+    "status": {"enum": ["VALIDATED", "HUMAN_REVIEW_PENDING"]},
+    "candidate_index_path": {"const": "research/grammar/candidate_rule_index.json"},
+    "support_matrix_path": {"const": "research/grammar/cross_work_support_matrix.json"},
+    "selection_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "eligible_promotion_statuses",
+        "preferred_minimum",
+        "maximum",
+        "allow_fewer_when_insufficient",
+        "no_match_status",
+        "unreviewed_output_status",
+        "subject_similarity_is_sufficient",
+        "constraints_count_as_selected_rules"
+      ],
+      "properties": {
+        "eligible_promotion_statuses": {
+          "const": ["CROSS_WORK_SUPPORTED", "GENERAL_DEFAULT"]
+        },
+        "preferred_minimum": {"const": 2},
+        "maximum": {"const": 4},
+        "allow_fewer_when_insufficient": {"const": true},
+        "no_match_status": {"const": "NO_APPLICABLE_RULE"},
+        "unreviewed_output_status": {"const": "HUMAN_REVIEW_PENDING"}
+        ,
+        "subject_similarity_is_sufficient": {"const": false},
+        "constraints_count_as_selected_rules": {"const": false}
+      }
+    },
+    "conflict_priority": {
+      "const": [
+        "LOCKED_STORY_FACTS",
+        "REVEAL_AND_INFORMATION_BOUNDARIES",
+        "SAFETY_AND_PROTECTED_PARTICIPANTS",
+        "CONTINUITY",
+        "SCENE_POV",
+        "SPATIAL_GEOGRAPHY_AND_AXIS",
+        "TRIGGER_SPECIFIC_DIRECTOR_RULES",
+        "VISUAL_STYLE",
+        "PROVIDER_LIMITATIONS"
+      ]
+    },
+    "project_constraints": {
+      "type": "array",
+      "minItems": 5,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/constraint"}
+    },
+    "safety_constraints": {
+      "type": "array",
+      "minItems": 4,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/constraint"}
+    },
+    "rules": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/evidenceRule"}
+    }
+  },
+  "$defs": {
+    "sceneProblemValue": {
+      "enum": [
+        "DIALOGUE_POWER_TRANSFER",
+        "RELATIONSHIP_FRACTURE",
+        "PUBLIC_REVELATION",
+        "GROUP_POWER_CHANGE",
+        "PROCEDURAL_COMPETENCE",
+        "PROCEDURAL_COLLAPSE",
+        "INTERROGATION",
+        "SUBJECTIVE_COERCION",
+        "SUSPENSE_INFORMATION_ASYMMETRY",
+        "ACTION_CAUSALITY",
+        "HORROR_RULE_REVELATION",
+        "ROMANTIC_PROXIMITY",
+        "SOUND_LED_CAUSALITY",
+        "MONTAGE_TIME_COMPRESSION",
+        "ENSEMBLE_REACTION_CHAIN",
+        "SILENT_AFTERMATH",
+        "NO_SPECIALIZED_PROBLEM",
+        "LEGACY_SCENE_PROBLEM"
+      ]
+    },
+    "nonEmptyStringArray": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "stringArray": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "constraint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["constraint_id", "name", "constraint_code", "applies_when", "requirements", "prohibitions", "violation_action", "authority_refs"],
+      "properties": {
+        "constraint_id": {"type": "string", "pattern": "^(PC|SC)-[A-Z0-9-]+$"},
+        "name": {"type": "string", "minLength": 1},
+        "constraint_code": {"type": "string", "minLength": 1},
+        "applies_when": {"type": "string", "minLength": 1},
+        "requirements": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "prohibitions": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "violation_action": {"enum": ["VALIDATION_ERROR", "BLOCK_GENERATION", "HUMAN_REVIEW_PENDING"]},
+        "authority_refs": {"$ref": "#/$defs/nonEmptyStringArray"}
+      }
+    },
+    "riskDimension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "reasons"],
+      "properties": {
+        "level": {"enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]},
+        "reasons": {"$ref": "#/$defs/nonEmptyStringArray"}
+      }
+    },
+    "fallback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["camera", "performance", "continuity", "project_original_only"],
+      "properties": {
+        "camera": {"type": "string", "minLength": 1},
+        "performance": {"type": "string", "minLength": 1},
+        "continuity": {"type": "string", "minLength": 1},
+        "project_original_only": {"const": true}
+      }
+    },
+    "evidenceLineage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_rule_ids",
+        "work_ids",
+        "evidence_ids",
+        "evidence_shot_ids",
+        "relation_review_ids",
+        "counterexample_ids",
+        "forward_test_ids",
+        "director_review_id"
+      ],
+      "properties": {
+        "candidate_rule_ids": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "work_ids": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "evidence_ids": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "evidence_shot_ids": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "relation_review_ids": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "counterexample_ids": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "forward_test_ids": {"$ref": "#/$defs/stringArray"},
+        "director_review_id": {"type": ["string", "null"]}
+      }
+    },
+    "functionalRole": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["appearance_id", "functional_role", "status", "source_refs"],
+      "properties": {
+        "appearance_id": {"type": "string", "minLength": 1},
+        "functional_role": {"type": "string", "minLength": 1},
+        "status": {"enum": ["TEXT_ANCHOR", "INFERRED"]},
+        "source_refs": {"$ref": "#/$defs/nonEmptyStringArray"}
+      }
+    },
+    "evidenceRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rule_id",
+        "name",
+        "canonical_rule_family",
+        "promotion_source_candidate_id",
+        "promotion_status",
+        "runtime_authorized",
+        "scene_problem",
+        "functional_roles",
+        "trigger",
+        "routing",
+        "routing_review",
+        "required_story_facts",
+        "applicable_when",
+        "not_applicable_when",
+        "conflict_levels",
+        "conflicts_with_rule_ids",
+        "selection_rank",
+        "director_decision",
+        "coverage",
+        "blocking",
+        "pacing",
+        "edit_logic",
+        "audio_logic",
+        "continuity",
+        "ai_risk",
+        "failure_modes",
+        "fallback",
+        "confidence",
+        "evidence_lineage",
+        "rights_boundary",
+        "human_review"
+      ],
+      "properties": {
+        "rule_id": {"type": "string", "pattern": "^DR-[A-Z0-9-]+$"},
+        "name": {"type": "string", "minLength": 1},
+        "canonical_rule_family": {"type": "string", "minLength": 1},
+        "promotion_source_candidate_id": {"type": "string", "minLength": 1},
+        "promotion_status": {"enum": ["CROSS_WORK_SUPPORTED", "GENERAL_DEFAULT"]},
+        "runtime_authorized": {"const": true},
+        "scene_problem": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["primary", "secondary"],
+          "properties": {
+            "primary": {"$ref": "#/$defs/sceneProblemValue"},
+            "secondary": {"type": "array", "maxItems": 2, "uniqueItems": true, "items": {"$ref": "#/$defs/sceneProblemValue"}}
+          }
+        },
+        "functional_roles": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/functionalRole"}
+        },
+        "trigger": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["description", "required_signals"],
+          "properties": {
+            "description": {"type": "string", "minLength": 1},
+            "required_signals": {"$ref": "#/$defs/nonEmptyStringArray"}
+          }
+        },
+        "routing": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["scene_problems", "trigger_all_of", "trigger_any_of", "required_fact_types", "not_applicable_if_any", "conflicts_with", "audit_subject_tags"],
+          "properties": {
+            "scene_problems": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/sceneProblemValue"}},
+            "trigger_all_of": {"$ref": "#/$defs/stringArray"},
+            "trigger_any_of": {"$ref": "#/$defs/stringArray"},
+            "required_fact_types": {"$ref": "#/$defs/nonEmptyStringArray"},
+            "not_applicable_if_any": {"$ref": "#/$defs/stringArray"},
+            "conflicts_with": {"$ref": "#/$defs/stringArray"},
+            "audit_subject_tags": {"$ref": "#/$defs/stringArray"}
+          }
+        },
+        "routing_review": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "review_id", "review_ref"],
+          "properties": {
+            "status": {"const": "HUMAN_VERIFIED"},
+            "review_id": {"type": "string", "minLength": 1},
+            "review_ref": {"type": "string", "minLength": 1}
+          }
+        },
+        "required_story_facts": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "applicable_when": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "not_applicable_when": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["descriptions", "signals"],
+          "properties": {
+            "descriptions": {"$ref": "#/$defs/nonEmptyStringArray"},
+            "signals": {"$ref": "#/$defs/nonEmptyStringArray"}
+          }
+        },
+        "conflict_levels": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/conflictLevel"}
+        },
+        "conflicts_with_rule_ids": {"$ref": "#/$defs/stringArray"},
+        "selection_rank": {"type": "integer", "minimum": 1},
+        "director_decision": {"type": "string", "minLength": 1},
+        "coverage": {"type": "string", "minLength": 1},
+        "blocking": {"type": "string", "minLength": 1},
+        "pacing": {"type": "string", "minLength": 1},
+        "edit_logic": {"type": "string", "minLength": 1},
+        "audio_logic": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "instruction", "source_refs"],
+          "properties": {
+            "status": {"enum": ["AUDIO_OBSERVED", "NOT_DEPENDENT"]},
+            "instruction": {"type": ["string", "null"]},
+            "source_refs": {"$ref": "#/$defs/stringArray"}
+          }
+        },
+        "continuity": {"type": "string", "minLength": 1},
+        "ai_risk": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["camera", "performance", "continuity"],
+          "properties": {
+            "camera": {"$ref": "#/$defs/riskDimension"},
+            "performance": {"$ref": "#/$defs/riskDimension"},
+            "continuity": {"$ref": "#/$defs/riskDimension"}
+          }
+        },
+        "failure_modes": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "fallback": {"$ref": "#/$defs/fallback"},
+        "confidence": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["within_source", "transfer", "execution"],
+          "properties": {
+            "within_source": {"enum": ["LOW", "MEDIUM", "HIGH"]},
+            "transfer": {"enum": ["LOW", "MEDIUM", "HIGH"]},
+            "execution": {"enum": ["LOW", "MEDIUM", "HIGH"]}
+          }
+        },
+        "evidence_lineage": {"$ref": "#/$defs/evidenceLineage"},
+        "rights_boundary": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["surface_copy_allowed", "subject_matter_similarity_is_trigger", "project_original_assets_only"],
+          "properties": {
+            "surface_copy_allowed": {"const": false},
+            "subject_matter_similarity_is_trigger": {"const": false},
+            "project_original_assets_only": {"const": true}
+          }
+        },
+        "human_review": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "review_id"],
+          "properties": {
+            "status": {"enum": ["APPROVED", "NOT_REQUIRED_FOR_CROSS_WORK"]},
+            "review_id": {"type": ["string", "null"]}
+          }
+        }
+      }
+    },
+    "conflictLevel": {
+      "enum": [
+        "LOCKED_STORY_FACTS",
+        "REVEAL_AND_INFORMATION_BOUNDARIES",
+        "SAFETY_AND_PROTECTED_PARTICIPANTS",
+        "CONTINUITY",
+        "SCENE_POV",
+        "SPATIAL_GEOGRAPHY_AND_AXIS",
+        "TRIGGER_SPECIFIC_DIRECTOR_RULES",
+        "VISUAL_STYLE",
+        "PROVIDER_LIMITATIONS"
+      ]
+    }
+  }
+}

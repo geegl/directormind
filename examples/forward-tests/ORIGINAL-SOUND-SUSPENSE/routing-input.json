@@ -1,0 +1,56 @@
+{
+  "case_id": "ORIGINAL-SOUND-SUSPENSE",
+  "dramatic_structure": {
+    "goal": "separate receipt of a verified sound cue from later source confirmation",
+    "objectives": [
+      "locate and identify the pulse"
+    ],
+    "obstacle": "the source begins outside the visible area",
+    "stakes": "the caretaker must decide whether the archive needs intervention",
+    "subtext": "uncertainty ends only when the ordinary source is visible",
+    "tactic_change": "listening becomes a directed search"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "audible_information",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "A project-original timer emits two verified pulses before its source is visible."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "source_search",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "The caretaker follows the repeated pulse toward a closed wall panel."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "source_confirmation",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "Opening the panel reveals the timer beside a normal ventilation-cycle indicator."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "audible_information",
+    "source_confirmation"
+  ],
+  "scene_problem": {
+    "primary": "SOUND_LED_CAUSALITY",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "offscreen_information"
+  ],
+  "unknown_fact_types": []
+}

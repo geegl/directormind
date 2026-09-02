@@ -1,0 +1,931 @@
+{
+  "schema_version": "scene-evidence/0.1",
+  "evidence_id": "BEAR-S01E07-REVIEW-001",
+  "work_id": "THE-BEAR-S01E07",
+  "scene_problem": {
+    "primary": "LEGACY_SCENE_PROBLEM",
+    "secondary": [],
+    "status": "UNKNOWN",
+    "source_refs": [],
+    "notes": "The legacy primary label PROCEDURAL_COLLAPSE is retained only as non-operational lineage and was not proved by structural conversion."
+  },
+  "scene_unit_type": "SINGLE_VISIBLE_TAKE",
+  "boundary_status": "NATURAL_START_END_VERIFIED",
+  "boundary_evidence": {
+    "claim_id": "SCENE-BOUNDARY",
+    "status": "PICTURE_OBSERVED",
+    "value": "Visible endpoints delimit the selected analytical interval; this does not verify production-take status.",
+    "source_refs": [
+      "BEAR-S01E07-REVIEW-001-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "production_take_status": "VISIBLE_CONTINUITY_ONLY",
+  "source_identity_status": "SOURCE_OR_FILENAME_SUPPLIED",
+  "source_start": {
+    "timecode": "00:02:22.768",
+    "seconds": 142.768,
+    "frame": null,
+    "pts": null,
+    "time_base": null
+  },
+  "source_end": {
+    "timecode": "00:19:31.379",
+    "seconds": 1171.379,
+    "frame": null,
+    "pts": null,
+    "time_base": null
+  },
+  "duration": 1028.611,
+  "time_tolerance_seconds": 0.001,
+  "picture_evidence_status": "PICTURE_OBSERVED",
+  "audio_evidence_status": "BLOCKED_DIRECT_AUDITION",
+  "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+  "scene_dramatic_structure": {
+    "start_state": {
+      "claim_id": "DS-START",
+      "status": "PICTURE_OBSERVED",
+      "value": "The first converted visible unit establishes an initial picture state.",
+      "source_refs": [
+        "BEAR-S01E07-REVIEW-001-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "objectives": [
+      {
+        "claim_id": "DS-OBJECTIVE",
+        "status": "UNKNOWN",
+        "value": "Character objectives remain unknown without a verified text anchor or direct soundtrack audition.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      }
+    ],
+    "obstacle": {
+      "claim_id": "DS-OBSTACLE",
+      "status": "UNKNOWN",
+      "value": "The dramatic obstacle remains unknown without a verified text anchor or direct soundtrack audition.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "event_point": {
+      "claim_id": "DS-EVENT",
+      "status": "INFERRED",
+      "value": "The converted picture ledger contains visible state changes; their story cause remains unknown.",
+      "source_refs": [
+        "BEAR-S01E07-REVIEW-001-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "reaction_point": {
+      "claim_id": "DS-REACTION",
+      "status": "UNKNOWN",
+      "value": "Any reaction cause or emotional meaning remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "turn": {
+      "claim_id": "DS-TURN",
+      "status": "INFERRED",
+      "value": "The ordered visible state changes may form a dramatic turn, but the meaning remains inferred.",
+      "source_refs": [
+        "BEAR-S01E07-REVIEW-001-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "end_state": {
+      "claim_id": "DS-END",
+      "status": "PICTURE_OBSERVED",
+      "value": "The final converted visible unit records the terminal picture state of the selected interval.",
+      "source_refs": [
+        "BEAR-S01E07-REVIEW-001-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    }
+  },
+  "spatial_geometry": {
+    "claim_id": "SCENE-GEOMETRY",
+    "status": "INFERRED",
+    "value": "The cited units support an inferred project-neutral spatial ledger; exact source identity across cuts is not asserted.",
+    "source_refs": [
+      "BEAR-S01E07-REVIEW-001-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "axis": {
+    "claim_id": "SCENE-AXIS",
+    "status": "INFERRED",
+    "value": "Screen direction and axis continuity remain an inference from the cited picture units.",
+    "source_refs": [
+      "BEAR-S01E07-REVIEW-001-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "POV": {
+    "claim_id": "SCENE-POV",
+    "status": "INFERRED",
+    "value": "POV function remains inferred from the cited visual coverage and is not treated as optical-POV proof.",
+    "source_refs": [
+      "BEAR-S01E07-REVIEW-001-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "audience_information": {
+    "claim_id": "SCENE-AUDIENCE",
+    "status": "INFERRED",
+    "value": "The cited picture units expose an ordered set of visible state changes; dramatic meaning remains inferred or unknown.",
+    "source_refs": [
+      "BEAR-S01E07-REVIEW-001-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "shots": [
+    {
+      "shot_id": "BEAR-S01E07-REVIEW-001-S001",
+      "order": 1,
+      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "start": {
+        "timecode": "00:02:22.768",
+        "seconds": 142.768,
+        "frame": null,
+        "pts": null,
+        "time_base": null
+      },
+      "end": {
+        "timecode": "00:19:31.379",
+        "seconds": 1171.379,
+        "frame": null,
+        "pts": null,
+        "time_base": null
+      },
+      "duration": 1028.611,
+      "shot_size": {
+        "claim_id": "S001-SIZE",
+        "status": "PICTURE_OBSERVED",
+        "value": "Variable: hand/detail, close, medium, two-shot, clustered group, corridor wide, and empty-workspace view",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_height": {
+        "claim_id": "S001-HEIGHT",
+        "status": "INFERRED",
+        "value": "Predominantly eye level; height and angle shift with movement and workstation sightlines",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_angle": {
+        "claim_id": "S001-ANGLE",
+        "status": "PICTURE_OBSERVED",
+        "value": "Predominantly eye level; height and angle shift with movement and workstation sightlines",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_motion": {
+        "claim_id": "S001-MOTION",
+        "status": "PICTURE_OBSERVED",
+        "value": "Continuous translation, pans, follow moves, reversals, close approaches, pull-backs, and reframing; no visible cut",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_start": {
+        "claim_id": "S001-CAM-START",
+        "status": "INFERRED",
+        "value": "Reframes around pass openings, shelving, doorways, foreground bodies, and front-counter windows; characters enter and leave rather than receiving separate coverage",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: Bright cool/neutral kitchen light; stronger red/blue accents at the front counter; lighting remains spatially consistent across revisits"
+      },
+      "camera_path": {
+        "claim_id": "S001-CAM-PATH",
+        "status": "PICTURE_OBSERVED",
+        "value": "Continuous translation, pans, follow moves, reversals, close approaches, pull-backs, and reframing; no visible cut",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_end": {
+        "claim_id": "S001-CAM-END",
+        "status": "INFERRED",
+        "value": "Reframes around pass openings, shelving, doorways, foreground bodies, and front-counter windows; characters enter and leave rather than receiving separate coverage",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "focus_strategy": {
+        "claim_id": "S001-FOCUS",
+        "status": "INFERRED",
+        "value": "Variable shallow-to-medium depth; foreground bodies and fixtures repeatedly occlude or soften the current subject",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S001-ZONE",
+          "status": "INFERRED",
+          "value": "Reframes around pass openings, shelving, doorways, foreground bodies, and front-counter windows; characters enter and leave rather than receiving separate coverage",
+          "source_refs": [
+            "BEAR-S01E07-REVIEW-001-S001"
+          ],
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        }
+      ],
+      "axis_and_screen_direction": {
+        "claim_id": "S001-AXIS",
+        "status": "INFERRED",
+        "value": "Continuous movement preserves floor-plan relationships without edit-axis breaks, but rapid foreground wipes and off-screen action can temporarily reduce causal legibility",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "abstract_role_labels": [],
+      "blocking": {
+        "claim_id": "S001-BLOCK",
+        "status": "INFERRED",
+        "value": "Multiple workers cross between cook line, pass, front counter, and rear corridor; entries, exits, body wipes, and work gestures motivate camera handoffs",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_action": {
+        "claim_id": "S001-ACTION",
+        "status": "INFERRED",
+        "value": "Prep and reading become rapid redirection, clustered confrontation, individual withdrawals, Sydney's visible departure, Carmy's crouch, and an empty-workspace ending",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_in": {
+        "claim_id": "S001-STATE-IN",
+        "status": "INFERRED",
+        "value": "Reframes around pass openings, shelving, doorways, foreground bodies, and front-counter windows; characters enter and leave rather than receiving separate coverage",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_out": {
+        "claim_id": "S001-STATE-OUT",
+        "status": "INFERRED",
+        "value": "Prep and reading become rapid redirection, clustered confrontation, individual withdrawals, Sydney's visible departure, Carmy's crouch, and an empty-workspace ending",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "event_or_reaction": {
+        "claim_id": "S001-EVENT",
+        "status": "INFERRED",
+        "value": "Mixed event/reaction; final seconds become an empty-space aftermath",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "performance_beat": {
+        "claim_id": "S001-PERF",
+        "status": "INFERRED",
+        "value": "Faces and posture progress from ordinary task attention to pointing, raised arms, close confrontations, strained tight close-ups, isolation, and withdrawal",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_in": {
+        "claim_id": "S001-EDIT-IN",
+        "status": "PICTURE_OBSERVED",
+        "value": "Hard cut from exterior approach",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_out": {
+        "claim_id": "S001-EDIT-OUT",
+        "status": "PICTURE_OBSERVED",
+        "value": "Hard cut to black credits",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "cut_motivation": {
+        "claim_id": "S001-CUT-MOTIVE",
+        "status": "INFERRED",
+        "value": "Edit-in relocates from approach to interior work; edit-out follows human withdrawal and camera disengagement from the active work zone",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "narrative_function": {
+        "claim_id": "S001-FUNCTION",
+        "status": "INFERRED",
+        "value": "Makes time pressure and organizational fracture feel continuous; converts camera access itself into reaction prioritization",
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "AI_complexity": {
+        "camera": {
+          "level": "CRITICAL",
+          "reasons": [
+            "Legacy risk was conservatively mapped to camera=CRITICAL; execution remains unverified."
+          ]
+        },
+        "performance": {
+          "level": "CRITICAL",
+          "reasons": [
+            "Legacy risk was conservatively mapped to performance=CRITICAL; execution remains unverified."
+          ]
+        },
+        "continuity": {
+          "level": "CRITICAL",
+          "reasons": [
+            "Legacy risk was conservatively mapped to continuity=CRITICAL; execution remains unverified."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": "Preserve BEAR-S01E07-REVIEW-001-S001's cited visible state-in, state-out, and edit endpoints with a project-original locked-off camera; split the beat if that exact state transition cannot be held.",
+        "performance": "Preserve BEAR-S01E07-REVIEW-001-S001's cited visible action and performance-beat claims; limit the project-original shot to that one verified state change.",
+        "continuity": "Preserve BEAR-S01E07-REVIEW-001-S001's cited zone, axis, state-in, and state-out claims in project-original coverage; split the beat instead of inventing an unverified cross-shot state.",
+        "project_original_only": true
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    }
+  ],
+  "stats": {
+    "unit": "VISIBLE_SHOT",
+    "shot_count": 1,
+    "total_duration": 1028.611,
+    "mean_duration": 1028.611,
+    "median_duration": 1028.611,
+    "duration_bins": {
+      "lt_1": 0,
+      "1_to_lt_2": 0,
+      "2_to_lt_5": 0,
+      "5_to_lt_10": 0,
+      "gte_10": 1
+    }
+  },
+  "audio_audit": {
+    "dialogue_overlap": {
+      "claim_id": "AUDIO-01",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "silence_intervals": {
+      "claim_id": "AUDIO-02",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "ambience": {
+      "claim_id": "AUDIO-03",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "score_entry": {
+      "claim_id": "AUDIO-04",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "score_exit": {
+      "claim_id": "AUDIO-05",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "sound_before_image": {
+      "claim_id": "AUDIO-06",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "offscreen_sound": {
+      "claim_id": "AUDIO-07",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "sound_bridge": {
+      "claim_id": "AUDIO-08",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "subjective_sound": {
+      "claim_id": "AUDIO-09",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "object_sound": {
+      "claim_id": "AUDIO-10",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "audio_information_change": {
+      "claim_id": "AUDIO-11",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "audio_unknowns": [
+      "Dialogue, ambience, score, silence, source, timing, and causal sound meaning remain unknown."
+    ]
+  },
+  "text_anchors": [],
+  "methods": [
+    {
+      "method_id": "BEAR-S01E07-REVIEW-001-METHOD-LEGACY-PICTURE-REVIEW",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The legacy Markdown records a completed manual picture and edit-boundary review.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "BEAR-S01E07-REVIEW-001-S001"
+      ],
+      "unknowns": [
+        "Source-media facts remain unknown."
+      ]
+    },
+    {
+      "method_id": "BEAR-S01E07-REVIEW-001-METHOD-STRUCTURAL-CONVERSION",
+      "method_type": "STRUCTURAL_CONVERSION",
+      "status": "REPOSITORY_REPRODUCIBLE",
+      "description": "Deterministically convert the checked-in legacy tables to Scene Evidence JSON.",
+      "repository_command": "python3 skills/drama-director-compiler/scripts/convert_legacy_scene_evidence.py --check",
+      "tool_version_status": "VERSION_RECORDED",
+      "source_refs": [
+        "BEAR-S01E07-REVIEW-001-S001"
+      ],
+      "unknowns": [
+        "Creative approval and renewed media observation remain unknown."
+      ]
+    },
+    {
+      "method_id": "BEAR-S01E07-REVIEW-001-METHOD-DIRECT-AUDIO",
+      "method_type": "AUDIO_DIRECT_AUDITION",
+      "status": "BLOCKED",
+      "description": "Direct soundtrack audition was not completed for this conversion.",
+      "repository_command": null,
+      "tool_version_status": "NOT_APPLICABLE",
+      "source_refs": [],
+      "unknowns": [
+        "All semantic audio facts remain unknown."
+      ]
+    }
+  ],
+  "auxiliary_evidence": [],
+  "continuity_tracks": [],
+  "candidate_rules": [
+    {
+      "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-081",
+      "legacy_migration": {
+        "trigger": "A shared workplace deadline creates several simultaneous pressure nodes, but the audience must understand one changing priority at a time",
+        "directing_decision": "Treat camera travel as an attention handoff: hold until the current state is legible, then let an entrant, exit, gaze, or line of movement pull the camera to the next zone",
+        "coverage": "Mobile master with deliberate close/medium re-anchors; do not drift continuously at one distance",
+        "blocking": "Have the next priority enter or become visible before the camera abandons the current one",
+        "pacing_edit": "Use dwell and travel duration as rhythm; a cut is optional, not forbidden",
+        "sound": "UNKNOWN in this source; candidate sound lead requires later evidence",
+        "applicability": "Strongest in connected practical spaces with rehearsable routes and causal overlap",
+        "non_applicability": null,
+        "failure_mode": "Camera arrives late, leaves before a reaction lands, or follows movement that does not change story priority",
+        "counterexample": "If a decisive state change is a small object or precise hand action hidden by bodies, use an insert or anchored close view instead of preserving the master",
+        "unknown": "Exact audio cueing and invisible stitches",
+        "ai_risk": "HIGH: multi-character identity drift, path drift, and background-state resets",
+        "fallback": "Break the route into short shots at doorway crossings, body wipes, whip reframes, or brief blank-wall occlusions while preserving zone order and eyelines",
+        "evidence_shots": "`BEAR-S01E07-S001`, especially P1–P8",
+        "confidence": "MEDIUM"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "BEAR-S01E07-REVIEW-001-METHOD-LEGACY-PICTURE-REVIEW",
+        "BEAR-S01E07-REVIEW-001-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "BEAR-S01E07-REVIEW-001"
+      ],
+      "evidence_shot_ids": [
+        "BEAR-S01E07-REVIEW-001-S001"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    },
+    {
+      "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-082",
+      "legacy_migration": {
+        "trigger": "Chaos is escalating inside one known workspace and cutting faster would risk losing geography",
+        "directing_decision": "Revisit a small set of stable zones and allow their occupancy and work state to change; the difference on return communicates escalation",
+        "coverage": "Establish each zone once, then use closer revisits with one stable environmental anchor",
+        "blocking": "Keep entrances/exits and repeated work positions consistent enough that return visits are recognizable",
+        "pacing_edit": "Increase re-entry frequency or shorten dwell as pressure rises; do not require ever-shorter generated clips",
+        "sound": "UNKNOWN",
+        "applicability": "Procedural, kitchen, newsroom, workshop, emergency-response, or backstage scenes",
+        "non_applicability": null,
+        "failure_mode": "Every revisit looks spatially new, so the audience reads teleportation rather than accumulating pressure",
+        "counterexample": "A one-off emotional confession in a neutral room may benefit from sustained stillness instead of repeated zone cycling",
+        "unknown": "Exact prop/order state outside sampled frames",
+        "ai_risk": "HIGH: prop count, repeated extras, costume identity, and floor-plan continuity",
+        "fallback": "Use a fixed floor-plan package, one anchor image per zone, explicit entrance/exit directions, and a continuity ledger; reduce background workers before reducing causal anchors",
+        "evidence_shots": "`BEAR-S01E07-S001`, P2–P9",
+        "confidence": "MEDIUM-HIGH"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "BEAR-S01E07-REVIEW-001-METHOD-LEGACY-PICTURE-REVIEW",
+        "BEAR-S01E07-REVIEW-001-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "BEAR-S01E07-REVIEW-001"
+      ],
+      "evidence_shot_ids": [
+        "BEAR-S01E07-REVIEW-001-S001"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    },
+    {
+      "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C03-SUBTRACTIVE-AFTERMATH",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-083",
+      "legacy_migration": {
+        "trigger": "An operational conflict has produced an exit or irreversible relational withdrawal",
+        "directing_decision": "After the exit, reduce bodies and movement, hold on the person left behind, then allow the camera to settle on an emptied work surface or rule-bearing environment",
+        "coverage": "One reaction hold plus one empty-space aftermath; either can remain in the master or become two shots",
+        "blocking": "Give the departing person a readable route; keep the remaining person's change of posture visible before leaving the face",
+        "pacing_edit": "Lengthen dwell after the exit; avoid immediately restarting ensemble motion",
+        "sound": "UNKNOWN",
+        "applicability": "Rupture, failed leadership, abandonment, shock, or quiet defeat where aftermath matters",
+        "non_applicability": null,
+        "failure_mode": "Empty space arrives before the exit is understood, or becomes decorative because no prior spatial anchor was established",
+        "counterexample": "If the story requires immediate rescue, chase, or damage control, lingering on empty space weakens urgency",
+        "unknown": "Audible exit cue and exact verbal turn",
+        "ai_risk": "MEDIUM: generated actors may disappear without a coherent exit or leave inconsistent props",
+        "fallback": "Use three bounded shots: departure in shared frame, held reactor, then the previously established empty work anchor",
+        "evidence_shots": "`BEAR-S01E07-S001`, P10–P11",
+        "confidence": "MEDIUM-HIGH"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "BEAR-S01E07-REVIEW-001-BEAR-C03-SUBTRACTIVE-AFTERMATH-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "BEAR-S01E07-REVIEW-001-METHOD-LEGACY-PICTURE-REVIEW",
+        "BEAR-S01E07-REVIEW-001-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "BEAR-S01E07-REVIEW-001"
+      ],
+      "evidence_shot_ids": [
+        "BEAR-S01E07-REVIEW-001-S001"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    },
+    {
+      "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C04-FUNCTIONAL-LONG-TAKE-FALLBACK",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-084",
+      "legacy_migration": {
+        "trigger": "A literary scene implies continuous real-time pressure, but generation cannot reliably sustain long multi-character action",
+        "directing_decision": "Preserve the functions of continuity — shared clock, stable geography, carried prop states, and uninterrupted escalation — without requiring a literal 17-minute generation",
+        "coverage": "A chain of short masters, two-shots, reactions, and only necessary process inserts connected by motivated joins",
+        "blocking": "Assign one start/end mark and one state change per generated shot; carry entrances/exits across adjacent shots",
+        "pacing_edit": "Keep a continuous timing ledger and avoid resetting emotional intensity between clips",
+        "sound": "Use a continuous ambience/pressure bed only after sound evidence is separately validated",
+        "applicability": "Any model-neutral pipeline with limited clip duration, identity stability, or complex blocking capacity",
+        "non_applicability": null,
+        "failure_mode": "Treating “one take” as a style target creates unusable duration, identity drift, missing workers, and discontinuous work states",
+        "counterexample": "When a production can safely rehearse and capture a real continuous take, fragmentation may lose embodied spatial pressure; that is a production choice, not a default law",
+        "unknown": "Provider-specific maximum duration and sound-generation capability remain outside this evidence",
+        "ai_risk": "CRITICAL if attempted literally",
+        "fallback": "Split at observed body wipes, doors, whip moves, foreground blocks, and brief empty surfaces; retain the same zone order and escalation checkpoints",
+        "evidence_shots": "`BEAR-S01E07-S001`, full interval",
+        "confidence": "HIGH for fallback necessity; MEDIUM for exact shot recipe"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "BEAR-S01E07-REVIEW-001-BEAR-C04-FUNCTIONAL-LONG-TAKE-FALLBACK-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "BEAR-S01E07-REVIEW-001-METHOD-LEGACY-PICTURE-REVIEW",
+        "BEAR-S01E07-REVIEW-001-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "BEAR-S01E07-REVIEW-001"
+      ],
+      "evidence_shot_ids": [
+        "BEAR-S01E07-REVIEW-001-S001"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    }
+  ],
+  "unknowns": [
+    {
+      "unknown_id": "UNKNOWN-AUDIO",
+      "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
+      "scope": "AUDIO",
+      "blocks_rule_ids": [
+        "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION",
+        "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES",
+        "BEAR-S01E07-REVIEW-001-BEAR-C03-SUBTRACTIVE-AFTERMATH",
+        "BEAR-S01E07-REVIEW-001-BEAR-C04-FUNCTIONAL-LONG-TAKE-FALLBACK"
+      ]
+    },
+    {
+      "unknown_id": "UNKNOWN-EXECUTION",
+      "statement": "Cross-work transfer and generation execution remain unverified and unknown.",
+      "scope": "RULE",
+      "blocks_rule_ids": [
+        "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION",
+        "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES",
+        "BEAR-S01E07-REVIEW-001-BEAR-C03-SUBTRACTIVE-AFTERMATH",
+        "BEAR-S01E07-REVIEW-001-BEAR-C04-FUNCTIONAL-LONG-TAKE-FALLBACK"
+      ]
+    }
+  ],
+  "rights_boundary": {
+    "media_committed": false,
+    "subtitles_committed": false,
+    "scripts_or_long_dialogue_committed": false,
+    "contains_absolute_local_paths": false,
+    "contains_media_hashes": false,
+    "reference_surface_terms": [
+      "THE BEAR S01E07"
+    ],
+    "surface_inventory_status": "HUMAN_REVIEWED_COMPLETE",
+    "prohibited_transfer_content": [
+      "Reference characters, locations, props, dialogue, scene events, and signature compositions."
+    ],
+    "notes": "Human review confirmed that every operational candidate-rule field is the same fixed source-neutral pending-review placeholder. Work-specific legacy text remains only in non-operational lineage; no source media or temporary artifact is embedded."
+  },
+  "validation_status": "HUMAN_REVIEW_PENDING",
+  "validation_warnings": [
+    "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+    "1 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review."
+  ]
+}

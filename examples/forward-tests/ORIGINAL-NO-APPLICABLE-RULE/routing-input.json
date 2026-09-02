@@ -1,0 +1,47 @@
+{
+  "case_id": "ORIGINAL-NO-APPLICABLE-RULE",
+  "dramatic_structure": {
+    "goal": "record a simple arrival",
+    "objectives": [
+      "reach the marked position"
+    ],
+    "obstacle": "none asserted",
+    "stakes": "the next beat waits",
+    "subtext": "none asserted",
+    "tactic_change": "movement ends"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "simple_arrival",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "The courier reaches an empty floor mark."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "simple_stop",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "The courier stops and waits without a conflict or information change."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "simple_arrival",
+    "simple_stop"
+  ],
+  "scene_problem": {
+    "primary": "NO_SPECIALIZED_PROBLEM",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [],
+  "unknown_fact_types": []
+}

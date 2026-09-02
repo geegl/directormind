@@ -1,0 +1,3563 @@
+{
+  "schema_version": "scene-evidence/0.1",
+  "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
+  "work_id": "APOLLO-13-1995",
+  "scene_problem": {
+    "primary": "LEGACY_SCENE_PROBLEM",
+    "secondary": [],
+    "status": "UNKNOWN",
+    "source_refs": [],
+    "notes": "The legacy primary label PROCEDURAL_COMPETENCE is retained only as non-operational lineage and was not proved by structural conversion."
+  },
+  "scene_unit_type": "CONTIGUOUS_EDITORIAL_SEQUENCE",
+  "boundary_status": "BOTH_INTERNAL_SELECTED",
+  "boundary_evidence": {
+    "claim_id": "SCENE-BOUNDARY",
+    "status": "PICTURE_OBSERVED",
+    "value": "Visible endpoints delimit the selected analytical interval; this does not verify production-take status.",
+    "source_refs": [
+      "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
+      "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "production_take_status": "PRODUCTION_METHOD_UNKNOWN",
+  "source_identity_status": "SOURCE_OR_FILENAME_SUPPLIED",
+  "source_start": {
+    "timecode": "01:20:01.130",
+    "seconds": 4801.13,
+    "frame": 115112,
+    "pts": null,
+    "time_base": null
+  },
+  "source_end": {
+    "timecode": "01:21:07.321",
+    "seconds": 4867.321,
+    "frame": 116699,
+    "pts": null,
+    "time_base": null
+  },
+  "duration": 66.191,
+  "time_tolerance_seconds": 0.001,
+  "picture_evidence_status": "PICTURE_OBSERVED",
+  "audio_evidence_status": "BLOCKED_DIRECT_AUDITION",
+  "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+  "scene_dramatic_structure": {
+    "start_state": {
+      "claim_id": "DS-START",
+      "status": "PICTURE_OBSERVED",
+      "value": "The first converted visible unit establishes an initial picture state.",
+      "source_refs": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "objectives": [
+      {
+        "claim_id": "DS-OBJECTIVE",
+        "status": "UNKNOWN",
+        "value": "Character objectives remain unknown without a verified text anchor or direct soundtrack audition.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      }
+    ],
+    "obstacle": {
+      "claim_id": "DS-OBSTACLE",
+      "status": "UNKNOWN",
+      "value": "The dramatic obstacle remains unknown without a verified text anchor or direct soundtrack audition.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "event_point": {
+      "claim_id": "DS-EVENT",
+      "status": "INFERRED",
+      "value": "The converted picture ledger contains visible state changes; their story cause remains unknown.",
+      "source_refs": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "reaction_point": {
+      "claim_id": "DS-REACTION",
+      "status": "UNKNOWN",
+      "value": "Any reaction cause or emotional meaning remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "turn": {
+      "claim_id": "DS-TURN",
+      "status": "INFERRED",
+      "value": "The ordered visible state changes may form a dramatic turn, but the meaning remains inferred.",
+      "source_refs": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "end_state": {
+      "claim_id": "DS-END",
+      "status": "PICTURE_OBSERVED",
+      "value": "The final converted visible unit records the terminal picture state of the selected interval.",
+      "source_refs": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    }
+  },
+  "spatial_geometry": {
+    "claim_id": "SCENE-GEOMETRY",
+    "status": "INFERRED",
+    "value": "The cited units support an inferred project-neutral spatial ledger; exact source identity across cuts is not asserted.",
+    "source_refs": [
+      "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
+      "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "axis": {
+    "claim_id": "SCENE-AXIS",
+    "status": "INFERRED",
+    "value": "Screen direction and axis continuity remain an inference from the cited picture units.",
+    "source_refs": [
+      "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
+      "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "POV": {
+    "claim_id": "SCENE-POV",
+    "status": "INFERRED",
+    "value": "POV function remains inferred from the cited visual coverage and is not treated as optical-POV proof.",
+    "source_refs": [
+      "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
+      "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "audience_information": {
+    "claim_id": "SCENE-AUDIENCE",
+    "status": "INFERRED",
+    "value": "The cited picture units expose an ordered set of visible state changes; dramatic meaning remains inferred or unknown.",
+    "source_refs": [
+      "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
+      "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "shots": [
+    {
+      "shot_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
+      "order": 1,
+      "completeness": "PARTIAL_AT_START",
+      "start": {
+        "timecode": "01:20:01.130",
+        "seconds": 4801.13,
+        "frame": 115112,
+        "pts": null,
+        "time_base": null
+      },
+      "end": {
+        "timecode": "01:20:09.638",
+        "seconds": 4809.638,
+        "frame": 115316,
+        "pts": null,
+        "time_base": null
+      },
+      "duration": 8.508,
+      "shot_size": {
+        "claim_id": "S001-SIZE",
+        "status": "PICTURE_OBSERVED",
+        "value": "starts with a full-frame wall display and opens to WS/MWS ROOM-A ensemble",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_height": {
+        "claim_id": "S001-HEIGHT",
+        "status": "PICTURE_OBSERVED",
+        "value": "near-level on display, then lowers toward standing/leaning people and consoles",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_angle": {
+        "claim_id": "S001-ANGLE",
+        "status": "PICTURE_OBSERVED",
+        "value": "near-level on display, then lowers toward standing/leaning people and consoles",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_motion": {
+        "claim_id": "S001-MOTION",
+        "status": "PICTURE_OBSERVED",
+        "value": "continuous downward/backward widening; the display shrinks as people and consoles enter; dolly/zoom/support method UNKNOWN",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_start": {
+        "claim_id": "S001-CAM-START",
+        "status": "INFERRED",
+        "value": "wall line/diagram graphic initially fills frame; green consoles and several workers enter the lower/side frame as the view opens",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: dim green/cyan display wall, green consoles, white shirts and warmer skin tones; original grading pipeline UNKNOWN"
+      },
+      "camera_path": {
+        "claim_id": "S001-CAM-PATH",
+        "status": "PICTURE_OBSERVED",
+        "value": "continuous downward/backward widening; the display shrinks as people and consoles enter; dolly/zoom/support method UNKNOWN",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_end": {
+        "claim_id": "S001-CAM-END",
+        "status": "INFERRED",
+        "value": "wall line/diagram graphic initially fills frame; green consoles and several workers enter the lower/side frame as the view opens",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "focus_strategy": {
+        "claim_id": "S001-FOCUS",
+        "status": "PICTURE_OBSERVED",
+        "value": "display is initially legible; later the approaching group and consoles become legible with working depth across the room; exact lens/focus mechanics UNKNOWN",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S001-ZONE",
+          "status": "INFERRED",
+          "value": "wall line/diagram graphic initially fills frame; green consoles and several workers enter the lower/side frame as the view opens",
+          "source_refs": [
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+          ],
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        }
+      ],
+      "axis_and_screen_direction": {
+        "claim_id": "S001-AXIS",
+        "status": "INFERRED",
+        "value": "continuous movement toward the same console group; final positions establish the later reciprocal coverage geometry",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "abstract_role_labels": [],
+      "blocking": {
+        "claim_id": "S001-BLOCK",
+        "status": "INFERRED",
+        "value": "one bespectacled worker crosses toward a seated light-haired MC-B while coworkers gather around the console",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_action": {
+        "claim_id": "S001-ACTION",
+        "status": "INFERRED",
+        "value": "wall graphic yields to a worker's approach, reach and stop at the seated group",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_in": {
+        "claim_id": "S001-STATE-IN",
+        "status": "INFERRED",
+        "value": "wall line/diagram graphic initially fills frame; green consoles and several workers enter the lower/side frame as the view opens",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_out": {
+        "claim_id": "S001-STATE-OUT",
+        "status": "INFERRED",
+        "value": "wall graphic yields to a worker's approach, reach and stop at the seated group",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "event_or_reaction": {
+        "claim_id": "S001-EVENT",
+        "status": "INFERRED",
+        "value": "event/presentation beat",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "performance_beat": {
+        "claim_id": "S001-PERF",
+        "status": "INFERRED",
+        "value": "approaching worker's mouth and hands move; seated MC-B turns head/gaze toward him",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_in": {
+        "claim_id": "S001-EDIT-IN",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F115112 from preceding interior group view",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_out": {
+        "claim_id": "S001-EDIT-OUT",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F115316",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "cut_motivation": {
+        "claim_id": "S001-CUT-MOTIVE",
+        "status": "INFERRED",
+        "value": "move from abstract system display to the people carrying a newly presented issue",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "narrative_function": {
+        "claim_id": "S001-FUNCTION",
+        "status": "INFERRED",
+        "value": "establish the operational space and route audience attention from data to an arriving report",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "AI_complexity": {
+        "camera": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to camera=HIGH; execution remains unverified."
+          ]
+        },
+        "performance": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to performance=HIGH; execution remains unverified."
+          ]
+        },
+        "continuity": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to continuity=HIGH; execution remains unverified."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001's cited visible state-in, state-out, and edit endpoints with a project-original locked-off camera; split the beat if that exact state transition cannot be held.",
+        "performance": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001's cited visible action and performance-beat claims; limit the project-original shot to that one verified state change.",
+        "continuity": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001's cited zone, axis, state-in, and state-out claims in project-original coverage; split the beat instead of inventing an unverified cross-shot state.",
+        "project_original_only": true
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    },
+    {
+      "shot_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002",
+      "order": 2,
+      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "start": {
+        "timecode": "01:20:09.638",
+        "seconds": 4809.638,
+        "frame": 115316,
+        "pts": null,
+        "time_base": null
+      },
+      "end": {
+        "timecode": "01:20:12.057",
+        "seconds": 4812.057,
+        "frame": 115374,
+        "pts": null,
+        "time_base": null
+      },
+      "duration": 2.419,
+      "shot_size": {
+        "claim_id": "S002-SIZE",
+        "status": "PICTURE_OBSERVED",
+        "value": "MCU single seated light-haired MC-B",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_height": {
+        "claim_id": "S002-HEIGHT",
+        "status": "PICTURE_OBSERVED",
+        "value": "near eye-level, slight three-quarter",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_angle": {
+        "claim_id": "S002-ANGLE",
+        "status": "PICTURE_OBSERVED",
+        "value": "near eye-level, slight three-quarter",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_motion": {
+        "claim_id": "S002-MOTION",
+        "status": "PICTURE_OBSERVED",
+        "value": "no evident camera displacement",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_start": {
+        "claim_id": "S002-CAM-START",
+        "status": "INFERRED",
+        "value": "MC-B fills center/right; work area and people fall soft behind him",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm face and pale shirt/vest against muted green/grey background"
+      },
+      "camera_path": {
+        "claim_id": "S002-CAM-PATH",
+        "status": "PICTURE_OBSERVED",
+        "value": "no evident camera displacement",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_end": {
+        "claim_id": "S002-CAM-END",
+        "status": "INFERRED",
+        "value": "MC-B fills center/right; work area and people fall soft behind him",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "focus_strategy": {
+        "claim_id": "S002-FOCUS",
+        "status": "PICTURE_OBSERVED",
+        "value": "shallow-to-moderate depth isolates face; background workers/consoles soften; lens/aperture UNKNOWN",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S002-ZONE",
+          "status": "INFERRED",
+          "value": "MC-B fills center/right; work area and people fall soft behind him",
+          "source_refs": [
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+          ],
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        }
+      ],
+      "axis_and_screen_direction": {
+        "claim_id": "S002-AXIS",
+        "status": "INFERRED",
+        "value": "eyeline toward screen-left/near-camera group supports a reciprocal exchange across the console; exact axis is not fully geometric-proofed",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "abstract_role_labels": [],
+      "blocking": {
+        "claim_id": "S002-BLOCK",
+        "status": "INFERRED",
+        "value": "MC-B remains seated and looks toward the off-screen MC-A-side group",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_action": {
+        "claim_id": "S002-ACTION",
+        "status": "INFERRED",
+        "value": "eyes shift toward the group; head remains largely still",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_in": {
+        "claim_id": "S002-STATE-IN",
+        "status": "INFERRED",
+        "value": "MC-B fills center/right; work area and people fall soft behind him",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_out": {
+        "claim_id": "S002-STATE-OUT",
+        "status": "INFERRED",
+        "value": "eyes shift toward the group; head remains largely still",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "event_or_reaction": {
+        "claim_id": "S002-EVENT",
+        "status": "INFERRED",
+        "value": "reaction/listening beat",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "performance_beat": {
+        "claim_id": "S002-PERF",
+        "status": "INFERRED",
+        "value": "lips stay closed or minimally move; gaze fixes and mouth stays closed while the brow/eye area changes slightly",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_in": {
+        "claim_id": "S002-EDIT-IN",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F115316 from moving ensemble establishment",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_out": {
+        "claim_id": "S002-EDIT-OUT",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F115374",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "cut_motivation": {
+        "claim_id": "S002-CUT-MOTIVE",
+        "status": "INFERRED",
+        "value": "isolate the seated MC-B-side reaction after the approach",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "narrative_function": {
+        "claim_id": "S002-FUNCTION",
+        "status": "INFERRED",
+        "value": "mark reception of the report before returning to the MC-A-side workers",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "AI_complexity": {
+        "camera": {
+          "level": "MEDIUM",
+          "reasons": [
+            "Legacy risk was conservatively mapped to camera=MEDIUM; execution remains unverified."
+          ]
+        },
+        "performance": {
+          "level": "MEDIUM",
+          "reasons": [
+            "Legacy risk was conservatively mapped to performance=MEDIUM; execution remains unverified."
+          ]
+        },
+        "continuity": {
+          "level": "MEDIUM",
+          "reasons": [
+            "Legacy risk was conservatively mapped to continuity=MEDIUM; execution remains unverified."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    },
+    {
+      "shot_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003",
+      "order": 3,
+      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "start": {
+        "timecode": "01:20:12.057",
+        "seconds": 4812.057,
+        "frame": 115374,
+        "pts": null,
+        "time_base": null
+      },
+      "end": {
+        "timecode": "01:20:18.981",
+        "seconds": 4818.981,
+        "frame": 115540,
+        "pts": null,
+        "time_base": null
+      },
+      "duration": 6.924,
+      "shot_size": {
+        "claim_id": "S003-SIZE",
+        "status": "PICTURE_OBSERVED",
+        "value": "MCU/medium group at console",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_height": {
+        "claim_id": "S003-HEIGHT",
+        "status": "PICTURE_OBSERVED",
+        "value": "near eye-level, frontal three-quarter on central bespectacled worker",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_angle": {
+        "claim_id": "S003-ANGLE",
+        "status": "PICTURE_OBSERVED",
+        "value": "near eye-level, frontal three-quarter on central bespectacled worker",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_motion": {
+        "claim_id": "S003-MOTION",
+        "status": "PICTURE_OBSERVED",
+        "value": "no evident camera displacement",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_start": {
+        "claim_id": "S003-CAM-START",
+        "status": "INFERRED",
+        "value": "central checked-shirt worker dominates; a pale-shirt coworker is partial left, a dark-jacket coworker leans at right, another face sits deep right; dense illuminated wall panel/display fills background",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool blue/green board behind white/checked shirts and warmer faces"
+      },
+      "camera_path": {
+        "claim_id": "S003-CAM-PATH",
+        "status": "PICTURE_OBSERVED",
+        "value": "no evident camera displacement",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_end": {
+        "claim_id": "S003-CAM-END",
+        "status": "INFERRED",
+        "value": "central checked-shirt worker dominates; a pale-shirt coworker is partial left, a dark-jacket coworker leans at right, another face sits deep right; dense illuminated wall panel/display fills background",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "focus_strategy": {
+        "claim_id": "S003-FOCUS",
+        "status": "PICTURE_OBSERVED",
+        "value": "central and right faces sharp; extreme-left/deep-right faces softer; illuminated wall panel/display remains recognizable but not fully readable",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S003-ZONE",
+          "status": "INFERRED",
+          "value": "central checked-shirt worker dominates; a pale-shirt coworker is partial left, a dark-jacket coworker leans at right, another face sits deep right; dense illuminated wall panel/display fills background",
+          "source_refs": [
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+          ],
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        }
+      ],
+      "axis_and_screen_direction": {
+        "claim_id": "S003-AXIS",
+        "status": "INFERRED",
+        "value": "central/downward gaze and screen-right lean remain consistent with the seated MC-B across the console; exact multi-person eyelines UNKNOWN",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "abstract_role_labels": [],
+      "blocking": {
+        "claim_id": "S003-BLOCK",
+        "status": "INFERRED",
+        "value": "central worker leans over console; right coworker leans closer; adjacent coworkers hold positions",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_action": {
+        "claim_id": "S003-ACTION",
+        "status": "INFERRED",
+        "value": "central worker looks down/across and repeatedly moves mouth; coworkers shift head/gaze toward the central person/console",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_in": {
+        "claim_id": "S003-STATE-IN",
+        "status": "INFERRED",
+        "value": "central checked-shirt worker dominates; a pale-shirt coworker is partial left, a dark-jacket coworker leans at right, another face sits deep right; dense illuminated wall panel/display fills background",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_out": {
+        "claim_id": "S003-STATE-OUT",
+        "status": "INFERRED",
+        "value": "central worker looks down/across and repeatedly moves mouth; coworkers shift head/gaze toward the central person/console",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "event_or_reaction": {
+        "claim_id": "S003-EVENT",
+        "status": "INFERRED",
+        "value": "exposition/reporting beat",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "performance_beat": {
+        "claim_id": "S003-PERF",
+        "status": "INFERRED",
+        "value": "central mouth movement continues while the right coworker advances into shared frame",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_in": {
+        "claim_id": "S003-EDIT-IN",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F115374 from MC-B-side single",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_out": {
+        "claim_id": "S003-EDIT-OUT",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F115540",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "cut_motivation": {
+        "claim_id": "S003-CUT-MOTIVE",
+        "status": "INFERRED",
+        "value": "return to the reporting side and hold long enough for multiple visible contributions",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "narrative_function": {
+        "claim_id": "S003-FUNCTION",
+        "status": "INFERRED",
+        "value": "externalize the issue through a shared specialist cluster rather than a single isolated speaker",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "AI_complexity": {
+        "camera": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to camera=HIGH; execution remains unverified."
+          ]
+        },
+        "performance": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to performance=HIGH; execution remains unverified."
+          ]
+        },
+        "continuity": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to continuity=HIGH; execution remains unverified."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003's cited visible state-in, state-out, and edit endpoints with a project-original locked-off camera; split the beat if that exact state transition cannot be held.",
+        "performance": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003's cited visible action and performance-beat claims; limit the project-original shot to that one verified state change.",
+        "continuity": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003's cited zone, axis, state-in, and state-out claims in project-original coverage; split the beat instead of inventing an unverified cross-shot state.",
+        "project_original_only": true
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    },
+    {
+      "shot_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004",
+      "order": 4,
+      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "start": {
+        "timecode": "01:20:18.981",
+        "seconds": 4818.981,
+        "frame": 115540,
+        "pts": null,
+        "time_base": null
+      },
+      "end": {
+        "timecode": "01:20:22.526",
+        "seconds": 4822.526,
+        "frame": 115625,
+        "pts": null,
+        "time_base": null
+      },
+      "duration": 3.545,
+      "shot_size": {
+        "claim_id": "S004-SIZE",
+        "status": "PICTURE_OBSERVED",
+        "value": "MCU single seated MC-B with coworker behind",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_height": {
+        "claim_id": "S004-HEIGHT",
+        "status": "PICTURE_OBSERVED",
+        "value": "near eye-level, frontal three-quarter",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_angle": {
+        "claim_id": "S004-ANGLE",
+        "status": "PICTURE_OBSERVED",
+        "value": "near eye-level, frontal three-quarter",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_motion": {
+        "claim_id": "S004-MOTION",
+        "status": "PICTURE_OBSERVED",
+        "value": "no evident camera displacement",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_start": {
+        "claim_id": "S004-CAM-START",
+        "status": "INFERRED",
+        "value": "MC-B occupies right-center; blurred foreground head/shoulder enters left; headset coworker sits behind",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm skin/pale clothing against green console partitions"
+      },
+      "camera_path": {
+        "claim_id": "S004-CAM-PATH",
+        "status": "PICTURE_OBSERVED",
+        "value": "no evident camera displacement",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_end": {
+        "claim_id": "S004-CAM-END",
+        "status": "INFERRED",
+        "value": "MC-B occupies right-center; blurred foreground head/shoulder enters left; headset coworker sits behind",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "focus_strategy": {
+        "claim_id": "S004-FOCUS",
+        "status": "PICTURE_OBSERVED",
+        "value": "face sharp, foreground and rear coworker softer; exact focus distance/lens UNKNOWN",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S004-ZONE",
+          "status": "INFERRED",
+          "value": "MC-B occupies right-center; blurred foreground head/shoulder enters left; headset coworker sits behind",
+          "source_refs": [
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+          ],
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        }
+      ],
+      "axis_and_screen_direction": {
+        "claim_id": "S004-AXIS",
+        "status": "INFERRED",
+        "value": "reciprocal screen relation to S003 is preserved; foreground blur marks the reporting side near camera",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "abstract_role_labels": [],
+      "blocking": {
+        "claim_id": "S004-BLOCK",
+        "status": "INFERRED",
+        "value": "MC-B stays seated; background coworker watches from behind his shoulder",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_action": {
+        "claim_id": "S004-ACTION",
+        "status": "INFERRED",
+        "value": "MC-B lowers gaze; faint pale vapor passes near face; torso remains nearly still",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_in": {
+        "claim_id": "S004-STATE-IN",
+        "status": "INFERRED",
+        "value": "MC-B occupies right-center; blurred foreground head/shoulder enters left; headset coworker sits behind",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_out": {
+        "claim_id": "S004-STATE-OUT",
+        "status": "INFERRED",
+        "value": "MC-B lowers gaze; faint pale vapor passes near face; torso remains nearly still",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "event_or_reaction": {
+        "claim_id": "S004-EVENT",
+        "status": "INFERRED",
+        "value": "processing/reaction beat",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "performance_beat": {
+        "claim_id": "S004-PERF",
+        "status": "INFERRED",
+        "value": "eyes and mouth make small changes while the foreground remains out of focus",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_in": {
+        "claim_id": "S004-EDIT-IN",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F115540 from MC-A-side-group setup",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_out": {
+        "claim_id": "S004-EDIT-OUT",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F115625",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "cut_motivation": {
+        "claim_id": "S004-CUT-MOTIVE",
+        "status": "INFERRED",
+        "value": "punctuate the report with an MC-B-side processing hold",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "narrative_function": {
+        "claim_id": "S004-FUNCTION",
+        "status": "INFERRED",
+        "value": "keep decision ownership visible without adding new spatial information",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "AI_complexity": {
+        "camera": {
+          "level": "MEDIUM",
+          "reasons": [
+            "Legacy risk was conservatively mapped to camera=MEDIUM; execution remains unverified."
+          ]
+        },
+        "performance": {
+          "level": "MEDIUM",
+          "reasons": [
+            "Legacy risk was conservatively mapped to performance=MEDIUM; execution remains unverified."
+          ]
+        },
+        "continuity": {
+          "level": "MEDIUM",
+          "reasons": [
+            "Legacy risk was conservatively mapped to continuity=MEDIUM; execution remains unverified."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    },
+    {
+      "shot_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005",
+      "order": 5,
+      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "start": {
+        "timecode": "01:20:22.526",
+        "seconds": 4822.526,
+        "frame": 115625,
+        "pts": null,
+        "time_base": null
+      },
+      "end": {
+        "timecode": "01:20:24.945",
+        "seconds": 4824.945,
+        "frame": 115683,
+        "pts": null,
+        "time_base": null
+      },
+      "duration": 2.419,
+      "shot_size": {
+        "claim_id": "S005-SIZE",
+        "status": "PICTURE_OBSERVED",
+        "value": "MCU/medium group at console",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_height": {
+        "claim_id": "S005-HEIGHT",
+        "status": "PICTURE_OBSERVED",
+        "value": "near eye-level, frontal three-quarter",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_angle": {
+        "claim_id": "S005-ANGLE",
+        "status": "PICTURE_OBSERVED",
+        "value": "near eye-level, frontal three-quarter",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_motion": {
+        "claim_id": "S005-MOTION",
+        "status": "PICTURE_OBSERVED",
+        "value": "no evident camera displacement",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_start": {
+        "claim_id": "S005-CAM-START",
+        "status": "INFERRED",
+        "value": "same central checked-shirt worker and right dark-jacket coworker, with partial faces at left and deep right; illuminated wall panel/display behind",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: same cool illuminated-wall-panel/display/green-console palette with pale shirts"
+      },
+      "camera_path": {
+        "claim_id": "S005-CAM-PATH",
+        "status": "PICTURE_OBSERVED",
+        "value": "no evident camera displacement",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_end": {
+        "claim_id": "S005-CAM-END",
+        "status": "INFERRED",
+        "value": "same central checked-shirt worker and right dark-jacket coworker, with partial faces at left and deep right; illuminated wall panel/display behind",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "focus_strategy": {
+        "claim_id": "S005-FOCUS",
+        "status": "PICTURE_OBSERVED",
+        "value": "central/right faces sharp; edge faces and board softer",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S005-ZONE",
+          "status": "INFERRED",
+          "value": "same central checked-shirt worker and right dark-jacket coworker, with partial faces at left and deep right; illuminated wall panel/display behind",
+          "source_refs": [
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+          ],
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        }
+      ],
+      "axis_and_screen_direction": {
+        "claim_id": "S005-AXIS",
+        "status": "INFERRED",
+        "value": "INFERRED: repeated composition and body positions preserve the console-side axis; exact speaker attribution UNKNOWN",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "abstract_role_labels": [],
+      "blocking": {
+        "claim_id": "S005-BLOCK",
+        "status": "INFERRED",
+        "value": "central worker remains bent toward console; right coworker stays close at shoulder",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_action": {
+        "claim_id": "S005-ACTION",
+        "status": "INFERRED",
+        "value": "central mouth/gaze move; right coworker watches downward",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_in": {
+        "claim_id": "S005-STATE-IN",
+        "status": "INFERRED",
+        "value": "same central checked-shirt worker and right dark-jacket coworker, with partial faces at left and deep right; illuminated wall panel/display behind",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_out": {
+        "claim_id": "S005-STATE-OUT",
+        "status": "INFERRED",
+        "value": "central mouth/gaze move; right coworker watches downward",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "event_or_reaction": {
+        "claim_id": "S005-EVENT",
+        "status": "INFERRED",
+        "value": "information/event continuation",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "performance_beat": {
+        "claim_id": "S005-PERF",
+        "status": "INFERRED",
+        "value": "central and right mouths/gazes move while both remain directed downward/across within the shared frame",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_in": {
+        "claim_id": "S005-EDIT-IN",
+        "status": "INFERRED",
+        "value": "single-frame hard cut at F115625 from MC-B-side reaction",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_out": {
+        "claim_id": "S005-EDIT-OUT",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F115683",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "cut_motivation": {
+        "claim_id": "S005-CUT-MOTIVE",
+        "status": "INFERRED",
+        "value": "resume the reporting side for another constraint beat",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "narrative_function": {
+        "claim_id": "S005-FUNCTION",
+        "status": "INFERRED",
+        "value": "compress an additional visible contribution without rebuilding geography",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "AI_complexity": {
+        "camera": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to camera=HIGH; execution remains unverified."
+          ]
+        },
+        "performance": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to performance=HIGH; execution remains unverified."
+          ]
+        },
+        "continuity": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to continuity=HIGH; execution remains unverified."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005's cited visible state-in, state-out, and edit endpoints with a project-original locked-off camera; split the beat if that exact state transition cannot be held.",
+        "performance": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005's cited visible action and performance-beat claims; limit the project-original shot to that one verified state change.",
+        "continuity": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005's cited zone, axis, state-in, and state-out claims in project-original coverage; split the beat instead of inventing an unverified cross-shot state.",
+        "project_original_only": true
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    },
+    {
+      "shot_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006",
+      "order": 6,
+      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "start": {
+        "timecode": "01:20:24.945",
+        "seconds": 4824.945,
+        "frame": 115683,
+        "pts": null,
+        "time_base": null
+      },
+      "end": {
+        "timecode": "01:20:29.867",
+        "seconds": 4829.867,
+        "frame": 115801,
+        "pts": null,
+        "time_base": null
+      },
+      "duration": 4.922,
+      "shot_size": {
+        "claim_id": "S006-SIZE",
+        "status": "PICTURE_OBSERVED",
+        "value": "MCU single seated MC-B",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_height": {
+        "claim_id": "S006-HEIGHT",
+        "status": "PICTURE_OBSERVED",
+        "value": "near eye-level, frontal three-quarter",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_angle": {
+        "claim_id": "S006-ANGLE",
+        "status": "PICTURE_OBSERVED",
+        "value": "near eye-level, frontal three-quarter",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_motion": {
+        "claim_id": "S006-MOTION",
+        "status": "PICTURE_OBSERVED",
+        "value": "no evident camera displacement",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_start": {
+        "claim_id": "S006-CAM-START",
+        "status": "INFERRED",
+        "value": "MC-B right-center, blurred foreground left, coworker behind; console partitions recede diagonally",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm face and white vest contrasted with green/grey room"
+      },
+      "camera_path": {
+        "claim_id": "S006-CAM-PATH",
+        "status": "PICTURE_OBSERVED",
+        "value": "no evident camera displacement",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_end": {
+        "claim_id": "S006-CAM-END",
+        "status": "INFERRED",
+        "value": "MC-B right-center, blurred foreground left, coworker behind; console partitions recede diagonally",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "focus_strategy": {
+        "claim_id": "S006-FOCUS",
+        "status": "PICTURE_OBSERVED",
+        "value": "face and hand sharp; foreground/background softer",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S006-ZONE",
+          "status": "INFERRED",
+          "value": "MC-B right-center, blurred foreground left, coworker behind; console partitions recede diagonally",
+          "source_refs": [
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+          ],
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        }
+      ],
+      "axis_and_screen_direction": {
+        "claim_id": "S006-AXIS",
+        "status": "INFERRED",
+        "value": "gaze and foreground orientation remain consistent with the group across the console",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "abstract_role_labels": [],
+      "blocking": {
+        "claim_id": "S006-BLOCK",
+        "status": "INFERRED",
+        "value": "MC-B stays seated and brings pen/hand to brow, then changes head angle",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_action": {
+        "claim_id": "S006-ACTION",
+        "status": "INFERRED",
+        "value": "hand presses near closed/downcast eyes; gaze later rises toward group",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_in": {
+        "claim_id": "S006-STATE-IN",
+        "status": "INFERRED",
+        "value": "MC-B right-center, blurred foreground left, coworker behind; console partitions recede diagonally",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_out": {
+        "claim_id": "S006-STATE-OUT",
+        "status": "INFERRED",
+        "value": "hand presses near closed/downcast eyes; gaze later rises toward group",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "event_or_reaction": {
+        "claim_id": "S006-EVENT",
+        "status": "INFERRED",
+        "value": "reaction/decision-processing beat",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "performance_beat": {
+        "claim_id": "S006-PERF",
+        "status": "INFERRED",
+        "value": "hand remains at brow while eyes stay lowered; gaze then rises",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_in": {
+        "claim_id": "S006-EDIT-IN",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F115683 from group coverage",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_out": {
+        "claim_id": "S006-EDIT-OUT",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F115801",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "cut_motivation": {
+        "claim_id": "S006-CUT-MOTIVE",
+        "status": "INFERRED",
+        "value": "lengthen the MC-B-side hold with a concrete hand-to-brow action",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "narrative_function": {
+        "claim_id": "S006-FUNCTION",
+        "status": "INFERRED",
+        "value": "convert abstract pressure into a visible pause before another report beat",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "AI_complexity": {
+        "camera": {
+          "level": "MEDIUM",
+          "reasons": [
+            "Legacy risk was conservatively mapped to camera=MEDIUM; execution remains unverified."
+          ]
+        },
+        "performance": {
+          "level": "MEDIUM",
+          "reasons": [
+            "Legacy risk was conservatively mapped to performance=MEDIUM; execution remains unverified."
+          ]
+        },
+        "continuity": {
+          "level": "MEDIUM",
+          "reasons": [
+            "Legacy risk was conservatively mapped to continuity=MEDIUM; execution remains unverified."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    },
+    {
+      "shot_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007",
+      "order": 7,
+      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "start": {
+        "timecode": "01:20:29.867",
+        "seconds": 4829.867,
+        "frame": 115801,
+        "pts": null,
+        "time_base": null
+      },
+      "end": {
+        "timecode": "01:20:32.578",
+        "seconds": 4832.578,
+        "frame": 115866,
+        "pts": null,
+        "time_base": null
+      },
+      "duration": 2.711,
+      "shot_size": {
+        "claim_id": "S007-SIZE",
+        "status": "PICTURE_OBSERVED",
+        "value": "MCU/medium group at console",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_height": {
+        "claim_id": "S007-HEIGHT",
+        "status": "PICTURE_OBSERVED",
+        "value": "near eye-level, frontal three-quarter",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_angle": {
+        "claim_id": "S007-ANGLE",
+        "status": "PICTURE_OBSERVED",
+        "value": "near eye-level, frontal three-quarter",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_motion": {
+        "claim_id": "S007-MOTION",
+        "status": "PICTURE_OBSERVED",
+        "value": "no evident camera displacement",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_start": {
+        "claim_id": "S007-CAM-START",
+        "status": "INFERRED",
+        "value": "repeated four-person cluster; dark-jacket coworker leans close to the central checked-shirt worker; illuminated wall panel/display fills rear",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool board and green-console environment, white/dark work clothing"
+      },
+      "camera_path": {
+        "claim_id": "S007-CAM-PATH",
+        "status": "PICTURE_OBSERVED",
+        "value": "no evident camera displacement",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_end": {
+        "claim_id": "S007-CAM-END",
+        "status": "INFERRED",
+        "value": "repeated four-person cluster; dark-jacket coworker leans close to the central checked-shirt worker; illuminated wall panel/display fills rear",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "focus_strategy": {
+        "claim_id": "S007-FOCUS",
+        "status": "PICTURE_OBSERVED",
+        "value": "central/right faces sharp with soft edge figures; board recognizable",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S007-ZONE",
+          "status": "INFERRED",
+          "value": "repeated four-person cluster; dark-jacket coworker leans close to the central checked-shirt worker; illuminated wall panel/display fills rear",
+          "source_refs": [
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+          ],
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        }
+      ],
+      "axis_and_screen_direction": {
+        "claim_id": "S007-AXIS",
+        "status": "INFERRED",
+        "value": "same console-side screen relation and shared eyelines maintained; exact attribution/content UNKNOWN",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "abstract_role_labels": [],
+      "blocking": {
+        "claim_id": "S007-BLOCK",
+        "status": "INFERRED",
+        "value": "central worker holds low gaze while right coworker moves mouth and leans in; edge coworkers keep gaze toward the central console area",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_action": {
+        "claim_id": "S007-ACTION",
+        "status": "INFERRED",
+        "value": "right coworker's mouth and head move; central worker stays fixed on console",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_in": {
+        "claim_id": "S007-STATE-IN",
+        "status": "INFERRED",
+        "value": "repeated four-person cluster; dark-jacket coworker leans close to the central checked-shirt worker; illuminated wall panel/display fills rear",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_out": {
+        "claim_id": "S007-STATE-OUT",
+        "status": "INFERRED",
+        "value": "right coworker's mouth and head move; central worker stays fixed on console",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "event_or_reaction": {
+        "claim_id": "S007-EVENT",
+        "status": "INFERRED",
+        "value": "final information beat",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "performance_beat": {
+        "claim_id": "S007-PERF",
+        "status": "INFERRED",
+        "value": "right coworker's mouth/head move while the central coworker remains bent over the console",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_in": {
+        "claim_id": "S007-EDIT-IN",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F115801 from MC-B-side hold",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_out": {
+        "claim_id": "S007-EDIT-OUT",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F115866",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "cut_motivation": {
+        "claim_id": "S007-CUT-MOTIVE",
+        "status": "INFERRED",
+        "value": "give another group member the last visible contribution before MC-B-side response",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "narrative_function": {
+        "claim_id": "S007-FUNCTION",
+        "status": "INFERRED",
+        "value": "complete the reporting cluster's side of the exchange",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "AI_complexity": {
+        "camera": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to camera=HIGH; execution remains unverified."
+          ]
+        },
+        "performance": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to performance=HIGH; execution remains unverified."
+          ]
+        },
+        "continuity": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to continuity=HIGH; execution remains unverified."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007's cited visible state-in, state-out, and edit endpoints with a project-original locked-off camera; split the beat if that exact state transition cannot be held.",
+        "performance": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007's cited visible action and performance-beat claims; limit the project-original shot to that one verified state change.",
+        "continuity": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007's cited zone, axis, state-in, and state-out claims in project-original coverage; split the beat instead of inventing an unverified cross-shot state.",
+        "project_original_only": true
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    },
+    {
+      "shot_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008",
+      "order": 8,
+      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "start": {
+        "timecode": "01:20:32.578",
+        "seconds": 4832.578,
+        "frame": 115866,
+        "pts": null,
+        "time_base": null
+      },
+      "end": {
+        "timecode": "01:20:40.169",
+        "seconds": 4840.169,
+        "frame": 116048,
+        "pts": null,
+        "time_base": null
+      },
+      "duration": 7.591,
+      "shot_size": {
+        "claim_id": "S008-SIZE",
+        "status": "PICTURE_OBSERVED",
+        "value": "MCU single seated MC-B with coworker behind",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_height": {
+        "claim_id": "S008-HEIGHT",
+        "status": "PICTURE_OBSERVED",
+        "value": "near eye-level, frontal three-quarter",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_angle": {
+        "claim_id": "S008-ANGLE",
+        "status": "PICTURE_OBSERVED",
+        "value": "near eye-level, frontal three-quarter",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_motion": {
+        "claim_id": "S008-MOTION",
+        "status": "PICTURE_OBSERVED",
+        "value": "no evident camera displacement",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_start": {
+        "claim_id": "S008-CAM-START",
+        "status": "INFERRED",
+        "value": "MC-B dominates right-center; blurred head/shoulder remains left foreground; headset coworker behind",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: same warm skin/white vest against green/grey ROOM-A console background"
+      },
+      "camera_path": {
+        "claim_id": "S008-CAM-PATH",
+        "status": "PICTURE_OBSERVED",
+        "value": "no evident camera displacement",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_end": {
+        "claim_id": "S008-CAM-END",
+        "status": "INFERRED",
+        "value": "MC-B dominates right-center; blurred head/shoulder remains left foreground; headset coworker behind",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "focus_strategy": {
+        "claim_id": "S008-FOCUS",
+        "status": "PICTURE_OBSERVED",
+        "value": "MC-B/hand sharp, foreground and rear coworker softer",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S008-ZONE",
+          "status": "INFERRED",
+          "value": "MC-B dominates right-center; blurred head/shoulder remains left foreground; headset coworker behind",
+          "source_refs": [
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+          ],
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        }
+      ],
+      "axis_and_screen_direction": {
+        "claim_id": "S008-AXIS",
+        "status": "INFERRED",
+        "value": "reciprocal eyeline persists inside ROOM-A; location changes at edit_out, so spatial axis resets in S009",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "abstract_role_labels": [],
+      "blocking": {
+        "claim_id": "S008-BLOCK",
+        "status": "INFERRED",
+        "value": "MC-B remains seated, raises pen/hand, looks across and makes a small outward pen/hand gesture",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_action": {
+        "claim_id": "S008-ACTION",
+        "status": "INFERRED",
+        "value": "gaze lifts; mouth moves; pen hand points/marks beats; head/gaze lift from down toward the group while the pen hand marks beats",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_in": {
+        "claim_id": "S008-STATE-IN",
+        "status": "INFERRED",
+        "value": "MC-B dominates right-center; blurred head/shoulder remains left foreground; headset coworker behind",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_out": {
+        "claim_id": "S008-STATE-OUT",
+        "status": "INFERRED",
+        "value": "gaze lifts; mouth moves; pen hand points/marks beats; head/gaze lift from down toward the group while the pen hand marks beats",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "event_or_reaction": {
+        "claim_id": "S008-EVENT",
+        "status": "INFERRED",
+        "value": "response/transition beat",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "performance_beat": {
+        "claim_id": "S008-PERF",
+        "status": "INFERRED",
+        "value": "visible transition from lowered gaze to outward pen gesture while coworker watches behind",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_in": {
+        "claim_id": "S008-EDIT-IN",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F115866 from MC-A-side group",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_out": {
+        "claim_id": "S008-EDIT-OUT",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F116048 to ROOM-B",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "cut_motivation": {
+        "claim_id": "S008-CUT-MOTIVE",
+        "status": "INFERRED",
+        "value": "hold MC-B-side visible response, then hand the task to a new location",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "narrative_function": {
+        "claim_id": "S008-FUNCTION",
+        "status": "INFERRED",
+        "value": "visually juxtapose the ROOM-A response with the ROOM-B material arrival and invite an assessment-to-action reading",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "AI_complexity": {
+        "camera": {
+          "level": "MEDIUM",
+          "reasons": [
+            "Legacy risk was conservatively mapped to camera=MEDIUM; execution remains unverified."
+          ]
+        },
+        "performance": {
+          "level": "MEDIUM",
+          "reasons": [
+            "Legacy risk was conservatively mapped to performance=MEDIUM; execution remains unverified."
+          ]
+        },
+        "continuity": {
+          "level": "MEDIUM",
+          "reasons": [
+            "Legacy risk was conservatively mapped to continuity=MEDIUM; execution remains unverified."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    },
+    {
+      "shot_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009",
+      "order": 9,
+      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "start": {
+        "timecode": "01:20:40.169",
+        "seconds": 4840.169,
+        "frame": 116048,
+        "pts": null,
+        "time_base": null
+      },
+      "end": {
+        "timecode": "01:20:44.173",
+        "seconds": 4844.173,
+        "frame": 116144,
+        "pts": null,
+        "time_base": null
+      },
+      "duration": 4.004,
+      "shot_size": {
+        "claim_id": "S009-SIZE",
+        "status": "PICTURE_OBSERVED",
+        "value": "low table-level WS ensemble",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_height": {
+        "claim_id": "S009-HEIGHT",
+        "status": "PICTURE_OBSERVED",
+        "value": "low angle from far edge of worktable, looking slightly upward into ROOM-B",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_angle": {
+        "claim_id": "S009-ANGLE",
+        "status": "PICTURE_OBSERVED",
+        "value": "low angle from far edge of worktable, looking slightly upward into ROOM-B",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_motion": {
+        "claim_id": "S009-MOTION",
+        "status": "PICTURE_OBSERVED",
+        "value": "framing remains stable; action supplies motion; support method UNKNOWN",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_start": {
+        "claim_id": "S009-CAM-START",
+        "status": "INFERRED",
+        "value": "reflective table edge anchors foreground; five-plus people and open boxes fill middle/rear; ROOM-B racks and boards establish room",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm beige fluorescent ROOM-B, white shirts, brown boxes, blue/white/black equipment"
+      },
+      "camera_path": {
+        "claim_id": "S009-CAM-PATH",
+        "status": "PICTURE_OBSERVED",
+        "value": "framing remains stable; action supplies motion; support method UNKNOWN",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_end": {
+        "claim_id": "S009-CAM-END",
+        "status": "INFERRED",
+        "value": "reflective table edge anchors foreground; five-plus people and open boxes fill middle/rear; ROOM-B racks and boards establish room",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "focus_strategy": {
+        "claim_id": "S009-FOCUS",
+        "status": "PICTURE_OBSERVED",
+        "value": "broad working depth keeps group, table edge and major props legible; exact lens/aperture UNKNOWN",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S009-ZONE",
+          "status": "INFERRED",
+          "value": "reflective table edge anchors foreground; five-plus people and open boxes fill middle/rear; ROOM-B racks and boards establish room",
+          "source_refs": [
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+          ],
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        }
+      ],
+      "axis_and_screen_direction": {
+        "claim_id": "S009-AXIS",
+        "status": "INFERRED",
+        "value": "actors move toward the same table; prop trajectories continue into S010; prior-room geometry is not carried; S009 establishes a new table geometry",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "abstract_role_labels": [],
+      "blocking": {
+        "claim_id": "S009-BLOCK",
+        "status": "INFERRED",
+        "value": "people enter/converge behind table carrying boxes, then tip boxes toward tabletop",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_action": {
+        "claim_id": "S009-ACTION",
+        "status": "INFERRED",
+        "value": "group moves briskly; boxes, bags, fabric/equipment pieces, hoses and components spill forward",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_in": {
+        "claim_id": "S009-STATE-IN",
+        "status": "INFERRED",
+        "value": "reflective table edge anchors foreground; five-plus people and open boxes fill middle/rear; ROOM-B racks and boards establish room",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_out": {
+        "claim_id": "S009-STATE-OUT",
+        "status": "INFERRED",
+        "value": "group moves briskly; boxes, bags, fabric/equipment pieces, hoses and components spill forward",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "event_or_reaction": {
+        "claim_id": "S009-EVENT",
+        "status": "INFERRED",
+        "value": "event/action beat",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "performance_beat": {
+        "claim_id": "S009-PERF",
+        "status": "INFERRED",
+        "value": "people step around the table while boxes and mixed objects move across its surface",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_in": {
+        "claim_id": "S009-EDIT-IN",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F116048 from ROOM-A MC-B close-up; ROOM-B location reset",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_out": {
+        "claim_id": "S009-EDIT-OUT",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F116144",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "cut_motivation": {
+        "claim_id": "S009-CUT-MOTIVE",
+        "status": "INFERRED",
+        "value": "translate the prior response into immediate physical-resource arrival",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "narrative_function": {
+        "claim_id": "S009-FUNCTION",
+        "status": "INFERRED",
+        "value": "replace the preceding console exchange with a visible material field and group action",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "AI_complexity": {
+        "camera": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to camera=HIGH; execution remains unverified."
+          ]
+        },
+        "performance": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to performance=HIGH; execution remains unverified."
+          ]
+        },
+        "continuity": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to continuity=HIGH; execution remains unverified."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009's cited visible state-in, state-out, and edit endpoints with a project-original locked-off camera; split the beat if that exact state transition cannot be held.",
+        "performance": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009's cited visible action and performance-beat claims; limit the project-original shot to that one verified state change.",
+        "continuity": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009's cited zone, axis, state-in, and state-out claims in project-original coverage; split the beat instead of inventing an unverified cross-shot state.",
+        "project_original_only": true
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    },
+    {
+      "shot_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
+      "order": 10,
+      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "start": {
+        "timecode": "01:20:44.173",
+        "seconds": 4844.173,
+        "frame": 116144,
+        "pts": null,
+        "time_base": null
+      },
+      "end": {
+        "timecode": "01:20:46.175",
+        "seconds": 4846.175,
+        "frame": 116192,
+        "pts": null,
+        "time_base": null
+      },
+      "duration": 2.002,
+      "shot_size": {
+        "claim_id": "S010-SIZE",
+        "status": "PICTURE_OBSERVED",
+        "value": "top-down wide view of a broad tabletop material field",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_height": {
+        "claim_id": "S010-HEIGHT",
+        "status": "PICTURE_OBSERVED",
+        "value": "near-vertical overhead",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_angle": {
+        "claim_id": "S010-ANGLE",
+        "status": "PICTURE_OBSERVED",
+        "value": "near-vertical overhead",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_motion": {
+        "claim_id": "S010-MOTION",
+        "status": "PICTURE_OBSERVED",
+        "value": "camera appears fixed overhead; object motion dominates",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_start": {
+        "claim_id": "S010-CAM-START",
+        "status": "INFERRED",
+        "value": "blue-and-white fabric assembly, hoses, bags, papers, fittings and two visibly different grey rigid forms spread across table; hands/bodies crop at perimeter",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: pale tabletop/white fabric with blue, grey, black, red and metallic component accents"
+      },
+      "camera_path": {
+        "claim_id": "S010-CAM-PATH",
+        "status": "PICTURE_OBSERVED",
+        "value": "camera appears fixed overhead; object motion dominates",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_end": {
+        "claim_id": "S010-CAM-END",
+        "status": "INFERRED",
+        "value": "blue-and-white fabric assembly, hoses, bags, papers, fittings and two visibly different grey rigid forms spread across table; hands/bodies crop at perimeter",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "focus_strategy": {
+        "claim_id": "S010-FOCUS",
+        "status": "PICTURE_OBSERVED",
+        "value": "shallow object-plane view keeps most material set legible; edge hands partly crop/blur",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S010-ZONE",
+          "status": "INFERRED",
+          "value": "blue-and-white fabric assembly, hoses, bags, papers, fittings and two visibly different grey rigid forms spread across table; hands/bodies crop at perimeter",
+          "source_refs": [
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+          ],
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        }
+      ],
+      "axis_and_screen_direction": {
+        "claim_id": "S010-AXIS",
+        "status": "INFERRED",
+        "value": "same dump action and same components bridge the cut; table orientation remains consistent with S009 and the visible field is centered in frame",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "abstract_role_labels": [],
+      "blocking": {
+        "claim_id": "S010-BLOCK",
+        "status": "INFERRED",
+        "value": "people ring the table; arms withdraw/hover as dumped pieces settle",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_action": {
+        "claim_id": "S010-ACTION",
+        "status": "INFERRED",
+        "value": "the blue-and-white fabric assembly finishes landing; loose items and fabric shift across table",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_in": {
+        "claim_id": "S010-STATE-IN",
+        "status": "INFERRED",
+        "value": "blue-and-white fabric assembly, hoses, bags, papers, fittings and two visibly different grey rigid forms spread across table; hands/bodies crop at perimeter",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_out": {
+        "claim_id": "S010-STATE-OUT",
+        "status": "INFERRED",
+        "value": "the blue-and-white fabric assembly finishes landing; loose items and fabric shift across table",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "event_or_reaction": {
+        "claim_id": "S010-EVENT",
+        "status": "INFERRED",
+        "value": "inventory/material insert plus continuation of dump",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "performance_beat": {
+        "claim_id": "S010-PERF",
+        "status": "INFERRED",
+        "value": "perimeter hands move near the settling pile; no face is prioritized",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_in": {
+        "claim_id": "S010-EDIT-IN",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F116144 from low ensemble dump",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_out": {
+        "claim_id": "S010-EDIT-OUT",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F116192",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "cut_motivation": {
+        "claim_id": "S010-CUT-MOTIVE",
+        "status": "INFERRED",
+        "value": "answer the low wide with a broad overhead material-field view",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "narrative_function": {
+        "claim_id": "S010-FUNCTION",
+        "status": "INFERRED",
+        "value": "define the broad visible material field before the task is demonstrated",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "AI_complexity": {
+        "camera": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to camera=HIGH; execution remains unverified."
+          ]
+        },
+        "performance": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to performance=HIGH; execution remains unverified."
+          ]
+        },
+        "continuity": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to continuity=HIGH; execution remains unverified."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010's cited visible state-in, state-out, and edit endpoints with a project-original locked-off camera; split the beat if that exact state transition cannot be held.",
+        "performance": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010's cited visible action and performance-beat claims; limit the project-original shot to that one verified state change.",
+        "continuity": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010's cited zone, axis, state-in, and state-out claims in project-original coverage; split the beat instead of inventing an unverified cross-shot state.",
+        "project_original_only": true
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    },
+    {
+      "shot_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011",
+      "order": 11,
+      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "start": {
+        "timecode": "01:20:46.175",
+        "seconds": 4846.175,
+        "frame": 116192,
+        "pts": null,
+        "time_base": null
+      },
+      "end": {
+        "timecode": "01:21:01.482",
+        "seconds": 4861.482,
+        "frame": 116559,
+        "pts": null,
+        "time_base": null
+      },
+      "duration": 15.307,
+      "shot_size": {
+        "claim_id": "S011-SIZE",
+        "status": "PICTURE_OBSERVED",
+        "value": "low/near-table MWS-to-MS ensemble centered on LAB-A",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_height": {
+        "claim_id": "S011-HEIGHT",
+        "status": "PICTURE_OBSERVED",
+        "value": "slightly low, frontal three-quarter across tabletop",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_angle": {
+        "claim_id": "S011-ANGLE",
+        "status": "PICTURE_OBSERVED",
+        "value": "slightly low, frontal three-quarter across tabletop",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_motion": {
+        "claim_id": "S011-MOTION",
+        "status": "PICTURE_OBSERVED",
+        "value": "camera remains effectively fixed; foreground crossings create reveal/occlusion; exact support UNKNOWN",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_start": {
+        "claim_id": "S011-CAM-START",
+        "status": "INFERRED",
+        "value": "LAB-A centered against equipment racks, coworkers flank left/right and pass through foreground; piled materials occupy lower frame",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm beige ROOM-B, white shirts, grey rigid objects and blue/black equipment on pale table"
+      },
+      "camera_path": {
+        "claim_id": "S011-CAM-PATH",
+        "status": "PICTURE_OBSERVED",
+        "value": "camera remains effectively fixed; foreground crossings create reveal/occlusion; exact support UNKNOWN",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_end": {
+        "claim_id": "S011-CAM-END",
+        "status": "INFERRED",
+        "value": "LAB-A centered against equipment racks, coworkers flank left/right and pass through foreground; piled materials occupy lower frame",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "focus_strategy": {
+        "claim_id": "S011-FOCUS",
+        "status": "PICTURE_OBSERVED",
+        "value": "LAB-A and displayed objects are sharp; passing foreground shirts/fabric briefly occlude; racks remain recognizable",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S011-ZONE",
+          "status": "INFERRED",
+          "value": "LAB-A centered against equipment racks, coworkers flank left/right and pass through foreground; piled materials occupy lower frame",
+          "source_refs": [
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+          ],
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        }
+      ],
+      "axis_and_screen_direction": {
+        "claim_id": "S011-AXIS",
+        "status": "INFERRED",
+        "value": "table/prop state continues from S010; flanking bodies remain on both sides of LAB-A; table/object positions continue from S010; hands/objects remain continuous within the shot",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "abstract_role_labels": [],
+      "blocking": {
+        "claim_id": "S011-BLOCK",
+        "status": "INFERRED",
+        "value": "carriers clear foreground; LAB-A leans at table, lifts a square-ended block and a cylindrical perforated grey object together, lowers them, gestures to the remaining pile",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_action": {
+        "claim_id": "S011-ACTION",
+        "status": "INFERRED",
+        "value": "LAB-A's mouth/brows/gaze change; he holds the two differently shaped objects at face/chest height while flanking workers watch",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_in": {
+        "claim_id": "S011-STATE-IN",
+        "status": "INFERRED",
+        "value": "LAB-A centered against equipment racks, coworkers flank left/right and pass through foreground; piled materials occupy lower frame",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_out": {
+        "claim_id": "S011-STATE-OUT",
+        "status": "INFERRED",
+        "value": "LAB-A's mouth/brows/gaze change; he holds the two differently shaped objects at face/chest height while flanking workers watch",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "event_or_reaction": {
+        "claim_id": "S011-EVENT",
+        "status": "INFERRED",
+        "value": "simultaneous two-object display with surrounding coworkers",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "performance_beat": {
+        "claim_id": "S011-PERF",
+        "status": "INFERRED",
+        "value": "LAB-A alternates gaze between coworkers and objects; flanking coworkers show little torso movement and keep gaze toward LAB-A/objects during the simultaneous display",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_in": {
+        "claim_id": "S011-EDIT-IN",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F116192 from the overhead material-field view",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_out": {
+        "claim_id": "S011-EDIT-OUT",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F116559",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "cut_motivation": {
+        "claim_id": "S011-CUT-MOTIVE",
+        "status": "INFERRED",
+        "value": "move from broad material field to a human-scale, simultaneous shape demonstration",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "narrative_function": {
+        "claim_id": "S011-FUNCTION",
+        "status": "INFERRED",
+        "value": "make the visible shape relation and bounded material context graspable while keeping the whole team in one shared frame",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "AI_complexity": {
+        "camera": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to camera=HIGH; execution remains unverified."
+          ]
+        },
+        "performance": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to performance=HIGH; execution remains unverified."
+          ]
+        },
+        "continuity": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to continuity=HIGH; execution remains unverified."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011's cited visible state-in, state-out, and edit endpoints with a project-original locked-off camera; split the beat if that exact state transition cannot be held.",
+        "performance": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011's cited visible action and performance-beat claims; limit the project-original shot to that one verified state change.",
+        "continuity": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011's cited zone, axis, state-in, and state-out claims in project-original coverage; split the beat instead of inventing an unverified cross-shot state.",
+        "project_original_only": true
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    },
+    {
+      "shot_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012",
+      "order": 12,
+      "completeness": "PARTIAL_AT_END",
+      "start": {
+        "timecode": "01:21:01.482",
+        "seconds": 4861.482,
+        "frame": 116559,
+        "pts": null,
+        "time_base": null
+      },
+      "end": {
+        "timecode": "01:21:07.321",
+        "seconds": 4867.321,
+        "frame": 116699,
+        "pts": null,
+        "time_base": null
+      },
+      "duration": 5.839,
+      "shot_size": {
+        "claim_id": "S012-SIZE",
+        "status": "PICTURE_OBSERVED",
+        "value": "top-down wide view over the worktable",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_height": {
+        "claim_id": "S012-HEIGHT",
+        "status": "PICTURE_OBSERVED",
+        "value": "near-vertical overhead",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_angle": {
+        "claim_id": "S012-ANGLE",
+        "status": "PICTURE_OBSERVED",
+        "value": "near-vertical overhead",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_motion": {
+        "claim_id": "S012-MOTION",
+        "status": "PICTURE_OBSERVED",
+        "value": "camera appears fixed overhead; hands and materials generate motion",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_start": {
+        "claim_id": "S012-CAM-START",
+        "status": "INFERRED",
+        "value": "table fills active image; multiple heads/arms encircle hoses, fabric/equipment pieces, packets, fittings and rigid grey objects",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: pale table and fabric with black hoses, grey rigid objects, metallic fittings and small colored accents"
+      },
+      "camera_path": {
+        "claim_id": "S012-CAM-PATH",
+        "status": "PICTURE_OBSERVED",
+        "value": "camera appears fixed overhead; hands and materials generate motion",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_end": {
+        "claim_id": "S012-CAM-END",
+        "status": "INFERRED",
+        "value": "table fills active image; multiple heads/arms encircle hoses, fabric/equipment pieces, packets, fittings and rigid grey objects",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "focus_strategy": {
+        "claim_id": "S012-FOCUS",
+        "status": "PICTURE_OBSERVED",
+        "value": "broad tabletop plane legible; moving hands/cloth locally blur; exact lens/focus method UNKNOWN",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S012-ZONE",
+          "status": "INFERRED",
+          "value": "table fills active image; multiple heads/arms encircle hoses, fabric/equipment pieces, packets, fittings and rigid grey objects",
+          "source_refs": [
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+          ],
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        }
+      ],
+      "axis_and_screen_direction": {
+        "claim_id": "S012-AXIS",
+        "status": "INFERRED",
+        "value": "same tabletop and material set as S010–S011; hands alter positions continuously until the outgoing cut",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "abstract_role_labels": [],
+      "blocking": {
+        "claim_id": "S012-BLOCK",
+        "status": "INFERRED",
+        "value": "at least five sets of hands reach in from multiple sides and begin separating, lifting and repositioning objects",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_action": {
+        "claim_id": "S012-ACTION",
+        "status": "INFERRED",
+        "value": "group immediately bends into work; hands overlap while reaching across the shared object field",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_in": {
+        "claim_id": "S012-STATE-IN",
+        "status": "INFERRED",
+        "value": "table fills active image; multiple heads/arms encircle hoses, fabric/equipment pieces, packets, fittings and rigid grey objects",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_out": {
+        "claim_id": "S012-STATE-OUT",
+        "status": "INFERRED",
+        "value": "group immediately bends into work; hands overlap while reaching across the shared object field",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "event_or_reaction": {
+        "claim_id": "S012-EVENT",
+        "status": "INFERRED",
+        "value": "collective action/process onset",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "performance_beat": {
+        "claim_id": "S012-PERF",
+        "status": "INFERRED",
+        "value": "no face is prioritized; multiple hands reach and reposition items; no single face is selected",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_in": {
+        "claim_id": "S012-EDIT-IN",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F116559 from LAB-A demonstration",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_out": {
+        "claim_id": "S012-EDIT-OUT",
+        "status": "PICTURE_OBSERVED",
+        "value": "single-frame hard cut at F116699 to an unrelated television/news image; selected sequence ends before that frame",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "cut_motivation": {
+        "claim_id": "S012-CUT-MOTIVE",
+        "status": "INFERRED",
+        "value": "convert the end of the visible two-object display into distributed hands-on execution",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "narrative_function": {
+        "claim_id": "S012-FUNCTION",
+        "status": "INFERRED",
+        "value": "finish on collective sorting rather than another face view, making action the end state",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "AI_complexity": {
+        "camera": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to camera=HIGH; execution remains unverified."
+          ]
+        },
+        "performance": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to performance=HIGH; execution remains unverified."
+          ]
+        },
+        "continuity": {
+          "level": "HIGH",
+          "reasons": [
+            "Legacy risk was conservatively mapped to continuity=HIGH; execution remains unverified."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012's cited visible state-in, state-out, and edit endpoints with a project-original locked-off camera; split the beat if that exact state transition cannot be held.",
+        "performance": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012's cited visible action and performance-beat claims; limit the project-original shot to that one verified state change.",
+        "continuity": "Preserve APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012's cited zone, axis, state-in, and state-out claims in project-original coverage; split the beat instead of inventing an unverified cross-shot state.",
+        "project_original_only": true
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    }
+  ],
+  "stats": {
+    "unit": "VISIBLE_SHOT",
+    "shot_count": 12,
+    "total_duration": 66.191,
+    "mean_duration": 5.515916666666667,
+    "median_duration": 4.462999999999999,
+    "duration_bins": {
+      "lt_1": 0,
+      "1_to_lt_2": 0,
+      "2_to_lt_5": 7,
+      "5_to_lt_10": 4,
+      "gte_10": 1
+    }
+  },
+  "audio_audit": {
+    "dialogue_overlap": {
+      "claim_id": "AUDIO-01",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "silence_intervals": {
+      "claim_id": "AUDIO-02",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "ambience": {
+      "claim_id": "AUDIO-03",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "score_entry": {
+      "claim_id": "AUDIO-04",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "score_exit": {
+      "claim_id": "AUDIO-05",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "sound_before_image": {
+      "claim_id": "AUDIO-06",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "offscreen_sound": {
+      "claim_id": "AUDIO-07",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "sound_bridge": {
+      "claim_id": "AUDIO-08",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "subjective_sound": {
+      "claim_id": "AUDIO-09",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "object_sound": {
+      "claim_id": "AUDIO-10",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "audio_information_change": {
+      "claim_id": "AUDIO-11",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "audio_unknowns": [
+      "Dialogue, ambience, score, silence, source, timing, and causal sound meaning remain unknown."
+    ]
+  },
+  "text_anchors": [],
+  "methods": [
+    {
+      "method_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-LEGACY-PICTURE-REVIEW",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The legacy Markdown records a completed manual picture and edit-boundary review.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+      ],
+      "unknowns": [
+        "Source-media facts remain unknown."
+      ]
+    },
+    {
+      "method_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-STRUCTURAL-CONVERSION",
+      "method_type": "STRUCTURAL_CONVERSION",
+      "status": "REPOSITORY_REPRODUCIBLE",
+      "description": "Deterministically convert the checked-in legacy tables to Scene Evidence JSON.",
+      "repository_command": "python3 skills/drama-director-compiler/scripts/convert_legacy_scene_evidence.py --check",
+      "tool_version_status": "VERSION_RECORDED",
+      "source_refs": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+      ],
+      "unknowns": [
+        "Creative approval and renewed media observation remain unknown."
+      ]
+    },
+    {
+      "method_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-DIRECT-AUDIO",
+      "method_type": "AUDIO_DIRECT_AUDITION",
+      "status": "BLOCKED",
+      "description": "Direct soundtrack audition was not completed for this conversion.",
+      "repository_command": null,
+      "tool_version_status": "NOT_APPLICABLE",
+      "source_refs": [],
+      "unknowns": [
+        "All semantic audio facts remain unknown."
+      ]
+    }
+  ],
+  "auxiliary_evidence": [],
+  "continuity_tracks": [
+    {
+      "track_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-TRACK-APPEARANCE-GROUPING",
+      "track_kind": "PERSON_APPEARANCE",
+      "status": "CROSS_CUT_INFERRED",
+      "statement": "Recurring legacy appearance labels are treated only as an inferred cross-cut grouping, not verified identity.",
+      "source_refs": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+      ],
+      "unknowns": [
+        "Exact person identity across cuts remains unknown."
+      ]
+    }
+  ],
+  "candidate_rules": [
+    {
+      "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C01-ASSESSMENT-RECEIVER-TO-NEW-ROOM-ACTION",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-005",
+      "legacy_migration": {
+        "trigger": "A locked script establishes that one operational group assesses a constraint while a different group must begin the first physical action",
+        "directing_decision": "Close the assessment on a readable receiving-side action, then hard-reset geography to the executor group's first material action rather than an unowned neutral room",
+        "coverage": "System/ensemble reveal → reporting cluster/receiver alternation → receiver-side action → new-room action master",
+        "blocking": "Cluster reporters around one receiving position; in the new room, converge executors on one work surface and show material arrival",
+        "pacing_edit": "Cut for information ownership in the first room; let the location cut coincide with responsibility becoming physical; duration is not prescribed",
+        "sound": "UNKNOWN; no dialogue, command wording, sound lead, or bridge is prescribed",
+        "applicability": "Multi-team repair, emergency response, technical planning, or logistics where the next group has a visible first action",
+        "non_applicability": "Same team and room retain ownership; the issue is private/internal; the new location has no readable actor/object link; or changing space would hide accountability",
+        "failure_mode": "The new room feels unrelated; executors are already working with unexplained props; the receiver never visibly changes action; or both room axes are conflated",
+        "counterexample": "BEAR-S01E07-REVIEW-001 is a different-trigger boundary source: its connected same-space pressure would be fragmented by a remote-room handoff. Same-trigger contrary evidence is UNKNOWN/pending.",
+        "unknown": "Spoken hierarchy, exact instruction, elapsed handoff time, sound bridge, and whether the gesture actually authorizes work",
+        "ai_risk": "HIGH: two ensemble identities, screen graphics, axis reset, room continuity, and prop arrival",
+        "fallback": "Use four project-original shots: assessment two-shot → receiver action → new-room wide with carriers/material source → one inventory view; explicitly reset location/axis IDs",
+        "evidence_shots": "S001–S009, especially S008→S009",
+        "confidence": "HIGH for visible coverage/location mechanism; MEDIUM causal transfer confidence"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C01-ASSESSMENT-RECEIVER-TO-NEW-ROOM-ACTION-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-LEGACY-PICTURE-REVIEW",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
+      ],
+      "evidence_shot_ids": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    },
+    {
+      "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C02-SOURCED-MATERIAL-FIELD-BEFORE-SELECTION",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-006",
+      "legacy_migration": {
+        "trigger": "A locked script establishes a group task constrained to a bounded but visually complex material set",
+        "directing_decision": "Show the material batch entering from a visible source, then map the broad active field before selecting or manipulating a solution relation",
+        "coverage": "Source/action wide → overhead object field → selected relation/demonstration → process view",
+        "blocking": "Ring workers around one stable plane; keep boxes/source, table, and item-state IDs continuous",
+        "pacing_edit": "Give the inventory only enough time to register categories and topology; revisit after a state change rather than cataloguing every item",
+        "sound": "UNKNOWN; object sounds, verbal list, timing cue, and score are unverified",
+        "applicability": "Constrained repair, assembly, planning, packing, triage, or evidence work where available-item continuity matters",
+        "non_applicability": "A single known tool is sufficient; the material set is already established; the process is too dangerous/urgent to pause; or withholding resources is the suspense design",
+        "failure_mode": "Parts teleport into the solution; the view claims completeness it cannot show; object owners vanish; or the inventory insert becomes decorative",
+        "counterexample": "NOBODY-2021-BUS-001 is a different-trigger boundary source: pausing its urgent threat/contact chain for a broad inventory would destroy action causality. Same-trigger contrary evidence is UNKNOWN/pending.",
+        "unknown": "Whether the visible field is exhaustive, exact item names, spoken constraints, later selection logic, and sound",
+        "ai_risk": "VERY HIGH: many rigid/flexible props, collisions, occlusion, duplicate parts, and cross-shot inventory drift",
+        "fallback": "Reduce to a smaller explicit material set; assign stable object IDs; use a fixed wide source shot plus one clean overhead plate before any hands select items",
+        "evidence_shots": "S009–S012, especially S009–S010",
+        "confidence": "HIGH for visible material-source/state path; MEDIUM transfer confidence"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C02-SOURCED-MATERIAL-FIELD-BEFORE-SELECTION-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-LEGACY-PICTURE-REVIEW",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
+      ],
+      "evidence_shot_ids": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    },
+    {
+      "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-007",
+      "legacy_migration": {
+        "trigger": "A locked script establishes that a task turns on the visible relation between two differently shaped or oriented objects, and the relation is large enough to read with people present",
+        "directing_decision": "Put both objects in one operator's hands within a shared witness frame before fragmenting into inserts or work coverage",
+        "coverage": "Established object field → shared two-object comparison → receiving group remains visible → next action",
+        "blocking": "Center the operator; keep both objects separated against a clean enough background; place witnesses on flanks with gaze access",
+        "pacing_edit": "Hold through lift, simultaneous display, gaze/gesture change, and lowering; cut only when the group begins a new action state",
+        "sound": "UNKNOWN; spoken explanation, pause, prop sound, and cue-led gaze are unverified",
+        "applicability": "Repair, training, engineering, demonstration, or planning where shape/orientation relation is visually legible at medium scale",
+        "non_applicability": "Micro-scale detail requires magnification; text/specifications are decisive; safe handling cannot show both items; or only one person needs the information",
+        "failure_mode": "Separate shots imply a false scale/relation; hands hide topology; witnesses cannot see; readable labels substitute for geometry; or the hold outlasts visible change",
+        "counterexample": "WIRE-S01E04-OLD-CASES-001 is a different-scale boundary source: tiny records/traces sometimes need owner/detail/endpoint inserts rather than one shared comparison. Same-trigger contrary evidence is UNKNOWN/pending.",
+        "unknown": "Exact compatibility, technical purpose, dimensions, spoken proposition, lens/support, and whether every witness understands",
+        "ai_risk": "HIGH: two precise prop topologies, hand contacts, face/eyeline continuity, foreground occlusion, and table state",
+        "fallback": "Fixed medium with one operator and two project-original neutral parts; if topology fails, use one top-down relation insert between an operator setup and a group action master",
+        "evidence_shots": "S010–S011, especially S011",
+        "confidence": "HIGH for simultaneous visible relation; MEDIUM functional/transfer confidence"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-LEGACY-PICTURE-REVIEW",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
+      ],
+      "evidence_shot_ids": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    },
+    {
+      "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C04-DEMONSTRATION-TO-DISTRIBUTED-WORK",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-008",
+      "legacy_migration": {
+        "trigger": "A locked script establishes a shared group task and makes physical work onset, rather than individual comprehension, the next dramatic fact",
+        "directing_decision": "Cut from the shared demonstration directly to a common-plane view of multiple distinct hands beginning work; let action replace redundant isolated reactions",
+        "coverage": "Shared operator/witness frame → overhead or high common work plane → visible item separation/repositioning",
+        "blocking": "Keep all participants oriented to one stable work surface; give each retained worker one legible reach/item state",
+        "pacing_edit": "Do not cut before the demonstrated relation is readable; once it is, enter the process view on the first distributed actions and end/continue by state change",
+        "sound": "UNKNOWN; verbal acknowledgment, work noise, music, and cue timing are unverified",
+        "applicability": "Safe sorting, planning, packing, assembly preparation, or triage where the picture must prove physical work onset without claiming comprehension",
+        "non_applicability": "Consent, dissent, comprehension, or safety reaction changes the story; work occurs across several zones; or individual assignments must be understood first",
+        "failure_mode": "Hands begin before the task relation is visible; one worker performs everything; item states drift; overhead action becomes an anonymous tangle",
+        "counterexample": "BEAR-S01E07-REVIEW-001 is a different-trigger boundary source: its multi-zone pressure cannot be flattened into one tabletop response without losing zone and priority ownership. Same-trigger contrary evidence is UNKNOWN/pending.",
+        "unknown": "Exact assignments, comprehension, later assembly order, dialogue acknowledgment, and sound",
+        "ai_risk": "VERY HIGH: many similar hands, identity/limb duplication, occlusion, hose/fabric deformation, and object ownership drift",
+        "fallback": "Reduce to three workers and three object IDs; stage one clear reach per person in sequence inside a fixed high master; split only at completed item-state changes",
+        "evidence_shots": "S011→S012",
+        "confidence": "HIGH for visible demonstration/action transition; MEDIUM transfer confidence"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C04-DEMONSTRATION-TO-DISTRIBUTED-WORK-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-LEGACY-PICTURE-REVIEW",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
+      ],
+      "evidence_shot_ids": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    }
+  ],
+  "unknowns": [
+    {
+      "unknown_id": "UNKNOWN-AUDIO",
+      "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
+      "scope": "AUDIO",
+      "blocks_rule_ids": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C01-ASSESSMENT-RECEIVER-TO-NEW-ROOM-ACTION",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C02-SOURCED-MATERIAL-FIELD-BEFORE-SELECTION",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C04-DEMONSTRATION-TO-DISTRIBUTED-WORK"
+      ]
+    },
+    {
+      "unknown_id": "UNKNOWN-EXECUTION",
+      "statement": "Cross-work transfer and generation execution remain unverified and unknown.",
+      "scope": "RULE",
+      "blocks_rule_ids": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C01-ASSESSMENT-RECEIVER-TO-NEW-ROOM-ACTION",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C02-SOURCED-MATERIAL-FIELD-BEFORE-SELECTION",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C04-DEMONSTRATION-TO-DISTRIBUTED-WORK"
+      ]
+    }
+  ],
+  "rights_boundary": {
+    "media_committed": false,
+    "subtitles_committed": false,
+    "scripts_or_long_dialogue_committed": false,
+    "contains_absolute_local_paths": false,
+    "contains_media_hashes": false,
+    "reference_surface_terms": [
+      "APOLLO 13 1995"
+    ],
+    "surface_inventory_status": "HUMAN_REVIEWED_COMPLETE",
+    "prohibited_transfer_content": [
+      "Reference characters, locations, props, dialogue, scene events, and signature compositions."
+    ],
+    "notes": "Human review confirmed that every operational candidate-rule field is the same fixed source-neutral pending-review placeholder. Work-specific legacy text remains only in non-operational lineage; no source media or temporary artifact is embedded."
+  },
+  "validation_status": "HUMAN_REVIEW_PENDING",
+  "validation_warnings": [
+    "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+    "8 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review."
+  ]
+}

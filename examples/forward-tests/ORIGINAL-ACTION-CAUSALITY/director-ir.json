@@ -1,0 +1,504 @@
+{
+  "aspect_ratio": "16:9",
+  "dialogue_must_be_verbatim": true,
+  "director_grammar_path": "research/grammar/director_grammar_v0.2.json",
+  "duration_tolerance_seconds": 0,
+  "episode_id": "EP01",
+  "execution_medium": "AI_PHOTOREAL_HUMAN",
+  "generation_authorized": false,
+  "project_id": "FORWARD-TEST-ORIGINAL-ACTION-CAUSALITY",
+  "publication_authorized": false,
+  "scenes": [
+    {
+      "allowed_characters": [
+        "FLOOR_LEAD",
+        "CREW_1",
+        "CREW_2",
+        "CREW_3"
+      ],
+      "audience_information": {
+        "locked_fact_ids": [
+          "FACT-01",
+          "FACT-02",
+          "FACT-03"
+        ]
+      },
+      "dramatic_engine": {
+        "goal": "preserve one visible cause and the distinct responses of a group",
+        "objectives": [
+          "clear the rack path",
+          "stop the rack safely"
+        ],
+        "obstacle": "the rack is already moving",
+        "stakes": "the marked route must be cleared before intervention",
+        "subtext": "the lead acts only after every response is visible",
+        "tactic_change": "warning becomes coordinated clearance and then restraint"
+      },
+      "duration_seconds": 15,
+      "location": "empty rehearsal hall",
+      "narrative_goal": "preserve one visible cause and the distinct responses of a group",
+      "pov": {
+        "character": "ENSEMBLE_NEUTRAL",
+        "identification_level": "STRUCTURAL_TEST_ONLY"
+      },
+      "routing_input": {
+        "case_id": "ORIGINAL-ACTION-CAUSALITY",
+        "dramatic_structure": {
+          "goal": "preserve one visible cause and the distinct responses of a group",
+          "objectives": [
+            "clear the rack path",
+            "stop the rack safely"
+          ],
+          "obstacle": "the rack is already moving",
+          "stakes": "the marked route must be cleared before intervention",
+          "subtext": "the lead acts only after every response is visible",
+          "tactic_change": "warning becomes coordinated clearance and then restraint"
+        },
+        "locked_facts": [
+          {
+            "fact_id": "FACT-01",
+            "fact_type": "cause_effect_chain",
+            "source_ref": "locked-script.md#FACT-01",
+            "status": "LOCKED",
+            "value": "A loose wheel stop lets an unpowered equipment rack begin rolling."
+          },
+          {
+            "fact_id": "FACT-02",
+            "fact_type": "one_to_many_response",
+            "source_ref": "locked-script.md#FACT-02",
+            "status": "LOCKED",
+            "value": "The floor lead signals three crew members to clear three marked lanes."
+          },
+          {
+            "fact_id": "FACT-03",
+            "fact_type": "safe_resolution",
+            "source_ref": "locked-script.md#FACT-03",
+            "status": "LOCKED",
+            "value": "The floor lead pushes a floor chock into the rack path after all three lanes are clear."
+          }
+        ],
+        "priority_constraints": [],
+        "rights_boundary": {
+          "contains_private_script": false,
+          "contains_reference_surface": false,
+          "project_original": true
+        },
+        "routing_signals": [
+          "cause_effect_chain",
+          "one_to_many_response"
+        ],
+        "scene_problem": {
+          "primary": "ACTION_CAUSALITY",
+          "secondary": [],
+          "status": "LOCKED"
+        },
+        "schema_version": "director-routing-input/0.1",
+        "subject_matter_tags": [
+          "safe_physical_action"
+        ],
+        "unknown_fact_types": []
+      },
+      "routing_result": {
+        "applied_constraint_ids": [
+          "PC-DIALOGUE-TEXT-LOCK",
+          "PC-LOCKED-STORY-AUTHORITY",
+          "PC-MODEL-INDEPENDENT-IR",
+          "PC-ORIGINAL-ASSETS",
+          "PC-SOURCE-COVERAGE",
+          "SC-AUTHORIZATION-GATES",
+          "SC-HIGH-RISK-FALLBACK",
+          "SC-HUMAN-REVIEW",
+          "SC-NO-SUBJECT-SHORTCUT",
+          "SC-NO-SURFACE-COPY",
+          "SC-NO-UNKNOWN-PROMOTION"
+        ],
+        "case_id": "ORIGINAL-ACTION-CAUSALITY",
+        "conflict_trace": [],
+        "eligible_rule_ids": [],
+        "human_review_status": "HUMAN_REVIEW_PENDING",
+        "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+        "rejected_rules": [],
+        "rights_boundary": {
+          "subject_matter_used_for_selection": false,
+          "surface_copy_allowed": false
+        },
+        "scene_problem": "ACTION_CAUSALITY",
+        "schema_version": "director-routing-result/0.1",
+        "selected_rules": [],
+        "selection_count": 0,
+        "status": "NO_APPLICABLE_RULE"
+      },
+      "scene_id": "EP01-SC01",
+      "shots": [
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "FLOOR_LEAD",
+            "CREW_1",
+            "CREW_2",
+            "CREW_3"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "The loose stop tips away and the unpowered rack begins moving across the empty hall.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-01"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-01"
+            ],
+            "must_hold": [
+              "A loose wheel stop lets an unpowered equipment rack begin rolling."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-01",
+          "continuity_out": "state after FACT-01",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "A loose wheel stop lets an unpowered equipment rack begin rolling.",
+          "order": 1,
+          "performance_beats": [
+            "The loose stop tips away and the unpowered rack begins moving across the empty hall."
+          ],
+          "reference_plan": {
+            "exclude": [
+              "research stills",
+              "source-work surfaces"
+            ],
+            "inherit": [
+              "identity",
+              "geometry"
+            ],
+            "reference_id": "REF-ACTION-CAUSALITY-SH01",
+            "reference_type": "SHOT_GOLDEN",
+            "required": true,
+            "rights_status": "PROJECT_ORIGINAL",
+            "scope": "project-original identity and geometry only",
+            "status": "PLANNED"
+          },
+          "shot_id": "EP01-SC01-SH01",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-01"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        },
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "FLOOR_LEAD",
+            "CREW_1",
+            "CREW_2",
+            "CREW_3"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "The floor lead points once; three crew members move into separate marked safe zones.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-02"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-02"
+            ],
+            "must_hold": [
+              "The floor lead signals three crew members to clear three marked lanes."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-02",
+          "continuity_out": "state after FACT-02",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "The floor lead signals three crew members to clear three marked lanes.",
+          "order": 2,
+          "performance_beats": [
+            "The floor lead points once; three crew members move into separate marked safe zones."
+          ],
+          "reference_plan": {
+            "exclude": [],
+            "inherit": [],
+            "reference_id": null,
+            "reference_type": "NONE",
+            "required": false,
+            "rights_status": "NOT_APPLICABLE",
+            "scope": "",
+            "status": "NOT_REQUIRED"
+          },
+          "shot_id": "EP01-SC01-SH02",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-02"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        },
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "FLOOR_LEAD",
+            "CREW_1",
+            "CREW_2",
+            "CREW_3"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "After all three zones are visibly occupied, the floor lead places the chock and the rack stops.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-03"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-03"
+            ],
+            "must_hold": [
+              "The floor lead pushes a floor chock into the rack path after all three lanes are clear."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-03",
+          "continuity_out": "state after FACT-03",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "The floor lead pushes a floor chock into the rack path after all three lanes are clear.",
+          "order": 3,
+          "performance_beats": [
+            "After all three zones are visibly occupied, the floor lead places the chock and the rack stops."
+          ],
+          "reference_plan": {
+            "exclude": [],
+            "inherit": [],
+            "reference_id": null,
+            "reference_type": "NONE",
+            "required": false,
+            "rights_status": "NOT_APPLICABLE",
+            "scope": "",
+            "status": "NOT_REQUIRED"
+          },
+          "shot_id": "EP01-SC01-SH03",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-03"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        }
+      ],
+      "source_scene": "locked-script.md",
+      "spatial_plan": {
+        "close_positions": "the final locked beat positions",
+        "geometry": "simple project-original working area",
+        "primary_axis": "one stable readable axis"
+      },
+      "time_of_day": "UNSPECIFIED_AND_NOT_REQUIRED",
+      "title": "The Rolling Equipment Rack"
+    }
+  ],
+  "schema_version": "director-ir/0.2",
+  "source_coverage": [
+    {
+      "covered_by": [
+        "EP01-SC01-SH01"
+      ],
+      "description": "A loose wheel stop lets an unpowered equipment rack begin rolling.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "covered"
+    },
+    {
+      "covered_by": [
+        "EP01-SC01-SH02"
+      ],
+      "description": "The floor lead signals three crew members to clear three marked lanes.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "covered"
+    },
+    {
+      "covered_by": [
+        "EP01-SC01-SH03"
+      ],
+      "description": "The floor lead pushes a floor chock into the rack path after all three lanes are clear.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "covered"
+    }
+  ],
+  "source_facts": {
+    "continuity_output": [
+      "Keep every project-original participant, prop and position consistent across this test scene."
+    ],
+    "cross_episode_state_in": [],
+    "cross_episode_state_out": [],
+    "source_unit_count": 3
+  },
+  "source_script": "examples/forward-tests/ORIGINAL-ACTION-CAUSALITY/locked-script.md",
+  "status": "HUMAN_REVIEW_PENDING",
+  "target_duration_seconds": 15,
+  "unresolved": [
+    "Human creative review has not been performed."
+  ],
+  "visual_style_pack_path": null
+}

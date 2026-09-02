@@ -1,0 +1,131 @@
+{
+  "candidate_index_path": "research/grammar/candidate_rule_index.json",
+  "cases": [
+    {
+      "boundary_for_family_ids": [],
+      "coverage_tags": [
+        "TWO_PARTY_POWER_TRANSFER"
+      ],
+      "expected_routing_status": "NO_APPLICABLE_RULE",
+      "expected_selection_count": 0,
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "package_path": "examples/forward-tests/ORIGINAL-POWER-DIALOGUE",
+      "positive_for_family_ids": [],
+      "scene_problem": "DIALOGUE_POWER_TRANSFER",
+      "test_case_id": "ORIGINAL-POWER-DIALOGUE",
+      "test_mode": "ZERO_ELIGIBLE_PROBE"
+    },
+    {
+      "boundary_for_family_ids": [],
+      "coverage_tags": [],
+      "expected_routing_status": "NO_APPLICABLE_RULE",
+      "expected_selection_count": 0,
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "package_path": "examples/forward-tests/ORIGINAL-RELATIONSHIP-FRACTURE",
+      "positive_for_family_ids": [],
+      "scene_problem": "RELATIONSHIP_FRACTURE",
+      "test_case_id": "ORIGINAL-RELATIONSHIP-FRACTURE",
+      "test_mode": "ZERO_ELIGIBLE_PROBE"
+    },
+    {
+      "boundary_for_family_ids": [],
+      "coverage_tags": [
+        "MULTI_PARTICIPANT_PUBLIC_REVELATION"
+      ],
+      "expected_routing_status": "NO_APPLICABLE_RULE",
+      "expected_selection_count": 0,
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "package_path": "examples/forward-tests/ORIGINAL-PUBLIC-REVEAL",
+      "positive_for_family_ids": [],
+      "scene_problem": "PUBLIC_REVELATION",
+      "test_case_id": "ORIGINAL-PUBLIC-REVEAL",
+      "test_mode": "ZERO_ELIGIBLE_PROBE"
+    },
+    {
+      "boundary_for_family_ids": [],
+      "coverage_tags": [
+        "PROCEDURE_SUCCESS_AND_FAILURE"
+      ],
+      "expected_routing_status": "NO_APPLICABLE_RULE",
+      "expected_selection_count": 0,
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "package_path": "examples/forward-tests/ORIGINAL-PROCEDURE",
+      "positive_for_family_ids": [],
+      "scene_problem": "PROCEDURAL_COMPETENCE",
+      "test_case_id": "ORIGINAL-PROCEDURE",
+      "test_mode": "ZERO_ELIGIBLE_PROBE"
+    },
+    {
+      "boundary_for_family_ids": [],
+      "coverage_tags": [
+        "ONE_TO_MANY_ACTION"
+      ],
+      "expected_routing_status": "NO_APPLICABLE_RULE",
+      "expected_selection_count": 0,
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "package_path": "examples/forward-tests/ORIGINAL-ACTION-CAUSALITY",
+      "positive_for_family_ids": [],
+      "scene_problem": "ACTION_CAUSALITY",
+      "test_case_id": "ORIGINAL-ACTION-CAUSALITY",
+      "test_mode": "ZERO_ELIGIBLE_PROBE"
+    },
+    {
+      "boundary_for_family_ids": [],
+      "coverage_tags": [
+        "NON_CONTACT_RELATION_TENSION"
+      ],
+      "expected_routing_status": "NO_APPLICABLE_RULE",
+      "expected_selection_count": 0,
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "package_path": "examples/forward-tests/ORIGINAL-PROXIMITY-TENSION",
+      "positive_for_family_ids": [],
+      "scene_problem": "ROMANTIC_PROXIMITY",
+      "test_case_id": "ORIGINAL-PROXIMITY-TENSION",
+      "test_mode": "ZERO_ELIGIBLE_PROBE"
+    },
+    {
+      "boundary_for_family_ids": [],
+      "coverage_tags": [
+        "SOUND_DRIVEN_SUSPENSE"
+      ],
+      "expected_routing_status": "NO_APPLICABLE_RULE",
+      "expected_selection_count": 0,
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "package_path": "examples/forward-tests/ORIGINAL-SOUND-SUSPENSE",
+      "positive_for_family_ids": [],
+      "scene_problem": "SOUND_LED_CAUSALITY",
+      "test_case_id": "ORIGINAL-SOUND-SUSPENSE",
+      "test_mode": "ZERO_ELIGIBLE_PROBE"
+    },
+    {
+      "boundary_for_family_ids": [],
+      "coverage_tags": [],
+      "expected_routing_status": "NO_APPLICABLE_RULE",
+      "expected_selection_count": 0,
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "package_path": "examples/forward-tests/ORIGINAL-NO-APPLICABLE-RULE",
+      "positive_for_family_ids": [],
+      "scene_problem": "NO_SPECIALIZED_PROBLEM",
+      "test_case_id": "ORIGINAL-NO-APPLICABLE-RULE",
+      "test_mode": "ZERO_ELIGIBLE_PROBE"
+    }
+  ],
+  "completed_boundary_cases": 0,
+  "completed_positive_cases": 0,
+  "grammar_path": "research/grammar/director_grammar_v0.2.json",
+  "missing_family_ids": [],
+  "promotion_ready_family_count": 0,
+  "promotion_ready_family_ids": [],
+  "required_positive_boundary_pairs": 0,
+  "required_scene_problem_coverage": [
+    "TWO_PARTY_POWER_TRANSFER",
+    "MULTI_PARTICIPANT_PUBLIC_REVELATION",
+    "PROCEDURE_SUCCESS_AND_FAILURE",
+    "ONE_TO_MANY_ACTION",
+    "NON_CONTACT_RELATION_TENSION",
+    "SOUND_DRIVEN_SUSPENSE"
+  ],
+  "schema_version": "forward-test-index/0.1",
+  "status": "NO_ELIGIBLE_FAMILIES",
+  "support_matrix_path": "research/grammar/cross_work_support_matrix.json"
+}

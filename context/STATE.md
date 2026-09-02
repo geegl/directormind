@@ -1,40 +1,88 @@
 # Current State
 
-Updated: 2026-08-30
+Updated: 2026-09-02
 
-## Verified baseline
+## Current phase
 
-- The private originating project compiled 36/36 locked episodes into 567 Director IR shots and passed its structural validators. Those proprietary scripts and IR files are intentionally absent from this public repository.
-- Two private Golden Cases tested dialogue-driven misdirection and compressed-space emotional/physical comedy. Their reusable execution lessons are summarized in `context/research-seeds/PROJECT_FORWARD_TEST_LESSONS.md`.
-- Four Good Omens scene reports support seven reference-transfer candidates. Several source-label, speaker, motion-statistic, and universal-language errors were corrected during audit.
-- The public compiler package contains the general contract, schema, validator, renderer, visual-module binding helpers, and continuity helpers. Project-hardcoded compilation scripts were intentionally excluded.
+The user-approved 33-source generalization Goal is complete on `codex/macos-first16-local-batch` after a new independent review reproduced two additional P1s. Both are fixed in implementation; the final implementation head passed hosted CI, and a fresh non-writing reviewer independently replayed all attacks and valid paths from a clean checkout with no remaining must-fix finding. PR #3 remains open for the user's merge decision.
 
-## Evidence status
+Phases 1 through 6 and the runtime-contract repairs remain present locally. `LEGACY_COMPATIBLE` is now v0.1-only; every v0.2 source must use `GRAMMAR_V02_ROUTED` with an authority-validated Grammar and exact route replay. The routing CLI now rejects output paths resolving to scene or Grammar input, rejects all existing outputs and creates new outputs exclusively. The original 30 legacy Markdown sources remain unchanged; the 88-unit *Succession* ledger remains integrated, no UNKNOWN-dependent candidate is executable, and eight rights-safe original packages still route without inventing a rule.
 
-| Area | Status |
-|---|---|
-| General IR contract | WORKING_BASELINE |
-| Compiler validator | WORKING_BASELINE |
-| Good Omens evidence | CANDIDATE / PARTLY FRAME-UNVERIFIED |
-| Good Omens transfer rules | CANDIDATE, not universal |
-| Private 36-episode forward test | STRUCTURALLY_VERIFIED, not publicly reproducible |
-| Cross-work scene-problem coverage | SPARSE |
-| Seedance/H3 adapters | OUT_OF_SCOPE |
-| Generated-result validator | OUT_OF_SCOPE |
+PR #3 pushes and PR #1 closure after successful integration and CI are authorized. No new reference work, media operation, `main` merge, deployment or publication is authorized.
 
-## Next research objective
+## Verified counts
 
-Complete the user-approved corpus in `research/coverage/FIRST_16_SCENES.md`. Work through every locally available source without per-scene approval, keep unavailable items in one material manifest, and do not select a second wave until all 16 are complete or explicitly blocked by missing lawful source media.
+| Item | Current verified value |
+|---|---:|
+| Local source dispositions | 33 |
+| Canonical current-local Scene Evidence JSON | 31 |
+| Shot/edit units | 2,343 |
+| Legacy candidate identities | 124 |
+| Structural Scene Evidence passes | 31/31 |
+| Structural errors | 0 |
+| Preserved warnings | 72 |
+| Current unit/CLI tests including both new P1 matrices | 233 |
+| Normalized candidate identities | 124 |
+| Textual mechanism families | 16 |
+| Runtime-authorized evidence rules | 0 |
+| Original routing cases | 8/8 passed |
+| Rules selected across current routing cases | 0 |
+| Original forward-test packages | 8/8 structurally passed |
+| Required original scene problems | 6/6 covered |
+| Forward-test warnings preserved | 31 |
+| Directly auditioned semantic-audio scenes | 0 |
+| Source-media deletion | Declared not performed; not machine-verified |
 
-## Promotion gate
+The 124 candidate identities remain non-operational and `BLOCKED_BY_UNKNOWN`. All current scene-problem classifications remain `UNKNOWN`. Thirty scenes remain `BLOCKED_DIRECT_AUDITION`; *Sound of Metal* remains `SIGNAL_MEASURED_NOT_AUDITIONED`.
 
-A candidate rule may become a reusable default only after:
+## Authoritative sources
 
-1. at least two independent scene sources or one source plus a strong counterexample;
-2. exact shot/timecode evidence;
-3. explicit trigger and non-applicability conditions;
-4. an AI-execution risk and fallback;
-5. a forward test on original material;
-6. human review of the creative result.
+These are the only intended completion authorities. A planned source does not become authoritative until its schema, artifact and tests are checked in and validated.
 
-No item in this repository is a production green light.
+| Authority | Path | Current status |
+|---|---|---|
+| Per-scene facts | `research/evidence/**/*.scene-evidence.json` | ACTIVE — 31 canonical JSON units |
+| Candidate-rule lineage and grouping | `research/grammar/candidate_rule_index.json` | ACTIVE — 124 candidates in 16 reviewed non-promotional textual families |
+| Cross-work support and contrary evidence | `research/grammar/cross_work_support_matrix.json` | ACTIVE — deterministic JSON/Markdown, zero eligible families |
+| Runtime directing rules | `research/grammar/director_grammar_v0.2.json` | ACTIVE — validated constraints plus zero evidence rules |
+| Phase, counts, blockers and next step | `context/STATE.md` | ACTIVE |
+
+Generated `*.scene-evidence.generated.md` files are deterministic review views of canonical JSON, not separate fact sources. Legacy evidence Markdown remains immutable migration provenance. Coverage and acquisition files are material catalogs only.
+
+## Current blockers
+
+- No candidate has passed cross-work promotion gates; zero promotion is the evidence-correct result for the current corpus.
+- No real positive selection has been exercised because the live eligible-family set is empty; the forward-test validator will fail when that set becomes non-empty until each family has distinct positive and boundary packages.
+- The first final read-only audit returned FAIL on evidence scope/provenance wording. All three findings are corrected; the narrow independent re-review issued PASS.
+- The post-completion compatibility repair received `PASS_LOCAL / NO_MUST_FIX_FINDINGS` from fresh non-writing reviewers after they replayed the initially failing adversarial cases.
+- A later final read-only audit correctly found two additional P1s: cross-scene substitution of a complete routing result and overwrite of an unrelated existing upgrade output. Both attacks now fail; the valid routed and new-output paths still pass. Repair-head CI and the fresh independent replay both pass.
+- A still later review reproduced two new P1s: a v0.2 source could bypass Grammar replay through `LEGACY_COMPATIBLE`, and the routing CLI could overwrite scene, Grammar or arbitrary existing output. Both are fixed; final implementation-head CI and the clean-checkout review pass.
+- Source replay and direct semantic-audio audition remain outside this Goal; structural validation cannot prove the original picture observations, sound semantics, creative quality or audience response.
+
+## Latest validation
+
+- Canonical converter focused suite: PASS — 13/13 tests; 31 scenes, 2,343 Shot/edit units and 124 candidate identities regenerate deterministically while the 30 legacy Markdown sources remain unchanged.
+- Integrated Scene validator suite: PASS — 100/100 tests, including the complete Phase 1 re-review matrix.
+- Complete repository unit/CLI suite: PASS — 233/233 tests.
+- Full Scene Evidence validation: PASS_STRUCTURAL — 31 passed, 0 failed, 0 errors, 72 warnings.
+- Renderer: PASS locally — 31 generated files match canonical JSON, round-trip deterministically, and preserve every source Markdown file.
+- Phase 1 independent read-only audit: PASS — no must-fix finding remains.
+- Candidate index builder check: PASS — 124 candidates, 16 root-reviewed textual mechanism families, 44 explicit reviewed overrides and zero promoted.
+- Candidate-rule validation: PASS — 124 candidates, 16 families, zero errors and zero runtime-authorized rules.
+- Phase 2 independent read-only audit: PASS after replaying the two prior failed snapshots' count, provenance and path-traversal attacks.
+- Grammar validation: PASS — five project constraints, six safety constraints, zero eligible/runtime evidence rules and zero errors.
+- Routing-case validation: PASS — eight rights-safe original inputs, eight truthful `NO_APPLICABLE_RULE` results and zero selected rules.
+- Phase 3 independent read-only audit: PASS after replaying empty required-fact mapping, short work-title leakage, dropped IR routing result and unauditioned-audio instruction attacks.
+- Forward-test build/validation: PASS — eight packages, six required scene problems, zero eligible families, zero selected rules, eight `NO_APPLICABLE_RULE`, eight `HUMAN_REVIEW_PENDING`, zero errors and 31 visible visual-binding warnings.
+- Phase 4 independent read-only audit: PASS after replaying false-positive, private-path, fact-drift, work-title, approval, audio-loss and JSON Unicode-escape attacks and reading all eight original scripts.
+- Phase 5 independent read-only audit: PASS — 88/4 migration, original 30/120 no-drift, UNKNOWN/audio/runtime boundaries, four reviewed family assignments, catalog route and 31/2,343/124/16/0/72 arithmetic reproduced with no must-fix finding.
+- Repository automation after the two new P1 repairs: PASS — all 18 local checks pass, five versioned reports match live output, and `final-generalization-validation/0.4` is deterministic `PASS_LOCAL` with zero validation errors and 103 preserved warnings.
+- Minimal CI workflow: PASS_REMOTE_FINAL_IMPLEMENTATION_HEAD — the read-only workflow ran the same 233-test repository checks successfully.
+- Final integrated-state independent audit: PASS_LOCAL — a fresh non-writing reviewer used a clean detached checkout, reproduced both new P1 matrices and valid paths, confirmed zero worktree changes and issued `NO_MUST_FIX_FINDINGS` with no P2.
+- Compatibility-repair independent audit: PASS_LOCAL — three fresh read-only reviewers found real first-round gaps, verified their closure, and reported no remaining must-fix finding.
+
+The current command-to-claim evidence is `research/validation/VALIDATION_CLAIM_REGISTER.md`. The versioned closed-corpus evidence is `research/validation/CLOSED_CORPUS_COMPLETION_REPORT.md` and `research/validation/scene-evidence-validation.json`. A structural pass is not human creative approval.
+
+## Next single action
+
+Stop and wait for the user's separate merge decision. PR #3 remains open; do not merge `main`, deploy, publish or delete media.

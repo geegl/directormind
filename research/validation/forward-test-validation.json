@@ -1,0 +1,92 @@
+{
+  "cases": [
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "ACTION_CAUSALITY",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-ACTION-CAUSALITY"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 3,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "NO_SPECIALIZED_PROBLEM",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-NO-APPLICABLE-RULE"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "DIALOGUE_POWER_TRANSFER",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-POWER-DIALOGUE"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "PROCEDURAL_COMPETENCE",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-PROCEDURE"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "ROMANTIC_PROXIMITY",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-PROXIMITY-TENSION"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "PUBLIC_REVELATION",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-PUBLIC-REVEAL"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "RELATIONSHIP_FRACTURE",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-RELATIONSHIP-FRACTURE"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "SOUND_LED_CAUSALITY",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-SOUND-SUSPENSE"
+    }
+  ],
+  "completed_boundary_cases": 0,
+  "completed_positive_cases": 0,
+  "error_count": 0,
+  "human_review_pending_count": 8,
+  "issues": [],
+  "missing_family_count": 0,
+  "no_applicable_rule_count": 8,
+  "package_count": 8,
+  "promotion_ready_family_count": 0,
+  "required_positive_boundary_pairs": 0,
+  "required_scene_problem_count": 6,
+  "schema_version": "forward-test-repository-validation/0.1",
+  "selected_rule_count": 0,
+  "status": "PASS",
+  "structural_pass_count": 8,
+  "warning_count": 31
+}

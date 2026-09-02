@@ -1,0 +1,928 @@
+{
+  "schema_version": "scene-evidence/0.1",
+  "evidence_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001",
+  "work_id": "TRUE-DETECTIVE-S01E04",
+  "scene_problem": {
+    "primary": "LEGACY_SCENE_PROBLEM",
+    "secondary": [],
+    "status": "UNKNOWN",
+    "source_refs": [],
+    "notes": "The legacy primary label ACTION_CAUSALITY is retained only as non-operational lineage and was not proved by structural conversion."
+  },
+  "scene_unit_type": "SINGLE_VISIBLE_TAKE",
+  "boundary_status": "BOUNDARY_UNKNOWN",
+  "boundary_evidence": {
+    "claim_id": "SCENE-BOUNDARY",
+    "status": "UNKNOWN",
+    "value": "The complete natural-scene boundary remains unknown.",
+    "source_refs": [],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "production_take_status": "VISIBLE_CONTINUITY_ONLY",
+  "source_identity_status": "SOURCE_OR_FILENAME_SUPPLIED",
+  "source_start": {
+    "timecode": "00:49:06.000",
+    "seconds": 2946.0,
+    "frame": 70704,
+    "pts": 70704,
+    "time_base": "1/24"
+  },
+  "source_end": {
+    "timecode": "00:55:00.500",
+    "seconds": 3300.5,
+    "frame": 79212,
+    "pts": 79212,
+    "time_base": "1/24"
+  },
+  "duration": 354.5,
+  "time_tolerance_seconds": 0.001,
+  "picture_evidence_status": "PICTURE_OBSERVED",
+  "audio_evidence_status": "BLOCKED_DIRECT_AUDITION",
+  "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+  "scene_dramatic_structure": {
+    "start_state": {
+      "claim_id": "DS-START",
+      "status": "PICTURE_OBSERVED",
+      "value": "The first converted visible unit establishes an initial picture state.",
+      "source_refs": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "objectives": [
+      {
+        "claim_id": "DS-OBJECTIVE",
+        "status": "UNKNOWN",
+        "value": "Character objectives remain unknown without a verified text anchor or direct soundtrack audition.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      }
+    ],
+    "obstacle": {
+      "claim_id": "DS-OBSTACLE",
+      "status": "UNKNOWN",
+      "value": "The dramatic obstacle remains unknown without a verified text anchor or direct soundtrack audition.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "event_point": {
+      "claim_id": "DS-EVENT",
+      "status": "INFERRED",
+      "value": "The converted picture ledger contains visible state changes; their story cause remains unknown.",
+      "source_refs": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "reaction_point": {
+      "claim_id": "DS-REACTION",
+      "status": "UNKNOWN",
+      "value": "Any reaction cause or emotional meaning remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "turn": {
+      "claim_id": "DS-TURN",
+      "status": "INFERRED",
+      "value": "The ordered visible state changes may form a dramatic turn, but the meaning remains inferred.",
+      "source_refs": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "end_state": {
+      "claim_id": "DS-END",
+      "status": "PICTURE_OBSERVED",
+      "value": "The final converted visible unit records the terminal picture state of the selected interval.",
+      "source_refs": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+      ],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    }
+  },
+  "spatial_geometry": {
+    "claim_id": "SCENE-GEOMETRY",
+    "status": "INFERRED",
+    "value": "The cited units support an inferred project-neutral spatial ledger; exact source identity across cuts is not asserted.",
+    "source_refs": [
+      "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "axis": {
+    "claim_id": "SCENE-AXIS",
+    "status": "INFERRED",
+    "value": "Screen direction and axis continuity remain an inference from the cited picture units.",
+    "source_refs": [
+      "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "POV": {
+    "claim_id": "SCENE-POV",
+    "status": "INFERRED",
+    "value": "POV function remains inferred from the cited visual coverage and is not treated as optical-POV proof.",
+    "source_refs": [
+      "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "audience_information": {
+    "claim_id": "SCENE-AUDIENCE",
+    "status": "INFERRED",
+    "value": "The cited picture units expose an ordered set of visible state changes; dramatic meaning remains inferred or unknown.",
+    "source_refs": [
+      "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+    ],
+    "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+  },
+  "shots": [
+    {
+      "shot_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001",
+      "order": 1,
+      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "start": {
+        "timecode": "00:49:06.000",
+        "seconds": 2946.0,
+        "frame": 70704,
+        "pts": 70704,
+        "time_base": "1/24"
+      },
+      "end": {
+        "timecode": "00:55:00.500",
+        "seconds": 3300.5,
+        "frame": 79212,
+        "pts": 79212,
+        "time_base": "1/24"
+      },
+      "duration": 354.5,
+      "shot_size": {
+        "claim_id": "S001-SIZE",
+        "status": "PICTURE_OBSERVED",
+        "value": "one uninterrupted-looking mobile unit changes continuously among exterior wide, room-relation, body-medium/close, threshold, yard/fence and vehicle-adjacent scales; there is no fixed shot size; exact focal length UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_height": {
+        "claim_id": "S001-HEIGHT",
+        "status": "PICTURE_OBSERVED",
+        "value": "delivered camera height and angle change while moving through exterior and interior zones; exact height, horizon strategy, rig and lens UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_angle": {
+        "claim_id": "S001-ANGLE",
+        "status": "PICTURE_OBSERVED",
+        "value": "delivered camera height and angle change while moving through exterior and interior zones; exact height, horizon strategy, rig and lens UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_motion": {
+        "claim_id": "S001-MOTION",
+        "status": "PICTURE_OBSERVED",
+        "value": "continuous-looking translation, following, retreating, lateral movement, pan and rotation connect exterior, interior, threshold, yard/fence and vehicle-adjacent views; support system, path metrics, stabilization, hidden joins and production method UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_start": {
+        "claim_id": "S001-CAM-START",
+        "status": "INFERRED",
+        "value": "building exteriors, yards, several room-like zones, doors/windows, furniture, fences/trees, vehicle-adjacent space, multiple adult-like bodies and short/long dark gun-shaped objects repeatedly enter, leave and recompose; exact geography and identities through occlusion UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: night exteriors use warm practical-like points and darker yards; interiors shift among neutral/cool, dim and haze-filled states; vehicle lights and street lighting recur; source grade and lighting/effect method UNKNOWN"
+      },
+      "camera_path": {
+        "claim_id": "S001-CAM-PATH",
+        "status": "PICTURE_OBSERVED",
+        "value": "continuous-looking translation, following, retreating, lateral movement, pan and rotation connect exterior, interior, threshold, yard/fence and vehicle-adjacent views; support system, path metrics, stabilization, hidden joins and production method UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "camera_end": {
+        "claim_id": "S001-CAM-END",
+        "status": "INFERRED",
+        "value": "building exteriors, yards, several room-like zones, doors/windows, furniture, fences/trees, vehicle-adjacent space, multiple adult-like bodies and short/long dark gun-shaped objects repeatedly enter, leave and recompose; exact geography and identities through occlusion UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "focus_strategy": {
+        "claim_id": "S001-FOCUS",
+        "status": "PICTURE_OBSERVED",
+        "value": "nearby bodies, architecture and distant zones alternate in legibility with motion blur, occlusion and one haze-filled interval; exact focus pulls, focal plane and depth method UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S001-ZONE",
+          "status": "INFERRED",
+          "value": "building exteriors, yards, several room-like zones, doors/windows, furniture, fences/trees, vehicle-adjacent space, multiple adult-like bodies and short/long dark gun-shaped objects repeatedly enter, leave and recompose; exact geography and identities through occlusion UNKNOWN",
+          "source_refs": [
+            "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+          ],
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        }
+      ],
+      "axis_and_screen_direction": {
+        "claim_id": "S001-AXIS",
+        "status": "INFERRED",
+        "value": "adjacent frames carry architecture, body positions, doors, held-shape positions and travel direction locally; grouping recurring appearances and objects across long occlusion is INFERRED; absolute geography, exact eyelines, hidden stitches and production continuity UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "abstract_role_labels": [],
+      "blocking": {
+        "claim_id": "S001-BLOCK",
+        "status": "INFERRED",
+        "value": "a recurring dark-jacket appearance moves from an exterior wide through several thresholds and room/yard/fence/vehicle zones; other bodies cluster, separate, crouch, lie, rise, show 2D body-region adjacency/overlap or move; grouping the recurring appearance across long occlusion is INFERRED and exact identity/roles UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_action": {
+        "claim_id": "S001-ACTION",
+        "status": "INFERRED",
+        "value": "people walk, run, turn, reach and cross thresholds; hands hold short/long dark gun-shaped objects in several intervals; 2D body-region adjacency/overlap occurs; a phone-like object appears near a face; two body-like figures later remain adjacent/overlapping while moving through exterior zones; the final movement reaches a vehicle doorway. Exact physical contact existence/depth/force/function, object identity, purpose and custody across occlusion are UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_in": {
+        "claim_id": "S001-STATE-IN",
+        "status": "INFERRED",
+        "value": "building exteriors, yards, several room-like zones, doors/windows, furniture, fences/trees, vehicle-adjacent space, multiple adult-like bodies and short/long dark gun-shaped objects repeatedly enter, leave and recompose; exact geography and identities through occlusion UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "visible_state_out": {
+        "claim_id": "S001-STATE-OUT",
+        "status": "INFERRED",
+        "value": "people walk, run, turn, reach and cross thresholds; hands hold short/long dark gun-shaped objects in several intervals; 2D body-region adjacency/overlap occurs; a phone-like object appears near a face; two body-like figures later remain adjacent/overlapping while moving through exterior zones; the final movement reaches a vehicle doorway. Exact physical contact existence/depth/force/function, object identity, purpose and custody across occlusion are UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "event_or_reaction": {
+        "claim_id": "S001-EVENT",
+        "status": "INFERRED",
+        "value": "continuous mobile event/route coverage; exact event, reaction and turn semantics UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "performance_beat": {
+        "claim_id": "S001-PERF",
+        "status": "INFERRED",
+        "value": "head, gaze, mouth, pace, crouch, arm, grip and body-level states change throughout; emotion, spoken content, stimulus and reaction cause UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_in": {
+        "claim_id": "S001-EDIT-IN",
+        "status": "PICTURE_OBSERVED",
+        "value": "hard cut at F70704 / 00:49:06.000 from a tighter exterior two-body composition to a wider building/yard composition",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "edit_out": {
+        "claim_id": "S001-EDIT-OUT",
+        "status": "PICTURE_OBSERVED",
+        "value": "hard cut at F79212 / 00:55:00.500 from the vehicle-door/rear-region image to a distinct inside-vehicle person view outside the envelope",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "cut_motivation": {
+        "claim_id": "S001-CUT-MOTIVE",
+        "status": "INFERRED",
+        "value": "the two visible hard cuts bracket one complete mobile route unit; editorial intention and sound motivation UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "narrative_function": {
+        "claim_id": "S001-FUNCTION",
+        "status": "INFERRED",
+        "value": "carries changing person/object/door/zone/vehicle states through a multi-zone route without a visible internal cut; roles, threat, search, extraction, escape, outcome and causal meaning UNKNOWN",
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "AI_complexity": {
+        "camera": {
+          "level": "CRITICAL",
+          "reasons": [
+            "Legacy risk was conservatively mapped to camera=CRITICAL; execution remains unverified."
+          ]
+        },
+        "performance": {
+          "level": "CRITICAL",
+          "reasons": [
+            "Legacy risk was conservatively mapped to performance=CRITICAL; execution remains unverified."
+          ]
+        },
+        "continuity": {
+          "level": "CRITICAL",
+          "reasons": [
+            "Legacy risk was conservatively mapped to continuity=CRITICAL; execution remains unverified."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": "camera—split into six project-original fixed or short mobile zone units joined only at locked thresholds/occlusions; performance—limit each unit to two principal bodies and one gross action with visible safe separation unless a locked script plus safety plan authorizes contact; continuity—use a zone/door/person/object state ledger and a fixed entry/exit vector for every unit",
+        "performance": "camera—split into six project-original fixed or short mobile zone units joined only at locked thresholds/occlusions; performance—limit each unit to two principal bodies and one gross action with visible safe separation unless a locked script plus safety plan authorizes contact; continuity—use a zone/door/person/object state ledger and a fixed entry/exit vector for every unit",
+        "continuity": "camera—split into six project-original fixed or short mobile zone units joined only at locked thresholds/occlusions; performance—limit each unit to two principal bodies and one gross action with visible safe separation unless a locked script plus safety plan authorizes contact; continuity—use a zone/door/person/object state ledger and a fixed entry/exit vector for every unit",
+        "project_original_only": true
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    }
+  ],
+  "stats": {
+    "unit": "VISIBLE_SHOT",
+    "shot_count": 1,
+    "total_duration": 354.5,
+    "mean_duration": 354.5,
+    "median_duration": 354.5,
+    "duration_bins": {
+      "lt_1": 0,
+      "1_to_lt_2": 0,
+      "2_to_lt_5": 0,
+      "5_to_lt_10": 0,
+      "gte_10": 1
+    }
+  },
+  "audio_audit": {
+    "dialogue_overlap": {
+      "claim_id": "AUDIO-01",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "silence_intervals": {
+      "claim_id": "AUDIO-02",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "ambience": {
+      "claim_id": "AUDIO-03",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "score_entry": {
+      "claim_id": "AUDIO-04",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "score_exit": {
+      "claim_id": "AUDIO-05",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "sound_before_image": {
+      "claim_id": "AUDIO-06",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "offscreen_sound": {
+      "claim_id": "AUDIO-07",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "sound_bridge": {
+      "claim_id": "AUDIO-08",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "subjective_sound": {
+      "claim_id": "AUDIO-09",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "object_sound": {
+      "claim_id": "AUDIO-10",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "audio_information_change": {
+      "claim_id": "AUDIO-11",
+      "status": "UNKNOWN",
+      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "source_refs": [],
+      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+    },
+    "audio_unknowns": [
+      "Dialogue, ambience, score, silence, source, timing, and causal sound meaning remain unknown."
+    ]
+  },
+  "text_anchors": [],
+  "methods": [
+    {
+      "method_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-METHOD-LEGACY-PICTURE-REVIEW",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The legacy Markdown records a completed manual picture and edit-boundary review.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+      ],
+      "unknowns": [
+        "Source-media facts remain unknown."
+      ]
+    },
+    {
+      "method_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-METHOD-STRUCTURAL-CONVERSION",
+      "method_type": "STRUCTURAL_CONVERSION",
+      "status": "REPOSITORY_REPRODUCIBLE",
+      "description": "Deterministically convert the checked-in legacy tables to Scene Evidence JSON.",
+      "repository_command": "python3 skills/drama-director-compiler/scripts/convert_legacy_scene_evidence.py --check",
+      "tool_version_status": "VERSION_RECORDED",
+      "source_refs": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+      ],
+      "unknowns": [
+        "Creative approval and renewed media observation remain unknown."
+      ]
+    },
+    {
+      "method_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-METHOD-DIRECT-AUDIO",
+      "method_type": "AUDIO_DIRECT_AUDITION",
+      "status": "BLOCKED",
+      "description": "Direct soundtrack audition was not completed for this conversion.",
+      "repository_command": null,
+      "tool_version_status": "NOT_APPLICABLE",
+      "source_refs": [],
+      "unknowns": [
+        "All semantic audio facts remain unknown."
+      ]
+    }
+  ],
+  "auxiliary_evidence": [],
+  "continuity_tracks": [],
+  "candidate_rules": [
+    {
+      "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C01-WAYPOINT-REGISTERED-MOBILE-GEOGRAPHY",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-113",
+      "legacy_migration": {
+        "trigger": "LOCKED-SCRIPT-GATED: a project-original real-time route crosses three or more visually distinct zones and the audience must retain where the moving group has been and where it is heading",
+        "directing_decision": "HYPOTHESIS: register each new zone with one readable project-original landmark and an exit/destination vector before tightening into body action; return to a route anchor whenever orientation is at risk",
+        "coverage": "Origin-zone relation wide → first threshold → zone action/relation → exit vector → next-zone anchor/action; repeat only for script-required zones → terminal destination relation",
+        "blocking": "Assign stable zone IDs, threshold sides and project-original waypoint landmarks; move principal visual tracks through an explicit entry/exit vector and keep crowd bodies from obscuring every anchor simultaneously",
+        "pacing_edit": "Let physical distance and each script-verified state change determine hold length; do not copy the source's 354.500s duration or treat continuous motion as automatic urgency",
+        "sound": "SND-UNK: audio was not auditioned; dialogue, commands, impacts, sirens, footsteps, ambience, score and sound-led route timing remain UNKNOWN",
+        "applicability": "Escort, evacuation, search, pursuit, covert transit or group movement where locked-script geography and a shared clock are necessary to comprehension",
+        "non_applicability": "Deliberate disorientation is the goal; time ellipsis is required; only one room matters; a stationary master communicates every state; or safe production/generation cannot preserve the route",
+        "failure_mode": "Motion continues without readable waypoints; doors or screen direction flip; bodies teleport between zones; landmarks become decorative rather than orienting; or source-specific buildings/events are copied",
+        "counterexample": "COUNTEREXAMPLE UNKNOWN: same-trigger contrary evidence pending. Different-trigger boundary: CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001 uses seats and apertures inside one moving enclosure rather than a multi-building route",
+        "unknown": "Exact source geography, intended route, identities, roles, reason for movement, chronology beyond adjacent frames, hidden stitches, rig, sound and audience effect",
+        "ai_risk": "camera=CRITICAL for repeatable multi-zone translation/rotation and exposure; performance=HIGH for asynchronous movement and threshold timing; continuity=CRITICAL for zone map, bodies, doors, landmarks and direction",
+        "fallback": "Project-original fallback: six short units maximum—origin master, threshold A, zone B relation, threshold B, terminal-zone relation and destination close; camera uses fixed marks, performance caps at two principal bodies per unit, continuity locks zone/door/person IDs and entry/exit vectors",
+        "evidence_shots": "TRUE-DETECTIVE-S01E04-MZMROUTE-S001; analyst-selected waypoints P0–P6",
+        "confidence": "HIGH for the observed visible-shot waypoint/route mechanism; MEDIUM for single-source transfer; production method and story semantics UNKNOWN"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C01-WAYPOINT-REGISTERED-MOBILE-GEOGRAPHY-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-METHOD-LEGACY-PICTURE-REVIEW",
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001"
+      ],
+      "evidence_shot_ids": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    },
+    {
+      "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C02-THRESHOLD-AS-STATE-CHECKPOINT",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-114",
+      "legacy_migration": {
+        "trigger": "LOCKED-SCRIPT-GATED: a project-original continuous route changes person, object, door or custody states at multiple thresholds and those changes must remain readable after movement resumes",
+        "directing_decision": "HYPOTHESIS: treat each script-required threshold as a state checkpoint—show the before-state, one complete crossing or handoff, then an after-state that preserves owner, side, body level and next vector",
+        "coverage": "Pre-threshold relation → crossing/occlusion → after-threshold person/object/door check → route continuation; omit checkpoints that do not change a locked state",
+        "blocking": "Lock hinge/threshold side, entering and exiting person tracks, project-original held-object state, body level and next travel vector; never infer custody or same-person identity from a disconnected insert",
+        "pacing_edit": "Hold only long enough for the changed state and direction to register; compress unchanged corridors and travel; do not cut merely because a doorframe passes the lens",
+        "sound": "SND-UNK: audio was not auditioned; knocks, calls, commands, impacts, footsteps, door sounds and sound bridges remain UNKNOWN",
+        "applicability": "Multi-room movement, corridor/door transitions, vehicle entry, facility traversal or any original scene where a threshold changes responsibility or visible state",
+        "non_applicability": "The threshold is incidental; the transition must remain hidden; crossing identity is intentionally ambiguous; or no person/object/door state changes",
+        "failure_mode": "A person or object changes sides without path; doors reset open/closed; a close insert falsely proves ownership; crossing and after-state disagree; every doorway receives equal weight",
+        "counterexample": "COUNTEREXAMPLE UNKNOWN: same-trigger contrary evidence pending. Within-source different-state boundary: several unchanged passages function only as route transit and do not justify a full state checkpoint",
+        "unknown": "Which thresholds are narratively important, exact source door/room identity, object ownership, physical contact existence/depth/force/function, elapsed time, hidden transitions and sound",
+        "ai_risk": "camera=HIGH for threshold occlusion and before/after matching; performance=HIGH for timed crossing and 2D body-region overlap/proximity geometry; continuity=CRITICAL for person/object/door/side and route-vector states",
+        "fallback": "Project-original fallback: fixed before-threshold wide → one side-on crossing medium → fixed after-threshold wide; one state change per crossing, no readable labels, and no physical contact unless locked script plus safety plan authorizes it",
+        "evidence_shots": "TRUE-DETECTIVE-S01E04-MZMROUTE-S001; threshold waypoints near P0/P1, P2/P3, P4/P5 and P6",
+        "confidence": "MEDIUM-HIGH for visible threshold/state recurrence; LOW-MEDIUM for causal or custody meaning; single-source candidate"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C02-THRESHOLD-AS-STATE-CHECKPOINT-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-METHOD-LEGACY-PICTURE-REVIEW",
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001"
+      ],
+      "evidence_shot_ids": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    },
+    {
+      "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C03-REACQUIRE-VISUAL-TRACK-AFTER-OCCLUSION",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-115",
+      "legacy_migration": {
+        "trigger": "LOCKED-SCRIPT-GATED: one project-original visual track may leave frame or pass behind bodies/architecture while other action remains visible, but the audience must reacquire it without identity confusion",
+        "directing_decision": "HYPOTHESIS: before occlusion give the track a departure vector and waypoint; during absence retain the waypoint or destination direction; on return show an arrival vector plus one body/wardrobe/state check. Exact identity still comes from the locked project continuity package, not visual guesswork",
+        "coverage": "Track medium/relation → departure vector/landmark → secondary visible action or occlusion → landmark/destination reset → returning track/state confirmation",
+        "blocking": "Use project-original track IDs and distinct but non-signature wardrobe/state tokens; preserve screen side and landmark relation; do not make two similar bodies exchange identities during the occlusion",
+        "pacing_edit": "Do not cut/reframe to the returning track before the destination relation is readable; keep the absence only as long as the locked secondary action requires",
+        "sound": "SND-UNK: audio was not auditioned; off-screen calls, recognition cues, dialogue, footsteps and sound-led reacquisition remain UNKNOWN",
+        "applicability": "Crowded rooms, multi-zone route scenes, columns/doorway occlusions, vehicle/loading movement or any original sequence with temporary visual loss of a required track",
+        "non_applicability": "Identity ambiguity is the intended reveal; the track must remain continuously onscreen; the secondary action is irrelevant; or appearance matching is too weak to support even an inferred visual track",
+        "failure_mode": "The track teleports; wardrobe substitutes for identity; destination geography is absent; another body inherits the prop/state; or the camera reveals the return before the script allows it",
+        "counterexample": "COUNTEREXAMPLE UNKNOWN: same-trigger contrary evidence pending. Different-trigger boundary: BCS-S03E05-C03-SUSTAIN-CONTESTED-PERSON-SCREEN-OWNERSHIP keeps one person continuously onscreen when uninterrupted visible behavior is itself the primary fact",
+        "unknown": "Exact identity through source occlusions, whether absences are intentional, off-screen actions, route clock, roles, relationship, camera motive, hidden joins and sound",
+        "ai_risk": "camera=HIGH for landmark-preserving departure/reentry; performance=HIGH for track-specific body/wardrobe state; continuity=CRITICAL for project-original identity token, screen side, prop state and destination geometry",
+        "fallback": "Project-original fallback: end one fixed shot on a clear departure vector, show one short secondary-action shot with the landmark, then begin the next fixed shot on the same landmark and an arriving body-state check; continuity—not appearance alone—must authorize the identity match",
+        "evidence_shots": "TRUE-DETECTIVE-S01E04-MZMROUTE-S001; recurring dark-jacket appearance across P0–P6, exact identity through occlusion UNKNOWN",
+        "confidence": "MEDIUM for visible landmark/track reacquisition; LOW for exact source identity and intention; single-source candidate"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C03-REACQUIRE-VISUAL-TRACK-AFTER-OCCLUSION-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-METHOD-LEGACY-PICTURE-REVIEW",
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001"
+      ],
+      "evidence_shot_ids": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    },
+    {
+      "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C04-FUNCTIONAL-SEGMENTATION-FALLBACK-FOR-LONG-ROUTE",
+      "canonical_rule_family": "UNCLUSTERED-CANDIDATE-116",
+      "legacy_migration": {
+        "trigger": "LOCKED-SCRIPT-GATED: an original scene needs a continuous clock, cumulative route geography and carried state, but production or generation cannot safely sustain one long multi-person mobile visible shot",
+        "directing_decision": "HYPOTHESIS: preserve continuity functions with project-original threshold/occlusion segments rather than imitating a literal long take; every join must carry one route anchor and all script-required person/object/door states",
+        "coverage": "Origin master → short mobile zone unit → threshold/occlusion join → next-zone state unit → route reset → terminal destination; each unit owns one principal movement or state change",
+        "blocking": "Prebuild a zone map and state ledger; pair the last frame state of each unit with the first frame state of the next; cap simultaneous bodies and held objects to the locked-script minimum",
+        "pacing_edit": "Maintain one explicit story clock in the ledger; vary unit duration by state complexity; avoid prestige-length holds and avoid adding reaction inserts that reset the route",
+        "sound": "SND-UNK for this source. A project-original continuous ambience or sound bridge requires separate verified sound design and cannot be borrowed from this picture-only evidence",
+        "applicability": "AI video, short-clip pipelines, safety-limited physical production or edit plans where functional continuity matters more than literal capture duration",
+        "non_applicability": "The locked script requires demonstrably uninterrupted bodily performance; a safe real continuous capture is essential and feasible; hidden geography is the point; or segmentation would conceal a required contact/action",
+        "failure_mode": "Joins reset door/body/object states; extra establishing shots stop momentum; clips repeat the same route; invented receiver reactions replace carried state; or the fallback copies source locations/costumes/events",
+        "counterexample": "COUNTEREXAMPLE UNKNOWN: same-trigger contrary evidence pending. Cross-source mechanism analogue: BEAR-C04-FUNCTIONAL-LONG-TAKE-FALLBACK also preserves shared clock/geography/state through shorter units but does not validate this route recipe",
+        "unknown": "Whether the source has hidden joins, exact production take count, safe rehearsal/rig method, script-required continuity, sound bed, original audience effect and same-trigger contrary source",
+        "ai_risk": "camera=HIGH for matched route vectors and threshold joins; performance=MEDIUM-HIGH for one gross state per unit; continuity=CRITICAL for clock, zone, person, door and object ledgers",
+        "fallback": "Project-original fallback of last resort: six fixed views—origin, two thresholds, two zone relations and terminal destination—with at most two principal bodies and one state transition per view; no attempt at seamless stitching is required",
+        "evidence_shots": "TRUE-DETECTIVE-S01E04-MZMROUTE-S001; full selected visible-shot envelope",
+        "confidence": "HIGH for fallback necessity under long-generation limits; MEDIUM for exact segmentation recipe; one-source candidate with same-trigger contrary evidence pending"
+      },
+      "scene_problem": "LEGACY_SCENE_PROBLEM",
+      "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration.",
+      "required_story_facts": [],
+      "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+      "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+      "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+      "POV_effect": "PENDING_HUMAN_REVIEW: no audience-access or point-of-view effect is authorized.",
+      "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+      "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+      "audio_logic": {
+        "claim_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C04-FUNCTIONAL-SEGMENTATION-FALLBACK-FOR-LONG-ROUTE-AUDIO",
+        "status": "UNKNOWN",
+        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "source_refs": [],
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      },
+      "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+      "AI_risk": {
+        "camera": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "performance": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        },
+        "continuity": {
+          "level": "UNKNOWN",
+          "reasons": [
+            "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+          ]
+        }
+      },
+      "fallback": {
+        "camera": null,
+        "performance": null,
+        "continuity": null,
+        "project_original_only": true
+      },
+      "applicable_when": [
+        "No applicability condition is authorized before human review."
+      ],
+      "not_applicable_when": [
+        "No non-applicability boundary is authorized before human review."
+      ],
+      "failure_modes": [
+        "Applying this migrated lineage row as an operational rule before human review."
+      ],
+      "counterexample_status": "UNKNOWN",
+      "counterexample_ids": [],
+      "source_method_ids": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-METHOD-LEGACY-PICTURE-REVIEW",
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-METHOD-STRUCTURAL-CONVERSION"
+      ],
+      "evidence_scene_ids": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001"
+      ],
+      "evidence_shot_ids": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+      ],
+      "evidence_auxiliary_ids": [],
+      "within_source_confidence": "UNKNOWN",
+      "transfer_confidence": "UNKNOWN",
+      "execution_confidence": "UNKNOWN",
+      "promotion_status": "BLOCKED_BY_UNKNOWN",
+      "evidence_status": "HYPOTHESIS"
+    }
+  ],
+  "unknowns": [
+    {
+      "unknown_id": "UNKNOWN-AUDIO",
+      "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
+      "scope": "AUDIO",
+      "blocks_rule_ids": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C01-WAYPOINT-REGISTERED-MOBILE-GEOGRAPHY",
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C02-THRESHOLD-AS-STATE-CHECKPOINT",
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C03-REACQUIRE-VISUAL-TRACK-AFTER-OCCLUSION",
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C04-FUNCTIONAL-SEGMENTATION-FALLBACK-FOR-LONG-ROUTE"
+      ]
+    },
+    {
+      "unknown_id": "UNKNOWN-EXECUTION",
+      "statement": "Cross-work transfer and generation execution remain unverified and unknown.",
+      "scope": "RULE",
+      "blocks_rule_ids": [
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C01-WAYPOINT-REGISTERED-MOBILE-GEOGRAPHY",
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C02-THRESHOLD-AS-STATE-CHECKPOINT",
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C03-REACQUIRE-VISUAL-TRACK-AFTER-OCCLUSION",
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C04-FUNCTIONAL-SEGMENTATION-FALLBACK-FOR-LONG-ROUTE"
+      ]
+    }
+  ],
+  "rights_boundary": {
+    "media_committed": false,
+    "subtitles_committed": false,
+    "scripts_or_long_dialogue_committed": false,
+    "contains_absolute_local_paths": false,
+    "contains_media_hashes": false,
+    "reference_surface_terms": [
+      "TRUE DETECTIVE S01E04"
+    ],
+    "surface_inventory_status": "HUMAN_REVIEWED_COMPLETE",
+    "prohibited_transfer_content": [
+      "Reference characters, locations, props, dialogue, scene events, and signature compositions."
+    ],
+    "notes": "Human review confirmed that every operational candidate-rule field is the same fixed source-neutral pending-review placeholder. Work-specific legacy text remains only in non-operational lineage; no source media or temporary artifact is embedded."
+  },
+  "validation_status": "HUMAN_REVIEW_PENDING",
+  "validation_warnings": [
+    "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
+    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+  ]
+}

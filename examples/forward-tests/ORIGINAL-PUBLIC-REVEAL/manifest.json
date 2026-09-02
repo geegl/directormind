@@ -1,0 +1,7 @@
+{
+  "candidate_rule_id": null,
+  "canonical_rule_family": null,
+  "schema_version": "forward-test-result/0.1",
+  "status": "HUMAN_REVIEW_PENDING",
+  "test_case_id": "ORIGINAL-PUBLIC-REVEAL"
+}
