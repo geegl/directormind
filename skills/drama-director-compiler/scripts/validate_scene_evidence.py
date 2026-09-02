@@ -48,6 +48,10 @@ CREDENTIAL_RE = re.compile(
     r"\b(?:api[_ -]?key|access[_ -]?token|client[_ -]?secret)\s*[:=]\s*[^\s,;]{8,})",
     re.IGNORECASE,
 )
+CREDENTIAL_KEY_RE = re.compile(
+    r"^(?:api[_ -]?key|access[_ -]?token|client[_ -]?secret|password|passwd|secret|token)$",
+    re.IGNORECASE,
+)
 FINGERPRINT_LABEL_RE = re.compile(r"\b(?:sha(?:-?1|-?256|-?512)?|md5)\b", re.IGNORECASE)
 LONG_HEX_RE = re.compile(r"\b[0-9a-f]{32,}\b", re.IGNORECASE)
 RELEASE_LABEL_RE = re.compile(
@@ -61,7 +65,7 @@ PICTURE_SEMANTIC_LEAK_RE = re.compile(
     re.IGNORECASE,
 )
 AUDIO_DIRECTIVE_RE = re.compile(
-    r"(?:\b(?:add|use|insert|introduce|bring\s+in|play|mute|drop|fade|bridge|cut|synchronize|trigger|drive|enter|track|"
+    r"(?:\b(?:add|use|insert|introduce|bring(?:ing)?\s+in|play|mute|drop|fade|bridge|cut|synchronize|trigger|drive|enter|track|"
     r"underscore|hold)\b[^.\n]{0,100}\b(?:audio|sound|sounds|cue|score|music|silence|voice|dialogue|"
     r"ambience|noise|alarm|ring|tone)\b|\b(?:audio|sound|sounds|cue|score|music|silence|voice|dialogue|"
     r"ambience|noise|alarm|ring|tone)\b[^.\n]{0,100}\b(?:add|use|insert|introduce|bring\s+in|play|mute|drop|fade|enter|"
@@ -107,13 +111,30 @@ SAFE_AUDIO_BOUNDARY_RE = re.compile(
     re.IGNORECASE,
 )
 SAFE_UNKNOWN_TAIL_RE = re.compile(
-    r"^(?:outside this candidate|(?:is )?not part of this candidate)$",
+    r"^(?:outside this candidate|(?:is )?not part of this candidate|(?:whether|if)\b.+)$",
     re.IGNORECASE,
 )
 CROSS_CUT_IDENTITY_ASSERTION_RE = re.compile(
     r"\b(?:the\s+)?same\s+(?:person|individual|body|appearance|vehicle|object)\b[^.\n]{0,80}"
     r"\b(?:across|after|through)\b[^.\n]{0,40}\b(?:cut|cuts|edit|edits)\b|"
     r"\bidentity\b[^.\n]{0,60}\b(?:continues?|persists?|matches?)\b[^.\n]{0,40}\b(?:cut|cuts|edit|edits)\b",
+    re.IGNORECASE,
+)
+AFFIRMATIVE_FACT_RE = re.compile(
+    r"\b(?:is|are|was|were|has|have|contains?|shows?|appears?|returns?|continues?|persists?|matches?|"
+    r"becomes?|uses?|keeps?|holds?|wears?|drives?|moves?|visible|audible|present|onscreen|on-screen)\b",
+    re.IGNORECASE,
+)
+OPERATIONAL_VERB_RE = re.compile(
+    r"\b(?:use|keep|maintain|show|place|stage|frame|cut|move|track|bring|add|insert|preserve|assign|"
+    r"make|let|hold|drive|trigger|synchronize)\b",
+    re.IGNORECASE,
+)
+OPERATIONAL_PREFIX_RE = re.compile(
+    r"^\s*(?:(?:please|then)\s+)?(?:use|keep|maintain|show|place|stage|frame|cut|move|track|bring|add|"
+    r"insert|preserve|assign|make|let|hold|drive|trigger|synchronize)\b|"
+    r"\b(?:must|should)\s+(?:use|keep|maintain|show|place|stage|frame|cut|move|track|bring|add|insert|"
+    r"preserve|assign|make|let|hold|drive|trigger|synchronize)\b",
     re.IGNORECASE,
 )
 UNKNOWN_FACT_ALIAS_PATTERNS = {
@@ -234,6 +255,33 @@ def _validate_schema_document(schema: Any) -> dict[str, Any]:
     schema_version = properties.get("schema_version")
     if not isinstance(schema_version, dict) or schema_version.get("const") != "scene-evidence/0.1":
         raise ValueError("schema_version contract is missing or unsupported")
+    rights_boundary = definitions.get("rightsBoundary")
+    fallback = definitions.get("fallback")
+    rights_properties = rights_boundary.get("properties") if isinstance(rights_boundary, dict) else None
+    fallback_properties = fallback.get("properties") if isinstance(fallback, dict) else None
+    if not isinstance(rights_properties, dict) or not isinstance(fallback_properties, dict):
+        raise ValueError("schema rights and fallback contracts are missing")
+    for field in (
+        "media_committed",
+        "subtitles_committed",
+        "scripts_or_long_dialogue_committed",
+        "contains_absolute_local_paths",
+        "contains_media_hashes",
+    ):
+        node = rights_properties.get(field)
+        if (
+            not isinstance(node, dict)
+            or node.get("type") != "boolean"
+            or not _json_const_matches(node.get("const"), False)
+        ):
+            raise ValueError(f"schema rights boundary {field} must remain const false boolean")
+    project_original = fallback_properties.get("project_original_only")
+    if (
+        not isinstance(project_original, dict)
+        or project_original.get("type") != "boolean"
+        or not _json_const_matches(project_original.get("const"), True)
+    ):
+        raise ValueError("schema fallback project_original_only must remain const true boolean")
 
     allowed_types = {"object", "array", "string", "integer", "number", "boolean", "null"}
     stack: list[tuple[str, dict[str, Any]]] = [("$", schema)]
@@ -477,6 +525,8 @@ def _validate_public_boundary(evidence: dict[str, Any], issues: list[dict[str, s
             add_issue(issues, "error", "PUBLIC-DATA-URI", path, "embedded data payload is prohibited")
         if CREDENTIAL_RE.search(text):
             add_issue(issues, "error", "PUBLIC-CREDENTIAL", path, "credential-like material is prohibited")
+        if "{key:" in path and CREDENTIAL_KEY_RE.fullmatch(text.strip()):
+            add_issue(issues, "error", "PUBLIC-CREDENTIAL", path, "credential-labelled JSON key is prohibited")
         if FINGERPRINT_LABEL_RE.search(text) or LONG_HEX_RE.search(text):
             add_issue(issues, "error", "PUBLIC-FINGERPRINT", path, "media fingerprint material is prohibited")
         if RELEASE_LABEL_RE.search(text):
@@ -526,7 +576,7 @@ def _has_unauditioned_audio_assertion(text: str) -> bool:
 def _has_unsafe_audio_directive(text: str) -> bool:
     """Recognize audio instructions while preserving explicit negative boundaries."""
     for sentence in re.split(
-        r"[.!?;,\n]+|\b(?:and|but|however|yet|although|while|so|therefore|then)\b",
+        r"[.!?;,\n]+|\b(?:and|or|plus|before|after|but|however|yet|although|while|so|therefore|then)\b",
         text,
         flags=re.IGNORECASE,
     ):
@@ -562,6 +612,15 @@ def _normalize_trailing_segment(text: str) -> str:
     cleaned = re.sub(r"^[\s,;:.!?()\[\]-]+", "", text)
     cleaned = re.sub(r"^(?:and|but|however|yet|although|while|so|therefore|then)\b\s*", "", cleaned, flags=re.IGNORECASE)
     return re.sub(r"[\s,;:.!?()\[\]-]+$", "", cleaned).strip()
+
+
+def _uncertainty_prefix(text: str) -> str:
+    match = GENERAL_UNCERTAINTY_RE.search(text)
+    if match is None:
+        return ""
+    prefix = text[: match.start()].strip()
+    prefix = re.sub(r"\b(?:is|are|was|were|remain|remains)\s*$", "", prefix, flags=re.IGNORECASE)
+    return prefix.strip()
 
 
 def _iter_unknown_statements(evidence: dict[str, Any]) -> Iterator[tuple[str, str]]:
@@ -619,6 +678,19 @@ def _validate_unknown_statement(path: str, statement: str, issues: list[dict[str
             "UNKNOWN-HIDES-AUDIO-DIRECTIVE",
             path,
             "unknown wording cannot hide an unauditioned audio instruction",
+        )
+    prefix = _uncertainty_prefix(statement)
+    if (
+        prefix
+        and not re.match(r"^\s*(?:whether|if)\b", prefix, re.IGNORECASE)
+        and (AFFIRMATIVE_FACT_RE.search(prefix) or CROSS_CUT_IDENTITY_ASSERTION_RE.search(prefix))
+    ):
+        add_issue(
+            issues,
+            "error",
+            "UNKNOWN-HIDES-AFFIRMATIVE-FACT",
+            path,
+            "unknown wording cannot hide an affirmative fact before an uncertainty marker",
         )
     for trailing in _uncertainty_trailing_segments(statement):
         trailing = _normalize_trailing_segment(trailing)
@@ -702,6 +774,14 @@ def _rule_asserts_unknown_fact(unknown_text: str, operational_text: str) -> bool
     if not unknown_tokens and not has_known_anchor:
         return False
     for clause in _semantic_clauses(operational_text):
+        prefix = _uncertainty_prefix(clause)
+        if prefix and not re.match(r"^\s*(?:whether|if)\b", prefix, re.IGNORECASE):
+            shared_prefix = unknown_tokens.intersection(_fact_tokens(prefix))
+            if shared_prefix and (
+                OPERATIONAL_PREFIX_RE.search(prefix)
+                or AFFIRMATIVE_FACT_RE.search(prefix)
+            ):
+                return True
         segments = _uncertainty_trailing_segments(clause) if GENERAL_UNCERTAINTY_RE.search(clause) else [clause]
         for segment in segments:
             if (

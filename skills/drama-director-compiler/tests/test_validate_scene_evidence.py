@@ -1173,6 +1173,19 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
                     set_unknown_array(evidence, location, statement)
                     self.assertIn("UNKNOWN-HIDES-CROSS-CUT-IDENTITY", error_codes(evidence))
 
+    def test_every_unknown_array_rejects_fact_before_uncertainty(self) -> None:
+        statements = (
+            "The vehicle is red on screen, identity remains unknown.",
+            "Red vehicle visible on screen and identity remains unknown.",
+            "The same person continues across the cut, identity remains unknown.",
+        )
+        for location in ("shot", "audio", "method", "auxiliary", "continuity"):
+            for statement in statements:
+                with self.subTest(location=location, statement=statement):
+                    evidence = make_valid_evidence()
+                    set_unknown_array(evidence, location, statement)
+                    self.assertIn("UNKNOWN-HIDES-AFFIRMATIVE-FACT", error_codes(evidence))
+
     def test_safe_negative_audio_boundary_passes(self) -> None:
         evidence = make_valid_evidence()
         evidence["audio_audit"]["audio_unknowns"] = [
@@ -1214,6 +1227,9 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
         for statement in (
             "Audio remains unknown; do not add a score but bring in music.",
             "Audio remains unknown; do not add a score, then track the music.",
+            "Audio remains unknown; do not add a score or bring in music.",
+            "Audio remains unknown; do not add a score plus bring in music.",
+            "Audio remains unknown; do not add a score before bringing in music.",
         ):
             with self.subTest(statement=statement):
                 evidence = make_valid_evidence()
@@ -1246,17 +1262,36 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
                 evidence["candidate_rules"][0]["director_decision"] = rule_text
                 self.assertIn("RULE-ASSERTS-UNKNOWN-FACT", error_codes(evidence))
 
+    def test_single_token_unknown_cannot_be_hidden_after_rule_fact(self) -> None:
+        for rule_text in (
+            "Use the vehicle on screen, vehicle remains unknown.",
+            "Use the vehicle on screen and vehicle remains unknown.",
+        ):
+            with self.subTest(rule_text=rule_text):
+                evidence = make_valid_evidence()
+                evidence["unknowns"][0].update(
+                    statement="Vehicle remains unknown.",
+                    scope="SCENE",
+                    blocks_rule_ids=[],
+                )
+                evidence["candidate_rules"][0]["director_decision"] = rule_text
+                self.assertIn("RULE-ASSERTS-UNKNOWN-FACT", error_codes(evidence))
+
     def test_public_boundary_scans_measurement_keys(self) -> None:
-        for key, expected in (
-            ("private-scene.mp4", "PUBLIC-MEDIA-OR-SUBTITLE"),
-            ("api_key=fixture-secret", "PUBLIC-CREDENTIAL"),
-            ("data:image/png;base64,AAAA", "PUBLIC-DATA-URI"),
+        for key, value, expected in (
+            ("private-scene.mp4", 1, "PUBLIC-MEDIA-OR-SUBTITLE"),
+            ("api_key=fixture-secret", 1, "PUBLIC-CREDENTIAL"),
+            ("data:image/png;base64,AAAA", 1, "PUBLIC-DATA-URI"),
+            ("api_key", "fixture-secret-12345", "PUBLIC-CREDENTIAL"),
+            ("access_token", "fixture-token-12345", "PUBLIC-CREDENTIAL"),
+            ("client_secret", "fixture-secret-12345", "PUBLIC-CREDENTIAL"),
+            ("password", "fixture-password-12345", "PUBLIC-CREDENTIAL"),
         ):
             with self.subTest(key=key):
                 evidence = make_valid_evidence()
                 add_signal_auxiliary(evidence)
                 evidence["candidate_rules"][0]["promotion_status"] = "BLOCKED_BY_UNKNOWN"
-                evidence["auxiliary_evidence"][0]["measurements"] = {key: 1}
+                evidence["auxiliary_evidence"][0]["measurements"] = {key: value}
                 self.assertIn(expected, error_codes(evidence))
 
     def test_report_cannot_overwrite_input(self) -> None:
@@ -1433,7 +1468,40 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             with contextlib.redirect_stderr(stderr):
                 result = main([str(evidence_path), "--schema", str(schema_path), "--quiet"])
             self.assertEqual(result, 2)
-            self.assertIn("must match", stderr.getvalue())
+            self.assertIn("validator setup error", stderr.getvalue())
+
+    def test_tampered_canonical_schema_fails_closed(self) -> None:
+        for replacement in (None, 0):
+            with self.subTest(replacement=replacement), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                synthetic_skill_root = root / "skill"
+                scripts_dir = synthetic_skill_root / "scripts"
+                references_dir = synthetic_skill_root / "references"
+                scripts_dir.mkdir(parents=True)
+                references_dir.mkdir()
+                tampered_schema = json.loads(json.dumps(SCHEMA))
+                boolean_node = tampered_schema["$defs"]["rightsBoundary"]["properties"]["media_committed"]
+                if replacement is None:
+                    boolean_node.pop("type")
+                    boolean_node.pop("const")
+                else:
+                    boolean_node["const"] = replacement
+                canonical_path = references_dir / "scene-evidence.schema.json"
+                canonical_path.write_text(json.dumps(tampered_schema), encoding="utf-8")
+                evidence = make_valid_evidence()
+                evidence["rights_boundary"]["media_committed"] = 1
+                evidence_path = root / "scene-evidence.json"
+                evidence_path.write_text(json.dumps(evidence), encoding="utf-8")
+                original_module_file = validator_module.__file__
+                try:
+                    validator_module.__file__ = str(scripts_dir / "validate_scene_evidence.py")
+                    stderr = io.StringIO()
+                    with contextlib.redirect_stderr(stderr):
+                        result = main([str(evidence_path), "--schema", str(canonical_path), "--quiet"])
+                finally:
+                    validator_module.__file__ = original_module_file
+                self.assertEqual(result, 2)
+                self.assertIn("validator setup error", stderr.getvalue())
 
     def test_report_write_failure_returns_nonzero(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
