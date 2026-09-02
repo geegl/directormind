@@ -1831,6 +1831,14 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
                 "BOUNDARY_UNKNOWN requires boundary evidence to remain UNKNOWN",
             )
     elif boundary_sides is not None:
+        if boundary_claim_status != "PICTURE_OBSERVED":
+            add_issue(
+                issues,
+                "error",
+                "BOUNDARY-DEFINITE-REQUIRES-PICTURE",
+                "$.boundary_evidence.status",
+                "a definite boundary status requires PICTURE_OBSERVED boundary evidence",
+            )
         if boundary_claim_status == "UNKNOWN":
             add_issue(
                 issues,

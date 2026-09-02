@@ -10,6 +10,7 @@ import os
 import sys
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 from typing import Any
 
@@ -281,6 +282,93 @@ def add_signal_auxiliary(evidence: dict[str, Any], method_status: str = "MANUAL_
     )
     evidence["candidate_rules"][0]["evidence_auxiliary_ids"] = [auxiliary_id]
     return auxiliary_id
+
+
+def make_auxiliary_status_evidence(status: str, source_refs: list[str] | None = None) -> dict[str, Any]:
+    evidence = make_valid_evidence()
+    method_id = "METHOD-SYNTHETIC-FIXTURE"
+    kind = "OTHER"
+    default_refs = [f"{EVIDENCE_ID}-S001"]
+    if status == "PICTURE_OBSERVED":
+        method_id = "METHOD-PICTURE-AUX"
+        kind = "PICTURE_CUT_AUDIT"
+        method_type = "PICTURE_FRAME_REVIEW"
+    elif status == "AUDIO_OBSERVED":
+        method_id = "METHOD-AUDIO-AUX"
+        kind = "AUDIO_AUDIT_EVENT"
+        method_type = "AUDIO_DIRECT_AUDITION"
+        evidence["audio_evidence_status"] = "AUDIO_OBSERVED"
+    elif status == "TEXT_ANCHOR":
+        method_id = "METHOD-TEXT-AUX"
+        method_type = "TEXT_ANCHOR_REVIEW"
+        anchor_id = "TEXT-ANCHOR-AUX-001"
+        default_refs = [anchor_id]
+        evidence["text_anchor_status"] = "TEXT_ANCHOR_VERIFIED"
+        evidence["text_anchors"] = [
+            {
+                "anchor_id": anchor_id,
+                "status": "TEXT_ANCHOR_VERIFIED",
+                "source_type": "SCRIPT",
+                "paraphrase": "Synthetic reviewed text anchor.",
+                "speaker_status": "UNKNOWN",
+                "start": time_point(0.0, 0),
+                "end": time_point(1.0, 24),
+            }
+        ]
+    elif status == "INFERRED":
+        method_type = None
+    else:
+        raise AssertionError(f"unsupported auxiliary status: {status}")
+    if method_type is not None:
+        evidence["methods"].append(
+            {
+                "method_id": method_id,
+                "method_type": method_type,
+                "status": "MANUAL_REVIEW_RECORDED",
+                "description": "Synthetic auxiliary provenance fixture.",
+                "repository_command": None,
+                "tool_version_status": "NOT_APPLICABLE",
+                "source_refs": [],
+                "unknowns": [],
+            }
+        )
+    evidence["auxiliary_evidence"] = [
+        {
+            "auxiliary_id": f"AUX-{status}",
+            "kind": kind,
+            "status": status,
+            "start": time_point(0.0, 0),
+            "end": time_point(1.0, 24),
+            "method_id": method_id,
+            "measurements": {},
+            "source_refs": default_refs if source_refs is None else source_refs,
+            "unknowns": [],
+        }
+    ]
+    return evidence
+
+
+def configure_boundary_case(evidence: dict[str, Any], boundary_status: str) -> None:
+    completeness = {
+        "NATURAL_START_END_VERIFIED": ("COMPLETE_VISIBLE_SHOT", "COMPLETE_VISIBLE_SHOT"),
+        "START_INTERNAL_END_VERIFIED": ("PARTIAL_AT_START", "COMPLETE_VISIBLE_SHOT"),
+        "START_VERIFIED_END_INTERNAL": ("COMPLETE_VISIBLE_SHOT", "PARTIAL_AT_END"),
+        "BOTH_INTERNAL_SELECTED": ("PARTIAL_AT_START", "PARTIAL_AT_END"),
+    }
+    first, last = completeness[boundary_status]
+    evidence["scene_unit_type"] = "CONTIGUOUS_EDITORIAL_SEQUENCE"
+    evidence["boundary_status"] = boundary_status
+    evidence["shots"][0]["completeness"] = first
+    evidence["shots"][-1]["completeness"] = last
+
+
+def add_recursive_auxiliary_target(evidence: dict[str, Any], status: str) -> None:
+    source = evidence["auxiliary_evidence"][0]
+    source["auxiliary_id"] = f"AUX-{status}-SOURCE"
+    target = json.loads(json.dumps(source))
+    target["auxiliary_id"] = f"AUX-{status}-TARGET"
+    target["source_refs"] = [source["auxiliary_id"]]
+    evidence["auxiliary_evidence"].append(target)
 
 
 def set_unknown_array(evidence: dict[str, Any], location: str, statement: str) -> None:
@@ -759,6 +847,9 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             ("data:text/vtt,WEBVTT", "PUBLIC-DATA-URI"),
             ("-----BEGIN PRIVATE KEY-----", "PUBLIC-CREDENTIAL"),
             ("Authorization: Bearer test-fixture-token", "PUBLIC-CREDENTIAL"),
+            ("Example.WEB-DL", "PUBLIC-RELEASE-LABEL"),
+            ("MD5 fingerprint is prohibited.", "PUBLIC-FINGERPRINT"),
+            ("0123456789abcdef0123456789abcdef", "PUBLIC-FINGERPRINT"),
         )
         for value, expected_code in cases:
             with self.subTest(value=value):
@@ -855,34 +946,19 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
         evidence["shots"][0]["shot_id"] = "OTHER-NAMESPACE-S001"
         self.assertIn("SHOT-ID-NAMESPACE", error_codes(evidence))
 
-    def test_observed_auxiliary_requires_nonempty_source_refs(self) -> None:
-        evidence = make_valid_evidence()
-        evidence["methods"].append(
-            {
-                "method_id": "METHOD-PICTURE-001",
-                "method_type": "PICTURE_FRAME_REVIEW",
-                "status": "MANUAL_REVIEW_RECORDED",
-                "description": "Synthetic picture review fixture.",
-                "repository_command": None,
-                "tool_version_status": "NOT_APPLICABLE",
-                "source_refs": [],
-                "unknowns": [],
-            }
-        )
-        evidence["auxiliary_evidence"] = [
-            {
-                "auxiliary_id": "AUX-PICTURE-001",
-                "kind": "PICTURE_CUT_AUDIT",
-                "status": "PICTURE_OBSERVED",
-                "start": time_point(0.0, 0),
-                "end": time_point(1.0, 24),
-                "method_id": "METHOD-PICTURE-001",
-                "measurements": {},
-                "source_refs": [],
-                "unknowns": [],
-            }
-        ]
-        self.assertIn("AUXILIARY-SOURCE-REQUIRED", error_codes(evidence))
+    def test_each_auxiliary_status_requires_nonempty_source_refs(self) -> None:
+        for status in ("PICTURE_OBSERVED", "AUDIO_OBSERVED", "TEXT_ANCHOR", "INFERRED"):
+            with self.subTest(status=status):
+                evidence = make_auxiliary_status_evidence(status, [])
+                self.assertIn("AUXILIARY-SOURCE-REQUIRED", error_codes(evidence))
+
+    def test_each_auxiliary_status_recursively_resolves_to_real_track(self) -> None:
+        for status in ("PICTURE_OBSERVED", "AUDIO_OBSERVED", "TEXT_ANCHOR", "INFERRED"):
+            with self.subTest(status=status):
+                evidence = make_auxiliary_status_evidence(status)
+                add_recursive_auxiliary_target(evidence, status)
+                report = validate_evidence(evidence, SCHEMA)
+                self.assertTrue(report["passed"], report["issues"])
 
     def test_auxiliary_cycle_does_not_fake_a_real_track(self) -> None:
         evidence = make_valid_evidence()
@@ -976,12 +1052,62 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
                 ]
                 self.assertIn("AUXILIARY-SOURCE-TRACK", error_codes(evidence))
 
-    def test_boolean_const_rejects_zero_one_and_string(self) -> None:
-        for value in (0, 1, "false"):
-            with self.subTest(value=value):
+    def test_all_protected_booleans_reject_zero_one_and_strings(self) -> None:
+        rights_fields = (
+            "media_committed",
+            "subtitles_committed",
+            "scripts_or_long_dialogue_committed",
+            "contains_absolute_local_paths",
+            "contains_media_hashes",
+        )
+        for field in rights_fields:
+            for value in (0, 1, "false", "true"):
+                with self.subTest(location="rights_boundary", field=field, value=value):
+                    evidence = make_valid_evidence()
+                    evidence["rights_boundary"][field] = value
+                    self.assertIn("SCHEMA-TYPE", error_codes(evidence))
+
+        for location in ("shot", "candidate_rule"):
+            for value in (0, 1, "false", "true"):
+                with self.subTest(location=location, value=value):
+                    evidence = make_valid_evidence()
+                    if location == "shot":
+                        evidence["shots"][0]["fallback"]["project_original_only"] = value
+                    else:
+                        evidence["candidate_rules"][0]["fallback"]["project_original_only"] = value
+                    self.assertIn("SCHEMA-TYPE", error_codes(evidence))
+
+    def test_each_definite_boundary_rejects_inferred_evidence(self) -> None:
+        for boundary_status in (
+            "NATURAL_START_END_VERIFIED",
+            "START_INTERNAL_END_VERIFIED",
+            "START_VERIFIED_END_INTERNAL",
+            "BOTH_INTERNAL_SELECTED",
+        ):
+            with self.subTest(boundary_status=boundary_status):
                 evidence = make_valid_evidence()
-                evidence["rights_boundary"]["media_committed"] = value
-                self.assertIn("SCHEMA-TYPE", error_codes(evidence))
+                configure_boundary_case(evidence, boundary_status)
+                evidence["boundary_evidence"]["status"] = "INFERRED"
+                self.assertIn("BOUNDARY-DEFINITE-REQUIRES-PICTURE", error_codes(evidence))
+
+    def test_each_definite_boundary_rejects_unknown_evidence(self) -> None:
+        for boundary_status in (
+            "NATURAL_START_END_VERIFIED",
+            "START_INTERNAL_END_VERIFIED",
+            "START_VERIFIED_END_INTERNAL",
+            "BOTH_INTERNAL_SELECTED",
+        ):
+            with self.subTest(boundary_status=boundary_status):
+                evidence = make_valid_evidence()
+                configure_boundary_case(evidence, boundary_status)
+                evidence["boundary_evidence"].update(
+                    status="UNKNOWN",
+                    value="Scene boundaries remain unknown.",
+                    source_refs=[],
+                )
+                codes = error_codes(evidence)
+                self.assertIn("BOUNDARY-DEFINITE-REQUIRES-PICTURE", codes)
+                self.assertIn("BOUNDARY-VERIFIED-FROM-UNKNOWN", codes)
 
     def test_verified_boundary_cannot_use_unknown_evidence(self) -> None:
         evidence = make_valid_evidence()
@@ -999,6 +1125,7 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
         ):
             with self.subTest(refs=refs):
                 evidence = make_valid_evidence()
+                evidence["boundary_evidence"]["status"] = "PICTURE_OBSERVED"
                 evidence["boundary_evidence"]["source_refs"] = refs
                 self.assertIn(expected, error_codes(evidence))
 
@@ -1009,6 +1136,7 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
         ):
             with self.subTest(wrapped_ref=wrapped_ref):
                 evidence = make_valid_evidence()
+                evidence["boundary_evidence"]["status"] = "PICTURE_OBSERVED"
                 evidence["continuity_tracks"] = [
                     {
                         "track_id": "TRACK-UNKNOWN-BOUNDARY",
@@ -1046,10 +1174,10 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
         for boundary_status, first, last in cases:
             with self.subTest(boundary_status=boundary_status):
                 evidence = make_valid_evidence()
-                evidence["scene_unit_type"] = "CONTIGUOUS_EDITORIAL_SEQUENCE"
-                evidence["boundary_status"] = boundary_status
-                evidence["shots"][0]["completeness"] = first
-                evidence["shots"][-1]["completeness"] = last
+                configure_boundary_case(evidence, boundary_status)
+                evidence["boundary_evidence"]["status"] = "PICTURE_OBSERVED"
+                self.assertEqual(evidence["shots"][0]["completeness"], first)
+                self.assertEqual(evidence["shots"][-1]["completeness"], last)
                 self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
 
         evidence = make_valid_evidence()
@@ -1563,6 +1691,33 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             self.assertEqual(schema_result, 2)
             self.assertEqual(schema_path.read_text(encoding="utf-8"), original_schema)
 
+    def test_report_symlink_alias_cannot_overwrite_input_or_schema(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            input_path = root / "scene-evidence.json"
+            input_alias = root / "input-report-alias.json"
+            original_input = json.dumps(make_valid_evidence(), ensure_ascii=False)
+            input_path.write_text(original_input, encoding="utf-8")
+            input_alias.symlink_to(input_path)
+            with contextlib.redirect_stderr(io.StringIO()):
+                input_result = main([str(input_path), "--report", str(input_alias), "--quiet"])
+            self.assertEqual(input_result, 2)
+            self.assertEqual(input_path.read_text(encoding="utf-8"), original_input)
+
+            schema_path = root / "schema.json"
+            schema_alias = root / "schema-report-alias.json"
+            original_schema = (SKILL_ROOT / "references" / "scene-evidence.schema.json").read_text(
+                encoding="utf-8"
+            )
+            schema_path.write_text(original_schema, encoding="utf-8")
+            schema_alias.symlink_to(schema_path)
+            with contextlib.redirect_stderr(io.StringIO()):
+                schema_result = main(
+                    [str(input_path), "--schema", str(schema_path), "--report", str(schema_alias), "--quiet"]
+                )
+            self.assertEqual(schema_result, 2)
+            self.assertEqual(schema_path.read_text(encoding="utf-8"), original_schema)
+
     def test_quiet_directory_discovery_writes_report(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -1683,6 +1838,47 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
                     validator_module.__file__ = original_module_file
                 self.assertEqual(result, 2)
                 self.assertIn("validator setup error", stderr.getvalue())
+
+    def test_empty_or_malformed_canonical_schema_fails_closed(self) -> None:
+        for canonical_text in ("", "{"):
+            with self.subTest(canonical_text=canonical_text), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                synthetic_skill_root = root / "skill"
+                scripts_dir = synthetic_skill_root / "scripts"
+                references_dir = synthetic_skill_root / "references"
+                scripts_dir.mkdir(parents=True)
+                references_dir.mkdir()
+                canonical_path = references_dir / "scene-evidence.schema.json"
+                canonical_path.write_text(canonical_text, encoding="utf-8")
+                evidence_path = root / "scene-evidence.json"
+                evidence_path.write_text(json.dumps(make_valid_evidence()), encoding="utf-8")
+                original_module_file = validator_module.__file__
+                try:
+                    validator_module.__file__ = str(scripts_dir / "validate_scene_evidence.py")
+                    stderr = io.StringIO()
+                    with contextlib.redirect_stderr(stderr):
+                        result = main([str(evidence_path), "--schema", str(canonical_path), "--quiet"])
+                finally:
+                    validator_module.__file__ = original_module_file
+                self.assertEqual(result, 2)
+                self.assertIn("validator setup error", stderr.getvalue())
+
+    def test_atomic_report_failure_preserves_existing_report(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            evidence_path = root / "scene-evidence.json"
+            report_path = root / "validation-report.json"
+            evidence_path.write_text(json.dumps(make_valid_evidence()), encoding="utf-8")
+            original_report = '{"sentinel":"keep-existing-report"}\n'
+            report_path.write_text(original_report, encoding="utf-8")
+            stderr = io.StringIO()
+            with mock.patch.object(validator_module.os, "replace", side_effect=OSError("synthetic replace failure")):
+                with contextlib.redirect_stderr(stderr):
+                    result = main([str(evidence_path), "--report", str(report_path), "--quiet"])
+            self.assertEqual(result, 2)
+            self.assertEqual(report_path.read_text(encoding="utf-8"), original_report)
+            self.assertEqual(list(root.glob(f".{report_path.name}.*.tmp")), [])
+            self.assertIn("validator report write error", stderr.getvalue())
 
     def test_report_write_failure_returns_nonzero(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
