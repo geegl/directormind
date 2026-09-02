@@ -130,7 +130,7 @@ AFFIRMATIVE_FACT_RE = re.compile(
 )
 AFFIRMATIVE_PICTURE_PHRASE_RE = re.compile(
     r"\b(?:on[-\s]+screen|in[-\s]+(?:the[-\s]+)?frame|frame\s+(?:left|right|cent(?:er|re)))\b"
-    r"\s*(?::|,|\band\b)",
+    r"\s*(?:[:/,—–]|\band\b)",
     re.IGNORECASE,
 )
 OPERATIONAL_VERB_RE = re.compile(

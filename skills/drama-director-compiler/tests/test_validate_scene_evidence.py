@@ -1307,6 +1307,9 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             "Red vehicle on screen: identity remains unknown.",
             "Red vehicle in-frame, identity remains unknown.",
             "The vehicle occupies frame left, identity remains unknown.",
+            "Red vehicle on screen / identity remains unknown.",
+            "Vehicle in-frame / identity remains unknown.",
+            "The vehicle occupies frame left—identity remains unknown.",
             "The same person continues across the cut, identity remains unknown.",
         )
         for location in ("shot", "audio", "method", "auxiliary", "continuity"):
