@@ -35,8 +35,8 @@ After a contributor writes a Scene Evidence JSON unit, running the repository va
 
 - [x] The 30-file audit is committed with scope and limitations.
 - [x] The Scene Evidence schema contains every A1/A2 requirement and validates as JSON.
-- [x] The repaired repository validator implements every B1 gate planned for canonical JSON and passes independent reproduction.
-- [x] The existing 45 tests plus the new acceptance-gap tests pass, including the CLI path and precise error paths.
+- [ ] The repaired repository validator implements every B1 gate planned for canonical JSON and passes independent reproduction.
+- [ ] The existing tests plus the reopened acceptance-gap tests pass, including recursive provenance, UNKNOWN leakage, boundary/anchor cross-checks, CLI safety and precise error paths.
 - [x] Existing evidence content and unrelated functionality remain unchanged.
 - [x] Commands, remaining risks, and rollback are recorded.
 
@@ -44,9 +44,9 @@ After a contributor writes a Scene Evidence JSON unit, running the repository va
 
 - Current sole implementer/writer: `/root`; prior sub-agents performed read-only corpus and validator reviews only.
 - Completed before this repair: checklist, 30-file audit report, Scene Evidence schema, standard-library validator, and 45 validator tests.
-- Completed in this repair: UNKNOWN-to-rule, unauditioned-score-directive, HEIC/SSA, data-payload, and credential-format guards; six new test methods with paired cases; three raw release-label cells neutralized; one trailing blank line removed; PR #3 description corrected without merge.
+- Reopened in this repair: independent review disproved the prior B1/B2 acceptance claim. Recursive auxiliary provenance, strict boolean `const`, boundary/anchor cross-checks, uniform UNKNOWN leakage, public-key scanning and safe report output remain in progress.
 - Not completed: canonical conversion of the 30 files and all later A3–M work.
-- Validation result: schema JSON syntax, Python compile, and 51 unit/CLI tests pass. Independent read-only re-review passed after the final corrections; a separate scope/rollback review also passed.
+- Validation result: the historical 51-test run remains recorded, but it is insufficient for the reopened counterexamples and no longer supports B1/B2 completion.
 - Known issues: the legacy corpus has 13 broken artifact claims, 152 high-equivalent-risk Shot rows without fallback, 1,096 Shot rows without three-axis AI risk, no direct audio audit, and no three-confidence Candidate Rule.
 - Next single action: stop and wait for the next explicit phase instruction. Do not start A3 and do not merge PR #3.
 
@@ -69,7 +69,7 @@ Only these states are allowed:
 - `python3 -m py_compile skills/drama-director-compiler/scripts/validate_scene_evidence.py skills/drama-director-compiler/tests/test_validate_scene_evidence.py` — PASS.
 - `python3 -m unittest discover -s skills/drama-director-compiler/tests -v` — PASS, 51 tests after the repair.
 - The legacy-audit table check — PASS: 30 data rows, ten data columns per row, 2,255 Shot/edit units, 120 rules, and 13 broken artifact claims.
-- The earlier frozen-snapshot review was superseded by a later independent reproduction that found UNKNOWN-rule, same-sentence unauditioned-score, public-format, and false-positive gaps. Those cases now have paired repository tests. Final independent read-only re-review verdict: PASS, with no scoped P0/P1/P2 remaining.
+- A newer independent review superseded the prior PASS and reopened B1/B2. Completion now requires every newly listed P1 counterexample to fail safely, the paired safe cases and one repository file fixture to pass, and a new independent read-only report.
 
 Remaining validation boundary: these checks do not replay source media, directly audition audio, prove legacy picture observations, demonstrate audience effect, or constitute creative approval. No canonical per-scene JSON exists yet; A3 and later work remain outside this phase. Reference-surface inventory completeness still requires human review during migration.
 
@@ -96,8 +96,8 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| B1 | VERIFIED_DONE | Add `validate_scene_evidence.py` covering schema, shot identity/timing, provenance, UNKNOWN leakage, rule references/boundaries, HIGH-risk fallback, surface-copy guards, and public-repository prohibitions. | Repair code rejects independently reproduced UNKNOWN-rule, same-sentence sound-directive, HEIC/SSA, data-payload, and credential-format cases while preserving explicit safe boundaries; final independent re-review PASS. |
-| B2 | VERIFIED_DONE | Add minimum tests: valid evidence, gap, overlap, missing Shot ref, UNKNOWN promotion, HIGH without fallback, missing non-applicability, single-source GENERAL_DEFAULT, audio rule without observed audio, and reference-surface leakage. | 51/51 unit and CLI tests pass, including six new repair test methods with positive/negative subcases; final independent re-review PASS. |
+| B1 | IN_PROGRESS | Add `validate_scene_evidence.py` covering schema, shot identity/timing, provenance, UNKNOWN leakage, rule references/boundaries, HIGH-risk fallback, surface-copy guards, and public-repository prohibitions. | Reopened after independent counterexamples bypassed auxiliary provenance, boolean `const`, boundary/anchor cross-checks, UNKNOWN leakage, public JSON-key scanning and safe report output. |
+| B2 | IN_PROGRESS | Add minimum tests: valid evidence, gap, overlap, missing Shot ref, UNKNOWN promotion, HIGH without fallback, missing non-applicability, single-source GENERAL_DEFAULT, audio rule without observed audio, and reference-surface leakage. | Reopened until every new negative case, paired safe boundary, CLI failure path and one repository `scene-evidence.json` integration fixture pass under independent reproduction. |
 | B3 | TODO | Validate all 30 Scene Evidence JSON files and write `research/validation/scene-evidence-validation.json` with errors and warnings preserved. | `failed=0`; warning rows remain visible. |
 | B4 | TODO | Remove or replace unreproducible validation claims, including bare `760 checks` and independent-pass statements without command, versioned validator, and repository report. | Claim-to-report/reference audit returns zero broken claims. |
 
