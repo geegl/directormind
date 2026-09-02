@@ -941,6 +941,40 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
         ]
         self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
 
+    def test_every_auxiliary_source_must_resolve_to_a_real_track(self) -> None:
+        for status in ("PICTURE_OBSERVED", "INFERRED"):
+            with self.subTest(status=status):
+                evidence = make_valid_evidence()
+                method_id = "METHOD-SYNTHETIC-FIXTURE"
+                if status == "PICTURE_OBSERVED":
+                    method_id = "METHOD-PICTURE-MIXED"
+                    evidence["methods"].append(
+                        {
+                            "method_id": method_id,
+                            "method_type": "PICTURE_FRAME_REVIEW",
+                            "status": "MANUAL_REVIEW_RECORDED",
+                            "description": "Synthetic picture review fixture.",
+                            "repository_command": None,
+                            "tool_version_status": "NOT_APPLICABLE",
+                            "source_refs": [],
+                            "unknowns": [],
+                        }
+                    )
+                evidence["auxiliary_evidence"] = [
+                    {
+                        "auxiliary_id": "AUX-MIXED-SOURCES",
+                        "kind": "OTHER",
+                        "status": status,
+                        "start": time_point(0.0, 0),
+                        "end": time_point(1.0, 24),
+                        "method_id": method_id,
+                        "measurements": {},
+                        "source_refs": [f"{EVIDENCE_ID}-S001", "DS-OBSTACLE"],
+                        "unknowns": [],
+                    }
+                ]
+                self.assertIn("AUXILIARY-SOURCE-TRACK", error_codes(evidence))
+
     def test_boolean_const_rejects_zero_one_and_string(self) -> None:
         for value in (0, 1, "false"):
             with self.subTest(value=value):
@@ -1105,6 +1139,14 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             ("Vehicle remains unknown while the vehicle is red on screen.", "UNKNOWN-HIDES-AFFIRMATIVE-FACT"),
             ("Audio remains unknown; bring in a score.", "UNKNOWN-HIDES-AUDIO-DIRECTIVE"),
             ("Audio remains unknown, so bring in a score.", "UNKNOWN-HIDES-AUDIO-DIRECTIVE"),
+            (
+                "Audio remains unknown; do not add a score and bring in music.",
+                "UNKNOWN-HIDES-AUDIO-DIRECTIVE",
+            ),
+            (
+                "Audio remains unknown; do not add a score, track the music.",
+                "UNKNOWN-HIDES-AUDIO-DIRECTIVE",
+            ),
         )
         for location in ("shot", "audio", "method", "auxiliary", "continuity"):
             for statement, expected in cases:
@@ -1147,6 +1189,16 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
                 evidence = make_valid_evidence()
                 evidence["audio_audit"]["audio_unknowns"] = [statement]
                 self.assertIn("UNKNOWN-HIDES-AUDIO-DIRECTIVE", error_codes(evidence))
+
+    def test_safe_audio_boundary_cannot_mask_rule_directive(self) -> None:
+        for statement in (
+            "Do not add a score and bring in music.",
+            "Do not add a score, track the music.",
+        ):
+            with self.subTest(statement=statement):
+                evidence = make_valid_evidence()
+                evidence["candidate_rules"][0]["director_decision"] = statement
+                self.assertIn("RULE-AUDIO-DIRECTIVE-WITHOUT-EVIDENCE", error_codes(evidence))
 
     def test_single_token_unknown_cannot_reappear_as_rule_fact(self) -> None:
         evidence = make_valid_evidence()

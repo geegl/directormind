@@ -505,7 +505,11 @@ def _has_unauditioned_audio_assertion(text: str) -> bool:
 
 def _has_unsafe_audio_directive(text: str) -> bool:
     """Recognize audio instructions while preserving explicit negative boundaries."""
-    for sentence in _semantic_clauses(text):
+    for sentence in re.split(
+        r"[.!?;,\n]+|\b(?:and|but|however|yet|although|while|so|therefore|then)\b",
+        text,
+        flags=re.IGNORECASE,
+    ):
         if AUDIO_DIRECTIVE_RE.search(sentence) and SAFE_AUDIO_BOUNDARY_RE.search(sentence) is None:
             return True
     return False
@@ -1480,14 +1484,14 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
                     f"$.auxiliary_evidence[{index}].source_refs",
                     "auxiliary evidence cannot cite itself",
                 )
-        resolved_tracks = {
-            track
-            for ref in refs
-            for track in terminal_tracks(
+        resolved_by_ref = {
+            ref: terminal_tracks(
                 ref,
                 frozenset({auxiliary_id}) if isinstance(auxiliary_id, str) else frozenset(),
             )
+            for ref in refs
         }
+        resolved_tracks = {track for tracks_for_ref in resolved_by_ref.values() for track in tracks_for_ref}
         status = item.get("status")
         required_tracks = {
             "PICTURE_OBSERVED": {"PICTURE"},
@@ -1502,6 +1506,19 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
                 "AUXILIARY-NO-REAL-SOURCE",
                 f"$.auxiliary_evidence[{index}].source_refs",
                 f"{status} auxiliary evidence must recursively resolve to a real evidence track",
+            )
+        invalid_refs = [
+            ref
+            for ref, tracks_for_ref in resolved_by_ref.items()
+            if required_tracks is not None and not tracks_for_ref.intersection(required_tracks)
+        ]
+        if invalid_refs:
+            add_issue(
+                issues,
+                "error",
+                "AUXILIARY-SOURCE-TRACK",
+                f"$.auxiliary_evidence[{index}].source_refs",
+                f"every {status} auxiliary source must resolve to a compatible real evidence track: {', '.join(invalid_refs)}",
             )
     for index, item in enumerate(tracks):
         if not isinstance(item, dict):
