@@ -1,78 +1,73 @@
 # Phase 1 Validator Independent Audit
 
-Date: 2026-09-02  
-Scope: Phase 1 Scene Evidence validator B1/B2 only  
-Audited implementation commit: `40c7aa2`  
-Independent reviewer: `phase1_final_acceptance_40c7aa2`  
-Verdict: `PASS_LOCAL / NO_MUST_FIX_FINDINGS`
+Date: 2026-09-02
+Scope: Phase 1 Scene Evidence validator B1/B2 only
+Status: `LOCAL_REPAIR_VERIFIED / INDEPENDENT_RE_REVIEW_PENDING`
 
-## Scope and method
+## Review finding and repair
 
-The reviewer inspected a clean, fixed commit and made no repository changes. Counterexamples were replayed in memory or in automatically cleaned temporary directories. The review did not migrate legacy evidence, add reference works, merge `main`, replay source media, or directly audition audio.
+The latest independent re-review found one P1 acceptance bypass: a scene with
+`boundary_status=NATURAL_START_END_VERIFIED` and
+`boundary_evidence.status=INFERRED` was accepted by the CLI with return code
+`0`.
 
-Exit-code contract:
+The repair now requires `boundary_evidence.status=PICTURE_OBSERVED` for all four
+definite boundary states. Recursive boundary provenance must still reach both
+endpoint Shots, may not pass through an UNKNOWN continuity track, and must agree
+with the first and last Shot completeness values.
 
-- `0`: structurally valid input or safe positive boundary.
-- `1`: invalid Scene Evidence rejected.
-- `2`: validator setup, protected-output, Schema, or report-write failure.
+No A3 migration, new reference work, source-media replay, direct audio audition,
+`main` merge, deployment, or release was performed.
 
-## Counterexample results
+## Direct semantic assertions
 
-| P1 area | Replayed counterexample or positive control | Expected and actual exit code |
-|---|---|---:|
-| Auxiliary provenance | `PICTURE_OBSERVED`, `AUDIO_OBSERVED`, `TEXT_ANCHOR`, or `INFERRED` with empty `source_refs` | `1` |
-| Auxiliary provenance | Method-only source, self/cyclic source, UNKNOWN source, or valid source mixed with an incompatible source | `1` |
-| Auxiliary provenance | Each of the four supported statuses recursively reaches its compatible real evidence track | `0` |
-| Strict boolean `const` | A protected boolean field is supplied as `0`, `1`, or a string | `1` |
-| Schema authority | A caller Schema weakens or coerces a protected boolean `const` | `2` |
-| Schema authority | The canonical Schema copy is empty, malformed, weakened, or changes `false` to `0` | `2` |
-| Boundary cross-check | A definite boundary cites UNKNOWN boundary evidence | `1` |
-| Boundary cross-check | First or last Shot is omitted, or is reached only through an UNKNOWN continuity track | `1` |
-| Boundary cross-check | `boundary_status`, `scene_unit_type`, or first/last Shot completeness conflict | `1` |
-| Boundary cross-check | The supported definite/selected/unknown boundary matrix is internally consistent | `0` |
-| Text anchors | Duplicate `anchor_id` | `1` |
-| Text anchors | `TEXT_ANCHOR_UNKNOWN` directly supports Claim, Scene Problem, or Role | `1` |
-| Text anchors | A valid Shot is mixed with `TEXT_ANCHOR_UNKNOWN` for Claim, Scene Problem, or Role | `1` |
-| Text anchors | A text source is used without an active `TEXT_ANCHOR_REVIEW` method | `1` |
-| UNKNOWN leakage | Each of the five UNKNOWN arrays hides a fact after uncertainty with punctuation or conjunction variants | `1` for every array |
-| UNKNOWN leakage | Each of the five UNKNOWN arrays states a picture fact before uncertainty, including `on screen`, `in-frame`, and `frame left` variants | `1` for every array |
-| UNKNOWN leakage | Each of the five UNKNOWN arrays asserts the same identity across a cut | `1` for every array |
-| UNKNOWN leakage | Each of the five UNKNOWN arrays hides an unauditioned audio instruction | `1` for every array |
-| Safe UNKNOWN boundary | `Do not add a score.` | `0` for every array |
-| Safe UNKNOWN boundary | `Identity remains unknown and cannot be confirmed from picture.` | `0` for every array |
-| Safe UNKNOWN boundary | `Audio remains unknown and was not directly auditioned.` | `0` for every array |
-| Single-token UNKNOWN | A rule restates `Vehicle remains unknown` as `Use the vehicle on screen`, before or after the uncertainty phrase | `1` |
-| Audio directives | `bring in`, `bringing in`, or imperative `track` is used without direct audition | `1` |
-| Audio directives | A safe negative masks a later directive through comma, `and`, `or`, `plus`, `before`, `instead`, `rather than`, colon, slash, or dash | `1` |
-| Safe audio wording | Standalone `do not add a score` and noun phrase `audio track remains unknown` | `0` |
-| Public boundary | A JSON key or value contains an absolute path, media/subtitle filename, data URI, release label, or credential material | `1` |
-| Public boundary | Exact, prefixed, hyphenated, snake-case, or camel-case credential labels are used as measurement keys | `1` |
-| Public boundary | Ordinary `synthetic_level` and `token_count` measurement keys | `0` |
-| Report safety | `--report` aliases an input, caller Schema, or canonical Schema by exact path, symlink, or filesystem case alias | `2` |
-| Report safety | Atomic report creation/replacement fails | `2` |
-| CLI behavior | `--quiet` with valid input and writable report | `0` |
-| CLI behavior | Directory discovery finds and validates the repository-file fixture | `0` |
-| CLI behavior | Wrong or non-canonical Schema | `2` |
-| Integration fixture | `tests/fixtures/repository-integration.scene-evidence.json` | `0` |
+The following rows are assertions inside the 96-test unit suite. The result
+column records validator report assertions, not process return codes.
 
-## Required checks
+| Area | Tested matrix | Asserted result |
+|---|---|---|
+| Definite boundary status | Each of the four definite states with `INFERRED` evidence | `BOUNDARY-DEFINITE-REQUIRES-PICTURE` error present |
+| Definite boundary status | Each of the four definite states with `UNKNOWN` evidence | picture-required and UNKNOWN-boundary errors present |
+| Boundary provenance | Picture evidence omits the first endpoint Shot | `BOUNDARY-START-SOURCE-MISSING` error present |
+| Boundary provenance | Picture evidence omits the last endpoint Shot | `BOUNDARY-END-SOURCE-MISSING` error present |
+| Boundary provenance | Endpoint is reached only through an UNKNOWN continuity track | corresponding endpoint-source error present |
+| Boundary positive controls | Four definite states use picture evidence, cite both endpoints, and match Shot completeness | `passed=true` |
+| Auxiliary provenance | Each of `PICTURE_OBSERVED`, `AUDIO_OBSERVED`, `TEXT_ANCHOR`, and `INFERRED` has empty `source_refs` | `AUXILIARY-SOURCE-REQUIRED` error present |
+| Auxiliary provenance | Each of the same four states reaches a compatible real track through another auxiliary record | `passed=true` |
+| Protected booleans | All five rights-boundary flags and both fallback locations use `0`, `1`, or strings | `SCHEMA-TYPE` error present |
+| Canonical Schema | Canonical Schema is empty, malformed, weakened, or has a coerced protected constant | setup failure asserted |
+| Public boundary | Release label, fingerprint wording, and a synthetic long hexadecimal token appear in a public value | matching public-boundary error present |
+| Public boundary | Media name, credential label, or data URI is hidden in a measurement key | matching public-boundary error present |
+| Report collision | Report is a symlink alias of an input or caller Schema | protected-output return code `2` asserted through `main()` |
+| Atomic report write | Final replacement fails after an old report exists | `main()` returns `2`; old report is unchanged; temporary file is removed |
+| Existing Phase 1 matrix | UNKNOWN leakage, text-anchor identity, audio directives, safe negative boundaries, quiet mode, directory discovery, wrong Schema, and repository fixture | all associated unit assertions pass |
 
-| Command | Exit code | Result |
+## Process-level verification
+
+These commands were executed against the final committed repair tree.
+
+| Command or direct replay | Return code | Result |
 |---|---:|---|
-| `python3 -m json.tool skills/drama-director-compiler/references/scene-evidence.schema.json` | `0` | PASS |
-| `python3 -m py_compile skills/drama-director-compiler/scripts/validate_scene_evidence.py` | `0` | PASS |
-| `python3 -m unittest discover -s skills/drama-director-compiler/tests -v` | `0` | PASS, 90 tests |
-| `git diff --check` | `0` | PASS |
+| `python3 -m json.tool skills/drama-director-compiler/references/scene-evidence.schema.json` | `0` | Schema JSON parses |
+| `python3 -m py_compile skills/drama-director-compiler/scripts/validate_scene_evidence.py` | `0` | Validator compiles |
+| `python3 -m unittest discover -s skills/drama-director-compiler/tests -v` | `0` | 96 tests pass |
+| `python3 skills/drama-director-compiler/scripts/validate_scene_evidence.py skills/drama-director-compiler/tests/fixtures/repository-integration.scene-evidence.json` | `0` | Repository integration fixture passes |
+| Direct CLI replay: natural verified boundary plus inferred boundary evidence | `1` | Re-review counterexample is rejected |
+| `git diff --check origin/main...HEAD` | `0` | Complete committed PR diff has no whitespace errors |
 
-The reviewer confirmed `HEAD=40c7aa2` and a clean worktree before and after the audit.
+## What remains unverified
 
-## Remaining boundaries
-
-- Structural validation does not prove that legacy film/television observations are correct.
+- A new independent reviewer has not yet accepted this repair.
+- Structural validation does not prove that legacy film or television
+  observations are correct.
 - Source media was not replayed and semantic audio was not directly auditioned.
-- Creative quality, audience response, and human director approval were not tested.
-- A3 migration, later generalization phases, remote CI, merge, deployment, and release were not performed.
+- Creative quality, audience response, and human director approval were not
+  tested.
+- A3 and all later migration/generalization phases remain out of scope.
 
 ## Rollback
 
-Before merge, revert the Phase 1 validator commits and the final status/report commit with ordinary Git revert commits. Do not rewrite shared history. No source media, production data, credentials, accounts, permissions, payments, or remote production systems were changed.
+Before merge, revert the reopening commit and this repair with ordinary Git
+revert commits. Do not rewrite shared history. No source media, production data,
+credentials, accounts, permissions, payments, or production systems were
+changed.
