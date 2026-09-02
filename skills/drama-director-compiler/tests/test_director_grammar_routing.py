@@ -42,6 +42,31 @@ def issue_codes(report: dict) -> set[str]:
     return {issue["code"] for issue in report["issues"]}
 
 
+def run_routing_cli(
+    scene_path: Path,
+    grammar_path: Path,
+    output_path: Path,
+    *,
+    check_mode: bool = False,
+) -> subprocess.CompletedProcess[str]:
+    command = [
+        sys.executable,
+        str(SCRIPT_ROOT / "route_director_rules.py"),
+        "--scene", str(scene_path),
+        "--grammar", str(grammar_path),
+        "--output", str(output_path),
+    ]
+    if check_mode:
+        command.append("--check")
+    return subprocess.run(
+        command,
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+
 def bound_scene(
     routing_input: dict,
     routing_result: dict,
@@ -570,25 +595,109 @@ class DirectorGrammarRoutingTests(unittest.TestCase):
         rejected = next(item for item in result["rejected_rules"] if item["rule_id"] == "DR-B-SECOND")
         self.assertEqual(rejected["rejection_reason_codes"], ["EXPLICIT_RULE_CONFLICT"])
 
-    def test_cli_is_deterministic_and_check_mode_is_read_only(self) -> None:
+    def test_cli_refuses_output_equal_or_aliasing_inputs(self) -> None:
+        for target_name, use_alias in (
+            ("scene", False),
+            ("grammar", False),
+            ("scene", True),
+            ("grammar", True),
+        ):
+            with self.subTest(target=target_name, symlink_alias=use_alias):
+                with tempfile.TemporaryDirectory() as temporary:
+                    root = Path(temporary)
+                    scene_path = root / "scene.json"
+                    grammar_path = root / "grammar.json"
+                    scene_path.write_text(
+                        json.dumps(self.cases[0], ensure_ascii=False),
+                        encoding="utf-8",
+                    )
+                    grammar_path.write_bytes(GRAMMAR_PATH.read_bytes())
+                    protected = scene_path if target_name == "scene" else grammar_path
+                    output_path = protected
+                    if use_alias:
+                        output_path = root / f"{target_name}-alias.json"
+                        output_path.symlink_to(protected)
+                    scene_before = scene_path.read_bytes()
+                    grammar_before = grammar_path.read_bytes()
+                    result = run_routing_cli(
+                        scene_path, grammar_path, output_path
+                    )
+                    self.assertNotEqual(result.returncode, 0)
+                    self.assertIn("must not overwrite", result.stderr)
+                    self.assertEqual(scene_path.read_bytes(), scene_before)
+                    self.assertEqual(grammar_path.read_bytes(), grammar_before)
+                    if use_alias:
+                        self.assertTrue(output_path.is_symlink())
+
+    def test_cli_refuses_unrelated_existing_output(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             scene_path = root / "scene.json"
+            grammar_path = root / "grammar.json"
+            output_path = root / "existing.json"
+            scene_path.write_text(
+                json.dumps(self.cases[0], ensure_ascii=False), encoding="utf-8"
+            )
+            grammar_path.write_bytes(GRAMMAR_PATH.read_bytes())
+            output_path.write_text("KEEP\n", encoding="utf-8")
+            scene_before = scene_path.read_bytes()
+            grammar_before = grammar_path.read_bytes()
+            output_before = output_path.read_bytes()
+            result = run_routing_cli(scene_path, grammar_path, output_path)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("already exists", result.stderr)
+            self.assertEqual(scene_path.read_bytes(), scene_before)
+            self.assertEqual(grammar_path.read_bytes(), grammar_before)
+            self.assertEqual(output_path.read_bytes(), output_before)
+
+    def test_cli_writes_a_new_output(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            scene_path = root / "scene.json"
+            grammar_path = root / "grammar.json"
             output_path = root / "routing.json"
             scene_path.write_text(json.dumps(self.cases[0], ensure_ascii=False), encoding="utf-8")
-            command = [
-                sys.executable,
-                str(SCRIPT_ROOT / "route_director_rules.py"),
-                "--scene", str(scene_path),
-                "--grammar", str(GRAMMAR_PATH),
-                "--output", str(output_path),
-            ]
-            first = subprocess.run(command, cwd=REPO_ROOT, capture_output=True, text=True, check=False)
+            grammar_path.write_bytes(GRAMMAR_PATH.read_bytes())
+            scene_before = scene_path.read_bytes()
+            grammar_before = grammar_path.read_bytes()
+            first = run_routing_cli(scene_path, grammar_path, output_path)
             self.assertEqual(first.returncode, 0, first.stdout + first.stderr)
-            before = output_path.read_bytes()
-            check = subprocess.run(command + ["--check"], cwd=REPO_ROOT, capture_output=True, text=True, check=False)
+            self.assertTrue(output_path.is_file())
+            self.assertEqual(
+                schema_issues(json.loads(output_path.read_text()), RESULT_SCHEMA_PATH),
+                [],
+            )
+            self.assertEqual(scene_path.read_bytes(), scene_before)
+            self.assertEqual(grammar_path.read_bytes(), grammar_before)
+
+    def test_cli_check_mode_is_read_only(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            scene_path = root / "scene.json"
+            grammar_path = root / "grammar.json"
+            output_path = root / "routing.json"
+            missing_path = root / "missing.json"
+            scene_path.write_text(
+                json.dumps(self.cases[0], ensure_ascii=False), encoding="utf-8"
+            )
+            grammar_path.write_bytes(GRAMMAR_PATH.read_bytes())
+            first = run_routing_cli(scene_path, grammar_path, output_path)
+            self.assertEqual(first.returncode, 0, first.stdout + first.stderr)
+            scene_before = scene_path.read_bytes()
+            grammar_before = grammar_path.read_bytes()
+            output_before = output_path.read_bytes()
+            check = run_routing_cli(
+                scene_path, grammar_path, output_path, check_mode=True
+            )
             self.assertEqual(check.returncode, 0, check.stdout + check.stderr)
-            self.assertEqual(output_path.read_bytes(), before)
+            self.assertEqual(scene_path.read_bytes(), scene_before)
+            self.assertEqual(grammar_path.read_bytes(), grammar_before)
+            self.assertEqual(output_path.read_bytes(), output_before)
+            missing_check = run_routing_cli(
+                scene_path, grammar_path, missing_path, check_mode=True
+            )
+            self.assertNotEqual(missing_check.returncode, 0)
+            self.assertFalse(missing_path.exists())
 
     def test_director_ir_allows_no_rule_for_v02_but_preserves_legacy_behavior(self) -> None:
         shot = {"evidence_rule_ids": []}

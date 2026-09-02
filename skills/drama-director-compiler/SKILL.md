@@ -52,7 +52,8 @@ Read [Director IR contract](references/director-ir-contract.md). Read only the p
 - Golden Frames and scene masters must be project-original assets. Research-only reference stills never pass through as generation references.
 - `OBSERVED` means visible/audible evidence in a cited shot; interpretation stays `INFERRED`; unverified mechanics stay `UNKNOWN`.
 - Never route a legacy seed rule, `SINGLE_WORK_CANDIDATE`, `BLOCKED_BY_UNKNOWN`, `REJECTED`, or unauditioned audio claim.
-- Legacy Director IR may be upgraded only through the documented `LEGACY_COMPATIBLE` pause or `GRAMMAR_V02_ROUTED` evidence-complete mode. Routed upgrades require one canonical input and one exactly reproducible result per scene. Never relabel a legacy route as Grammar v0.2, never carry `GO-*` seed IDs into the v0.2 path, and never overwrite an existing output file.
+- v0.1 Director IR may be upgraded through the documented `LEGACY_COMPATIBLE` pause or `GRAMMAR_V02_ROUTED` evidence-complete mode. A v0.2 source must use `GRAMMAR_V02_ROUTED`; it may not carry a merely schema-valid route through the legacy-compatible path. Routed upgrades require one canonical input and one exactly reproducible result per scene. Never relabel a legacy route as Grammar v0.2, never carry `GO-*` seed IDs into the v0.2 path, and never overwrite an existing output file.
+- Outside `--check`, the router may write only to a new path that does not resolve to its scene or Grammar input. Create that file exclusively; never replace an existing route output. `--check` is comparison-only.
 - Preserve non-empty legacy audio visibly for review. Do not silently drop it or guess it into a v0.2 audio instruction.
 - The router matches only structured scene problem, trigger, locked required facts, non-applicability and conflict fields. It does not parse rule prose or evidence lineage for a match.
 - Keep generation and publication authorization false unless separately granted.

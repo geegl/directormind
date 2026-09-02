@@ -4,9 +4,9 @@ Updated: 2026-09-02
 
 ## Current phase
 
-The user-approved 33-source generalization Goal is complete on `codex/macos-first16-local-batch`. A later final read-only review found two routing/upgrade P1s; both are repaired, the repair and independent-review documentation heads pass hosted CI, and a fresh independent replay reports no remaining must-fix finding. PR #3 remains open for the user's merge decision.
+The user-approved 33-source generalization Goal is reopened on `codex/macos-first16-local-batch` after a new independent review reproduced two additional P1s. Both have local implementation fixes and complete local checks pass, but the current working tree has not yet passed final-head CI or a clean-checkout independent re-review. The prior merge-ready conclusion is withdrawn.
 
-Phases 1 through 6 and the later runtime-contract compatibility repair are present locally. The repair enforces one canonical scene-problem vocabulary and negative sentinel, restores v0.1-only GO-01/GO-07 checks, embeds the canonical routing input, replays it through an authority-validated Grammar, binds its dramatic structure and locked facts to the scene and Shots, and preserves legacy audio and upgrade data without inventing a route. The upgrader now writes only to a new output path. The original 30 legacy Markdown sources remain unchanged; their canonical derived outputs were regenerated only to satisfy the stricter boundary and UNKNOWN contracts. The existing 88-unit *Succession* ledger remains integrated, no UNKNOWN-dependent candidate is executable, and eight rights-safe original packages still route without inventing a rule.
+Phases 1 through 6 and the runtime-contract repairs remain present locally. `LEGACY_COMPATIBLE` is now v0.1-only; every v0.2 source must use `GRAMMAR_V02_ROUTED` with an authority-validated Grammar and exact route replay. The routing CLI now rejects output paths resolving to scene or Grammar input, rejects all existing outputs and creates new outputs exclusively. The original 30 legacy Markdown sources remain unchanged; the 88-unit *Succession* ledger remains integrated, no UNKNOWN-dependent candidate is executable, and eight rights-safe original packages still route without inventing a rule.
 
 PR #3 pushes and PR #1 closure after successful integration and CI are authorized. No new reference work, media operation, `main` merge, deployment or publication is authorized.
 
@@ -21,7 +21,7 @@ PR #3 pushes and PR #1 closure after successful integration and CI are authorize
 | Structural Scene Evidence passes | 31/31 |
 | Structural errors | 0 |
 | Preserved warnings | 72 |
-| Current unit/CLI tests including final routing/upgrade regressions | 225 |
+| Current unit/CLI tests including both new P1 matrices | 233 |
 | Normalized candidate identities | 124 |
 | Textual mechanism families | 16 |
 | Runtime-authorized evidence rules | 0 |
@@ -56,14 +56,15 @@ Generated `*.scene-evidence.generated.md` files are deterministic review views o
 - The first final read-only audit returned FAIL on evidence scope/provenance wording. All three findings are corrected; the narrow independent re-review issued PASS.
 - The post-completion compatibility repair received `PASS_LOCAL / NO_MUST_FIX_FINDINGS` from fresh non-writing reviewers after they replayed the initially failing adversarial cases.
 - A later final read-only audit correctly found two additional P1s: cross-scene substitution of a complete routing result and overwrite of an unrelated existing upgrade output. Both attacks now fail; the valid routed and new-output paths still pass. Repair-head CI and the fresh independent replay both pass.
-- The GitHub workflow is defined. Its first integrated run exposed Python-version float-sum drift; the corrected implementation, follow-up P1 repair and independent-review documentation head all passed hosted CI.
+- A still later review reproduced two new P1s: a v0.2 source could bypass Grammar replay through `LEGACY_COMPATIBLE`, and the routing CLI could overwrite scene, Grammar or arbitrary existing output. Both are fixed locally; final-head CI and a clean-checkout independent review remain pending.
+- Earlier hosted runs passed, but they do not validate the current unpushed repair.
 - Source replay and direct semantic-audio audition remain outside this Goal; structural validation cannot prove the original picture observations, sound semantics, creative quality or audience response.
 
 ## Latest validation
 
 - Canonical converter focused suite: PASS — 13/13 tests; 31 scenes, 2,343 Shot/edit units and 124 candidate identities regenerate deterministically while the 30 legacy Markdown sources remain unchanged.
 - Integrated Scene validator suite: PASS — 100/100 tests, including the complete Phase 1 re-review matrix.
-- Complete repository unit/CLI suite: PASS — 225/225 tests.
+- Complete repository unit/CLI suite: PASS — 233/233 tests.
 - Full Scene Evidence validation: PASS_STRUCTURAL — 31 passed, 0 failed, 0 errors, 72 warnings.
 - Renderer: PASS locally — 31 generated files match canonical JSON, round-trip deterministically, and preserve every source Markdown file.
 - Phase 1 independent read-only audit: PASS — no must-fix finding remains.
@@ -76,13 +77,13 @@ Generated `*.scene-evidence.generated.md` files are deterministic review views o
 - Forward-test build/validation: PASS — eight packages, six required scene problems, zero eligible families, zero selected rules, eight `NO_APPLICABLE_RULE`, eight `HUMAN_REVIEW_PENDING`, zero errors and 31 visible visual-binding warnings.
 - Phase 4 independent read-only audit: PASS after replaying false-positive, private-path, fact-drift, work-title, approval, audio-loss and JSON Unicode-escape attacks and reading all eight original scripts.
 - Phase 5 independent read-only audit: PASS — 88/4 migration, original 30/120 no-drift, UNKNOWN/audio/runtime boundaries, four reviewed family assignments, catalog route and 31/2,343/124/16/0/72 arithmetic reproduced with no must-fix finding.
-- Repository automation after the follow-up routing/upgrade repair: PASS — all 18 checks pass, five versioned reports match live output, the full PR whitespace command passes, and `final-generalization-validation/0.4` is deterministic `PASS_LOCAL` with zero validation errors and 103 preserved warnings.
-- Minimal CI workflow: PASS_REMOTE_FINAL_DOCUMENTATION_HEAD — read-only permissions and the same local runner; the corrective, follow-up repair and independent-review documentation runs passed.
-- Final integrated-state independent audit: PASS_LOCAL — a fresh non-writing reviewer independently rejected both cross-scene substitutions and existing-output overwrite, passed valid IR and upgrade paths, reran 225 tests and all 18 checks, and listed the remaining source/audio/creative boundaries.
+- Repository automation after the two new P1 repairs: PASS — all 18 local checks pass, five versioned reports match live output, and `final-generalization-validation/0.4` is deterministic `PASS_LOCAL` with zero validation errors and 103 preserved warnings.
+- Minimal CI workflow: PENDING_CURRENT_HEAD — prior heads passed the read-only workflow, but the new repair is not yet pushed.
+- Final integrated-state independent audit: FAIL_CURRENT_SNAPSHOT — two new P1s were reproduced; their local fixes await a fresh clean-checkout review.
 - Compatibility-repair independent audit: PASS_LOCAL — three fresh read-only reviewers found real first-round gaps, verified their closure, and reported no remaining must-fix finding.
 
 The current command-to-claim evidence is `research/validation/VALIDATION_CLAIM_REGISTER.md`. The versioned closed-corpus evidence is `research/validation/CLOSED_CORPUS_COMPLETION_REPORT.md` and `research/validation/scene-evidence-validation.json`. A structural pass is not human creative approval.
 
 ## Next single action
 
-Stop and wait for the user's separate merge decision. PR #3 remains open; PR #1 is closed without merge. Do not merge `main`, deploy, publish or delete media.
+Commit and push the two new P1 repairs, update PR #3, require final-head CI, then run the new independent read-only review from a clean checkout. Do not merge `main`, deploy, publish or delete media.

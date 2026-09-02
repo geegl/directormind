@@ -75,10 +75,12 @@ New v0.2 audio uses `status`, `instruction`, and `source_refs`. During v0.1 upgr
 
 `upgrade_director_ir_v02.py` has two explicit modes:
 
-- `LEGACY_COMPATIBLE` is the default safe path. Every v0.1 source receives a fresh complete `HUMAN_REVIEW_REQUIRED` / `PAUSE_FOR_HUMAN` marker even if the old payload contains a route-shaped object. The mode preserves its Grammar path, existing camera/execution/reference plans and cross-episode state, keeps v0.1 GO-01/GO-07 trigger behavior, removes only invalid uses of those two seed rules, and wraps non-empty old audio as unmapped review data. The pause is visible in rendered Markdown and does not claim Grammar v0.2 routing.
+- `LEGACY_COMPATIBLE` is the default safe path for v0.1 input only. Every v0.1 source receives a fresh complete `HUMAN_REVIEW_REQUIRED` / `PAUSE_FOR_HUMAN` marker even if the old payload contains a route-shaped object. The mode preserves its Grammar path, existing camera/execution/reference plans and cross-episode state, keeps v0.1 GO-01/GO-07 trigger behavior, removes only invalid uses of those two seed rules, and wraps non-empty old audio as unmapped review data. The pause is visible in rendered Markdown and does not claim Grammar v0.2 routing. A v0.2 source is rejected in this mode because its executable route cannot be trusted without replay.
 - `GRAMMAR_V02_ROUTED` requires a target Grammar path whose actual JSON passes the repository Grammar schema, candidate authority, support-matrix and safety-constraint validator; one canonical routing input and one complete routing result per migrated legacy scene; and explicit evidence IDs for every legacy Shot. It re-runs every supplied input through the target Grammar and requires an exact result match. It rejects incomplete or paused results, cross-scene substitutions, forged eligible/constraint/rule sets, unknown scenes or shots, legacy `GO-*` IDs, wrong handoffs, and any mismatch between selected rules and Shot evidence IDs before writing output.
 
 Neither mode invents a route. The CLI writes only to a new output path and refuses to overwrite any existing file, including the source IR, overrides file, or target Grammar file. A legacy-compatible pause must be reviewed and explicitly routed before it can enter the Grammar v0.2 compile path.
+
+The routing CLI follows the same output boundary outside `--check`: `--output` may not resolve to the scene or Grammar input and may not already exist. It creates the new file exclusively so a path that appears between validation and writing is rejected instead of overwritten. `--check` only compares an existing result and never creates or changes a file.
 
 ## Evidence statuses
 

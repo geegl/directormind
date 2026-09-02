@@ -256,6 +256,13 @@ def main() -> int:
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
 
+    if args.output and not args.check:
+        protected_inputs = {args.scene.resolve(), args.grammar.resolve()}
+        if args.output.resolve() in protected_inputs:
+            raise SystemExit("output must not overwrite any input file")
+        if args.output.exists():
+            raise SystemExit("output already exists; refusing to overwrite it")
+
     scene = read_json(args.scene)
     grammar = read_json(args.grammar)
     issues = schema_issues(scene, INPUT_SCHEMA_PATH)
@@ -283,7 +290,13 @@ def main() -> int:
                 return 1
         else:
             args.output.parent.mkdir(parents=True, exist_ok=True)
-            args.output.write_text(rendered, encoding="utf-8")
+            try:
+                with args.output.open("x", encoding="utf-8") as handle:
+                    handle.write(rendered)
+            except FileExistsError as exc:
+                raise SystemExit(
+                    "output already exists; refusing to overwrite it"
+                ) from exc
     else:
         sys.stdout.write(rendered)
     return 0

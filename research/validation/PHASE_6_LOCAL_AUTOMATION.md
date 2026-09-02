@@ -2,7 +2,7 @@
 
 Updated: 2026-09-02
 
-Status: `COMPLETE / FINAL_DOCUMENTATION_CI_PASS / INDEPENDENT_REVIEW_PASS`
+Status: `NEW_P1_REPAIR_LOCAL_PASS / FINAL_CI_AND_REVIEW_PENDING`
 
 ## Result
 
@@ -22,7 +22,7 @@ The workflow was pushed to PR #3. The first hosted run exposed a cross-version f
 
 - Quick runner: PASS — 16 checks; it intentionally does not validate the full-suite final report.
 - Full runner: PASS — 18 checks.
-- Unit/CLI suite: PASS — 225 tests after the final routing-substitution and existing-output regressions were added.
+- Unit/CLI suite: PASS — 233 tests after the new legacy-mode and routing-output matrices were added.
 - Scene Evidence: 31/31 pass, 2,343 Shot/edit units, 124 candidate lineages, zero errors, 72 warnings.
 - Candidate index: 124 candidates, 16 families, all blocked, zero runtime-authorized, zero errors.
 - Grammar: five project constraints, six safety constraints, zero eligible/runtime evidence rules, zero errors.
@@ -54,7 +54,7 @@ The current local runner also covers the later narrow repair: one canonical scen
 
 ## Independent result
 
-The first final audit returned FAIL on three evidence defects despite passing runtime checks. After correction, the non-writing reviewer reran the full suite, verified missing-evidence failure and injected failure into each live prerequisite. That historical narrow re-review issued PASS. Three fresh non-writing reviewers later audited the compatibility repair, first found real blockers, then independently replayed those corrections and issued `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. A subsequent final reviewer found two further P1s: a complete cross-scene routing result could be substituted, and an unrelated existing upgrade output could be overwritten. Both are repaired with regression coverage. A fresh non-writing reviewer independently replayed both attacks and valid paths, reran 225 tests and all 18 checks, verified repair-head CI, and issued `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. See `FINAL_INTEGRATION_INDEPENDENT_AUDIT.md`; historical audit files remain unchanged.
+Earlier audit snapshots and their hosted runs remain historical evidence only. A later independent review reproduced two new P1s: v0.2 `LEGACY_COMPATIBLE` accepted unbound executable routing, and the routing CLI overwrote inputs, symlink aliases and arbitrary existing outputs. Both are repaired locally; 55 targeted tests, 233 complete tests and all 18 repository checks pass. `FINAL_INTEGRATION_INDEPENDENT_AUDIT.md` records the superseding FAIL state. Final-head CI and a fresh clean-checkout review remain required.
 
 ## External effects and rollback
 

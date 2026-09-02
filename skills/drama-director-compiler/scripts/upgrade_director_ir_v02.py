@@ -167,6 +167,10 @@ def upgrade_ir(
     mode = overrides.get("migration_mode", "LEGACY_COMPATIBLE")
     if mode not in MIGRATION_MODES:
         raise ValueError(f"unsupported migration_mode: {mode}")
+    if source_version == "director-ir/0.2" and mode == "LEGACY_COMPATIBLE":
+        raise ValueError(
+            "director-ir/0.2 requires GRAMMAR_V02_ROUTED with target Grammar replay"
+        )
 
     routing_inputs = overrides.get("scene_routing_inputs", {})
     routing_results = overrides.get("scene_routing_results", {})
@@ -234,20 +238,8 @@ def upgrade_ir(
                     f"scene {scene_id} routing result is not bound to the target Grammar or its routing input"
                 )
         else:
-            current = scene.get("routing_result")
-            current_input = scene.get("routing_input")
-            if (
-                source_version == "director-ir/0.2"
-                and isinstance(current, dict)
-                and not schema_issues(current, RESULT_SCHEMA_PATH)
-                and isinstance(current_input, dict)
-                and not schema_issues(current_input, INPUT_SCHEMA_PATH)
-            ):
-                scene["routing_input"] = copy.deepcopy(current_input)
-                scene["routing_result"] = _validated_routing_result(current, scene_id)
-            else:
-                scene["routing_input"] = None
-                scene["routing_result"] = legacy_review_required_result(scene_id)
+            scene["routing_input"] = None
+            scene["routing_result"] = legacy_review_required_result(scene_id)
         for shot in scene["shots"]:
             shot_id = shot["shot_id"]
             seen_shots.add(shot_id)

@@ -18,6 +18,8 @@ SCRIPT_ROOT = SKILL_ROOT / "scripts"
 IR_SCHEMA_PATH = SKILL_ROOT / "references" / "director-ir.schema.json"
 RESULT_SCHEMA_PATH = SKILL_ROOT / "references" / "director-routing-result.schema.json"
 FORWARD_IR_PATH = REPO_ROOT / "examples" / "forward-tests" / "ORIGINAL-NO-APPLICABLE-RULE" / "director-ir.json"
+ACTION_IR_PATH = REPO_ROOT / "examples" / "forward-tests" / "ORIGINAL-ACTION-CAUSALITY" / "director-ir.json"
+POWER_IR_PATH = REPO_ROOT / "examples" / "forward-tests" / "ORIGINAL-POWER-DIALOGUE" / "director-ir.json"
 GRAMMAR_PATH = REPO_ROOT / "research" / "grammar" / "director_grammar_v0.2.json"
 
 sys.path.insert(0, str(SCRIPT_ROOT))
@@ -352,11 +354,123 @@ class DirectorIRCompatibilityTests(unittest.TestCase):
             self.assertIn("already exists", result.stderr)
             self.assertEqual(output_path.read_bytes(), marker)
 
+    def test_v02_legacy_compatible_rejects_cross_scene_result(self) -> None:
+        action = json.loads(ACTION_IR_PATH.read_text(encoding="utf-8"))
+        power = json.loads(POWER_IR_PATH.read_text(encoding="utf-8"))
+        action["scenes"][0]["routing_result"] = copy.deepcopy(
+            power["scenes"][0]["routing_result"]
+        )
+        with self.assertRaisesRegex(ValueError, "requires GRAMMAR_V02_ROUTED"):
+            upgrade_ir(action, {})
+
+    def test_v02_legacy_compatible_rejects_cross_scene_input_and_result(self) -> None:
+        action = json.loads(ACTION_IR_PATH.read_text(encoding="utf-8"))
+        power = json.loads(POWER_IR_PATH.read_text(encoding="utf-8"))
+        action["scenes"][0]["routing_input"] = copy.deepcopy(
+            power["scenes"][0]["routing_input"]
+        )
+        action["scenes"][0]["routing_result"] = copy.deepcopy(
+            power["scenes"][0]["routing_result"]
+        )
+        with self.assertRaisesRegex(ValueError, "requires GRAMMAR_V02_ROUTED"):
+            upgrade_ir(action, {})
+
+    def test_v02_legacy_compatible_rejects_same_case_forged_selection(self) -> None:
+        action = json.loads(ACTION_IR_PATH.read_text(encoding="utf-8"))
+        forged = copy.deepcopy(action["scenes"][0]["routing_result"])
+        forged.update({
+            "status": "SELECTED",
+            "eligible_rule_ids": ["FORGED-RULE"],
+            "selected_rules": [{
+                "rule_id": "FORGED-RULE",
+                "selection_reason_codes": ["RUNTIME_AUTHORIZED"],
+                "matched_fact_ids": ["FACT-01"],
+            }],
+            "selection_count": 1,
+            "ir_handoff": "CONTINUE_WITH_SELECTED_RULES",
+        })
+        self.assertEqual(schema_issues(forged, RESULT_SCHEMA_PATH), [])
+        self.assertEqual(
+            forged["case_id"], action["scenes"][0]["routing_input"]["case_id"]
+        )
+        action["scenes"][0]["routing_result"] = forged
+        with self.assertRaisesRegex(ValueError, "requires GRAMMAR_V02_ROUTED"):
+            upgrade_ir(action, {})
+
+    def test_v02_grammar_routed_replay_remains_valid(self) -> None:
+        action = json.loads(ACTION_IR_PATH.read_text(encoding="utf-8"))
+        overrides = {
+            "migration_mode": "GRAMMAR_V02_ROUTED",
+            "target_director_grammar_path": "research/grammar/director_grammar_v0.2.json",
+        }
+        upgraded = upgrade_ir(action, overrides, self.grammar)
+        self.assertEqual(validate_ir(upgraded, self.grammar)["status"], "PASS")
+
+    def test_v02_legacy_compatible_cli_failure_creates_no_output(self) -> None:
+        action = json.loads(ACTION_IR_PATH.read_text(encoding="utf-8"))
+        power = json.loads(POWER_IR_PATH.read_text(encoding="utf-8"))
+        wrong_result = copy.deepcopy(action)
+        wrong_result["scenes"][0]["routing_result"] = copy.deepcopy(
+            power["scenes"][0]["routing_result"]
+        )
+        wrong_both = copy.deepcopy(action)
+        wrong_both["scenes"][0]["routing_input"] = copy.deepcopy(
+            power["scenes"][0]["routing_input"]
+        )
+        wrong_both["scenes"][0]["routing_result"] = copy.deepcopy(
+            power["scenes"][0]["routing_result"]
+        )
+        same_case_forgery = copy.deepcopy(action)
+        forged = same_case_forgery["scenes"][0]["routing_result"]
+        forged.update({
+            "status": "SELECTED",
+            "eligible_rule_ids": ["FORGED-RULE"],
+            "selected_rules": [{
+                "rule_id": "FORGED-RULE",
+                "selection_reason_codes": ["RUNTIME_AUTHORIZED"],
+                "matched_fact_ids": ["FACT-01"],
+            }],
+            "selection_count": 1,
+            "ir_handoff": "CONTINUE_WITH_SELECTED_RULES",
+        })
+        variants = {
+            "cross_scene_result": wrong_result,
+            "cross_scene_input_and_result": wrong_both,
+            "same_case_forged_selection": same_case_forgery,
+        }
+        for name, source in variants.items():
+            with self.subTest(name=name):
+                with tempfile.TemporaryDirectory() as temporary:
+                    root = Path(temporary)
+                    ir_path = root / "mutated.json"
+                    overrides_path = root / "overrides.json"
+                    output_path = root / "must-not-exist.json"
+                    ir_path.write_text(json.dumps(source), encoding="utf-8")
+                    overrides_path.write_text("{}", encoding="utf-8")
+                    ir_before = ir_path.read_bytes()
+                    overrides_before = overrides_path.read_bytes()
+                    result = subprocess.run(
+                        [
+                            sys.executable,
+                            str(SCRIPT_ROOT / "upgrade_director_ir_v02.py"),
+                            "--ir", str(ir_path),
+                            "--overrides", str(overrides_path),
+                            "--output", str(output_path),
+                        ],
+                        cwd=REPO_ROOT,
+                        capture_output=True,
+                        text=True,
+                        check=False,
+                    )
+                    self.assertNotEqual(result.returncode, 0)
+                    self.assertIn("requires GRAMMAR_V02_ROUTED", result.stderr)
+                    self.assertFalse(output_path.exists())
+                    self.assertEqual(ir_path.read_bytes(), ir_before)
+                    self.assertEqual(overrides_path.read_bytes(), overrides_before)
+
     def test_cross_scene_routing_substitution_is_rejected(self) -> None:
-        action_path = REPO_ROOT / "examples" / "forward-tests" / "ORIGINAL-ACTION-CAUSALITY" / "director-ir.json"
-        power_path = REPO_ROOT / "examples" / "forward-tests" / "ORIGINAL-POWER-DIALOGUE" / "director-ir.json"
-        action = json.loads(action_path.read_text(encoding="utf-8"))
-        power = json.loads(power_path.read_text(encoding="utf-8"))
+        action = json.loads(ACTION_IR_PATH.read_text(encoding="utf-8"))
+        power = json.loads(POWER_IR_PATH.read_text(encoding="utf-8"))
 
         wrong_result = copy.deepcopy(action)
         wrong_result["scenes"][0]["routing_result"] = copy.deepcopy(

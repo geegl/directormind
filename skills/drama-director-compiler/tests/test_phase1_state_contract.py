@@ -47,7 +47,7 @@ class PhaseOneStateContractTests(unittest.TestCase):
         card = (CONTEXT / "THIRD_PARTY_GENERALIZATION_AUDIT_TASK.md").read_text(
             encoding="utf-8"
         )
-        self.assertIn("Status: `COMPLETE / FINAL_DOCUMENTATION_CI_PASS / INDEPENDENT_REVIEW_PASS`", card)
+        self.assertIn("Status: `FOLLOW_UP_P1_REPAIR_LOCAL_PASS / CI_AND_INDEPENDENT_REVIEW_PENDING`", card)
         self.assertIn("Pushes and corrective pushes to the existing PR #3 branch are authorized", card)
         self.assertIn("Closing PR #1 is authorized", card)
         self.assertIn("Merging `main`", card)
@@ -67,7 +67,7 @@ class PhaseOneStateContractTests(unittest.TestCase):
         self.assertEqual(len(rows), 57)
         self.assertEqual(
             Counter(status for _, status in rows),
-            Counter({"VERIFIED_DONE": 57}),
+            Counter({"IN_PROGRESS": 8, "VERIFIED_DONE": 49}),
         )
         self.assertNotIn(
             "Closed-corpus completion is independently reviewed and ready for one isolated local commit",

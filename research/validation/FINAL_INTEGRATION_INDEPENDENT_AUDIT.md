@@ -2,7 +2,23 @@
 
 Date: 2026-09-02
 
-Status: `PASS_LOCAL / NO_MUST_FIX_FINDINGS / REPAIR_HEAD_CI_PASS`
+Status: `FAIL_LOCAL / TWO_NEW_P1_REPRODUCED / REPAIR_REVIEW_PENDING`
+
+## New review that supersedes the prior verdict
+
+A later independent review reproduced two additional P1s on the previously
+accepted branch:
+
+| New finding | Baseline evidence | Current local repair |
+|---|---|---|
+| `LEGACY_COMPATIBLE` accepted a v0.2 IR carrying a schema-valid but unbound route. | Cross-scene `routing_result` substitution returned successfully; the public CLI exited zero and created mismatched executable output. | `LEGACY_COMPATIBLE` now accepts v0.1 input only. Every v0.2 source must use `GRAMMAR_V02_ROUTED` with a validated Grammar and exact `route_scene` replay. Result-only, input-plus-result and same-case forged-selection attacks are rejected; failure creates no output. |
+| The routing CLI overwrote its scene input, Grammar input, symlink aliases and unrelated existing output. | Each overwrite case exited zero and changed the protected file. | Non-check writes reject resolved input aliases and every existing output, then use exclusive file creation. Four input/alias attacks and unrelated-output overwrite return non-zero without changing content; new output succeeds and `--check` remains read-only. |
+
+Current local evidence is 55/55 targeted routing/upgrade tests, 233/233 complete
+tests, all 18 repository checks and a clean working-tree diff check. This is not
+yet a final PASS: the repair must be committed and pushed, the final HEAD must
+pass hosted CI, and a fresh non-writing reviewer must replay it from a clean
+checkout. Until then PR #3 is not merge-ready.
 
 ## Review boundary
 
@@ -16,9 +32,12 @@ This review does not inherit the verdict of an older audit. It replays the two
 P1 findings that overturned the previous completion claim and checks the valid
 paths after repair.
 
-## Must fix before completion
+## Prior reviewed snapshot: must fix before completion
 
 `NO_MUST_FIX_FINDINGS`
+
+This verdict applies only to the earlier reviewed snapshot and is superseded by
+the new findings above.
 
 | Replayed case | Result | Evidence |
 |---|---|---|
@@ -30,7 +49,7 @@ paths after repair.
 | Validate a legitimate Grammar v0.2 IR | Passed | Fresh routing replay and Director IR validation return `PASS`. |
 | Upgrade a legitimate v0.1 IR to a new output path | Passed | CLI exits zero and the generated IR validates as `PASS`. |
 
-## Reproduced evidence
+## Prior snapshot reproduced evidence
 
 - Targeted Director routing and compatibility suite: 47/47 PASS.
 - Complete unit/CLI suite: 225/225 PASS.
