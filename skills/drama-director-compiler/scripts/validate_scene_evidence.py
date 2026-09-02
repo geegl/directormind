@@ -112,6 +112,11 @@ CROSS_CUT_IDENTITY_ASSERTION_RE = re.compile(
     r"\bidentity\b[^.\n]{0,60}\b(?:continues?|persists?|matches?)\b[^.\n]{0,40}\b(?:cut|cuts|edit|edits)\b",
     re.IGNORECASE,
 )
+AFFIRMATIVE_ASSERTION_RE = re.compile(
+    r"\b(?:is|are|was|were|has|have|contains?|shows?|appears?|returns?|continues?|persists?|matches?|"
+    r"becomes?|uses?|keeps?|holds?|wears?|drives?|moves?)\b",
+    re.IGNORECASE,
+)
 UNKNOWN_FACT_ALIAS_PATTERNS = {
     "axis": re.compile(r"\b(?:axis|180[- ]degree|screen direction|line of action)\b", re.IGNORECASE),
     "identity": re.compile(
@@ -529,6 +534,15 @@ def _semantic_clauses(text: str) -> list[str]:
     ]
 
 
+def _uncertainty_trailing_segments(text: str) -> list[str]:
+    """Return prose after each uncertainty marker, where hidden assertions commonly appear."""
+    matches = list(GENERAL_UNCERTAINTY_RE.finditer(text))
+    return [
+        text[match.end() : matches[index + 1].start() if index + 1 < len(matches) else len(text)].strip()
+        for index, match in enumerate(matches)
+    ]
+
+
 def _iter_unknown_statements(evidence: dict[str, Any]) -> Iterator[tuple[str, str]]:
     """Yield every field that the contract designates as an UNKNOWN register."""
     array_paths: list[tuple[str, Any]] = []
@@ -581,6 +595,27 @@ def _validate_unknown_statement(path: str, statement: str, issues: list[dict[str
             path,
             "unknown wording cannot hide an unauditioned audio instruction",
         )
+    for trailing in _uncertainty_trailing_segments(statement):
+        if not trailing or SAFE_UNKNOWN_BOUNDARY_RE.search(trailing) or SAFE_AUDIO_BOUNDARY_RE.search(trailing):
+            continue
+        if CROSS_CUT_IDENTITY_ASSERTION_RE.search(trailing):
+            add_issue(
+                issues,
+                "error",
+                "UNKNOWN-HIDES-CROSS-CUT-IDENTITY",
+                path,
+                "unknown wording cannot assert identity across a cut",
+            )
+            break
+        if AFFIRMATIVE_ASSERTION_RE.search(trailing):
+            add_issue(
+                issues,
+                "error",
+                "UNKNOWN-HIDES-AFFIRMATIVE-FACT",
+                path,
+                "unknown wording cannot hide an affirmative fact after an uncertainty marker",
+            )
+            break
     clauses = _semantic_clauses(statement)
     for clause in clauses:
         if (
@@ -637,20 +672,22 @@ def _rule_asserts_unknown_fact(unknown_text: str, operational_text: str) -> bool
     if not unknown_tokens and not has_known_anchor:
         return False
     for clause in _semantic_clauses(operational_text):
-        if (
-            GENERAL_UNCERTAINTY_RE.search(clause)
-            or SAFE_UNKNOWN_BOUNDARY_RE.search(clause)
-            or SAFE_AUDIO_BOUNDARY_RE.search(clause)
-        ):
-            continue
-        shared = unknown_tokens.intersection(_fact_tokens(clause))
-        if shared and len(shared) / len(unknown_tokens) >= 0.5:
-            return True
-        if any(
-            anchor in unknown_tokens and pattern.search(clause)
-            for anchor, pattern in UNKNOWN_FACT_ALIAS_PATTERNS.items()
-        ):
-            return True
+        segments = _uncertainty_trailing_segments(clause) if GENERAL_UNCERTAINTY_RE.search(clause) else [clause]
+        for segment in segments:
+            if (
+                not segment
+                or SAFE_UNKNOWN_BOUNDARY_RE.search(segment)
+                or SAFE_AUDIO_BOUNDARY_RE.search(segment)
+            ):
+                continue
+            shared = unknown_tokens.intersection(_fact_tokens(segment))
+            if shared and len(shared) / len(unknown_tokens) >= 0.5:
+                return True
+            if any(
+                anchor in unknown_tokens and pattern.search(segment)
+                for anchor, pattern in UNKNOWN_FACT_ALIAS_PATTERNS.items()
+            ):
+                return True
     return False
 
 
@@ -2034,7 +2071,11 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
+        canonical_schema_path = Path(__file__).resolve().parent.parent / "references" / "scene-evidence.schema.json"
+        canonical_schema = _validate_schema_document(load_json(canonical_schema_path))
         schema = _validate_schema_document(load_json(Path(args.schema)))
+        if schema != canonical_schema:
+            raise ValueError("--schema must match the repository Scene Evidence contract")
         paths = discover_evidence_paths(args.inputs)
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"validator setup error: {exc}", file=sys.stderr)
