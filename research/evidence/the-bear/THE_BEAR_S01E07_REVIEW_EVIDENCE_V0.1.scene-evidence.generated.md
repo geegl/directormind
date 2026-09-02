@@ -57,7 +57,7 @@
 
 | # | Shot ID | Start | End | Duration | Size | Angle | Camera path | Zone | Picture | Audio | Narrative function | AI risk C/P/K | UNKNOWN |
 |---:|---|---:|---:|---:|---|---|---|---|---|---|---|---|---|
-| 1 | BEAR-S01E07-REVIEW-001-S001 | {"frame":null,"pts":null,"seconds":142.768,"time_base":null,"timecode":"00:02:22.768"} | {"frame":null,"pts":null,"seconds":1171.379,"time_base":null,"timecode":"00:19:31.379"} | 1028.611 | {"claim_id":"S001-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["BEAR-S01E07-REVIEW-001-S001"],"status":"PICTURE_OBSERVED","value":"Variable: hand/detail, close, medium, two-shot, clustered group, corridor wide, and empty-workspace view"} | {"claim_id":"S001-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["BEAR-S01E07-REVIEW-001-S001"],"status":"PICTURE_OBSERVED","value":"Predominantly eye level; height and angle shift with movement and workstation sightlines"} | {"claim_id":"S001-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["BEAR-S01E07-REVIEW-001-S001"],"status":"PICTURE_OBSERVED","value":"Continuous translation, pans, follow moves, reversals, close approaches, pull-backs, and reframing; no visible cut"} | [{"claim_id":"S001-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["BEAR-S01E07-REVIEW-001-S001"],"status":"INFERRED","value":"Reframes around pass openings, shelving, doorways, foreground bodies, and front-counter windows; characters enter and leave rather than receiving separate coverage"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S001-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["BEAR-S01E07-REVIEW-001-S001"],"status":"INFERRED","value":"Makes time pressure and organizational fracture feel continuous; converts camera access itself into reaction prioritization"} | CRITICAL/CRITICAL/CRITICAL | ["Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.","Legacy light/color ledger retained for human review only: Bright cool/neutral kitchen light; stronger red/blue accents at the front counter; lighting remains spatially consistent across revisits","Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.","The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."] |
+| 1 | BEAR-S01E07-REVIEW-001-S001 | {"frame":null,"pts":null,"seconds":142.768,"time_base":null,"timecode":"00:02:22.768"} | {"frame":null,"pts":null,"seconds":1171.379,"time_base":null,"timecode":"00:19:31.379"} | 1028.611 | {"claim_id":"S001-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["BEAR-S01E07-REVIEW-001-S001"],"status":"PICTURE_OBSERVED","value":"Variable: hand/detail, close, medium, two-shot, clustered group, corridor wide, and empty-workspace view"} | {"claim_id":"S001-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["BEAR-S01E07-REVIEW-001-S001"],"status":"PICTURE_OBSERVED","value":"Predominantly eye level; height and angle shift with movement and workstation sightlines"} | {"claim_id":"S001-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["BEAR-S01E07-REVIEW-001-S001"],"status":"PICTURE_OBSERVED","value":"Continuous translation, pans, follow moves, reversals, close approaches, pull-backs, and reframing; no visible cut"} | [{"claim_id":"S001-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["BEAR-S01E07-REVIEW-001-S001"],"status":"INFERRED","value":"Reframes around pass openings, shelving, doorways, foreground bodies, and front-counter windows; characters enter and leave rather than receiving separate coverage"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S001-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["BEAR-S01E07-REVIEW-001-S001"],"status":"INFERRED","value":"Makes time pressure and organizational fracture feel continuous; converts camera access itself into reaction prioritization"} | CRITICAL/CRITICAL/CRITICAL | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
 
 ## Candidate-rule lineage
 
@@ -80,7 +80,7 @@
       "BEAR-S01E07-REVIEW-001-BEAR-C04-FUNCTIONAL-LONG-TAKE-FALLBACK"
     ],
     "scope": "AUDIO",
-    "statement": "Direct soundtrack audition was not completed, so semantic audio facts remain unknown.",
+    "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
     "unknown_id": "UNKNOWN-AUDIO"
   },
   {
@@ -300,10 +300,8 @@
         "timecode": "00:02:22.768"
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: Bright cool/neutral kitchen light; stronger red/blue accents at the front counter; lighting remains spatially consistent across revisits",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     }
   ],
@@ -346,7 +344,7 @@
         "BEAR-S01E07-REVIEW-001-BEAR-C04-FUNCTIONAL-LONG-TAKE-FALLBACK"
       ],
       "scope": "AUDIO",
-      "statement": "Direct soundtrack audition was not completed, so semantic audio facts remain unknown.",
+      "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "unknown_id": "UNKNOWN-AUDIO"
     },
     {

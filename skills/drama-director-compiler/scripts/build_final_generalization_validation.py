@@ -91,6 +91,14 @@ def _declared_not_performed() -> dict[str, str]:
     }
 
 
+def _live_pr_state_required() -> dict[str, str]:
+    """Avoid self-attesting remote state from a versioned pre-CI artifact."""
+    return {
+        "status": "VERSIONED_REPORT_DOES_NOT_ATTEST",
+        "verification": "VERIFY_LIVE_PR_STATE",
+    }
+
+
 def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, Any]:
     scene = _load_report("scene-evidence-validation.json")
     candidate = _load_report("candidate-rule-validation.json")
@@ -130,7 +138,7 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
     local_runner_pass = not errors
 
     return {
-        "schema_version": "final-generalization-validation/0.3",
+        "schema_version": "final-generalization-validation/0.4",
         "status": "PASS_LOCAL" if local_runner_pass else "FAIL_LOCAL",
         "counts": {
             "source_dispositions": _source_disposition_count(),
@@ -184,17 +192,17 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
             "whitespace": "PASS" if evidence_pass("whitespace") and boundaries["whitespace_issue_count"] == 0 else "FAIL",
             "versioned_reports": "PASS" if versioned_reports_pass else "FAIL",
             "ci_workflow": "LOCAL_COMMAND_PASS_WORKFLOW_NOT_HOSTED" if local_runner_pass else "LOCAL_COMMAND_FAIL_WORKFLOW_NOT_HOSTED",
-            "remote_ci": "NOT_RUN_NO_PUSH",
+            "remote_ci": "POST_COMMIT_EXTERNAL_EVIDENCE_REQUIRED",
         },
         "verification_evidence": {
             "local_check_results": "LIVE_RUNNER_RESULTS" if live_evidence else "NOT_PROVIDED",
             "public_string_scan": boundaries["public_string_scan_scope"],
             "historical_legacy_markdown": boundaries["historical_legacy_markdown_scope"],
-            "external_actions": "EXECUTOR_DECLARATION_NOT_MACHINE_VERIFIED",
+            "external_actions": "LIVE_PR_STATE_REQUIRED_FOR_REMOTE_ACTIONS",
         },
         "external_actions": {
-            "pushed": _declared_not_performed(),
-            "old_pull_request_closed": _declared_not_performed(),
+            "pushed": _live_pr_state_required(),
+            "old_pull_request_closed": _live_pr_state_required(),
             "merged": _declared_not_performed(),
             "deployed": _declared_not_performed(),
             "published": _declared_not_performed(),
@@ -205,8 +213,8 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
             "SEMANTIC_AUDIO_NOT_DIRECTLY_AUDITIONED",
             "NO_ELIGIBLE_RULE_POSITIVE_SELECTION_AVAILABLE",
             "CREATIVE_QUALITY_AND_AUDIENCE_EFFECT_NOT_PROVED",
-            "REMOTE_CI_NOT_RUN_WITHOUT_PUSH_AUTHORIZATION",
-            "OLD_PULL_REQUEST_STATE_NOT_CHANGED",
+            "REMOTE_CI_RESULT_IS_POST_COMMIT_EXTERNAL_EVIDENCE",
+            "PULL_REQUEST_STATE_IS_POST_COMMIT_EXTERNAL_EVIDENCE",
             "ORIGINAL_30_IMMUTABLE_LEGACY_MARKDOWN_EXCLUDED_FROM_SCOPED_STRING_SCAN",
             "EXTERNAL_ACTION_DECLARATIONS_NOT_MACHINE_VERIFIED",
         ],

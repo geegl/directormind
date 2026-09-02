@@ -163,7 +163,7 @@ SCENE_META: dict[str, SceneMeta] = {
         picture_status="PICTURE_PARTIAL", shot_completeness="PARTIAL_AT_END",
     ),
     "THE_LAST_OF_US_S01E06_BEDROOM_VISUAL_EVIDENCE_V0.1": SceneMeta(
-        "TLOU-BEDROOM-LOCAL-001", "THE-LAST-OF-US-S01E06", "NATURAL_CONTINUOUS_SCENE",
+        "TLOU-BEDROOM-LOCAL-001", "THE-LAST-OF-US-S01E06", "CONTIGUOUS_EDITORIAL_SEQUENCE",
         "BOUNDARY_UNKNOWN", "RELATIONSHIP_FRACTURE",
     ),
     "THE_MARTIAN_2015_MULTI_SPACE_OBJECT_STATE_EDITORIAL_SEQUENCE_VISUAL_EVIDENCE_V0.1": SceneMeta(
@@ -172,7 +172,7 @@ SCENE_META: dict[str, SceneMeta] = {
     ),
     "THE_SOCIAL_NETWORK_2010_OPENING_EXCHANGE_EVIDENCE_V0.1": SceneMeta(
         "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001", "THE-SOCIAL-NETWORK-2010",
-        "NATURAL_CONTINUOUS_SCENE", "BOUNDARY_UNKNOWN", "RELATIONSHIP_FRACTURE",
+        "CONTIGUOUS_EDITORIAL_SEQUENCE", "BOUNDARY_UNKNOWN", "RELATIONSHIP_FRACTURE",
     ),
     "THE_WIRE_S01E04_OLD_CASES_EVIDENCE_V0.1": SceneMeta(
         "WIRE-S01E04-OLD-CASES-001", "THE-WIRE-S01E04", "NATURAL_CONTINUOUS_SCENE",
@@ -571,6 +571,29 @@ def _audio_status(meta: SceneMeta) -> str:
     return "BLOCKED_DIRECT_AUDITION"
 
 
+def _shot_completeness(meta: SceneMeta, order: int, total: int) -> str:
+    """Derive endpoint completeness from the declared scene boundary."""
+    if meta.stats_unit == "EDIT_UNIT":
+        return "EDIT_UNIT_NOT_SHOT"
+    if total == 1:
+        return {
+            "START_INTERNAL_END_VERIFIED": "PARTIAL_AT_START",
+            "START_VERIFIED_END_INTERNAL": "PARTIAL_AT_END",
+            "BOTH_INTERNAL_SELECTED": "PARTIAL_AT_BOTH",
+        }.get(meta.boundary_status, "COMPLETE_VISIBLE_SHOT")
+    if order == 1 and meta.boundary_status in {
+        "START_INTERNAL_END_VERIFIED",
+        "BOTH_INTERNAL_SELECTED",
+    }:
+        return "PARTIAL_AT_START"
+    if order == total and meta.boundary_status in {
+        "START_VERIFIED_END_INTERNAL",
+        "BOTH_INTERNAL_SELECTED",
+    }:
+        return "PARTIAL_AT_END"
+    return "COMPLETE_VISIBLE_SHOT"
+
+
 def convert_shots(meta: SceneMeta, rows: Sequence[dict[str, str]]) -> list[dict[str, Any]]:
     shots: list[dict[str, Any]] = []
     audio_status = _audio_status(meta)
@@ -594,13 +617,20 @@ def convert_shots(meta: SceneMeta, rows: Sequence[dict[str, str]]) -> list[dict[
             raise ValueError(f"non-positive Shot span in {row['shot_id']}")
         risk = split_risk(row["AI_complexity"])
         legacy_fallback = extract_legacy_fallback(row["AI_complexity"])
-        high_risk_without_legacy_fallback = (
-            any(risk[axis]["level"] in {"HIGH", "CRITICAL"} for axis in ("camera", "performance", "continuity"))
-            and legacy_fallback is None
-        )
         prefix = f"S{order:03d}"
-        completeness = meta.shot_completeness
+        completeness = _shot_completeness(meta, order, len(rows))
         picture_status = meta.picture_status
+        camera_start = legacy_claim(
+            f"{prefix}-CAM-START",
+            row["composition"],
+            shot_id,
+            default="INFERRED",
+            force_inference=True,
+        )
+        camera_start["notes"] = (
+            "Migrated conservatively from the checked-in legacy evidence ledger. "
+            f"Legacy light/color lineage retained for human review only: {_clean_text(row['light_color'])}"
+        )
         shots.append(
             {
                 "shot_id": shot_id,
@@ -613,7 +643,7 @@ def convert_shots(meta: SceneMeta, rows: Sequence[dict[str, str]]) -> list[dict[
                 "camera_height": legacy_claim(f"{prefix}-HEIGHT", row["camera_angle"], shot_id, default="INFERRED"),
                 "camera_angle": legacy_claim(f"{prefix}-ANGLE", row["camera_angle"], shot_id, default="PICTURE_OBSERVED"),
                 "camera_motion": legacy_claim(f"{prefix}-MOTION", row["camera_motion"], shot_id, default="PICTURE_OBSERVED"),
-                "camera_start": legacy_claim(f"{prefix}-CAM-START", row["composition"], shot_id, default="INFERRED", force_inference=True),
+                "camera_start": camera_start,
                 "camera_path": legacy_claim(f"{prefix}-CAM-PATH", row["camera_motion"], shot_id, default="PICTURE_OBSERVED"),
                 "camera_end": legacy_claim(f"{prefix}-CAM-END", row["composition"], shot_id, default="INFERRED", force_inference=True),
                 "focus_strategy": legacy_claim(f"{prefix}-FOCUS", row["focus_depth"], shot_id, default="INFERRED"),
@@ -636,13 +666,9 @@ def convert_shots(meta: SceneMeta, rows: Sequence[dict[str, str]]) -> list[dict[
                 "AI_complexity": risk,
                 "fallback": project_original_fallback(risk, shot_id, legacy_fallback),
                 "unknowns": [
-                    "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-                    f"Legacy light/color ledger retained for human review only: {_clean_text(row['light_color'])}",
-                    "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-                ] + (
-                    ["The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."]
-                    if high_risk_without_legacy_fallback else []
-                ),
+                    "Audio remains unknown and was not directly auditioned.",
+                    "Cross-cut identities remain unknown.",
+                ],
             }
         )
     return shots
@@ -813,7 +839,7 @@ def build_evidence(source: Path) -> dict[str, Any]:
             "repository_command": None,
             "tool_version_status": "VERSION_UNKNOWN",
             "source_refs": scene_refs,
-            "unknowns": ["The conversion does not replay source media or re-prove the legacy observation."],
+            "unknowns": ["Source-media facts remain unknown."],
         },
         {
             "method_id": conversion_method_id,
@@ -823,7 +849,7 @@ def build_evidence(source: Path) -> dict[str, Any]:
             "repository_command": "python3 skills/drama-director-compiler/scripts/convert_legacy_scene_evidence.py --check",
             "tool_version_status": "VERSION_RECORDED",
             "source_refs": scene_refs,
-            "unknowns": ["Structural conversion is not creative approval or renewed media observation."],
+            "unknowns": ["Creative approval and renewed media observation remain unknown."],
         },
         {
             "method_id": audio_method_id,
@@ -850,7 +876,7 @@ def build_evidence(source: Path) -> dict[str, Any]:
                 "repository_command": None,
                 "tool_version_status": "VERSION_RECORDED",
                 "source_refs": scene_refs,
-                "unknowns": ["Signal measurements do not establish source, meaning, perception, or causal edit logic."],
+                "unknowns": ["Signal source, meaning, perception, and causal edit logic remain unknown."],
             }
         )
         auxiliary.append(
@@ -963,7 +989,7 @@ def build_evidence(source: Path) -> dict[str, Any]:
         "unknowns": [
             {
                 "unknown_id": "UNKNOWN-AUDIO",
-                "statement": "Direct soundtrack audition was not completed, so semantic audio facts remain unknown.",
+                "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
                 "scope": "AUDIO",
                 "blocks_rule_ids": [rule["candidate_rule_id"] for rule in rules],
             },

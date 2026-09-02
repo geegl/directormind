@@ -149,7 +149,7 @@
     {
       "shot_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S001",
       "order": 1,
-      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "completeness": "PARTIAL_AT_START",
       "start": {
         "timecode": "00:19:36.000",
         "seconds": 1176.0,
@@ -208,7 +208,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S001"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: pink garment yields to turquoise strips against P-A bronze jacket; grading/lighting method UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S001-CAM-PATH",
@@ -378,10 +378,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: pink garment yields to turquoise strips against P-A bronze jacket; grading/lighting method UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -446,7 +444,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S002"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: saturated blue sweater is the dominant color against neutral room; color meaning UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S002-CAM-PATH",
@@ -616,9 +614,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: saturated blue sweater is the dominant color against neutral room; color meaning UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -683,7 +680,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S003"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: turquoise strips and bronze jacket recur"
       },
       "camera_path": {
         "claim_id": "S003-CAM-PATH",
@@ -853,9 +850,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: turquoise strips and bronze jacket recur",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -920,7 +916,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S004"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: grey/brown suits and pink garment; exact lighting method UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S004-CAM-PATH",
@@ -1090,10 +1086,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: grey/brown suits and pink garment; exact lighting method UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1158,7 +1152,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S005"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: blue sweater stands apart from warm/neutral clustered clothing; color meaning UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S005-CAM-PATH",
@@ -1328,10 +1322,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: blue sweater stands apart from warm/neutral clustered clothing; color meaning UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1396,7 +1388,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S006"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bronze jacket/turquoise strips recur"
       },
       "camera_path": {
         "claim_id": "S006-CAM-PATH",
@@ -1566,10 +1558,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bronze jacket/turquoise strips recur",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1634,7 +1624,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S007"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: blue sweater remains dominant against neutral corridor"
       },
       "camera_path": {
         "claim_id": "S007-CAM-PATH",
@@ -1804,10 +1794,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: blue sweater remains dominant against neutral corridor",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1872,7 +1860,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S008"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: blue foreground contrasts with pink/turquoise/bronze group palette"
       },
       "camera_path": {
         "claim_id": "S008-CAM-PATH",
@@ -2042,10 +2030,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: blue foreground contrasts with pink/turquoise/bronze group palette",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2110,7 +2096,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S009"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: recurring blue/neutral palette"
       },
       "camera_path": {
         "claim_id": "S009-CAM-PATH",
@@ -2280,9 +2266,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: recurring blue/neutral palette",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2347,7 +2332,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S010"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bronze/turquoise recurrence"
       },
       "camera_path": {
         "claim_id": "S010-CAM-PATH",
@@ -2517,10 +2502,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bronze/turquoise recurrence",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2585,7 +2568,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S011"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: muted clothing with pink garment accent"
       },
       "camera_path": {
         "claim_id": "S011-CAM-PATH",
@@ -2755,10 +2738,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: muted clothing with pink garment accent",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2823,7 +2804,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S012"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bronze/turquoise state continues"
       },
       "camera_path": {
         "claim_id": "S012-CAM-PATH",
@@ -2993,10 +2974,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bronze/turquoise state continues",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3061,7 +3040,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S013"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: blue sweater remains dominant"
       },
       "camera_path": {
         "claim_id": "S013-CAM-PATH",
@@ -3231,10 +3210,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: blue sweater remains dominant",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3299,7 +3276,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S014"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bronze/turquoise recurrence"
       },
       "camera_path": {
         "claim_id": "S014-CAM-PATH",
@@ -3469,10 +3446,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bronze/turquoise recurrence",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3537,7 +3512,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S015"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: blue foreground against dark-clothed P-G and neutral room"
       },
       "camera_path": {
         "claim_id": "S015-CAM-PATH",
@@ -3707,10 +3682,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: blue foreground against dark-clothed P-G and neutral room",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3775,7 +3748,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S016"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bronze jacket, turquoise strips and pink garment coexist; color semantics UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S016-CAM-PATH",
@@ -3945,10 +3918,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bronze jacket, turquoise strips and pink garment coexist; color semantics UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4013,7 +3984,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S017"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: dark suit/skin against muted garment rack"
       },
       "camera_path": {
         "claim_id": "S017-CAM-PATH",
@@ -4183,9 +4154,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: dark suit/skin against muted garment rack",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4250,7 +4220,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S018"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: blue foreground/dark rear figure recur"
       },
       "camera_path": {
         "claim_id": "S018-CAM-PATH",
@@ -4420,10 +4390,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: blue foreground/dark rear figure recur",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4488,7 +4456,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S019"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bronze, pink and turquoise accents coexist; color meaning UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S019-CAM-PATH",
@@ -4658,10 +4626,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bronze, pink and turquoise accents coexist; color meaning UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4726,7 +4692,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S020"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: turquoise strip over pink garment is highly visible; significance UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S020-CAM-PATH",
@@ -4896,10 +4862,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: turquoise strip over pink garment is highly visible; significance UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4964,7 +4928,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S021"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: recurring blue/neutral palette"
       },
       "camera_path": {
         "claim_id": "S021-CAM-PATH",
@@ -5134,10 +5098,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: recurring blue/neutral palette",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5202,7 +5164,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S022"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bronze/turquoise/dark suit recur"
       },
       "camera_path": {
         "claim_id": "S022-CAM-PATH",
@@ -5372,10 +5334,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bronze/turquoise/dark suit recur",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5440,7 +5400,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S023"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: pink, turquoise and red-orange dominate; color semantics UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S023-CAM-PATH",
@@ -5610,10 +5570,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: pink, turquoise and red-orange dominate; color semantics UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5678,7 +5636,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S024"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: blue foreground and dark rear figure recur"
       },
       "camera_path": {
         "claim_id": "S024-CAM-PATH",
@@ -5848,10 +5806,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: blue foreground and dark rear figure recur",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5916,7 +5872,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S025"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: red-orange, turquoise, yellow and bronze objects/clothing separate holders; meanings UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S025-CAM-PATH",
@@ -6086,16 +6042,14 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: red-orange, turquoise, yellow and bronze objects/clothing separate holders; meanings UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
       "shot_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S026",
       "order": 26,
-      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "completeness": "PARTIAL_AT_END",
       "start": {
         "timecode": "00:21:10.500",
         "seconds": 1270.5,
@@ -6154,7 +6108,7 @@
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S026"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bronze/black foreground with yellow, red-orange and turquoise background accents; meanings UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S026-CAM-PATH",
@@ -6324,10 +6278,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bronze/black foreground with yellow, red-orange and turquoise background accents; meanings UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     }
   ],
@@ -6441,7 +6393,7 @@
         "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S026"
       ],
       "unknowns": [
-        "The conversion does not replay source media or re-prove the legacy observation."
+        "Source-media facts remain unknown."
       ]
     },
     {
@@ -6456,7 +6408,7 @@
         "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S026"
       ],
       "unknowns": [
-        "Structural conversion is not creative approval or renewed media observation."
+        "Creative approval and renewed media observation remain unknown."
       ]
     },
     {
@@ -6875,7 +6827,7 @@
   "unknowns": [
     {
       "unknown_id": "UNKNOWN-AUDIO",
-      "statement": "Direct soundtrack audition was not completed, so semantic audio facts remain unknown.",
+      "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "scope": "AUDIO",
       "blocks_rule_ids": [
         "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C01-REGISTER-TRIGGER-OBJECT-BEFORE-ATTENTION-CASCADE",

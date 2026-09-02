@@ -208,7 +208,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S001"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S001-CAM-PATH",
@@ -378,9 +378,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -445,7 +444,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S002"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S002-CAM-PATH",
@@ -615,9 +614,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -682,7 +680,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S003"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S003-CAM-PATH",
@@ -852,9 +850,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -919,7 +916,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S004"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S004-CAM-PATH",
@@ -1089,9 +1086,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1156,7 +1152,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S005"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S005-CAM-PATH",
@@ -1326,9 +1322,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1393,7 +1388,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S006"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S006-CAM-PATH",
@@ -1563,9 +1558,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1630,7 +1624,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S007"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S007-CAM-PATH",
@@ -1800,9 +1794,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1867,7 +1860,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S008"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S008-CAM-PATH",
@@ -2037,9 +2030,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2104,7 +2096,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S009"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S009-CAM-PATH",
@@ -2274,9 +2266,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2341,7 +2332,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S010"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S010-CAM-PATH",
@@ -2511,9 +2502,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2578,7 +2568,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S011"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S011-CAM-PATH",
@@ -2748,9 +2738,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2815,7 +2804,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S012"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S012-CAM-PATH",
@@ -2985,9 +2974,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3052,7 +3040,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S013-CAM-PATH",
@@ -3222,9 +3210,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3289,7 +3276,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S014"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S014-CAM-PATH",
@@ -3459,9 +3446,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3526,7 +3512,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S015"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S015-CAM-PATH",
@@ -3696,9 +3682,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3763,7 +3748,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S016"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S016-CAM-PATH",
@@ -3933,9 +3918,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4000,7 +3984,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S017"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S017-CAM-PATH",
@@ -4170,9 +4154,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4237,7 +4220,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S018"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S018-CAM-PATH",
@@ -4407,9 +4390,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4474,7 +4456,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S019"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S019-CAM-PATH",
@@ -4644,9 +4626,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4711,7 +4692,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S020"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S020-CAM-PATH",
@@ -4881,9 +4862,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4948,7 +4928,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S021"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S021-CAM-PATH",
@@ -5118,9 +5098,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5185,7 +5164,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S022"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S022-CAM-PATH",
@@ -5355,9 +5334,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5422,7 +5400,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S023"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S023-CAM-PATH",
@@ -5592,9 +5570,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5659,7 +5636,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S024"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S024-CAM-PATH",
@@ -5829,9 +5806,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5896,7 +5872,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S025"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S025-CAM-PATH",
@@ -6066,9 +6042,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -6133,7 +6108,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S026"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S026-CAM-PATH",
@@ -6303,9 +6278,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -6370,7 +6344,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S027"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S027-CAM-PATH",
@@ -6540,9 +6514,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -6607,7 +6580,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S028"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S028-CAM-PATH",
@@ -6777,9 +6750,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -6844,7 +6816,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S029"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S029-CAM-PATH",
@@ -7014,9 +6986,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -7081,7 +7052,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S030"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S030-CAM-PATH",
@@ -7251,9 +7222,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -7318,7 +7288,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S031"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S031-CAM-PATH",
@@ -7488,9 +7458,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -7555,7 +7524,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S032"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S032-CAM-PATH",
@@ -7725,9 +7694,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -7792,7 +7760,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S033"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S033-CAM-PATH",
@@ -7962,9 +7930,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -8029,7 +7996,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S034"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S034-CAM-PATH",
@@ -8199,9 +8166,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -8266,7 +8232,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S035"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S035-CAM-PATH",
@@ -8436,9 +8402,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -8503,7 +8468,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S036"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S036-CAM-PATH",
@@ -8673,9 +8638,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -8740,7 +8704,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S037"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S037-CAM-PATH",
@@ -8910,9 +8874,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -8977,7 +8940,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S038"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S038-CAM-PATH",
@@ -9147,9 +9110,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -9214,7 +9176,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S039"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S039-CAM-PATH",
@@ -9384,9 +9346,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -9451,7 +9412,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S040"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S040-CAM-PATH",
@@ -9621,9 +9582,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -9688,7 +9648,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S041"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S041-CAM-PATH",
@@ -9858,9 +9818,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -9925,7 +9884,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S042"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S042-CAM-PATH",
@@ -10095,9 +10054,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -10162,7 +10120,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S043"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S043-CAM-PATH",
@@ -10332,9 +10290,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -10399,7 +10356,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S044"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S044-CAM-PATH",
@@ -10569,9 +10526,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -10636,7 +10592,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S045"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S045-CAM-PATH",
@@ -10806,9 +10762,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -10873,7 +10828,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S046"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S046-CAM-PATH",
@@ -11043,9 +10998,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -11110,7 +11064,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S047"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S047-CAM-PATH",
@@ -11280,9 +11234,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -11347,7 +11300,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S048"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S048-CAM-PATH",
@@ -11517,9 +11470,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -11584,7 +11536,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S049"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S049-CAM-PATH",
@@ -11754,9 +11706,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -11821,7 +11772,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S050"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S050-CAM-PATH",
@@ -11991,9 +11942,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -12058,7 +12008,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S051"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S051-CAM-PATH",
@@ -12228,9 +12178,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -12295,7 +12244,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S052"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S052-CAM-PATH",
@@ -12465,9 +12414,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -12532,7 +12480,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S053"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S053-CAM-PATH",
@@ -12702,9 +12650,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -12769,7 +12716,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S054"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S054-CAM-PATH",
@@ -12939,9 +12886,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -13006,7 +12952,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S055"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S055-CAM-PATH",
@@ -13176,9 +13122,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -13243,7 +13188,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S056"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S056-CAM-PATH",
@@ -13413,9 +13358,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -13480,7 +13424,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S057"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S057-CAM-PATH",
@@ -13650,9 +13594,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -13717,7 +13660,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S058"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S058-CAM-PATH",
@@ -13887,9 +13830,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -13954,7 +13896,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S059"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S059-CAM-PATH",
@@ -14124,9 +14066,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -14191,7 +14132,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S060"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S060-CAM-PATH",
@@ -14361,9 +14302,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -14428,7 +14368,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S061"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S061-CAM-PATH",
@@ -14598,9 +14538,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -14665,7 +14604,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S062"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S062-CAM-PATH",
@@ -14835,9 +14774,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -14902,7 +14840,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S063"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S063-CAM-PATH",
@@ -15072,9 +15010,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -15139,7 +15076,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S064"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S064-CAM-PATH",
@@ -15309,9 +15246,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -15376,7 +15312,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S065"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S065-CAM-PATH",
@@ -15546,9 +15482,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight exterior/interior with muted yellow-green/cyan cast; exact lighting and grade pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -15613,7 +15548,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S066"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: hard daylight, pale upholstery and red staining against muted parked vehicles"
       },
       "camera_path": {
         "claim_id": "S066-CAM-PATH",
@@ -15783,9 +15718,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: hard daylight, pale upholstery and red staining against muted parked vehicles",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -15850,7 +15784,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S067"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: hard daylight with orange flare and saturated red marks on pale/blue glass"
       },
       "camera_path": {
         "claim_id": "S067-CAM-PATH",
@@ -16020,9 +15954,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: hard daylight with orange flare and saturated red marks on pale/blue glass",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -16087,7 +16020,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S068"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright neutral daylight, black SUV and dark vest against tan wall/grey cars"
       },
       "camera_path": {
         "claim_id": "S068-CAM-PATH",
@@ -16257,9 +16190,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright neutral daylight, black SUV and dark vest against tan wall/grey cars",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -16324,7 +16256,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S069"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: daylight enters cool dark cabin; grey-blue shirt and black vest/headrests"
       },
       "camera_path": {
         "claim_id": "S069-CAM-PATH",
@@ -16494,9 +16426,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: daylight enters cool dark cabin; grey-blue shirt and black vest/headrests",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -16561,7 +16492,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S070"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: tan wall, pale asphalt, blue/grey cars and dark gear in hard daylight"
       },
       "camera_path": {
         "claim_id": "S070-CAM-PATH",
@@ -16731,9 +16662,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: tan wall, pale asphalt, blue/grey cars and dark gear in hard daylight",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -16798,7 +16728,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S071"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: hard daylight; pale shirt/tan vest against blue/black vehicles"
       },
       "camera_path": {
         "claim_id": "S071-CAM-PATH",
@@ -16968,9 +16898,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: hard daylight; pale shirt/tan vest against blue/black vehicles",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -17035,7 +16964,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S072"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright daylight, silver-grey sedan, dark SUVs and tan wall"
       },
       "camera_path": {
         "claim_id": "S072-CAM-PATH",
@@ -17205,9 +17134,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright daylight, silver-grey sedan, dark SUVs and tan wall",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -17272,7 +17200,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S073"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: hard daylight on silver bodywork with darker cabin/reflections"
       },
       "camera_path": {
         "claim_id": "S073-CAM-PATH",
@@ -17442,9 +17370,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: hard daylight on silver bodywork with darker cabin/reflections",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -17509,7 +17436,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S074"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: hard daylight with brief warm orange flare"
       },
       "camera_path": {
         "claim_id": "S074-CAM-PATH",
@@ -17679,9 +17606,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: hard daylight with brief warm orange flare",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -17746,7 +17672,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S075"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright silver bodywork, dark cabin and tan wall"
       },
       "camera_path": {
         "claim_id": "S075-CAM-PATH",
@@ -17916,9 +17842,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright silver bodywork, dark cabin and tan wall",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -17983,7 +17908,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S076"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: hard daylight with orange flare and pale haze"
       },
       "camera_path": {
         "claim_id": "S076-CAM-PATH",
@@ -18153,9 +18078,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: hard daylight with orange flare and pale haze",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -18220,7 +18144,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S077"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: hard daylight, muted teal/grey cars and dark/tan gear"
       },
       "camera_path": {
         "claim_id": "S077-CAM-PATH",
@@ -18390,9 +18314,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: hard daylight, muted teal/grey cars and dark/tan gear",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -18457,7 +18380,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S078"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool dark cabin against hard daylight exterior"
       },
       "camera_path": {
         "claim_id": "S078-CAM-PATH",
@@ -18627,9 +18550,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool dark cabin against hard daylight exterior",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -18694,7 +18616,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S079"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright daylight, tan wall, muted cars and dark/tan gear"
       },
       "camera_path": {
         "claim_id": "S079-CAM-PATH",
@@ -18864,9 +18786,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright daylight, tan wall, muted cars and dark/tan gear",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -18931,7 +18852,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S080"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool dark cabin, pale daylight window"
       },
       "camera_path": {
         "claim_id": "S080-CAM-PATH",
@@ -19101,9 +19022,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool dark cabin, pale daylight window",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -19168,7 +19088,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S081"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: high-contrast daylight through dark cabin with pale/red glass marks"
       },
       "camera_path": {
         "claim_id": "S081-CAM-PATH",
@@ -19338,9 +19258,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: high-contrast daylight through dark cabin with pale/red glass marks",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -19405,7 +19324,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S082"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool cabin with hard exterior daylight"
       },
       "camera_path": {
         "claim_id": "S082-CAM-PATH",
@@ -19575,9 +19494,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool cabin with hard exterior daylight",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -19642,7 +19560,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S083"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: dark cabin versus pale hard daylight"
       },
       "camera_path": {
         "claim_id": "S083-CAM-PATH",
@@ -19812,9 +19730,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: dark cabin versus pale hard daylight",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -19879,7 +19796,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S084"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: hard daylight, tan gear and red/blue/silver cars"
       },
       "camera_path": {
         "claim_id": "S084-CAM-PATH",
@@ -20049,9 +19966,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: hard daylight, tan gear and red/blue/silver cars",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -20116,7 +20032,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S085"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool cabin and bright exterior"
       },
       "camera_path": {
         "claim_id": "S085-CAM-PATH",
@@ -20286,9 +20202,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool cabin and bright exterior",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -20353,7 +20268,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S086"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: hard daylight, black SUV/dark vest against pale road and tan wall"
       },
       "camera_path": {
         "claim_id": "S086-CAM-PATH",
@@ -20523,9 +20438,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: hard daylight, black SUV/dark vest against pale road and tan wall",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -20590,7 +20504,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S087"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: hard daylight, grey shirt on pale asphalt with dark gear edges"
       },
       "camera_path": {
         "claim_id": "S087-CAM-PATH",
@@ -20760,9 +20674,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: hard daylight, grey shirt on pale asphalt with dark gear edges",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -20827,7 +20740,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S088"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright daylight, tan gear, black SUV and pale lane"
       },
       "camera_path": {
         "claim_id": "S088-CAM-PATH",
@@ -20997,9 +20910,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright daylight, tan gear, black SUV and pale lane",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -21064,7 +20976,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S089"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm daylight on face against dark cabin and muted cars"
       },
       "camera_path": {
         "claim_id": "S089-CAM-PATH",
@@ -21234,9 +21146,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm daylight on face against dark cabin and muted cars",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -21301,7 +21212,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S090"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: high-contrast bright road through dark cabin"
       },
       "camera_path": {
         "claim_id": "S090-CAM-PATH",
@@ -21471,9 +21382,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: high-contrast bright road through dark cabin",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -21538,7 +21448,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S091"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: hard daylight rim against darker cabin"
       },
       "camera_path": {
         "claim_id": "S091-CAM-PATH",
@@ -21708,9 +21618,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: hard daylight rim against darker cabin",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -21775,7 +21684,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S092"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool dark cabin with sunlit traffic behind"
       },
       "camera_path": {
         "claim_id": "S092-CAM-PATH",
@@ -21945,9 +21854,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool dark cabin with sunlit traffic behind",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -22012,7 +21920,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S093"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: hard daylight road framed by dark cabin"
       },
       "camera_path": {
         "claim_id": "S093-CAM-PATH",
@@ -22182,9 +22090,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: hard daylight road framed by dark cabin",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -22249,7 +22156,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S094"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool cabin and bright pale traffic field"
       },
       "camera_path": {
         "claim_id": "S094-CAM-PATH",
@@ -22419,9 +22326,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool cabin and bright pale traffic field",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -22486,7 +22392,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S095"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: hard daylight, black SUV centered between pale/red/green queued cars"
       },
       "camera_path": {
         "claim_id": "S095-CAM-PATH",
@@ -22656,9 +22562,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: hard daylight, black SUV centered between pale/red/green queued cars",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -22723,7 +22628,7 @@
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S096"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: tan vehicle/pale desert under hard daylight with muted green-grey fencing"
       },
       "camera_path": {
         "claim_id": "S096-CAM-PATH",
@@ -22893,9 +22798,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: tan vehicle/pale desert under hard daylight with muted green-grey fencing",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     }
   ],
@@ -23009,7 +22913,7 @@
         "SICARIO-2015-BORDER-CHECKPOINT-001-S096"
       ],
       "unknowns": [
-        "The conversion does not replay source media or re-prove the legacy observation."
+        "Source-media facts remain unknown."
       ]
     },
     {
@@ -23024,7 +22928,7 @@
         "SICARIO-2015-BORDER-CHECKPOINT-001-S096"
       ],
       "unknowns": [
-        "Structural conversion is not creative approval or renewed media observation."
+        "Creative approval and renewed media observation remain unknown."
       ]
     },
     {
@@ -23533,7 +23437,7 @@
   "unknowns": [
     {
       "unknown_id": "UNKNOWN-AUDIO",
-      "statement": "Direct soundtrack audition was not completed, so semantic audio facts remain unknown.",
+      "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "scope": "AUDIO",
       "blocks_rule_ids": [
         "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS",

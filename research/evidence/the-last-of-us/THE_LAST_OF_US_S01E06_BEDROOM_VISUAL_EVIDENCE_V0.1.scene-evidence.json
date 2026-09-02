@@ -9,7 +9,7 @@
     "source_refs": [],
     "notes": "The legacy primary label RELATIONSHIP_FRACTURE is retained only as non-operational lineage and was not proved by structural conversion."
   },
-  "scene_unit_type": "NATURAL_CONTINUOUS_SCENE",
+  "scene_unit_type": "CONTIGUOUS_EDITORIAL_SEQUENCE",
   "boundary_status": "BOUNDARY_UNKNOWN",
   "boundary_evidence": {
     "claim_id": "SCENE-BOUNDARY",
@@ -205,7 +205,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S001"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: dark blue-green night exterior with warm window/door practical glow and pale ground; exact fixtures, weather treatment and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S001-CAM-PATH",
@@ -375,9 +375,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: dark blue-green night exterior with warm window/door practical glow and pale ground; exact fixtures, weather treatment and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -442,7 +441,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S002"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: dim green-brown stair/landing field with a bright curtained window and later warm door spill; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S002-CAM-PATH",
@@ -612,9 +611,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: dim green-brown stair/landing field with a bright curtained window and later warm door spill; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -679,7 +677,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S003"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: dim green-brown stair/landing field with a bright curtained window and later warm door spill; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S003-CAM-PATH",
@@ -849,9 +847,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: dim green-brown stair/landing field with a bright curtained window and later warm door spill; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -916,7 +913,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S004"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S004-CAM-PATH",
@@ -1086,9 +1083,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1153,7 +1149,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S005"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S005-CAM-PATH",
@@ -1323,9 +1319,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1390,7 +1385,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S006"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S006-CAM-PATH",
@@ -1560,9 +1555,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1627,7 +1621,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S007"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S007-CAM-PATH",
@@ -1797,9 +1791,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1864,7 +1857,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S008"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S008-CAM-PATH",
@@ -2034,9 +2027,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2101,7 +2093,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S009"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S009-CAM-PATH",
@@ -2271,9 +2263,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2338,7 +2329,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S010"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S010-CAM-PATH",
@@ -2508,9 +2499,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2575,7 +2565,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S011"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S011-CAM-PATH",
@@ -2745,9 +2735,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2812,7 +2801,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S012"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S012-CAM-PATH",
@@ -2982,9 +2971,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3049,7 +3037,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S013"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S013-CAM-PATH",
@@ -3219,9 +3207,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3286,7 +3273,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S014"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S014-CAM-PATH",
@@ -3456,9 +3443,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3523,7 +3509,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S015"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S015-CAM-PATH",
@@ -3693,9 +3679,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3760,7 +3745,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S016"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S016-CAM-PATH",
@@ -3930,9 +3915,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3997,7 +3981,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S017"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S017-CAM-PATH",
@@ -4167,9 +4151,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4234,7 +4217,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S018"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S018-CAM-PATH",
@@ -4404,9 +4387,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4471,7 +4453,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S019"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S019-CAM-PATH",
@@ -4641,9 +4623,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4708,7 +4689,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S020"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S020-CAM-PATH",
@@ -4878,9 +4859,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4945,7 +4925,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S021"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S021-CAM-PATH",
@@ -5115,9 +5095,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5182,7 +5161,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S022"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S022-CAM-PATH",
@@ -5352,9 +5331,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5419,7 +5397,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S023"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S023-CAM-PATH",
@@ -5589,9 +5567,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5656,7 +5633,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S024"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S024-CAM-PATH",
@@ -5826,9 +5803,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5893,7 +5869,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S025"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S025-CAM-PATH",
@@ -6063,9 +6039,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -6130,7 +6105,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S026"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S026-CAM-PATH",
@@ -6300,9 +6275,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -6367,7 +6341,7 @@
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S027"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S027-CAM-PATH",
@@ -6537,9 +6511,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm amber striped-wall bedroom, green-painted door/window frames and cooler window field; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     }
   ],
@@ -6653,7 +6626,7 @@
         "TLOU-BEDROOM-LOCAL-001-S027"
       ],
       "unknowns": [
-        "The conversion does not replay source media or re-prove the legacy observation."
+        "Source-media facts remain unknown."
       ]
     },
     {
@@ -6668,7 +6641,7 @@
         "TLOU-BEDROOM-LOCAL-001-S027"
       ],
       "unknowns": [
-        "Structural conversion is not creative approval or renewed media observation."
+        "Creative approval and renewed media observation remain unknown."
       ]
     },
     {
@@ -7092,7 +7065,7 @@
   "unknowns": [
     {
       "unknown_id": "UNKNOWN-AUDIO",
-      "statement": "Direct soundtrack audition was not completed, so semantic audio facts remain unknown.",
+      "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "scope": "AUDIO",
       "blocks_rule_ids": [
         "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C01",

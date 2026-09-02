@@ -149,7 +149,7 @@
     {
       "shot_id": "DM-ANDOR-S01E10-SEL-001-S001",
       "order": 1,
-      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "completeness": "PARTIAL_AT_START",
       "start": {
         "timecode": "00:24:12.292",
         "seconds": 1452.292,
@@ -208,7 +208,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S001"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S001-CAM-PATH",
@@ -378,10 +378,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -446,7 +444,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S002"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S002-CAM-PATH",
@@ -616,10 +614,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -684,7 +680,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S003"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S003-CAM-PATH",
@@ -854,10 +850,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -922,7 +916,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S004"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S004-CAM-PATH",
@@ -1092,10 +1086,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1160,7 +1152,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S005"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S005-CAM-PATH",
@@ -1330,10 +1322,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1398,7 +1388,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S006"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S006-CAM-PATH",
@@ -1568,10 +1558,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1636,7 +1624,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S007"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S007-CAM-PATH",
@@ -1806,10 +1794,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1874,7 +1860,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S008"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S008-CAM-PATH",
@@ -2044,10 +2030,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2112,7 +2096,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S009"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S009-CAM-PATH",
@@ -2282,10 +2266,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2350,7 +2332,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S010"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S010-CAM-PATH",
@@ -2520,10 +2502,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2588,7 +2568,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S011"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S011-CAM-PATH",
@@ -2758,10 +2738,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2826,7 +2804,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S012"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S012-CAM-PATH",
@@ -2996,10 +2974,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3064,7 +3040,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S013"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S013-CAM-PATH",
@@ -3234,10 +3210,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3302,7 +3276,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S014"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S014-CAM-PATH",
@@ -3472,10 +3446,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3540,7 +3512,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S015"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S015-CAM-PATH",
@@ -3710,10 +3682,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3778,7 +3748,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S016"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S016-CAM-PATH",
@@ -3948,10 +3918,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4016,7 +3984,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S017"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S017-CAM-PATH",
@@ -4186,10 +4154,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4254,7 +4220,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S018"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S018-CAM-PATH",
@@ -4424,10 +4390,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4492,7 +4456,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S019"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S019-CAM-PATH",
@@ -4662,10 +4626,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4730,7 +4692,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S020"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S020-CAM-PATH",
@@ -4900,10 +4862,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4968,7 +4928,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S021"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S021-CAM-PATH",
@@ -5138,10 +5098,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5206,7 +5164,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S022"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S022-CAM-PATH",
@@ -5376,10 +5334,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5444,7 +5400,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S023"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S023-CAM-PATH",
@@ -5614,10 +5570,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5682,7 +5636,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S024"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S024-CAM-PATH",
@@ -5852,10 +5806,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5920,7 +5872,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S025"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S025-CAM-PATH",
@@ -6090,10 +6042,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -6158,7 +6108,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S026"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S026-CAM-PATH",
@@ -6328,10 +6278,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -6396,7 +6344,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S027"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S027-CAM-PATH",
@@ -6566,10 +6514,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -6634,7 +6580,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S028"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S028-CAM-PATH",
@@ -6804,10 +6750,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -6872,7 +6816,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S029"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S029-CAM-PATH",
@@ -7042,10 +6986,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -7110,7 +7052,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S030"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S030-CAM-PATH",
@@ -7280,10 +7222,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room light with orange/white display accents; exterior/recessed-room inserts vary to blue-grey or near-dark; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -7348,7 +7288,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S031"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S031-CAM-PATH",
@@ -7518,10 +7458,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -7586,7 +7524,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S032"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S032-CAM-PATH",
@@ -7756,10 +7694,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -7824,7 +7760,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S033"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S033-CAM-PATH",
@@ -7994,10 +7930,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -8062,7 +7996,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S034"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S034-CAM-PATH",
@@ -8232,10 +8166,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -8300,7 +8232,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S035"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S035-CAM-PATH",
@@ -8470,10 +8402,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -8538,7 +8468,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S036"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S036-CAM-PATH",
@@ -8708,10 +8638,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -8776,7 +8704,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S037"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S037-CAM-PATH",
@@ -8946,10 +8874,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -9014,7 +8940,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S038"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S038-CAM-PATH",
@@ -9184,10 +9110,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -9252,7 +9176,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S039"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S039-CAM-PATH",
@@ -9422,10 +9346,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -9490,7 +9412,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S040"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S040-CAM-PATH",
@@ -9660,10 +9582,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -9728,7 +9648,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S041"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S041-CAM-PATH",
@@ -9898,10 +9818,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -9966,7 +9884,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S042"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S042-CAM-PATH",
@@ -10136,10 +10054,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -10204,7 +10120,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S043"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S043-CAM-PATH",
@@ -10374,10 +10290,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -10442,7 +10356,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S044"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S044-CAM-PATH",
@@ -10612,10 +10526,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -10680,7 +10592,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S045"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S045-CAM-PATH",
@@ -10850,10 +10762,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -10918,7 +10828,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S046"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S046-CAM-PATH",
@@ -11088,10 +10998,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -11156,7 +11064,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S047"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S047-CAM-PATH",
@@ -11326,10 +11234,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -11394,7 +11300,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S048"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S048-CAM-PATH",
@@ -11564,10 +11470,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -11632,7 +11536,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S049"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S049-CAM-PATH",
@@ -11802,10 +11706,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -11870,7 +11772,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S050"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S050-CAM-PATH",
@@ -12040,10 +11942,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -12108,7 +12008,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S051"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S051-CAM-PATH",
@@ -12278,10 +12178,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white control-room field with orange/white geometric displays; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -12346,7 +12244,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S052"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S052-CAM-PATH",
@@ -12516,10 +12414,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -12584,7 +12480,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S053"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S053-CAM-PATH",
@@ -12754,10 +12650,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -12822,7 +12716,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S054"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S054-CAM-PATH",
@@ -12992,10 +12886,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -13060,7 +12952,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S055"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S055-CAM-PATH",
@@ -13230,10 +13122,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -13298,7 +13188,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S056"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S056-CAM-PATH",
@@ -13468,10 +13358,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -13536,7 +13424,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S057"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S057-CAM-PATH",
@@ -13706,10 +13594,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -13774,7 +13660,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S058"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S058-CAM-PATH",
@@ -13944,10 +13830,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -14012,7 +13896,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S059"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S059-CAM-PATH",
@@ -14182,10 +14066,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -14250,7 +14132,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S060"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S060-CAM-PATH",
@@ -14420,10 +14302,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -14488,7 +14368,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S061"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S061-CAM-PATH",
@@ -14658,10 +14538,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -14726,7 +14604,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S062"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S062-CAM-PATH",
@@ -14896,10 +14774,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -14964,7 +14840,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S063"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S063-CAM-PATH",
@@ -15134,10 +15010,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -15202,7 +15076,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S064"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S064-CAM-PATH",
@@ -15372,10 +15246,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -15440,7 +15312,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S065"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S065-CAM-PATH",
@@ -15610,10 +15482,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -15678,7 +15548,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S066"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S066-CAM-PATH",
@@ -15848,10 +15718,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -15916,7 +15784,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S067"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S067-CAM-PATH",
@@ -16086,10 +15954,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -16154,7 +16020,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S068"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S068-CAM-PATH",
@@ -16324,10 +16190,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -16392,7 +16256,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S069"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S069-CAM-PATH",
@@ -16562,10 +16426,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -16630,7 +16492,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S070"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S070-CAM-PATH",
@@ -16800,10 +16662,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -16868,7 +16728,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S071"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S071-CAM-PATH",
@@ -17038,10 +16898,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -17106,7 +16964,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S072"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S072-CAM-PATH",
@@ -17276,10 +17134,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -17344,7 +17200,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S073"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S073-CAM-PATH",
@@ -17514,10 +17370,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -17582,7 +17436,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S074"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S074-CAM-PATH",
@@ -17752,10 +17606,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -17820,7 +17672,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S075"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S075-CAM-PATH",
@@ -17990,10 +17842,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale interiors alternate with dark or red-lit structural fields and the display-lit control room; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -18058,7 +17908,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S076"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S076-CAM-PATH",
@@ -18228,10 +18078,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -18296,7 +18144,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S077"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S077-CAM-PATH",
@@ -18466,10 +18314,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -18534,7 +18380,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S078"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S078-CAM-PATH",
@@ -18704,10 +18550,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -18772,7 +18616,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S079"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S079-CAM-PATH",
@@ -18942,10 +18786,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -19010,7 +18852,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S080"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S080-CAM-PATH",
@@ -19180,10 +19022,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -19248,7 +19088,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S081"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S081-CAM-PATH",
@@ -19418,10 +19258,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -19486,7 +19324,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S082"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S082-CAM-PATH",
@@ -19656,10 +19494,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -19724,7 +19560,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S083"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S083-CAM-PATH",
@@ -19894,10 +19730,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -19962,7 +19796,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S084"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S084-CAM-PATH",
@@ -20132,10 +19966,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -20200,7 +20032,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S085"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S085-CAM-PATH",
@@ -20370,10 +20202,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -20438,7 +20268,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S086"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S086-CAM-PATH",
@@ -20608,10 +20438,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -20676,7 +20504,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S087"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S087-CAM-PATH",
@@ -20846,10 +20674,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -20914,7 +20740,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S088"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S088-CAM-PATH",
@@ -21084,10 +20910,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -21152,7 +20976,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S089"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S089-CAM-PATH",
@@ -21322,10 +21146,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -21390,7 +21212,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S090"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S090-CAM-PATH",
@@ -21560,10 +21382,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -21628,7 +21448,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S091"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S091-CAM-PATH",
@@ -21798,10 +21618,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -21866,7 +21684,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S092"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S092-CAM-PATH",
@@ -22036,10 +21854,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -22104,7 +21920,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S093"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S093-CAM-PATH",
@@ -22274,10 +22090,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -22342,7 +22156,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S094"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S094-CAM-PATH",
@@ -22512,10 +22326,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -22580,7 +22392,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S095"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S095-CAM-PATH",
@@ -22750,10 +22562,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -22818,7 +22628,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S096"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S096-CAM-PATH",
@@ -22988,10 +22798,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -23056,7 +22864,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S097"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S097-CAM-PATH",
@@ -23226,10 +23034,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -23294,7 +23100,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S098"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S098-CAM-PATH",
@@ -23464,10 +23270,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -23532,7 +23336,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S099"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S099-CAM-PATH",
@@ -23702,10 +23506,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -23770,7 +23572,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S100"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S100-CAM-PATH",
@@ -23940,10 +23742,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white corridors alternate with display-lit control room, blue-grey exterior and red-lit vertical passages; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -24008,7 +23808,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S101"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S101-CAM-PATH",
@@ -24178,10 +23978,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -24246,7 +24044,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S102"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S102-CAM-PATH",
@@ -24416,10 +24214,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -24484,7 +24280,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S103"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S103-CAM-PATH",
@@ -24654,10 +24450,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -24722,7 +24516,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S104"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S104-CAM-PATH",
@@ -24892,10 +24686,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -24960,7 +24752,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S105"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S105-CAM-PATH",
@@ -25130,10 +24922,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -25198,7 +24988,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S106"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S106-CAM-PATH",
@@ -25368,10 +25158,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -25436,7 +25224,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S107"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S107-CAM-PATH",
@@ -25606,10 +25394,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -25674,7 +25460,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S108"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S108-CAM-PATH",
@@ -25844,10 +25630,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -25912,7 +25696,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S109"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S109-CAM-PATH",
@@ -26082,10 +25866,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -26150,7 +25932,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S110"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S110-CAM-PATH",
@@ -26320,10 +26102,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -26388,7 +26168,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S111"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S111-CAM-PATH",
@@ -26558,10 +26338,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -26626,7 +26404,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S112"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S112-CAM-PATH",
@@ -26796,10 +26574,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -26864,7 +26640,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S113"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S113-CAM-PATH",
@@ -27034,10 +26810,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -27102,7 +26876,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S114"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S114-CAM-PATH",
@@ -27272,10 +27046,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -27340,7 +27112,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S115"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S115-CAM-PATH",
@@ -27510,10 +27282,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -27578,7 +27348,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S116"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S116-CAM-PATH",
@@ -27748,10 +27518,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -27816,7 +27584,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S117"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S117-CAM-PATH",
@@ -27986,10 +27754,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -28054,7 +27820,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S118"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S118-CAM-PATH",
@@ -28224,10 +27990,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -28292,7 +28056,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S119"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S119-CAM-PATH",
@@ -28462,10 +28226,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -28530,7 +28292,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S120"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S120-CAM-PATH",
@@ -28700,16 +28462,14 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
       "shot_id": "DM-ANDOR-S01E10-SEL-001-S121",
       "order": 121,
-      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "completeness": "PARTIAL_AT_END",
       "start": {
         "timecode": "00:30:50.458",
         "seconds": 1850.458,
@@ -28768,7 +28528,7 @@
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S121"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S121-CAM-PATH",
@@ -28938,10 +28698,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright white threshold interiors open onto pale daylight and dark blue-grey water, followed by high exterior views; exact exposure, weather and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     }
   ],
@@ -29055,7 +28813,7 @@
         "DM-ANDOR-S01E10-SEL-001-S121"
       ],
       "unknowns": [
-        "The conversion does not replay source media or re-prove the legacy observation."
+        "Source-media facts remain unknown."
       ]
     },
     {
@@ -29070,7 +28828,7 @@
         "DM-ANDOR-S01E10-SEL-001-S121"
       ],
       "unknowns": [
-        "Structural conversion is not creative approval or renewed media observation."
+        "Creative approval and renewed media observation remain unknown."
       ]
     },
     {
@@ -29564,7 +29322,7 @@
   "unknowns": [
     {
       "unknown_id": "UNKNOWN-AUDIO",
-      "statement": "Direct soundtrack audition was not completed, so semantic audio facts remain unknown.",
+      "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "scope": "AUDIO",
       "blocks_rule_ids": [
         "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C01",

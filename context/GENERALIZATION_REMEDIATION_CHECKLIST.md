@@ -1,10 +1,16 @@
 # DirectorMind Generalization Remediation Checklist
 
-Updated: 2026-09-01
+Updated: 2026-09-02
 
 ## 2026-09-01 authorized closed-corpus completion
 
-The Phase 1 task card below is retained as historical scope. The later user-approved task `context/CLOSED_CORPUS_COMPLETION_TASK.md` explicitly authorized A3, A5, B3, the blocked-audio artifacts under C1–C4, and the 33-source retention decision without adding reference works. That later authorization supersedes the earlier “do not begin A3” stop line only for those named items; A4 and the remaining grammar/routing/forward-test/CI/PR work stay out of scope.
+The Phase 1 task card below is retained as historical scope. Later user-approved
+tasks authorized the closed-corpus A3–M implementation without adding reference
+works. On 2026-09-02 the user confirmed the new Phase 1 re-review verdict
+`PASS_LOCAL / NO_MUST_FIX_FINDINGS`, authorized continuation through every
+remaining checklist item, authorized corrective pushes to PR #3 and authorized
+closing PR #1 after successful integration and CI. Merging `main` remains
+prohibited.
 
 ## Task card
 
@@ -39,8 +45,8 @@ After a contributor writes a Scene Evidence JSON unit, running the repository va
 
 - [x] The 30-file audit is committed with scope and limitations.
 - [x] The Scene Evidence schema contains every A1/A2 requirement and validates as JSON.
-- [x] The repaired repository validator implements the scoped B1 gates planned for canonical JSON and passes the repository reproduction cases.
-- [x] The existing 45 tests plus the new acceptance-gap tests pass, including the CLI path and precise error paths.
+- [x] The repaired repository validator implements every B1 gate planned for canonical JSON and passes the reopened reproduction matrix.
+- [x] The combined tests cover recursive provenance, UNKNOWN leakage, boundary/anchor cross-checks, CLI safety and precise error paths.
 - [x] Existing evidence content and unrelated functionality remain unchanged.
 - [x] Commands, remaining risks, and rollback are recorded.
 
@@ -48,11 +54,10 @@ After a contributor writes a Scene Evidence JSON unit, running the repository va
 
 - Current sole implementer/writer: `/root`; prior sub-agents performed read-only corpus and validator reviews only.
 - Completed before this repair: checklist, 30-file audit report, Scene Evidence schema, standard-library validator, and 45 validator tests.
-- Completed in this repair: UNKNOWN-to-rule (including contact/initiator aliases), unauditioned-score-directive (including `bring in` phrasing), HEIC/SSA, data-payload, and credential-format guards; eight new test methods with paired cases; three raw release-label cells neutralized; one trailing blank line removed. PR #3 was not modified by the latest local repair.
-- Completed by the later authorized closed-corpus task: A3 deterministic conversion, A5 closure of 13 absent-artifact claims, B3 full report, explicit C1–C4 blocked-audio records, and the 33-source retention register. The working tree contains 30 JSON units, 2,255 Shot/edit units, and 120 non-operational legacy-rule lineage records.
-- Validation result: schema syntax, Python compile, converter generation and `--check`, 66 unit/CLI tests, and full Scene Evidence validation pass. The report records 30 passed, 0 failed, 0 errors, and 69 warnings preserved. A fresh final independent read-only review returned PASS with no must-fix issue.
-- Known issues: no source replay or direct semantic audio audition; 197 rows lack explicit legacy frame endpoints, 1,944 lack explicit PTS/time base, and 513 high-risk rows lack a source-specific legacy fallback. These values remain visible rather than guessed.
-- Successor state: the isolated closed-corpus commit exists. The user-approved 33-source generalization task in `context/THIRD_PARTY_GENERALIZATION_AUDIT_TASK.md` is active; its separate external-action gates remain in force.
+- Phase 1 re-review status: `INDEPENDENT_RE_REVIEW_PASSED`; no P0, P1 or P2 finding remains. B1 and B2 stay `VERIFIED_DONE`.
+- Completed by later closed-corpus work: A3–M local implementation, including 31 canonical Scene Evidence units, 2,343 Shot/edit units, 124 blocked candidate identities, deterministic rendering, Grammar/routing, eight original forward-test packages, Succession migration, local automation and compatibility repair.
+- Integration status: the latest Phase 1 repair and the later local work are being combined on PR #3; complete post-merge validation and remote CI remain required before closure.
+- Known boundaries: no source replay or direct semantic audio audition; all current candidate rules remain blocked and runtime authorization remains zero.
 
 Rollback for this repair: revert only the isolated latest local repair commit with a normal Git revert. If it is later pushed or merged, use the same revert-commit approach and, after merge, a new pull request. Do not rewrite shared history.
 
@@ -70,10 +75,12 @@ Only these states are allowed:
 ## Phase 1 validation record
 
 - `python3 -m json.tool skills/drama-director-compiler/references/scene-evidence.schema.json` — PASS.
-- Python in-memory compile / AST parse for the validator and tests — PASS.
-- `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s skills/drama-director-compiler/tests -v` — PASS, 66 tests for the completed closed-corpus baseline.
+- `python3 -m py_compile skills/drama-director-compiler/scripts/validate_scene_evidence.py` — PASS.
+- The isolated Phase 1 suite passed 96 tests before integration; the complete combined-suite result is recorded by the repository runner after integration.
+- Repository integration fixture through the Scene Evidence CLI — PASS.
+- Direct `NATURAL_START_END_VERIFIED` plus `boundary_evidence.status=INFERRED` replay — rejected with return code `1`.
+- The new independent Phase 1 re-review found no remaining P0, P1 or P2 issue.
 - The legacy-audit table check — PASS: 30 data rows, ten data columns per row, 2,255 Shot/edit units, 120 rules, and 13 broken artifact claims.
-- The earlier independent PASS was superseded by a later read-only review that reproduced contact/initiator UNKNOWN leakage and an unauditioned-music directive leakage. Those cases now have paired repository tests and pass locally. A subsequent non-writing read-only reviewer reran the 66-test closed-corpus baseline and issued PASS; later phases require their own fresh review.
 
 Remaining validation boundary: these checks do not replay source media, directly audition audio, prove legacy picture observations, demonstrate audience effect, or constitute creative approval. Thirty canonical conversion JSON units now exist under the later task authorization, but their legacy rules remain non-operational and reference-surface review remains a human boundary before any promotion.
 
@@ -100,8 +107,8 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| B1 | VERIFIED_DONE | Add `validate_scene_evidence.py` covering schema, shot identity/timing, provenance, UNKNOWN leakage, rule references/boundaries, HIGH-risk fallback, surface-copy guards, and public-repository prohibitions. | Repair code rejects the repository's scoped UNKNOWN-rule, same-sentence sound-directive, HEIC/SSA, data-payload, and credential-format cases while preserving explicit safe boundaries; broad unlisted semantic paraphrase remains human-reviewed. |
-| B2 | VERIFIED_DONE | Add minimum tests: valid evidence, gap, overlap, missing Shot ref, UNKNOWN promotion, HIGH without fallback, missing non-applicability, single-source GENERAL_DEFAULT, audio rule without observed audio, and reference-surface leakage. | 66/66 unit and CLI tests pass, including migration, legacy-lineage, frame/PTS, fallback, path-scrub, and artifact-closure regressions; fresh independent review passed. |
+| B1 | VERIFIED_DONE | Add `validate_scene_evidence.py` covering schema, shot identity/timing, provenance, UNKNOWN leakage, rule references/boundaries, HIGH-risk fallback, surface-copy guards, and public-repository prohibitions. | Four definite boundary states require recursively grounded `PICTURE_OBSERVED` evidence; UNKNOWN, audio, anchor, public-boundary and compatibility guards remain active; independent re-review found no P0/P1/P2. |
+| B2 | VERIFIED_DONE | Add minimum tests: valid evidence, gap, overlap, missing Shot ref, UNKNOWN promotion, HIGH without fallback, missing non-applicability, single-source GENERAL_DEFAULT, audio rule without observed audio, and reference-surface leakage. | Phase 1's 96-test matrix includes auxiliary, boolean, canonical-Schema, boundary, anchor, public-boundary, symlink and atomic-report coverage; it is retained in the combined repository suite. |
 | B3 | VERIFIED_DONE | Validate all 30 Scene Evidence JSON files and write `research/validation/scene-evidence-validation.json` with errors and warnings preserved. | `passed=30`, `failed=0`, `error_count=0`, `warning_count=69`; warning rows remain visible. |
 | B4 | VERIFIED_DONE | Remove or replace unreproducible validation claims and independent-pass statements without command, versioned validator, and repository report. | Claim register maps current claims to commands and reports; 77-test full suite and independent Phase 1 audit pass. |
 
@@ -182,16 +189,16 @@ Remaining validation boundary: these checks do not replay source media, directly
 | K1 | VERIFIED_DONE | Do not merge PR #1 unchanged. | Current task explicitly prohibits it; PR #1 remains separate. |
 | K2 | VERIFIED_DONE | Cleanly migrate Succession: exclude prohibited media-fingerprint material and authorizing text, retain 88-shot evidence, add Scene JSON, candidate index, and support matrix entries. | 31-scene converter/renderer checks pass; Scene validation is 31/31 with 0 errors; candidate validation is 124/16 with 0 authorized; original 30 evidence files have no diff; fresh Phase 5 independent review PASS. |
 | K3 | VERIFIED_DONE | Resolve `SCENE_PROBLEM_MAP.md` conflicts and keep only the current route. | Current authority header is preserved; only the public-revelation and group-power catalog rows receive bounded picture/UNKNOWN updates; the old map was not merged; fresh Phase 5 independent review PASS. |
-| K4 | BLOCKED | Close PR #1 only after current-branch integration succeeds. | Local integration is ready, but closing the external PR requires the task card's separate explicit user confirmation. |
+| K4 | IN_PROGRESS | Close PR #1 only after current-branch integration succeeds. | Closure is authorized on 2026-09-02 after the integrated local checks and PR #3 CI pass; those gates are currently being executed. |
 
 ## L. CI and final validation
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| L1 | VERIFIED_DONE | Add minimal GitHub CI for Skill validation, Python compile, all schemas/evidence/rules/grammar/forward tests, broken refs, scoped public-artifact prohibitions and whitespace. | Read-only workflow calls the same stdlib-only local runner with read-only repository permission; corrected quick/full commands and narrow independent re-review pass. Remote CI remains honestly `NOT_RUN_NO_PUSH`. |
-| L2 | VERIFIED_DONE | Write `FINAL_GENERALIZATION_VALIDATION.json` with every required count and zero errors, broken refs, prohibited repository files or scoped current-artifact string issues. | Live-runner-backed `final-generalization-validation/0.3` passes its strict schema and records 33/31/2,343/124/16, 178 tests, zero validation errors and 103 preserved warnings; external actions remain non-machine-verified declarations. |
-| L3 | VERIFIED_DONE | Run quick validation, units, all Scene Evidence, all Grammar, forward tests and whitespace through the local CI-equivalent command. | The post-finding repair passes 45 targeted tests, 178 full tests and all 18 local CI-equivalent checks, including exact comparison of five versioned validator reports. No remote CI run is claimed because no push is authorized. |
-| L4 | VERIFIED_DONE | Add `INDEPENDENT_GENERALIZATION_AUDIT.md` with verdict, P0/P1, non-blockers, unverified items, and merge decision. | Historical phase audits remain immutable. `COMPATIBILITY_REPAIR_INDEPENDENT_AUDIT.md` records the later repair's initial failures, corrections, final `PASS_LOCAL / NO_MUST_FIX_FINDINGS`, remaining boundaries and rollback without rewriting the earlier audit. |
+| L1 | VERIFIED_DONE | Add minimal GitHub CI for Skill validation, Python compile, all schemas/evidence/rules/grammar/forward tests, broken refs, scoped public-artifact prohibitions and whitespace. | Read-only workflow calls the same stdlib-only local runner with read-only repository permission; corrected quick/full commands and narrow independent re-review pass. Hosted CI is verified live after the final push, not self-attested by the versioned local report. |
+| L2 | VERIFIED_DONE | Write `FINAL_GENERALIZATION_VALIDATION.json` with every required count and zero errors, broken refs, prohibited repository files or scoped current-artifact string issues. | Live-runner-backed `final-generalization-validation/0.4` passes its strict schema and records 33/31/2,343/124/16, 223 tests, zero validation errors and 103 preserved warnings. Post-commit PR state is deliberately verified live rather than self-attested. |
+| L3 | VERIFIED_DONE | Run quick validation, units, all Scene Evidence, all Grammar, forward tests and whitespace through the local CI-equivalent command. | The integrated 223-test suite and all 18 local CI-equivalent checks pass, including exact comparison of five versioned validator reports. The final PR #3 head's hosted CI remains the external gate. |
+| L4 | IN_PROGRESS | Add `INDEPENDENT_GENERALIZATION_AUDIT.md` with verdict, P0/P1, non-blockers, unverified items, and merge decision. | Historical phase audits remain immutable. A fresh non-writing reviewer must inspect the final integrated state after all local and external gates complete. |
 
 ## M. Final delivery
 
@@ -202,7 +209,7 @@ Remaining validation boundary: these checks do not replay source media, directly
 | M3 | VERIFIED_DONE | Deliver Candidate Rule schema/index and cross-work matrix JSON/Markdown. | Phase 2 rule/matrix validation and final independent review pass. |
 | M4 | VERIFIED_DONE | Deliver Director Grammar v0.2 and updated Skill routing/conflict logic/tests. | Grammar/routing schemas, validators, eight canonical cases, full IR routing-result binding, v0.1-only GO compatibility, safe upgrader modes, visible legacy-audio handling, and targeted regressions pass locally. |
 | M5 | VERIFIED_DONE | Deliver original forward-test packages. | Eight deterministic packages, six required problem tags, zero false positive selections, 31 preserved visual-binding warnings and Phase 4 independent review PASS. |
-| M6 | VERIFIED_DONE | Deliver full validation, independent audit, reduced STATE, clean Succession integration, CI, and updated PR description. | All local rows are complete and independently audited; K4 remains explicitly blocked as a separate external user decision. |
+| M6 | IN_PROGRESS | Deliver full validation, independent audit, reduced STATE, clean Succession integration, CI, and updated PR description. | This closes only after K4 and L2-L4 return to `VERIFIED_DONE`, the final PR #3 description is updated and no TODO/BLOCKED/IN_PROGRESS row remains. |
 
 ## Current blockers and known defects
 
@@ -215,4 +222,4 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 ## Current next action
 
-Await explicit user direction on the separately gated push and old pull-request closure. Do not push, close a PR, merge, deploy, publish, or delete media automatically.
+Run the complete post-integration local validation. If it passes, push to PR #3, require final-head CI success, close PR #1, finish the fresh read-only review, and stop without merging `main`.

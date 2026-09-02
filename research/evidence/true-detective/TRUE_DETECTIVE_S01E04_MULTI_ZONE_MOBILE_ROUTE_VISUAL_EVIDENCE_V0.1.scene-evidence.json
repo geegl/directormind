@@ -199,7 +199,7 @@
         "source_refs": [
           "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: night exteriors use warm practical-like points and darker yards; interiors shift among neutral/cool, dim and haze-filled states; vehicle lights and street lighting recur; source grade and lighting/effect method UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S001-CAM-PATH",
@@ -369,9 +369,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: night exteriors use warm practical-like points and darker yards; interiors shift among neutral/cool, dim and haze-filled states; vehicle lights and street lighting recur; source grade and lighting/effect method UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     }
   ],
@@ -484,7 +483,7 @@
         "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
       ],
       "unknowns": [
-        "The conversion does not replay source media or re-prove the legacy observation."
+        "Source-media facts remain unknown."
       ]
     },
     {
@@ -498,7 +497,7 @@
         "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
       ],
       "unknowns": [
-        "Structural conversion is not creative approval or renewed media observation."
+        "Creative approval and renewed media observation remain unknown."
       ]
     },
     {
@@ -885,7 +884,7 @@
   "unknowns": [
     {
       "unknown_id": "UNKNOWN-AUDIO",
-      "statement": "Direct soundtrack audition was not completed, so semantic audio facts remain unknown.",
+      "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "scope": "AUDIO",
       "blocks_rule_ids": [
         "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C01-WAYPOINT-REGISTERED-MOBILE-GEOGRAPHY",

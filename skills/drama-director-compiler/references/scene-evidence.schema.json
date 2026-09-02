@@ -328,7 +328,7 @@
         "camera": {"type": ["string", "null"]},
         "performance": {"type": ["string", "null"]},
         "continuity": {"type": ["string", "null"]},
-        "project_original_only": {"const": true}
+        "project_original_only": {"type": "boolean", "const": true}
       }
     },
     "shot": {
@@ -845,11 +845,11 @@
         "notes"
       ],
       "properties": {
-        "media_committed": {"const": false},
-        "subtitles_committed": {"const": false},
-        "scripts_or_long_dialogue_committed": {"const": false},
-        "contains_absolute_local_paths": {"const": false},
-        "contains_media_hashes": {"const": false},
+        "media_committed": {"type": "boolean", "const": false},
+        "subtitles_committed": {"type": "boolean", "const": false},
+        "scripts_or_long_dialogue_committed": {"type": "boolean", "const": false},
+        "contains_absolute_local_paths": {"type": "boolean", "const": false},
+        "contains_media_hashes": {"type": "boolean", "const": false},
         "reference_surface_terms": {
           "type": "array",
           "minItems": 1,

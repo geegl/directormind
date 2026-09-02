@@ -149,7 +149,7 @@
     {
       "shot_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S001",
       "order": 1,
-      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "completeness": "PARTIAL_AT_START",
       "start": {
         "timecode": "00:24:28.133",
         "seconds": 1468.133,
@@ -208,7 +208,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S001"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: orange-white low sun against blue-purple sky and dark mountain silhouettes; exact time, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S001-CAM-PATH",
@@ -378,9 +378,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: orange-white low sun against blue-purple sky and dark mountain silhouettes; exact time, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -445,7 +444,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S002"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S002-CAM-PATH",
@@ -615,9 +614,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -682,7 +680,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S003"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S003-CAM-PATH",
@@ -852,9 +850,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -919,7 +916,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S004"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm orange-brown exterior, pale habitat/equipment surfaces and dark mechanical shapes; exact weather, fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S004-CAM-PATH",
@@ -1089,9 +1086,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm orange-brown exterior, pale habitat/equipment surfaces and dark mechanical shapes; exact weather, fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1156,7 +1152,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S005"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm orange-brown exterior, pale habitat/equipment surfaces and dark mechanical shapes; exact weather, fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S005-CAM-PATH",
@@ -1326,9 +1322,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm orange-brown exterior, pale habitat/equipment surfaces and dark mechanical shapes; exact weather, fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1393,7 +1388,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S006"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm orange-brown exterior, pale habitat/equipment surfaces and dark mechanical shapes; exact weather, fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S006-CAM-PATH",
@@ -1563,9 +1558,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm orange-brown exterior, pale habitat/equipment surfaces and dark mechanical shapes; exact weather, fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1630,7 +1624,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S007"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright cool display image in a darker warm interior; exact display calibration, fixtures and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S007-CAM-PATH",
@@ -1800,9 +1794,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright cool display image in a darker warm interior; exact display calibration, fixtures and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1867,7 +1860,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S008"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm orange-brown exterior, pale habitat/equipment surfaces and dark mechanical shapes; exact weather, fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S008-CAM-PATH",
@@ -2037,9 +2030,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm orange-brown exterior, pale habitat/equipment surfaces and dark mechanical shapes; exact weather, fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2104,7 +2096,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S009"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm orange-brown exterior, pale habitat/equipment surfaces and dark mechanical shapes; exact weather, fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S009-CAM-PATH",
@@ -2274,9 +2266,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm orange-brown exterior, pale habitat/equipment surfaces and dark mechanical shapes; exact weather, fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2341,7 +2332,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S010"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm orange-brown exterior, pale habitat/equipment surfaces and dark mechanical shapes; exact weather, fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S010-CAM-PATH",
@@ -2511,9 +2502,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm orange-brown exterior, pale habitat/equipment surfaces and dark mechanical shapes; exact weather, fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2578,7 +2568,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S011"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent-walled interior with dark apparatus and brown floor details; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S011-CAM-PATH",
@@ -2748,9 +2738,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent-walled interior with dark apparatus and brown floor details; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2815,7 +2804,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S012"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white interior with neutral gray/black objects and occasional reflective highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S012-CAM-PATH",
@@ -2985,9 +2974,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white interior with neutral gray/black objects and occasional reflective highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3052,7 +3040,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S013"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white interior with neutral gray/black objects and occasional reflective highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S013-CAM-PATH",
@@ -3222,9 +3210,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white interior with neutral gray/black objects and occasional reflective highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3289,7 +3276,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S014"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent-walled interior with dark clothing, pale surfaces and metallic/transparent highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S014-CAM-PATH",
@@ -3459,9 +3446,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent-walled interior with dark clothing, pale surfaces and metallic/transparent highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3526,7 +3512,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S015"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent-walled interior with dark clothing, pale surfaces and metallic/transparent highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S015-CAM-PATH",
@@ -3696,9 +3682,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent-walled interior with dark clothing, pale surfaces and metallic/transparent highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3763,7 +3748,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S016"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white interior with neutral gray/black objects and occasional reflective highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S016-CAM-PATH",
@@ -3933,9 +3918,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white interior with neutral gray/black objects and occasional reflective highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4000,7 +3984,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S017"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S017-CAM-PATH",
@@ -4170,9 +4154,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4237,7 +4220,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S018"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S018-CAM-PATH",
@@ -4407,9 +4390,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4474,7 +4456,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S019"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S019-CAM-PATH",
@@ -4644,9 +4626,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4711,7 +4692,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S020"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white interior with neutral gray/black objects and occasional reflective highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S020-CAM-PATH",
@@ -4881,9 +4862,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white interior with neutral gray/black objects and occasional reflective highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4948,7 +4928,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S021"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white interior with neutral gray/black objects and occasional reflective highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S021-CAM-PATH",
@@ -5118,9 +5098,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white interior with neutral gray/black objects and occasional reflective highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5185,7 +5164,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S022"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent-walled interior with dark clothing, pale surfaces and metallic/transparent highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S022-CAM-PATH",
@@ -5355,9 +5334,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent-walled interior with dark clothing, pale surfaces and metallic/transparent highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5422,7 +5400,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S023"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright cool display image in a darker warm interior; exact display calibration, fixtures and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S023-CAM-PATH",
@@ -5592,9 +5570,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright cool display image in a darker warm interior; exact display calibration, fixtures and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5659,7 +5636,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S024"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S024-CAM-PATH",
@@ -5829,9 +5806,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5896,7 +5872,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S025"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S025-CAM-PATH",
@@ -6066,9 +6042,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -6133,7 +6108,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S026"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white interior with neutral gray/black objects and occasional reflective highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S026-CAM-PATH",
@@ -6303,9 +6278,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white interior with neutral gray/black objects and occasional reflective highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -6370,7 +6344,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S027"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S027-CAM-PATH",
@@ -6540,9 +6514,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -6607,7 +6580,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S028"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S028-CAM-PATH",
@@ -6777,9 +6750,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -6844,7 +6816,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S029"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S029-CAM-PATH",
@@ -7014,9 +6986,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm cream interior with darker foreground/frame edges; exact fixtures, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -7081,7 +7052,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S030"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white room interrupted by orange-white flame-like highlights; exact source, safety method, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S030-CAM-PATH",
@@ -7251,9 +7222,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white room interrupted by orange-white flame-like highlights; exact source, safety method, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -7318,7 +7288,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S031"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent-walled interior with dark clothing, pale surfaces and metallic/transparent highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S031-CAM-PATH",
@@ -7488,9 +7458,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent-walled interior with dark clothing, pale surfaces and metallic/transparent highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -7555,7 +7524,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S032"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white room interrupted by orange-white flame-like highlights; exact source, safety method, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S032-CAM-PATH",
@@ -7725,9 +7694,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white room interrupted by orange-white flame-like highlights; exact source, safety method, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -7792,7 +7760,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S033"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent-walled interior with dark apparatus and brown floor details; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S033-CAM-PATH",
@@ -7962,9 +7930,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent-walled interior with dark apparatus and brown floor details; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -8029,7 +7996,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S034"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent-walled interior with dark clothing, pale surfaces and metallic/transparent highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S034-CAM-PATH",
@@ -8199,9 +8166,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent-walled interior with dark clothing, pale surfaces and metallic/transparent highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -8266,7 +8232,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S035"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent-walled interior with dark clothing, pale surfaces and metallic/transparent highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S035-CAM-PATH",
@@ -8436,9 +8402,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent-walled interior with dark clothing, pale surfaces and metallic/transparent highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -8503,7 +8468,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S036"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white interior with neutral gray/black objects and occasional reflective highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S036-CAM-PATH",
@@ -8673,9 +8638,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white interior with neutral gray/black objects and occasional reflective highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -8740,7 +8704,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S037"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent-walled interior with dark clothing, pale surfaces and metallic/transparent highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S037-CAM-PATH",
@@ -8910,9 +8874,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent-walled interior with dark clothing, pale surfaces and metallic/transparent highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -8977,7 +8940,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S038"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent-walled interior with dark apparatus and brown floor details; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S038-CAM-PATH",
@@ -9147,9 +9110,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent-walled interior with dark apparatus and brown floor details; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -9214,7 +9176,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S039"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent-walled interior with dark clothing, pale surfaces and metallic/transparent highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S039-CAM-PATH",
@@ -9384,9 +9346,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent-walled interior with dark clothing, pale surfaces and metallic/transparent highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -9451,7 +9412,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S040"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white room interrupted by orange-white flame-like highlights; exact source, safety method, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S040-CAM-PATH",
@@ -9621,9 +9582,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white room interrupted by orange-white flame-like highlights; exact source, safety method, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -9688,7 +9648,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S041"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: mixed warm/cool interior with bright wall field and darker foreground edge; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S041-CAM-PATH",
@@ -9858,9 +9818,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: mixed warm/cool interior with bright wall field and darker foreground edge; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -9925,7 +9884,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S042"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright cool display image in a darker warm interior; exact display calibration, fixtures and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S042-CAM-PATH",
@@ -10095,9 +10054,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright cool display image in a darker warm interior; exact display calibration, fixtures and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -10162,7 +10120,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S043"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: mixed warm/cool interior with bright wall field and darker foreground edge; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S043-CAM-PATH",
@@ -10332,9 +10290,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: mixed warm/cool interior with bright wall field and darker foreground edge; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -10399,7 +10356,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S044"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: bright cool display image in a darker warm interior; exact display calibration, fixtures and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S044-CAM-PATH",
@@ -10569,9 +10526,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: bright cool display image in a darker warm interior; exact display calibration, fixtures and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -10636,7 +10592,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S045"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: mixed warm/cool interior with bright wall field and darker foreground edge; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S045-CAM-PATH",
@@ -10806,9 +10762,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: mixed warm/cool interior with bright wall field and darker foreground edge; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -10873,7 +10828,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S046"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent room with strong gold reflections and occasional orange-white highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S046-CAM-PATH",
@@ -11043,9 +10998,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent room with strong gold reflections and occasional orange-white highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -11110,7 +11064,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S047"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white room interrupted by orange-white flame-like highlights; exact source, safety method, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S047-CAM-PATH",
@@ -11280,9 +11234,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white room interrupted by orange-white flame-like highlights; exact source, safety method, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -11347,7 +11300,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S048"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent room with strong gold reflections and occasional orange-white highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S048-CAM-PATH",
@@ -11517,9 +11470,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent room with strong gold reflections and occasional orange-white highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -11584,7 +11536,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S049"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white room interrupted by orange-white flame-like highlights; exact source, safety method, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S049-CAM-PATH",
@@ -11754,9 +11706,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white room interrupted by orange-white flame-like highlights; exact source, safety method, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -11821,7 +11772,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S050"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white interior with neutral gray/black objects and occasional reflective highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S050-CAM-PATH",
@@ -11991,9 +11942,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white interior with neutral gray/black objects and occasional reflective highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -12058,7 +12008,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S051"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent room with strong gold reflections and occasional orange-white highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S051-CAM-PATH",
@@ -12228,9 +12178,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent room with strong gold reflections and occasional orange-white highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -12295,7 +12244,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S052"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white room interrupted by orange-white flame-like highlights; exact source, safety method, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S052-CAM-PATH",
@@ -12465,9 +12414,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white room interrupted by orange-white flame-like highlights; exact source, safety method, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -12532,7 +12480,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S053"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent room with strong gold reflections and occasional orange-white highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S053-CAM-PATH",
@@ -12702,9 +12650,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent room with strong gold reflections and occasional orange-white highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -12769,7 +12716,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S054"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white field with gray haze, translucent highlights and gold/skin tones; exact fixtures, atmosphere method, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S054-CAM-PATH",
@@ -12939,9 +12886,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white field with gray haze, translucent highlights and gold/skin tones; exact fixtures, atmosphere method, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -13006,7 +12952,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S055"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white field with gray haze, translucent highlights and gold/skin tones; exact fixtures, atmosphere method, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S055-CAM-PATH",
@@ -13176,9 +13122,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white field with gray haze, translucent highlights and gold/skin tones; exact fixtures, atmosphere method, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -13243,7 +13188,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S056"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent room with strong gold reflections and occasional orange-white highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S056-CAM-PATH",
@@ -13413,9 +13358,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent room with strong gold reflections and occasional orange-white highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -13480,7 +13424,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S057"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white field with gray haze, translucent highlights and gold/skin tones; exact fixtures, atmosphere method, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S057-CAM-PATH",
@@ -13650,9 +13594,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white field with gray haze, translucent highlights and gold/skin tones; exact fixtures, atmosphere method, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -13717,7 +13660,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S058"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent room with strong gold reflections and occasional orange-white highlights; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S058-CAM-PATH",
@@ -13887,15 +13830,14 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent room with strong gold reflections and occasional orange-white highlights; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
       "shot_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S059",
       "order": 59,
-      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "completeness": "PARTIAL_AT_END",
       "start": {
         "timecode": "00:27:50.377",
         "seconds": 1670.377,
@@ -13954,7 +13896,7 @@
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S059"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool white transparent-walled interior with dark apparatus and brown floor details; exact fixtures, exposure and grade UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S059-CAM-PATH",
@@ -14124,9 +14066,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool white transparent-walled interior with dark apparatus and brown floor details; exact fixtures, exposure and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     }
   ],
@@ -14240,7 +14181,7 @@
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S059"
       ],
       "unknowns": [
-        "The conversion does not replay source media or re-prove the legacy observation."
+        "Source-media facts remain unknown."
       ]
     },
     {
@@ -14255,7 +14196,7 @@
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S059"
       ],
       "unknowns": [
-        "Structural conversion is not creative approval or renewed media observation."
+        "Creative approval and renewed media observation remain unknown."
       ]
     },
     {
@@ -14709,7 +14650,7 @@
   "unknowns": [
     {
       "unknown_id": "UNKNOWN-AUDIO",
-      "statement": "Direct soundtrack audition was not completed, so semantic audio facts remain unknown.",
+      "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "scope": "AUDIO",
       "blocks_rule_ids": [
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C01",

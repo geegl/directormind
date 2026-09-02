@@ -16,7 +16,7 @@
   ],
   "properties": {
     "schema_version": {
-      "const": "final-generalization-validation/0.3"
+      "const": "final-generalization-validation/0.4"
     },
     "status": {
       "enum": ["PASS_LOCAL", "FAIL_LOCAL"]
@@ -84,7 +84,7 @@
         "forward_warnings": {"const": 31},
         "validation_errors": {"const": 0},
         "validation_warnings": {"const": 103},
-        "unit_tests": {"const": 178},
+        "unit_tests": {"const": 223},
         "broken_references": {"const": 0},
         "prohibited_repository_files": {"const": 0},
         "scoped_public_string_issues": {"const": 0},
@@ -134,7 +134,7 @@
         "whitespace": {"enum": ["PASS", "FAIL"]},
         "versioned_reports": {"enum": ["PASS", "FAIL"]},
         "ci_workflow": {"enum": ["LOCAL_COMMAND_PASS_WORKFLOW_NOT_HOSTED", "LOCAL_COMMAND_FAIL_WORKFLOW_NOT_HOSTED"]},
-        "remote_ci": {"const": "NOT_RUN_NO_PUSH"}
+        "remote_ci": {"const": "POST_COMMIT_EXTERNAL_EVIDENCE_REQUIRED"}
       }
     },
     "verification_evidence": {
@@ -150,7 +150,7 @@
         "local_check_results": {"enum": ["LIVE_RUNNER_RESULTS", "NOT_PROVIDED"]},
         "public_string_scan": {"const": "CURRENT_MACHINE_AND_RUNTIME_ARTIFACTS_ONLY"},
         "historical_legacy_markdown": {"const": "EXCLUDED_IMMUTABLE_PROVENANCE_CONVERTED_OUTPUTS_VALIDATED"},
-        "external_actions": {"const": "EXECUTOR_DECLARATION_NOT_MACHINE_VERIFIED"}
+        "external_actions": {"const": "LIVE_PR_STATE_REQUIRED_FOR_REMOTE_ACTIONS"}
       }
     },
     "external_actions": {
@@ -170,8 +170,8 @@
           "additionalProperties": false,
           "required": ["status", "verification"],
           "properties": {
-            "status": {"const": "DECLARED_NOT_PERFORMED"},
-            "verification": {"const": "NOT_MACHINE_VERIFIED"}
+            "status": {"const": "VERSIONED_REPORT_DOES_NOT_ATTEST"},
+            "verification": {"const": "VERIFY_LIVE_PR_STATE"}
           }
         },
         "old_pull_request_closed": {
@@ -179,8 +179,8 @@
           "additionalProperties": false,
           "required": ["status", "verification"],
           "properties": {
-            "status": {"const": "DECLARED_NOT_PERFORMED"},
-            "verification": {"const": "NOT_MACHINE_VERIFIED"}
+            "status": {"const": "VERSIONED_REPORT_DOES_NOT_ATTEST"},
+            "verification": {"const": "VERIFY_LIVE_PR_STATE"}
           }
         },
         "merged": {

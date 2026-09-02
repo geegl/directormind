@@ -205,7 +205,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S001"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_A: bright window behind subjects; B in light off-shoulder dress and necklace; A in dark evening jacket with white bow tie; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S001-CAM-PATH",
@@ -375,10 +375,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_A: bright window behind subjects; B in light off-shoulder dress and necklace; A in dark evening jacket with white bow tie; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -443,7 +441,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S002"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_A: light off-shoulder dress, necklace; bright side/window highlights; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S002-CAM-PATH",
@@ -613,9 +611,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_A: light off-shoulder dress, necklace; bright side/window highlights; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -680,7 +677,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S003"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_A: dark jacket, white bow tie; foliage background; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S003-CAM-PATH",
@@ -850,9 +847,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_A: dark jacket, white bow tie; foliage background; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -917,7 +913,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S004"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_A: same light dress and necklace; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S004-CAM-PATH",
@@ -1087,9 +1083,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_A: same light dress and necklace; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1154,7 +1149,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S005"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_A: same dark jacket and white bow tie; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S005-CAM-PATH",
@@ -1324,9 +1319,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_A: same dark jacket and white bow tie; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1391,7 +1385,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S006"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_A: same light dress; bright side highlights; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S006-CAM-PATH",
@@ -1561,9 +1555,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_A: same light dress; bright side highlights; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1628,7 +1621,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S007"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_A: dark jacket, white bow tie; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S007-CAM-PATH",
@@ -1798,9 +1791,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_A: dark jacket, white bow tie; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1865,7 +1857,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S008"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_B: B in light high-neck feathered/ruffled dress; large flowers foreground; stronger contrast; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S008-CAM-PATH",
@@ -2035,10 +2027,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_B: B in light high-neck feathered/ruffled dress; large flowers foreground; stronger contrast; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2103,7 +2093,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S009"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_B: A in patterned/contrasting lapels with open light collar; foliage background; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S009-CAM-PATH",
@@ -2273,10 +2263,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_B: A in patterned/contrasting lapels with open light collar; foliage background; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2341,7 +2329,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S010"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_B: same feathered/ruffled light dress and flowers; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S010-CAM-PATH",
@@ -2511,9 +2499,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_B: same feathered/ruffled light dress and flowers; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2578,7 +2565,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S011"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_B: same patterned lapels/open collar; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S011-CAM-PATH",
@@ -2748,10 +2735,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_B: same patterned lapels/open collar; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2816,7 +2801,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S012"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_C: B in dark tailored top/jacket with large light neck bow; flowers foreground; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S012-CAM-PATH",
@@ -2986,10 +2971,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_C: B in dark tailored top/jacket with large light neck bow; flowers foreground; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3054,7 +3037,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S013"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_C: A in patterned vest/lapels with open light collar; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S013-CAM-PATH",
@@ -3224,9 +3207,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_C: A in patterned vest/lapels with open light collar; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3291,7 +3273,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S014"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_C: same dark tailored garment and light bow; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S014-CAM-PATH",
@@ -3461,9 +3443,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_C: same dark tailored garment and light bow; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3528,7 +3509,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S015"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_C: same patterned vest/lapels; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S015-CAM-PATH",
@@ -3698,9 +3679,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_C: same patterned vest/lapels; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -3765,7 +3745,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S016"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_C: dark tailored top and large light bow; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S016-CAM-PATH",
@@ -3935,9 +3915,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_C: dark tailored top and large light bow; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4002,7 +3981,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S017"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_C: patterned vest/lapels; same foliage; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S017-CAM-PATH",
@@ -4172,9 +4151,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_C: patterned vest/lapels; same foliage; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4239,7 +4217,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S018"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_C: same dark tailored garment and light bow; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S018-CAM-PATH",
@@ -4409,9 +4387,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_C: same dark tailored garment and light bow; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4476,7 +4453,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S019"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_C: same patterned vest/lapels; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S019-CAM-PATH",
@@ -4646,10 +4623,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_C: same patterned vest/lapels; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4714,7 +4689,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S020"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_D: B in dark ornate dress with large light lace bow; metallic service prominent; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S020-CAM-PATH",
@@ -4884,10 +4859,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_D: B in dark ornate dress with large light lace bow; metallic service prominent; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -4952,7 +4925,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S021"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_D: A in dark fine-striped formal suit, light shirt, narrow dark tie, and light pocket square; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S021-CAM-PATH",
@@ -5122,9 +5095,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_D: A in dark fine-striped formal suit, light shirt, narrow dark tie, and light pocket square; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5189,7 +5161,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S022"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_D: same dark ornate dress and lace bow; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S022-CAM-PATH",
@@ -5359,9 +5331,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_D: same dark ornate dress and lace bow; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5426,7 +5397,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S023"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_D: A remains in the same dark fine-striped formal suit, light shirt, narrow dark tie, and light pocket square visible in S021; dense place setting; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S023-CAM-PATH",
@@ -5596,10 +5567,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_D: A remains in the same dark fine-striped formal suit, light shirt, narrow dark tie, and light pocket square visible in S021; dense place setting; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5664,7 +5633,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S024"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_E: B in light ruffled high-neck dress; darker, plainer foreground; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S024-CAM-PATH",
@@ -5834,10 +5803,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_E: B in light ruffled high-neck dress; darker, plainer foreground; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -5902,7 +5869,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S025"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_E: A in dark formal jacket, light shirt and dark bow tie; visible moustache-like facial hair; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S025-CAM-PATH",
@@ -6072,10 +6039,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_E: A in dark formal jacket, light shirt and dark bow tie; visible moustache-like facial hair; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -6140,7 +6105,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_F: B in dark/patterned dress; newspaper dominates foreground; table dressing changes; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S026-CAM-PATH",
@@ -6310,10 +6275,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_F: B in dark/patterned dress; newspaper dominates foreground; table dressing changes; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -6378,7 +6341,7 @@
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_F: A in dark formal wear with bow tie and visible moustache-like facial hair; both newspapers; high-contrast arched-window room; original production color and grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S027-CAM-PATH",
@@ -6548,10 +6511,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: monochrome, high-contrast interior with bright window/side highlights and dark foliage/set zones; STATE_F: A in dark formal wear with bow tie and visible moustache-like facial hair; both newspapers; high-contrast arched-window room; original production color and grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     }
   ],
@@ -6665,7 +6626,7 @@
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027"
       ],
       "unknowns": [
-        "The conversion does not replay source media or re-prove the legacy observation."
+        "Source-media facts remain unknown."
       ]
     },
     {
@@ -6680,7 +6641,7 @@
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027"
       ],
       "unknowns": [
-        "Structural conversion is not creative approval or renewed media observation."
+        "Creative approval and renewed media observation remain unknown."
       ]
     },
     {
@@ -7118,7 +7079,7 @@
   "unknowns": [
     {
       "unknown_id": "UNKNOWN-AUDIO",
-      "statement": "Direct soundtrack audition was not completed, so semantic audio facts remain unknown.",
+      "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "scope": "AUDIO",
       "blocks_rule_ids": [
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C01-INVARIANT-SPACE-MULTICHANNEL-DELTA",

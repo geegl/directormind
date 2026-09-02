@@ -149,7 +149,7 @@
     {
       "shot_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
       "order": 1,
-      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "completeness": "PARTIAL_AT_START",
       "start": {
         "timecode": "01:20:01.130",
         "seconds": 4801.13,
@@ -208,7 +208,7 @@
         "source_refs": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: dim green/cyan display wall, green consoles, white shirts and warmer skin tones; original grading pipeline UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S001-CAM-PATH",
@@ -378,10 +378,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: dim green/cyan display wall, green consoles, white shirts and warmer skin tones; original grading pipeline UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -446,7 +444,7 @@
         "source_refs": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm face and pale shirt/vest against muted green/grey background"
       },
       "camera_path": {
         "claim_id": "S002-CAM-PATH",
@@ -616,9 +614,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm face and pale shirt/vest against muted green/grey background",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -683,7 +680,7 @@
         "source_refs": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S003"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool blue/green board behind white/checked shirts and warmer faces"
       },
       "camera_path": {
         "claim_id": "S003-CAM-PATH",
@@ -853,10 +850,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool blue/green board behind white/checked shirts and warmer faces",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -921,7 +916,7 @@
         "source_refs": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S004"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm skin/pale clothing against green console partitions"
       },
       "camera_path": {
         "claim_id": "S004-CAM-PATH",
@@ -1091,9 +1086,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm skin/pale clothing against green console partitions",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1158,7 +1152,7 @@
         "source_refs": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: same cool illuminated-wall-panel/display/green-console palette with pale shirts"
       },
       "camera_path": {
         "claim_id": "S005-CAM-PATH",
@@ -1328,10 +1322,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: same cool illuminated-wall-panel/display/green-console palette with pale shirts",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1396,7 +1388,7 @@
         "source_refs": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S006"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm face and white vest contrasted with green/grey room"
       },
       "camera_path": {
         "claim_id": "S006-CAM-PATH",
@@ -1566,9 +1558,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm face and white vest contrasted with green/grey room",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1633,7 +1624,7 @@
         "source_refs": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S007"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: cool board and green-console environment, white/dark work clothing"
       },
       "camera_path": {
         "claim_id": "S007-CAM-PATH",
@@ -1803,10 +1794,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool board and green-console environment, white/dark work clothing",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -1871,7 +1860,7 @@
         "source_refs": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: same warm skin/white vest against green/grey ROOM-A console background"
       },
       "camera_path": {
         "claim_id": "S008-CAM-PATH",
@@ -2041,9 +2030,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: same warm skin/white vest against green/grey ROOM-A console background",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2108,7 +2096,7 @@
         "source_refs": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm beige fluorescent ROOM-B, white shirts, brown boxes, blue/white/black equipment"
       },
       "camera_path": {
         "claim_id": "S009-CAM-PATH",
@@ -2278,10 +2266,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm beige fluorescent ROOM-B, white shirts, brown boxes, blue/white/black equipment",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2346,7 +2332,7 @@
         "source_refs": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: pale tabletop/white fabric with blue, grey, black, red and metallic component accents"
       },
       "camera_path": {
         "claim_id": "S010-CAM-PATH",
@@ -2516,10 +2502,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: pale tabletop/white fabric with blue, grey, black, red and metallic component accents",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
@@ -2584,7 +2568,7 @@
         "source_refs": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: warm beige ROOM-B, white shirts, grey rigid objects and blue/black equipment on pale table"
       },
       "camera_path": {
         "claim_id": "S011-CAM-PATH",
@@ -2754,16 +2738,14 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: warm beige ROOM-B, white shirts, grey rigid objects and blue/black equipment on pale table",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     },
     {
       "shot_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012",
       "order": 12,
-      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "completeness": "PARTIAL_AT_END",
       "start": {
         "timecode": "01:21:01.482",
         "seconds": 4861.482,
@@ -2822,7 +2804,7 @@
         "source_refs": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: VIS-OBS: pale table and fabric with black hoses, grey rigid objects, metallic fittings and small colored accents"
       },
       "camera_path": {
         "claim_id": "S012-CAM-PATH",
@@ -2992,10 +2974,8 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: pale table and fabric with black hoses, grey rigid objects, metallic fittings and small colored accents",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked.",
-        "The legacy Shot row has no explicit FALLBACK; its generic project-original fallback remains provisional pending human review."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     }
   ],
@@ -3109,7 +3089,7 @@
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
       ],
       "unknowns": [
-        "The conversion does not replay source media or re-prove the legacy observation."
+        "Source-media facts remain unknown."
       ]
     },
     {
@@ -3124,7 +3104,7 @@
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
       ],
       "unknowns": [
-        "Structural conversion is not creative approval or renewed media observation."
+        "Creative approval and renewed media observation remain unknown."
       ]
     },
     {
@@ -3538,7 +3518,7 @@
   "unknowns": [
     {
       "unknown_id": "UNKNOWN-AUDIO",
-      "statement": "Direct soundtrack audition was not completed, so semantic audio facts remain unknown.",
+      "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "scope": "AUDIO",
       "blocks_rule_ids": [
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C01-ASSESSMENT-RECEIVER-TO-NEW-ROOM-ACTION",

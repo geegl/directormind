@@ -9,7 +9,7 @@
     "grammar_validation": "PASS",
     "json_syntax": "PASS",
     "python_compile": "PASS",
-    "remote_ci": "NOT_RUN_NO_PUSH",
+    "remote_ci": "POST_COMMIT_EXTERNAL_EVIDENCE_REQUIRED",
     "renderer_determinism": "PASS",
     "repository_boundaries": "PASS",
     "routing_validation": "PASS",
@@ -48,7 +48,7 @@
     "shot_edit_units": 2343,
     "source_dispositions": 33,
     "symlink_escapes": 0,
-    "unit_tests": 178,
+    "unit_tests": 223,
     "validation_errors": 0,
     "validation_warnings": 103,
     "whitespace_errors": 0
@@ -68,32 +68,32 @@
       "verification": "NOT_MACHINE_VERIFIED"
     },
     "old_pull_request_closed": {
-      "status": "DECLARED_NOT_PERFORMED",
-      "verification": "NOT_MACHINE_VERIFIED"
+      "status": "VERSIONED_REPORT_DOES_NOT_ATTEST",
+      "verification": "VERIFY_LIVE_PR_STATE"
     },
     "published": {
       "status": "DECLARED_NOT_PERFORMED",
       "verification": "NOT_MACHINE_VERIFIED"
     },
     "pushed": {
-      "status": "DECLARED_NOT_PERFORMED",
-      "verification": "NOT_MACHINE_VERIFIED"
+      "status": "VERSIONED_REPORT_DOES_NOT_ATTEST",
+      "verification": "VERIFY_LIVE_PR_STATE"
     }
   },
-  "schema_version": "final-generalization-validation/0.3",
+  "schema_version": "final-generalization-validation/0.4",
   "status": "PASS_LOCAL",
   "unverified_boundaries": [
     "SOURCE_MEDIA_NOT_REPLAYED",
     "SEMANTIC_AUDIO_NOT_DIRECTLY_AUDITIONED",
     "NO_ELIGIBLE_RULE_POSITIVE_SELECTION_AVAILABLE",
     "CREATIVE_QUALITY_AND_AUDIENCE_EFFECT_NOT_PROVED",
-    "REMOTE_CI_NOT_RUN_WITHOUT_PUSH_AUTHORIZATION",
-    "OLD_PULL_REQUEST_STATE_NOT_CHANGED",
+    "REMOTE_CI_RESULT_IS_POST_COMMIT_EXTERNAL_EVIDENCE",
+    "PULL_REQUEST_STATE_IS_POST_COMMIT_EXTERNAL_EVIDENCE",
     "ORIGINAL_30_IMMUTABLE_LEGACY_MARKDOWN_EXCLUDED_FROM_SCOPED_STRING_SCAN",
     "EXTERNAL_ACTION_DECLARATIONS_NOT_MACHINE_VERIFIED"
   ],
   "verification_evidence": {
-    "external_actions": "EXECUTOR_DECLARATION_NOT_MACHINE_VERIFIED",
+    "external_actions": "LIVE_PR_STATE_REQUIRED_FOR_REMOTE_ACTIONS",
     "historical_legacy_markdown": "EXCLUDED_IMMUTABLE_PROVENANCE_CONVERTED_OUTPUTS_VALIDATED",
     "local_check_results": "LIVE_RUNNER_RESULTS",
     "public_string_scan": "CURRENT_MACHINE_AND_RUNTIME_ARTIFACTS_ONLY"

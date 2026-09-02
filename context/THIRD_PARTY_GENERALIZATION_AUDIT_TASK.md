@@ -1,8 +1,8 @@
 # Existing 33-Source Generalization Completion Task
 
-Updated: 2026-09-01
+Updated: 2026-09-02
 
-Status: `LOCAL_COMPLETE / EXTERNAL_ACTIONS_GATED`
+Status: `FINAL_INTEGRATION_IN_PROGRESS / PR3_PUSH_AND_PR1_CLOSE_AUTHORIZED`
 
 Compatibility repair status: `LOCAL_COMPLETE / INDEPENDENT_READ_ONLY_REVIEW_PASS`
 
@@ -74,7 +74,7 @@ Checklist completion measures whether the contracts, validators, routing and hon
 - No modification of the private 36-episode locked scripts or private Director IR.
 - No deletion, move, rename, trim, transcode or replacement of source media.
 - No deployment, production change, database change, account or permission change, credential handling, payment or public release.
-- No push, PR closure or merge without the separate authorization gates below.
+- No merge, deployment, publication, media deletion or other production/account action under the bounded PR authorization below.
 
 ## Protected content and systems
 
@@ -86,11 +86,11 @@ Checklist completion measures whether the contracts, validators, routing and hon
 
 ## External-action authorization gates
 
-Approval of this task card authorizes only local, reversible repository work and local tests.
+The user expanded this task's bounded authorization on 2026-09-02:
 
-- First push to PR #3 requires a new explicit user confirmation after the exact local changes and checks are shown. That confirmation may cover later corrective pushes to the same branch during this Goal, but never a merge.
-- Closing PR #1 requires a separate explicit user confirmation after the 88-shot evidence is integrated and validated locally.
-- Merging `main`, deployment, publication, media deletion, or any production/account/permission/payment action always requires a separate explicit confirmation.
+- Pushes and corrective pushes to the existing PR #3 branch are authorized for this Goal.
+- Closing PR #1 is authorized after the 88-shot evidence is integrated, local validation passes and PR #3 CI passes.
+- Merging `main`, deployment, publication, media deletion, or any production/account/permission/payment action remains prohibited without a separate explicit confirmation.
 
 ## Execution order and stop gates
 
@@ -101,7 +101,7 @@ Approval of this task card authorizes only local, reversible repository work and
 5. Integrate *Succession* only through the current contracts, never by merging the old PR unchanged.
 6. Run local validation before adding CI and final reports.
 7. Use a fresh read-only agent that did not write the reviewed phase for final acceptance.
-8. Stop after the local branch is complete and present external actions for user decision.
+8. Push the verified result to PR #3, require final CI success, close PR #1, run the final independent read-only review, then stop for the user's merge decision.
 
 If evidence is insufficient, keep the candidate blocked and continue with the remaining safely completable work. If a requirement genuinely cannot be implemented without expanding scope, report it as a user decision boundary; do not fabricate completion. If two consecutive work waves produce no new verified requirement or risk reduction, stop and re-plan.
 
@@ -110,7 +110,7 @@ Only one writer may own a mutable file at a time. Root is the sole accountable i
 ## Completion criteria
 
 - [x] Existing users receive correct rule selection or `NO_APPLICABLE_RULE` for original scenes; the current zero-eligible grammar truthfully returns `NO_APPLICABLE_RULE` for all eight original cases.
-- [x] The original 30 canonical JSON units remain unchanged; the existing *Succession* ledger adds exactly 88 Shot units and four blocked candidate identities for a deterministic 31 / 2,343 / 124 current total.
+- [x] The original 30 legacy Markdown sources remain unchanged; their canonical JSON is regenerated only by the deterministic converter, including narrow boundary/UNKNOWN corrections required by the stricter Phase 1 validator. The existing *Succession* ledger adds exactly 88 Shot units and four blocked candidate identities for a deterministic 31 / 2,343 / 124 current total.
 - [x] The renderer is deterministic, round-trippable and incapable of overwriting legacy Markdown.
 - [x] All 124 source candidate IDs resolve exactly once in the Candidate Rule Index.
 - [x] Candidate schema, confidence dimensions, support relations, contrary evidence and promotion gates validate.
@@ -121,33 +121,33 @@ Only one writer may own a mutable file at a time. Root is the sole accountable i
 - [x] Unreviewed creative outputs remain `HUMAN_REVIEW_PENDING`.
 - [x] The original 30 legacy Markdown documents and original media remain unchanged; the migrated *Succession* input is a sanitized rights-safe ledger.
 - [x] *Succession* is integrated through the current contracts without merging the old PR.
-- [x] Existing and new local tests pass; CI is defined but no push occurs without confirmation.
+- [ ] Existing and new local tests pass and the final PR #3 head passes the defined remote CI workflow.
 - [x] Final validation records zero contract errors and preserves all warnings.
-- [x] A non-writing read-only agent issues the final technical verdict and lists unverified boundaries.
+- [ ] A non-writing read-only agent issues a fresh verdict on the final integrated state and lists unverified boundaries.
 - [x] Final delivery package includes changes, behavioral evidence, check results, remaining risks, external side effects, resource use and rollback.
 
 ## Approved post-completion compatibility repair
 
-A later independent audit found four narrow gaps in the completed local implementation. The user approved a local-only repair on 2026-09-01 without reopening corpus acquisition or any external action:
+A later independent audit found four narrow gaps in the completed local implementation. The user approved the repair on 2026-09-01 without reopening corpus acquisition; the later 2026-09-02 authorization above governs the bounded PR actions:
 
 1. use one canonical `scene_problem` enum across Scene Evidence, candidate, Grammar, routing input/result, Director IR, and forward-test schemas;
 2. preserve GO-01/GO-07 trigger validation only for legacy Grammar v0.1 and prevent those seed rules from entering Grammar v0.2;
 3. make every Grammar v0.2 scene carry the complete formal `routing_result` and prove exact selected-rule-to-Shot binding;
 4. split the v0.1-to-v0.2 upgrader into an honest legacy-compatible pause and an evidence-complete routed mode, while rendering legacy audio visibly instead of dropping or guessing it.
 
-This repair may change only the affected schemas, the router and Grammar validator needed to enforce the canonical negative sentinel, the Director IR validator/renderer/upgrader, routing fixtures, regression tests, current validation reports, and truthful status/contract documentation. These router/Grammar-validator edits enforce the already approved scene-problem contract; they do not add rules or change corpus conclusions. The repair does not authorize new reference works, re-distillation, media or private-IR access, source deletion, remote actions, production, database, account, permission, key, payment, deployment, or publication work.
+This repair may change only the affected schemas, the router and Grammar validator needed to enforce the canonical negative sentinel, the Director IR validator/renderer/upgrader, routing fixtures, regression tests, deterministic derived evidence required by the stricter validator, current validation reports, and truthful status/contract documentation. These edits enforce the already approved contracts; they do not add rules or change corpus conclusions. The repair does not authorize new reference works, re-distillation, media or private-IR access, source deletion, production, database, account, permission, key, payment, deployment, publication, or merging `main`.
 
 Repair completion requires targeted compatibility tests, the full local suite, the 18-check repository runner, an updated strict final report, and a new read-only review by agents that did not write the repair. The repair must preserve the existing 33/31/2,343/124/16/0 corpus and runtime counts.
 
 ## Current status
 
 - Current accountable implementer: root agent, sole integrator. No other writer may edit the same mutable file concurrently.
-- Completed: all original locally authorized work plus the four implementation parts of the approved compatibility repair; 56/57 checklist requirements remain `VERIFIED_DONE`.
-- Remaining: K4 stays `BLOCKED` because old pull-request closure is a separately gated external user decision. Push and all other remote actions remain unperformed and unauthorized.
-- Current validation: first-round independent review found real adversarial gaps; after correction, 45/45 targeted tests, 178/178 full tests, the complete runner 18/18, strict `final-generalization-validation/0.3` `PASS_LOCAL`, and the fresh read-only re-review all pass with no remaining must-fix finding.
+- Completed: all implementation phases are present locally; the stricter Phase 1 repair has been integrated with the later closed-corpus work.
+- Remaining: complete the post-integration local runner, push PR #3, obtain final-head CI success, close PR #1, update final evidence and obtain the fresh independent read-only verdict.
+- Current validation: the integrated Scene validator passes 100/100 tests, the corrected converter passes 13/13 tests, the complete suite passes 223/223, and all 18 local repository checks pass with a deterministic `final-generalization-validation/0.4` report.
 - Known boundaries: all current scene problems remain UNKNOWN; direct semantic audio is absent; no candidate is yet authorized as an executable cross-work rule.
-- Remote boundary: no push, PR closure or merge is authorized by this card.
-- Next single action: report the completed local result and await explicit user direction on optional remote actions; do not push or close the older PR automatically.
+- Remote boundary: PR #3 push and PR #1 closure are authorized in the order above. Merging `main` and all deployment/publication/production actions remain prohibited.
+- Next single action: commit the verified integration, push PR #3 and wait for the final-head CI gate.
 
 ## Rollback
 

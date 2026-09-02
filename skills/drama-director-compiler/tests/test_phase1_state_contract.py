@@ -43,13 +43,15 @@ class PhaseOneStateContractTests(unittest.TestCase):
             self.assertIn("Authority boundary:", opening, name)
             self.assertIn("context/STATE.md", opening, name)
 
-    def test_approved_task_card_keeps_external_actions_gated(self) -> None:
+    def test_approved_task_card_records_bounded_external_authorization(self) -> None:
         card = (CONTEXT / "THIRD_PARTY_GENERALIZATION_AUDIT_TASK.md").read_text(
             encoding="utf-8"
         )
-        self.assertIn("Status: `LOCAL_COMPLETE / EXTERNAL_ACTIONS_GATED`", card)
-        self.assertIn("First push to PR #3 requires a new explicit user confirmation", card)
-        self.assertIn("Closing PR #1 requires a separate explicit user confirmation", card)
+        self.assertIn("Status: `FINAL_INTEGRATION_IN_PROGRESS / PR3_PUSH_AND_PR1_CLOSE_AUTHORIZED`", card)
+        self.assertIn("Pushes and corrective pushes to the existing PR #3 branch are authorized", card)
+        self.assertIn("Closing PR #1 is authorized", card)
+        self.assertIn("Merging `main`", card)
+        self.assertIn("remains prohibited", card)
         self.assertIn("A valid grammar may contain zero promoted evidence rules", card)
         self.assertIn("Never overwrite or delete the 30 legacy evidence Markdown", card)
 
@@ -65,7 +67,7 @@ class PhaseOneStateContractTests(unittest.TestCase):
         self.assertEqual(len(rows), 57)
         self.assertEqual(
             Counter(status for _, status in rows),
-            Counter({"BLOCKED": 1, "VERIFIED_DONE": 56}),
+            Counter({"IN_PROGRESS": 3, "VERIFIED_DONE": 54}),
         )
         self.assertNotIn(
             "Closed-corpus completion is independently reviewed and ready for one isolated local commit",
@@ -73,7 +75,7 @@ class PhaseOneStateContractTests(unittest.TestCase):
         )
         self.assertNotIn("fresh independent verdict on the latest working tree is pending", checklist)
 
-    def test_succession_is_current_without_weakening_external_gates(self) -> None:
+    def test_succession_is_current_with_bounded_external_authorization(self) -> None:
         state = (CONTEXT / "STATE.md").read_text(encoding="utf-8")
         scene_map = (COVERAGE / "SCENE_PROBLEM_MAP.md").read_text(encoding="utf-8")
         status = (
@@ -84,7 +86,7 @@ class PhaseOneStateContractTests(unittest.TestCase):
         self.assertIn("Authority boundary:", scene_map)
         self.assertIn("Succession", scene_map)
         self.assertIn("`SUCCESSION-S01E06-BOARD-VOTE-001` / CURRENT_LOCAL_EVIDENCE", status)
-        self.assertIn("Closing PR #1 requires a separate explicit user confirmation", (
+        self.assertIn("Closing PR #1 is authorized", (
             CONTEXT / "THIRD_PARTY_GENERALIZATION_AUDIT_TASK.md"
         ).read_text(encoding="utf-8"))
 

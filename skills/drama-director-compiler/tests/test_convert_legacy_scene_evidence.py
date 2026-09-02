@@ -300,6 +300,7 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
         for source in self.sources:
             shot_rows, _rule_rows = parse_tables(source.read_text(encoding="utf-8"))
             evidence = build_evidence(source)
+            source_missing_high_risk_fallbacks = 0
             for legacy, shot in zip(shot_rows, evidence["shots"]):
                 fallback = extract_legacy_fallback(legacy["AI_complexity"])
                 risk = split_risk(legacy["AI_complexity"])
@@ -316,9 +317,17 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
                     high_risk_rows += 1
                     if fallback is None:
                         high_risk_missing_fallback += 1
-                        self.assertTrue(any("no explicit FALLBACK" in item for item in shot["unknowns"]))
+                        source_missing_high_risk_fallbacks += 1
+                        self.assertFalse(any("no explicit FALLBACK" in item for item in shot["unknowns"]))
                         for axis in high_axes:
                             self.assertIn(shot["shot_id"], shot["fallback"][axis])
+            if source_missing_high_risk_fallbacks:
+                self.assertTrue(
+                    any(
+                        warning.startswith(f"{source_missing_high_risk_fallbacks} high-risk Shot rows")
+                        for warning in evidence["validation_warnings"]
+                    )
+                )
         self.assertEqual(explicit_fallback_rows, 1579)
         self.assertEqual(missing_fallback_rows, 764)
         self.assertEqual(high_risk_rows, 1922)

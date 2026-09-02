@@ -11,9 +11,11 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import os
 import re
 import statistics
 import sys
+import tempfile
 from pathlib import Path
 from typing import Any, Iterable, Iterator, Sequence
 
@@ -46,6 +48,11 @@ CREDENTIAL_RE = re.compile(
     r"\b(?:api[_ -]?key|access[_ -]?token|client[_ -]?secret)\s*[:=]\s*[^\s,;]{8,})",
     re.IGNORECASE,
 )
+CREDENTIAL_KEY_RE = re.compile(
+    r"(?:^|_)(?:api_key|access_token|refresh_token|auth_token|github_token|session_token|"
+    r"client_secret|private_key|password|passwd|secret|cookie|authorization)(?:$|_)|^token$",
+    re.IGNORECASE,
+)
 FINGERPRINT_LABEL_RE = re.compile(r"\b(?:sha(?:-?1|-?256|-?512)?|md5)\b", re.IGNORECASE)
 LONG_HEX_RE = re.compile(r"\b[0-9a-f]{32,}\b", re.IGNORECASE)
 RELEASE_LABEL_RE = re.compile(
@@ -59,10 +66,10 @@ PICTURE_SEMANTIC_LEAK_RE = re.compile(
     re.IGNORECASE,
 )
 AUDIO_DIRECTIVE_RE = re.compile(
-    r"(?:\b(?:add|use|insert|introduce|play|mute|drop|fade|bridge|cut|synchronize|trigger|drive|enter|"
+    r"(?:\b(?:add|use|insert|introduce|bring(?:ing)?\s+in|play|mute|drop|fade|bridge|cut|synchronize|trigger|drive|enter|track|"
     r"underscore|hold)\b[^.\n]{0,100}\b(?:audio|sound|sounds|cue|score|music|silence|voice|dialogue|"
     r"ambience|noise|alarm|ring|tone)\b|\b(?:audio|sound|sounds|cue|score|music|silence|voice|dialogue|"
-    r"ambience|noise|alarm|ring|tone)\b[^.\n]{0,100}\b(?:add|use|insert|introduce|play|mute|drop|fade|enter|"
+    r"ambience|noise|alarm|ring|tone)\b[^.\n]{0,100}\b(?:add|use|insert|introduce|bring\s+in|play|mute|drop|fade|enter|"
     r"bridge|cut|synchronize|trigger|drive|underscore|hold)\b|"
     r"\b(?:audio|sound|sounds|cue|score|music|silence|voice|dialogue|ambience|noise|alarm|ring|tone)\b"
     r"[^.\n]{0,60}\b(?:should|must)\s+(?:enter|begin|start|precede|lead)\b|"
@@ -103,6 +110,47 @@ SAFE_UNKNOWN_BOUNDARY_RE = re.compile(
     r"\b(?:depend|assum|assert|treat|identify|confirm|require)\w*\b|"
     r"\b(?:no|without|avoid|do not|must not|should not)\b[^.\n]{0,80}"
     r"\b(?:physical\s+)?(?:contact|touch|joined? hands?)\b)",
+    re.IGNORECASE,
+)
+SAFE_AUDIO_BOUNDARY_RE = re.compile(
+    r"\b(?:do not|don't|must not|should not|never|without|avoid)\b[^.\n]{0,100}"
+    r"\b(?:add|use|insert|introduce|bring\s+in|play|mute|drop|fade|bridge|cut|synchronize|trigger|"
+    r"drive|enter|track|underscore|hold|begin|start|precede|lead)\b",
+    re.IGNORECASE,
+)
+SAFE_UNKNOWN_TAIL_RE = re.compile(
+    r"^(?:is|are|was|were|remain|remains|"
+    r"from\s+(?:picture|audio|text|the\s+(?:picture|audio|text)|available\s+evidence|this\s+review)|"
+    r"outside this candidate|(?:is )?not part of this candidate|(?:whether|if)\b.+)$",
+    re.IGNORECASE,
+)
+CROSS_CUT_IDENTITY_ASSERTION_RE = re.compile(
+    r"\b(?:the\s+)?same\s+(?:person|individual|body|appearance|vehicle|object)\b[^.\n]{0,80}"
+    r"\b(?:across|after|through)\b[^.\n]{0,40}\b(?:cut|cuts|edit|edits)\b|"
+    r"\bidentity\b[^.\n]{0,60}\b(?:continues?|persists?|matches?)\b[^.\n]{0,40}\b(?:cut|cuts|edit|edits)\b",
+    re.IGNORECASE,
+)
+AFFIRMATIVE_FACT_RE = re.compile(
+    r"\b(?:is|are|was|were|has|have|contains?|shows?|appears?|returns?|continues?|persists?|matches?|"
+    r"becomes?|uses?|keeps?|holds?|wears?|drives?|moves?|occup(?:y|ies|ied)|visible|audible|present|"
+    r"onscreen|on-screen)\b",
+    re.IGNORECASE,
+)
+AFFIRMATIVE_PICTURE_PHRASE_RE = re.compile(
+    r"\b(?:on[-\s]+screen|in[-\s]+(?:the[-\s]+)?frame|frame\s+(?:left|right|cent(?:er|re)))\b"
+    r"\s*(?:[:/,—–]|\band\b)",
+    re.IGNORECASE,
+)
+OPERATIONAL_VERB_RE = re.compile(
+    r"\b(?:use|keep|maintain|show|place|stage|frame|cut|move|track|bring|add|insert|preserve|assign|"
+    r"make|let|hold|drive|trigger|synchronize)\b",
+    re.IGNORECASE,
+)
+OPERATIONAL_PREFIX_RE = re.compile(
+    r"^\s*(?:(?:please|then)\s+)?(?:use|keep|maintain|show|place|stage|frame|cut|move|track|bring|add|"
+    r"insert|preserve|assign|make|let|hold|drive|trigger|synchronize)\b|"
+    r"\b(?:must|should)\s+(?:use|keep|maintain|show|place|stage|frame|cut|move|track|bring|add|insert|"
+    r"preserve|assign|make|let|hold|drive|trigger|synchronize)\b",
     re.IGNORECASE,
 )
 UNKNOWN_FACT_ALIAS_PATTERNS = {
@@ -152,6 +200,33 @@ def _json_type_matches(value: Any, expected: str) -> bool:
     return False
 
 
+def _json_const_matches(value: Any, expected: Any) -> bool:
+    """Compare JSON constants without Python's bool/int equality coercion."""
+    if isinstance(expected, bool):
+        return isinstance(value, bool) and value is expected
+    if isinstance(expected, (int, float)) and not isinstance(expected, bool):
+        return isinstance(value, (int, float)) and not isinstance(value, bool) and value == expected
+    if expected is None:
+        return value is None
+    return type(value) is type(expected) and value == expected
+
+
+def _json_documents_equal_strict(left: Any, right: Any) -> bool:
+    """Compare parsed JSON without bool/number coercion at any depth."""
+    if type(left) is not type(right):
+        return False
+    if isinstance(left, dict):
+        return left.keys() == right.keys() and all(
+            _json_documents_equal_strict(left[key], right[key]) for key in left
+        )
+    if isinstance(left, list):
+        return len(left) == len(right) and all(
+            _json_documents_equal_strict(left_item, right_item)
+            for left_item, right_item in zip(left, right)
+        )
+    return left == right
+
+
 def _resolve_ref(root_schema: dict[str, Any], ref: str) -> dict[str, Any]:
     if not ref.startswith("#/"):
         raise ValueError(f"only local JSON Schema references are supported: {ref}")
@@ -162,6 +237,124 @@ def _resolve_ref(root_schema: dict[str, Any], ref: str) -> dict[str, Any]:
     if not isinstance(node, dict):
         raise ValueError(f"schema reference does not resolve to an object: {ref}")
     return node
+
+
+def _validate_schema_document(schema: Any) -> dict[str, Any]:
+    """Reject malformed or unrelated schemas before validating evidence."""
+    if not isinstance(schema, dict):
+        raise ValueError("schema top-level value must be an object")
+    if (
+        schema.get("$schema") != "https://json-schema.org/draft/2020-12/schema"
+        or schema.get("$id") != "scene-evidence.schema.json"
+        or schema.get("type") != "object"
+        or schema.get("additionalProperties") is not False
+    ):
+        raise ValueError("schema must be the DirectorMind Scene Evidence 2020-12 object schema")
+    required = schema.get("required")
+    properties = schema.get("properties")
+    definitions = schema.get("$defs")
+    if not isinstance(required, list) or not all(isinstance(item, str) for item in required):
+        raise ValueError("schema required must be a string array")
+    if not isinstance(properties, dict) or not isinstance(definitions, dict):
+        raise ValueError("schema properties and $defs must be objects")
+    expected_top_level = {
+        "schema_version",
+        "evidence_id",
+        "scene_problem",
+        "scene_unit_type",
+        "boundary_status",
+        "boundary_evidence",
+        "shots",
+        "methods",
+        "auxiliary_evidence",
+        "candidate_rules",
+        "unknowns",
+        "rights_boundary",
+    }
+    if not expected_top_level.issubset(set(required)) or not expected_top_level.issubset(properties):
+        raise ValueError("schema is missing required Scene Evidence contract fields")
+    schema_version = properties.get("schema_version")
+    if not isinstance(schema_version, dict) or schema_version.get("const") != "scene-evidence/0.1":
+        raise ValueError("schema_version contract is missing or unsupported")
+    rights_boundary = definitions.get("rightsBoundary")
+    fallback = definitions.get("fallback")
+    rights_properties = rights_boundary.get("properties") if isinstance(rights_boundary, dict) else None
+    fallback_properties = fallback.get("properties") if isinstance(fallback, dict) else None
+    if not isinstance(rights_properties, dict) or not isinstance(fallback_properties, dict):
+        raise ValueError("schema rights and fallback contracts are missing")
+    for field in (
+        "media_committed",
+        "subtitles_committed",
+        "scripts_or_long_dialogue_committed",
+        "contains_absolute_local_paths",
+        "contains_media_hashes",
+    ):
+        node = rights_properties.get(field)
+        if (
+            not isinstance(node, dict)
+            or node.get("type") != "boolean"
+            or not _json_const_matches(node.get("const"), False)
+        ):
+            raise ValueError(f"schema rights boundary {field} must remain const false boolean")
+    project_original = fallback_properties.get("project_original_only")
+    if (
+        not isinstance(project_original, dict)
+        or project_original.get("type") != "boolean"
+        or not _json_const_matches(project_original.get("const"), True)
+    ):
+        raise ValueError("schema fallback project_original_only must remain const true boolean")
+
+    allowed_types = {"object", "array", "string", "integer", "number", "boolean", "null"}
+    stack: list[tuple[str, dict[str, Any]]] = [("$", schema)]
+    while stack:
+        path, node = stack.pop()
+        node_type = node.get("type")
+        if node_type is not None:
+            type_values = [node_type] if isinstance(node_type, str) else node_type
+            if (
+                not isinstance(type_values, list)
+                or not type_values
+                or not all(isinstance(item, str) and item in allowed_types for item in type_values)
+            ):
+                raise ValueError(f"malformed schema type at {path}")
+        ref = node.get("$ref")
+        if ref is not None:
+            if not isinstance(ref, str):
+                raise ValueError(f"malformed schema reference at {path}")
+            try:
+                _resolve_ref(schema, ref)
+            except (KeyError, TypeError, ValueError) as exc:
+                raise ValueError(f"malformed schema reference at {path}: {exc}") from exc
+        for keyword in ("required",):
+            value = node.get(keyword)
+            if value is not None and (
+                not isinstance(value, list) or not all(isinstance(item, str) for item in value)
+            ):
+                raise ValueError(f"malformed schema {keyword} at {path}")
+        pattern = node.get("pattern")
+        if pattern is not None:
+            if not isinstance(pattern, str):
+                raise ValueError(f"malformed schema pattern at {path}")
+            try:
+                re.compile(pattern)
+            except re.error as exc:
+                raise ValueError(f"malformed schema pattern at {path}: {exc}") from exc
+        enum = node.get("enum")
+        if enum is not None and not isinstance(enum, list):
+            raise ValueError(f"malformed schema enum at {path}")
+        for keyword in ("minItems", "maxItems", "minLength", "minimum", "maximum", "exclusiveMinimum"):
+            value = node.get(keyword)
+            if value is not None and (not isinstance(value, (int, float)) or isinstance(value, bool)):
+                raise ValueError(f"malformed schema {keyword} at {path}")
+        additional = node.get("additionalProperties")
+        if additional is not None and not isinstance(additional, (bool, dict)):
+            raise ValueError(f"malformed schema additionalProperties at {path}")
+        for key, value in node.items():
+            if isinstance(value, dict):
+                stack.append((f"{path}.{key}", value))
+            elif key in {"properties", "$defs"} and not isinstance(value, dict):
+                raise ValueError(f"malformed schema {key} at {path}")
+    return schema
 
 
 def validate_schema_subset(
@@ -194,7 +387,7 @@ def validate_schema_subset(
             )
             return
 
-    if "const" in schema and value != schema["const"]:
+    if "const" in schema and not _json_const_matches(value, schema["const"]):
         add_issue(issues, "error", "SCHEMA-CONST", path, f"expected constant {schema['const']!r}")
     if "enum" in schema and value not in schema["enum"]:
         add_issue(issues, "error", "SCHEMA-ENUM", path, f"value {value!r} is not in the allowed enum")
@@ -261,6 +454,19 @@ def _walk_strings(value: Any, path: str = "$") -> Iterator[tuple[str, str]]:
     elif isinstance(value, dict):
         for key, item in value.items():
             yield from _walk_strings(item, f"{path}.{key}")
+
+
+def _walk_public_strings(value: Any, path: str = "$") -> Iterator[tuple[str, str]]:
+    """Walk both JSON keys and values for repository-boundary checks."""
+    if isinstance(value, str):
+        yield path, value
+    elif isinstance(value, list):
+        for index, item in enumerate(value):
+            yield from _walk_public_strings(item, f"{path}[{index}]")
+    elif isinstance(value, dict):
+        for key, item in value.items():
+            yield f"{path}{{key:{key}}}", str(key)
+            yield from _walk_public_strings(item, f"{path}.{key}")
 
 
 def _walk_claims(value: Any, path: str = "$") -> Iterator[tuple[str, dict[str, Any]]]:
@@ -331,7 +537,7 @@ def _validate_time_point(
 
 
 def _validate_public_boundary(evidence: dict[str, Any], issues: list[dict[str, str]]) -> None:
-    for path, text in _walk_strings(evidence):
+    for path, text in _walk_public_strings(evidence):
         if ABSOLUTE_PATH_RE.search(text):
             add_issue(issues, "error", "PUBLIC-ABSOLUTE-PATH", path, "absolute local path is prohibited")
         if MEDIA_OR_SUBTITLE_RE.search(text):
@@ -340,6 +546,10 @@ def _validate_public_boundary(evidence: dict[str, Any], issues: list[dict[str, s
             add_issue(issues, "error", "PUBLIC-DATA-URI", path, "embedded data payload is prohibited")
         if CREDENTIAL_RE.search(text):
             add_issue(issues, "error", "PUBLIC-CREDENTIAL", path, "credential-like material is prohibited")
+        camel_split_key = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", "_", text)
+        normalized_key = re.sub(r"[^a-z0-9]+", "_", camel_split_key.lower()).strip("_")
+        if "{key:" in path and CREDENTIAL_KEY_RE.search(normalized_key):
+            add_issue(issues, "error", "PUBLIC-CREDENTIAL", path, "credential-labelled JSON key is prohibited")
         if FINGERPRINT_LABEL_RE.search(text) or LONG_HEX_RE.search(text):
             add_issue(issues, "error", "PUBLIC-FINGERPRINT", path, "media fingerprint material is prohibited")
         if RELEASE_LABEL_RE.search(text):
@@ -375,12 +585,194 @@ def _term_occurs(text: str, term: str) -> bool:
 
 
 def _has_unauditioned_audio_assertion(text: str) -> bool:
-    """Reject an audio-domain rule clause that does not itself state uncertainty."""
-    for sentence in re.split(r"[.!?;\n]+", text):
-        for clause in re.split(r"\b(?:but|however|yet|although)\b", sentence, flags=re.IGNORECASE):
-            if AUDIO_TERM_RE.search(clause) and AUDIO_UNCERTAINTY_RE.search(clause) is None:
-                return True
+    """Reject any audio-domain rule sentence that does not itself state uncertainty."""
+    for sentence in _semantic_clauses(text):
+        if (
+            AUDIO_TERM_RE.search(sentence)
+            and AUDIO_UNCERTAINTY_RE.search(sentence) is None
+            and SAFE_AUDIO_BOUNDARY_RE.search(sentence) is None
+        ):
+            return True
     return False
+
+
+def _has_unsafe_audio_directive(text: str) -> bool:
+    """Recognize audio instructions while preserving explicit negative boundaries."""
+    for sentence in re.split(
+        r"[.!?;,:/\\\n—–]+|\b(?:and|or|plus|before|after|instead(?:\s+of)?|rather\s+than|but|however|yet|"
+        r"although|while|so|therefore|then)\b",
+        text,
+        flags=re.IGNORECASE,
+    ):
+        if AUDIO_DIRECTIVE_RE.search(sentence) and SAFE_AUDIO_BOUNDARY_RE.search(sentence) is None:
+            return True
+    return False
+
+
+def _semantic_clauses(text: str) -> list[str]:
+    """Split contrast/result clauses without breaking ordinary comma-separated unknown lists."""
+    return [
+        clause.strip()
+        for clause in re.split(
+            r"[.!?;\n]+|,\s*(?=(?:but|however|yet|although|while|so|therefore|then)\b)|"
+            r"\b(?:but|however|yet|although|while|so|therefore|then)\b",
+            text,
+            flags=re.IGNORECASE,
+        )
+        if clause.strip()
+    ]
+
+
+def _uncertainty_trailing_segments(text: str) -> list[str]:
+    """Return prose after each uncertainty marker, where hidden assertions commonly appear."""
+    matches = list(GENERAL_UNCERTAINTY_RE.finditer(text))
+    return [
+        text[match.end() : matches[index + 1].start() if index + 1 < len(matches) else len(text)].strip()
+        for index, match in enumerate(matches)
+    ]
+
+
+def _normalize_trailing_segment(text: str) -> str:
+    cleaned = re.sub(r"^[\s,;:.!?()\[\]-]+", "", text)
+    cleaned = re.sub(r"^(?:and|but|however|yet|although|while|so|therefore|then)\b\s*", "", cleaned, flags=re.IGNORECASE)
+    return re.sub(r"[\s,;:.!?()\[\]-]+$", "", cleaned).strip()
+
+
+def _uncertainty_prefix(text: str) -> str:
+    match = GENERAL_UNCERTAINTY_RE.search(text)
+    if match is None:
+        return ""
+    prefix = text[: match.start()].strip()
+    prefix = re.sub(r"\b(?:is|are|was|were|remain|remains)\s*$", "", prefix, flags=re.IGNORECASE)
+    return prefix.strip()
+
+
+def _iter_unknown_statements(evidence: dict[str, Any]) -> Iterator[tuple[str, str]]:
+    """Yield every field that the contract designates as an UNKNOWN register."""
+    array_paths: list[tuple[str, Any]] = []
+    for shot_index, shot in enumerate(evidence.get("shots", []) if isinstance(evidence.get("shots"), list) else []):
+        if isinstance(shot, dict):
+            array_paths.append((f"$.shots[{shot_index}].unknowns", shot.get("unknowns")))
+    audio_audit = evidence.get("audio_audit")
+    if isinstance(audio_audit, dict):
+        array_paths.append(("$.audio_audit.audio_unknowns", audio_audit.get("audio_unknowns")))
+    for method_index, method in enumerate(evidence.get("methods", []) if isinstance(evidence.get("methods"), list) else []):
+        if isinstance(method, dict):
+            array_paths.append((f"$.methods[{method_index}].unknowns", method.get("unknowns")))
+    for auxiliary_index, item in enumerate(
+        evidence.get("auxiliary_evidence", []) if isinstance(evidence.get("auxiliary_evidence"), list) else []
+    ):
+        if isinstance(item, dict):
+            array_paths.append((f"$.auxiliary_evidence[{auxiliary_index}].unknowns", item.get("unknowns")))
+    for track_index, item in enumerate(
+        evidence.get("continuity_tracks", []) if isinstance(evidence.get("continuity_tracks"), list) else []
+    ):
+        if isinstance(item, dict):
+            array_paths.append((f"$.continuity_tracks[{track_index}].unknowns", item.get("unknowns")))
+    for array_path, values in array_paths:
+        if not isinstance(values, list):
+            continue
+        for index, statement in enumerate(values):
+            if isinstance(statement, str):
+                yield f"{array_path}[{index}]", statement
+    for index, item in enumerate(evidence.get("unknowns", []) if isinstance(evidence.get("unknowns"), list) else []):
+        if isinstance(item, dict) and isinstance(item.get("statement"), str):
+            yield f"$.unknowns[{index}].statement", item["statement"]
+
+
+def _validate_unknown_statement(path: str, statement: str, issues: list[dict[str, str]]) -> None:
+    """Keep UNKNOWN registers uncertain, non-directive, and identity-safe."""
+    unsafe_audio = _has_unsafe_audio_directive(statement)
+    explicit_safe_boundary = (
+        SAFE_UNKNOWN_BOUNDARY_RE.search(statement) is not None
+        or SAFE_AUDIO_BOUNDARY_RE.search(statement) is not None
+    ) and not unsafe_audio
+    if GENERAL_UNCERTAINTY_RE.search(statement) is None and not explicit_safe_boundary:
+        add_issue(
+            issues,
+            "error",
+            "UNKNOWN-STATEMENT-ASSERTS-FACT",
+            path,
+            "unknown wording must explicitly state uncertainty",
+        )
+    if unsafe_audio:
+        add_issue(
+            issues,
+            "error",
+            "UNKNOWN-HIDES-AUDIO-DIRECTIVE",
+            path,
+            "unknown wording cannot hide an unauditioned audio instruction",
+        )
+    prefix = _uncertainty_prefix(statement)
+    if (
+        prefix
+        and not re.match(r"^\s*(?:whether|if)\b", prefix, re.IGNORECASE)
+        and (
+            AFFIRMATIVE_FACT_RE.search(prefix)
+            or AFFIRMATIVE_PICTURE_PHRASE_RE.search(prefix)
+            or CROSS_CUT_IDENTITY_ASSERTION_RE.search(prefix)
+        )
+    ):
+        add_issue(
+            issues,
+            "error",
+            "UNKNOWN-HIDES-AFFIRMATIVE-FACT",
+            path,
+            "unknown wording cannot hide an affirmative fact before an uncertainty marker",
+        )
+    for trailing in _uncertainty_trailing_segments(statement):
+        trailing = _normalize_trailing_segment(trailing)
+        if (
+            not trailing
+            or SAFE_UNKNOWN_BOUNDARY_RE.search(trailing)
+            or SAFE_AUDIO_BOUNDARY_RE.search(trailing)
+            or SAFE_UNKNOWN_TAIL_RE.fullmatch(trailing)
+        ):
+            continue
+        if CROSS_CUT_IDENTITY_ASSERTION_RE.search(trailing):
+            add_issue(
+                issues,
+                "error",
+                "UNKNOWN-HIDES-CROSS-CUT-IDENTITY",
+                path,
+                "unknown wording cannot assert identity across a cut",
+            )
+            break
+        add_issue(
+            issues,
+            "error",
+            "UNKNOWN-HIDES-AFFIRMATIVE-FACT",
+            path,
+            "unknown wording cannot hide additional affirmative content after an uncertainty marker",
+        )
+        break
+    clauses = _semantic_clauses(statement)
+    for clause in clauses:
+        if (
+            GENERAL_UNCERTAINTY_RE.search(clause)
+            or SAFE_UNKNOWN_BOUNDARY_RE.search(clause)
+            or SAFE_AUDIO_BOUNDARY_RE.search(clause)
+        ):
+            continue
+        if unsafe_audio and _has_unsafe_audio_directive(clause):
+            continue
+        if CROSS_CUT_IDENTITY_ASSERTION_RE.search(clause):
+            add_issue(
+                issues,
+                "error",
+                "UNKNOWN-HIDES-CROSS-CUT-IDENTITY",
+                path,
+                "unknown wording cannot assert identity across a cut",
+            )
+            continue
+        if len(clauses) > 1 and re.search(r"[A-Za-z]{3,}", clause):
+            add_issue(
+                issues,
+                "error",
+                "UNKNOWN-HIDES-AFFIRMATIVE-FACT",
+                path,
+                "unknown wording cannot hide an affirmative fact in another clause",
+            )
 
 
 def _fact_tokens(text: str) -> set[str]:
@@ -409,17 +801,29 @@ def _rule_asserts_unknown_fact(unknown_text: str, operational_text: str) -> bool
     active_alias_patterns = [
         pattern for pattern in UNKNOWN_FACT_ALIAS_PATTERNS.values() if pattern.search(unknown_text)
     ]
-    if len(unknown_tokens) < 2 and not active_alias_patterns:
+    if not unknown_tokens and not active_alias_patterns:
         return False
-    for sentence in re.split(r"[.!?;\n]+", operational_text):
-        clauses = re.split(r"\b(?:but|however|yet|although)\b", sentence, flags=re.IGNORECASE)
-        for clause in clauses:
-            if GENERAL_UNCERTAINTY_RE.search(clause) or SAFE_UNKNOWN_BOUNDARY_RE.search(clause):
-                continue
-            shared = unknown_tokens.intersection(_fact_tokens(clause))
-            if len(shared) >= 2 and len(shared) / len(unknown_tokens) >= 0.5:
+    for clause in _semantic_clauses(operational_text):
+        prefix = _uncertainty_prefix(clause)
+        if prefix and not re.match(r"^\s*(?:whether|if)\b", prefix, re.IGNORECASE):
+            shared_prefix = unknown_tokens.intersection(_fact_tokens(prefix))
+            if shared_prefix and (
+                OPERATIONAL_PREFIX_RE.search(prefix)
+                or AFFIRMATIVE_FACT_RE.search(prefix)
+            ):
                 return True
-            if any(pattern.search(clause) for pattern in active_alias_patterns):
+        segments = _uncertainty_trailing_segments(clause) if GENERAL_UNCERTAINTY_RE.search(clause) else [clause]
+        for segment in segments:
+            if (
+                not segment
+                or SAFE_UNKNOWN_BOUNDARY_RE.search(segment)
+                or SAFE_AUDIO_BOUNDARY_RE.search(segment)
+            ):
+                continue
+            shared = unknown_tokens.intersection(_fact_tokens(segment))
+            if shared and len(shared) / len(unknown_tokens) >= 0.5:
+                return True
+            if any(pattern.search(segment) for pattern in active_alias_patterns):
                 return True
     return False
 
@@ -676,7 +1080,7 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
                 )
             value = claim.get("value")
             if isinstance(value, str) and (
-                AUDIO_DIRECTIVE_RE.search(value)
+                _has_unsafe_audio_directive(value)
                 or AUDIO_UNCERTAINTY_RE.search(value) is None
                 or _has_unauditioned_audio_assertion(value)
             ):
@@ -696,7 +1100,23 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
             add_issue(issues, "error", "TEXT-STATUS-CONFLICT", f"{claim_path}.status", "text-anchor claim conflicts with scene text status")
 
     text_anchors = evidence.get("text_anchors") if isinstance(evidence.get("text_anchors"), list) else []
-    anchor_ids = {item.get("anchor_id") for item in text_anchors if isinstance(item, dict) and isinstance(item.get("anchor_id"), str)}
+    anchor_ids: set[str] = set()
+    anchor_by_id: dict[str, dict[str, Any]] = {}
+    for anchor_index, item in enumerate(text_anchors):
+        if not isinstance(item, dict) or not isinstance(item.get("anchor_id"), str):
+            continue
+        anchor_id = item["anchor_id"]
+        if anchor_id in anchor_ids:
+            add_issue(
+                issues,
+                "error",
+                "TEXT-ANCHOR-ID-DUPLICATE",
+                f"$.text_anchors[{anchor_index}].anchor_id",
+                "text anchor ID must be unique",
+            )
+            continue
+        anchor_ids.add(anchor_id)
+        anchor_by_id[anchor_id] = item
     if text_status == "TEXT_ANCHOR_NOT_USED" and text_anchors:
         add_issue(issues, "error", "TEXT-ANCHORS-UNEXPECTED", "$.text_anchors", "text anchors must be empty when text was not used")
     for claim_path, claim in _walk_claims(evidence):
@@ -787,20 +1207,29 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
             "$.audio_evidence_status",
             "AUDIO_OBSERVED requires an active AUDIO_DIRECT_AUDITION method",
         )
-    if text_status in {"TEXT_ANCHOR_VERIFIED", "TEXT_ANCHOR_PARTIAL"} and not text_anchors:
-        add_issue(
-            issues,
-            "error",
-            "TEXT-STATUS-NO-ANCHOR",
-            "$.text_anchor_status",
-            "verified or partial text status requires at least one text anchor",
-        )
     verified_or_partial_anchors = [
         item
         for item in text_anchors
         if isinstance(item, dict) and item.get("status") in {"TEXT_ANCHOR_VERIFIED", "TEXT_ANCHOR_PARTIAL"}
     ]
-    if verified_or_partial_anchors and not active_text_method_ids:
+    verified_anchors = [item for item in verified_or_partial_anchors if item.get("status") == "TEXT_ANCHOR_VERIFIED"]
+    if text_status in {"TEXT_ANCHOR_VERIFIED", "TEXT_ANCHOR_PARTIAL"} and not verified_or_partial_anchors:
+        add_issue(
+            issues,
+            "error",
+            "TEXT-STATUS-NO-USABLE-ANCHOR" if text_anchors else "TEXT-STATUS-NO-ANCHOR",
+            "$.text_anchor_status",
+            "verified or partial text status requires a verified or partial text anchor",
+        )
+    if text_status == "TEXT_ANCHOR_VERIFIED" and not verified_anchors:
+        add_issue(
+            issues,
+            "error",
+            "TEXT-VERIFIED-NO-VERIFIED-ANCHOR",
+            "$.text_anchor_status",
+            "verified scene text status requires at least one verified text anchor",
+        )
+    if (verified_or_partial_anchors or text_status in {"TEXT_ANCHOR_VERIFIED", "TEXT_ANCHOR_PARTIAL"}) and not active_text_method_ids:
         add_issue(
             issues,
             "error",
@@ -825,6 +1254,25 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
         _validate_time_point(item.get("start"), f"{path}.start", tolerance, issues)
         _validate_time_point(item.get("end"), f"{path}.end", tolerance, issues)
         status = item.get("status")
+        refs = item.get("source_refs")
+        if status in {"PICTURE_OBSERVED", "AUDIO_OBSERVED", "TEXT_ANCHOR", "INFERRED"} and (
+            not isinstance(refs, list) or not refs
+        ):
+            add_issue(
+                issues,
+                "error",
+                "AUXILIARY-SOURCE-REQUIRED",
+                f"{path}.source_refs",
+                f"{status} auxiliary evidence requires cited source evidence",
+            )
+        if status == "UNKNOWN" and isinstance(refs, list) and refs:
+            add_issue(
+                issues,
+                "error",
+                "AUXILIARY-UNKNOWN-HAS-SOURCE",
+                f"{path}.source_refs",
+                "UNKNOWN auxiliary evidence must not be presented as supported",
+            )
         if status == "AUDIO_OBSERVED" and audio_status != "AUDIO_OBSERVED":
             add_issue(issues, "error", "AUXILIARY-AUDIO-STATUS-CONFLICT", f"{path}.status", "audio-observed auxiliary evidence requires direct audio observation")
         if status == "SIGNAL_MEASURED_NOT_AUDITIONED" and audio_status != "SIGNAL_MEASURED_NOT_AUDITIONED":
@@ -1003,7 +1451,7 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
                 return {"PICTURE"}
             return set()
         if ref in anchor_ids:
-            anchor = next((item for item in text_anchors if isinstance(item, dict) and item.get("anchor_id") == ref), None)
+            anchor = anchor_by_id.get(ref)
             return {
                 "TEXT"
             } if (
@@ -1015,14 +1463,22 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
             item = auxiliary_by_id[ref]
             status = item.get("status")
             method_id = item.get("method_id")
+            refs = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
+            resolved = {
+                track
+                for source_ref in refs
+                for track in terminal_tracks(source_ref, visiting | {ref})
+            }
             if status == "PICTURE_OBSERVED" and method_id in active_picture_method_ids:
-                return {"PICTURE"}
+                return {"PICTURE"} if "PICTURE" in resolved else set()
             if status == "AUDIO_OBSERVED" and method_id in active_audio_method_ids:
-                return {"AUDIO"}
+                return {"AUDIO"} if resolved.intersection({"PICTURE", "AUDIO"}) else set()
             if status == "TEXT_ANCHOR" and method_id in active_text_method_ids:
-                return {"TEXT"}
+                return {"TEXT"} if "TEXT" in resolved else set()
             if status == "SIGNAL_MEASURED_NOT_AUDITIONED" and method_id in active_signal_method_ids:
                 return {"SIGNAL"}
+            if status == "INFERRED":
+                return resolved.intersection({"PICTURE", "AUDIO", "TEXT"})
             return set()
         if ref in track_by_id:
             item = track_by_id[ref]
@@ -1053,6 +1509,81 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
             return resolved
         return set()
 
+    def referenced_text_anchor_ids(ref: str, visiting: frozenset[str] = frozenset()) -> set[str]:
+        """Find text anchors anywhere in a provenance chain, including unusable anchors."""
+        if ref in visiting:
+            return set()
+        if ref in anchor_by_id:
+            return {ref}
+        sources: list[str] = []
+        if ref in auxiliary_by_id:
+            item = auxiliary_by_id[ref]
+            sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
+        elif ref in track_by_id:
+            item = track_by_id[ref]
+            sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
+        elif ref in claims:
+            item = claims[ref][1]
+            sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
+        elif ref in method_by_id:
+            item = method_by_id[ref]
+            sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
+        return {
+            anchor_id
+            for source_ref in sources
+            for anchor_id in referenced_text_anchor_ids(source_ref, visiting | {ref})
+        }
+
+    def text_source_violations(refs: list[str]) -> tuple[list[str], list[str]]:
+        referenced = {
+            anchor_id
+            for ref in refs
+            for anchor_id in referenced_text_anchor_ids(ref)
+        }
+        unknown = sorted(
+            anchor_id
+            for anchor_id in referenced
+            if anchor_by_id[anchor_id].get("status") == "TEXT_ANCHOR_UNKNOWN"
+        )
+        unreviewed = sorted(
+            anchor_id
+            for anchor_id in referenced
+            if anchor_by_id[anchor_id].get("status") in {"TEXT_ANCHOR_VERIFIED", "TEXT_ANCHOR_PARTIAL"}
+            and not active_text_method_ids
+        )
+        return unknown, unreviewed
+
+    def reference_reaches_shot(
+        ref: str,
+        target_shot_id: str,
+        visiting: frozenset[str] = frozenset(),
+    ) -> bool:
+        """Trace a provenance chain to the exact endpoint Shot, not merely any picture track."""
+        if ref in visiting:
+            return False
+        if ref == target_shot_id:
+            return True
+        sources: list[str] = []
+        if ref in auxiliary_by_id:
+            item = auxiliary_by_id[ref]
+            if item.get("status") == "UNKNOWN" or not terminal_tracks(ref):
+                return False
+            sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
+        elif ref in track_by_id:
+            item = track_by_id[ref]
+            if item.get("status") == "UNKNOWN" or not terminal_tracks(ref):
+                return False
+            sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
+        elif ref in claims:
+            item = claims[ref][1]
+            if item.get("status") == "UNKNOWN" or not terminal_tracks(ref):
+                return False
+            sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
+        return any(
+            reference_reaches_shot(source_ref, target_shot_id, visiting | {ref})
+            for source_ref in sources
+        )
+
     for claim_path, claim in _walk_claims(evidence):
         status = claim.get("status")
         refs = claim.get("source_refs") if isinstance(claim.get("source_refs"), list) else []
@@ -1060,6 +1591,23 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
             missing = [ref for ref in refs if ref not in known_refs]
             if missing:
                 add_issue(issues, "error", "CLAIM-SOURCE-REF-MISSING", f"{claim_path}.source_refs", f"unknown source reference(s): {', '.join(missing)}")
+            unknown_text_anchors, unreviewed_text_anchors = text_source_violations(refs)
+            if unknown_text_anchors:
+                add_issue(
+                    issues,
+                    "error",
+                    "CLAIM-UNKNOWN-TEXT-ANCHOR",
+                    f"{claim_path}.source_refs",
+                    f"claim cannot cite UNKNOWN text anchor(s): {', '.join(unknown_text_anchors)}",
+                )
+            if unreviewed_text_anchors:
+                add_issue(
+                    issues,
+                    "error",
+                    "CLAIM-TEXT-NO-REVIEW-METHOD",
+                    f"{claim_path}.source_refs",
+                    "text sources require an active TEXT_ANCHOR_REVIEW method",
+                )
         if status == "INFERRED":
             claim_id = claim.get("claim_id")
             if isinstance(claim_id, str) and claim_id in refs:
@@ -1104,14 +1652,38 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
             if refs and not any("PICTURE" in terminal_tracks(ref) for ref in refs):
                 add_issue(issues, "error", "PICTURE-SOURCE-TRACK", f"{claim_path}.source_refs", "picture-observed claim needs a picture source")
         if status == "AUDIO_OBSERVED":
-            valid_audio_sources = {
-                auxiliary_id
-                for auxiliary_id, item in auxiliary_by_id.items()
-                if item.get("status") == "AUDIO_OBSERVED" and item.get("method_id") in active_audio_method_ids
-            }
             if refs and not any("AUDIO" in terminal_tracks(ref) for ref in refs):
                 add_issue(issues, "error", "AUDIO-SOURCE-TRACK", f"{claim_path}.source_refs", "audio-observed claim needs a directly audited audio source")
+        if status == "TEXT_ANCHOR":
+            invalid_text_sources = [ref for ref in refs if "TEXT" not in terminal_tracks(ref)]
+            if invalid_text_sources:
+                add_issue(
+                    issues,
+                    "error",
+                    "TEXT-ANCHOR-SOURCE-TRACK",
+                    f"{claim_path}.source_refs",
+                    "text-anchor claim needs verified or partial anchors reviewed by an active text method",
+                )
 
+    scene_problem_unknown_anchors, scene_problem_unreviewed_anchors = text_source_violations(
+        safe_scene_problem_refs
+    )
+    if scene_problem_status in {"INFERRED", "TEXT_ANCHOR"} and scene_problem_unknown_anchors:
+        add_issue(
+            issues,
+            "error",
+            "SCENE-PROBLEM-UNKNOWN-TEXT-ANCHOR",
+            "$.scene_problem.source_refs",
+            f"scene problem cannot cite UNKNOWN text anchor(s): {', '.join(scene_problem_unknown_anchors)}",
+        )
+    if scene_problem_status in {"INFERRED", "TEXT_ANCHOR"} and scene_problem_unreviewed_anchors:
+        add_issue(
+            issues,
+            "error",
+            "SCENE-PROBLEM-TEXT-NO-REVIEW-METHOD",
+            "$.scene_problem.source_refs",
+            "text sources require an active TEXT_ANCHOR_REVIEW method",
+        )
     if scene_problem_status == "INFERRED" and not {
         track for ref in safe_scene_problem_refs for track in terminal_tracks(ref)
     }:
@@ -1122,10 +1694,37 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
             "$.scene_problem.source_refs",
             "inferred scene problem must resolve to observed evidence",
         )
+    if scene_problem_status == "TEXT_ANCHOR" and any(
+        "TEXT" not in terminal_tracks(ref) for ref in safe_scene_problem_refs
+    ):
+        add_issue(
+            issues,
+            "error",
+            "SCENE-PROBLEM-TEXT-SOURCE-TRACK",
+            "$.scene_problem.source_refs",
+            "text-supported scene problem needs a reviewed verified or partial text anchor",
+        )
     for occurrences in role_occurrences.values():
         for path, role in occurrences:
             if role.get("status") == "INFERRED":
                 refs = role.get("source_refs") if isinstance(role.get("source_refs"), list) else []
+                role_unknown_anchors, role_unreviewed_anchors = text_source_violations(refs)
+                if role_unknown_anchors:
+                    add_issue(
+                        issues,
+                        "error",
+                        "ROLE-UNKNOWN-TEXT-ANCHOR",
+                        f"{path}.source_refs",
+                        f"functional role cannot cite UNKNOWN text anchor(s): {', '.join(role_unknown_anchors)}",
+                    )
+                if role_unreviewed_anchors:
+                    add_issue(
+                        issues,
+                        "error",
+                        "ROLE-TEXT-NO-REVIEW-METHOD",
+                        f"{path}.source_refs",
+                        "text sources require an active TEXT_ANCHOR_REVIEW method",
+                    )
                 if not {track for ref in refs for track in terminal_tracks(ref)}:
                     add_issue(
                         issues,
@@ -1134,19 +1733,232 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
                         f"{path}.source_refs",
                         "inferred functional role must resolve to observed evidence",
                     )
+            if role.get("status") == "TEXT_ANCHOR":
+                refs = role.get("source_refs") if isinstance(role.get("source_refs"), list) else []
+                role_unknown_anchors, role_unreviewed_anchors = text_source_violations(refs)
+                if role_unknown_anchors:
+                    add_issue(
+                        issues,
+                        "error",
+                        "ROLE-UNKNOWN-TEXT-ANCHOR",
+                        f"{path}.source_refs",
+                        f"functional role cannot cite UNKNOWN text anchor(s): {', '.join(role_unknown_anchors)}",
+                    )
+                if role_unreviewed_anchors:
+                    add_issue(
+                        issues,
+                        "error",
+                        "ROLE-TEXT-NO-REVIEW-METHOD",
+                        f"{path}.source_refs",
+                        "text sources require an active TEXT_ANCHOR_REVIEW method",
+                    )
+                if any("TEXT" not in terminal_tracks(ref) for ref in refs):
+                    add_issue(
+                        issues,
+                        "error",
+                        "ROLE-TEXT-SOURCE-TRACK",
+                        f"{path}.source_refs",
+                        "text-supported role needs a reviewed verified or partial text anchor",
+                    )
 
     for index, item in enumerate(auxiliary):
         if not isinstance(item, dict):
             continue
-        for ref in item.get("source_refs", []) if isinstance(item.get("source_refs"), list) else []:
+        auxiliary_id = item.get("auxiliary_id")
+        refs = item.get("source_refs", []) if isinstance(item.get("source_refs"), list) else []
+        for ref in refs:
             if ref not in known_refs:
                 add_issue(issues, "error", "AUXILIARY-SOURCE-REF-MISSING", f"$.auxiliary_evidence[{index}].source_refs", f"unknown source reference: {ref}")
+            if ref == auxiliary_id:
+                add_issue(
+                    issues,
+                    "error",
+                    "AUXILIARY-SELF-REFERENCE",
+                    f"$.auxiliary_evidence[{index}].source_refs",
+                    "auxiliary evidence cannot cite itself",
+                )
+        resolved_by_ref = {
+            ref: terminal_tracks(
+                ref,
+                frozenset({auxiliary_id}) if isinstance(auxiliary_id, str) else frozenset(),
+            )
+            for ref in refs
+        }
+        resolved_tracks = {track for tracks_for_ref in resolved_by_ref.values() for track in tracks_for_ref}
+        status = item.get("status")
+        required_tracks = {
+            "PICTURE_OBSERVED": {"PICTURE"},
+            "AUDIO_OBSERVED": {"PICTURE", "AUDIO"},
+            "TEXT_ANCHOR": {"TEXT"},
+            "INFERRED": {"PICTURE", "AUDIO", "TEXT"},
+        }.get(status)
+        if required_tracks is not None and not resolved_tracks.intersection(required_tracks):
+            add_issue(
+                issues,
+                "error",
+                "AUXILIARY-NO-REAL-SOURCE",
+                f"$.auxiliary_evidence[{index}].source_refs",
+                f"{status} auxiliary evidence must recursively resolve to a real evidence track",
+            )
+        invalid_refs = [
+            ref
+            for ref, tracks_for_ref in resolved_by_ref.items()
+            if required_tracks is not None and not tracks_for_ref.intersection(required_tracks)
+        ]
+        if invalid_refs:
+            add_issue(
+                issues,
+                "error",
+                "AUXILIARY-SOURCE-TRACK",
+                f"$.auxiliary_evidence[{index}].source_refs",
+                f"every {status} auxiliary source must resolve to a compatible real evidence track: {', '.join(invalid_refs)}",
+            )
     for index, item in enumerate(tracks):
         if not isinstance(item, dict):
             continue
         for ref in item.get("source_refs", []) if isinstance(item.get("source_refs"), list) else []:
             if ref not in shot_ids:
                 add_issue(issues, "error", "TRACK-SHOT-REF-MISSING", f"$.continuity_tracks[{index}].source_refs", f"unknown shot ID: {ref}")
+
+    boundary_status = evidence.get("boundary_status")
+    boundary_evidence = evidence.get("boundary_evidence") if isinstance(evidence.get("boundary_evidence"), dict) else {}
+    boundary_claim_status = boundary_evidence.get("status")
+    boundary_refs = boundary_evidence.get("source_refs") if isinstance(boundary_evidence.get("source_refs"), list) else []
+    boundary_tracks = {track for ref in boundary_refs for track in terminal_tracks(ref)}
+    boundary_sides = {
+        "NATURAL_START_END_VERIFIED": ("VERIFIED", "VERIFIED"),
+        "START_INTERNAL_END_VERIFIED": ("INTERNAL", "VERIFIED"),
+        "START_VERIFIED_END_INTERNAL": ("VERIFIED", "INTERNAL"),
+        "BOTH_INTERNAL_SELECTED": ("INTERNAL", "INTERNAL"),
+        "BOUNDARY_UNKNOWN": ("UNKNOWN", "UNKNOWN"),
+    }.get(boundary_status)
+    if boundary_status == "BOUNDARY_UNKNOWN":
+        if boundary_claim_status != "UNKNOWN":
+            add_issue(
+                issues,
+                "error",
+                "BOUNDARY-UNKNOWN-EVIDENCE-CONFLICT",
+                "$.boundary_evidence.status",
+                "BOUNDARY_UNKNOWN requires boundary evidence to remain UNKNOWN",
+            )
+    elif boundary_sides is not None:
+        if boundary_claim_status != "PICTURE_OBSERVED":
+            add_issue(
+                issues,
+                "error",
+                "BOUNDARY-DEFINITE-REQUIRES-PICTURE",
+                "$.boundary_evidence.status",
+                "a definite boundary status requires PICTURE_OBSERVED boundary evidence",
+            )
+        if boundary_claim_status == "UNKNOWN":
+            add_issue(
+                issues,
+                "error",
+                "BOUNDARY-VERIFIED-FROM-UNKNOWN",
+                "$.boundary_evidence.status",
+                "a definite boundary status cannot be proved by UNKNOWN evidence",
+            )
+        if "PICTURE" not in boundary_tracks:
+            add_issue(
+                issues,
+                "error",
+                "BOUNDARY-NO-PICTURE-SOURCE",
+                "$.boundary_evidence.source_refs",
+                "a definite scene boundary must resolve to picture evidence",
+            )
+        if shots:
+            first_shot_id = shots[0].get("shot_id") if isinstance(shots[0], dict) else None
+            last_shot_id = shots[-1].get("shot_id") if isinstance(shots[-1], dict) else None
+            start_side, end_side = boundary_sides
+            if (
+                start_side != "UNKNOWN"
+                and isinstance(first_shot_id, str)
+                and not any(reference_reaches_shot(ref, first_shot_id) for ref in boundary_refs)
+            ):
+                add_issue(
+                    issues,
+                    "error",
+                    "BOUNDARY-START-SOURCE-MISSING",
+                    "$.boundary_evidence.source_refs",
+                    "boundary evidence must recursively cite the first Shot for the scene start",
+                )
+            if (
+                end_side != "UNKNOWN"
+                and isinstance(last_shot_id, str)
+                and not any(reference_reaches_shot(ref, last_shot_id) for ref in boundary_refs)
+            ):
+                add_issue(
+                    issues,
+                    "error",
+                    "BOUNDARY-END-SOURCE-MISSING",
+                    "$.boundary_evidence.source_refs",
+                    "boundary evidence must recursively cite the last Shot for the scene end",
+                )
+
+    scene_unit_type = evidence.get("scene_unit_type")
+    if scene_unit_type == "NATURAL_CONTINUOUS_SCENE" and boundary_status != "NATURAL_START_END_VERIFIED":
+        add_issue(
+            issues,
+            "error",
+            "SCENE-UNIT-BOUNDARY-CONFLICT",
+            "$.scene_unit_type",
+            "a natural continuous scene requires verified natural start and end boundaries",
+        )
+    if scene_unit_type == "SELECTED_INTERNAL_ENVELOPE" and boundary_status not in {
+        "START_INTERNAL_END_VERIFIED",
+        "START_VERIFIED_END_INTERNAL",
+        "BOTH_INTERNAL_SELECTED",
+    }:
+        add_issue(
+            issues,
+            "error",
+            "SCENE-UNIT-BOUNDARY-CONFLICT",
+            "$.scene_unit_type",
+            "a selected internal envelope requires at least one explicitly internal boundary",
+        )
+
+    if boundary_sides is not None and shots:
+        first_shot = shots[0] if isinstance(shots[0], dict) else {}
+        last_shot = shots[-1] if isinstance(shots[-1], dict) else {}
+        first_completeness = first_shot.get("completeness")
+        last_completeness = last_shot.get("completeness")
+        start_verified = {"COMPLETE_VISIBLE_SHOT", "PARTIAL_AT_END"}
+        start_internal = {"PARTIAL_AT_START", "PARTIAL_AT_BOTH"}
+        end_verified = {"COMPLETE_VISIBLE_SHOT", "PARTIAL_AT_START"}
+        end_internal = {"PARTIAL_AT_END", "PARTIAL_AT_BOTH"}
+        start_side, end_side = boundary_sides
+        if start_side == "VERIFIED" and first_completeness not in start_verified:
+            add_issue(
+                issues,
+                "error",
+                "BOUNDARY-START-COMPLETENESS",
+                "$.shots[0].completeness",
+                "verified scene start conflicts with the first Shot completeness",
+            )
+        if start_side == "INTERNAL" and first_completeness not in start_internal:
+            add_issue(
+                issues,
+                "error",
+                "BOUNDARY-START-COMPLETENESS",
+                "$.shots[0].completeness",
+                "internal scene start requires a first Shot partial at its start",
+            )
+        if end_side == "VERIFIED" and last_completeness not in end_verified:
+            add_issue(
+                issues,
+                "error",
+                "BOUNDARY-END-COMPLETENESS",
+                f"$.shots[{len(shots) - 1}].completeness",
+                "verified scene end conflicts with the last Shot completeness",
+            )
+        if end_side == "INTERNAL" and last_completeness not in end_internal:
+            add_issue(
+                issues,
+                "error",
+                "BOUNDARY-END-COMPLETENESS",
+                f"$.shots[{len(shots) - 1}].completeness",
+                "internal scene end requires a last Shot partial at its end",
+            )
 
     if evidence.get("scene_unit_type") == "SINGLE_VISIBLE_TAKE" and len(shots) != 1:
         add_issue(issues, "error", "SINGLE-VISIBLE-TAKE-SHOT-COUNT", "$.shots", "single visible take must contain exactly one visible-shot unit")
@@ -1176,12 +1988,9 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
             and ".audio_logic" not in claim_path
         ):
             unknown_fact_sources.append((claim_path, value))
-    for unknown_index, item in enumerate(
-        evidence.get("unknowns", []) if isinstance(evidence.get("unknowns"), list) else []
-    ):
-        statement = item.get("statement") if isinstance(item, dict) else None
-        if isinstance(statement, str):
-            unknown_fact_sources.append((f"$.unknowns[{unknown_index}].statement", statement))
+    for unknown_path, statement in _iter_unknown_statements(evidence):
+        _validate_unknown_statement(unknown_path, statement, issues)
+        unknown_fact_sources.append((unknown_path, statement))
 
     rules = evidence.get("candidate_rules") if isinstance(evidence.get("candidate_rules"), list) else []
     rule_ids: set[str] = set()
@@ -1259,7 +2068,7 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
         if audio_status != "AUDIO_OBSERVED":
             audio_value = audio_logic.get("value")
             if isinstance(audio_value, str) and (
-                AUDIO_DIRECTIVE_RE.search(audio_value)
+                _has_unsafe_audio_directive(audio_value)
                 or AUDIO_UNCERTAINTY_RE.search(audio_value) is None
                 or _has_unauditioned_audio_assertion(audio_value)
             ):
@@ -1345,7 +2154,7 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
                     f"operational rule text closely restates active UNKNOWN at {matched_unknown_path}; keep the rule blocked or remove the assertion",
                 )
         if audio_status != "AUDIO_OBSERVED" and (
-            AUDIO_DIRECTIVE_RE.search(operational_text) or _has_unauditioned_audio_assertion(operational_text)
+            _has_unsafe_audio_directive(operational_text) or _has_unauditioned_audio_assertion(operational_text)
         ):
             add_issue(
                 issues,
@@ -1380,15 +2189,6 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
     for index, item in enumerate(evidence.get("unknowns", []) if isinstance(evidence.get("unknowns"), list) else []):
         if not isinstance(item, dict):
             continue
-        statement = item.get("statement")
-        if isinstance(statement, str) and GENERAL_UNCERTAINTY_RE.search(statement) is None:
-            add_issue(
-                issues,
-                "error",
-                "UNKNOWN-STATEMENT-ASSERTS-FACT",
-                f"$.unknowns[{index}].statement",
-                "unknown register wording must explicitly state uncertainty",
-            )
         for blocked_rule_id in item.get("blocks_rule_ids", []) if isinstance(item.get("blocks_rule_ids"), list) else []:
             if blocked_rule_id not in rule_ids:
                 add_issue(issues, "error", "UNKNOWN-RULE-REF-MISSING", f"$.unknowns[{index}].blocks_rule_ids", f"unknown rule ID: {blocked_rule_id}")
@@ -1459,6 +2259,39 @@ def discover_evidence_paths(inputs: Sequence[str]) -> list[Path]:
     return sorted(paths)
 
 
+def _write_report_atomically(path: Path, rendered: str) -> None:
+    """Replace a report only after a complete temporary write in the same directory."""
+    target = path.resolve()
+    temporary_path: Path | None = None
+    try:
+        descriptor, temporary_name = tempfile.mkstemp(
+            prefix=f".{target.name}.",
+            suffix=".tmp",
+            dir=target.parent,
+        )
+        temporary_path = Path(temporary_name)
+        with os.fdopen(descriptor, "w", encoding="utf-8") as handle:
+            handle.write(rendered)
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(temporary_path, target)
+        temporary_path = None
+    finally:
+        if temporary_path is not None:
+            try:
+                temporary_path.unlink()
+            except OSError:
+                pass
+
+
+def _same_file_target(left: Path, right: Path) -> bool:
+    """Compare existing files by identity so case aliases cannot bypass protection."""
+    try:
+        return os.path.samefile(left, right)
+    except OSError:
+        return left.resolve() == right.resolve()
+
+
 def validate_paths(paths: Iterable[Path], schema: dict[str, Any]) -> dict[str, Any]:
     results: list[dict[str, Any]] = []
     load_errors: list[dict[str, str]] = []
@@ -1521,7 +2354,11 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
-        schema = load_json(Path(args.schema))
+        canonical_schema_path = Path(__file__).resolve().parent.parent / "references" / "scene-evidence.schema.json"
+        canonical_schema = _validate_schema_document(load_json(canonical_schema_path))
+        schema = _validate_schema_document(load_json(Path(args.schema)))
+        if not _json_documents_equal_strict(schema, canonical_schema):
+            raise ValueError("--schema must match the repository Scene Evidence contract")
         paths = discover_evidence_paths(args.inputs)
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"validator setup error: {exc}", file=sys.stderr)
@@ -1529,10 +2366,20 @@ def main(argv: Sequence[str] | None = None) -> int:
     if not paths:
         print("validator setup error: no Scene Evidence JSON files found", file=sys.stderr)
         return 2
+    if args.report:
+        report_path = Path(args.report)
+        protected_paths = [*paths, Path(args.schema), canonical_schema_path]
+        if any(_same_file_target(report_path, protected_path) for protected_path in protected_paths):
+            print("validator setup error: --report must not overwrite an input or schema file", file=sys.stderr)
+            return 2
     report = validate_paths(paths, schema)
     rendered = json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
     if args.report:
-        Path(args.report).write_text(rendered, encoding="utf-8")
+        try:
+            _write_report_atomically(Path(args.report), rendered)
+        except OSError as exc:
+            print(f"validator report write error: {exc}", file=sys.stderr)
+            return 2
     if not args.quiet:
         print(rendered, end="")
     return 0 if report["failed"] == 0 else 1

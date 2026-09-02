@@ -22,14 +22,14 @@ The workflow is present locally only. It was not pushed, so no remote CI pass is
 
 - Quick runner: PASS — 16 checks; it intentionally does not validate the full-suite final report.
 - Full runner: PASS — 18 checks.
-- Unit/CLI suite: PASS — 178 tests after the compatibility audit's adversarial additions.
+- Unit/CLI suite: PASS — 223 tests after the compatibility and Phase 1 re-review matrices were combined.
 - Scene Evidence: 31/31 pass, 2,343 Shot/edit units, 124 candidate lineages, zero errors, 72 warnings.
 - Candidate index: 124 candidates, 16 families, all blocked, zero runtime-authorized, zero errors.
 - Grammar: five project constraints, six safety constraints, zero eligible/runtime evidence rules, zero errors.
 - Routing: eight cases, eight `NO_APPLICABLE_RULE`, zero selected, zero errors.
 - Forward tests: eight packages, six required scene problems, zero ready families, zero selected, eight pending, zero errors, 31 warnings.
 - Repository boundaries: PASS — the report distinguishes whole-repository file/syntax/link checks from the zero-issue scoped current-artifact string scan and lists 30 excluded immutable legacy ledgers.
-- Final report: `final-generalization-validation/0.3` is `PASS_LOCAL` from the full runner's complete live result map; zero validation errors and 103 preserved Scene-plus-forward warnings.
+- Final report: `final-generalization-validation/0.4` is `PASS_LOCAL` from the full runner's complete live result map; zero validation errors and 103 preserved Scene-plus-forward warnings.
 
 ## Post-completion compatibility repair
 
@@ -37,7 +37,7 @@ The current local runner also covers the later narrow repair: one canonical scen
 
 ## Boundaries
 
-- Remote CI is `NOT_RUN_NO_PUSH`; the local replay proves the command and workflow contract, not the GitHub-hosted run.
+- Remote CI and pull-request state are post-commit external evidence. The versioned local report deliberately does not self-attest them; verify the final PR head and live PR state after push.
 - The original 30 immutable legacy Markdown ledgers are excluded from the direct string scan. An initial independent review found pattern matches inside that historical provenance; they are not classified as a current-artifact zero result, and changing those protected files remains outside this task.
 - Source media was not replayed, audio was not directly auditioned, and no positive rule selection can exist while the eligible set is empty.
 - Structural checks do not prove creative quality or audience effect.

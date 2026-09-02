@@ -57,7 +57,7 @@
 
 | # | Shot ID | Start | End | Duration | Size | Angle | Camera path | Zone | Picture | Audio | Narrative function | AI risk C/P/K | UNKNOWN |
 |---:|---|---:|---:|---:|---|---|---|---|---|---|---|---|---|
-| 1 | DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001 | {"frame":1911,"pts":null,"seconds":79.625,"time_base":null,"timecode":"00:01:19.625"} | {"frame":23807,"pts":null,"seconds":992.0,"time_base":null,"timecode":"00:16:32.000"} | 912.375 | {"claim_id":"S001-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"],"status":"PICTURE_OBSERVED","value":"continuously changing from object/body detail and medium shared frames through wide ensemble, following medium and new-space wide/medium configurations; no single fixed size"} | {"claim_id":"S001-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"],"status":"PICTURE_OBSERVED","value":"predominantly near standing/eye level with changing height and lateral relation; exact rig height, lens and support UNKNOWN"} | {"claim_id":"S001-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"],"status":"PICTURE_OBSERVED","value":"prolonged continuous reframe with lateral arcs, forward/backward travel, pans/turns, body-follow and passes through doors/partial occlusion; motion direction and speed vary; exact stabilization, lens changes, hidden joins and production take structure UNKNOWN"} | [{"claim_id":"S001-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"],"status":"INFERRED","value":"an open padded coffin-like container and chair rows first anchor the pale interior; foreground bodies, doorframes and furniture repeatedly mask/reveal layered figures; after a dim corridor, dark timber stairs and a curved dark metal/wood structure replace the pale-room field without an accepted visible cut"}] | PICTURE_PARTIAL | BLOCKED_DIRECT_AUDITION | {"claim_id":"S001-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"],"status":"INFERRED","value":"accumulates and redistributes ensemble pressure, repeatedly returns attention to a central visible anchor, then carries a tracked figure through an obscured threshold into a changed environment/apparent-age configuration; relationship, chronology and psychological meaning UNKNOWN"} | HIGH/HIGH/HIGH | ["Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.","Legacy light/color ledger retained for human review only: VIS-OBS: cool pale green/gray first interior; several sudden broad brightness pulses preserve geometry; a dim corridor leads to a darker warm-brown timber interior; illumination causes, time of day, exposure strategy and grade UNKNOWN","Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."] |
+| 1 | DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001 | {"frame":1911,"pts":null,"seconds":79.625,"time_base":null,"timecode":"00:01:19.625"} | {"frame":23807,"pts":null,"seconds":992.0,"time_base":null,"timecode":"00:16:32.000"} | 912.375 | {"claim_id":"S001-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"],"status":"PICTURE_OBSERVED","value":"continuously changing from object/body detail and medium shared frames through wide ensemble, following medium and new-space wide/medium configurations; no single fixed size"} | {"claim_id":"S001-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"],"status":"PICTURE_OBSERVED","value":"predominantly near standing/eye level with changing height and lateral relation; exact rig height, lens and support UNKNOWN"} | {"claim_id":"S001-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"],"status":"PICTURE_OBSERVED","value":"prolonged continuous reframe with lateral arcs, forward/backward travel, pans/turns, body-follow and passes through doors/partial occlusion; motion direction and speed vary; exact stabilization, lens changes, hidden joins and production take structure UNKNOWN"} | [{"claim_id":"S001-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"],"status":"INFERRED","value":"an open padded coffin-like container and chair rows first anchor the pale interior; foreground bodies, doorframes and furniture repeatedly mask/reveal layered figures; after a dim corridor, dark timber stairs and a curved dark metal/wood structure replace the pale-room field without an accepted visible cut"}] | PICTURE_PARTIAL | BLOCKED_DIRECT_AUDITION | {"claim_id":"S001-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"],"status":"INFERRED","value":"accumulates and redistributes ensemble pressure, repeatedly returns attention to a central visible anchor, then carries a tracked figure through an obscured threshold into a changed environment/apparent-age configuration; relationship, chronology and psychological meaning UNKNOWN"} | HIGH/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
 
 ## Candidate-rule lineage
 
@@ -80,7 +80,7 @@
       "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C04"
     ],
     "scope": "AUDIO",
-    "statement": "Direct soundtrack audition was not completed, so semantic audio facts remain unknown.",
+    "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
     "unknown_id": "UNKNOWN-AUDIO"
   },
   {
@@ -299,9 +299,8 @@
         "timecode": "00:01:19.625"
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: cool pale green/gray first interior; several sudden broad brightness pulses preserve geometry; a dim corridor leads to a darker warm-brown timber interior; illumination causes, time of day, exposure strategy and grade UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     }
   ],
@@ -344,7 +343,7 @@
         "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C04"
       ],
       "scope": "AUDIO",
-      "statement": "Direct soundtrack audition was not completed, so semantic audio facts remain unknown.",
+      "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "unknown_id": "UNKNOWN-AUDIO"
     },
     {

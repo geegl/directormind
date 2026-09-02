@@ -57,7 +57,7 @@
 
 | # | Shot ID | Start | End | Duration | Size | Angle | Camera path | Zone | Picture | Audio | Narrative function | AI risk C/P/K | UNKNOWN |
 |---:|---|---:|---:|---:|---|---|---|---|---|---|---|---|---|
-| 1 | TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001 | {"frame":70704,"pts":70704,"seconds":2946.0,"time_base":"1/24","timecode":"00:49:06.000"} | {"frame":79212,"pts":79212,"seconds":3300.5,"time_base":"1/24","timecode":"00:55:00.500"} | 354.5 | {"claim_id":"S001-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"],"status":"PICTURE_OBSERVED","value":"one uninterrupted-looking mobile unit changes continuously among exterior wide, room-relation, body-medium/close, threshold, yard/fence and vehicle-adjacent scales; there is no fixed shot size; exact focal length UNKNOWN"} | {"claim_id":"S001-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"],"status":"PICTURE_OBSERVED","value":"delivered camera height and angle change while moving through exterior and interior zones; exact height, horizon strategy, rig and lens UNKNOWN"} | {"claim_id":"S001-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"],"status":"PICTURE_OBSERVED","value":"continuous-looking translation, following, retreating, lateral movement, pan and rotation connect exterior, interior, threshold, yard/fence and vehicle-adjacent views; support system, path metrics, stabilization, hidden joins and production method UNKNOWN"} | [{"claim_id":"S001-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"],"status":"INFERRED","value":"building exteriors, yards, several room-like zones, doors/windows, furniture, fences/trees, vehicle-adjacent space, multiple adult-like bodies and short/long dark gun-shaped objects repeatedly enter, leave and recompose; exact geography and identities through occlusion UNKNOWN"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S001-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"],"status":"INFERRED","value":"carries changing person/object/door/zone/vehicle states through a multi-zone route without a visible internal cut; roles, threat, search, extraction, escape, outcome and causal meaning UNKNOWN"} | CRITICAL/CRITICAL/CRITICAL | ["Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.","Legacy light/color ledger retained for human review only: VIS-OBS: night exteriors use warm practical-like points and darker yards; interiors shift among neutral/cool, dim and haze-filled states; vehicle lights and street lighting recur; source grade and lighting/effect method UNKNOWN","Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."] |
+| 1 | TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001 | {"frame":70704,"pts":70704,"seconds":2946.0,"time_base":"1/24","timecode":"00:49:06.000"} | {"frame":79212,"pts":79212,"seconds":3300.5,"time_base":"1/24","timecode":"00:55:00.500"} | 354.5 | {"claim_id":"S001-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"],"status":"PICTURE_OBSERVED","value":"one uninterrupted-looking mobile unit changes continuously among exterior wide, room-relation, body-medium/close, threshold, yard/fence and vehicle-adjacent scales; there is no fixed shot size; exact focal length UNKNOWN"} | {"claim_id":"S001-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"],"status":"PICTURE_OBSERVED","value":"delivered camera height and angle change while moving through exterior and interior zones; exact height, horizon strategy, rig and lens UNKNOWN"} | {"claim_id":"S001-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"],"status":"PICTURE_OBSERVED","value":"continuous-looking translation, following, retreating, lateral movement, pan and rotation connect exterior, interior, threshold, yard/fence and vehicle-adjacent views; support system, path metrics, stabilization, hidden joins and production method UNKNOWN"} | [{"claim_id":"S001-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"],"status":"INFERRED","value":"building exteriors, yards, several room-like zones, doors/windows, furniture, fences/trees, vehicle-adjacent space, multiple adult-like bodies and short/long dark gun-shaped objects repeatedly enter, leave and recompose; exact geography and identities through occlusion UNKNOWN"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S001-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"],"status":"INFERRED","value":"carries changing person/object/door/zone/vehicle states through a multi-zone route without a visible internal cut; roles, threat, search, extraction, escape, outcome and causal meaning UNKNOWN"} | CRITICAL/CRITICAL/CRITICAL | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
 
 ## Candidate-rule lineage
 
@@ -80,7 +80,7 @@
       "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C04-FUNCTIONAL-SEGMENTATION-FALLBACK-FOR-LONG-ROUTE"
     ],
     "scope": "AUDIO",
-    "statement": "Direct soundtrack audition was not completed, so semantic audio facts remain unknown.",
+    "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
     "unknown_id": "UNKNOWN-AUDIO"
   },
   {
@@ -295,9 +295,8 @@
         "timecode": "00:49:06.000"
       },
       "unknowns": [
-        "Direct soundtrack audition was not completed, so dialogue, source, timing, and causal sound meaning remain unknown.",
-        "Legacy light/color ledger retained for human review only: VIS-OBS: night exteriors use warm practical-like points and darker yards; interiors shift among neutral/cool, dim and haze-filled states; vehicle lights and street lighting recur; source grade and lighting/effect method UNKNOWN",
-        "Cross-cut person, object, and location identity remain inferred or unknown unless separately tracked."
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
       ]
     }
   ],
@@ -340,7 +339,7 @@
         "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C04-FUNCTIONAL-SEGMENTATION-FALLBACK-FOR-LONG-ROUTE"
       ],
       "scope": "AUDIO",
-      "statement": "Direct soundtrack audition was not completed, so semantic audio facts remain unknown.",
+      "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "unknown_id": "UNKNOWN-AUDIO"
     },
     {

@@ -1,0 +1,837 @@
+{
+  "POV": {
+    "claim_id": "SCENE-POV",
+    "notes": "Synthetic project-original validator fixture.",
+    "source_refs": [
+      "TEST-WORK-SCENE-001-S001",
+      "TEST-WORK-SCENE-001-S002"
+    ],
+    "status": "INFERRED",
+    "value": "The coverage is inferred to be action-aligned rather than optical POV."
+  },
+  "audience_information": {
+    "claim_id": "SCENE-AUDIENCE",
+    "notes": "Synthetic project-original validator fixture.",
+    "source_refs": [
+      "TEST-WORK-SCENE-001-S001",
+      "TEST-WORK-SCENE-001-S002"
+    ],
+    "status": "PICTURE_OBSERVED",
+    "value": "The audience sees both body-state changes."
+  },
+  "audio_audit": {
+    "ambience": {
+      "claim_id": "AUDIO-03",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [],
+      "status": "UNKNOWN",
+      "value": "Audio was not directly observed."
+    },
+    "audio_information_change": {
+      "claim_id": "AUDIO-11",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [],
+      "status": "UNKNOWN",
+      "value": "Audio was not directly observed."
+    },
+    "audio_unknowns": [
+      "All semantic sound facts remain unknown."
+    ],
+    "dialogue_overlap": {
+      "claim_id": "AUDIO-01",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [],
+      "status": "UNKNOWN",
+      "value": "Audio was not directly observed."
+    },
+    "object_sound": {
+      "claim_id": "AUDIO-10",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [],
+      "status": "UNKNOWN",
+      "value": "Audio was not directly observed."
+    },
+    "offscreen_sound": {
+      "claim_id": "AUDIO-07",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [],
+      "status": "UNKNOWN",
+      "value": "Audio was not directly observed."
+    },
+    "score_entry": {
+      "claim_id": "AUDIO-04",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [],
+      "status": "UNKNOWN",
+      "value": "Audio was not directly observed."
+    },
+    "score_exit": {
+      "claim_id": "AUDIO-05",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [],
+      "status": "UNKNOWN",
+      "value": "Audio was not directly observed."
+    },
+    "silence_intervals": {
+      "claim_id": "AUDIO-02",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [],
+      "status": "UNKNOWN",
+      "value": "Audio was not directly observed."
+    },
+    "sound_before_image": {
+      "claim_id": "AUDIO-06",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [],
+      "status": "UNKNOWN",
+      "value": "Audio was not directly observed."
+    },
+    "sound_bridge": {
+      "claim_id": "AUDIO-08",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [],
+      "status": "UNKNOWN",
+      "value": "Audio was not directly observed."
+    },
+    "subjective_sound": {
+      "claim_id": "AUDIO-09",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [],
+      "status": "UNKNOWN",
+      "value": "Audio was not directly observed."
+    }
+  },
+  "audio_evidence_status": "AUDIO_UNKNOWN",
+  "auxiliary_evidence": [],
+  "axis": {
+    "claim_id": "SCENE-AXIS",
+    "notes": "Synthetic project-original validator fixture.",
+    "source_refs": [
+      "TEST-WORK-SCENE-001-S001",
+      "TEST-WORK-SCENE-001-S002"
+    ],
+    "status": "INFERRED",
+    "value": "A consistent screen-side relation is inferred across the cut."
+  },
+  "boundary_evidence": {
+    "claim_id": "BOUNDARY-EVIDENCE",
+    "notes": "Synthetic project-original validator fixture.",
+    "source_refs": [
+      "TEST-WORK-SCENE-001-S001",
+      "TEST-WORK-SCENE-001-S002"
+    ],
+    "status": "PICTURE_OBSERVED",
+    "value": "Visible edit boundaries contain the selected scene."
+  },
+  "boundary_status": "NATURAL_START_END_VERIFIED",
+  "candidate_rules": [
+    {
+      "AI_risk": {
+        "camera": {
+          "level": "LOW",
+          "reasons": [
+            "Synthetic camera test state."
+          ]
+        },
+        "continuity": {
+          "level": "LOW",
+          "reasons": [
+            "Synthetic continuity test state."
+          ]
+        },
+        "performance": {
+          "level": "LOW",
+          "reasons": [
+            "Synthetic performance test state."
+          ]
+        }
+      },
+      "POV_effect": "Keep audience access to both visible state changes.",
+      "applicable_when": [
+        "Both state changes are locked project facts."
+      ],
+      "audio_logic": {
+        "claim_id": "RULE-AUDIO",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [],
+        "status": "UNKNOWN",
+        "value": "Audio remains unknown and is not part of this candidate."
+      },
+      "blocking": "Assign neutral side A and side B positions in a project-original set.",
+      "candidate_rule_id": "TEST-C01-RELATION-COVERAGE",
+      "canonical_rule_family": "RELATION-COVERAGE",
+      "continuity": "Preserve project-original side and body-state ledgers.",
+      "counterexample_ids": [],
+      "counterexample_status": "UNKNOWN",
+      "coverage": "One relation view followed by one changed body-state view.",
+      "director_decision": "Use project-original relation coverage that preserves both screen sides.",
+      "edit_logic": "Cut only after the first visible state is registered.",
+      "evidence_auxiliary_ids": [],
+      "evidence_scene_ids": [
+        "TEST-WORK-SCENE-001"
+      ],
+      "evidence_shot_ids": [
+        "TEST-WORK-SCENE-001-S001",
+        "TEST-WORK-SCENE-001-S002"
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "execution_confidence": "MEDIUM",
+      "failure_modes": [
+        "A cut erases the screen-side relation."
+      ],
+      "fallback": {
+        "camera": null,
+        "continuity": null,
+        "performance": null,
+        "project_original_only": true
+      },
+      "not_applicable_when": [
+        "Only one body state must be shown."
+      ],
+      "pacing": "Let each state remain readable without prescribing a source-derived duration.",
+      "promotion_status": "SINGLE_WORK_CANDIDATE",
+      "required_story_facts": [
+        {
+          "claim_id": "DS-START"
+        }
+      ],
+      "scene_problem": "DIALOGUE_POWER_TRANSFER",
+      "source_method_ids": [
+        "METHOD-SYNTHETIC-FIXTURE"
+      ],
+      "transfer_confidence": "LOW",
+      "trigger": "A locked project-original script requires two body-state changes to remain legible.",
+      "within_source_confidence": "HIGH"
+    }
+  ],
+  "continuity_tracks": [],
+  "duration": 2.0,
+  "evidence_id": "TEST-WORK-SCENE-001",
+  "methods": [
+    {
+      "description": "Generate a project-original in-memory Scene Evidence fixture for validator tests.",
+      "method_id": "METHOD-SYNTHETIC-FIXTURE",
+      "method_type": "STRUCTURAL_CONVERSION",
+      "repository_command": "python3 -m unittest discover -s skills/drama-director-compiler/tests",
+      "source_refs": [],
+      "status": "REPOSITORY_REPRODUCIBLE",
+      "tool_version_status": "VERSION_RECORDED",
+      "unknowns": []
+    }
+  ],
+  "picture_evidence_status": "PICTURE_OBSERVED",
+  "production_take_status": "PRODUCTION_METHOD_UNKNOWN",
+  "rights_boundary": {
+    "contains_absolute_local_paths": false,
+    "contains_media_hashes": false,
+    "media_committed": false,
+    "notes": "Only project-original synthetic validator content is included.",
+    "prohibited_transfer_content": [
+      "Reference characters, locations, props, dialogue, and signature compositions."
+    ],
+    "reference_surface_terms": [
+      "blue teapot"
+    ],
+    "scripts_or_long_dialogue_committed": false,
+    "subtitles_committed": false,
+    "surface_inventory_status": "HUMAN_REVIEWED_COMPLETE"
+  },
+  "scene_dramatic_structure": {
+    "end_state": {
+      "claim_id": "DS-END",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [
+        "TEST-WORK-SCENE-001-S002"
+      ],
+      "status": "PICTURE_OBSERVED",
+      "value": "The bodies occupy a changed visible relation."
+    },
+    "event_point": {
+      "claim_id": "DS-EVENT",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [
+        "TEST-WORK-SCENE-001-S001"
+      ],
+      "status": "PICTURE_OBSERVED",
+      "value": "A visible head-direction change occurs."
+    },
+    "objectives": [
+      {
+        "claim_id": "DS-OBJECTIVE",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "INFERRED",
+        "value": "A possible information objective is inferred."
+      }
+    ],
+    "obstacle": {
+      "claim_id": "DS-OBSTACLE",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [],
+      "status": "UNKNOWN",
+      "value": "The obstacle is not established by picture."
+    },
+    "reaction_point": {
+      "claim_id": "DS-REACTION",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [
+        "TEST-WORK-SCENE-001-S002"
+      ],
+      "status": "PICTURE_OBSERVED",
+      "value": "A later body-state change occurs."
+    },
+    "start_state": {
+      "claim_id": "DS-START",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [
+        "TEST-WORK-SCENE-001-S001"
+      ],
+      "status": "PICTURE_OBSERVED",
+      "value": "Two abstract bodies share a project-original zone."
+    },
+    "turn": {
+      "claim_id": "DS-TURN",
+      "notes": "Synthetic project-original validator fixture.",
+      "source_refs": [
+        "TEST-WORK-SCENE-001-S001",
+        "TEST-WORK-SCENE-001-S002"
+      ],
+      "status": "INFERRED",
+      "value": "The ordered changes may form a turn."
+    }
+  },
+  "scene_problem": {
+    "primary": "DIALOGUE_POWER_TRANSFER",
+    "secondary": [],
+    "source_refs": [
+      "TEST-WORK-SCENE-001-S001",
+      "TEST-WORK-SCENE-001-S002"
+    ],
+    "status": "INFERRED"
+  },
+  "scene_unit_type": "NATURAL_CONTINUOUS_SCENE",
+  "schema_version": "scene-evidence/0.1",
+  "shots": [
+    {
+      "AI_complexity": {
+        "camera": {
+          "level": "LOW",
+          "reasons": [
+            "Synthetic camera test state."
+          ]
+        },
+        "continuity": {
+          "level": "LOW",
+          "reasons": [
+            "Synthetic continuity test state."
+          ]
+        },
+        "performance": {
+          "level": "LOW",
+          "reasons": [
+            "Synthetic performance test state."
+          ]
+        }
+      },
+      "abstract_role_labels": [],
+      "audio_status": "AUDIO_UNKNOWN",
+      "axis_and_screen_direction": {
+        "claim_id": "S001-AXIS",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Left/right screen positions remain readable within the shot."
+      },
+      "blocking": {
+        "claim_id": "S001-BLOCK",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Two bodies occupy separate sides of the frame."
+      },
+      "camera_angle": {
+        "claim_id": "S001-ANGLE",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "A neutral eye-level-like angle is visible."
+      },
+      "camera_end": {
+        "claim_id": "S001-CAM-END",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "The closing composition retains the same visible zone."
+      },
+      "camera_height": {
+        "claim_id": "S001-HEIGHT",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Camera height is visually stable within the shot."
+      },
+      "camera_motion": {
+        "claim_id": "S001-MOTION",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Frame edges remain stable in the sampled interval."
+      },
+      "camera_path": {
+        "claim_id": "S001-CAM-PATH",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "No discrete camera-path change is visible."
+      },
+      "camera_start": {
+        "claim_id": "S001-CAM-START",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "The opening composition contains two abstract bodies."
+      },
+      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "cut_motivation": {
+        "claim_id": "S001-CUT-MOTIVE",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "INFERRED",
+        "value": "The edit may redistribute visible information."
+      },
+      "duration": 1.0,
+      "edit_in": {
+        "claim_id": "S001-EDIT-IN",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "The shot begins at a visible edit boundary."
+      },
+      "edit_out": {
+        "claim_id": "S001-EDIT-OUT",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "The shot ends at a visible edit boundary."
+      },
+      "end": {
+        "frame": 24,
+        "pts": 24,
+        "seconds": 1.0,
+        "time_base": "1/24",
+        "timecode": "00:00:01.000"
+      },
+      "event_or_reaction": {
+        "claim_id": "S001-EVENT",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "A head-direction change is visible; cause is unknown."
+      },
+      "fallback": {
+        "camera": null,
+        "continuity": null,
+        "performance": null,
+        "project_original_only": true
+      },
+      "focus_strategy": {
+        "claim_id": "S001-FOCUS",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Both primary body regions remain readable."
+      },
+      "narrative_function": {
+        "claim_id": "S001-FUNCTION",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "INFERRED",
+        "value": "The view may preserve spatial legibility."
+      },
+      "order": 1,
+      "performance_beat": {
+        "claim_id": "S001-PERF",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Head and hand positions change within the shot."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "shot_id": "TEST-WORK-SCENE-001-S001",
+      "shot_size": {
+        "claim_id": "S001-SIZE",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "A neutral project-original relation view is visible."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S001-ZONE",
+          "notes": "Synthetic project-original validator fixture.",
+          "source_refs": [
+            "TEST-WORK-SCENE-001-S001"
+          ],
+          "status": "PICTURE_OBSERVED",
+          "value": "Project-original zone Z-A is visible."
+        }
+      ],
+      "start": {
+        "frame": 0,
+        "pts": 0,
+        "seconds": 0.0,
+        "time_base": "1/24",
+        "timecode": "00:00:00.000"
+      },
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ],
+      "visible_action": {
+        "claim_id": "S001-ACTION",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "One head turns while the other body remains seated."
+      },
+      "visible_state_in": {
+        "claim_id": "S001-STATE-IN",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Both bodies are visible at shot start."
+      },
+      "visible_state_out": {
+        "claim_id": "S001-STATE-OUT",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S001"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Both bodies remain visible at shot end."
+      }
+    },
+    {
+      "AI_complexity": {
+        "camera": {
+          "level": "LOW",
+          "reasons": [
+            "Synthetic camera test state."
+          ]
+        },
+        "continuity": {
+          "level": "LOW",
+          "reasons": [
+            "Synthetic continuity test state."
+          ]
+        },
+        "performance": {
+          "level": "LOW",
+          "reasons": [
+            "Synthetic performance test state."
+          ]
+        }
+      },
+      "abstract_role_labels": [],
+      "audio_status": "AUDIO_UNKNOWN",
+      "axis_and_screen_direction": {
+        "claim_id": "S002-AXIS",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Left/right screen positions remain readable within the shot."
+      },
+      "blocking": {
+        "claim_id": "S002-BLOCK",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Two bodies occupy separate sides of the frame."
+      },
+      "camera_angle": {
+        "claim_id": "S002-ANGLE",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "A neutral eye-level-like angle is visible."
+      },
+      "camera_end": {
+        "claim_id": "S002-CAM-END",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "The closing composition retains the same visible zone."
+      },
+      "camera_height": {
+        "claim_id": "S002-HEIGHT",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Camera height is visually stable within the shot."
+      },
+      "camera_motion": {
+        "claim_id": "S002-MOTION",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Frame edges remain stable in the sampled interval."
+      },
+      "camera_path": {
+        "claim_id": "S002-CAM-PATH",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "No discrete camera-path change is visible."
+      },
+      "camera_start": {
+        "claim_id": "S002-CAM-START",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "The opening composition contains two abstract bodies."
+      },
+      "completeness": "COMPLETE_VISIBLE_SHOT",
+      "cut_motivation": {
+        "claim_id": "S002-CUT-MOTIVE",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "INFERRED",
+        "value": "The edit may redistribute visible information."
+      },
+      "duration": 1.0,
+      "edit_in": {
+        "claim_id": "S002-EDIT-IN",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "The shot begins at a visible edit boundary."
+      },
+      "edit_out": {
+        "claim_id": "S002-EDIT-OUT",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "The shot ends at a visible edit boundary."
+      },
+      "end": {
+        "frame": 48,
+        "pts": 48,
+        "seconds": 2.0,
+        "time_base": "1/24",
+        "timecode": "00:00:02.000"
+      },
+      "event_or_reaction": {
+        "claim_id": "S002-EVENT",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "A head-direction change is visible; cause is unknown."
+      },
+      "fallback": {
+        "camera": null,
+        "continuity": null,
+        "performance": null,
+        "project_original_only": true
+      },
+      "focus_strategy": {
+        "claim_id": "S002-FOCUS",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Both primary body regions remain readable."
+      },
+      "narrative_function": {
+        "claim_id": "S002-FUNCTION",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "INFERRED",
+        "value": "The view may preserve spatial legibility."
+      },
+      "order": 2,
+      "performance_beat": {
+        "claim_id": "S002-PERF",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Head and hand positions change within the shot."
+      },
+      "picture_status": "PICTURE_OBSERVED",
+      "shot_id": "TEST-WORK-SCENE-001-S002",
+      "shot_size": {
+        "claim_id": "S002-SIZE",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "A neutral project-original relation view is visible."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S002-ZONE",
+          "notes": "Synthetic project-original validator fixture.",
+          "source_refs": [
+            "TEST-WORK-SCENE-001-S002"
+          ],
+          "status": "PICTURE_OBSERVED",
+          "value": "Project-original zone Z-A is visible."
+        }
+      ],
+      "start": {
+        "frame": 24,
+        "pts": 24,
+        "seconds": 1.0,
+        "time_base": "1/24",
+        "timecode": "00:00:01.000"
+      },
+      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ],
+      "visible_action": {
+        "claim_id": "S002-ACTION",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "One head turns while the other body remains seated."
+      },
+      "visible_state_in": {
+        "claim_id": "S002-STATE-IN",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Both bodies are visible at shot start."
+      },
+      "visible_state_out": {
+        "claim_id": "S002-STATE-OUT",
+        "notes": "Synthetic project-original validator fixture.",
+        "source_refs": [
+          "TEST-WORK-SCENE-001-S002"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Both bodies remain visible at shot end."
+      }
+    }
+  ],
+  "source_end": {
+    "frame": 48,
+    "pts": 48,
+    "seconds": 2.0,
+    "time_base": "1/24",
+    "timecode": "00:00:02.000"
+  },
+  "source_identity_status": "SOURCE_OR_FILENAME_SUPPLIED",
+  "source_start": {
+    "frame": 0,
+    "pts": 0,
+    "seconds": 0.0,
+    "time_base": "1/24",
+    "timecode": "00:00:00.000"
+  },
+  "spatial_geometry": {
+    "claim_id": "SCENE-GEOMETRY",
+    "notes": "Synthetic project-original validator fixture.",
+    "source_refs": [
+      "TEST-WORK-SCENE-001-S001",
+      "TEST-WORK-SCENE-001-S002"
+    ],
+    "status": "PICTURE_OBSERVED",
+    "value": "One project-original zone with two screen sides is visible."
+  },
+  "stats": {
+    "duration_bins": {
+      "1_to_lt_2": 2
+    },
+    "mean_duration": 1.0,
+    "median_duration": 1.0,
+    "shot_count": 2,
+    "total_duration": 2.0,
+    "unit": "VISIBLE_SHOT"
+  },
+  "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+  "text_anchors": [],
+  "time_tolerance_seconds": 0.001,
+  "unknowns": [
+    {
+      "blocks_rule_ids": [],
+      "scope": "AUDIO",
+      "statement": "Dialogue, ambience, score, and sound causality are unknown.",
+      "unknown_id": "UNKNOWN-AUDIO"
+    }
+  ],
+  "validation_status": "NOT_VALIDATED",
+  "validation_warnings": [],
+  "work_id": "TEST-WORK"
+}
