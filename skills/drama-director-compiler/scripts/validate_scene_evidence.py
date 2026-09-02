@@ -49,7 +49,8 @@ CREDENTIAL_RE = re.compile(
     re.IGNORECASE,
 )
 CREDENTIAL_KEY_RE = re.compile(
-    r"^(?:api[_ -]?key|access[_ -]?token|client[_ -]?secret|password|passwd|secret|token)$",
+    r"^(?:api[_ -]?key|access[_ -]?token|refresh[_ -]?token|client[_ -]?secret|private[_ -]?key|"
+    r"password|passwd|secret|token|cookie|authorization)$",
     re.IGNORECASE,
 )
 FINGERPRINT_LABEL_RE = re.compile(r"\b(?:sha(?:-?1|-?256|-?512)?|md5)\b", re.IGNORECASE)
@@ -123,6 +124,10 @@ CROSS_CUT_IDENTITY_ASSERTION_RE = re.compile(
 AFFIRMATIVE_FACT_RE = re.compile(
     r"\b(?:is|are|was|were|has|have|contains?|shows?|appears?|returns?|continues?|persists?|matches?|"
     r"becomes?|uses?|keeps?|holds?|wears?|drives?|moves?|visible|audible|present|onscreen|on-screen)\b",
+    re.IGNORECASE,
+)
+AFFIRMATIVE_PICTURE_PHRASE_RE = re.compile(
+    r"\b(?:on\s+screen|in\s+(?:the\s+)?frame)\s*(?:,|\band\b)",
     re.IGNORECASE,
 )
 OPERATIONAL_VERB_RE = re.compile(
@@ -576,7 +581,8 @@ def _has_unauditioned_audio_assertion(text: str) -> bool:
 def _has_unsafe_audio_directive(text: str) -> bool:
     """Recognize audio instructions while preserving explicit negative boundaries."""
     for sentence in re.split(
-        r"[.!?;,\n]+|\b(?:and|or|plus|before|after|but|however|yet|although|while|so|therefore|then)\b",
+        r"[.!?;,\n—–]+|\b(?:and|or|plus|before|after|instead(?:\s+of)?|but|however|yet|although|while|so|"
+        r"therefore|then)\b",
         text,
         flags=re.IGNORECASE,
     ):
@@ -683,7 +689,11 @@ def _validate_unknown_statement(path: str, statement: str, issues: list[dict[str
     if (
         prefix
         and not re.match(r"^\s*(?:whether|if)\b", prefix, re.IGNORECASE)
-        and (AFFIRMATIVE_FACT_RE.search(prefix) or CROSS_CUT_IDENTITY_ASSERTION_RE.search(prefix))
+        and (
+            AFFIRMATIVE_FACT_RE.search(prefix)
+            or AFFIRMATIVE_PICTURE_PHRASE_RE.search(prefix)
+            or CROSS_CUT_IDENTITY_ASSERTION_RE.search(prefix)
+        )
     ):
         add_issue(
             issues,
@@ -1482,6 +1492,50 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
             return resolved
         return set()
 
+    def referenced_text_anchor_ids(ref: str, visiting: frozenset[str] = frozenset()) -> set[str]:
+        """Find text anchors anywhere in a provenance chain, including unusable anchors."""
+        if ref in visiting:
+            return set()
+        if ref in anchor_by_id:
+            return {ref}
+        sources: list[str] = []
+        if ref in auxiliary_by_id:
+            item = auxiliary_by_id[ref]
+            sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
+        elif ref in track_by_id:
+            item = track_by_id[ref]
+            sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
+        elif ref in claims:
+            item = claims[ref][1]
+            sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
+        elif ref in method_by_id:
+            item = method_by_id[ref]
+            sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
+        return {
+            anchor_id
+            for source_ref in sources
+            for anchor_id in referenced_text_anchor_ids(source_ref, visiting | {ref})
+        }
+
+    def text_source_violations(refs: list[str]) -> tuple[list[str], list[str]]:
+        referenced = {
+            anchor_id
+            for ref in refs
+            for anchor_id in referenced_text_anchor_ids(ref)
+        }
+        unknown = sorted(
+            anchor_id
+            for anchor_id in referenced
+            if anchor_by_id[anchor_id].get("status") == "TEXT_ANCHOR_UNKNOWN"
+        )
+        unreviewed = sorted(
+            anchor_id
+            for anchor_id in referenced
+            if anchor_by_id[anchor_id].get("status") in {"TEXT_ANCHOR_VERIFIED", "TEXT_ANCHOR_PARTIAL"}
+            and not active_text_method_ids
+        )
+        return unknown, unreviewed
+
     def reference_reaches_shot(
         ref: str,
         target_shot_id: str,
@@ -1515,6 +1569,23 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
             missing = [ref for ref in refs if ref not in known_refs]
             if missing:
                 add_issue(issues, "error", "CLAIM-SOURCE-REF-MISSING", f"{claim_path}.source_refs", f"unknown source reference(s): {', '.join(missing)}")
+            unknown_text_anchors, unreviewed_text_anchors = text_source_violations(refs)
+            if unknown_text_anchors:
+                add_issue(
+                    issues,
+                    "error",
+                    "CLAIM-UNKNOWN-TEXT-ANCHOR",
+                    f"{claim_path}.source_refs",
+                    f"claim cannot cite UNKNOWN text anchor(s): {', '.join(unknown_text_anchors)}",
+                )
+            if unreviewed_text_anchors:
+                add_issue(
+                    issues,
+                    "error",
+                    "CLAIM-TEXT-NO-REVIEW-METHOD",
+                    f"{claim_path}.source_refs",
+                    "text sources require an active TEXT_ANCHOR_REVIEW method",
+                )
         if status == "INFERRED":
             claim_id = claim.get("claim_id")
             if isinstance(claim_id, str) and claim_id in refs:
@@ -1572,6 +1643,25 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
                     "text-anchor claim needs verified or partial anchors reviewed by an active text method",
                 )
 
+    scene_problem_unknown_anchors, scene_problem_unreviewed_anchors = text_source_violations(
+        safe_scene_problem_refs
+    )
+    if scene_problem_status in {"INFERRED", "TEXT_ANCHOR"} and scene_problem_unknown_anchors:
+        add_issue(
+            issues,
+            "error",
+            "SCENE-PROBLEM-UNKNOWN-TEXT-ANCHOR",
+            "$.scene_problem.source_refs",
+            f"scene problem cannot cite UNKNOWN text anchor(s): {', '.join(scene_problem_unknown_anchors)}",
+        )
+    if scene_problem_status in {"INFERRED", "TEXT_ANCHOR"} and scene_problem_unreviewed_anchors:
+        add_issue(
+            issues,
+            "error",
+            "SCENE-PROBLEM-TEXT-NO-REVIEW-METHOD",
+            "$.scene_problem.source_refs",
+            "text sources require an active TEXT_ANCHOR_REVIEW method",
+        )
     if scene_problem_status == "INFERRED" and not {
         track for ref in safe_scene_problem_refs for track in terminal_tracks(ref)
     }:
@@ -1596,6 +1686,23 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
         for path, role in occurrences:
             if role.get("status") == "INFERRED":
                 refs = role.get("source_refs") if isinstance(role.get("source_refs"), list) else []
+                role_unknown_anchors, role_unreviewed_anchors = text_source_violations(refs)
+                if role_unknown_anchors:
+                    add_issue(
+                        issues,
+                        "error",
+                        "ROLE-UNKNOWN-TEXT-ANCHOR",
+                        f"{path}.source_refs",
+                        f"functional role cannot cite UNKNOWN text anchor(s): {', '.join(role_unknown_anchors)}",
+                    )
+                if role_unreviewed_anchors:
+                    add_issue(
+                        issues,
+                        "error",
+                        "ROLE-TEXT-NO-REVIEW-METHOD",
+                        f"{path}.source_refs",
+                        "text sources require an active TEXT_ANCHOR_REVIEW method",
+                    )
                 if not {track for ref in refs for track in terminal_tracks(ref)}:
                     add_issue(
                         issues,
@@ -1606,6 +1713,23 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
                     )
             if role.get("status") == "TEXT_ANCHOR":
                 refs = role.get("source_refs") if isinstance(role.get("source_refs"), list) else []
+                role_unknown_anchors, role_unreviewed_anchors = text_source_violations(refs)
+                if role_unknown_anchors:
+                    add_issue(
+                        issues,
+                        "error",
+                        "ROLE-UNKNOWN-TEXT-ANCHOR",
+                        f"{path}.source_refs",
+                        f"functional role cannot cite UNKNOWN text anchor(s): {', '.join(role_unknown_anchors)}",
+                    )
+                if role_unreviewed_anchors:
+                    add_issue(
+                        issues,
+                        "error",
+                        "ROLE-TEXT-NO-REVIEW-METHOD",
+                        f"{path}.source_refs",
+                        "text sources require an active TEXT_ANCHOR_REVIEW method",
+                    )
                 if any("TEXT" not in terminal_tracks(ref) for ref in refs):
                     add_issue(
                         issues,

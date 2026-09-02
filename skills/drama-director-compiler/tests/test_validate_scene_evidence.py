@@ -1098,6 +1098,111 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
                     ]
                 self.assertIn(expected, error_codes(evidence))
 
+    def test_inferred_sources_cannot_mix_unknown_text_anchor_with_valid_shot(self) -> None:
+        for target, expected in (
+            ("claim", "CLAIM-UNKNOWN-TEXT-ANCHOR"),
+            ("scene_problem", "SCENE-PROBLEM-UNKNOWN-TEXT-ANCHOR"),
+            ("role", "ROLE-UNKNOWN-TEXT-ANCHOR"),
+        ):
+            with self.subTest(target=target):
+                evidence = make_valid_evidence()
+                evidence["text_anchor_status"] = "TEXT_ANCHOR_PARTIAL"
+                evidence["text_anchors"] = [
+                    {
+                        "anchor_id": "TEXT-ANCHOR-PARTIAL-001",
+                        "status": "TEXT_ANCHOR_PARTIAL",
+                        "source_type": "SCRIPT",
+                        "paraphrase": "Synthetic reviewed anchor.",
+                        "speaker_status": "UNKNOWN",
+                        "start": time_point(0.0, 0),
+                        "end": time_point(1.0, 24),
+                    },
+                    {
+                        "anchor_id": "TEXT-ANCHOR-UNKNOWN-001",
+                        "status": "TEXT_ANCHOR_UNKNOWN",
+                        "source_type": "SCRIPT",
+                        "paraphrase": "Synthetic anchor remains unverified.",
+                        "speaker_status": "UNKNOWN",
+                        "start": time_point(0.0, 0),
+                        "end": time_point(1.0, 24),
+                    },
+                ]
+                evidence["methods"].append(
+                    {
+                        "method_id": "METHOD-TEXT-001",
+                        "method_type": "TEXT_ANCHOR_REVIEW",
+                        "status": "MANUAL_REVIEW_RECORDED",
+                        "description": "Synthetic text review fixture.",
+                        "repository_command": None,
+                        "tool_version_status": "NOT_APPLICABLE",
+                        "source_refs": [],
+                        "unknowns": [],
+                    }
+                )
+                mixed_refs = [f"{EVIDENCE_ID}-S001", "TEXT-ANCHOR-UNKNOWN-001"]
+                if target == "claim":
+                    evidence["scene_dramatic_structure"]["obstacle"].update(
+                        status="INFERRED",
+                        value="A synthetic obstacle may be inferred.",
+                        source_refs=mixed_refs,
+                    )
+                elif target == "scene_problem":
+                    evidence["scene_problem"].update(status="INFERRED", source_refs=mixed_refs)
+                else:
+                    evidence["shots"][0]["abstract_role_labels"] = [
+                        {
+                            "appearance_id": "BODY-A",
+                            "functional_role": "receiver",
+                            "status": "INFERRED",
+                            "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+                            "appearance_track_id": None,
+                            "source_refs": mixed_refs,
+                        }
+                    ]
+                self.assertIn(expected, error_codes(evidence))
+
+    def test_inferred_text_sources_require_active_review_method_even_with_valid_shot(self) -> None:
+        for target, expected in (
+            ("claim", "CLAIM-TEXT-NO-REVIEW-METHOD"),
+            ("scene_problem", "SCENE-PROBLEM-TEXT-NO-REVIEW-METHOD"),
+            ("role", "ROLE-TEXT-NO-REVIEW-METHOD"),
+        ):
+            with self.subTest(target=target):
+                evidence = make_valid_evidence()
+                evidence["text_anchor_status"] = "TEXT_ANCHOR_PARTIAL"
+                evidence["text_anchors"] = [
+                    {
+                        "anchor_id": "TEXT-ANCHOR-PARTIAL-001",
+                        "status": "TEXT_ANCHOR_PARTIAL",
+                        "source_type": "SCRIPT",
+                        "paraphrase": "Synthetic reviewed anchor.",
+                        "speaker_status": "UNKNOWN",
+                        "start": time_point(0.0, 0),
+                        "end": time_point(1.0, 24),
+                    }
+                ]
+                mixed_refs = [f"{EVIDENCE_ID}-S001", "TEXT-ANCHOR-PARTIAL-001"]
+                if target == "claim":
+                    evidence["scene_dramatic_structure"]["obstacle"].update(
+                        status="INFERRED",
+                        value="A synthetic obstacle may be inferred.",
+                        source_refs=mixed_refs,
+                    )
+                elif target == "scene_problem":
+                    evidence["scene_problem"].update(status="INFERRED", source_refs=mixed_refs)
+                else:
+                    evidence["shots"][0]["abstract_role_labels"] = [
+                        {
+                            "appearance_id": "BODY-A",
+                            "functional_role": "receiver",
+                            "status": "INFERRED",
+                            "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+                            "appearance_track_id": None,
+                            "source_refs": mixed_refs,
+                        }
+                    ]
+                self.assertIn(expected, error_codes(evidence))
+
     def test_duplicate_text_anchor_id_fails(self) -> None:
         evidence = make_valid_evidence()
         evidence["text_anchor_status"] = "TEXT_ANCHOR_UNKNOWN"
@@ -1177,6 +1282,8 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
         statements = (
             "The vehicle is red on screen, identity remains unknown.",
             "Red vehicle visible on screen and identity remains unknown.",
+            "Red vehicle on screen, identity remains unknown.",
+            "Red vehicle in frame and identity remains unknown.",
             "The same person continues across the cut, identity remains unknown.",
         )
         for location in ("shot", "audio", "method", "auxiliary", "continuity"):
@@ -1230,21 +1337,30 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             "Audio remains unknown; do not add a score or bring in music.",
             "Audio remains unknown; do not add a score plus bring in music.",
             "Audio remains unknown; do not add a score before bringing in music.",
+            "Audio remains unknown; do not add a score instead bring in music.",
+            "Audio remains unknown; do not add a score—bring in music instead.",
         ):
-            with self.subTest(statement=statement):
-                evidence = make_valid_evidence()
-                evidence["audio_audit"]["audio_unknowns"] = [statement]
-                self.assertIn("UNKNOWN-HIDES-AUDIO-DIRECTIVE", error_codes(evidence))
+            for location in ("shot", "audio", "method", "auxiliary", "continuity"):
+                with self.subTest(statement=statement, location=location):
+                    evidence = make_valid_evidence()
+                    set_unknown_array(evidence, location, statement)
+                    self.assertIn("UNKNOWN-HIDES-AUDIO-DIRECTIVE", error_codes(evidence))
 
     def test_safe_audio_boundary_cannot_mask_rule_directive(self) -> None:
         for statement in (
             "Do not add a score and bring in music.",
             "Do not add a score, track the music.",
+            "Do not add a score instead bring in music.",
+            "Do not add a score—bring in music instead.",
         ):
-            with self.subTest(statement=statement):
-                evidence = make_valid_evidence()
-                evidence["candidate_rules"][0]["director_decision"] = statement
-                self.assertIn("RULE-AUDIO-DIRECTIVE-WITHOUT-EVIDENCE", error_codes(evidence))
+            for field in ("director_decision", "audio_logic"):
+                with self.subTest(statement=statement, field=field):
+                    evidence = make_valid_evidence()
+                    if field == "audio_logic":
+                        evidence["candidate_rules"][0][field]["value"] = statement
+                    else:
+                        evidence["candidate_rules"][0][field] = statement
+                    self.assertIn("RULE-AUDIO-DIRECTIVE-WITHOUT-EVIDENCE", error_codes(evidence))
 
     def test_single_token_unknown_cannot_reappear_as_rule_fact(self) -> None:
         for rule_text in (
@@ -1286,6 +1402,10 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             ("access_token", "fixture-token-12345", "PUBLIC-CREDENTIAL"),
             ("client_secret", "fixture-secret-12345", "PUBLIC-CREDENTIAL"),
             ("password", "fixture-password-12345", "PUBLIC-CREDENTIAL"),
+            ("refresh_token", "fixture-token-12345", "PUBLIC-CREDENTIAL"),
+            ("private_key", "fixture-key-12345", "PUBLIC-CREDENTIAL"),
+            ("cookie", "fixture-cookie-12345", "PUBLIC-CREDENTIAL"),
+            ("authorization", "Bearer fixture-token-12345", "PUBLIC-CREDENTIAL"),
         ):
             with self.subTest(key=key):
                 evidence = make_valid_evidence()
@@ -1293,6 +1413,12 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
                 evidence["candidate_rules"][0]["promotion_status"] = "BLOCKED_BY_UNKNOWN"
                 evidence["auxiliary_evidence"][0]["measurements"] = {key: value}
                 self.assertIn(expected, error_codes(evidence))
+
+        evidence = make_valid_evidence()
+        add_signal_auxiliary(evidence)
+        evidence["candidate_rules"][0]["promotion_status"] = "BLOCKED_BY_UNKNOWN"
+        evidence["auxiliary_evidence"][0]["measurements"] = {"synthetic_level": -12.0}
+        self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
 
     def test_report_cannot_overwrite_input(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
