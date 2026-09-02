@@ -2,7 +2,7 @@
 
 Updated: 2026-09-02
 
-Status: `FINAL_LOCAL_PASS / REPAIR_HEAD_CI_PASS / INDEPENDENT_REVIEW_PASS / FINAL_DOCUMENTATION_CI_PENDING`
+Status: `COMPLETE / FINAL_LOCAL_PASS / FINAL_DOCUMENTATION_CI_PASS / INDEPENDENT_REVIEW_PASS`
 
 This register is the reproducible source for current numerical pass claims. A
 command is evidence only for the boundary named in its row. Structural checks do
@@ -30,7 +30,7 @@ sound, and do not constitute creative approval.
 | Repository boundary audit | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_repository_boundaries.py --quiet` | Boundary validator and automation tests | PASS — zero whole-repository file/syntax/link issues and zero current-machine/runtime scoped string issues | Original 30 immutable legacy Markdown ledgers are explicitly excluded provenance; no whole-repository zero-string claim is made |
 | Final validation report | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/run_repository_checks.py` | Strict `final-generalization-validation/0.4` schema, live runner evidence and deterministic JSON | PASS_LOCAL — 33 dispositions, 31 scenes, 2,343 units, 124 candidates, 16 families, 225 tests, zero validation errors and 103 preserved warnings | A missing or failed prerequisite produces `FAIL_LOCAL`; the versioned report does not self-attest post-commit PR state or remote CI |
 | Complete local automation | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/run_repository_checks.py` | Local runner, all builders/validators, temporary report comparison, tests and final report | PASS — 18 checks | Local CI-equivalent execution; does not claim a GitHub-hosted run |
-| Minimal CI definition | `.github/workflows/directormind-contracts.yml` | Read-only workflow calling the complete local runner | PASS_REMOTE_REPAIR_HEAD | First run exposed Python 3.9/3.12 sum drift; after decimal summation and cross-runtime reproduction, the corrective hosted run passed. The follow-up routing/upgrade repair run also passed. Final documentation head remains separately gated |
+| Minimal CI definition | `.github/workflows/directormind-contracts.yml` | Read-only workflow calling the complete local runner | PASS_REMOTE_FINAL_DOCUMENTATION_HEAD | First run exposed Python 3.9/3.12 sum drift; after correction the implementation, follow-up routing/upgrade repair and independent-review documentation runs passed |
 | Whitespace | `git diff --check origin/main...HEAD` | Complete committed PR change set | PASS | The local pre-commit working-tree diff is checked separately with `git diff --check` |
 
 ## Final independent review

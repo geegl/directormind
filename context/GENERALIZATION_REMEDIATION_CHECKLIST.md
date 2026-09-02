@@ -197,7 +197,7 @@ Remaining validation boundary: these checks do not replay source media, directly
 |---|---|---|---|
 | L1 | VERIFIED_DONE | Add minimal GitHub CI for Skill validation, Python compile, all schemas/evidence/rules/grammar/forward tests, broken refs, scoped public-artifact prohibitions and whitespace. | Read-only workflow calls the same stdlib-only local runner with read-only repository permission; corrected quick/full commands and narrow independent re-review pass. Hosted CI is verified live after the final push, not self-attested by the versioned local report. |
 | L2 | VERIFIED_DONE | Write `FINAL_GENERALIZATION_VALIDATION.json` with every required count and zero errors, broken refs, prohibited repository files or scoped current-artifact string issues. | Live-runner-backed `final-generalization-validation/0.4` passes its strict schema and records 33/31/2,343/124/16, 225 tests, zero validation errors and 103 preserved warnings. Post-commit PR state is deliberately verified live rather than self-attested. |
-| L3 | VERIFIED_DONE | Run quick validation, units, all Scene Evidence, all Grammar, forward tests and whitespace through the local CI-equivalent command. | The integrated 225-test suite and all 18 local CI-equivalent checks pass, including exact comparison of five versioned validator reports and `git diff --check origin/main...HEAD`. The last pushed implementation head passed the hosted workflow; the follow-up repair and final documentation heads remain separately gated by CI under M6. |
+| L3 | VERIFIED_DONE | Run quick validation, units, all Scene Evidence, all Grammar, forward tests and whitespace through the local CI-equivalent command. | The integrated 225-test suite and all 18 local CI-equivalent checks pass, including exact comparison of five versioned validator reports and `git diff --check origin/main...HEAD`. The follow-up repair and independent-review documentation heads both passed the hosted workflow. |
 | L4 | VERIFIED_DONE | Add `INDEPENDENT_GENERALIZATION_AUDIT.md` with verdict, P0/P1, non-blockers, unverified items, and merge decision. | Historical phase audits remain immutable. `FINAL_INTEGRATION_INDEPENDENT_AUDIT.md` records a fresh non-writing replay of both final P1s, valid paths, complete local checks, repair-head CI and unverified boundaries; verdict is `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. |
 
 ## M. Final delivery
@@ -209,7 +209,7 @@ Remaining validation boundary: these checks do not replay source media, directly
 | M3 | VERIFIED_DONE | Deliver Candidate Rule schema/index and cross-work matrix JSON/Markdown. | Phase 2 rule/matrix validation and final independent review pass. |
 | M4 | VERIFIED_DONE | Deliver Director Grammar v0.2 and updated Skill routing/conflict logic/tests. | Grammar/routing schemas, validators, eight canonical cases, exact input-to-result replay plus scene/fact/Shot binding, v0.1-only GO compatibility, safe non-overwriting upgrader modes, visible legacy-audio handling, and targeted regressions pass locally. |
 | M5 | VERIFIED_DONE | Deliver original forward-test packages. | Eight deterministic packages, six required problem tags, zero false positive selections, 31 preserved visual-binding warnings and Phase 4 independent review PASS. |
-| M6 | IN_PROGRESS | Deliver full validation, independent audit, reduced STATE, clean Succession integration, CI, and updated PR description. | This closes only after K4 and L2-L4 return to `VERIFIED_DONE`, the final PR #3 description is updated and no TODO/BLOCKED/IN_PROGRESS row remains. |
+| M6 | VERIFIED_DONE | Deliver full validation, independent audit, reduced STATE, clean Succession integration, CI, and updated PR description. | K4 and L2-L4 are `VERIFIED_DONE`; the independent-review documentation head passed hosted CI; PR #3 is open with the final repair, evidence and rollback summary; this checklist has no TODO, BLOCKED or IN_PROGRESS row. |
 
 ## Current blockers and known defects
 
@@ -223,4 +223,4 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 ## Current next action
 
-Commit and push the independent PASS evidence, update the PR #3 description, require that documentation head to pass hosted CI, then close M6 and stop without merging `main`.
+All authorized work is complete. Keep PR #3 open and stop; wait for the user's separate merge decision without merging `main`.

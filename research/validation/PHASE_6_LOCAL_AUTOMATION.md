@@ -2,7 +2,7 @@
 
 Updated: 2026-09-02
 
-Status: `FOLLOW_UP_REPAIR_CI_PASS / INDEPENDENT_REVIEW_PASS / FINAL_DOCUMENTATION_CI_PENDING`
+Status: `COMPLETE / FINAL_DOCUMENTATION_CI_PASS / INDEPENDENT_REVIEW_PASS`
 
 ## Result
 
@@ -48,8 +48,9 @@ The current local runner also covers the later narrow repair: one canonical scen
 - Corrective evidence: all 31 conversions pass byte-for-byte under Python 3.9 and Python 3.12; 13/13 converter tests and 18/18 repository checks pass locally.
 - Corrective hosted run: PASS; the read-only `validate` job completed successfully.
 - Follow-up routing/upgrade repair run: PASS; the same read-only `validate` job completed successfully.
+- Independent-review documentation run: PASS; the same read-only `validate` job completed successfully.
 - PR #1: CLOSED WITHOUT MERGE only after the corrective hosted run passed; the current 88-unit migration stays in PR #3.
-- The final documentation head still requires a hosted run after the final independent verdict is recorded.
+- PR #3 remains open with its description updated; `main` remains unmerged for the user's separate decision.
 
 ## Independent result
 

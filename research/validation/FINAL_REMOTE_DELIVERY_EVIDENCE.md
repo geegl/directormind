@@ -2,7 +2,7 @@
 
 Updated: 2026-09-02
 
-Status: `REPAIR_HEAD_CI_PASSED / INDEPENDENT_REVIEW_PASSED / FINAL_DOCUMENTATION_CI_PENDING`
+Status: `FINAL_DOCUMENTATION_CI_PASSED / INDEPENDENT_REVIEW_PASSED / PR_OPEN`
 
 ## Scope
 
@@ -19,10 +19,12 @@ This record covers only the authorized PR #3 pushes, hosted CI and PR #1 closure
 - A later final review found two P1s in routing provenance and upgrade-output protection. The follow-up repair embeds and replays canonical routing input, binds scene facts, and refuses every existing output path.
 - The repair-head hosted run passed: <https://github.com/geegl/directormind/actions/runs/33635006251>.
 - A fresh non-writing reviewer independently replayed both attacks and the valid paths, then issued `PASS_LOCAL / NO_MUST_FIX_FINDINGS`; see `FINAL_INTEGRATION_INDEPENDENT_AUDIT.md`.
+- The independent-review documentation head passed: <https://github.com/geegl/directormind/actions/runs/33636232262>.
+- PR #3's description now records the final P1 corrections, 225-test and 18-check results, independent verdict, remaining boundaries and rollback.
 
-## Remaining gate
+## Remaining decision
 
-The final PR #3 documentation head must pass hosted CI after this evidence is committed and the PR description is updated. L4 is closed by the independent PASS; M6 stays open until that final live CI check succeeds. `main` remains unmerged pending the user's decision.
+All authorized implementation and validation gates are complete. PR #3 remains open and `main` remains unmerged pending the user's separate decision.
 
 ## Rollback
 

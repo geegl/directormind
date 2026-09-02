@@ -52,6 +52,10 @@ paths after repair.
   their own commit. The final documentation head must therefore be verified
   live after push; it must not self-attest a future CI result.
 
+Post-review external evidence: the independent-review documentation head later
+passed the read-only hosted workflow at
+<https://github.com/geegl/directormind/actions/runs/33636232262>.
+
 ## Unverified boundaries
 
 - Source media, private scripts and private Director IR were not opened or
