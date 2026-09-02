@@ -1002,6 +1002,26 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
                 evidence["boundary_evidence"]["source_refs"] = refs
                 self.assertIn(expected, error_codes(evidence))
 
+    def test_verified_boundary_cannot_reach_endpoint_through_unknown_track(self) -> None:
+        for direct_ref, wrapped_ref, expected in (
+            (f"{EVIDENCE_ID}-S001", f"{EVIDENCE_ID}-S002", "BOUNDARY-END-SOURCE-MISSING"),
+            (f"{EVIDENCE_ID}-S002", f"{EVIDENCE_ID}-S001", "BOUNDARY-START-SOURCE-MISSING"),
+        ):
+            with self.subTest(wrapped_ref=wrapped_ref):
+                evidence = make_valid_evidence()
+                evidence["continuity_tracks"] = [
+                    {
+                        "track_id": "TRACK-UNKNOWN-BOUNDARY",
+                        "track_kind": "VEHICLE_APPEARANCE",
+                        "status": "UNKNOWN",
+                        "statement": "Boundary linkage remains unknown.",
+                        "source_refs": [wrapped_ref],
+                        "unknowns": ["Boundary linkage remains unknown."],
+                    }
+                ]
+                evidence["boundary_evidence"]["source_refs"] = [direct_ref, "TRACK-UNKNOWN-BOUNDARY"]
+                self.assertIn(expected, error_codes(evidence))
+
     def test_boundary_status_matches_first_and_last_shot_completeness(self) -> None:
         evidence = make_valid_evidence()
         evidence["scene_unit_type"] = "SELECTED_INTERNAL_ENVELOPE"
@@ -1284,6 +1304,9 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             "Red vehicle visible on screen and identity remains unknown.",
             "Red vehicle on screen, identity remains unknown.",
             "Red vehicle in frame and identity remains unknown.",
+            "Red vehicle on screen: identity remains unknown.",
+            "Red vehicle in-frame, identity remains unknown.",
+            "The vehicle occupies frame left, identity remains unknown.",
             "The same person continues across the cut, identity remains unknown.",
         )
         for location in ("shot", "audio", "method", "auxiliary", "continuity"):
@@ -1339,6 +1362,9 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             "Audio remains unknown; do not add a score before bringing in music.",
             "Audio remains unknown; do not add a score instead bring in music.",
             "Audio remains unknown; do not add a score—bring in music instead.",
+            "Audio remains unknown; do not add a score: bring in music.",
+            "Audio remains unknown; do not add a score / bring in music.",
+            "Audio remains unknown; do not add a score rather than bring in music.",
         ):
             for location in ("shot", "audio", "method", "auxiliary", "continuity"):
                 with self.subTest(statement=statement, location=location):
@@ -1352,6 +1378,9 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             "Do not add a score, track the music.",
             "Do not add a score instead bring in music.",
             "Do not add a score—bring in music instead.",
+            "Do not add a score: bring in music.",
+            "Do not add a score / bring in music.",
+            "Do not add a score rather than bring in music.",
         ):
             for field in ("director_decision", "audio_logic"):
                 with self.subTest(statement=statement, field=field):
@@ -1406,6 +1435,11 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             ("private_key", "fixture-key-12345", "PUBLIC-CREDENTIAL"),
             ("cookie", "fixture-cookie-12345", "PUBLIC-CREDENTIAL"),
             ("authorization", "Bearer fixture-token-12345", "PUBLIC-CREDENTIAL"),
+            ("x-api-key", "fixture-secret-12345", "PUBLIC-CREDENTIAL"),
+            ("production_api_key", "fixture-secret-12345", "PUBLIC-CREDENTIAL"),
+            ("github_token", "fixture-token-12345", "PUBLIC-CREDENTIAL"),
+            ("session_cookie", "fixture-cookie-12345", "PUBLIC-CREDENTIAL"),
+            ("authorization_header", "Bearer fixture-token-12345", "PUBLIC-CREDENTIAL"),
         ):
             with self.subTest(key=key):
                 evidence = make_valid_evidence()
@@ -1417,7 +1451,10 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
         evidence = make_valid_evidence()
         add_signal_auxiliary(evidence)
         evidence["candidate_rules"][0]["promotion_status"] = "BLOCKED_BY_UNKNOWN"
-        evidence["auxiliary_evidence"][0]["measurements"] = {"synthetic_level": -12.0}
+        evidence["auxiliary_evidence"][0]["measurements"] = {
+            "synthetic_level": -12.0,
+            "token_count": 42,
+        }
         self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
 
     def test_report_cannot_overwrite_input(self) -> None:

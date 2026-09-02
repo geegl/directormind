@@ -49,8 +49,9 @@ CREDENTIAL_RE = re.compile(
     re.IGNORECASE,
 )
 CREDENTIAL_KEY_RE = re.compile(
-    r"^(?:api[_ -]?key|access[_ -]?token|refresh[_ -]?token|client[_ -]?secret|private[_ -]?key|"
-    r"password|passwd|secret|token|cookie|authorization)$",
+    r"(?:^|[_ -])(?:api[_ -]?key|access[_ -]?token|refresh[_ -]?token|github[_ -]?token|"
+    r"session[_ -]?token|client[_ -]?secret|private[_ -]?key|password|passwd|secret|cookie|"
+    r"authorization)(?:$|[_ -])|^token$",
     re.IGNORECASE,
 )
 FINGERPRINT_LABEL_RE = re.compile(r"\b(?:sha(?:-?1|-?256|-?512)?|md5)\b", re.IGNORECASE)
@@ -123,11 +124,13 @@ CROSS_CUT_IDENTITY_ASSERTION_RE = re.compile(
 )
 AFFIRMATIVE_FACT_RE = re.compile(
     r"\b(?:is|are|was|were|has|have|contains?|shows?|appears?|returns?|continues?|persists?|matches?|"
-    r"becomes?|uses?|keeps?|holds?|wears?|drives?|moves?|visible|audible|present|onscreen|on-screen)\b",
+    r"becomes?|uses?|keeps?|holds?|wears?|drives?|moves?|occup(?:y|ies|ied)|visible|audible|present|"
+    r"onscreen|on-screen)\b",
     re.IGNORECASE,
 )
 AFFIRMATIVE_PICTURE_PHRASE_RE = re.compile(
-    r"\b(?:on\s+screen|in\s+(?:the\s+)?frame)\s*(?:,|\band\b)",
+    r"\b(?:on[-\s]+screen|in[-\s]+(?:the[-\s]+)?frame|frame\s+(?:left|right|cent(?:er|re)))\b"
+    r"\s*(?::|,|\band\b)",
     re.IGNORECASE,
 )
 OPERATIONAL_VERB_RE = re.compile(
@@ -530,7 +533,7 @@ def _validate_public_boundary(evidence: dict[str, Any], issues: list[dict[str, s
             add_issue(issues, "error", "PUBLIC-DATA-URI", path, "embedded data payload is prohibited")
         if CREDENTIAL_RE.search(text):
             add_issue(issues, "error", "PUBLIC-CREDENTIAL", path, "credential-like material is prohibited")
-        if "{key:" in path and CREDENTIAL_KEY_RE.fullmatch(text.strip()):
+        if "{key:" in path and CREDENTIAL_KEY_RE.search(text.strip()):
             add_issue(issues, "error", "PUBLIC-CREDENTIAL", path, "credential-labelled JSON key is prohibited")
         if FINGERPRINT_LABEL_RE.search(text) or LONG_HEX_RE.search(text):
             add_issue(issues, "error", "PUBLIC-FINGERPRINT", path, "media fingerprint material is prohibited")
@@ -581,8 +584,8 @@ def _has_unauditioned_audio_assertion(text: str) -> bool:
 def _has_unsafe_audio_directive(text: str) -> bool:
     """Recognize audio instructions while preserving explicit negative boundaries."""
     for sentence in re.split(
-        r"[.!?;,\n—–]+|\b(?:and|or|plus|before|after|instead(?:\s+of)?|but|however|yet|although|while|so|"
-        r"therefore|then)\b",
+        r"[.!?;,:/\\\n—–]+|\b(?:and|or|plus|before|after|instead(?:\s+of)?|rather\s+than|but|however|yet|"
+        r"although|while|so|therefore|then)\b",
         text,
         flags=re.IGNORECASE,
     ):
@@ -1549,14 +1552,19 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
         sources: list[str] = []
         if ref in auxiliary_by_id:
             item = auxiliary_by_id[ref]
+            if item.get("status") == "UNKNOWN" or not terminal_tracks(ref):
+                return False
             sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
         elif ref in track_by_id:
             item = track_by_id[ref]
+            if item.get("status") == "UNKNOWN" or not terminal_tracks(ref):
+                return False
             sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
         elif ref in claims:
             item = claims[ref][1]
-            if item.get("status") != "UNKNOWN":
-                sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
+            if item.get("status") == "UNKNOWN" or not terminal_tracks(ref):
+                return False
+            sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
         return any(
             reference_reaches_shot(source_ref, target_shot_id, visiting | {ref})
             for source_ref in sources
