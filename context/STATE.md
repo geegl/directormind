@@ -4,7 +4,7 @@ Updated: 2026-09-02
 
 ## Current phase
 
-The user-approved 33-source generalization Goal has passed final local integration on `codex/macos-first16-local-batch`; the authorized remote gates are next.
+The user-approved 33-source generalization Goal has passed local integration and the implementation-head hosted CI on `codex/macos-first16-local-batch`; final independent review and final-head CI remain.
 
 Phases 1 through 6 and the later runtime-contract compatibility repair are present locally. The repair enforces one canonical scene-problem vocabulary and negative sentinel, restores v0.1-only GO-01/GO-07 checks, binds complete v0.2 routing results to an authority-validated Grammar, and preserves legacy audio and upgrade data without inventing a route. The original 30 legacy Markdown sources remain unchanged; their canonical derived outputs were regenerated only to satisfy the stricter boundary and UNKNOWN contracts. The existing 88-unit *Succession* ledger remains integrated, no UNKNOWN-dependent candidate is executable, and eight rights-safe original packages still route without inventing a rule.
 
@@ -55,7 +55,7 @@ Generated `*.scene-evidence.generated.md` files are deterministic review views o
 - No real positive selection has been exercised because the live eligible-family set is empty; the forward-test validator will fail when that set becomes non-empty until each family has distinct positive and boundary packages.
 - The first final read-only audit returned FAIL on evidence scope/provenance wording. All three findings are corrected; the narrow independent re-review issued PASS.
 - The post-completion compatibility repair received `PASS_LOCAL / NO_MUST_FIX_FINDINGS` from fresh non-writing reviewers after they replayed the initially failing adversarial cases.
-- The GitHub workflow is defined and the fresh integrated local run passes; remote PR #3 CI is pending the authorized push.
+- The GitHub workflow is defined. Its first integrated run exposed Python-version float-sum drift; the corrected implementation then passed hosted CI. Final documentation still requires final-head CI.
 - Source replay and direct semantic-audio audition remain outside this Goal; structural validation cannot prove the original picture observations, sound semantics, creative quality or audience response.
 
 ## Latest validation
@@ -76,7 +76,7 @@ Generated `*.scene-evidence.generated.md` files are deterministic review views o
 - Phase 4 independent read-only audit: PASS after replaying false-positive, private-path, fact-drift, work-title, approval, audio-loss and JSON Unicode-escape attacks and reading all eight original scripts.
 - Phase 5 independent read-only audit: PASS — 88/4 migration, original 30/120 no-drift, UNKNOWN/audio/runtime boundaries, four reviewed family assignments, catalog route and 31/2,343/124/16/0/72 arithmetic reproduced with no must-fix finding.
 - Repository automation after compatibility repair and Phase 1 re-review integration: PASS — all 18 checks pass, five versioned reports match live output, and `final-generalization-validation/0.4` is deterministic `PASS_LOCAL` with zero validation errors and 103 preserved warnings.
-- Minimal CI workflow: PRESENT_LOCAL_ONLY — read-only permissions and the same local runner; remote CI will run after the verified integration is pushed.
+- Minimal CI workflow: PASS_REMOTE_IMPLEMENTATION_HEAD — read-only permissions and the same local runner; the corrective hosted run passed after 2 minutes 42 seconds. The final documentation head will be checked again.
 - Final independent audit: PASS_LOCAL — no must-fix finding remains after individual failure injection across all 17 live prerequisites; unverified boundaries remain explicit.
 - Compatibility-repair independent audit: PASS_LOCAL — three fresh read-only reviewers found real first-round gaps, verified their closure, and reported no remaining must-fix finding.
 
@@ -84,4 +84,4 @@ The current command-to-claim evidence is `research/validation/VALIDATION_CLAIM_R
 
 ## Next single action
 
-Commit and push the verified integration to PR #3, require final-head CI success, close PR #1, update the final evidence and obtain a fresh independent read-only verdict. Do not merge `main`, deploy, publish or delete media.
+Obtain a fresh independent read-only verdict on the integrated state, record the result, push the final evidence update and require final-head CI success. PR #1 is closed without merge; do not merge `main`, deploy, publish or delete media.

@@ -2,7 +2,7 @@
 
 Updated: 2026-09-02
 
-Status: `FINAL_INTEGRATION_IN_PROGRESS / PR3_PUSH_AND_PR1_CLOSE_AUTHORIZED`
+Status: `FINAL_INDEPENDENT_REVIEW_IN_PROGRESS / REMOTE_IMPLEMENTATION_CI_PASSED`
 
 Compatibility repair status: `LOCAL_COMPLETE / INDEPENDENT_READ_ONLY_REVIEW_PASS`
 
@@ -143,11 +143,11 @@ Repair completion requires targeted compatibility tests, the full local suite, t
 
 - Current accountable implementer: root agent, sole integrator. No other writer may edit the same mutable file concurrently.
 - Completed: all implementation phases are present locally; the stricter Phase 1 repair has been integrated with the later closed-corpus work.
-- Remaining: complete the post-integration local runner, push PR #3, obtain final-head CI success, close PR #1, update final evidence and obtain the fresh independent read-only verdict.
-- Current validation: the integrated Scene validator passes 100/100 tests, the corrected converter passes 13/13 tests, the complete suite passes 223/223, and all 18 local repository checks pass with a deterministic `final-generalization-validation/0.4` report.
+- Remaining: obtain the fresh independent read-only verdict, update the final evidence, push the final documentation head and require its hosted CI success.
+- Current validation: the integrated Scene validator passes 100/100 tests, the corrected converter passes 13/13 tests on Python 3.9 and 3.12, the complete suite passes 223/223, all 18 local repository checks pass, and the PR #3 implementation head passes hosted CI.
 - Known boundaries: all current scene problems remain UNKNOWN; direct semantic audio is absent; no candidate is yet authorized as an executable cross-work rule.
 - Remote boundary: PR #3 push and PR #1 closure are authorized in the order above. Merging `main` and all deployment/publication/production actions remain prohibited.
-- Next single action: commit the verified integration, push PR #3 and wait for the final-head CI gate.
+- Next single action: run the fresh independent read-only final review; then record its verdict and validate the final documentation head.
 
 ## Rollback
 

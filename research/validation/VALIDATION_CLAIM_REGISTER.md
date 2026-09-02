@@ -1,8 +1,8 @@
 # Validation Claim Register
 
-Updated: 2026-09-01
+Updated: 2026-09-02
 
-Status: `FINAL_LOCAL_PASS / INDEPENDENT_READ_ONLY_REVIEW_PASS`
+Status: `FINAL_LOCAL_PASS / REMOTE_IMPLEMENTATION_CI_PASS / FINAL_REVIEW_PENDING`
 
 This register is the reproducible source for current numerical pass claims. A
 command is evidence only for the boundary named in its row. Structural checks do
@@ -26,11 +26,11 @@ sound, and do not constitute creative approval.
 | Canonical Scene Evidence structure | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_scene_evidence.py research/evidence --quiet` | Validator `scene-evidence-validator/0.1` and `scene-evidence-validation.json` | PASS_STRUCTURAL — 31 passed, 0 failed, 0 errors, 72 warnings | Warnings remain visible; no direct semantic-audio claim is added |
 | Scene Evidence schema syntax | `python3 -m json.tool skills/drama-director-compiler/references/scene-evidence.schema.json` | Scene Evidence schema | PASS | JSON syntax only |
 | Versioned validation report syntax | `python3 -m json.tool research/validation/scene-evidence-validation.json` | Structural validation report | PASS | JSON syntax only |
-| Current task/status authority contract | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest skills/drama-director-compiler/tests/test_phase1_state_contract.py -v` | Approved task card, compact STATE, catalog headers and checklist | PASS — 5 tests | Confirms current counts/catalog route and preserves external-action gates |
+| Current task/status authority contract | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s skills/drama-director-compiler/tests -p test_phase1_state_contract.py -v` | Approved task card, compact STATE, catalog headers and checklist | PASS — 5 tests | Confirms current counts/catalog route and bounded external authorization |
 | Repository boundary audit | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_repository_boundaries.py --quiet` | Boundary validator and automation tests | PASS — zero whole-repository file/syntax/link issues and zero current-machine/runtime scoped string issues | Original 30 immutable legacy Markdown ledgers are explicitly excluded provenance; no whole-repository zero-string claim is made |
 | Final validation report | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/run_repository_checks.py` | Strict `final-generalization-validation/0.4` schema, live runner evidence and deterministic JSON | PASS_LOCAL — 33 dispositions, 31 scenes, 2,343 units, 124 candidates, 16 families, 223 tests, zero validation errors and 103 preserved warnings | A missing or failed prerequisite produces `FAIL_LOCAL`; the versioned report does not self-attest post-commit PR state or remote CI |
 | Complete local automation | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/run_repository_checks.py` | Local runner, all builders/validators, temporary report comparison, tests and final report | PASS — 18 checks | Local CI-equivalent execution; does not claim a GitHub-hosted run |
-| Minimal CI definition | `.github/workflows/directormind-contracts.yml` | Read-only workflow calling the complete local runner | PRESENT_LOCAL_ONLY | Local replay proves the command; the final PR head's hosted result must be verified live after push |
+| Minimal CI definition | `.github/workflows/directormind-contracts.yml` | Read-only workflow calling the complete local runner | PASS_REMOTE_IMPLEMENTATION_HEAD | First run exposed Python 3.9/3.12 sum drift; after decimal summation and cross-runtime reproduction, the corrective hosted run passed. Final documentation head remains separately gated |
 | Whitespace | `git diff --check` | Current local change set | PASS | Tracked textual diff only |
 
 ## Final independent review
@@ -74,10 +74,10 @@ assignments, current-route catalog updates and local checks.
 PASS and independently reproduces the no-drift, UNKNOWN/audio/runtime, count,
 rights and external-action boundaries.
 
-## Claims not yet authorized
+## Remaining evidence boundaries
 
 - No candidate is an executable cross-work rule; the active runtime grammar therefore contains zero evidence rules.
-- No real positive routing selection or remote CI pass is claimed; all current forward-test packages exercise the honest zero-eligible branch.
+- No real positive routing selection is claimed; all current forward-test packages exercise the honest zero-eligible branch.
 - No source media, semantic audio, creative quality or audience effect has been
   revalidated by these commands.
-- No remote PR state has been changed by this phase.
+- PR #3 remains open and unmerged. PR #1 was closed without merge after successful integration and hosted CI. The final PR #3 documentation head still requires hosted CI.

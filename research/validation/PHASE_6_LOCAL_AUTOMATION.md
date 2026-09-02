@@ -1,14 +1,14 @@
 # Phase 6 — Local Automation and Final Validation
 
-Updated: 2026-09-01
+Updated: 2026-09-02
 
-Status: `CORRECTED_LOCAL_PASS / COMPATIBILITY_REPAIR_REVIEW_PASS`
+Status: `LOCAL_PASS / REMOTE_IMPLEMENTATION_CI_PASS / FINAL_REVIEW_PENDING`
 
 ## Result
 
 The repository now has one stdlib-only local check command and a minimal read-only GitHub Actions workflow that calls the same command. No package installation, cache, secret, artifact upload, provider call or business-network request is required.
 
-The workflow is present locally only. It was not pushed, so no remote CI pass is claimed.
+The workflow was pushed to PR #3. The first hosted run exposed a cross-version floating-point sum difference between local Python 3.9 and hosted Python 3.12. After the converter switched to decimal-text summation and gained a regression assertion, both runtimes produced byte-identical canonical output and the corrective hosted run passed.
 
 ## Added contracts
 
@@ -42,12 +42,20 @@ The current local runner also covers the later narrow repair: one canonical scen
 - Source media was not replayed, audio was not directly auditioned, and no positive rule selection can exist while the eligible set is empty.
 - Structural checks do not prove creative quality or audience effect.
 
+## Hosted result
+
+- First integrated run: FAIL at canonical conversion determinism; 14 files differed only in the final representation of `stats.total_duration`.
+- Corrective evidence: all 31 conversions pass byte-for-byte under Python 3.9 and Python 3.12; 13/13 converter tests and 18/18 repository checks pass locally.
+- Corrective hosted run: PASS; the read-only `validate` job completed successfully.
+- PR #1: CLOSED WITHOUT MERGE only after the corrective hosted run passed; the current 88-unit migration stays in PR #3.
+- The final documentation head still requires a hosted run after the final independent verdict is recorded.
+
 ## Independent result
 
 The first final audit returned FAIL on three evidence defects despite passing runtime checks. After correction, the non-writing reviewer reran the full suite, verified missing-evidence failure and injected failure into each live prerequisite. That historical narrow re-review issued PASS. Three fresh non-writing reviewers later audited the compatibility repair, first found real blockers, then independently replayed the corrected attacks and issued `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. See `COMPATIBILITY_REPAIR_INDEPENDENT_AUDIT.md`; the historical `INDEPENDENT_GENERALIZATION_AUDIT.md` remains unchanged.
 
 ## External effects and rollback
 
-The executor declares that no push, merge, pull-request closure, deployment, publication, account/permission change, payment, source-media action or deletion occurred. These statements are not presented as machine-verifiable repository evidence.
+The authorized PR #3 pushes and PR #1 closure occurred. No merge, deployment, publication, account/permission change, payment, source-media action or deletion occurred. Live PR state is recorded separately because a versioned artifact cannot self-attest the CI run created after its own commit.
 
 After the Phase 6 files are committed in isolation, use a normal revert of that commit to remove the local runner, boundary validator, final-report builder/schema/report, workflow, tests and status updates. Do not rewrite shared history or touch the Phase 5 migration.

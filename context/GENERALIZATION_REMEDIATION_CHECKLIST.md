@@ -189,7 +189,7 @@ Remaining validation boundary: these checks do not replay source media, directly
 | K1 | VERIFIED_DONE | Do not merge PR #1 unchanged. | Current task explicitly prohibits it; PR #1 remains separate. |
 | K2 | VERIFIED_DONE | Cleanly migrate Succession: exclude prohibited media-fingerprint material and authorizing text, retain 88-shot evidence, add Scene JSON, candidate index, and support matrix entries. | 31-scene converter/renderer checks pass; Scene validation is 31/31 with 0 errors; candidate validation is 124/16 with 0 authorized; original 30 evidence files have no diff; fresh Phase 5 independent review PASS. |
 | K3 | VERIFIED_DONE | Resolve `SCENE_PROBLEM_MAP.md` conflicts and keep only the current route. | Current authority header is preserved; only the public-revelation and group-power catalog rows receive bounded picture/UNKNOWN updates; the old map was not merged; fresh Phase 5 independent review PASS. |
-| K4 | IN_PROGRESS | Close PR #1 only after current-branch integration succeeds. | Closure is authorized on 2026-09-02 after the integrated local checks and PR #3 CI pass; those gates are currently being executed. |
+| K4 | VERIFIED_DONE | Close PR #1 only after current-branch integration succeeds. | PR #1 was closed without merge after 223/223 local tests, 18/18 local checks and PR #3 hosted CI passed. The 88-unit migration remains in the current contracts on PR #3. |
 
 ## L. CI and final validation
 
@@ -197,7 +197,7 @@ Remaining validation boundary: these checks do not replay source media, directly
 |---|---|---|---|
 | L1 | VERIFIED_DONE | Add minimal GitHub CI for Skill validation, Python compile, all schemas/evidence/rules/grammar/forward tests, broken refs, scoped public-artifact prohibitions and whitespace. | Read-only workflow calls the same stdlib-only local runner with read-only repository permission; corrected quick/full commands and narrow independent re-review pass. Hosted CI is verified live after the final push, not self-attested by the versioned local report. |
 | L2 | VERIFIED_DONE | Write `FINAL_GENERALIZATION_VALIDATION.json` with every required count and zero errors, broken refs, prohibited repository files or scoped current-artifact string issues. | Live-runner-backed `final-generalization-validation/0.4` passes its strict schema and records 33/31/2,343/124/16, 223 tests, zero validation errors and 103 preserved warnings. Post-commit PR state is deliberately verified live rather than self-attested. |
-| L3 | VERIFIED_DONE | Run quick validation, units, all Scene Evidence, all Grammar, forward tests and whitespace through the local CI-equivalent command. | The integrated 223-test suite and all 18 local CI-equivalent checks pass, including exact comparison of five versioned validator reports. The final PR #3 head's hosted CI remains the external gate. |
+| L3 | VERIFIED_DONE | Run quick validation, units, all Scene Evidence, all Grammar, forward tests and whitespace through the local CI-equivalent command. | The integrated 223-test suite and all 18 local CI-equivalent checks pass, including exact comparison of five versioned validator reports. The implementation head also passed the hosted workflow after a Python 3.9/3.12 float-sum drift was reproduced, corrected and regression-tested; the final documentation head remains gated by CI under M6. |
 | L4 | IN_PROGRESS | Add `INDEPENDENT_GENERALIZATION_AUDIT.md` with verdict, P0/P1, non-blockers, unverified items, and merge decision. | Historical phase audits remain immutable. A fresh non-writing reviewer must inspect the final integrated state after all local and external gates complete. |
 
 ## M. Final delivery
@@ -217,9 +217,9 @@ Remaining validation boundary: these checks do not replay source media, directly
 - Explicit frame/PTS and legacy fallback gaps remain visible; converter warnings prohibit treating provisional values as source-proven facts.
 - The known 13 absent legacy artifacts are closed as explicit absence records; broader historical claims outside this closed register were not re-proved.
 - Direct semantic audio audition is absent; signal measurement is not semantic sound evidence.
-- PR #1 cannot be merged unchanged because it contains prohibited media-hash material and older evidence semantics.
+- PR #1 was closed without merge because it contained prohibited media-fingerprint material and older evidence semantics; its 88-unit evidence was migrated through the current contracts instead.
 - The runtime grammar is active but correctly contains zero evidence rules because none of the 124 candidates passes the promotion gates; all eight original packages therefore prove the no-ready/no-applicable branch, while a real positive selection remains unproved until evidence becomes eligible.
 
 ## Current next action
 
-Run the complete post-integration local validation. If it passes, push to PR #3, require final-head CI success, close PR #1, finish the fresh read-only review, and stop without merging `main`.
+Obtain the fresh independent read-only verdict on the integrated state. If it passes, close L4/M6, push the final evidence update, require final-head CI success, and stop without merging `main`.
