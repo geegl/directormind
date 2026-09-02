@@ -6,6 +6,7 @@ from __future__ import annotations
 import contextlib
 import io
 import json
+import os
 import sys
 import tempfile
 import unittest
@@ -956,6 +957,16 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
         )
         self.assertIn("BOUNDARY-VERIFIED-FROM-UNKNOWN", error_codes(evidence))
 
+    def test_verified_boundary_must_reach_both_endpoint_shots(self) -> None:
+        for refs, expected in (
+            ([f"{EVIDENCE_ID}-S001"], "BOUNDARY-END-SOURCE-MISSING"),
+            ([f"{EVIDENCE_ID}-S002"], "BOUNDARY-START-SOURCE-MISSING"),
+        ):
+            with self.subTest(refs=refs):
+                evidence = make_valid_evidence()
+                evidence["boundary_evidence"]["source_refs"] = refs
+                self.assertIn(expected, error_codes(evidence))
+
     def test_boundary_status_matches_first_and_last_shot_completeness(self) -> None:
         evidence = make_valid_evidence()
         evidence["scene_unit_type"] = "SELECTED_INTERNAL_ENVELOPE"
@@ -1069,10 +1080,31 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
         ]
         self.assertIn("TEXT-ANCHOR-ID-DUPLICATE", error_codes(evidence))
 
+    def test_partial_text_status_requires_usable_anchor_and_review_method(self) -> None:
+        evidence = make_valid_evidence()
+        evidence["text_anchor_status"] = "TEXT_ANCHOR_PARTIAL"
+        evidence["shots"][0]["text_anchor_status"] = "TEXT_ANCHOR_PARTIAL"
+        evidence["text_anchors"] = [
+            {
+                "anchor_id": "TEXT-ANCHOR-UNKNOWN-ONLY",
+                "status": "TEXT_ANCHOR_UNKNOWN",
+                "source_type": "SCRIPT",
+                "paraphrase": "Synthetic anchor remains unknown.",
+                "speaker_status": "UNKNOWN",
+                "start": time_point(0.0, 0),
+                "end": time_point(1.0, 24),
+            }
+        ]
+        codes = error_codes(evidence)
+        self.assertIn("TEXT-STATUS-NO-USABLE-ANCHOR", codes)
+        self.assertIn("TEXT-ANCHOR-NO-REVIEW-METHOD", codes)
+
     def test_every_unknown_array_rejects_hidden_fact_and_audio_directive(self) -> None:
         cases = (
             ("Vehicle remains unknown; the vehicle is red on screen.", "UNKNOWN-HIDES-AFFIRMATIVE-FACT"),
+            ("Vehicle remains unknown while the vehicle is red on screen.", "UNKNOWN-HIDES-AFFIRMATIVE-FACT"),
             ("Audio remains unknown; bring in a score.", "UNKNOWN-HIDES-AUDIO-DIRECTIVE"),
+            ("Audio remains unknown, so bring in a score.", "UNKNOWN-HIDES-AUDIO-DIRECTIVE"),
         )
         for location in ("shot", "audio", "method", "auxiliary", "continuity"):
             for statement, expected in cases:
@@ -1082,11 +1114,14 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
                     self.assertIn(expected, error_codes(evidence))
 
     def test_unknown_array_rejects_cross_cut_identity_assertion(self) -> None:
-        evidence = make_valid_evidence()
-        evidence["shots"][0]["unknowns"] = [
-            "Identity remains unknown; the same person returns across the cut."
-        ]
-        self.assertIn("UNKNOWN-HIDES-CROSS-CUT-IDENTITY", error_codes(evidence))
+        for statement in (
+            "Identity remains unknown; the same person returns across the cut.",
+            "Identity remains unknown while the same person returns across the cut.",
+        ):
+            with self.subTest(statement=statement):
+                evidence = make_valid_evidence()
+                evidence["shots"][0]["unknowns"] = [statement]
+                self.assertIn("UNKNOWN-HIDES-CROSS-CUT-IDENTITY", error_codes(evidence))
 
     def test_safe_negative_audio_boundary_passes(self) -> None:
         evidence = make_valid_evidence()
@@ -1102,6 +1137,16 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
         evidence = make_valid_evidence()
         evidence["candidate_rules"][0]["director_decision"] = "Track the music under the image."
         self.assertIn("RULE-AUDIO-DIRECTIVE-WITHOUT-EVIDENCE", error_codes(evidence))
+
+    def test_safe_audio_boundary_cannot_mask_later_directive(self) -> None:
+        for statement in (
+            "Audio remains unknown; do not add a score but bring in music.",
+            "Audio remains unknown; do not add a score, then track the music.",
+        ):
+            with self.subTest(statement=statement):
+                evidence = make_valid_evidence()
+                evidence["audio_audit"]["audio_unknowns"] = [statement]
+                self.assertIn("UNKNOWN-HIDES-AUDIO-DIRECTIVE", error_codes(evidence))
 
     def test_single_token_unknown_cannot_reappear_as_rule_fact(self) -> None:
         evidence = make_valid_evidence()
@@ -1151,6 +1196,33 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             self.assertEqual(schema_path.read_text(encoding="utf-8"), original)
             self.assertIn("must not overwrite", stderr.getvalue())
 
+    @unittest.skipUnless(sys.platform == "darwin", "case-alias collision is a macOS filesystem regression")
+    def test_report_case_alias_cannot_overwrite_input_or_schema(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            input_path = root / "Input.scene-evidence.json"
+            input_alias = root / "input.scene-evidence.json"
+            original_input = json.dumps(make_valid_evidence(), ensure_ascii=False)
+            input_path.write_text(original_input, encoding="utf-8")
+            if not input_alias.exists() or not os.path.samefile(input_path, input_alias):
+                self.skipTest("temporary filesystem is case-sensitive")
+            with contextlib.redirect_stderr(io.StringIO()):
+                input_result = main([str(input_path), "--report", str(input_alias), "--quiet"])
+            self.assertEqual(input_result, 2)
+            self.assertEqual(input_path.read_text(encoding="utf-8"), original_input)
+
+            schema_path = root / "Schema.json"
+            schema_alias = root / "schema.json"
+            original_schema = (SKILL_ROOT / "references" / "scene-evidence.schema.json").read_text(encoding="utf-8")
+            schema_path.write_text(original_schema, encoding="utf-8")
+            self.assertTrue(os.path.samefile(schema_path, schema_alias))
+            with contextlib.redirect_stderr(io.StringIO()):
+                schema_result = main(
+                    [str(input_path), "--schema", str(schema_path), "--report", str(schema_alias), "--quiet"]
+                )
+            self.assertEqual(schema_result, 2)
+            self.assertEqual(schema_path.read_text(encoding="utf-8"), original_schema)
+
     def test_quiet_directory_discovery_writes_report(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -1169,14 +1241,48 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             evidence_path = root / "scene-evidence.json"
-            schema_path = root / "wrong-schema.json"
             evidence_path.write_text(json.dumps(make_valid_evidence()), encoding="utf-8")
-            schema_path.write_text("{}", encoding="utf-8")
-            stderr = io.StringIO()
-            with contextlib.redirect_stderr(stderr):
-                result = main([str(evidence_path), "--schema", str(schema_path), "--quiet"])
-            self.assertEqual(result, 2)
-            self.assertIn("validator setup error", stderr.getvalue())
+            bad_schemas = (
+                {"$id": "scene-evidence.schema.json"},
+                {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "$id": "scene-evidence.schema.json",
+                    "type": 123,
+                    "additionalProperties": False,
+                    "required": [],
+                    "properties": {},
+                    "$defs": {},
+                },
+                {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "$id": "scene-evidence.schema.json",
+                    "type": "object",
+                    "additionalProperties": False,
+                    "required": [
+                        "schema_version", "evidence_id", "scene_problem", "scene_unit_type",
+                        "boundary_status", "boundary_evidence", "shots", "methods",
+                        "auxiliary_evidence", "candidate_rules", "unknowns", "rights_boundary",
+                    ],
+                    "properties": {
+                        "schema_version": {"const": "scene-evidence/0.1"},
+                        "evidence_id": {"$ref": 123},
+                        "scene_problem": {}, "scene_unit_type": {}, "boundary_status": {},
+                        "boundary_evidence": {}, "shots": {}, "methods": {},
+                        "auxiliary_evidence": {}, "candidate_rules": {}, "unknowns": {},
+                        "rights_boundary": {},
+                    },
+                    "$defs": {},
+                },
+            )
+            for index, bad_schema in enumerate(bad_schemas):
+                with self.subTest(index=index):
+                    schema_path = root / f"wrong-schema-{index}.json"
+                    schema_path.write_text(json.dumps(bad_schema), encoding="utf-8")
+                    stderr = io.StringIO()
+                    with contextlib.redirect_stderr(stderr):
+                        result = main([str(evidence_path), "--schema", str(schema_path), "--quiet"])
+                    self.assertEqual(result, 2)
+                    self.assertIn("validator setup error", stderr.getvalue())
 
     def test_report_write_failure_returns_nonzero(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

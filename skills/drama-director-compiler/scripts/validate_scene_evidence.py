@@ -177,6 +177,97 @@ def _resolve_ref(root_schema: dict[str, Any], ref: str) -> dict[str, Any]:
     return node
 
 
+def _validate_schema_document(schema: Any) -> dict[str, Any]:
+    """Reject malformed or unrelated schemas before validating evidence."""
+    if not isinstance(schema, dict):
+        raise ValueError("schema top-level value must be an object")
+    if (
+        schema.get("$schema") != "https://json-schema.org/draft/2020-12/schema"
+        or schema.get("$id") != "scene-evidence.schema.json"
+        or schema.get("type") != "object"
+        or schema.get("additionalProperties") is not False
+    ):
+        raise ValueError("schema must be the DirectorMind Scene Evidence 2020-12 object schema")
+    required = schema.get("required")
+    properties = schema.get("properties")
+    definitions = schema.get("$defs")
+    if not isinstance(required, list) or not all(isinstance(item, str) for item in required):
+        raise ValueError("schema required must be a string array")
+    if not isinstance(properties, dict) or not isinstance(definitions, dict):
+        raise ValueError("schema properties and $defs must be objects")
+    expected_top_level = {
+        "schema_version",
+        "evidence_id",
+        "scene_problem",
+        "scene_unit_type",
+        "boundary_status",
+        "boundary_evidence",
+        "shots",
+        "methods",
+        "auxiliary_evidence",
+        "candidate_rules",
+        "unknowns",
+        "rights_boundary",
+    }
+    if not expected_top_level.issubset(set(required)) or not expected_top_level.issubset(properties):
+        raise ValueError("schema is missing required Scene Evidence contract fields")
+    schema_version = properties.get("schema_version")
+    if not isinstance(schema_version, dict) or schema_version.get("const") != "scene-evidence/0.1":
+        raise ValueError("schema_version contract is missing or unsupported")
+
+    allowed_types = {"object", "array", "string", "integer", "number", "boolean", "null"}
+    stack: list[tuple[str, dict[str, Any]]] = [("$", schema)]
+    while stack:
+        path, node = stack.pop()
+        node_type = node.get("type")
+        if node_type is not None:
+            type_values = [node_type] if isinstance(node_type, str) else node_type
+            if (
+                not isinstance(type_values, list)
+                or not type_values
+                or not all(isinstance(item, str) and item in allowed_types for item in type_values)
+            ):
+                raise ValueError(f"malformed schema type at {path}")
+        ref = node.get("$ref")
+        if ref is not None:
+            if not isinstance(ref, str):
+                raise ValueError(f"malformed schema reference at {path}")
+            try:
+                _resolve_ref(schema, ref)
+            except (KeyError, TypeError, ValueError) as exc:
+                raise ValueError(f"malformed schema reference at {path}: {exc}") from exc
+        for keyword in ("required",):
+            value = node.get(keyword)
+            if value is not None and (
+                not isinstance(value, list) or not all(isinstance(item, str) for item in value)
+            ):
+                raise ValueError(f"malformed schema {keyword} at {path}")
+        pattern = node.get("pattern")
+        if pattern is not None:
+            if not isinstance(pattern, str):
+                raise ValueError(f"malformed schema pattern at {path}")
+            try:
+                re.compile(pattern)
+            except re.error as exc:
+                raise ValueError(f"malformed schema pattern at {path}: {exc}") from exc
+        enum = node.get("enum")
+        if enum is not None and not isinstance(enum, list):
+            raise ValueError(f"malformed schema enum at {path}")
+        for keyword in ("minItems", "maxItems", "minLength", "minimum", "maximum", "exclusiveMinimum"):
+            value = node.get(keyword)
+            if value is not None and (not isinstance(value, (int, float)) or isinstance(value, bool)):
+                raise ValueError(f"malformed schema {keyword} at {path}")
+        additional = node.get("additionalProperties")
+        if additional is not None and not isinstance(additional, (bool, dict)):
+            raise ValueError(f"malformed schema additionalProperties at {path}")
+        for key, value in node.items():
+            if isinstance(value, dict):
+                stack.append((f"{path}.{key}", value))
+            elif key in {"properties", "$defs"} and not isinstance(value, dict):
+                raise ValueError(f"malformed schema {key} at {path}")
+    return schema
+
+
 def validate_schema_subset(
     value: Any,
     schema: dict[str, Any],
@@ -402,7 +493,7 @@ def _term_occurs(text: str, term: str) -> bool:
 
 def _has_unauditioned_audio_assertion(text: str) -> bool:
     """Reject any audio-domain rule sentence that does not itself state uncertainty."""
-    for sentence in re.split(r"[.!?;\n]+", text):
+    for sentence in _semantic_clauses(text):
         if (
             AUDIO_TERM_RE.search(sentence)
             and AUDIO_UNCERTAINTY_RE.search(sentence) is None
@@ -414,10 +505,24 @@ def _has_unauditioned_audio_assertion(text: str) -> bool:
 
 def _has_unsafe_audio_directive(text: str) -> bool:
     """Recognize audio instructions while preserving explicit negative boundaries."""
-    for sentence in re.split(r"[.!?;\n]+", text):
+    for sentence in _semantic_clauses(text):
         if AUDIO_DIRECTIVE_RE.search(sentence) and SAFE_AUDIO_BOUNDARY_RE.search(sentence) is None:
             return True
     return False
+
+
+def _semantic_clauses(text: str) -> list[str]:
+    """Split contrast/result clauses without breaking ordinary comma-separated unknown lists."""
+    return [
+        clause.strip()
+        for clause in re.split(
+            r"[.!?;\n]+|,\s*(?=(?:but|however|yet|although|while|so|therefore|then)\b)|"
+            r"\b(?:but|however|yet|although|while|so|therefore|then)\b",
+            text,
+            flags=re.IGNORECASE,
+        )
+        if clause.strip()
+    ]
 
 
 def _iter_unknown_statements(evidence: dict[str, Any]) -> Iterator[tuple[str, str]]:
@@ -463,12 +568,16 @@ def _validate_unknown_statement(path: str, statement: str, issues: list[dict[str
             path,
             "unknown wording must explicitly state uncertainty",
         )
-    clauses = [
-        clause
-        for sentence in re.split(r"[.!?;\n]+", statement)
-        for clause in re.split(r"\b(?:but|however|yet|although)\b", sentence, flags=re.IGNORECASE)
-        if clause.strip()
-    ]
+    unsafe_audio = _has_unsafe_audio_directive(statement)
+    if unsafe_audio:
+        add_issue(
+            issues,
+            "error",
+            "UNKNOWN-HIDES-AUDIO-DIRECTIVE",
+            path,
+            "unknown wording cannot hide an unauditioned audio instruction",
+        )
+    clauses = _semantic_clauses(statement)
     for clause in clauses:
         if (
             GENERAL_UNCERTAINTY_RE.search(clause)
@@ -476,14 +585,7 @@ def _validate_unknown_statement(path: str, statement: str, issues: list[dict[str
             or SAFE_AUDIO_BOUNDARY_RE.search(clause)
         ):
             continue
-        if _has_unsafe_audio_directive(clause):
-            add_issue(
-                issues,
-                "error",
-                "UNKNOWN-HIDES-AUDIO-DIRECTIVE",
-                path,
-                "unknown wording cannot hide an unauditioned audio instruction",
-            )
+        if unsafe_audio and _has_unsafe_audio_directive(clause):
             continue
         if CROSS_CUT_IDENTITY_ASSERTION_RE.search(clause):
             add_issue(
@@ -530,23 +632,21 @@ def _rule_asserts_unknown_fact(unknown_text: str, operational_text: str) -> bool
     has_known_anchor = any(anchor in unknown_tokens for anchor in UNKNOWN_FACT_ALIAS_PATTERNS)
     if not unknown_tokens and not has_known_anchor:
         return False
-    for sentence in re.split(r"[.!?;\n]+", operational_text):
-        clauses = re.split(r"\b(?:but|however|yet|although)\b", sentence, flags=re.IGNORECASE)
-        for clause in clauses:
-            if (
-                GENERAL_UNCERTAINTY_RE.search(clause)
-                or SAFE_UNKNOWN_BOUNDARY_RE.search(clause)
-                or SAFE_AUDIO_BOUNDARY_RE.search(clause)
-            ):
-                continue
-            shared = unknown_tokens.intersection(_fact_tokens(clause))
-            if shared and len(shared) / len(unknown_tokens) >= 0.5:
-                return True
-            if any(
-                anchor in unknown_tokens and pattern.search(clause)
-                for anchor, pattern in UNKNOWN_FACT_ALIAS_PATTERNS.items()
-            ):
-                return True
+    for clause in _semantic_clauses(operational_text):
+        if (
+            GENERAL_UNCERTAINTY_RE.search(clause)
+            or SAFE_UNKNOWN_BOUNDARY_RE.search(clause)
+            or SAFE_AUDIO_BOUNDARY_RE.search(clause)
+        ):
+            continue
+        shared = unknown_tokens.intersection(_fact_tokens(clause))
+        if shared and len(shared) / len(unknown_tokens) >= 0.5:
+            return True
+        if any(
+            anchor in unknown_tokens and pattern.search(clause)
+            for anchor, pattern in UNKNOWN_FACT_ALIAS_PATTERNS.items()
+        ):
+            return True
     return False
 
 
@@ -929,20 +1029,29 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
             "$.audio_evidence_status",
             "AUDIO_OBSERVED requires an active AUDIO_DIRECT_AUDITION method",
         )
-    if text_status in {"TEXT_ANCHOR_VERIFIED", "TEXT_ANCHOR_PARTIAL"} and not text_anchors:
-        add_issue(
-            issues,
-            "error",
-            "TEXT-STATUS-NO-ANCHOR",
-            "$.text_anchor_status",
-            "verified or partial text status requires at least one text anchor",
-        )
     verified_or_partial_anchors = [
         item
         for item in text_anchors
         if isinstance(item, dict) and item.get("status") in {"TEXT_ANCHOR_VERIFIED", "TEXT_ANCHOR_PARTIAL"}
     ]
-    if verified_or_partial_anchors and not active_text_method_ids:
+    verified_anchors = [item for item in verified_or_partial_anchors if item.get("status") == "TEXT_ANCHOR_VERIFIED"]
+    if text_status in {"TEXT_ANCHOR_VERIFIED", "TEXT_ANCHOR_PARTIAL"} and not verified_or_partial_anchors:
+        add_issue(
+            issues,
+            "error",
+            "TEXT-STATUS-NO-USABLE-ANCHOR" if text_anchors else "TEXT-STATUS-NO-ANCHOR",
+            "$.text_anchor_status",
+            "verified or partial text status requires a verified or partial text anchor",
+        )
+    if text_status == "TEXT_ANCHOR_VERIFIED" and not verified_anchors:
+        add_issue(
+            issues,
+            "error",
+            "TEXT-VERIFIED-NO-VERIFIED-ANCHOR",
+            "$.text_anchor_status",
+            "verified scene text status requires at least one verified text anchor",
+        )
+    if (verified_or_partial_anchors or text_status in {"TEXT_ANCHOR_VERIFIED", "TEXT_ANCHOR_PARTIAL"}) and not active_text_method_ids:
         add_issue(
             issues,
             "error",
@@ -1222,6 +1331,32 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
             return resolved
         return set()
 
+    def reference_reaches_shot(
+        ref: str,
+        target_shot_id: str,
+        visiting: frozenset[str] = frozenset(),
+    ) -> bool:
+        """Trace a provenance chain to the exact endpoint Shot, not merely any picture track."""
+        if ref in visiting:
+            return False
+        if ref == target_shot_id:
+            return True
+        sources: list[str] = []
+        if ref in auxiliary_by_id:
+            item = auxiliary_by_id[ref]
+            sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
+        elif ref in track_by_id:
+            item = track_by_id[ref]
+            sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
+        elif ref in claims:
+            item = claims[ref][1]
+            if item.get("status") != "UNKNOWN":
+                sources = item.get("source_refs") if isinstance(item.get("source_refs"), list) else []
+        return any(
+            reference_reaches_shot(source_ref, target_shot_id, visiting | {ref})
+            for source_ref in sources
+        )
+
     for claim_path, claim in _walk_claims(evidence):
         status = claim.get("status")
         refs = claim.get("source_refs") if isinstance(claim.get("source_refs"), list) else []
@@ -1413,6 +1548,34 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
                 "$.boundary_evidence.source_refs",
                 "a definite scene boundary must resolve to picture evidence",
             )
+        if shots:
+            first_shot_id = shots[0].get("shot_id") if isinstance(shots[0], dict) else None
+            last_shot_id = shots[-1].get("shot_id") if isinstance(shots[-1], dict) else None
+            start_side, end_side = boundary_sides
+            if (
+                start_side != "UNKNOWN"
+                and isinstance(first_shot_id, str)
+                and not any(reference_reaches_shot(ref, first_shot_id) for ref in boundary_refs)
+            ):
+                add_issue(
+                    issues,
+                    "error",
+                    "BOUNDARY-START-SOURCE-MISSING",
+                    "$.boundary_evidence.source_refs",
+                    "boundary evidence must recursively cite the first Shot for the scene start",
+                )
+            if (
+                end_side != "UNKNOWN"
+                and isinstance(last_shot_id, str)
+                and not any(reference_reaches_shot(ref, last_shot_id) for ref in boundary_refs)
+            ):
+                add_issue(
+                    issues,
+                    "error",
+                    "BOUNDARY-END-SOURCE-MISSING",
+                    "$.boundary_evidence.source_refs",
+                    "boundary evidence must recursively cite the last Shot for the scene end",
+                )
 
     scene_unit_type = evidence.get("scene_unit_type")
     if scene_unit_type == "NATURAL_CONTINUOUS_SCENE" and boundary_status != "NATURAL_START_END_VERIFIED":
@@ -1784,6 +1947,14 @@ def _write_report_atomically(path: Path, rendered: str) -> None:
                 pass
 
 
+def _same_file_target(left: Path, right: Path) -> bool:
+    """Compare existing files by identity so case aliases cannot bypass protection."""
+    try:
+        return os.path.samefile(left, right)
+    except OSError:
+        return left.resolve() == right.resolve()
+
+
 def validate_paths(paths: Iterable[Path], schema: dict[str, Any]) -> dict[str, Any]:
     results: list[dict[str, Any]] = []
     load_errors: list[dict[str, str]] = []
@@ -1846,9 +2017,7 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
-        schema = load_json(Path(args.schema))
-        if not isinstance(schema, dict) or schema.get("$id") != "scene-evidence.schema.json":
-            raise ValueError("schema must be the DirectorMind scene-evidence.schema.json object")
+        schema = _validate_schema_document(load_json(Path(args.schema)))
         paths = discover_evidence_paths(args.inputs)
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"validator setup error: {exc}", file=sys.stderr)
@@ -1857,10 +2026,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         print("validator setup error: no Scene Evidence JSON files found", file=sys.stderr)
         return 2
     if args.report:
-        report_path = Path(args.report).resolve()
-        protected_paths = {path.resolve() for path in paths}
-        protected_paths.add(Path(args.schema).resolve())
-        if report_path in protected_paths:
+        report_path = Path(args.report)
+        protected_paths = [*paths, Path(args.schema)]
+        if any(_same_file_target(report_path, protected_path) for protected_path in protected_paths):
             print("validator setup error: --report must not overwrite an input or schema file", file=sys.stderr)
             return 2
     report = validate_paths(paths, schema)
