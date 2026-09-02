@@ -6,7 +6,7 @@ Updated: 2026-09-01
 
 The user-approved 33-source generalization Goal is locally complete on `codex/macos-first16-local-batch`; external actions remain separately gated.
 
-Phases 1 through 6 are complete and independently reviewed. Corrected Phase 6 automation passes locally after the first final audit rejected overbroad evidence wording and the narrow re-review confirmed all three findings closed. The original 30 canonical outputs remain unchanged, the existing 88-unit *Succession* ledger is integrated through current contracts, no UNKNOWN-dependent candidate is executable, and eight rights-safe original packages run through the real router and complete IR path without inventing a rule.
+Phases 1 through 6 and the later runtime-contract compatibility repair are locally complete and independently reviewed. The repair enforces one canonical scene-problem vocabulary and negative sentinel, restores v0.1-only GO-01/GO-07 checks, binds complete v0.2 routing results to an authority-validated Grammar, and preserves legacy audio and upgrade data without inventing a route. The original 30 canonical outputs remain unchanged, the existing 88-unit *Succession* ledger is integrated through current contracts, no UNKNOWN-dependent candidate is executable, and eight rights-safe original packages still run through the real router without inventing a rule.
 
 No new reference work, media operation, remote update, merge, deployment or publication is authorized.
 
@@ -21,7 +21,7 @@ No new reference work, media operation, remote update, merge, deployment or publ
 | Structural Scene Evidence passes | 31/31 |
 | Structural errors | 0 |
 | Preserved warnings | 72 |
-| Current unit/CLI tests including Phase 6 | 157 |
+| Current unit/CLI tests including compatibility repair | 178 |
 | Normalized candidate identities | 124 |
 | Textual mechanism families | 16 |
 | Runtime-authorized evidence rules | 0 |
@@ -54,13 +54,14 @@ Generated `*.scene-evidence.generated.md` files are deterministic review views o
 - No candidate has passed cross-work promotion gates; zero promotion is the evidence-correct result for the current corpus.
 - No real positive selection has been exercised because the live eligible-family set is empty; the forward-test validator will fail when that set becomes non-empty until each family has distinct positive and boundary packages.
 - The first final read-only audit returned FAIL on evidence scope/provenance wording. All three findings are corrected; the narrow independent re-review issued PASS.
+- The post-completion compatibility repair received `PASS_LOCAL / NO_MUST_FIX_FINDINGS` from fresh non-writing reviewers after they replayed the initially failing adversarial cases.
 - The GitHub workflow is defined and its exact local command passes, but remote CI is `NOT_RUN_NO_PUSH` because no push is authorized.
 - Source replay and direct semantic-audio audition remain outside this Goal; structural validation cannot prove the original picture observations, sound semantics, creative quality or audience response.
 
 ## Latest validation
 
 - Canonical converter check: PASS — 31 scenes, 2,343 Shot/edit units, 124 candidate identities; the original 30 evidence files have no diff.
-- Current unit/CLI suite: PASS — 157 tests including Phase 5 migration plus repository automation, final-report schema, stable-identity, rights-boundary, source-binding, audio and Unicode-escape regressions.
+- Current unit/CLI suite: PASS — 178 tests, including canonical scene-problem parity and negative-sentinel behavior, complete Grammar-bound routing results, malformed-type rejection, v0.1 GO-trigger compatibility, safe v0.1-to-v0.2 upgrade modes, visible legacy-audio rendering, and all prior regressions.
 - Full Scene Evidence validation: PASS_STRUCTURAL — 31 passed, 0 failed, 0 errors, 72 warnings.
 - Renderer: PASS locally — 31 generated files match canonical JSON, round-trip deterministically, and preserve every source Markdown file.
 - Phase 1 independent read-only audit: PASS — no must-fix finding remains.
@@ -73,12 +74,13 @@ Generated `*.scene-evidence.generated.md` files are deterministic review views o
 - Forward-test build/validation: PASS — eight packages, six required scene problems, zero eligible families, zero selected rules, eight `NO_APPLICABLE_RULE`, eight `HUMAN_REVIEW_PENDING`, zero errors and 31 visible visual-binding warnings.
 - Phase 4 independent read-only audit: PASS after replaying false-positive, private-path, fact-drift, work-title, approval, audio-loss and JSON Unicode-escape attacks and reading all eight original scripts.
 - Phase 5 independent read-only audit: PASS — 88/4 migration, original 30/120 no-drift, UNKNOWN/audio/runtime boundaries, four reviewed family assignments, catalog route and 31/2,343/124/16/0/72 arithmetic reproduced with no must-fix finding.
-- Repository automation after correction: PASS — quick runner 16 checks and full runner 18 checks, including 157 tests, five live-versus-versioned report comparisons, zero broken links, zero prohibited repository files, zero current-machine/runtime scoped string issues, zero whitespace errors and a live-result-backed deterministic final report. The 30 immutable legacy Markdown files are explicitly excluded from the scoped string count.
+- Repository automation after compatibility repair: PASS — 45/45 targeted tests, 178/178 full tests and the complete 18-check runner pass after the independent reviewers' adversarial findings were repaired. Five versioned reports match live output; `final-generalization-validation/0.3` is deterministic `PASS_LOCAL` with zero validation errors and 103 preserved warnings. The 30 immutable legacy Markdown files remain excluded from the scoped string count.
 - Minimal CI workflow: PRESENT_LOCAL_ONLY — read-only permissions and the same local runner; remote CI has not run because no push occurred.
 - Final independent audit: PASS_LOCAL — no must-fix finding remains after individual failure injection across all 17 live prerequisites; unverified boundaries remain explicit.
+- Compatibility-repair independent audit: PASS_LOCAL — three fresh read-only reviewers found real first-round gaps, verified their closure, and reported no remaining must-fix finding.
 
 The current command-to-claim evidence is `research/validation/VALIDATION_CLAIM_REGISTER.md`. The versioned closed-corpus evidence is `research/validation/CLOSED_CORPUS_COMPLETION_REPORT.md` and `research/validation/scene-evidence-validation.json`. A structural pass is not human creative approval.
 
 ## Next single action
 
-Await explicit user direction on optional push and old pull-request closure; do not perform either automatically.
+Await explicit user direction on optional push and old pull-request closure; do not push, close the older pull request, merge, deploy, publish, or delete media automatically.

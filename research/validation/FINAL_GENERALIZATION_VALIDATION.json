@@ -48,7 +48,7 @@
     "shot_edit_units": 2343,
     "source_dispositions": 33,
     "symlink_escapes": 0,
-    "unit_tests": 157,
+    "unit_tests": 178,
     "validation_errors": 0,
     "validation_warnings": 103,
     "whitespace_errors": 0
@@ -80,7 +80,7 @@
       "verification": "NOT_MACHINE_VERIFIED"
     }
   },
-  "schema_version": "final-generalization-validation/0.2",
+  "schema_version": "final-generalization-validation/0.3",
   "status": "PASS_LOCAL",
   "unverified_boundaries": [
     "SOURCE_MEDIA_NOT_REPLAYED",

@@ -6,7 +6,7 @@
     "locked_facts": [{"fact_id": "F-POWER-1", "fact_type": "authority_shift", "value": "control changes after a verified answer", "status": "LOCKED", "source_ref": "ORIGINAL-POWER-DIALOGUE#FACT-1"}],
     "unknown_fact_types": [],
     "dramatic_structure": {"goal": "make a change of control readable", "objectives": ["obtain a binding answer"], "obstacle": "the answer can be delayed", "stakes": "a group decision remains unsettled", "tactic_change": "question becomes a formal choice", "subtext": "control depends on who can end the exchange"},
-    "scene_problem": {"primary": "POWER_DIALOGUE", "secondary": [], "status": "LOCKED"},
+    "scene_problem": {"primary": "DIALOGUE_POWER_TRANSFER", "secondary": [], "status": "LOCKED"},
     "routing_signals": ["authority_shift"],
     "priority_constraints": [],
     "subject_matter_tags": ["meeting"]
@@ -30,7 +30,7 @@
     "locked_facts": [{"fact_id": "F-REVEAL-1", "fact_type": "audience_information_change", "value": "a verified result becomes visible to the assembled group", "status": "LOCKED", "source_ref": "ORIGINAL-PUBLIC-REVEAL#FACT-1"}],
     "unknown_fact_types": [],
     "dramatic_structure": {"goal": "make receipt of public information legible", "objectives": ["present a verified result"], "obstacle": "the group expects a different outcome", "stakes": "the next vote depends on receipt", "tactic_change": "private confidence becomes public proof", "subtext": "the room must acknowledge the same fact"},
-    "scene_problem": {"primary": "PUBLIC_REVEAL", "secondary": [], "status": "LOCKED"},
+    "scene_problem": {"primary": "PUBLIC_REVELATION", "secondary": [], "status": "LOCKED"},
     "routing_signals": ["audience_information_change"],
     "priority_constraints": [],
     "subject_matter_tags": ["assembly"]
@@ -42,7 +42,7 @@
     "locked_facts": [{"fact_id": "F-PROCEDURE-1", "fact_type": "ordered_steps", "value": "three verified checks must occur in order", "status": "LOCKED", "source_ref": "ORIGINAL-PROCEDURE#FACT-1"}],
     "unknown_fact_types": [],
     "dramatic_structure": {"goal": "keep an ordered process understandable", "objectives": ["complete all checks"], "obstacle": "one reading remains ambiguous", "stakes": "the handoff cannot proceed", "tactic_change": "routine check becomes manual verification", "subtext": "competence is tested by the exception"},
-    "scene_problem": {"primary": "PROCEDURE", "secondary": [], "status": "LOCKED"},
+    "scene_problem": {"primary": "PROCEDURAL_COMPETENCE", "secondary": [], "status": "LOCKED"},
     "routing_signals": ["ordered_steps"],
     "priority_constraints": [],
     "subject_matter_tags": ["workplace"]
@@ -66,7 +66,7 @@
     "locked_facts": [{"fact_id": "F-PROXIMITY-1", "fact_type": "distance_change", "value": "an unseen mover enters the protected zone", "status": "LOCKED", "source_ref": "ORIGINAL-PROXIMITY-TENSION#FACT-1"}],
     "unknown_fact_types": [],
     "dramatic_structure": {"goal": "make decreasing safe distance readable", "objectives": ["remain undetected"], "obstacle": "the approach path narrows", "stakes": "movement would expose the hiding place", "tactic_change": "retreat becomes stillness", "subtext": "distance matters more than identity"},
-    "scene_problem": {"primary": "PROXIMITY_TENSION", "secondary": [], "status": "LOCKED"},
+    "scene_problem": {"primary": "SUSPENSE_INFORMATION_ASYMMETRY", "secondary": [], "status": "LOCKED"},
     "routing_signals": ["distance_change"],
     "priority_constraints": [],
     "subject_matter_tags": ["suspense"]
@@ -78,7 +78,7 @@
     "locked_facts": [{"fact_id": "F-SOUND-1", "fact_type": "audible_information", "value": "a project-original alert is heard before its source is shown", "status": "LOCKED", "source_ref": "ORIGINAL-SOUND-SUSPENSE#FACT-1"}],
     "unknown_fact_types": [],
     "dramatic_structure": {"goal": "separate receipt of a cue from source confirmation", "objectives": ["locate the alert"], "obstacle": "the source remains outside the visible area", "stakes": "a response must be chosen before confirmation", "tactic_change": "listening becomes searching", "subtext": "uncertainty exists only until the source is verified"},
-    "scene_problem": {"primary": "SOUND_SUSPENSE", "secondary": [], "status": "LOCKED"},
+    "scene_problem": {"primary": "SOUND_LED_CAUSALITY", "secondary": [], "status": "LOCKED"},
     "routing_signals": ["audible_information"],
     "priority_constraints": [],
     "subject_matter_tags": ["offscreen_event"]

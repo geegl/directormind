@@ -2,7 +2,7 @@
 
 Updated: 2026-09-01
 
-Status: `CORRECTED_LOCAL_PASS / INDEPENDENT_REVIEW_PASS`
+Status: `CORRECTED_LOCAL_PASS / COMPATIBILITY_REPAIR_REVIEW_PASS`
 
 ## Result
 
@@ -22,14 +22,18 @@ The workflow is present locally only. It was not pushed, so no remote CI pass is
 
 - Quick runner: PASS — 16 checks; it intentionally does not validate the full-suite final report.
 - Full runner: PASS — 18 checks.
-- Unit/CLI suite: PASS — 157 tests.
+- Unit/CLI suite: PASS — 178 tests after the compatibility audit's adversarial additions.
 - Scene Evidence: 31/31 pass, 2,343 Shot/edit units, 124 candidate lineages, zero errors, 72 warnings.
 - Candidate index: 124 candidates, 16 families, all blocked, zero runtime-authorized, zero errors.
 - Grammar: five project constraints, six safety constraints, zero eligible/runtime evidence rules, zero errors.
 - Routing: eight cases, eight `NO_APPLICABLE_RULE`, zero selected, zero errors.
 - Forward tests: eight packages, six required scene problems, zero ready families, zero selected, eight pending, zero errors, 31 warnings.
 - Repository boundaries: PASS — the report distinguishes whole-repository file/syntax/link checks from the zero-issue scoped current-artifact string scan and lists 30 excluded immutable legacy ledgers.
-- Final report: `PASS_LOCAL` from the full runner's complete live result map; zero validation errors and 103 preserved Scene-plus-forward warnings.
+- Final report: `final-generalization-validation/0.3` is `PASS_LOCAL` from the full runner's complete live result map; zero validation errors and 103 preserved Scene-plus-forward warnings.
+
+## Post-completion compatibility repair
+
+The current local runner also covers the later narrow repair: one canonical scene-problem vocabulary across seven schemas; complete standalone/embedded routing-result parity and binding; GO-01/GO-07 trigger checks confined to legacy Grammar v0.1; explicit safe-pause versus evidence-complete v0.2 upgrade modes; and visible warning/rendering of unmapped legacy audio. The repair changes no corpus counts, source media, private Director IR, external state, or runtime authorization count.
 
 ## Boundaries
 
@@ -40,7 +44,7 @@ The workflow is present locally only. It was not pushed, so no remote CI pass is
 
 ## Independent result
 
-The first final audit returned FAIL on three evidence defects despite passing runtime checks. After correction, the non-writing reviewer reran the full suite, verified missing-evidence failure and injected failure into each live prerequisite. The narrow re-review issued PASS with no remaining must-fix finding. See `INDEPENDENT_GENERALIZATION_AUDIT.md`.
+The first final audit returned FAIL on three evidence defects despite passing runtime checks. After correction, the non-writing reviewer reran the full suite, verified missing-evidence failure and injected failure into each live prerequisite. That historical narrow re-review issued PASS. Three fresh non-writing reviewers later audited the compatibility repair, first found real blockers, then independently replayed the corrected attacks and issued `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. See `COMPATIBILITY_REPAIR_INDEPENDENT_AUDIT.md`; the historical `INDEPENDENT_GENERALIZATION_AUDIT.md` remains unchanged.
 
 ## External effects and rollback
 

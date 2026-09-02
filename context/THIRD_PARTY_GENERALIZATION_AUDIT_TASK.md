@@ -4,6 +4,8 @@ Updated: 2026-09-01
 
 Status: `LOCAL_COMPLETE / EXTERNAL_ACTIONS_GATED`
 
+Compatibility repair status: `LOCAL_COMPLETE / INDEPENDENT_READ_ONLY_REVIEW_PASS`
+
 ## Task name
 
 Turn the existing 33-source research corpus into a verifiable, safely routable DirectorMind grammar without adding reference works.
@@ -124,15 +126,28 @@ Only one writer may own a mutable file at a time. Root is the sole accountable i
 - [x] A non-writing read-only agent issues the final technical verdict and lists unverified boundaries.
 - [x] Final delivery package includes changes, behavioral evidence, check results, remaining risks, external side effects, resource use and rollback.
 
+## Approved post-completion compatibility repair
+
+A later independent audit found four narrow gaps in the completed local implementation. The user approved a local-only repair on 2026-09-01 without reopening corpus acquisition or any external action:
+
+1. use one canonical `scene_problem` enum across Scene Evidence, candidate, Grammar, routing input/result, Director IR, and forward-test schemas;
+2. preserve GO-01/GO-07 trigger validation only for legacy Grammar v0.1 and prevent those seed rules from entering Grammar v0.2;
+3. make every Grammar v0.2 scene carry the complete formal `routing_result` and prove exact selected-rule-to-Shot binding;
+4. split the v0.1-to-v0.2 upgrader into an honest legacy-compatible pause and an evidence-complete routed mode, while rendering legacy audio visibly instead of dropping or guessing it.
+
+This repair may change only the affected schemas, the router and Grammar validator needed to enforce the canonical negative sentinel, the Director IR validator/renderer/upgrader, routing fixtures, regression tests, current validation reports, and truthful status/contract documentation. These router/Grammar-validator edits enforce the already approved scene-problem contract; they do not add rules or change corpus conclusions. The repair does not authorize new reference works, re-distillation, media or private-IR access, source deletion, remote actions, production, database, account, permission, key, payment, deployment, or publication work.
+
+Repair completion requires targeted compatibility tests, the full local suite, the 18-check repository runner, an updated strict final report, and a new read-only review by agents that did not write the repair. The repair must preserve the existing 33/31/2,343/124/16/0 corpus and runtime counts.
+
 ## Current status
 
 - Current accountable implementer: root agent, sole integrator. No other writer may edit the same mutable file concurrently.
-- Completed: all locally authorized work; 56/57 requirements are `VERIFIED_DONE`, including independently reviewed Phases 1–6.
-- Remaining: K4 stays `BLOCKED` only because old pull-request closure is a separately gated external user decision. Push and all other remote actions also remain unperformed and unauthorized.
-- Current validation: corrected quick runner 16/16, full runner 18/18, 157 tests, final live-evidence report PASS and narrow independent read-only re-review PASS.
+- Completed: all original locally authorized work plus the four implementation parts of the approved compatibility repair; 56/57 checklist requirements remain `VERIFIED_DONE`.
+- Remaining: K4 stays `BLOCKED` because old pull-request closure is a separately gated external user decision. Push and all other remote actions remain unperformed and unauthorized.
+- Current validation: first-round independent review found real adversarial gaps; after correction, 45/45 targeted tests, 178/178 full tests, the complete runner 18/18, strict `final-generalization-validation/0.3` `PASS_LOCAL`, and the fresh read-only re-review all pass with no remaining must-fix finding.
 - Known boundaries: all current scene problems remain UNKNOWN; direct semantic audio is absent; no candidate is yet authorized as an executable cross-work rule.
 - Remote boundary: no push, PR closure or merge is authorized by this card.
-- Next single action: await explicit user direction on optional remote actions; do not push or close the older PR automatically.
+- Next single action: report the completed local result and await explicit user direction on optional remote actions; do not push or close the older PR automatically.
 
 ## Rollback
 

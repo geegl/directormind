@@ -130,7 +130,7 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
     local_runner_pass = not errors
 
     return {
-        "schema_version": "final-generalization-validation/0.2",
+        "schema_version": "final-generalization-validation/0.3",
         "status": "PASS_LOCAL" if local_runner_pass else "FAIL_LOCAL",
         "counts": {
             "source_dispositions": _source_disposition_count(),

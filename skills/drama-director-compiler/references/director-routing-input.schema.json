@@ -67,8 +67,8 @@
       "additionalProperties": false,
       "required": ["primary", "secondary", "status"],
       "properties": {
-        "primary": {"type": "string", "minLength": 1},
-        "secondary": {"type": "array", "maxItems": 2, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "primary": {"$ref": "#/$defs/sceneProblemValue"},
+        "secondary": {"type": "array", "maxItems": 2, "uniqueItems": true, "items": {"$ref": "#/$defs/sceneProblemValue"}},
         "status": {"const": "LOCKED"}
       }
     },
@@ -107,6 +107,30 @@
       "type": "array",
       "uniqueItems": true,
       "items": {"type": "string", "minLength": 1}
+    }
+  },
+  "$defs": {
+    "sceneProblemValue": {
+      "enum": [
+        "DIALOGUE_POWER_TRANSFER",
+        "RELATIONSHIP_FRACTURE",
+        "PUBLIC_REVELATION",
+        "GROUP_POWER_CHANGE",
+        "PROCEDURAL_COMPETENCE",
+        "PROCEDURAL_COLLAPSE",
+        "INTERROGATION",
+        "SUBJECTIVE_COERCION",
+        "SUSPENSE_INFORMATION_ASYMMETRY",
+        "ACTION_CAUSALITY",
+        "HORROR_RULE_REVELATION",
+        "ROMANTIC_PROXIMITY",
+        "SOUND_LED_CAUSALITY",
+        "MONTAGE_TIME_COMPRESSION",
+        "ENSEMBLE_REACTION_CHAIN",
+        "SILENT_AFTERMATH",
+        "NO_SPECIALIZED_PROBLEM",
+        "LEGACY_SCENE_PROBLEM"
+      ]
     }
   }
 }

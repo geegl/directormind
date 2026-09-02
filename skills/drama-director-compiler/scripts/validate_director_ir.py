@@ -12,6 +12,10 @@ from pathlib import Path
 from typing import Any
 
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+SKILL_ROOT = SCRIPT_DIR.parent
+IR_SCHEMA_PATH = SKILL_ROOT / "references" / "director-ir.schema.json"
+ROUTING_RESULT_SCHEMA_PATH = SKILL_ROOT / "references" / "director-routing-result.schema.json"
 SCHEMA_VERSION = "director-ir/0.2"
 SHOT_ID_RE = re.compile(r"^EP\d{2}-SC\d{2}-SH\d{2}$")
 PLACEHOLDERS = ("待填写", "TBD", "TODO", "适当", "电影感一些")
@@ -22,6 +26,10 @@ COMPOSITE_TYPES = {"SHADOW", "LIQUID", "SURFACE_STATE", "TEXT", "VFX", "OTHER"}
 FALLBACK_ROUTES = {"NONE", "SPLIT_GENERATION", "ROUTE_POST", "EDIT_RESTRUCTURE"}
 REFERENCE_TYPES = {"NONE", "SCENE_MASTER", "SHOT_GOLDEN", "ASSET_STATE"}
 MAX_DIALOGUE_WORDS_PER_SECOND = 3.2
+ELIGIBLE_PROMOTIONS = {"CROSS_WORK_SUPPORTED", "GENERAL_DEFAULT"}
+
+sys.path.insert(0, str(SCRIPT_DIR))
+from validate_scene_evidence import validate_schema_subset  # noqa: E402
 
 
 def load_json(path: Path) -> Any:
@@ -53,18 +61,46 @@ def extract_source_dialogue(source_text: str) -> list[tuple[str, str]]:
     return lines
 
 
+def shot_semantic_text(shot: dict[str, Any]) -> str:
+    return " ".join([
+        shot.get("blocking", ""),
+        shot.get("narrative_goal", ""),
+        " ".join(line.get("text", "") for line in shot.get("dialogue", [])),
+        " ".join(shot.get("visible_text", [])),
+    ]).lower()
+
+
+def go01_triggered(shot: dict[str, Any]) -> bool:
+    """Preserve the v0.1 seed-rule trigger exactly; never use it for Grammar v0.2."""
+    characters = {name.split(" ")[0].lower() for name in shot.get("allowed_characters", [])}
+    official = bool(characters & {"adrian", "evelyn", "rook", "aurelia"})
+    text = shot_semantic_text(shot)
+    bureaucratic = any(term in text for term in ("账单", "欠款", "收费", "程序", "报告", "合同", "索赔", "发票", "文件", "invoice", "claim", "debt", "collections"))
+    mundane = any(term in text for term in ("早餐", "吐司", "鞋", "牛奶", "水管", "学校", "生日", "床", "沙发", "五美元", "麦片", "拖鞋", "咖啡", "照片", "钥匙", "five dollars", "bedroom"))
+    return official and bureaucratic and mundane
+
+
+def go07_triggered(shot: dict[str, Any]) -> bool:
+    """Preserve the v0.1 seed-rule trigger exactly; never use it for Grammar v0.2."""
+    text = shot_semantic_text(shot)
+    invitation = any(term in text for term in ("留下", "一起", "愿意", "需要我", "stay", "together", "want me"))
+    refusal = any(term in text for term in ("拒绝", "不能", "不愿", "不再", "won't", "cannot", "not anymore", "not ready"))
+    departure = any(term in text for term in ("离开", "转身走", "走出", "leave", "walks away", "turns away"))
+    return invitation and (refusal or departure)
+
+
 def evidence_rule_reference_issues(
     shot: dict[str, Any],
     grammar: dict[str, Any],
     shot_path: str,
     routing_result: dict[str, Any] | None = None,
 ) -> list[dict[str, str]]:
-    """Validate rule references while preserving v0.1 compatibility.
+    """Validate rule references while preserving version-scoped v0.1 behavior.
 
     Grammar v0.2 may legitimately route zero evidence rules and continue under
-    project/safety constraints only. The old seed grammar retains only its
-    legacy non-empty reference requirement; all applicability now belongs to
-    the source-neutral structured router.
+    project/safety constraints only. The old seed grammar retains its original
+    non-empty, known-rule and GO-01/GO-07 trigger checks. New routing never uses
+    those legacy keyword triggers.
     """
     issues: list[dict[str, str]] = []
     grammar_version = grammar.get("schema_version")
@@ -92,6 +128,14 @@ def evidence_rule_reference_issues(
             "at least one grammar rule is required for legacy grammar",
         )
     for rule_id in evidence_ids:
+        if grammar_version == "director-grammar/0.2" and rule_id.startswith("GO-"):
+            add_issue(
+                issues,
+                "error",
+                "IR-LEGACY-RULE-V02",
+                f"{shot_path}.evidence_rule_ids",
+                f"legacy seed rule cannot enter Grammar v0.2: {rule_id}",
+            )
         if rule_id not in grammar_ids:
             add_issue(
                 issues,
@@ -100,6 +144,62 @@ def evidence_rule_reference_issues(
                 f"{shot_path}.evidence_rule_ids",
                 f"unknown grammar rule: {rule_id}",
             )
+    if grammar_version == "director-grammar/0.1":
+        if "GO-01" in evidence_ids and not go01_triggered(shot):
+            add_issue(
+                issues,
+                "error",
+                "IR-GO01-TRIGGER",
+                f"{shot_path}.evidence_rule_ids",
+                "GO-01 requires a supernatural official applying bureaucracy to a mundane problem",
+            )
+        if "GO-07" in evidence_ids and not go07_triggered(shot):
+            add_issue(
+                issues,
+                "error",
+                "IR-GO07-TRIGGER",
+                f"{shot_path}.evidence_rule_ids",
+                "GO-07 requires an invitation/stay-together beat plus refusal or departure",
+            )
+    return issues
+
+
+def audio_contract_issues(audio: Any, shot_path: str) -> list[dict[str, str]]:
+    """Keep new audio structured while making legacy payloads visible, not invalid."""
+    issues: list[dict[str, str]] = []
+    if not isinstance(audio, dict):
+        add_issue(issues, "error", "IR-AUDIO-SHAPE", f"{shot_path}.audio", "audio must be an object")
+        return issues
+    if not audio:
+        return issues
+    standard_keys = {"status", "instruction", "source_refs"}
+    present = standard_keys & set(audio)
+    if present != standard_keys:
+        add_issue(
+            issues,
+            "warning",
+            "IR-AUDIO-LEGACY-UNMAPPED",
+            f"{shot_path}.audio",
+            "legacy audio fields are preserved for review but have not been mapped to the v0.2 audio contract",
+        )
+        return issues
+    if not isinstance(audio.get("status"), str) or not audio["status"].strip():
+        add_issue(issues, "error", "IR-AUDIO-STATUS", f"{shot_path}.audio.status", "audio status must be a non-empty string")
+    instruction = audio.get("instruction")
+    if instruction is not None and not isinstance(instruction, str):
+        add_issue(issues, "error", "IR-AUDIO-INSTRUCTION", f"{shot_path}.audio.instruction", "audio instruction must be a string or null")
+    source_refs = audio.get("source_refs")
+    if not isinstance(source_refs, list) or any(not isinstance(item, str) or not item for item in source_refs):
+        add_issue(issues, "error", "IR-AUDIO-SOURCE-REFS", f"{shot_path}.audio.source_refs", "audio source_refs must be a list of non-empty strings")
+    extras = sorted(set(audio) - standard_keys)
+    if extras:
+        add_issue(
+            issues,
+            "warning",
+            "IR-AUDIO-LEGACY-EXTRAS",
+            f"{shot_path}.audio",
+            "unmapped legacy audio fields remain visible: " + ", ".join(extras),
+        )
     return issues
 
 
@@ -119,8 +219,21 @@ def scene_routing_binding_issues(
             "Grammar v0.2 scenes require an embedded validated routing result.",
         )
         return issues
+    routing_schema = load_json(ROUTING_RESULT_SCHEMA_PATH)
+    routing_schema_issues: list[dict[str, str]] = []
+    validate_schema_subset(routing_result, routing_schema, routing_schema, routing_schema_issues)
+    for item in routing_schema_issues:
+        add_issue(
+            issues,
+            "error",
+            "IR-ROUTING-RESULT-SCHEMA",
+            f"{scene_path}.routing_result{item['path'][1:]}",
+            f"{item['code']}: {item['message']}",
+        )
+    if routing_schema_issues:
+        return issues
     status = routing_result.get("status")
-    selected_items = routing_result.get("selected_rules", [])
+    selected_items = routing_result["selected_rules"]
     selected_ids = [
         item.get("rule_id")
         for item in selected_items
@@ -136,18 +249,81 @@ def scene_routing_binding_issues(
     unknown = sorted(set(selected_ids) - grammar_ids)
     if unknown:
         add_issue(issues, "error", "IR-ROUTING-UNKNOWN", f"{scene_path}.routing_result.selected_rules", f"Routing selected unknown grammar rules: {unknown}.")
+    legacy_selected = sorted(rule_id for rule_id in selected_ids if rule_id.startswith("GO-"))
+    if legacy_selected:
+        add_issue(issues, "error", "IR-ROUTING-LEGACY-V02", f"{scene_path}.routing_result.selected_rules", f"Legacy seed rules cannot enter Grammar v0.2: {legacy_selected}.")
+    if routing_result.get("selection_count") != len(selected_ids):
+        add_issue(issues, "error", "IR-ROUTING-SELECTION-COUNT", f"{scene_path}.routing_result.selection_count", "selection_count must equal the selected rule count.")
+    eligible_ids = routing_result["eligible_rule_ids"]
+    if not set(selected_ids).issubset(set(eligible_ids)):
+        add_issue(issues, "error", "IR-ROUTING-ELIGIBLE-DRIFT", f"{scene_path}.routing_result.eligible_rule_ids", "Every selected rule must be present in eligible_rule_ids.")
+    expected_eligible_ids = sorted(
+        rule.get("rule_id")
+        for rule in grammar.get("rules", [])
+        if isinstance(rule, dict)
+        and rule.get("promotion_status") in ELIGIBLE_PROMOTIONS
+        and rule.get("runtime_authorized") is True
+        and isinstance(rule.get("rule_id"), str)
+    )
+    if eligible_ids != expected_eligible_ids:
+        add_issue(
+            issues,
+            "error",
+            "IR-ROUTING-ELIGIBLE-SET-DRIFT",
+            f"{scene_path}.routing_result.eligible_rule_ids",
+            f"eligible_rule_ids must equal the active Grammar set: {expected_eligible_ids}.",
+        )
+    expected_constraint_ids = sorted(
+        item.get("constraint_id")
+        for key in ("project_constraints", "safety_constraints")
+        for item in grammar.get(key, [])
+        if isinstance(item, dict) and isinstance(item.get("constraint_id"), str)
+    )
+    if routing_result["applied_constraint_ids"] != expected_constraint_ids:
+        add_issue(
+            issues,
+            "error",
+            "IR-ROUTING-CONSTRAINT-DRIFT",
+            f"{scene_path}.routing_result.applied_constraint_ids",
+            f"applied constraints must equal the active Grammar constraints: {expected_constraint_ids}.",
+        )
+    rejected_ids = [
+        item["rule_id"]
+        for item in routing_result["rejected_rules"]
+        if isinstance(item, dict) and isinstance(item.get("rule_id"), str)
+    ]
+    if len(rejected_ids) != len(set(rejected_ids)):
+        add_issue(issues, "error", "IR-ROUTING-REJECTED-DUPLICATE", f"{scene_path}.routing_result.rejected_rules", "Rejected routing rule IDs must be unique.")
+    if set(selected_ids) & set(rejected_ids):
+        add_issue(issues, "error", "IR-ROUTING-DECISION-OVERLAP", f"{scene_path}.routing_result", "A rule cannot be both selected and rejected.")
+    if set(selected_ids) | set(rejected_ids) != set(expected_eligible_ids):
+        add_issue(
+            issues,
+            "error",
+            "IR-ROUTING-DECISION-COVERAGE",
+            f"{scene_path}.routing_result",
+            "Selected and rejected rows must cover every active Grammar rule exactly once.",
+        )
+    raw_shots = scene.get("shots")
+    if not isinstance(raw_shots, list):
+        add_issue(issues, "error", "IR-ROUTING-SHOTS-SHAPE", f"{scene_path}.shots", "Scene shots must be a list before routing bindings can be checked.")
+        return issues
     shot_rule_ids = {
         rule_id
-        for shot in scene.get("shots", [])
+        for shot in raw_shots
         if isinstance(shot, dict)
         for rule_id in shot.get("evidence_rule_ids", [])
     }
     if status == "NO_APPLICABLE_RULE":
         if selected_ids or shot_rule_ids:
             add_issue(issues, "error", "IR-ROUTING-NO-MATCH-DRIFT", f"{scene_path}.routing_result", "NO_APPLICABLE_RULE requires zero selected and cited evidence rules.")
+        if routing_result.get("ir_handoff") != "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY":
+            add_issue(issues, "error", "IR-ROUTING-HANDOFF", f"{scene_path}.routing_result.ir_handoff", "NO_APPLICABLE_RULE requires the constraints-only handoff.")
     elif status == "SELECTED":
         if not selected_ids or shot_rule_ids != set(selected_ids):
             add_issue(issues, "error", "IR-ROUTING-SELECTION-DRIFT", f"{scene_path}.routing_result", "Director IR must cite every selected routing rule and no unselected rule across the scene.")
+        if routing_result.get("ir_handoff") != "CONTINUE_WITH_SELECTED_RULES":
+            add_issue(issues, "error", "IR-ROUTING-HANDOFF", f"{scene_path}.routing_result.ir_handoff", "SELECTED requires the selected-rules handoff.")
     else:
         add_issue(issues, "error", "IR-ROUTING-PAUSED", f"{scene_path}.routing_result.status", "A paused or invalid routing result cannot proceed to Director IR compilation.")
     if routing_result.get("human_review_status") != "HUMAN_REVIEW_PENDING":
@@ -161,6 +337,29 @@ def validate(
     source_text: str | None = None,
 ) -> dict[str, Any]:
     issues: list[dict[str, str]] = []
+    ir_schema = load_json(IR_SCHEMA_PATH)
+    ir_schema_issues: list[dict[str, str]] = []
+    validate_schema_subset(ir, ir_schema, ir_schema, ir_schema_issues)
+    for item in ir_schema_issues:
+        add_issue(
+            issues,
+            "error",
+            "IR-SCHEMA",
+            item["path"],
+            f"{item['code']}: {item['message']}",
+        )
+    if ir_schema_issues:
+        return {
+            "validator": "drama-director-compiler/0.1",
+            "episode_id": ir.get("episode_id") if isinstance(ir, dict) else None,
+            "status": "FAIL",
+            "errors": len(issues),
+            "warnings": 0,
+            "scene_count": 0,
+            "shot_count": 0,
+            "total_duration_seconds": 0.0,
+            "issues": issues,
+        }
     required_top = (
         "schema_version", "execution_medium", "project_id", "episode_id", "source_script",
         "target_duration_seconds", "duration_tolerance_seconds", "aspect_ratio",
@@ -240,6 +439,7 @@ def validate(
                 add_issue(issues, "error", "IR-SOURCE-REF", f"{shot_path}.source_refs", "at least one locked-script source reference is required")
 
             issues.extend(evidence_rule_reference_issues(shot, grammar, shot_path, routing_context))
+            issues.extend(audio_contract_issues(shot.get("audio"), shot_path))
 
             dialogue = shot.get("dialogue") or []
             dialogue_words = 0

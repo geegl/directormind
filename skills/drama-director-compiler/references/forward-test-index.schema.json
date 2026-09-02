@@ -67,7 +67,7 @@
         "properties": {
           "test_case_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9-]+$"},
           "package_path": {"type": "string", "pattern": "^examples/forward-tests/[A-Z0-9][A-Z0-9-]+$"},
-          "scene_problem": {"type": "string", "minLength": 1},
+          "scene_problem": {"$ref": "#/$defs/sceneProblemValue"},
           "coverage_tags": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
           "test_mode": {"enum": ["ZERO_ELIGIBLE_PROBE", "POSITIVE", "BOUNDARY_OR_NON_APPLICABLE"]},
           "positive_for_family_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
@@ -77,6 +77,30 @@
           "human_review_status": {"const": "HUMAN_REVIEW_PENDING"}
         }
       }
+    }
+  },
+  "$defs": {
+    "sceneProblemValue": {
+      "enum": [
+        "DIALOGUE_POWER_TRANSFER",
+        "RELATIONSHIP_FRACTURE",
+        "PUBLIC_REVELATION",
+        "GROUP_POWER_CHANGE",
+        "PROCEDURAL_COMPETENCE",
+        "PROCEDURAL_COLLAPSE",
+        "INTERROGATION",
+        "SUBJECTIVE_COERCION",
+        "SUSPENSE_INFORMATION_ASYMMETRY",
+        "ACTION_CAUSALITY",
+        "HORROR_RULE_REVELATION",
+        "ROMANTIC_PROXIMITY",
+        "SOUND_LED_CAUSALITY",
+        "MONTAGE_TIME_COMPRESSION",
+        "ENSEMBLE_REACTION_CHAIN",
+        "SILENT_AFTERMATH",
+        "NO_SPECIALIZED_PROBLEM",
+        "LEGACY_SCENE_PROBLEM"
+      ]
     }
   }
 }

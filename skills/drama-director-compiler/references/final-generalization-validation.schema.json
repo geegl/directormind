@@ -16,7 +16,7 @@
   ],
   "properties": {
     "schema_version": {
-      "const": "final-generalization-validation/0.2"
+      "const": "final-generalization-validation/0.3"
     },
     "status": {
       "enum": ["PASS_LOCAL", "FAIL_LOCAL"]
@@ -84,7 +84,7 @@
         "forward_warnings": {"const": 31},
         "validation_errors": {"const": 0},
         "validation_warnings": {"const": 103},
-        "unit_tests": {"const": 157},
+        "unit_tests": {"const": 178},
         "broken_references": {"const": 0},
         "prohibited_repository_files": {"const": 0},
         "scoped_public_string_issues": {"const": 0},

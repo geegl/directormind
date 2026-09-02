@@ -29,6 +29,7 @@ from validate_scene_evidence import validate_schema_subset  # noqa: E402
 
 
 ELIGIBLE_PROMOTIONS = {"CROSS_WORK_SUPPORTED", "GENERAL_DEFAULT"}
+NO_SPECIALIZED_PROBLEM = "NO_SPECIALIZED_PROBLEM"
 
 
 def _constraint_blockers(
@@ -84,6 +85,8 @@ def route_scene(scene: dict[str, Any], grammar: dict[str, Any]) -> dict[str, Any
             reasons.add("PROMOTION_INELIGIBLE")
         if rule.get("runtime_authorized") is not True:
             reasons.add("NOT_RUNTIME_AUTHORIZED")
+        if primary == NO_SPECIALIZED_PROBLEM:
+            reasons.add("NO_SPECIALIZED_PROBLEM")
         problems = set(routing.get("scene_problems", []))
         if primary not in problems and not secondary.intersection(problems):
             reasons.add("SCENE_PROBLEM_MISMATCH")
@@ -224,6 +227,24 @@ def schema_issues(value: dict[str, Any], schema_path: Path) -> list[dict[str, st
     issues: list[dict[str, str]] = []
     schema = read_json(schema_path)
     validate_schema_subset(value, schema, schema, issues, "$")
+    if schema_path == INPUT_SCHEMA_PATH and isinstance(value, dict):
+        problem = value.get("scene_problem")
+        if isinstance(problem, dict):
+            secondary = problem.get("secondary")
+            if isinstance(secondary, list) and NO_SPECIALIZED_PROBLEM in secondary:
+                issues.append({
+                    "level": "error",
+                    "code": "ROUTING-NO-SPECIALIZED-SECONDARY",
+                    "path": "$.scene_problem.secondary",
+                    "message": "NO_SPECIALIZED_PROBLEM is an exclusive primary negative sentinel",
+                })
+            if problem.get("primary") == NO_SPECIALIZED_PROBLEM and secondary:
+                issues.append({
+                    "level": "error",
+                    "code": "ROUTING-NO-SPECIALIZED-EXCLUSIVE",
+                    "path": "$.scene_problem",
+                    "message": "NO_SPECIALIZED_PROBLEM cannot be combined with secondary problems",
+                })
     return issues
 
 

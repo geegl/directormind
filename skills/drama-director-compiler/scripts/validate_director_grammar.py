@@ -255,6 +255,18 @@ def validate_grammar(
             add_issue(issues, "GRAMMAR-FAMILY-DRIFT", f"{path}.canonical_rule_family", "Rule family differs from its source candidate.")
         expected_problem = candidate.get("scene_problem", {})
         actual_problem = rule.get("scene_problem", {})
+        routing = rule.get("routing", {})
+        if (
+            actual_problem.get("primary") == "NO_SPECIALIZED_PROBLEM"
+            or "NO_SPECIALIZED_PROBLEM" in actual_problem.get("secondary", [])
+            or "NO_SPECIALIZED_PROBLEM" in routing.get("scene_problems", [])
+        ):
+            add_issue(
+                issues,
+                "GRAMMAR-NO-SPECIALIZED-RUNTIME",
+                f"{path}.scene_problem",
+                "NO_SPECIALIZED_PROBLEM is a negative routing sentinel and cannot authorize a runtime rule.",
+            )
         if (
             actual_problem.get("primary") != expected_problem.get("primary")
             or actual_problem.get("secondary") != expected_problem.get("secondary")
@@ -311,7 +323,6 @@ def validate_grammar(
         if missing_shots:
             add_issue(issues, "GRAMMAR-LINEAGE-SHOTS", f"{path}.evidence_lineage.evidence_shot_ids", f"Promotion evidence shots are missing: {missing_shots}.")
 
-        routing = rule.get("routing", {})
         declared_problems = [actual_problem.get("primary"), *actual_problem.get("secondary", [])]
         if set(routing.get("scene_problems", [])) != set(declared_problems):
             add_issue(issues, "GRAMMAR-ROUTING-PROBLEM-DRIFT", f"{path}.routing.scene_problems", "Machine routing problems differ from the human-readable contract.")

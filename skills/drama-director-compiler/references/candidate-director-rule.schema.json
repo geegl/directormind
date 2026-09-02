@@ -79,6 +79,7 @@
         "MONTAGE_TIME_COMPRESSION",
         "ENSEMBLE_REACTION_CHAIN",
         "SILENT_AFTERMATH",
+        "NO_SPECIALIZED_PROBLEM",
         "LEGACY_SCENE_PROBLEM"
       ]
     },

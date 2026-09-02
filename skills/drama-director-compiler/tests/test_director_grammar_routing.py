@@ -22,6 +22,10 @@ MATRIX_PATH = REPO_ROOT / "research" / "grammar" / "cross_work_support_matrix.js
 GRAMMAR_SCHEMA_PATH = SKILL_ROOT / "references" / "director-grammar.schema.json"
 INPUT_SCHEMA_PATH = SKILL_ROOT / "references" / "director-routing-input.schema.json"
 RESULT_SCHEMA_PATH = SKILL_ROOT / "references" / "director-routing-result.schema.json"
+IR_SCHEMA_PATH = SKILL_ROOT / "references" / "director-ir.schema.json"
+SCENE_SCHEMA_PATH = SKILL_ROOT / "references" / "scene-evidence.schema.json"
+CANDIDATE_SCHEMA_PATH = SKILL_ROOT / "references" / "candidate-director-rule.schema.json"
+FORWARD_INDEX_SCHEMA_PATH = SKILL_ROOT / "references" / "forward-test-index.schema.json"
 CASES_PATH = SKILL_ROOT / "tests" / "fixtures" / "routing_cases.json"
 
 sys.path.insert(0, str(SCRIPT_ROOT))
@@ -312,6 +316,140 @@ class DirectorGrammarRoutingTests(unittest.TestCase):
                 self.assertEqual(result["ir_handoff"], "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY")
                 self.assertEqual(result["human_review_status"], "HUMAN_REVIEW_PENDING")
 
+    def test_scene_problem_vocabularies_are_identical(self) -> None:
+        schema_paths = (
+            SCENE_SCHEMA_PATH,
+            CANDIDATE_SCHEMA_PATH,
+            GRAMMAR_SCHEMA_PATH,
+            INPUT_SCHEMA_PATH,
+            RESULT_SCHEMA_PATH,
+            IR_SCHEMA_PATH,
+            FORWARD_INDEX_SCHEMA_PATH,
+        )
+        vocabularies = [read_json(path)["$defs"]["sceneProblemValue"]["enum"] for path in schema_paths]
+        self.assertTrue(all(values == vocabularies[0] for values in vocabularies[1:]))
+        for case in self.cases:
+            self.assertIn(case["scene_problem"]["primary"], vocabularies[0])
+            self.assertTrue(set(case["scene_problem"]["secondary"]).issubset(vocabularies[0]))
+
+    def test_unknown_scene_problem_is_rejected_before_routing(self) -> None:
+        scene = copy.deepcopy(self.cases[0])
+        scene["scene_problem"]["primary"] = "MADE_UP_SCENE_PROBLEM"
+        self.assertIn("SCHEMA-ENUM", {issue["code"] for issue in schema_issues(scene, INPUT_SCHEMA_PATH)})
+        scene = copy.deepcopy(self.cases[0])
+        scene["scene_problem"]["secondary"] = ["MADE_UP_SCENE_PROBLEM"]
+        self.assertIn("SCHEMA-ENUM", {issue["code"] for issue in schema_issues(scene, INPUT_SCHEMA_PATH)})
+
+        scene = copy.deepcopy(self.cases[0])
+        scene["scene_problem"]["secondary"] = ["NO_SPECIALIZED_PROBLEM"]
+        self.assertIn(
+            "ROUTING-NO-SPECIALIZED-SECONDARY",
+            {issue["code"] for issue in schema_issues(scene, INPUT_SCHEMA_PATH)},
+        )
+
+    def test_no_specialized_problem_is_an_exclusive_negative_sentinel(self) -> None:
+        scene = next(copy.deepcopy(case) for case in self.cases if case["case_id"] == "ORIGINAL-NO-APPLICABLE-RULE")
+        grammar = copy.deepcopy(self.grammar)
+        grammar["rules"] = [
+            synthetic_rule(
+                "DR-SYNTHETIC-NEGATIVE",
+                "NO_SPECIALIZED_PROBLEM",
+                "simple_arrival",
+                "simple_arrival",
+            )
+        ]
+        result = route_scene(scene, grammar)
+        self.assertEqual(result["status"], "NO_APPLICABLE_RULE")
+        self.assertEqual(result["selection_count"], 0)
+        self.assertIn("NO_SPECIALIZED_PROBLEM", result["rejected_rules"][0]["rejection_reason_codes"])
+
+        full_rule = full_synthetic_rule()
+        full_rule["scene_problem"] = {"primary": "NO_SPECIALIZED_PROBLEM", "secondary": []}
+        full_rule["routing"]["scene_problems"] = ["NO_SPECIALIZED_PROBLEM"]
+        candidate = full_synthetic_candidate()
+        candidate["scene_problem"] = {"primary": "NO_SPECIALIZED_PROBLEM", "secondary": []}
+        grammar = copy.deepcopy(self.grammar)
+        grammar["rules"] = [full_rule]
+        report = validate_synthetic_grammar(
+            grammar,
+            {"candidates": [candidate]},
+            {"families": [{"family_id": "SYNTHETIC-FAMILY", "promotion_eligibility": "CROSS_WORK_SUPPORTED"}]},
+            self.schema,
+        )
+        self.assertIn("GRAMMAR-NO-SPECIALIZED-RUNTIME", issue_codes(report))
+
+    def test_proximity_fixture_is_suspense_not_romance(self) -> None:
+        scene = next(copy.deepcopy(case) for case in self.cases if case["case_id"] == "ORIGINAL-PROXIMITY-TENSION")
+        self.assertEqual(scene["scene_problem"]["primary"], "SUSPENSE_INFORMATION_ASYMMETRY")
+        grammar = copy.deepcopy(self.grammar)
+        grammar["rules"] = [
+            synthetic_rule(
+                "DR-SYNTHETIC-ROMANCE",
+                "ROMANTIC_PROXIMITY",
+                "distance_change",
+                "distance_change",
+            )
+        ]
+        result = route_scene(scene, grammar)
+        self.assertEqual(result["status"], "NO_APPLICABLE_RULE")
+        self.assertIn("SCENE_PROBLEM_MISMATCH", result["rejected_rules"][0]["rejection_reason_codes"])
+
+    def test_canonical_scene_problem_selects_matching_synthetic_rule(self) -> None:
+        scene = copy.deepcopy(self.cases[0])
+        self.assertEqual(scene["scene_problem"]["primary"], "DIALOGUE_POWER_TRANSFER")
+        grammar = copy.deepcopy(self.grammar)
+        grammar["rules"] = [
+            synthetic_rule(
+                "DR-SYNTHETIC-POWER-TRANSFER",
+                "DIALOGUE_POWER_TRANSFER",
+                "authority_shift",
+                "authority_shift",
+            )
+        ]
+        result = route_scene(scene, grammar)
+        self.assertEqual(result["status"], "SELECTED")
+        self.assertEqual(result["selection_count"], 1)
+        self.assertEqual(result["selected_rules"][0]["rule_id"], "DR-SYNTHETIC-POWER-TRANSFER")
+
+    def test_embedded_routing_result_requires_every_formal_field(self) -> None:
+        complete = route_scene(self.cases[0], self.grammar)
+        for field in read_json(RESULT_SCHEMA_PATH)["required"]:
+            with self.subTest(field=field):
+                scene = {"routing_result": copy.deepcopy(complete), "shots": [{"evidence_rule_ids": []}]}
+                del scene["routing_result"][field]
+                codes = {issue["code"] for issue in scene_routing_binding_issues(scene, self.grammar, "scene")}
+                self.assertIn("IR-ROUTING-RESULT-SCHEMA", codes)
+
+    def test_malformed_routing_result_types_fail_without_crashing(self) -> None:
+        complete = route_scene(self.cases[0], self.grammar)
+        scene = {"routing_result": copy.deepcopy(complete), "shots": [{"evidence_rule_ids": []}]}
+        scene["routing_result"]["selected_rules"] = None
+        codes = {issue["code"] for issue in scene_routing_binding_issues(scene, self.grammar, "scene")}
+        self.assertIn("IR-ROUTING-RESULT-SCHEMA", codes)
+
+        scene = {"routing_result": copy.deepcopy(complete), "shots": None}
+        codes = {issue["code"] for issue in scene_routing_binding_issues(scene, self.grammar, "scene")}
+        self.assertIn("IR-ROUTING-SHOTS-SHAPE", codes)
+
+    def test_embedded_routing_result_is_bound_to_actual_grammar_sets(self) -> None:
+        complete = route_scene(self.cases[0], self.grammar)
+        scene = {"routing_result": copy.deepcopy(complete), "shots": [{"evidence_rule_ids": []}]}
+        scene["routing_result"]["eligible_rule_ids"] = ["FAKE-ELIGIBLE"]
+        codes = {issue["code"] for issue in scene_routing_binding_issues(scene, self.grammar, "scene")}
+        self.assertIn("IR-ROUTING-ELIGIBLE-SET-DRIFT", codes)
+
+        scene = {"routing_result": copy.deepcopy(complete), "shots": [{"evidence_rule_ids": []}]}
+        scene["routing_result"]["applied_constraint_ids"] = []
+        codes = {issue["code"] for issue in scene_routing_binding_issues(scene, self.grammar, "scene")}
+        self.assertIn("IR-ROUTING-CONSTRAINT-DRIFT", codes)
+
+    def test_embedded_routing_result_contract_matches_standalone_schema(self) -> None:
+        standalone = read_json(RESULT_SCHEMA_PATH)
+        embedded = read_json(IR_SCHEMA_PATH)["$defs"]["routingResult"]
+        for field in ("type", "additionalProperties", "required", "properties"):
+            with self.subTest(field=field):
+                self.assertEqual(embedded[field], standalone[field])
+
     def test_routing_case_report_is_deterministic_and_complete(self) -> None:
         first = validate_cases(copy.deepcopy(self.cases), copy.deepcopy(self.grammar))
         second = validate_cases(copy.deepcopy(self.cases), copy.deepcopy(self.grammar))
@@ -457,18 +595,14 @@ class DirectorGrammarRoutingTests(unittest.TestCase):
             issue["code"]
             for issue in evidence_rule_reference_issues(shot, self.grammar, "shot", no_match)
         }
-        self.assertEqual(codes, {"IR-EVIDENCE-UNKNOWN"})
+        self.assertEqual(codes, {"IR-EVIDENCE-UNKNOWN", "IR-LEGACY-RULE-V02"})
 
     def test_selected_routing_rule_cannot_be_dropped_from_ir(self) -> None:
         grammar = copy.deepcopy(self.grammar)
-        grammar["rules"] = [{"rule_id": "DR-SELECTED"}]
+        grammar["rules"] = [synthetic_rule("DR-SELECTED", "ACTION_CAUSALITY", "cause_effect_chain", "cause_effect_chain")]
+        routing_result = route_scene(self.cases[4], grammar)
         scene = {
-            "routing_result": {
-                "schema_version": "director-routing-result/0.1",
-                "status": "SELECTED",
-                "selected_rules": [{"rule_id": "DR-SELECTED"}],
-                "human_review_status": "HUMAN_REVIEW_PENDING",
-            },
+            "routing_result": routing_result,
             "shots": [{"evidence_rule_ids": []}],
         }
         codes = {issue["code"] for issue in scene_routing_binding_issues(scene, grammar, "scene")}

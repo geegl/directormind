@@ -24,7 +24,7 @@ Read [Director IR contract](references/director-ir-contract.md). Read only the p
 
 1. Extract script facts verbatim: scenes, characters, dialogue, visible text, actions, reveals, forbidden early disclosures, and continuity outputs.
 2. Write each scene's dramatic engine: goal, objectives, obstacle, stakes, tactic change, subtext, POV, and audience information.
-3. Classify one primary scene problem and at most two secondary problems. Keep an unproved classification unresolved.
+3. Classify one primary scene problem and at most two secondary problems using the canonical schema enum. Use `NO_SPECIALIZED_PROBLEM` for the explicit negative case; keep an unproved classification unresolved and never invent a synonym.
 4. Create a rights-safe routing descriptor from those facts. Do not pass dialogue, private-script paths, character names, locations, props, or reference-work surfaces to the router.
 5. Consider only Grammar v0.2 rules with `CROSS_WORK_SUPPORTED` or `GENERAL_DEFAULT`, `runtime_authorized=true`, matching scene problem, complete trigger, locked required facts, and no non-applicability hit. Subject or genre similarity is never a match.
 6. Select up to four applicable rules; two to four is the preferred working range, but select one or zero when that is all the evidence allows. Never invent or pad a rule count. Zero is the valid `NO_APPLICABLE_RULE` result and continues under project and safety constraints only.
@@ -52,6 +52,8 @@ Read [Director IR contract](references/director-ir-contract.md). Read only the p
 - Golden Frames and scene masters must be project-original assets. Research-only reference stills never pass through as generation references.
 - `OBSERVED` means visible/audible evidence in a cited shot; interpretation stays `INFERRED`; unverified mechanics stay `UNKNOWN`.
 - Never route a legacy seed rule, `SINGLE_WORK_CANDIDATE`, `BLOCKED_BY_UNKNOWN`, `REJECTED`, or unauditioned audio claim.
+- Legacy Director IR may be upgraded only through the documented `LEGACY_COMPATIBLE` pause or `GRAMMAR_V02_ROUTED` evidence-complete mode. Never relabel a legacy route as Grammar v0.2, and never carry `GO-*` seed IDs into the v0.2 path.
+- Preserve non-empty legacy audio visibly for review. Do not silently drop it or guess it into a v0.2 audio instruction.
 - The router matches only structured scene problem, trigger, locked required facts, non-applicability and conflict fields. It does not parse rule prose or evidence lineage for a match.
 - Keep generation and publication authorization false unless separately granted.
 - Provider adapters, generation calls, and generated-media review live outside this Skill.

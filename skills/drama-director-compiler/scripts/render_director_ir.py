@@ -22,6 +22,27 @@ def dialogue_text(lines: list[dict[str, Any]]) -> str:
     return "<br>".join(f"{esc(line['speaker'])}: {esc(line['text'])}" for line in lines) if lines else "—"
 
 
+def render_audio(value: Any) -> str:
+    """Render v0.2 audio normally and preserve unknown legacy fields losslessly."""
+    if not isinstance(value, dict) or not value:
+        return "UNKNOWN"
+    standard_keys = {"status", "instruction", "source_refs"}
+    has_standard_contract = standard_keys.issubset(value)
+    legacy_payload = {key: value[key] for key in sorted(set(value) - standard_keys)}
+    if has_standard_contract:
+        text = esc(value.get("status", "UNKNOWN"))
+        if value.get("instruction"):
+            text += f": {esc(value['instruction'])}"
+        if value.get("source_refs"):
+            text += f"<br>AUDIO REF: {joined(value['source_refs'])}"
+        if legacy_payload:
+            serialized = json.dumps(legacy_payload, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+            text += f"<br>LEGACY_UNMAPPED: {esc(serialized)}"
+        return text
+    serialized = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return f"LEGACY_UNMAPPED: {esc(serialized)}"
+
+
 def render_shot_script(ir: dict[str, Any]) -> str:
     lines = [
         f"# {ir['episode_id']} 导演分镜 v0.2",
@@ -37,7 +58,7 @@ def render_shot_script(ir: dict[str, Any]) -> str:
         "",
     ]
     for scene in ir["scenes"]:
-        lines.extend([
+        scene_lines = [
             f"## {scene['scene_id']}｜{scene['title']}｜{scene['duration_seconds']}秒",
             "",
             f"**场景目标：** {scene['narrative_goal']}",
@@ -46,9 +67,18 @@ def render_shot_script(ir: dict[str, Any]) -> str:
             "",
             f"**空间：** {scene['spatial_plan'].get('geometry', 'UNKNOWN')}；轴线：{scene['spatial_plan'].get('primary_axis', 'UNKNOWN')}",
             "",
+        ]
+        routing = scene.get("routing_result") if isinstance(scene.get("routing_result"), dict) else {}
+        if routing.get("status") == "HUMAN_REVIEW_REQUIRED":
+            scene_lines.extend([
+                f"> 路由暂停：`{esc(routing.get('status'))}` / `{esc(routing.get('ir_handoff'))}`；场景问题 `{esc(routing.get('scene_problem'))}`。不得按 Grammar v0.2 继续执行，需人工重新路由。",
+                "",
+            ])
+        scene_lines.extend([
             "| 镜头 | 秒 | 叙事功能 | 景别/机位/运动 | 调度与表演 | 锁定对白/文字 | 声音与衔接 | 执行/参考 | 规则 | AI风险/降级 |",
             "|---|---:|---|---|---|---|---|---|---|---|",
         ])
+        lines.extend(scene_lines)
         for shot in scene["shots"]:
             risk = shot["ai_complexity"]
             risk_text = f"摄{risk['camera']}/表{risk['performance']}/连{risk['continuity']}"
@@ -64,12 +94,7 @@ def render_shot_script(ir: dict[str, Any]) -> str:
             locked = dialogue_text(shot["dialogue"])
             if shot["visible_text"]:
                 locked += f"<br>TEXT: {joined(shot['visible_text'])}"
-            audio = shot.get("audio") if isinstance(shot.get("audio"), dict) else {}
-            audio_text = esc(audio.get("status", "UNKNOWN"))
-            if audio.get("instruction"):
-                audio_text += f": {esc(audio['instruction'])}"
-            if audio.get("source_refs"):
-                audio_text += f"<br>AUDIO REF: {joined(audio['source_refs'])}"
+            audio_text = render_audio(shot.get("audio"))
             connection = f"AUDIO: {audio_text}<br>IN: {esc(shot['edit_in'])}<br>OUT: {esc(shot['edit_out'])}"
             execution = shot["execution_plan"]
             layer_types = [layer["type"] for layer in execution["composite_layers"]]
