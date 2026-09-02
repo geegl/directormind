@@ -2,7 +2,7 @@
 
 Updated: 2026-09-02
 
-Status: `FINAL_INDEPENDENT_REVIEW_IN_PROGRESS / REMOTE_IMPLEMENTATION_CI_PASSED`
+Status: `FINAL_DOCUMENTATION_CI_PENDING / INDEPENDENT_REVIEW_PASS`
 
 Compatibility repair status: `FOLLOW_UP_P1_REPAIRED_LOCAL / FINAL_RE_REVIEW_PENDING`
 
@@ -123,7 +123,7 @@ Only one writer may own a mutable file at a time. Root is the sole accountable i
 - [x] *Succession* is integrated through the current contracts without merging the old PR.
 - [ ] Existing and new local tests pass and the final PR #3 head passes the defined remote CI workflow.
 - [x] Final validation records zero contract errors and preserves all warnings.
-- [ ] A non-writing read-only agent issues a fresh verdict on the final integrated state and lists unverified boundaries.
+- [x] A non-writing read-only agent issues a fresh verdict on the final integrated state and lists unverified boundaries.
 - [x] Final delivery package includes changes, behavioral evidence, check results, remaining risks, external side effects, resource use and rollback.
 
 ## Approved post-completion compatibility repair
@@ -144,11 +144,11 @@ Repair completion requires targeted compatibility tests, the full local suite, t
 
 - Current accountable implementer: root agent, sole integrator. No other writer may edit the same mutable file concurrently.
 - Completed: all implementation phases are present locally; the stricter Phase 1 repair has been integrated with the later closed-corpus work.
-- Remaining: push the follow-up P1 repair, require hosted CI, obtain the fresh independent read-only verdict, then update and validate the final documentation head.
-- Current validation: the integrated Scene validator passes 100/100 tests, the corrected converter passes 13/13 tests on Python 3.9 and 3.12, the complete suite passes 225/225, all 18 local repository checks pass, and the last pushed PR #3 implementation head passed hosted CI. The new follow-up repair has not yet been pushed or remotely checked.
+- Remaining: commit the fresh independent PASS evidence, update PR #3's description, then require the final documentation head to pass hosted CI.
+- Current validation: the integrated Scene validator passes 100/100 tests, the corrected converter passes 13/13 tests on Python 3.9 and 3.12, the complete suite passes 225/225, all 18 local repository checks pass, the follow-up repair head passes hosted CI, and a fresh non-writing reviewer reports `PASS_LOCAL / NO_MUST_FIX_FINDINGS` after replaying both final P1s.
 - Known boundaries: all current scene problems remain UNKNOWN; direct semantic audio is absent; no candidate is yet authorized as an executable cross-work rule.
 - Remote boundary: PR #3 push and PR #1 closure are authorized in the order above. Merging `main` and all deployment/publication/production actions remain prohibited.
-- Next single action: commit and push the locally passing follow-up P1 repair, then require hosted CI before the fresh independent read-only final review.
+- Next single action: commit and push the independent PASS evidence, update PR #3's description, and require final documentation-head CI.
 
 ## Rollback
 

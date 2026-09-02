@@ -2,7 +2,7 @@
 
 Updated: 2026-09-02
 
-Status: `FINAL_LOCAL_PASS / REMOTE_IMPLEMENTATION_CI_PASS / FINAL_REVIEW_PENDING`
+Status: `FINAL_LOCAL_PASS / REPAIR_HEAD_CI_PASS / INDEPENDENT_REVIEW_PASS / FINAL_DOCUMENTATION_CI_PENDING`
 
 This register is the reproducible source for current numerical pass claims. A
 command is evidence only for the boundary named in its row. Structural checks do
@@ -30,12 +30,12 @@ sound, and do not constitute creative approval.
 | Repository boundary audit | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_repository_boundaries.py --quiet` | Boundary validator and automation tests | PASS — zero whole-repository file/syntax/link issues and zero current-machine/runtime scoped string issues | Original 30 immutable legacy Markdown ledgers are explicitly excluded provenance; no whole-repository zero-string claim is made |
 | Final validation report | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/run_repository_checks.py` | Strict `final-generalization-validation/0.4` schema, live runner evidence and deterministic JSON | PASS_LOCAL — 33 dispositions, 31 scenes, 2,343 units, 124 candidates, 16 families, 225 tests, zero validation errors and 103 preserved warnings | A missing or failed prerequisite produces `FAIL_LOCAL`; the versioned report does not self-attest post-commit PR state or remote CI |
 | Complete local automation | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/run_repository_checks.py` | Local runner, all builders/validators, temporary report comparison, tests and final report | PASS — 18 checks | Local CI-equivalent execution; does not claim a GitHub-hosted run |
-| Minimal CI definition | `.github/workflows/directormind-contracts.yml` | Read-only workflow calling the complete local runner | PASS_REMOTE_IMPLEMENTATION_HEAD | First run exposed Python 3.9/3.12 sum drift; after decimal summation and cross-runtime reproduction, the corrective hosted run passed. Final documentation head remains separately gated |
+| Minimal CI definition | `.github/workflows/directormind-contracts.yml` | Read-only workflow calling the complete local runner | PASS_REMOTE_REPAIR_HEAD | First run exposed Python 3.9/3.12 sum drift; after decimal summation and cross-runtime reproduction, the corrective hosted run passed. The follow-up routing/upgrade repair run also passed. Final documentation head remains separately gated |
 | Whitespace | `git diff --check origin/main...HEAD` | Complete committed PR change set | PASS | The local pre-commit working-tree diff is checked separately with `git diff --check` |
 
 ## Final independent review
 
-The first final audit rejected three evidence defects. After correction, a non-writing reviewer reran the full 18-check command, confirmed the then-current 157 tests, independently reproduced the final counts and injected failure into each of the 17 live prerequisites. Every failure produced `FAIL_LOCAL`; missing live evidence also failed. That historical verdict remains unchanged. A later compatibility repair was reviewed by three fresh non-writing agents: their first round found real route, migration, audio, type and overwrite gaps; after correction they replayed those attacks and issued `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. A subsequent final review found cross-scene routing-result substitution and unrelated-output overwrite; both now have local fixes and regression tests pending fresh independent replay. The compatibility snapshot remains recorded in `COMPATIBILITY_REPAIR_INDEPENDENT_AUDIT.md`; the current combined suite contains 225 tests.
+The first final audit rejected three evidence defects. After correction, a non-writing reviewer reran the full 18-check command, confirmed the then-current 157 tests, independently reproduced the final counts and injected failure into each of the 17 live prerequisites. Every failure produced `FAIL_LOCAL`; missing live evidence also failed. That historical verdict remains unchanged. A later compatibility repair was reviewed by three fresh non-writing agents: their first round found real route, migration, audio, type and overwrite gaps; after correction they replayed those attacks and issued `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. A subsequent final review found cross-scene routing-result substitution and unrelated-output overwrite. Both are fixed, and a fresh non-writing reviewer independently replayed the attacks and valid paths, reran 225 tests and all 18 checks, confirmed repair-head CI and issued `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. The current verdict is recorded in `FINAL_INTEGRATION_INDEPENDENT_AUDIT.md`; historical snapshots remain unchanged.
 
 ## Independent Phase 1 review
 

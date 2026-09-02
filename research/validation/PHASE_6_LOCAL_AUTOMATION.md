@@ -2,7 +2,7 @@
 
 Updated: 2026-09-02
 
-Status: `FOLLOW_UP_REPAIR_LOCAL_PASS / REPAIR_CI_AND_FINAL_REVIEW_PENDING`
+Status: `FOLLOW_UP_REPAIR_CI_PASS / INDEPENDENT_REVIEW_PASS / FINAL_DOCUMENTATION_CI_PENDING`
 
 ## Result
 
@@ -47,12 +47,13 @@ The current local runner also covers the later narrow repair: one canonical scen
 - First integrated run: FAIL at canonical conversion determinism; 14 files differed only in the final representation of `stats.total_duration`.
 - Corrective evidence: all 31 conversions pass byte-for-byte under Python 3.9 and Python 3.12; 13/13 converter tests and 18/18 repository checks pass locally.
 - Corrective hosted run: PASS; the read-only `validate` job completed successfully.
+- Follow-up routing/upgrade repair run: PASS; the same read-only `validate` job completed successfully.
 - PR #1: CLOSED WITHOUT MERGE only after the corrective hosted run passed; the current 88-unit migration stays in PR #3.
 - The final documentation head still requires a hosted run after the final independent verdict is recorded.
 
 ## Independent result
 
-The first final audit returned FAIL on three evidence defects despite passing runtime checks. After correction, the non-writing reviewer reran the full suite, verified missing-evidence failure and injected failure into each live prerequisite. That historical narrow re-review issued PASS. Three fresh non-writing reviewers later audited the compatibility repair, first found real blockers, then independently replayed those corrections and issued `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. A subsequent final reviewer found two further P1s: a complete cross-scene routing result could be substituted, and an unrelated existing upgrade output could be overwritten. Both are repaired locally with regression coverage; a fresh independent replay remains required. The historical audit files remain unchanged.
+The first final audit returned FAIL on three evidence defects despite passing runtime checks. After correction, the non-writing reviewer reran the full suite, verified missing-evidence failure and injected failure into each live prerequisite. That historical narrow re-review issued PASS. Three fresh non-writing reviewers later audited the compatibility repair, first found real blockers, then independently replayed those corrections and issued `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. A subsequent final reviewer found two further P1s: a complete cross-scene routing result could be substituted, and an unrelated existing upgrade output could be overwritten. Both are repaired with regression coverage. A fresh non-writing reviewer independently replayed both attacks and valid paths, reran 225 tests and all 18 checks, verified repair-head CI, and issued `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. See `FINAL_INTEGRATION_INDEPENDENT_AUDIT.md`; historical audit files remain unchanged.
 
 ## External effects and rollback
 

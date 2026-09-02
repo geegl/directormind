@@ -4,7 +4,7 @@ Updated: 2026-09-02
 
 ## Current phase
 
-The user-approved 33-source generalization Goal has passed local integration and the prior implementation-head hosted CI on `codex/macos-first16-local-batch`. A later final read-only review found two routing/upgrade P1s; both are repaired and fully green locally, while repair-head CI, final independent re-review and final-head CI remain.
+The user-approved 33-source generalization Goal has passed local integration on `codex/macos-first16-local-batch`. A later final read-only review found two routing/upgrade P1s; both are repaired, the repair-head hosted CI passes, and a fresh independent replay reports no remaining must-fix finding. Only final documentation-head CI remains.
 
 Phases 1 through 6 and the later runtime-contract compatibility repair are present locally. The repair enforces one canonical scene-problem vocabulary and negative sentinel, restores v0.1-only GO-01/GO-07 checks, embeds the canonical routing input, replays it through an authority-validated Grammar, binds its dramatic structure and locked facts to the scene and Shots, and preserves legacy audio and upgrade data without inventing a route. The upgrader now writes only to a new output path. The original 30 legacy Markdown sources remain unchanged; their canonical derived outputs were regenerated only to satisfy the stricter boundary and UNKNOWN contracts. The existing 88-unit *Succession* ledger remains integrated, no UNKNOWN-dependent candidate is executable, and eight rights-safe original packages still route without inventing a rule.
 
@@ -55,7 +55,7 @@ Generated `*.scene-evidence.generated.md` files are deterministic review views o
 - No real positive selection has been exercised because the live eligible-family set is empty; the forward-test validator will fail when that set becomes non-empty until each family has distinct positive and boundary packages.
 - The first final read-only audit returned FAIL on evidence scope/provenance wording. All three findings are corrected; the narrow independent re-review issued PASS.
 - The post-completion compatibility repair received `PASS_LOCAL / NO_MUST_FIX_FINDINGS` from fresh non-writing reviewers after they replayed the initially failing adversarial cases.
-- A later final read-only audit correctly found two additional P1s: cross-scene substitution of a complete routing result and overwrite of an unrelated existing upgrade output. Both attacks now fail locally; the valid routed and new-output paths still pass. Repair-head CI and independent replay remain pending.
+- A later final read-only audit correctly found two additional P1s: cross-scene substitution of a complete routing result and overwrite of an unrelated existing upgrade output. Both attacks now fail; the valid routed and new-output paths still pass. Repair-head CI and the fresh independent replay both pass.
 - The GitHub workflow is defined. Its first integrated run exposed Python-version float-sum drift; the corrected implementation then passed hosted CI. Final documentation still requires final-head CI.
 - Source replay and direct semantic-audio audition remain outside this Goal; structural validation cannot prove the original picture observations, sound semantics, creative quality or audience response.
 
@@ -77,12 +77,12 @@ Generated `*.scene-evidence.generated.md` files are deterministic review views o
 - Phase 4 independent read-only audit: PASS after replaying false-positive, private-path, fact-drift, work-title, approval, audio-loss and JSON Unicode-escape attacks and reading all eight original scripts.
 - Phase 5 independent read-only audit: PASS — 88/4 migration, original 30/120 no-drift, UNKNOWN/audio/runtime boundaries, four reviewed family assignments, catalog route and 31/2,343/124/16/0/72 arithmetic reproduced with no must-fix finding.
 - Repository automation after the follow-up routing/upgrade repair: PASS — all 18 checks pass, five versioned reports match live output, the full PR whitespace command passes, and `final-generalization-validation/0.4` is deterministic `PASS_LOCAL` with zero validation errors and 103 preserved warnings.
-- Minimal CI workflow: PASS_REMOTE_IMPLEMENTATION_HEAD — read-only permissions and the same local runner; the corrective hosted run passed after 2 minutes 42 seconds. The final documentation head will be checked again.
-- Historical final automation audit: PASS_LOCAL on its reviewed snapshot after individual failure injection across all 17 live prerequisites; a later integrated-state review found the two P1s recorded above, so current final acceptance remains pending fresh replay.
+- Minimal CI workflow: PASS_REMOTE_REPAIR_HEAD — read-only permissions and the same local runner; both the earlier corrective run and the later follow-up repair run passed. The final documentation head will be checked again.
+- Final integrated-state independent audit: PASS_LOCAL — a fresh non-writing reviewer independently rejected both cross-scene substitutions and existing-output overwrite, passed valid IR and upgrade paths, reran 225 tests and all 18 checks, and listed the remaining source/audio/creative boundaries.
 - Compatibility-repair independent audit: PASS_LOCAL — three fresh read-only reviewers found real first-round gaps, verified their closure, and reported no remaining must-fix finding.
 
 The current command-to-claim evidence is `research/validation/VALIDATION_CLAIM_REGISTER.md`. The versioned closed-corpus evidence is `research/validation/CLOSED_CORPUS_COMPLETION_REPORT.md` and `research/validation/scene-evidence-validation.json`. A structural pass is not human creative approval.
 
 ## Next single action
 
-Commit and push the locally passing follow-up P1 repair and require hosted CI. Then obtain a fresh independent read-only verdict, record the result, push the final evidence update and require final-head CI success. PR #1 is closed without merge; do not merge `main`, deploy, publish or delete media.
+Commit and push the independent PASS evidence, update PR #3's description, and require final documentation-head CI success. PR #1 is closed without merge; do not merge `main`, deploy, publish or delete media.
