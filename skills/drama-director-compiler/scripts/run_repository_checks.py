@@ -41,7 +41,7 @@ def checks(report_root: Path) -> list[Check]:
         Check("forward-test build determinism", (python, f"{script}/build_forward_tests.py", "--check")),
         Check("forward-test repository", (python, f"{script}/validate_forward_tests.py", "--report", str(report_root / "forward-test-validation.json"))),
         Check("unit and CLI suite", (python, "-m", "unittest", "discover", "-s", "skills/drama-director-compiler/tests"), quick=False),
-        Check("whitespace", ("git", "diff", "--check")),
+        Check("whitespace", ("git", "diff", "--check", "origin/main...HEAD")),
     ]
     return result
 

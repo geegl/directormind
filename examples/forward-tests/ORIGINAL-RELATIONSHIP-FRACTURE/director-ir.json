@@ -38,6 +38,62 @@
         "character": "ENSEMBLE_NEUTRAL",
         "identification_level": "STRUCTURAL_TEST_ONLY"
       },
+      "routing_input": {
+        "case_id": "ORIGINAL-RELATIONSHIP-FRACTURE",
+        "dramatic_structure": {
+          "goal": "show a final attempt at repair fail",
+          "objectives": [
+            "restore the shared working agreement"
+          ],
+          "obstacle": "one partner will not renew the agreement",
+          "stakes": "the joint project will end",
+          "subtext": "returning the untouched card is the answer",
+          "tactic_change": "invitation becomes departure"
+        },
+        "locked_facts": [
+          {
+            "fact_id": "FACT-01",
+            "fact_type": "repair_offer",
+            "source_ref": "locked-script.md#FACT-01",
+            "status": "LOCKED",
+            "value": "Partner A leaves a blank name card at the shared model as an invitation to continue."
+          },
+          {
+            "fact_id": "FACT-02",
+            "fact_type": "repair_declined",
+            "source_ref": "locked-script.md#FACT-02",
+            "status": "LOCKED",
+            "value": "Partner B returns the blank card without adding a name."
+          },
+          {
+            "fact_id": "FACT-03",
+            "fact_type": "departure",
+            "source_ref": "locked-script.md#FACT-03",
+            "status": "LOCKED",
+            "value": "Partner B removes their tools and exits while Partner A remains at the model."
+          }
+        ],
+        "priority_constraints": [],
+        "rights_boundary": {
+          "contains_private_script": false,
+          "contains_reference_surface": false,
+          "project_original": true
+        },
+        "routing_signals": [
+          "repair_declined",
+          "departure"
+        ],
+        "scene_problem": {
+          "primary": "RELATIONSHIP_FRACTURE",
+          "secondary": [],
+          "status": "LOCKED"
+        },
+        "schema_version": "director-routing-input/0.1",
+        "subject_matter_tags": [
+          "partnership"
+        ],
+        "unknown_fact_types": []
+      },
       "routing_result": {
         "applied_constraint_ids": [
           "PC-DIALOGUE-TEXT-LOCK",

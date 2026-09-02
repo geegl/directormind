@@ -42,6 +42,34 @@ def issue_codes(report: dict) -> set[str]:
     return {issue["code"] for issue in report["issues"]}
 
 
+def bound_scene(
+    routing_input: dict,
+    routing_result: dict,
+    evidence_rule_ids: list[str] | None = None,
+) -> dict:
+    selected = evidence_rule_ids or []
+    shots = []
+    for index, fact in enumerate(routing_input["locked_facts"]):
+        shots.append({
+            "source_refs": [fact["source_ref"]],
+            "narrative_goal": fact["value"],
+            "constraints": {"must_hold": [fact["value"]]},
+            "evidence_rule_ids": selected if index == 0 else [],
+        })
+    return {
+        "narrative_goal": routing_input["dramatic_structure"]["goal"],
+        "dramatic_engine": copy.deepcopy(routing_input["dramatic_structure"]),
+        "audience_information": {
+            "locked_fact_ids": [
+                fact["fact_id"] for fact in routing_input["locked_facts"]
+            ]
+        },
+        "routing_input": copy.deepcopy(routing_input),
+        "routing_result": copy.deepcopy(routing_result),
+        "shots": shots,
+    }
+
+
 def synthetic_rule(rule_id: str, problem: str, signal: str, fact_type: str) -> dict:
     return {
         "rule_id": rule_id,
@@ -415,30 +443,31 @@ class DirectorGrammarRoutingTests(unittest.TestCase):
         complete = route_scene(self.cases[0], self.grammar)
         for field in read_json(RESULT_SCHEMA_PATH)["required"]:
             with self.subTest(field=field):
-                scene = {"routing_result": copy.deepcopy(complete), "shots": [{"evidence_rule_ids": []}]}
+                scene = bound_scene(self.cases[0], complete)
                 del scene["routing_result"][field]
                 codes = {issue["code"] for issue in scene_routing_binding_issues(scene, self.grammar, "scene")}
                 self.assertIn("IR-ROUTING-RESULT-SCHEMA", codes)
 
     def test_malformed_routing_result_types_fail_without_crashing(self) -> None:
         complete = route_scene(self.cases[0], self.grammar)
-        scene = {"routing_result": copy.deepcopy(complete), "shots": [{"evidence_rule_ids": []}]}
+        scene = bound_scene(self.cases[0], complete)
         scene["routing_result"]["selected_rules"] = None
         codes = {issue["code"] for issue in scene_routing_binding_issues(scene, self.grammar, "scene")}
         self.assertIn("IR-ROUTING-RESULT-SCHEMA", codes)
 
-        scene = {"routing_result": copy.deepcopy(complete), "shots": None}
+        scene = bound_scene(self.cases[0], complete)
+        scene["shots"] = None
         codes = {issue["code"] for issue in scene_routing_binding_issues(scene, self.grammar, "scene")}
         self.assertIn("IR-ROUTING-SHOTS-SHAPE", codes)
 
     def test_embedded_routing_result_is_bound_to_actual_grammar_sets(self) -> None:
         complete = route_scene(self.cases[0], self.grammar)
-        scene = {"routing_result": copy.deepcopy(complete), "shots": [{"evidence_rule_ids": []}]}
+        scene = bound_scene(self.cases[0], complete)
         scene["routing_result"]["eligible_rule_ids"] = ["FAKE-ELIGIBLE"]
         codes = {issue["code"] for issue in scene_routing_binding_issues(scene, self.grammar, "scene")}
         self.assertIn("IR-ROUTING-ELIGIBLE-SET-DRIFT", codes)
 
-        scene = {"routing_result": copy.deepcopy(complete), "shots": [{"evidence_rule_ids": []}]}
+        scene = bound_scene(self.cases[0], complete)
         scene["routing_result"]["applied_constraint_ids"] = []
         codes = {issue["code"] for issue in scene_routing_binding_issues(scene, self.grammar, "scene")}
         self.assertIn("IR-ROUTING-CONSTRAINT-DRIFT", codes)
@@ -601,10 +630,7 @@ class DirectorGrammarRoutingTests(unittest.TestCase):
         grammar = copy.deepcopy(self.grammar)
         grammar["rules"] = [synthetic_rule("DR-SELECTED", "ACTION_CAUSALITY", "cause_effect_chain", "cause_effect_chain")]
         routing_result = route_scene(self.cases[4], grammar)
-        scene = {
-            "routing_result": routing_result,
-            "shots": [{"evidence_rule_ids": []}],
-        }
+        scene = bound_scene(self.cases[4], routing_result)
         codes = {issue["code"] for issue in scene_routing_binding_issues(scene, grammar, "scene")}
         self.assertEqual(codes, {"IR-ROUTING-SELECTION-DRIFT"})
         scene["shots"][0]["evidence_rule_ids"] = ["DR-SELECTED"]

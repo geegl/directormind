@@ -38,6 +38,62 @@
         "character": "ENSEMBLE_NEUTRAL",
         "identification_level": "STRUCTURAL_TEST_ONLY"
       },
+      "routing_input": {
+        "case_id": "ORIGINAL-PROXIMITY-TENSION",
+        "dramatic_structure": {
+          "goal": "make mutual awareness legible through distance without physical contact",
+          "objectives": [
+            "complete the joint model review"
+          ],
+          "obstacle": "both people avoid acknowledging the changed relationship",
+          "stakes": "the review requires continued cooperation",
+          "subtext": "the maintained gap carries the tension",
+          "tactic_change": "parallel work becomes a shared pause"
+        },
+        "locked_facts": [
+          {
+            "fact_id": "FACT-01",
+            "fact_type": "shared_object",
+            "source_ref": "locked-script.md#FACT-01",
+            "status": "LOCKED",
+            "value": "Both designers need the same unlit model to complete a joint review."
+          },
+          {
+            "fact_id": "FACT-02",
+            "fact_type": "distance_change",
+            "source_ref": "locked-script.md#FACT-02",
+            "status": "LOCKED",
+            "value": "They approach opposite sides of the model table and stop within arm's reach."
+          },
+          {
+            "fact_id": "FACT-03",
+            "fact_type": "no_contact_boundary",
+            "source_ref": "locked-script.md#FACT-03",
+            "status": "LOCKED",
+            "value": "The table remains between them and neither person touches the other."
+          }
+        ],
+        "priority_constraints": [],
+        "rights_boundary": {
+          "contains_private_script": false,
+          "contains_reference_surface": false,
+          "project_original": true
+        },
+        "routing_signals": [
+          "distance_change",
+          "no_contact_boundary"
+        ],
+        "scene_problem": {
+          "primary": "ROMANTIC_PROXIMITY",
+          "secondary": [],
+          "status": "LOCKED"
+        },
+        "schema_version": "director-routing-input/0.1",
+        "subject_matter_tags": [
+          "relationship_tension"
+        ],
+        "unknown_fact_types": []
+      },
       "routing_result": {
         "applied_constraint_ids": [
           "PC-DIALOGUE-TEXT-LOCK",

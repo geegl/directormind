@@ -38,6 +38,65 @@
         "character": "ENSEMBLE_NEUTRAL",
         "identification_level": "STRUCTURAL_TEST_ONLY"
       },
+      "routing_input": {
+        "case_id": "ORIGINAL-PROCEDURE",
+        "dramatic_structure": {
+          "goal": "show a procedure fail honestly and then recover through the approved fallback",
+          "objectives": [
+            "complete the irrigation handoff"
+          ],
+          "obstacle": "the final reading is unreliable",
+          "stakes": "the garden cannot be left on automatic control",
+          "subtext": "competence is shown by stopping at uncertainty",
+          "tactic_change": "routine verification becomes fallback verification"
+        },
+        "locked_facts": [
+          {
+            "fact_id": "FACT-01",
+            "fact_type": "ordered_steps",
+            "source_ref": "locked-script.md#FACT-01",
+            "status": "LOCKED",
+            "value": "The operator must verify valve, pressure, then flow in that order."
+          },
+          {
+            "fact_id": "FACT-02",
+            "fact_type": "procedure_failure",
+            "source_ref": "locked-script.md#FACT-02",
+            "status": "LOCKED",
+            "value": "The first flow reading cannot be confirmed and the handoff stops."
+          },
+          {
+            "fact_id": "FACT-03",
+            "fact_type": "procedure_recovery",
+            "source_ref": "locked-script.md#FACT-03",
+            "status": "LOCKED",
+            "value": "A project-original spare gauge produces a stable reading and the checker signs the handoff."
+          }
+        ],
+        "priority_constraints": [],
+        "rights_boundary": {
+          "contains_private_script": false,
+          "contains_reference_surface": false,
+          "project_original": true
+        },
+        "routing_signals": [
+          "ordered_steps",
+          "procedure_failure",
+          "procedure_recovery"
+        ],
+        "scene_problem": {
+          "primary": "PROCEDURAL_COMPETENCE",
+          "secondary": [
+            "PROCEDURAL_COLLAPSE"
+          ],
+          "status": "LOCKED"
+        },
+        "schema_version": "director-routing-input/0.1",
+        "subject_matter_tags": [
+          "maintenance"
+        ],
+        "unknown_fact_types": []
+      },
       "routing_result": {
         "applied_constraint_ids": [
           "PC-DIALOGUE-TEXT-LOCK",

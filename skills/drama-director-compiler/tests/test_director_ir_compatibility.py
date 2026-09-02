@@ -93,6 +93,7 @@ class DirectorIRCompatibilityTests(unittest.TestCase):
         self.assertEqual(source["schema_version"], "director-ir/0.1")
         self.assertEqual(upgraded["schema_version"], "director-ir/0.2")
         self.assertEqual(upgraded["director_grammar_path"], source["director_grammar_path"])
+        self.assertIsNone(upgraded["scenes"][0]["routing_input"])
         self.assertEqual(upgraded["scenes"][0]["routing_result"]["status"], "HUMAN_REVIEW_REQUIRED")
         self.assertEqual(upgraded["scenes"][0]["routing_result"]["ir_handoff"], "PAUSE_FOR_HUMAN")
         self.assertEqual(schema_issues(upgraded["scenes"][0]["routing_result"], RESULT_SCHEMA_PATH), [])
@@ -113,13 +114,16 @@ class DirectorIRCompatibilityTests(unittest.TestCase):
 
     def test_routed_upgrade_requires_explicit_complete_results_and_shot_bindings(self) -> None:
         source = copy.deepcopy(self.forward_ir)
+        complete_input = copy.deepcopy(source["scenes"][0]["routing_input"])
         complete_result = copy.deepcopy(source["scenes"][0]["routing_result"])
         source["schema_version"] = "director-ir/0.1"
+        source["scenes"][0].pop("routing_input")
         source["scenes"][0].pop("routing_result")
         source["scenes"][0]["shots"][0]["evidence_rule_ids"] = ["GO-01"]
         overrides = {
             "migration_mode": "GRAMMAR_V02_ROUTED",
             "target_director_grammar_path": "research/grammar/director_grammar_v0.2.json",
+            "scene_routing_inputs": {"EP01-SC01": complete_input},
             "scene_routing_results": {"EP01-SC01": complete_result},
             "shot_overrides": {
                 shot["shot_id"]: {"evidence_rule_ids": []}
@@ -129,16 +133,19 @@ class DirectorIRCompatibilityTests(unittest.TestCase):
         upgraded = upgrade_ir(source, overrides, self.grammar)
         self.assertEqual(schema_issues(upgraded, IR_SCHEMA_PATH), [])
         self.assertEqual(validate_ir(upgraded, self.grammar)["status"], "PASS")
+        self.assertEqual(upgraded["scenes"][0]["routing_input"], complete_input)
         self.assertEqual(upgraded["scenes"][0]["routing_result"], complete_result)
         self.assertTrue(all(not shot["evidence_rule_ids"] for shot in upgraded["scenes"][0]["shots"]))
 
     def test_routed_upgrade_rejects_missing_or_incomplete_routing_evidence(self) -> None:
         source = copy.deepcopy(self.forward_ir)
+        complete_input = copy.deepcopy(source["scenes"][0].pop("routing_input"))
         source["schema_version"] = "director-ir/0.1"
         source["scenes"][0].pop("routing_result")
         base = {
             "migration_mode": "GRAMMAR_V02_ROUTED",
             "target_director_grammar_path": "research/grammar/director_grammar_v0.2.json",
+            "scene_routing_inputs": {"EP01-SC01": complete_input},
             "shot_overrides": {
                 shot["shot_id"]: {"evidence_rule_ids": []}
                 for shot in source["scenes"][0]["shots"]
@@ -160,11 +167,13 @@ class DirectorIRCompatibilityTests(unittest.TestCase):
 
     def test_routed_upgrade_rejects_results_not_bound_to_target_grammar(self) -> None:
         source = copy.deepcopy(self.forward_ir)
+        complete_input = copy.deepcopy(source["scenes"][0].pop("routing_input"))
         source["schema_version"] = "director-ir/0.1"
         complete = copy.deepcopy(source["scenes"][0].pop("routing_result"))
         base = {
             "migration_mode": "GRAMMAR_V02_ROUTED",
             "target_director_grammar_path": "research/grammar/director_grammar_v0.2.json",
+            "scene_routing_inputs": {"EP01-SC01": complete_input},
             "shot_overrides": {
                 shot["shot_id"]: {"evidence_rule_ids": []}
                 for shot in source["scenes"][0]["shots"]
@@ -290,6 +299,9 @@ class DirectorIRCompatibilityTests(unittest.TestCase):
             routed_overrides = {
                 "migration_mode": "GRAMMAR_V02_ROUTED",
                 "target_director_grammar_path": str(grammar_path),
+                "scene_routing_inputs": {
+                    self.forward_ir["scenes"][0]["scene_id"]: self.forward_ir["scenes"][0]["routing_input"],
+                },
                 "scene_routing_results": {
                     self.forward_ir["scenes"][0]["scene_id"]: self.forward_ir["scenes"][0]["routing_result"],
                 },
@@ -312,6 +324,85 @@ class DirectorIRCompatibilityTests(unittest.TestCase):
             self.assertNotEqual(result.returncode, 0)
             self.assertIn("must not overwrite", result.stderr)
             self.assertEqual(grammar_path.read_bytes(), before)
+
+    def test_upgrade_cli_refuses_to_overwrite_existing_unrelated_output(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            ir_path = root / "legacy.json"
+            overrides_path = root / "overrides.json"
+            output_path = root / "existing.json"
+            ir_path.write_text(json.dumps(self.forward_ir), encoding="utf-8")
+            overrides_path.write_text("{}", encoding="utf-8")
+            marker = b"user-owned-existing-output\n"
+            output_path.write_bytes(marker)
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(SCRIPT_ROOT / "upgrade_director_ir_v02.py"),
+                    "--ir", str(ir_path),
+                    "--overrides", str(overrides_path),
+                    "--output", str(output_path),
+                ],
+                cwd=REPO_ROOT,
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("already exists", result.stderr)
+            self.assertEqual(output_path.read_bytes(), marker)
+
+    def test_cross_scene_routing_substitution_is_rejected(self) -> None:
+        action_path = REPO_ROOT / "examples" / "forward-tests" / "ORIGINAL-ACTION-CAUSALITY" / "director-ir.json"
+        power_path = REPO_ROOT / "examples" / "forward-tests" / "ORIGINAL-POWER-DIALOGUE" / "director-ir.json"
+        action = json.loads(action_path.read_text(encoding="utf-8"))
+        power = json.loads(power_path.read_text(encoding="utf-8"))
+
+        wrong_result = copy.deepcopy(action)
+        wrong_result["scenes"][0]["routing_result"] = copy.deepcopy(
+            power["scenes"][0]["routing_result"]
+        )
+        report = validate_ir(wrong_result, self.grammar)
+        self.assertEqual(report["status"], "FAIL")
+        self.assertIn(
+            "IR-ROUTING-REPLAY-DRIFT",
+            {item["code"] for item in report["issues"]},
+        )
+
+        wrong_scene = copy.deepcopy(action)
+        wrong_scene["scenes"][0]["routing_input"] = copy.deepcopy(
+            power["scenes"][0]["routing_input"]
+        )
+        wrong_scene["scenes"][0]["routing_result"] = copy.deepcopy(
+            power["scenes"][0]["routing_result"]
+        )
+        report = validate_ir(wrong_scene, self.grammar)
+        self.assertEqual(report["status"], "FAIL")
+        self.assertTrue(
+            {"IR-ROUTING-DRAMATIC-DRIFT", "IR-ROUTING-FACT-BINDING"}
+            & {item["code"] for item in report["issues"]}
+        )
+
+        legacy = copy.deepcopy(action)
+        legacy["schema_version"] = "director-ir/0.1"
+        legacy["scenes"][0].pop("routing_input")
+        legacy["scenes"][0].pop("routing_result")
+        overrides = {
+            "migration_mode": "GRAMMAR_V02_ROUTED",
+            "target_director_grammar_path": "research/grammar/director_grammar_v0.2.json",
+            "scene_routing_inputs": {
+                "EP01-SC01": action["scenes"][0]["routing_input"],
+            },
+            "scene_routing_results": {
+                "EP01-SC01": power["scenes"][0]["routing_result"],
+            },
+            "shot_overrides": {
+                shot["shot_id"]: {"evidence_rule_ids": []}
+                for shot in legacy["scenes"][0]["shots"]
+            },
+        }
+        with self.assertRaisesRegex(ValueError, "not bound to the target Grammar or its routing input"):
+            upgrade_ir(legacy, overrides, self.grammar)
 
     def test_mixed_audio_preserves_unmapped_fields_in_full_shot_render(self) -> None:
         ir = copy.deepcopy(self.forward_ir)

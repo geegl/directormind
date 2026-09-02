@@ -307,8 +307,12 @@ def validate_package(
     if ir.get("status") != "HUMAN_REVIEW_PENDING" or ir.get("generation_authorized") is not False or ir.get("publication_authorized") is not False:
         issue(issues, "FORWARD-IR-AUTHORIZATION", f"{relative_package}/director-ir.json", "IR review and external-action gates drifted.")
     scenes = ir.get("scenes", [])
-    if len(scenes) != 1 or scenes[0].get("routing_result") != live_routing:
-        issue(issues, "FORWARD-IR-ROUTING", f"{relative_package}/director-ir.json", "IR must embed the complete live routing result exactly once.")
+    if (
+        len(scenes) != 1
+        or scenes[0].get("routing_input") != routing_input
+        or scenes[0].get("routing_result") != live_routing
+    ):
+        issue(issues, "FORWARD-IR-ROUTING", f"{relative_package}/director-ir.json", "IR must embed the canonical routing input and its complete live routing result exactly once.")
     input_refs = {fact.get("source_ref") for fact in routing_input.get("locked_facts", [])}
     coverage_refs = {item.get("source_ref") for item in ir.get("source_coverage", [])}
     if input_refs != coverage_refs:

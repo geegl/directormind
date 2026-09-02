@@ -427,7 +427,11 @@ def shot_for(spec: dict[str, Any], index: int) -> dict[str, Any]:
     }
 
 
-def build_ir(spec: dict[str, Any], routing_result: dict[str, Any]) -> dict[str, Any]:
+def build_ir(
+    spec: dict[str, Any],
+    routing_input: dict[str, Any],
+    routing_result: dict[str, Any],
+) -> dict[str, Any]:
     shots = [shot_for(spec, index) for index in range(len(spec["facts"]))]
     duration = sum(shot["duration_seconds"] for shot in shots)
     return {
@@ -468,6 +472,7 @@ def build_ir(spec: dict[str, Any], routing_result: dict[str, Any]) -> dict[str, 
                 "primary_axis": "one stable readable axis",
                 "close_positions": "the final locked beat positions",
             },
+            "routing_input": routing_input,
             "routing_result": routing_result,
             "shots": shots,
         }],
@@ -529,7 +534,7 @@ def expected_files() -> dict[Path, str]:
         locked_script = build_locked_script(spec)
         routing_input = build_routing_input(spec)
         routing_result = route_scene(routing_input, grammar)
-        ir = build_ir(spec, routing_result)
+        ir = build_ir(spec, routing_input, routing_result)
         ir_report = validate_ir(ir, grammar, locked_script)
         manifest = {
             "schema_version": "forward-test-result/0.1",

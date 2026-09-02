@@ -21,7 +21,7 @@ The source script remains the story authority. Director IR may interpret present
 
 All Scene Evidence, candidate, Grammar, routing-input, routing-result, Director IR, and forward-test schemas use the same canonical `scene_problem` enum. `NO_SPECIALIZED_PROBLEM` is the explicit negative sentinel; a caller may not introduce a synonym or an unregistered value.
 
-Every Grammar v0.2 scene embeds the full routing result: schema version, case ID, status, canonical scene problem, applied constraints, eligible rules, selected and rejected rules, conflict trace, selection count, IR handoff, human-review status, and rights boundary. The selected IDs must be a subset of eligible IDs, the count must agree, and their set must exactly match the union of Shot `evidence_rule_ids`. A paused, partial, or malformed route cannot proceed as a v0.2 compilation.
+Every Grammar v0.2 scene embeds both the canonical routing input and the full routing result: schema version, case ID, status, canonical scene problem, applied constraints, eligible rules, selected and rejected rules, conflict trace, selection count, IR handoff, human-review status, and rights boundary. Validation re-runs the embedded input through the active Grammar and requires the result to match exactly. The input's dramatic structure and ordered locked facts must also bind back to the scene and its Shots. The selected IDs must be a subset of eligible IDs, the count must agree, and their set must exactly match the union of Shot `evidence_rule_ids`. A paused, partial, mismatched, or malformed route cannot proceed as a v0.2 compilation.
 
 ## Scene contract
 
@@ -33,7 +33,8 @@ Each scene contains:
 - dramatic engine: objectives, obstacle, stakes, open/close tactics, trigger, subtext;
 - POV character, identification level, and audience information;
 - spatial plan: geometry, axis, zones, entrances/exits, anchors, opening and closing positions;
-- the validated Grammar v0.2 `routing_result`, with the same complete contract as `director-routing-result.schema.json`, kept at `HUMAN_REVIEW_PENDING` until human approval;
+- the canonical Grammar v0.2 `routing_input`, validated by `director-routing-input.schema.json` and bound to the scene's dramatic structure and locked facts;
+- the validated Grammar v0.2 `routing_result`, freshly reproducible from that input and the active Grammar, with the same complete contract as `director-routing-result.schema.json`, kept at `HUMAN_REVIEW_PENDING` until human approval;
 - ordered shots.
 
 Use I/L/A staging as a planning vocabulary, not a mandatory pose. Establish a new axis only through visible movement, a camera crossing, or a new interacting subject.
@@ -75,9 +76,9 @@ New v0.2 audio uses `status`, `instruction`, and `source_refs`. During v0.1 upgr
 `upgrade_director_ir_v02.py` has two explicit modes:
 
 - `LEGACY_COMPATIBLE` is the default safe path. Every v0.1 source receives a fresh complete `HUMAN_REVIEW_REQUIRED` / `PAUSE_FOR_HUMAN` marker even if the old payload contains a route-shaped object. The mode preserves its Grammar path, existing camera/execution/reference plans and cross-episode state, keeps v0.1 GO-01/GO-07 trigger behavior, removes only invalid uses of those two seed rules, and wraps non-empty old audio as unmapped review data. The pause is visible in rendered Markdown and does not claim Grammar v0.2 routing.
-- `GRAMMAR_V02_ROUTED` requires a target Grammar path whose actual JSON passes the repository Grammar schema, candidate authority, support-matrix and safety-constraint validator; one complete routing result per migrated legacy scene; and explicit evidence IDs for every legacy Shot. It rejects incomplete or paused results, forged eligible/constraint/rule sets, unknown scenes or shots, legacy `GO-*` IDs, wrong handoffs, and any mismatch between selected rules and Shot evidence IDs before writing output.
+- `GRAMMAR_V02_ROUTED` requires a target Grammar path whose actual JSON passes the repository Grammar schema, candidate authority, support-matrix and safety-constraint validator; one canonical routing input and one complete routing result per migrated legacy scene; and explicit evidence IDs for every legacy Shot. It re-runs every supplied input through the target Grammar and requires an exact result match. It rejects incomplete or paused results, cross-scene substitutions, forged eligible/constraint/rule sets, unknown scenes or shots, legacy `GO-*` IDs, wrong handoffs, and any mismatch between selected rules and Shot evidence IDs before writing output.
 
-Neither mode invents a route. The CLI refuses to overwrite the source IR, overrides file, or target Grammar file. A legacy-compatible pause must be reviewed and explicitly routed before it can enter the Grammar v0.2 compile path.
+Neither mode invents a route. The CLI writes only to a new output path and refuses to overwrite any existing file, including the source IR, overrides file, or target Grammar file. A legacy-compatible pause must be reviewed and explicitly routed before it can enter the Grammar v0.2 compile path.
 
 ## Evidence statuses
 
@@ -125,4 +126,4 @@ Research-only film stills can inform the visual style pack but cannot be named a
 
 ## Validation boundary
 
-The validator checks the full IR schema, complete embedded routing-result schema, selection binding, shape, IDs, duration, evidence references, source coverage, placeholders, authorization, audio compatibility, and fallback presence. For Grammar v0.2, zero evidence rules is a valid constraints-only handoff only when the complete routing result is `NO_APPLICABLE_RULE`. It cannot judge acting quality, whether reported reference shots are accurate, or whether the visual style is aesthetically successful.
+The validator checks the full IR schema, canonical embedded routing input, exact Grammar replay, scene/fact binding, complete embedded routing-result schema, selection binding, shape, IDs, duration, evidence references, source coverage, placeholders, authorization, audio compatibility, and fallback presence. For Grammar v0.2, zero evidence rules is a valid constraints-only handoff only when the complete routing result is `NO_APPLICABLE_RULE`. It cannot judge acting quality, whether reported reference shots are accurate, or whether the visual style is aesthetically successful.

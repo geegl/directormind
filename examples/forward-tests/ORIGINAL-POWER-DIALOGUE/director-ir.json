@@ -38,6 +38,62 @@
         "character": "ENSEMBLE_NEUTRAL",
         "identification_level": "STRUCTURAL_TEST_ONLY"
       },
+      "routing_input": {
+        "case_id": "ORIGINAL-POWER-DIALOGUE",
+        "dramatic_structure": {
+          "goal": "make a verified transfer of decision authority readable",
+          "objectives": [
+            "close one allocation decision"
+          ],
+          "obstacle": "the prior decision owner must accept the tally",
+          "stakes": "the workshop cannot assign its next shift",
+          "subtext": "control changes only after both people acknowledge the same count",
+          "tactic_change": "verbal resistance becomes formal handoff"
+        },
+        "locked_facts": [
+          {
+            "fact_id": "FACT-01",
+            "fact_type": "decision_authority",
+            "source_ref": "locked-script.md#FACT-01",
+            "status": "LOCKED",
+            "value": "Only the coordinator holding the blue marker may close the allocation decision."
+          },
+          {
+            "fact_id": "FACT-02",
+            "fact_type": "verified_tally",
+            "source_ref": "locked-script.md#FACT-02",
+            "status": "LOCKED",
+            "value": "The written tally gives Coordinator B the deciding vote."
+          },
+          {
+            "fact_id": "FACT-03",
+            "fact_type": "authority_shift",
+            "source_ref": "locked-script.md#FACT-03",
+            "status": "LOCKED",
+            "value": "Coordinator A places the blue marker beside Coordinator B after the tally is checked."
+          }
+        ],
+        "priority_constraints": [],
+        "rights_boundary": {
+          "contains_private_script": false,
+          "contains_reference_surface": false,
+          "project_original": true
+        },
+        "routing_signals": [
+          "authority_shift",
+          "verified_tally"
+        ],
+        "scene_problem": {
+          "primary": "DIALOGUE_POWER_TRANSFER",
+          "secondary": [],
+          "status": "LOCKED"
+        },
+        "schema_version": "director-routing-input/0.1",
+        "subject_matter_tags": [
+          "workshop_planning"
+        ],
+        "unknown_fact_types": []
+      },
       "routing_result": {
         "applied_constraint_ids": [
           "PC-DIALOGUE-TEXT-LOCK",

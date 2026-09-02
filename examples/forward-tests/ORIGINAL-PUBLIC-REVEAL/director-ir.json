@@ -40,6 +40,62 @@
         "character": "ENSEMBLE_NEUTRAL",
         "identification_level": "STRUCTURAL_TEST_ONLY"
       },
+      "routing_input": {
+        "case_id": "ORIGINAL-PUBLIC-REVEAL",
+        "dramatic_structure": {
+          "goal": "make one verified result become public to a group",
+          "objectives": [
+            "secure coverage for the remaining shifts"
+          ],
+          "obstacle": "the disclosed shortage changes willingness to help",
+          "stakes": "the overnight service may remain uncovered",
+          "subtext": "the group response begins only after shared receipt of the result",
+          "tactic_change": "private assurance becomes public proof"
+        },
+        "locked_facts": [
+          {
+            "fact_id": "FACT-01",
+            "fact_type": "private_result",
+            "source_ref": "locked-script.md#FACT-01",
+            "status": "LOCKED",
+            "value": "The dispatcher has verified that seven night shifts remain uncovered."
+          },
+          {
+            "fact_id": "FACT-02",
+            "fact_type": "audience_information_change",
+            "source_ref": "locked-script.md#FACT-02",
+            "status": "LOCKED",
+            "value": "The dispatcher turns the board so all three volunteers can read the seven open rows together."
+          },
+          {
+            "fact_id": "FACT-03",
+            "fact_type": "group_response",
+            "source_ref": "locked-script.md#FACT-03",
+            "status": "LOCKED",
+            "value": "Each volunteer removes one availability token after seeing the same board."
+          }
+        ],
+        "priority_constraints": [],
+        "rights_boundary": {
+          "contains_private_script": false,
+          "contains_reference_surface": false,
+          "project_original": true
+        },
+        "routing_signals": [
+          "audience_information_change",
+          "group_response"
+        ],
+        "scene_problem": {
+          "primary": "PUBLIC_REVELATION",
+          "secondary": [],
+          "status": "LOCKED"
+        },
+        "schema_version": "director-routing-input/0.1",
+        "subject_matter_tags": [
+          "volunteer_dispatch"
+        ],
+        "unknown_fact_types": []
+      },
       "routing_result": {
         "applied_constraint_ids": [
           "PC-DIALOGUE-TEXT-LOCK",

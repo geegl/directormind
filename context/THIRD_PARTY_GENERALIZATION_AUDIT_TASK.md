@@ -4,7 +4,7 @@ Updated: 2026-09-02
 
 Status: `FINAL_INDEPENDENT_REVIEW_IN_PROGRESS / REMOTE_IMPLEMENTATION_CI_PASSED`
 
-Compatibility repair status: `LOCAL_COMPLETE / INDEPENDENT_READ_ONLY_REVIEW_PASS`
+Compatibility repair status: `FOLLOW_UP_P1_REPAIRED_LOCAL / FINAL_RE_REVIEW_PENDING`
 
 ## Task name
 
@@ -132,8 +132,9 @@ A later independent audit found four narrow gaps in the completed local implemen
 
 1. use one canonical `scene_problem` enum across Scene Evidence, candidate, Grammar, routing input/result, Director IR, and forward-test schemas;
 2. preserve GO-01/GO-07 trigger validation only for legacy Grammar v0.1 and prevent those seed rules from entering Grammar v0.2;
-3. make every Grammar v0.2 scene carry the complete formal `routing_result` and prove exact selected-rule-to-Shot binding;
-4. split the v0.1-to-v0.2 upgrader into an honest legacy-compatible pause and an evidence-complete routed mode, while rendering legacy audio visibly instead of dropping or guessing it.
+3. make every Grammar v0.2 scene carry the canonical `routing_input` and complete formal `routing_result`, reproduce that result through the active Grammar, and prove scene/fact/selected-rule-to-Shot binding;
+4. split the v0.1-to-v0.2 upgrader into an honest legacy-compatible pause and an evidence-complete routed mode, while rendering legacy audio visibly instead of dropping or guessing it;
+5. refuse to write an upgrade over any existing output file, including unrelated user-owned output.
 
 This repair may change only the affected schemas, the router and Grammar validator needed to enforce the canonical negative sentinel, the Director IR validator/renderer/upgrader, routing fixtures, regression tests, deterministic derived evidence required by the stricter validator, current validation reports, and truthful status/contract documentation. These edits enforce the already approved contracts; they do not add rules or change corpus conclusions. The repair does not authorize new reference works, re-distillation, media or private-IR access, source deletion, production, database, account, permission, key, payment, deployment, publication, or merging `main`.
 
@@ -143,11 +144,11 @@ Repair completion requires targeted compatibility tests, the full local suite, t
 
 - Current accountable implementer: root agent, sole integrator. No other writer may edit the same mutable file concurrently.
 - Completed: all implementation phases are present locally; the stricter Phase 1 repair has been integrated with the later closed-corpus work.
-- Remaining: obtain the fresh independent read-only verdict, update the final evidence, push the final documentation head and require its hosted CI success.
-- Current validation: the integrated Scene validator passes 100/100 tests, the corrected converter passes 13/13 tests on Python 3.9 and 3.12, the complete suite passes 223/223, all 18 local repository checks pass, and the PR #3 implementation head passes hosted CI.
+- Remaining: push the follow-up P1 repair, require hosted CI, obtain the fresh independent read-only verdict, then update and validate the final documentation head.
+- Current validation: the integrated Scene validator passes 100/100 tests, the corrected converter passes 13/13 tests on Python 3.9 and 3.12, the complete suite passes 225/225, all 18 local repository checks pass, and the last pushed PR #3 implementation head passed hosted CI. The new follow-up repair has not yet been pushed or remotely checked.
 - Known boundaries: all current scene problems remain UNKNOWN; direct semantic audio is absent; no candidate is yet authorized as an executable cross-work rule.
 - Remote boundary: PR #3 push and PR #1 closure are authorized in the order above. Merging `main` and all deployment/publication/production actions remain prohibited.
-- Next single action: run the fresh independent read-only final review; then record its verdict and validate the final documentation head.
+- Next single action: commit and push the locally passing follow-up P1 repair, then require hosted CI before the fresh independent read-only final review.
 
 ## Rollback
 

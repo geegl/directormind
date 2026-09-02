@@ -9,7 +9,12 @@ import json
 from pathlib import Path
 from typing import Any
 
-from route_director_rules import RESULT_SCHEMA_PATH, schema_issues
+from route_director_rules import (
+    INPUT_SCHEMA_PATH,
+    RESULT_SCHEMA_PATH,
+    route_scene,
+    schema_issues,
+)
 from validate_director_grammar import (
     INDEX_PATH,
     MATRIX_PATH,
@@ -129,6 +134,16 @@ def _validated_routing_result(value: Any, scene_id: str) -> dict[str, Any]:
     return copy.deepcopy(value)
 
 
+def _validated_routing_input(value: Any, scene_id: str) -> dict[str, Any]:
+    if not isinstance(value, dict):
+        raise ValueError(f"scene {scene_id} requires a complete routing input object")
+    issues = schema_issues(value, INPUT_SCHEMA_PATH)
+    if issues:
+        details = "; ".join(f"{item['path']} {item['code']}" for item in issues)
+        raise ValueError(f"scene {scene_id} routing input is invalid: {details}")
+    return copy.deepcopy(value)
+
+
 def _selected_rule_ids(routing_result: dict[str, Any]) -> set[str]:
     return {
         item["rule_id"]
@@ -153,7 +168,10 @@ def upgrade_ir(
     if mode not in MIGRATION_MODES:
         raise ValueError(f"unsupported migration_mode: {mode}")
 
+    routing_inputs = overrides.get("scene_routing_inputs", {})
     routing_results = overrides.get("scene_routing_results", {})
+    if not isinstance(routing_inputs, dict):
+        raise ValueError("scene_routing_inputs must be an object keyed by scene_id")
     if not isinstance(routing_results, dict):
         raise ValueError("scene_routing_results must be an object keyed by scene_id")
     if mode == "GRAMMAR_V02_ROUTED":
@@ -172,8 +190,8 @@ def upgrade_ir(
             codes = sorted({item["code"] for item in grammar_report["issues"]})
             raise ValueError(f"target Grammar v0.2 is invalid: {codes}")
         ir["director_grammar_path"] = target_grammar_path
-    elif routing_results:
-        raise ValueError("scene_routing_results require GRAMMAR_V02_ROUTED mode")
+    elif routing_inputs or routing_results:
+        raise ValueError("scene_routing_inputs and scene_routing_results require GRAMMAR_V02_ROUTED mode")
 
     ir["schema_version"] = "director-ir/0.2"
     ir["execution_medium"] = "AI_PHOTOREAL_HUMAN"
@@ -197,19 +215,39 @@ def upgrade_ir(
         if not isinstance(scene_default, dict):
             raise ValueError(f"scene default must be an object: {scene_id}")
         if mode == "GRAMMAR_V02_ROUTED":
-            supplied = routing_results.get(scene_id)
-            if supplied is None and source_version == "director-ir/0.2":
-                supplied = scene.get("routing_result")
-            scene["routing_result"] = _validated_routing_result(supplied, scene_id)
+            supplied_input = routing_inputs.get(scene_id)
+            supplied_result = routing_results.get(scene_id)
+            if source_version == "director-ir/0.2":
+                if supplied_input is None:
+                    supplied_input = scene.get("routing_input")
+                if supplied_result is None:
+                    supplied_result = scene.get("routing_result")
+            scene["routing_input"] = _validated_routing_input(
+                supplied_input, scene_id
+            )
+            scene["routing_result"] = _validated_routing_result(
+                supplied_result, scene_id
+            )
+            expected_result = route_scene(scene["routing_input"], target_grammar or {})
+            if scene["routing_result"] != expected_result:
+                raise ValueError(
+                    f"scene {scene_id} routing result is not bound to the target Grammar or its routing input"
+                )
         else:
             current = scene.get("routing_result")
-            scene["routing_result"] = (
-                _validated_routing_result(current, scene_id)
-                if source_version == "director-ir/0.2"
+            current_input = scene.get("routing_input")
+            if (
+                source_version == "director-ir/0.2"
                 and isinstance(current, dict)
                 and not schema_issues(current, RESULT_SCHEMA_PATH)
-                else legacy_review_required_result(scene_id)
-            )
+                and isinstance(current_input, dict)
+                and not schema_issues(current_input, INPUT_SCHEMA_PATH)
+            ):
+                scene["routing_input"] = copy.deepcopy(current_input)
+                scene["routing_result"] = _validated_routing_result(current, scene_id)
+            else:
+                scene["routing_input"] = None
+                scene["routing_result"] = legacy_review_required_result(scene_id)
         for shot in scene["shots"]:
             shot_id = shot["shot_id"]
             seen_shots.add(shot_id)
@@ -309,10 +347,17 @@ def upgrade_ir(
     extra_scenes = sorted(set(routing_results) - {scene["scene_id"] for scene in ir["scenes"]})
     if extra_scenes:
         raise ValueError(f"routing results contain unknown scenes: {extra_scenes}")
+    extra_input_scenes = sorted(set(routing_inputs) - {scene["scene_id"] for scene in ir["scenes"]})
+    if extra_input_scenes:
+        raise ValueError(f"routing inputs contain unknown scenes: {extra_input_scenes}")
     if mode == "GRAMMAR_V02_ROUTED":
-        missing_scenes = sorted({scene["scene_id"] for scene in ir["scenes"]} - set(routing_results))
-        if source_version == "director-ir/0.1" and missing_scenes:
-            raise ValueError(f"routing results missing scenes: {missing_scenes}")
+        scene_ids = {scene["scene_id"] for scene in ir["scenes"]}
+        missing_result_scenes = sorted(scene_ids - set(routing_results))
+        missing_input_scenes = sorted(scene_ids - set(routing_inputs))
+        if source_version == "director-ir/0.1" and missing_result_scenes:
+            raise ValueError(f"routing results missing scenes: {missing_result_scenes}")
+        if source_version == "director-ir/0.1" and missing_input_scenes:
+            raise ValueError(f"routing inputs missing scenes: {missing_input_scenes}")
     extra_scene_defaults = sorted(set(scene_overrides) - {scene["scene_id"] for scene in ir["scenes"]})
     if extra_scene_defaults:
         raise ValueError(f"scene defaults contain unknown scenes: {extra_scene_defaults}")
@@ -344,13 +389,19 @@ def main() -> int:
         target_grammar = json.loads(target_path.read_text(encoding="utf-8"))
     if args.output.resolve() in protected_inputs:
         raise SystemExit("output must not overwrite any input file")
+    if args.output.exists():
+        raise SystemExit("output already exists; refusing to overwrite it")
     try:
         ir = upgrade_ir(source_ir, overrides, target_grammar)
     except ValueError as exc:
         raise SystemExit(str(exc)) from exc
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(ir, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    try:
+        with args.output.open("x", encoding="utf-8") as handle:
+            handle.write(json.dumps(ir, ensure_ascii=False, indent=2) + "\n")
+    except FileExistsError as exc:
+        raise SystemExit("output already exists; refusing to overwrite it") from exc
     return 0
 
 

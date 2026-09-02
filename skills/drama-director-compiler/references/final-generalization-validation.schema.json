@@ -84,7 +84,7 @@
         "forward_warnings": {"const": 31},
         "validation_errors": {"const": 0},
         "validation_warnings": {"const": 103},
-        "unit_tests": {"const": 223},
+        "unit_tests": {"const": 225},
         "broken_references": {"const": 0},
         "prohibited_repository_files": {"const": 0},
         "scoped_public_string_issues": {"const": 0},

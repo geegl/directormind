@@ -29,7 +29,7 @@ Read [Director IR contract](references/director-ir-contract.md). Read only the p
 5. Consider only Grammar v0.2 rules with `CROSS_WORK_SUPPORTED` or `GENERAL_DEFAULT`, `runtime_authorized=true`, matching scene problem, complete trigger, locked required facts, and no non-applicability hit. Subject or genre similarity is never a match.
 6. Select up to four applicable rules; two to four is the preferred working range, but select one or zero when that is all the evidence allows. Never invent or pad a rule count. Zero is the valid `NO_APPLICABLE_RULE` result and continues under project and safety constraints only.
 7. Resolve conflicts in this fixed order: locked story facts; reveal and information boundaries; safety and protected participants; continuity; scene POV; spatial geometry and axis; trigger-specific Director Grammar; visual style; provider limitations. A lower level cannot rewrite a higher one. Provider limitations change execution or use a fallback, never story facts.
-8. Build Director IR after routing. Embed each scene's validated `routing_result`; the union of its Shot evidence IDs must exactly equal the selected rule IDs. Use empty arrays only when routing returned `NO_APPLICABLE_RULE`.
+8. Build Director IR after routing. Embed each scene's canonical `routing_input` and validated `routing_result`. Validation must re-run that input through the active Grammar, reproduce the result exactly, and bind the input's dramatic structure and locked facts back to the scene and its Shots. The union of Shot evidence IDs must exactly equal the selected rule IDs. Use empty arrays only when routing returned `NO_APPLICABLE_RULE`.
 9. Run the Grammar, routing-result, and Director IR validators, then leave the creative output `HUMAN_REVIEW_PENDING` until a human director approves it.
 
 ## Build the Director IR
@@ -52,7 +52,7 @@ Read [Director IR contract](references/director-ir-contract.md). Read only the p
 - Golden Frames and scene masters must be project-original assets. Research-only reference stills never pass through as generation references.
 - `OBSERVED` means visible/audible evidence in a cited shot; interpretation stays `INFERRED`; unverified mechanics stay `UNKNOWN`.
 - Never route a legacy seed rule, `SINGLE_WORK_CANDIDATE`, `BLOCKED_BY_UNKNOWN`, `REJECTED`, or unauditioned audio claim.
-- Legacy Director IR may be upgraded only through the documented `LEGACY_COMPATIBLE` pause or `GRAMMAR_V02_ROUTED` evidence-complete mode. Never relabel a legacy route as Grammar v0.2, and never carry `GO-*` seed IDs into the v0.2 path.
+- Legacy Director IR may be upgraded only through the documented `LEGACY_COMPATIBLE` pause or `GRAMMAR_V02_ROUTED` evidence-complete mode. Routed upgrades require one canonical input and one exactly reproducible result per scene. Never relabel a legacy route as Grammar v0.2, never carry `GO-*` seed IDs into the v0.2 path, and never overwrite an existing output file.
 - Preserve non-empty legacy audio visibly for review. Do not silently drop it or guess it into a v0.2 audio instruction.
 - The router matches only structured scene problem, trigger, locked required facts, non-applicability and conflict fields. It does not parse rule prose or evidence lineage for a match.
 - Keep generation and publication authorization false unless separately granted.

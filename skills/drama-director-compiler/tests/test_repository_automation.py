@@ -123,7 +123,8 @@ class RepositoryAutomationTests(unittest.TestCase):
         self.assertIn("LIVE_CHECK_NOT_PASSED: unit and CLI suite", failed_report["errors"])
 
     def test_local_runner_covers_every_required_contract(self) -> None:
-        names = {item.name for item in checks(Path("/tmp/reports"))}
+        configured_checks = checks(Path("/tmp/reports"))
+        names = {item.name for item in configured_checks}
         for required in (
             "repository syntax, references and public boundaries",
             "canonical conversion determinism",
@@ -142,11 +143,17 @@ class RepositoryAutomationTests(unittest.TestCase):
         runner = (SCRIPT_ROOT / "run_repository_checks.py").read_text(encoding="utf-8")
         self.assertIn("build_final_generalization_validation.py", runner)
         self.assertIn("local-check-evidence.json", runner)
+        whitespace = next(item for item in configured_checks if item.name == "whitespace")
+        self.assertEqual(
+            whitespace.command,
+            ("git", "diff", "--check", "origin/main...HEAD"),
+        )
 
     def test_ci_workflow_is_read_only_and_runs_the_local_contract(self) -> None:
         workflow = (REPO_ROOT / ".github" / "workflows" / "directormind-contracts.yml").read_text(encoding="utf-8")
         self.assertIn("permissions:\n  contents: read", workflow)
         self.assertIn("uses: actions/checkout@v6", workflow)
+        self.assertIn("fetch-depth: 0", workflow)
         self.assertIn("uses: actions/setup-python@v6", workflow)
         self.assertIn("run_repository_checks.py", workflow)
         for unsafe in ("pull_request_target", "secrets.", "artifact", "curl ", "pip install"):

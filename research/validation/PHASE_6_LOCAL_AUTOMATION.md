@@ -2,7 +2,7 @@
 
 Updated: 2026-09-02
 
-Status: `LOCAL_PASS / REMOTE_IMPLEMENTATION_CI_PASS / FINAL_REVIEW_PENDING`
+Status: `FOLLOW_UP_REPAIR_LOCAL_PASS / REPAIR_CI_AND_FINAL_REVIEW_PENDING`
 
 ## Result
 
@@ -22,7 +22,7 @@ The workflow was pushed to PR #3. The first hosted run exposed a cross-version f
 
 - Quick runner: PASS — 16 checks; it intentionally does not validate the full-suite final report.
 - Full runner: PASS — 18 checks.
-- Unit/CLI suite: PASS — 223 tests after the compatibility and Phase 1 re-review matrices were combined.
+- Unit/CLI suite: PASS — 225 tests after the final routing-substitution and existing-output regressions were added.
 - Scene Evidence: 31/31 pass, 2,343 Shot/edit units, 124 candidate lineages, zero errors, 72 warnings.
 - Candidate index: 124 candidates, 16 families, all blocked, zero runtime-authorized, zero errors.
 - Grammar: five project constraints, six safety constraints, zero eligible/runtime evidence rules, zero errors.
@@ -33,7 +33,7 @@ The workflow was pushed to PR #3. The first hosted run exposed a cross-version f
 
 ## Post-completion compatibility repair
 
-The current local runner also covers the later narrow repair: one canonical scene-problem vocabulary across seven schemas; complete standalone/embedded routing-result parity and binding; GO-01/GO-07 trigger checks confined to legacy Grammar v0.1; explicit safe-pause versus evidence-complete v0.2 upgrade modes; and visible warning/rendering of unmapped legacy audio. The repair changes no corpus counts, source media, private Director IR, external state, or runtime authorization count.
+The current local runner also covers the later narrow repair: one canonical scene-problem vocabulary across seven schemas; canonical routing input plus exact result replay and scene/fact/Shot binding; GO-01/GO-07 trigger checks confined to legacy Grammar v0.1; explicit safe-pause versus evidence-complete v0.2 upgrade modes; refusal to overwrite any existing output; and visible warning/rendering of unmapped legacy audio. The repair changes no corpus counts, source media, private Director IR, external state, or runtime authorization count.
 
 ## Boundaries
 
@@ -52,7 +52,7 @@ The current local runner also covers the later narrow repair: one canonical scen
 
 ## Independent result
 
-The first final audit returned FAIL on three evidence defects despite passing runtime checks. After correction, the non-writing reviewer reran the full suite, verified missing-evidence failure and injected failure into each live prerequisite. That historical narrow re-review issued PASS. Three fresh non-writing reviewers later audited the compatibility repair, first found real blockers, then independently replayed the corrected attacks and issued `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. See `COMPATIBILITY_REPAIR_INDEPENDENT_AUDIT.md`; the historical `INDEPENDENT_GENERALIZATION_AUDIT.md` remains unchanged.
+The first final audit returned FAIL on three evidence defects despite passing runtime checks. After correction, the non-writing reviewer reran the full suite, verified missing-evidence failure and injected failure into each live prerequisite. That historical narrow re-review issued PASS. Three fresh non-writing reviewers later audited the compatibility repair, first found real blockers, then independently replayed those corrections and issued `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. A subsequent final reviewer found two further P1s: a complete cross-scene routing result could be substituted, and an unrelated existing upgrade output could be overwritten. Both are repaired locally with regression coverage; a fresh independent replay remains required. The historical audit files remain unchanged.
 
 ## External effects and rollback
 

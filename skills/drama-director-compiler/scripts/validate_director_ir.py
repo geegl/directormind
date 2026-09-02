@@ -29,6 +29,11 @@ MAX_DIALOGUE_WORDS_PER_SECOND = 3.2
 ELIGIBLE_PROMOTIONS = {"CROSS_WORK_SUPPORTED", "GENERAL_DEFAULT"}
 
 sys.path.insert(0, str(SCRIPT_DIR))
+from route_director_rules import (  # noqa: E402
+    INPUT_SCHEMA_PATH as ROUTING_INPUT_SCHEMA_PATH,
+    route_scene,
+    schema_issues as routing_document_issues,
+)
 from validate_scene_evidence import validate_schema_subset  # noqa: E402
 
 
@@ -232,6 +237,96 @@ def scene_routing_binding_issues(
         )
     if routing_schema_issues:
         return issues
+    routing_input = scene.get("routing_input")
+    if not isinstance(routing_input, dict):
+        add_issue(
+            issues,
+            "error",
+            "IR-ROUTING-INPUT-MISSING",
+            f"{scene_path}.routing_input",
+            "Grammar v0.2 scenes require the canonical routing input used to produce the embedded result.",
+        )
+        return issues
+    input_schema_issues = routing_document_issues(
+        routing_input, ROUTING_INPUT_SCHEMA_PATH
+    )
+    for item in input_schema_issues:
+        add_issue(
+            issues,
+            "error",
+            "IR-ROUTING-INPUT-SCHEMA",
+            f"{scene_path}.routing_input{item['path'][1:]}",
+            f"{item['code']}: {item['message']}",
+        )
+    if input_schema_issues:
+        return issues
+    expected_result = route_scene(routing_input, grammar)
+    if routing_result != expected_result:
+        add_issue(
+            issues,
+            "error",
+            "IR-ROUTING-REPLAY-DRIFT",
+            f"{scene_path}.routing_result",
+            "routing_result must exactly equal a fresh route of this scene's canonical routing_input through the active Grammar.",
+        )
+    dramatic_structure = routing_input["dramatic_structure"]
+    if scene.get("dramatic_engine") != dramatic_structure:
+        add_issue(
+            issues,
+            "error",
+            "IR-ROUTING-DRAMATIC-DRIFT",
+            f"{scene_path}.dramatic_engine",
+            "scene dramatic_engine must exactly match routing_input.dramatic_structure.",
+        )
+    if scene.get("narrative_goal") != dramatic_structure["goal"]:
+        add_issue(
+            issues,
+            "error",
+            "IR-ROUTING-GOAL-DRIFT",
+            f"{scene_path}.narrative_goal",
+            "scene narrative_goal must equal routing_input.dramatic_structure.goal.",
+        )
+    locked_facts = routing_input["locked_facts"]
+    fact_ids = [fact["fact_id"] for fact in locked_facts]
+    audience_information = scene.get("audience_information")
+    declared_fact_ids = (
+        audience_information.get("locked_fact_ids")
+        if isinstance(audience_information, dict)
+        else None
+    )
+    if (
+        len(fact_ids) != len(set(fact_ids))
+        or not isinstance(declared_fact_ids, list)
+        or declared_fact_ids != fact_ids
+    ):
+        add_issue(
+            issues,
+            "error",
+            "IR-ROUTING-FACT-ID-DRIFT",
+            f"{scene_path}.audience_information.locked_fact_ids",
+            "scene locked_fact_ids must exactly equal the unique ordered routing-input fact IDs.",
+        )
+    raw_shots_for_facts = scene.get("shots")
+    fact_bound_shots = raw_shots_for_facts if isinstance(raw_shots_for_facts, list) else []
+    for fact in locked_facts:
+        source_ref = fact["source_ref"]
+        value = fact["value"]
+        if not any(
+            isinstance(shot, dict)
+            and source_ref in shot.get("source_refs", [])
+            and (
+                shot.get("narrative_goal") == value
+                or value in (shot.get("constraints", {}).get("must_hold", []))
+            )
+            for shot in fact_bound_shots
+        ):
+            add_issue(
+                issues,
+                "error",
+                "IR-ROUTING-FACT-BINDING",
+                f"{scene_path}.shots",
+                f"routing fact {fact['fact_id']} must bind its exact source_ref and value to a scene Shot.",
+            )
     status = routing_result.get("status")
     selected_items = routing_result["selected_rules"]
     selected_ids = [
