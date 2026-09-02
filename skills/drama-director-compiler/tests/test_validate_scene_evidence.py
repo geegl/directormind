@@ -1443,6 +1443,10 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             ("github_token", "fixture-token-12345", "PUBLIC-CREDENTIAL"),
             ("session_cookie", "fixture-cookie-12345", "PUBLIC-CREDENTIAL"),
             ("authorization_header", "Bearer fixture-token-12345", "PUBLIC-CREDENTIAL"),
+            ("auth_token", "fixture-token-12345", "PUBLIC-CREDENTIAL"),
+            ("sessionCookie", "fixture-cookie-12345", "PUBLIC-CREDENTIAL"),
+            ("authorizationHeader", "Bearer fixture-token-12345", "PUBLIC-CREDENTIAL"),
+            ("productionApiKey", "fixture-secret-12345", "PUBLIC-CREDENTIAL"),
         ):
             with self.subTest(key=key):
                 evidence = make_valid_evidence()

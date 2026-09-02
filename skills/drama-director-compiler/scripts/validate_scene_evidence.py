@@ -49,9 +49,8 @@ CREDENTIAL_RE = re.compile(
     re.IGNORECASE,
 )
 CREDENTIAL_KEY_RE = re.compile(
-    r"(?:^|[_ -])(?:api[_ -]?key|access[_ -]?token|refresh[_ -]?token|github[_ -]?token|"
-    r"session[_ -]?token|client[_ -]?secret|private[_ -]?key|password|passwd|secret|cookie|"
-    r"authorization)(?:$|[_ -])|^token$",
+    r"(?:^|_)(?:api_key|access_token|refresh_token|auth_token|github_token|session_token|"
+    r"client_secret|private_key|password|passwd|secret|cookie|authorization)(?:$|_)|^token$",
     re.IGNORECASE,
 )
 FINGERPRINT_LABEL_RE = re.compile(r"\b(?:sha(?:-?1|-?256|-?512)?|md5)\b", re.IGNORECASE)
@@ -533,7 +532,9 @@ def _validate_public_boundary(evidence: dict[str, Any], issues: list[dict[str, s
             add_issue(issues, "error", "PUBLIC-DATA-URI", path, "embedded data payload is prohibited")
         if CREDENTIAL_RE.search(text):
             add_issue(issues, "error", "PUBLIC-CREDENTIAL", path, "credential-like material is prohibited")
-        if "{key:" in path and CREDENTIAL_KEY_RE.search(text.strip()):
+        camel_split_key = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", "_", text)
+        normalized_key = re.sub(r"[^a-z0-9]+", "_", camel_split_key.lower()).strip("_")
+        if "{key:" in path and CREDENTIAL_KEY_RE.search(normalized_key):
             add_issue(issues, "error", "PUBLIC-CREDENTIAL", path, "credential-labelled JSON key is prohibited")
         if FINGERPRINT_LABEL_RE.search(text) or LONG_HEX_RE.search(text):
             add_issue(issues, "error", "PUBLIC-FINGERPRINT", path, "media fingerprint material is prohibited")
