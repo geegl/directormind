@@ -1351,6 +1351,17 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
                 set_unknown_array(evidence, location, "Do not add a score.")
                 self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
 
+    def test_explicit_unknown_limitations_pass_in_every_unknown_array(self) -> None:
+        for location in ("shot", "audio", "method", "auxiliary", "continuity"):
+            for statement in (
+                "Identity remains unknown and cannot be confirmed from picture.",
+                "Audio remains unknown and was not directly auditioned.",
+            ):
+                with self.subTest(location=location, statement=statement):
+                    evidence = make_valid_evidence()
+                    set_unknown_array(evidence, location, statement)
+                    self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
+
     def test_track_audio_directive_fails_without_audition(self) -> None:
         evidence = make_valid_evidence()
         evidence["candidate_rules"][0]["director_decision"] = "Track the music under the image."

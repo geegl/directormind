@@ -112,7 +112,9 @@ SAFE_AUDIO_BOUNDARY_RE = re.compile(
     re.IGNORECASE,
 )
 SAFE_UNKNOWN_TAIL_RE = re.compile(
-    r"^(?:outside this candidate|(?:is )?not part of this candidate|(?:whether|if)\b.+)$",
+    r"^(?:is|are|was|were|remain|remains|"
+    r"from\s+(?:picture|audio|text|the\s+(?:picture|audio|text)|available\s+evidence|this\s+review)|"
+    r"outside this candidate|(?:is )?not part of this candidate|(?:whether|if)\b.+)$",
     re.IGNORECASE,
 )
 CROSS_CUT_IDENTITY_ASSERTION_RE = re.compile(
