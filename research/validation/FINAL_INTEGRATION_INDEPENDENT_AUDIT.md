@@ -2,7 +2,7 @@
 
 Date: 2026-09-02
 
-Status: `FAIL_LOCAL / TWO_NEW_P1_REPRODUCED / REPAIR_REVIEW_PENDING`
+Status: `PASS_LOCAL / NO_MUST_FIX_FINDINGS / CLEAN_CHECKOUT_REVIEW_PASS`
 
 ## New review that supersedes the prior verdict
 
@@ -14,13 +14,33 @@ accepted branch:
 | `LEGACY_COMPATIBLE` accepted a v0.2 IR carrying a schema-valid but unbound route. | Cross-scene `routing_result` substitution returned successfully; the public CLI exited zero and created mismatched executable output. | `LEGACY_COMPATIBLE` now accepts v0.1 input only. Every v0.2 source must use `GRAMMAR_V02_ROUTED` with a validated Grammar and exact `route_scene` replay. Result-only, input-plus-result and same-case forged-selection attacks are rejected; failure creates no output. |
 | The routing CLI overwrote its scene input, Grammar input, symlink aliases and unrelated existing output. | Each overwrite case exited zero and changed the protected file. | Non-check writes reject resolved input aliases and every existing output, then use exclusive file creation. Four input/alias attacks and unrelated-output overwrite return non-zero without changing content; new output succeeds and `--check` remains read-only. |
 
-Current local evidence is 55/55 targeted routing/upgrade tests, 233/233 complete
-tests, all 18 repository checks and a clean working-tree diff check. This is not
-yet a final PASS: the repair must be committed and pushed, the final HEAD must
-pass hosted CI, and a fresh non-writing reviewer must replay it from a clean
-checkout. Until then PR #3 is not merge-ready.
+## Final clean-checkout verdict
 
-## Review boundary
+`NO_MUST_FIX_FINDINGS`
+
+A fresh non-writing reviewer audited a clean detached checkout matching PR #3's
+current implementation head. The reviewer independently confirmed:
+
+- result-only, input-plus-result and same-case forged-selection attacks all fail
+  through both the direct upgrade boundary and public CLI;
+- every failed legacy-compatible CLI case returns non-zero, creates no output
+  and leaves both inputs unchanged;
+- the same Schema-valid forgeries also fail if presented to routed mode because
+  Grammar replay or scene binding rejects them;
+- valid `GRAMMAR_V02_ROUTED` direct and CLI paths succeed and the resulting IR
+  validates;
+- output equal to scene, equal to Grammar, both symlink aliases and unrelated
+  existing output all fail without changing any protected content;
+- new output succeeds, correct `--check` succeeds, and missing-output `--check`
+  fails without creating a file.
+
+The reviewer reran 55/55 targeted tests, 233/233 complete tests, all 18
+repository checks and the complete committed PR whitespace check. The checkout
+ended with zero changes. The hosted final implementation-head `validate` job
+passed at <https://github.com/geegl/directormind/actions/runs/33641817707>.
+PR #3 remained open and unmerged; `main` was not changed. No P2 was found.
+
+## Prior review boundary
 
 A non-writing reviewer independently inspected the committed follow-up repair on
 the PR #3 branch. The reviewer did not edit repository files, commit, push,
@@ -67,9 +87,9 @@ the new findings above.
 
 ## Can improve later
 
-- The versioned status documents necessarily precede the CI run triggered by
-  their own commit. The final documentation head must therefore be verified
-  live after push; it must not self-attest a future CI result.
+- No current P2 was found. Versioned status documents cannot self-attest the CI
+  run triggered by their own metadata commit, so that final run is verified
+  live after push.
 
 Post-review external evidence: the independent-review documentation head later
 passed the read-only hosted workflow at
@@ -83,8 +103,6 @@ passed the read-only hosted workflow at
   positive rule-selection evidence.
 - Structural and contract success is not creative approval, audience evidence
   or human director acceptance.
-- The final documentation-head CI did not yet exist when this read-only review
-  finished.
 
 ## Rollback
 

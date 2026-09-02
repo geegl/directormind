@@ -2,7 +2,7 @@
 
 Updated: 2026-09-02
 
-Status: `NEW_P1_REPAIR_LOCAL_ONLY / FINAL_CI_AND_REVIEW_PENDING / PR_OPEN`
+Status: `FINAL_IMPLEMENTATION_HEAD_CI_PASSED / CLEAN_CHECKOUT_REVIEW_PASSED / PR_OPEN`
 
 ## Scope
 
@@ -20,13 +20,14 @@ This record covers only the authorized PR #3 pushes, hosted CI and PR #1 closure
 - The repair-head hosted run passed: <https://github.com/geegl/directormind/actions/runs/33635006251>.
 - A fresh non-writing reviewer independently replayed both attacks and the valid paths, then issued `PASS_LOCAL / NO_MUST_FIX_FINDINGS`; see `FINAL_INTEGRATION_INDEPENDENT_AUDIT.md`.
 - The independent-review documentation head passed: <https://github.com/geegl/directormind/actions/runs/33636232262>.
-- PR #3's description now records the final P1 corrections, 225-test and 18-check results, independent verdict, remaining boundaries and rollback.
+- PR #3's description records the earlier repair snapshot, independent verdict, remaining boundaries and rollback; the latest description is refreshed after the current evidence commit.
 - A later independent review reproduced two new P1s: v0.2 route carry-through in `LEGACY_COMPATIBLE`, and destructive routing-CLI output handling. The prior merge-ready conclusion is withdrawn.
-- Both new P1s are fixed locally with 55 targeted tests, 233 complete tests and 18 repository checks passing. This working tree has not yet been pushed, checked by hosted CI or reviewed from a clean checkout.
+- Both new P1s are fixed. The final implementation-head hosted run passed: <https://github.com/geegl/directormind/actions/runs/33641817707>.
+- A fresh non-writing reviewer reproduced 55 targeted tests, 233 complete tests, all 18 checks and both P1 attack matrices from a clean detached checkout, then issued `PASS_LOCAL / NO_MUST_FIX_FINDINGS` with no P2.
 
-## Remaining gate
+## Remaining decision
 
-Commit and push the new repair, update PR #3, require final-head hosted CI, and obtain a new clean-checkout independent verdict with no must-fix finding. PR #3 remains open and `main` remains unmerged.
+All authorized repair gates are complete. PR #3 remains open and `main` remains unmerged pending the user's separate decision.
 
 ## Rollback
 

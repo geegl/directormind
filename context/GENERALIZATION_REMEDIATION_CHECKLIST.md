@@ -56,7 +56,7 @@ After a contributor writes a Scene Evidence JSON unit, running the repository va
 - Completed before this repair: checklist, 30-file audit report, Scene Evidence schema, standard-library validator, and 45 validator tests.
 - Phase 1 re-review status: `INDEPENDENT_RE_REVIEW_PASSED`; no P0, P1 or P2 finding remains. B1 and B2 stay `VERIFIED_DONE`.
 - Completed by later closed-corpus work: A3–M local implementation, including 31 canonical Scene Evidence units, 2,343 Shot/edit units, 124 blocked candidate identities, deterministic rendering, Grammar/routing, eight original forward-test packages, Succession migration, local automation and compatibility repair.
-- Integration status: the latest Phase 1 repair and the later local work are being combined on PR #3; complete post-merge validation and remote CI remain required before closure.
+- Integration status: the latest Phase 1 repair and the later closed-corpus work are combined on PR #3; the final implementation-head CI and clean-checkout independent review pass. PR #3 remains open and `main` remains unmerged.
 - Known boundaries: no source replay or direct semantic audio audition; all current candidate rules remain blocked and runtime authorization remains zero.
 
 Rollback for this repair: revert only the isolated latest local repair commit with a normal Git revert. If it is later pushed or merged, use the same revert-commit approach and, after merge, a new pull request. Do not rewrite shared history.
@@ -160,10 +160,10 @@ Remaining validation boundary: these checks do not replay source media, directly
 
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
-| H1 | IN_PROGRESS | Update the Skill with locked facts -> dramatic structure -> scene problem -> eligible rules -> 0-4 selections -> conflict resolution -> Director IR -> validation -> human review. | The new repair makes `LEGACY_COMPATIBLE` v0.1-only and requires Grammar replay for every v0.2 source. Local tests pass; final-head CI and a clean-checkout independent replay remain required. |
+| H1 | VERIFIED_DONE | Update the Skill with locked facts -> dramatic structure -> scene problem -> eligible rules -> 0-4 selections -> conflict resolution -> Director IR -> validation -> human review. | `LEGACY_COMPATIBLE` is v0.1-only and every v0.2 source requires Grammar replay. The final implementation head passed hosted CI and a clean-checkout reviewer independently replayed the attacks and valid routes. |
 | H2 | VERIFIED_DONE | Implement the fixed nine-level conflict priority from locked facts through provider limitations. | Grammar schema, router and conflict-order tests enforce the exact nine-level sequence; independent review confirms lower-priority rules cannot override higher-priority constraints. |
-| H3 | IN_PROGRESS | Check trigger, required facts, non-applicability, conflicts, and subject-matter similarity misuse. | The prior validator replay was bypassed by v0.2 `LEGACY_COMPATIBLE`. The repaired upgrader rejects that path, including result-only, input-plus-result and same-case forged-selection attacks; routed replay remains valid locally. Independent replay is pending. |
-| H4 | IN_PROGRESS | Add routing tests for power dialogue, fracture, public reveal, procedure, action, proximity, sound suspense, and no-applicable-rule; select at most 2-4 when applicable, allow zero, and copy no surface element. | The routing CLI now rejects scene/Grammar targets, their symlink aliases and every existing output while preserving `--check`; the required local matrix passes. Final CI and independent replay are pending. |
+| H3 | VERIFIED_DONE | Check trigger, required facts, non-applicability, conflicts, and subject-matter similarity misuse. | The repaired upgrader rejects result-only, input-plus-result and same-case forged-selection attacks in legacy mode; routed mode independently replays the Grammar. All attacks and the valid route were reproduced from the clean checkout. |
+| H4 | VERIFIED_DONE | Add routing tests for power dialogue, fracture, public reveal, procedure, action, proximity, sound suspense, and no-applicable-rule; select at most 2-4 when applicable, allow zero, and copy no surface element. | The routing CLI rejects scene/Grammar targets, their symlink aliases and every existing output, creates new output exclusively and preserves read-only `--check`; the clean-checkout reviewer reproduced the full matrix. |
 
 ## I. Project-original forward tests
 
@@ -196,9 +196,9 @@ Remaining validation boundary: these checks do not replay source media, directly
 | ID | Status | Requirement | Evidence / exit condition |
 |---|---|---|---|
 | L1 | VERIFIED_DONE | Add minimal GitHub CI for Skill validation, Python compile, all schemas/evidence/rules/grammar/forward tests, broken refs, scoped public-artifact prohibitions and whitespace. | Read-only workflow calls the same stdlib-only local runner with read-only repository permission; corrected quick/full commands and narrow independent re-review pass. Hosted CI is verified live after the final push, not self-attested by the versioned local report. |
-| L2 | IN_PROGRESS | Write `FINAL_GENERALIZATION_VALIDATION.json` with every required count and zero errors, broken refs, prohibited repository files or scoped current-artifact string issues. | The regenerated local report records 233 tests and all stable corpus counts with zero validation errors. Final-head CI and independent review are pending. |
-| L3 | IN_PROGRESS | Run quick validation, units, all Scene Evidence, all Grammar, forward tests and whitespace through the local CI-equivalent command. | The 233-test suite, 55 targeted routing/upgrade tests, all 18 local checks and current working-tree whitespace check pass. The committed PR diff and final-head CI remain pending. |
-| L4 | IN_PROGRESS | Add `INDEPENDENT_GENERALIZATION_AUDIT.md` with verdict, P0/P1, non-blockers, unverified items, and merge decision. | A new review superseded the earlier PASS with two reproduced P1s. The final audit now records the reopened state; a fresh clean-checkout non-writing review must issue `NO_MUST_FIX_FINDINGS`. |
+| L2 | VERIFIED_DONE | Write `FINAL_GENERALIZATION_VALIDATION.json` with every required count and zero errors, broken refs, prohibited repository files or scoped current-artifact string issues. | The live-runner-backed report records 233 tests, stable 33/31/2,343/124/16/0 counts, zero validation errors and 103 preserved warnings; local and clean-checkout checks match. |
+| L3 | VERIFIED_DONE | Run quick validation, units, all Scene Evidence, all Grammar, forward tests and whitespace through the local CI-equivalent command. | The 233-test suite, 55 targeted routing/upgrade tests, all 18 checks and complete PR whitespace check pass locally, in the clean checkout and on the hosted final implementation head. |
+| L4 | VERIFIED_DONE | Add `INDEPENDENT_GENERALIZATION_AUDIT.md` with verdict, P0/P1, non-blockers, unverified items, and merge decision. | `FINAL_INTEGRATION_INDEPENDENT_AUDIT.md` records the two newly reproduced P1s, their fixes and the fresh clean-checkout verdict `PASS_LOCAL / NO_MUST_FIX_FINDINGS`, with no P2 and explicit unverified boundaries. |
 
 ## M. Final delivery
 
@@ -207,9 +207,9 @@ Remaining validation boundary: these checks do not replay source media, directly
 | M1 | VERIFIED_DONE | Deliver 30+ Scene Evidence JSON files. | Current closed-corpus result is 31 JSON files after the in-scope *Succession* migration; deterministic count validation passes. |
 | M2 | VERIFIED_DONE | Deliver Scene Evidence schema, validator, and renderer. | Phase 1 tests, deterministic reports and independent review pass. |
 | M3 | VERIFIED_DONE | Deliver Candidate Rule schema/index and cross-work matrix JSON/Markdown. | Phase 2 rule/matrix validation and final independent review pass. |
-| M4 | IN_PROGRESS | Deliver Director Grammar v0.2 and updated Skill routing/conflict logic/tests. | Both newly reproduced P1s have implementation fixes and the complete required test matrix passes locally. Delivery remains open until final CI and independent replay pass. |
+| M4 | VERIFIED_DONE | Deliver Director Grammar v0.2 and updated Skill routing/conflict logic/tests. | Both newly reproduced P1s are fixed in implementation, the complete required matrix passes, final implementation-head CI passes and the clean-checkout review found no remaining must-fix issue. |
 | M5 | VERIFIED_DONE | Deliver original forward-test packages. | Eight deterministic packages, six required problem tags, zero false positive selections, 31 preserved visual-binding warnings and Phase 4 independent review PASS. |
-| M6 | IN_PROGRESS | Deliver full validation, independent audit, reduced STATE, clean Succession integration, CI, and updated PR description. | This new P1 repair reopens final acceptance. Close only after H1/H3/H4, L2-L4 and M4 return to `VERIFIED_DONE`, PR #3 is updated, final-head CI passes and the clean-checkout reviewer reports no must-fix finding. |
+| M6 | VERIFIED_DONE | Deliver full validation, independent audit, reduced STATE, clean Succession integration, CI, and updated PR description. | H1/H3/H4, L2-L4 and M4 are verified; PR #3 records the new review and repairs; final implementation-head CI and the clean-checkout independent review pass; no checklist row remains open. |
 
 ## Current blockers and known defects
 
@@ -220,8 +220,8 @@ Remaining validation boundary: these checks do not replay source media, directly
 - PR #1 was closed without merge because it contained prohibited media-fingerprint material and older evidence semantics; its 88-unit evidence was migrated through the current contracts instead.
 - The runtime grammar is active but correctly contains zero evidence rules because none of the 124 candidates passes the promotion gates; all eight original packages therefore prove the no-ready/no-applicable branch, while a real positive selection remains unproved until evidence becomes eligible.
 - A final read-only review found that a complete result from another scene could be substituted and that the upgrader could overwrite an unrelated existing output. Both P1s are fixed; the repair-head hosted CI and fresh independent replay pass. Final acceptance now waits only for the documentation-head CI and updated PR description.
-- A still later review found two new P1s: `LEGACY_COMPATIBLE` could carry a schema-valid but unbound v0.2 route, and the routing CLI could overwrite its inputs or any existing output. Both are reproduced and locally repaired; the prior merge-ready conclusion is withdrawn until final CI and a clean-checkout independent review pass.
+- A still later review found two new P1s: `LEGACY_COMPATIBLE` could carry a schema-valid but unbound v0.2 route, and the routing CLI could overwrite its inputs or any existing output. Both are fixed; final implementation-head CI and a clean-checkout independent replay pass with no remaining must-fix finding.
 
 ## Current next action
 
-Commit and push the two new P1 repairs, update PR #3, require final-head CI, then run a fresh independent read-only review from a clean checkout. Do not restore completion or merge-readiness unless that review reports no must-fix finding.
+All authorized repair and validation work is complete. Keep PR #3 open and stop; wait for the user's separate merge decision without merging `main`.

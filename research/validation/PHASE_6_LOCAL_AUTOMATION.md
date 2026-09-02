@@ -2,7 +2,7 @@
 
 Updated: 2026-09-02
 
-Status: `NEW_P1_REPAIR_LOCAL_PASS / FINAL_CI_AND_REVIEW_PENDING`
+Status: `COMPLETE / FINAL_IMPLEMENTATION_CI_PASS / CLEAN_CHECKOUT_REVIEW_PASS`
 
 ## Result
 
@@ -54,7 +54,7 @@ The current local runner also covers the later narrow repair: one canonical scen
 
 ## Independent result
 
-Earlier audit snapshots and their hosted runs remain historical evidence only. A later independent review reproduced two new P1s: v0.2 `LEGACY_COMPATIBLE` accepted unbound executable routing, and the routing CLI overwrote inputs, symlink aliases and arbitrary existing outputs. Both are repaired locally; 55 targeted tests, 233 complete tests and all 18 repository checks pass. `FINAL_INTEGRATION_INDEPENDENT_AUDIT.md` records the superseding FAIL state. Final-head CI and a fresh clean-checkout review remain required.
+Earlier audit snapshots and their hosted runs remain historical evidence only. A later independent review reproduced two new P1s: v0.2 `LEGACY_COMPATIBLE` accepted unbound executable routing, and the routing CLI overwrote inputs, symlink aliases and arbitrary existing outputs. Both are repaired; 55 targeted tests, 233 complete tests and all 18 repository checks pass. The final implementation-head hosted run passes, and `FINAL_INTEGRATION_INDEPENDENT_AUDIT.md` records the fresh clean-checkout verdict `PASS_LOCAL / NO_MUST_FIX_FINDINGS` with no P2.
 
 ## External effects and rollback
 

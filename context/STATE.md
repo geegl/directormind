@@ -4,7 +4,7 @@ Updated: 2026-09-02
 
 ## Current phase
 
-The user-approved 33-source generalization Goal is reopened on `codex/macos-first16-local-batch` after a new independent review reproduced two additional P1s. Both have local implementation fixes and complete local checks pass, but the current working tree has not yet passed final-head CI or a clean-checkout independent re-review. The prior merge-ready conclusion is withdrawn.
+The user-approved 33-source generalization Goal is complete on `codex/macos-first16-local-batch` after a new independent review reproduced two additional P1s. Both are fixed in implementation; the final implementation head passed hosted CI, and a fresh non-writing reviewer independently replayed all attacks and valid paths from a clean checkout with no remaining must-fix finding. PR #3 remains open for the user's merge decision.
 
 Phases 1 through 6 and the runtime-contract repairs remain present locally. `LEGACY_COMPATIBLE` is now v0.1-only; every v0.2 source must use `GRAMMAR_V02_ROUTED` with an authority-validated Grammar and exact route replay. The routing CLI now rejects output paths resolving to scene or Grammar input, rejects all existing outputs and creates new outputs exclusively. The original 30 legacy Markdown sources remain unchanged; the 88-unit *Succession* ledger remains integrated, no UNKNOWN-dependent candidate is executable, and eight rights-safe original packages still route without inventing a rule.
 
@@ -56,8 +56,7 @@ Generated `*.scene-evidence.generated.md` files are deterministic review views o
 - The first final read-only audit returned FAIL on evidence scope/provenance wording. All three findings are corrected; the narrow independent re-review issued PASS.
 - The post-completion compatibility repair received `PASS_LOCAL / NO_MUST_FIX_FINDINGS` from fresh non-writing reviewers after they replayed the initially failing adversarial cases.
 - A later final read-only audit correctly found two additional P1s: cross-scene substitution of a complete routing result and overwrite of an unrelated existing upgrade output. Both attacks now fail; the valid routed and new-output paths still pass. Repair-head CI and the fresh independent replay both pass.
-- A still later review reproduced two new P1s: a v0.2 source could bypass Grammar replay through `LEGACY_COMPATIBLE`, and the routing CLI could overwrite scene, Grammar or arbitrary existing output. Both are fixed locally; final-head CI and a clean-checkout independent review remain pending.
-- Earlier hosted runs passed, but they do not validate the current unpushed repair.
+- A still later review reproduced two new P1s: a v0.2 source could bypass Grammar replay through `LEGACY_COMPATIBLE`, and the routing CLI could overwrite scene, Grammar or arbitrary existing output. Both are fixed; final implementation-head CI and the clean-checkout review pass.
 - Source replay and direct semantic-audio audition remain outside this Goal; structural validation cannot prove the original picture observations, sound semantics, creative quality or audience response.
 
 ## Latest validation
@@ -78,12 +77,12 @@ Generated `*.scene-evidence.generated.md` files are deterministic review views o
 - Phase 4 independent read-only audit: PASS after replaying false-positive, private-path, fact-drift, work-title, approval, audio-loss and JSON Unicode-escape attacks and reading all eight original scripts.
 - Phase 5 independent read-only audit: PASS — 88/4 migration, original 30/120 no-drift, UNKNOWN/audio/runtime boundaries, four reviewed family assignments, catalog route and 31/2,343/124/16/0/72 arithmetic reproduced with no must-fix finding.
 - Repository automation after the two new P1 repairs: PASS — all 18 local checks pass, five versioned reports match live output, and `final-generalization-validation/0.4` is deterministic `PASS_LOCAL` with zero validation errors and 103 preserved warnings.
-- Minimal CI workflow: PENDING_CURRENT_HEAD — prior heads passed the read-only workflow, but the new repair is not yet pushed.
-- Final integrated-state independent audit: FAIL_CURRENT_SNAPSHOT — two new P1s were reproduced; their local fixes await a fresh clean-checkout review.
+- Minimal CI workflow: PASS_REMOTE_FINAL_IMPLEMENTATION_HEAD — the read-only workflow ran the same 233-test repository checks successfully.
+- Final integrated-state independent audit: PASS_LOCAL — a fresh non-writing reviewer used a clean detached checkout, reproduced both new P1 matrices and valid paths, confirmed zero worktree changes and issued `NO_MUST_FIX_FINDINGS` with no P2.
 - Compatibility-repair independent audit: PASS_LOCAL — three fresh read-only reviewers found real first-round gaps, verified their closure, and reported no remaining must-fix finding.
 
 The current command-to-claim evidence is `research/validation/VALIDATION_CLAIM_REGISTER.md`. The versioned closed-corpus evidence is `research/validation/CLOSED_CORPUS_COMPLETION_REPORT.md` and `research/validation/scene-evidence-validation.json`. A structural pass is not human creative approval.
 
 ## Next single action
 
-Commit and push the two new P1 repairs, update PR #3, require final-head CI, then run the new independent read-only review from a clean checkout. Do not merge `main`, deploy, publish or delete media.
+Stop and wait for the user's separate merge decision. PR #3 remains open; do not merge `main`, deploy, publish or delete media.

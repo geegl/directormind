@@ -2,9 +2,9 @@
 
 Updated: 2026-09-02
 
-Status: `FOLLOW_UP_P1_REPAIR_LOCAL_PASS / CI_AND_INDEPENDENT_REVIEW_PENDING`
+Status: `COMPLETE / FINAL_HEAD_CI_PASS / CLEAN_CHECKOUT_REVIEW_PASS`
 
-Compatibility repair status: `NEW_P1_REPAIR_LOCAL_PASS / MERGE_PROHIBITED`
+Compatibility repair status: `COMPLETE / NO_MUST_FIX_FINDINGS / MERGE_PROHIBITED`
 
 ## Task name
 
@@ -121,9 +121,9 @@ Only one writer may own a mutable file at a time. Root is the sole accountable i
 - [x] Unreviewed creative outputs remain `HUMAN_REVIEW_PENDING`.
 - [x] The original 30 legacy Markdown documents and original media remain unchanged; the migrated *Succession* input is a sanitized rights-safe ledger.
 - [x] *Succession* is integrated through the current contracts without merging the old PR.
-- [ ] Existing and new local tests pass and the final PR #3 head passes the defined remote CI workflow.
+- [x] Existing and new local tests pass and the final PR #3 head passes the defined remote CI workflow.
 - [x] Final validation records zero contract errors and preserves all warnings.
-- [ ] A non-writing read-only agent issues a fresh verdict on the final integrated state and lists unverified boundaries.
+- [x] A non-writing read-only agent issues a fresh verdict on the final integrated state and lists unverified boundaries.
 - [x] Final delivery package includes changes, behavioral evidence, check results, remaining risks, external side effects, resource use and rollback.
 
 ## Approved post-completion compatibility repair
@@ -144,11 +144,11 @@ Repair completion requires targeted compatibility tests, the full local suite, t
 
 - Current accountable implementer: root agent, sole integrator. No other writer may edit the same mutable file concurrently.
 - Completed: all implementation phases are present locally; the stricter Phase 1 repair has been integrated with the later closed-corpus work.
-- Remaining: commit and push the two newly reproduced P1 repairs, update PR #3, require final-head CI, and obtain a fresh independent read-only verdict from a clean checkout.
-- Current validation: both new P1 baselines were reproduced. After repair, 55/55 targeted routing/upgrade tests, 233/233 complete tests and all 18 local repository checks pass. The current working tree has not yet been pushed, checked by hosted CI or independently reviewed from a clean checkout.
+- Remaining: none inside the approved repair. PR #3 remains open for the user's separate merge decision.
+- Current validation: after reproducing both new P1 baselines, 55/55 targeted routing/upgrade tests, 233/233 complete tests and all 18 repository checks pass. The final implementation head passed hosted CI, and a fresh non-writing reviewer independently replayed all attacks and valid paths from a clean checkout, returning `PASS_LOCAL / NO_MUST_FIX_FINDINGS` with no P2.
 - Known boundaries: all current scene problems remain UNKNOWN; direct semantic audio is absent; no candidate is yet authorized as an executable cross-work rule.
 - Remote boundary: PR #3 push and PR #1 closure are authorized in the order above. Merging `main` and all deployment/publication/production actions remain prohibited.
-- Next single action: commit and push the locally passing repair, then require final-head CI before the clean-checkout independent review. Do not merge `main`.
+- Next single action: stop and wait for the user's separate merge decision. Do not merge `main`.
 
 ## Rollback
 
