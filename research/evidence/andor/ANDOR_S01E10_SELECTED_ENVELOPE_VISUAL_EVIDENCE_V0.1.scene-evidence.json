@@ -28706,7 +28706,7 @@
   "stats": {
     "unit": "VISIBLE_SHOT",
     "shot_count": 121,
-    "total_duration": 404.7079999999999,
+    "total_duration": 404.708,
     "mean_duration": 3.344694214876033,
     "median_duration": 2.583,
     "duration_bins": {

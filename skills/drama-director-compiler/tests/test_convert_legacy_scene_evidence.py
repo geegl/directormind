@@ -10,6 +10,7 @@ import re
 import sys
 import tempfile
 import unittest
+from decimal import Decimal
 from pathlib import Path
 
 
@@ -129,6 +130,13 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
         for source, evidence in zip(self.sources, converted):
             report = validate_generated(evidence)
             self.assertTrue(report["passed"], evidence["evidence_id"])
+            expected_total = float(
+                sum(
+                    (Decimal(str(shot["duration"])) for shot in evidence["shots"]),
+                    Decimal("0"),
+                )
+            )
+            self.assertEqual(evidence["stats"]["total_duration"], expected_total)
             warning_issues = [item for item in report["issues"] if item["level"] == "warning"]
             self.assertEqual(len(warning_issues), len(evidence["validation_warnings"]))
             self.assertGreaterEqual(len(evidence["validation_warnings"]), 2)

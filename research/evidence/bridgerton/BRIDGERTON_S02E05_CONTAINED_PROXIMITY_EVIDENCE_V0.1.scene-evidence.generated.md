@@ -48,7 +48,7 @@
   "mean_duration": 4.502878048780488,
   "median_duration": 3.603,
   "shot_count": 41,
-  "total_duration": 184.61800000000008,
+  "total_duration": 184.618,
   "unit": "VISIBLE_SHOT"
 }
 ```
@@ -3506,7 +3506,7 @@
     "mean_duration": 4.502878048780488,
     "median_duration": 3.603,
     "shot_count": 41,
-    "total_duration": 184.61800000000008,
+    "total_duration": 184.618,
     "unit": "VISIBLE_SHOT"
   },
   "text_anchor_status": "TEXT_ANCHOR_NOT_USED",

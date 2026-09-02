@@ -17370,7 +17370,7 @@
   "stats": {
     "unit": "VISIBLE_SHOT",
     "shot_count": 74,
-    "total_duration": 332.4170000000001,
+    "total_duration": 332.417,
     "mean_duration": 4.492121621621622,
     "median_duration": 3.396,
     "duration_bins": {

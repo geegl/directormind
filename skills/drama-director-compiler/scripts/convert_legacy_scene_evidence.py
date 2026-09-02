@@ -963,7 +963,12 @@ def build_evidence(source: Path) -> dict[str, Any]:
         "stats": {
             "unit": meta.stats_unit,
             "shot_count": len(shots),
-            "total_duration": sum(durations),
+            # Python 3.12 intentionally changed float summation accuracy.  Sum
+            # the decimal spellings so generated JSON stays byte-identical on
+            # the local Python 3.9 runtime and GitHub's Python 3.12 runtime.
+            "total_duration": float(
+                sum((Decimal(str(item)) for item in durations), Decimal("0"))
+            ),
             "mean_duration": statistics.mean(durations),
             "median_duration": statistics.median(durations),
             "duration_bins": _duration_bins(durations),
