@@ -17,6 +17,7 @@ from typing import Any
 SKILL_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(SKILL_ROOT / "scripts"))
 
+import validate_scene_evidence as validator_module  # noqa: E402
 from validate_scene_evidence import load_json, main, validate_evidence  # noqa: E402
 
 
@@ -1139,6 +1140,8 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             ("Vehicle remains unknown while the vehicle is red on screen.", "UNKNOWN-HIDES-AFFIRMATIVE-FACT"),
             ("Vehicle remains unknown, the vehicle is red on screen.", "UNKNOWN-HIDES-AFFIRMATIVE-FACT"),
             ("Vehicle remains unknown and the vehicle is red on screen.", "UNKNOWN-HIDES-AFFIRMATIVE-FACT"),
+            ("Vehicle remains unknown, red vehicle visible on screen.", "UNKNOWN-HIDES-AFFIRMATIVE-FACT"),
+            ("Vehicle remains unknown and red vehicle visible on screen.", "UNKNOWN-HIDES-AFFIRMATIVE-FACT"),
             ("Audio remains unknown; bring in a score.", "UNKNOWN-HIDES-AUDIO-DIRECTIVE"),
             ("Audio remains unknown, so bring in a score.", "UNKNOWN-HIDES-AUDIO-DIRECTIVE"),
             (
@@ -1179,6 +1182,28 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             "Audio remains unknown; do not add a score."
         )
         self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
+
+    def test_audio_track_noun_is_not_a_directive(self) -> None:
+        for location in ("shot", "audio", "method", "auxiliary", "continuity"):
+            for statement in (
+                "The audio track remains unknown.",
+                "Whether a music track is present remains unknown.",
+            ):
+                with self.subTest(location=location, statement=statement):
+                    evidence = make_valid_evidence()
+                    set_unknown_array(evidence, location, statement)
+                    self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
+
+        evidence = make_valid_evidence()
+        evidence["candidate_rules"][0]["audio_logic"]["value"] = "The audio track remains unknown."
+        self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
+
+    def test_standalone_safe_negative_unknown_boundary_passes(self) -> None:
+        for location in ("shot", "audio", "method", "auxiliary", "continuity"):
+            with self.subTest(location=location):
+                evidence = make_valid_evidence()
+                set_unknown_array(evidence, location, "Do not add a score.")
+                self.assertTrue(validate_evidence(evidence, SCHEMA)["passed"])
 
     def test_track_audio_directive_fails_without_audition(self) -> None:
         evidence = make_valid_evidence()
@@ -1259,6 +1284,42 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             self.assertEqual(schema_path.read_text(encoding="utf-8"), original)
             self.assertIn("must not overwrite", stderr.getvalue())
 
+    def test_report_protects_canonical_schema_when_schema_copy_is_used(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            synthetic_skill_root = root / "skill"
+            scripts_dir = synthetic_skill_root / "scripts"
+            references_dir = synthetic_skill_root / "references"
+            scripts_dir.mkdir(parents=True)
+            references_dir.mkdir()
+            canonical_schema = references_dir / "scene-evidence.schema.json"
+            canonical_text = json.dumps(SCHEMA, ensure_ascii=False)
+            canonical_schema.write_text(canonical_text, encoding="utf-8")
+            schema_copy = root / "schema-copy.json"
+            schema_copy.write_text(canonical_text, encoding="utf-8")
+            evidence_path = root / "scene-evidence.json"
+            evidence_path.write_text(json.dumps(make_valid_evidence()), encoding="utf-8")
+            original_module_file = validator_module.__file__
+            try:
+                validator_module.__file__ = str(scripts_dir / "validate_scene_evidence.py")
+                stderr = io.StringIO()
+                with contextlib.redirect_stderr(stderr):
+                    result = main(
+                        [
+                            str(evidence_path),
+                            "--schema",
+                            str(schema_copy),
+                            "--report",
+                            str(canonical_schema),
+                            "--quiet",
+                        ]
+                    )
+            finally:
+                validator_module.__file__ = original_module_file
+            self.assertEqual(result, 2)
+            self.assertEqual(canonical_schema.read_text(encoding="utf-8"), canonical_text)
+            self.assertIn("must not overwrite", stderr.getvalue())
+
     @unittest.skipUnless(sys.platform == "darwin", "case-alias collision is a macOS filesystem regression")
     def test_report_case_alias_cannot_overwrite_input_or_schema(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -1309,9 +1370,12 @@ class SceneEvidenceValidatorTests(unittest.TestCase):
             weakened_boolean = weakened_schema["$defs"]["rightsBoundary"]["properties"]["media_committed"]
             weakened_boolean.pop("type")
             weakened_boolean.pop("const")
+            coerced_const_schema = json.loads(json.dumps(SCHEMA))
+            coerced_const_schema["$defs"]["rightsBoundary"]["properties"]["media_committed"]["const"] = 0
             bad_schemas = (
                 {"$id": "scene-evidence.schema.json"},
                 weakened_schema,
+                coerced_const_schema,
                 {
                     "$schema": "https://json-schema.org/draft/2020-12/schema",
                     "$id": "scene-evidence.schema.json",

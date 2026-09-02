@@ -64,7 +64,7 @@ AUDIO_DIRECTIVE_RE = re.compile(
     r"(?:\b(?:add|use|insert|introduce|bring\s+in|play|mute|drop|fade|bridge|cut|synchronize|trigger|drive|enter|track|"
     r"underscore|hold)\b[^.\n]{0,100}\b(?:audio|sound|sounds|cue|score|music|silence|voice|dialogue|"
     r"ambience|noise|alarm|ring|tone)\b|\b(?:audio|sound|sounds|cue|score|music|silence|voice|dialogue|"
-    r"ambience|noise|alarm|ring|tone)\b[^.\n]{0,100}\b(?:add|use|insert|introduce|bring\s+in|play|mute|drop|fade|enter|track|"
+    r"ambience|noise|alarm|ring|tone)\b[^.\n]{0,100}\b(?:add|use|insert|introduce|bring\s+in|play|mute|drop|fade|enter|"
     r"bridge|cut|synchronize|trigger|drive|underscore|hold)\b|"
     r"\b(?:audio|sound|sounds|cue|score|music|silence|voice|dialogue|ambience|noise|alarm|ring|tone)\b"
     r"[^.\n]{0,60}\b(?:should|must)\s+(?:enter|begin|start|precede|lead)\b)",
@@ -106,15 +106,14 @@ SAFE_AUDIO_BOUNDARY_RE = re.compile(
     r"drive|enter|track|underscore|hold|begin|start|precede|lead)\b",
     re.IGNORECASE,
 )
+SAFE_UNKNOWN_TAIL_RE = re.compile(
+    r"^(?:outside this candidate|(?:is )?not part of this candidate)$",
+    re.IGNORECASE,
+)
 CROSS_CUT_IDENTITY_ASSERTION_RE = re.compile(
     r"\b(?:the\s+)?same\s+(?:person|individual|body|appearance|vehicle|object)\b[^.\n]{0,80}"
     r"\b(?:across|after|through)\b[^.\n]{0,40}\b(?:cut|cuts|edit|edits)\b|"
     r"\bidentity\b[^.\n]{0,60}\b(?:continues?|persists?|matches?)\b[^.\n]{0,40}\b(?:cut|cuts|edit|edits)\b",
-    re.IGNORECASE,
-)
-AFFIRMATIVE_ASSERTION_RE = re.compile(
-    r"\b(?:is|are|was|were|has|have|contains?|shows?|appears?|returns?|continues?|persists?|matches?|"
-    r"becomes?|uses?|keeps?|holds?|wears?|drives?|moves?)\b",
     re.IGNORECASE,
 )
 UNKNOWN_FACT_ALIAS_PATTERNS = {
@@ -168,6 +167,22 @@ def _json_const_matches(value: Any, expected: Any) -> bool:
     if expected is None:
         return value is None
     return type(value) is type(expected) and value == expected
+
+
+def _json_documents_equal_strict(left: Any, right: Any) -> bool:
+    """Compare parsed JSON without bool/number coercion at any depth."""
+    if type(left) is not type(right):
+        return False
+    if isinstance(left, dict):
+        return left.keys() == right.keys() and all(
+            _json_documents_equal_strict(left[key], right[key]) for key in left
+        )
+    if isinstance(left, list):
+        return len(left) == len(right) and all(
+            _json_documents_equal_strict(left_item, right_item)
+            for left_item, right_item in zip(left, right)
+        )
+    return left == right
 
 
 def _resolve_ref(root_schema: dict[str, Any], ref: str) -> dict[str, Any]:
@@ -543,6 +558,12 @@ def _uncertainty_trailing_segments(text: str) -> list[str]:
     ]
 
 
+def _normalize_trailing_segment(text: str) -> str:
+    cleaned = re.sub(r"^[\s,;:.!?()\[\]-]+", "", text)
+    cleaned = re.sub(r"^(?:and|but|however|yet|although|while|so|therefore|then)\b\s*", "", cleaned, flags=re.IGNORECASE)
+    return re.sub(r"[\s,;:.!?()\[\]-]+$", "", cleaned).strip()
+
+
 def _iter_unknown_statements(evidence: dict[str, Any]) -> Iterator[tuple[str, str]]:
     """Yield every field that the contract designates as an UNKNOWN register."""
     array_paths: list[tuple[str, Any]] = []
@@ -578,7 +599,12 @@ def _iter_unknown_statements(evidence: dict[str, Any]) -> Iterator[tuple[str, st
 
 def _validate_unknown_statement(path: str, statement: str, issues: list[dict[str, str]]) -> None:
     """Keep UNKNOWN registers uncertain, non-directive, and identity-safe."""
-    if GENERAL_UNCERTAINTY_RE.search(statement) is None:
+    unsafe_audio = _has_unsafe_audio_directive(statement)
+    explicit_safe_boundary = (
+        SAFE_UNKNOWN_BOUNDARY_RE.search(statement) is not None
+        or SAFE_AUDIO_BOUNDARY_RE.search(statement) is not None
+    ) and not unsafe_audio
+    if GENERAL_UNCERTAINTY_RE.search(statement) is None and not explicit_safe_boundary:
         add_issue(
             issues,
             "error",
@@ -586,7 +612,6 @@ def _validate_unknown_statement(path: str, statement: str, issues: list[dict[str
             path,
             "unknown wording must explicitly state uncertainty",
         )
-    unsafe_audio = _has_unsafe_audio_directive(statement)
     if unsafe_audio:
         add_issue(
             issues,
@@ -596,7 +621,13 @@ def _validate_unknown_statement(path: str, statement: str, issues: list[dict[str
             "unknown wording cannot hide an unauditioned audio instruction",
         )
     for trailing in _uncertainty_trailing_segments(statement):
-        if not trailing or SAFE_UNKNOWN_BOUNDARY_RE.search(trailing) or SAFE_AUDIO_BOUNDARY_RE.search(trailing):
+        trailing = _normalize_trailing_segment(trailing)
+        if (
+            not trailing
+            or SAFE_UNKNOWN_BOUNDARY_RE.search(trailing)
+            or SAFE_AUDIO_BOUNDARY_RE.search(trailing)
+            or SAFE_UNKNOWN_TAIL_RE.fullmatch(trailing)
+        ):
             continue
         if CROSS_CUT_IDENTITY_ASSERTION_RE.search(trailing):
             add_issue(
@@ -607,15 +638,14 @@ def _validate_unknown_statement(path: str, statement: str, issues: list[dict[str
                 "unknown wording cannot assert identity across a cut",
             )
             break
-        if AFFIRMATIVE_ASSERTION_RE.search(trailing):
-            add_issue(
-                issues,
-                "error",
-                "UNKNOWN-HIDES-AFFIRMATIVE-FACT",
-                path,
-                "unknown wording cannot hide an affirmative fact after an uncertainty marker",
-            )
-            break
+        add_issue(
+            issues,
+            "error",
+            "UNKNOWN-HIDES-AFFIRMATIVE-FACT",
+            path,
+            "unknown wording cannot hide additional affirmative content after an uncertainty marker",
+        )
+        break
     clauses = _semantic_clauses(statement)
     for clause in clauses:
         if (
@@ -2074,7 +2104,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         canonical_schema_path = Path(__file__).resolve().parent.parent / "references" / "scene-evidence.schema.json"
         canonical_schema = _validate_schema_document(load_json(canonical_schema_path))
         schema = _validate_schema_document(load_json(Path(args.schema)))
-        if schema != canonical_schema:
+        if not _json_documents_equal_strict(schema, canonical_schema):
             raise ValueError("--schema must match the repository Scene Evidence contract")
         paths = discover_evidence_paths(args.inputs)
     except (OSError, ValueError, json.JSONDecodeError) as exc:
@@ -2085,7 +2115,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 2
     if args.report:
         report_path = Path(args.report)
-        protected_paths = [*paths, Path(args.schema)]
+        protected_paths = [*paths, Path(args.schema), canonical_schema_path]
         if any(_same_file_target(report_path, protected_path) for protected_path in protected_paths):
             print("validator setup error: --report must not overwrite an input or schema file", file=sys.stderr)
             return 2
