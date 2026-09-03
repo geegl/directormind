@@ -1,0 +1,16 @@
+{
+  "candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
+  "evidence_id": "TLOU-BEDROOM-LOCAL-001",
+  "record_id": "WAVE1-REL-SPATIAL-TLOU",
+  "relation": "SUPPORTS",
+  "review_id": "WAVE1-REL-SPATIAL-TLOU-REVIEW",
+  "same_trigger_status": "VERIFIED_SAME_TRIGGER",
+  "schema_version": "candidate-relation-review/0.1",
+  "source_candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C03",
+  "source_refs": [
+    "TLOU-BEDROOM-LOCAL-001-S015",
+    "TLOU-BEDROOM-LOCAL-001-S019"
+  ],
+  "status": "ROOT_VIDEO_VERIFIED",
+  "work_id": "THE-LAST-OF-US-S01E06"
+}

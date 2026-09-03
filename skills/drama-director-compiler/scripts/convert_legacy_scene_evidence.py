@@ -30,6 +30,7 @@ SKILL_ROOT = SCRIPT_DIR.parent
 REPOSITORY_ROOT = SKILL_ROOT.parents[1]
 EVIDENCE_ROOT = REPOSITORY_ROOT / "research" / "evidence"
 SCHEMA_PATH = SKILL_ROOT / "references" / "scene-evidence.schema.json"
+WAVE1_REVIEW_PATH = REPOSITORY_ROOT / "research" / "grammar" / "runtime_rule_promotion_wave1.review.json"
 
 sys.path.insert(0, str(SCRIPT_DIR))
 from validate_scene_evidence import load_json, validate_evidence  # noqa: E402
@@ -750,6 +751,7 @@ def convert_rules(
                     [],
                     "UNKNOWN",
                 ),
+                "audio_dependency": True,
                 "continuity": PENDING_OPERATIONAL_FIELDS["continuity"],
                 "AI_risk": pending_rule_risk(),
                 "fallback": pending_rule_fallback(),
@@ -806,6 +808,121 @@ def _audio_audit() -> dict[str, Any]:
         "Dialogue, ambience, score, silence, source, timing, and causal sound meaning remain unknown."
     ]
     return result
+
+
+def _wave1_review() -> dict[str, Any]:
+    if not WAVE1_REVIEW_PATH.is_file():
+        return {"evidence_reviews": [], "promotions": []}
+    data = json.loads(WAVE1_REVIEW_PATH.read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        raise ValueError("runtime promotion review root must be an object")
+    return data
+
+
+def _apply_wave1_review(evidence: dict[str, Any]) -> None:
+    review_data = _wave1_review()
+    review = next(
+        (
+            item
+            for item in review_data.get("evidence_reviews", [])
+            if item.get("evidence_id") == evidence["evidence_id"]
+        ),
+        None,
+    )
+    if review is None:
+        return
+
+    shots_by_id = {shot["shot_id"]: shot for shot in evidence["shots"]}
+    missing_shots = sorted(set(review["shot_ids"]) - set(shots_by_id))
+    if missing_shots:
+        raise ValueError(
+            f"runtime promotion review cites unknown Shot IDs for {evidence['evidence_id']}: {missing_shots}"
+        )
+    evidence["methods"].append(
+        {
+            "method_id": review["method_id"],
+            "method_type": "PICTURE_FRAME_REVIEW",
+            "status": "MANUAL_REVIEW_RECORDED",
+            "description": (
+                "Runtime promotion Wave 1 re-opened the local source video and reviewed the cited "
+                "Shot start, midpoint, and end frames. Temporary review images remain outside the repository."
+            ),
+            "repository_command": None,
+            "tool_version_status": "VERSION_UNKNOWN",
+            "source_refs": review["shot_ids"],
+            "unknowns": review["unknowns"],
+        }
+    )
+    text_anchor = review.get("text_anchor")
+    if isinstance(text_anchor, dict):
+        anchor_shot = shots_by_id.get(text_anchor["shot_id"])
+        if anchor_shot is None:
+            raise ValueError(f"runtime promotion text anchor cites unknown Shot ID: {text_anchor['shot_id']}")
+        evidence["text_anchors"].append(
+            {
+                "anchor_id": text_anchor["anchor_id"],
+                "status": "TEXT_ANCHOR_VERIFIED",
+                "source_type": text_anchor["source_type"],
+                "paraphrase": text_anchor["paraphrase"],
+                "speaker_status": text_anchor["speaker_status"],
+                "start": text_anchor["start"],
+                "end": text_anchor["end"],
+            }
+        )
+        evidence["text_anchor_status"] = "TEXT_ANCHOR_VERIFIED"
+        anchor_shot["text_anchor_status"] = "TEXT_ANCHOR_VERIFIED"
+        evidence["methods"].append(
+            {
+                "method_id": f"{review['method_id']}-TEXT-ANCHOR",
+                "method_type": "TEXT_ANCHOR_REVIEW",
+                "status": "MANUAL_REVIEW_RECORDED",
+                "description": (
+                    "Runtime promotion Wave 1 reviewed a short visible subtitle in the local video "
+                    "and retained only a rights-safe paraphrase."
+                ),
+                "repository_command": None,
+                "tool_version_status": "VERSION_UNKNOWN",
+                "source_refs": [text_anchor["shot_id"], text_anchor["anchor_id"]],
+                "unknowns": ["Speaker identity, uncited dialogue, and semantic audio remain unknown."],
+            }
+        )
+    if review.get("scene_problem") is not None:
+        evidence["scene_problem"] = review["scene_problem"]
+    for role in review.get("roles", []):
+        shot = shots_by_id.get(role["shot_id"])
+        if shot is None:
+            raise ValueError(f"runtime promotion role cites unknown Shot ID: {role['shot_id']}")
+        shot["abstract_role_labels"].append(
+            {
+                "appearance_id": role["appearance_id"],
+                "functional_role": role["functional_role"],
+                "status": "INFERRED",
+                "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+                "appearance_track_id": None,
+                "source_refs": role["source_refs"],
+            }
+        )
+
+    promotion_ids = {
+        item["candidate_rule_id"]
+        for item in review_data.get("promotions", [])
+        if item.get("candidate_rule_id")
+    }
+    for rule in evidence["candidate_rules"]:
+        if rule["candidate_rule_id"] not in promotion_ids:
+            continue
+        rule["audio_dependency"] = False
+        if review["method_id"] not in rule["source_method_ids"]:
+            rule["source_method_ids"].append(review["method_id"])
+    for unknown in evidence["unknowns"]:
+        if unknown["unknown_id"] == "UNKNOWN-AUDIO":
+            unknown["blocks_rule_ids"] = [
+                rule_id for rule_id in unknown["blocks_rule_ids"] if rule_id not in promotion_ids
+            ]
+
+    evidence["validation_warnings"].append(
+        "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
+    )
 
 
 def build_evidence(source: Path) -> dict[str, Any]:
@@ -1030,6 +1147,7 @@ def build_evidence(source: Path) -> dict[str, Any]:
             else []
         ),
     }
+    _apply_wave1_review(evidence)
     return evidence
 
 

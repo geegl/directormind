@@ -1,0 +1,9 @@
+{
+  "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C02-DELAY-TIGHT-SHARED-FRAME-UNTIL-DISTANCE-CHANGES",
+  "canonical_rule_family": "PROXIMITY-AND-RELATION-GEOMETRY",
+  "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+  "schema_version": "forward-test-result/0.1",
+  "status": "HUMAN_REVIEW_PENDING",
+  "test_case_id": "ORIGINAL-PROXIMITY-ELLIPSIS",
+  "test_mode": "BOUNDARY_OR_NON_APPLICABLE"
+}

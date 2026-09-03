@@ -1,0 +1,9 @@
+{
+  "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C04-PROGRESSIVE-RELATION-REMOVAL-TO-HELD-SINGLES",
+  "canonical_rule_family": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
+  "rule_id": "DR-PERFORMANCE-OWNER-HOLD",
+  "schema_version": "forward-test-result/0.1",
+  "status": "HUMAN_REVIEW_PENDING",
+  "test_case_id": "ORIGINAL-PERFORMANCE-CONCURRENT-STATE",
+  "test_mode": "BOUNDARY_OR_NON_APPLICABLE"
+}

@@ -3173,6 +3173,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
+      "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -3272,6 +3273,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
+      "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -3366,6 +3368,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
+      "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -3458,6 +3461,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
+      "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {

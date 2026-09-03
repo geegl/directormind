@@ -1,0 +1,57 @@
+{
+  "case_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
+  "dramatic_structure": {
+    "goal": "show a solo occupancy change after the counterpart has left",
+    "objectives": [
+      "move to the second station"
+    ],
+    "obstacle": "none beyond preserving the known room direction",
+    "stakes": "the next task begins at the second station",
+    "subtext": "none asserted",
+    "tactic_change": "shared occupancy becomes solo work"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "counterpart_relation",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "Maker A leaves the room before Maker B moves from the shared bench."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "spatial_change",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "After the exit, Maker B crosses alone to a second station visible against the same fixed wall grid."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "fixed_anchor",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "The wall grid and empty shared bench make the solo destination unambiguous."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "material_spatial_change",
+    "counterpart_relation_required",
+    "counterpart_relation_not_required"
+  ],
+  "scene_problem": {
+    "primary": "RELATIONSHIP_FRACTURE",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "partnership"
+  ],
+  "unknown_fact_types": []
+}

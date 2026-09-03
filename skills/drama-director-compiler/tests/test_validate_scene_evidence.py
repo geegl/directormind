@@ -206,6 +206,7 @@ def make_valid_evidence() -> dict[str, Any]:
                 "edit_logic": "Cut only after the first visible state is registered.",
                 "pacing": "Let each state remain readable without prescribing a source-derived duration.",
                 "audio_logic": claim("RULE-AUDIO", "Audio remains unknown and is not part of this candidate.", [], "UNKNOWN"),
+                "audio_dependency": False,
                 "continuity": "Preserve project-original side and body-state ledgers.",
                 "AI_risk": risk(),
                 "fallback": fallback(),

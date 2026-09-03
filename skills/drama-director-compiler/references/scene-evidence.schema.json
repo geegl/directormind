@@ -278,6 +278,10 @@
             "receiver",
             "absent_mover",
             "decision_owner",
+            "performance_owner",
+            "relation_anchor",
+            "spatial_mover",
+            "proximity_mover",
             "UNKNOWN"
           ]
         },
@@ -711,6 +715,7 @@
         "edit_logic",
         "pacing",
         "audio_logic",
+        "audio_dependency",
         "continuity",
         "AI_risk",
         "fallback",
@@ -746,6 +751,7 @@
         "edit_logic": {"type": "string", "minLength": 1},
         "pacing": {"type": "string", "minLength": 1},
         "audio_logic": {"$ref": "#/$defs/evidenceClaim"},
+        "audio_dependency": {"type": "boolean"},
         "continuity": {"type": "string", "minLength": 1},
         "AI_risk": {"$ref": "#/$defs/aiComplexity"},
         "fallback": {"$ref": "#/$defs/fallback"},

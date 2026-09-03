@@ -22,6 +22,24 @@
       "human_review_status": "HUMAN_REVIEW_PENDING",
       "ir_warning_count": 4,
       "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "INTERROGATION",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-PERFORMANCE-CONCURRENT-STATE"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "SELECTED",
+      "scene_problem": "INTERROGATION",
+      "selection_count": 1,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-PERFORMANCE-OWNER-HOLD"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
       "scene_problem": "DIALOGUE_POWER_TRANSFER",
       "selection_count": 0,
       "status": "PASS",
@@ -43,6 +61,15 @@
       "scene_problem": "ROMANTIC_PROXIMITY",
       "selection_count": 0,
       "status": "PASS",
+      "test_case_id": "ORIGINAL-PROXIMITY-ELLIPSIS"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "SELECTED",
+      "scene_problem": "ROMANTIC_PROXIMITY",
+      "selection_count": 1,
+      "status": "PASS",
       "test_case_id": "ORIGINAL-PROXIMITY-TENSION"
     },
     {
@@ -57,9 +84,9 @@
     {
       "human_review_status": "HUMAN_REVIEW_PENDING",
       "ir_warning_count": 4,
-      "routing_status": "NO_APPLICABLE_RULE",
+      "routing_status": "SELECTED",
       "scene_problem": "RELATIONSHIP_FRACTURE",
-      "selection_count": 0,
+      "selection_count": 1,
       "status": "PASS",
       "test_case_id": "ORIGINAL-RELATIONSHIP-FRACTURE"
     },
@@ -71,22 +98,32 @@
       "selection_count": 0,
       "status": "PASS",
       "test_case_id": "ORIGINAL-SOUND-SUSPENSE"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "RELATIONSHIP_FRACTURE",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART"
     }
   ],
-  "completed_boundary_cases": 0,
-  "completed_positive_cases": 0,
+  "completed_boundary_cases": 3,
+  "completed_positive_cases": 3,
   "error_count": 0,
-  "human_review_pending_count": 8,
+  "human_review_pending_count": 12,
   "issues": [],
   "missing_family_count": 0,
-  "no_applicable_rule_count": 8,
-  "package_count": 8,
-  "promotion_ready_family_count": 0,
-  "required_positive_boundary_pairs": 0,
+  "missing_rule_count": 0,
+  "no_applicable_rule_count": 9,
+  "package_count": 12,
+  "promotion_ready_family_count": 3,
+  "required_positive_boundary_pairs": 3,
   "required_scene_problem_count": 6,
   "schema_version": "forward-test-repository-validation/0.1",
-  "selected_rule_count": 0,
+  "selected_rule_count": 3,
   "status": "PASS",
-  "structural_pass_count": 8,
-  "warning_count": 31
+  "structural_pass_count": 12,
+  "warning_count": 47
 }

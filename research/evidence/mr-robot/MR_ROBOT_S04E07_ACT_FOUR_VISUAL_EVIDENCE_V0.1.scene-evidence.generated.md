@@ -17,7 +17,7 @@
 | duration | 993.284 |
 | picture_evidence_status | PICTURE_OBSERVED |
 | audio_evidence_status | BLOCKED_DIRECT_AUDITION |
-| text_anchor_status | TEXT_ANCHOR_NOT_USED |
+| text_anchor_status | TEXT_ANCHOR_VERIFIED |
 | production_take_status | PRODUCTION_METHOD_UNKNOWN |
 | source_identity_status | SOURCE_OR_FILENAME_SUPPLIED |
 | validation_status | HUMAN_REVIEW_PENDING |
@@ -26,11 +26,16 @@
 
 ```json
 {
-  "notes": "The legacy primary label INTERROGATION is retained only as non-operational lineage and was not proved by structural conversion.",
-  "primary": "LEGACY_SCENE_PROBLEM",
+  "notes": "The canonical problem is inferred from repeated question-and-response staging plus one short, paraphrased visible-text anchor; no dialogue wording is transferred.",
+  "primary": "INTERROGATION",
   "secondary": [],
-  "source_refs": [],
-  "status": "UNKNOWN"
+  "source_refs": [
+    "MRR-S04E07-ACT-FOUR-VISUAL-001-S194",
+    "MRR-S04E07-ACT-FOUR-VISUAL-001-S197",
+    "MRR-S04E07-ACT-FOUR-VISUAL-001-S199",
+    "MRR-S04E07-ACT-FOUR-VISUAL-001-TA-WAVE1-001"
+  ],
+  "status": "INFERRED"
 }
 ```
 
@@ -276,8 +281,7 @@
     "blocks_rule_ids": [
       "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C01-DETAIL-THEN-CONTAINER-REGISTER",
       "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C02-EXTRA-BODY-ANCHOR-IN-CONTAINED-ALTERNATION",
-      "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C03-DOCUMENT-STATE-NEEDS-HANDLER-CONTINUITY",
-      "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C04-PROGRESSIVE-RELATION-REMOVAL-TO-HELD-SINGLES"
+      "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C03-DOCUMENT-STATE-NEEDS-HANDLER-CONTINUITY"
     ],
     "scope": "AUDIO",
     "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
@@ -317,7 +321,8 @@
 ```json
 [
   "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
-  "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+  "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+  "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
 ]
 ```
 
@@ -476,11 +481,16 @@
   "picture_evidence_status": "PICTURE_OBSERVED",
   "production_take_status": "PRODUCTION_METHOD_UNKNOWN",
   "scene_problem": {
-    "notes": "The legacy primary label INTERROGATION is retained only as non-operational lineage and was not proved by structural conversion.",
-    "primary": "LEGACY_SCENE_PROBLEM",
+    "notes": "The canonical problem is inferred from repeated question-and-response staging plus one short, paraphrased visible-text anchor; no dialogue wording is transferred.",
+    "primary": "INTERROGATION",
     "secondary": [],
-    "source_refs": [],
-    "status": "UNKNOWN"
+    "source_refs": [
+      "MRR-S04E07-ACT-FOUR-VISUAL-001-S194",
+      "MRR-S04E07-ACT-FOUR-VISUAL-001-S197",
+      "MRR-S04E07-ACT-FOUR-VISUAL-001-S199",
+      "MRR-S04E07-ACT-FOUR-VISUAL-001-TA-WAVE1-001"
+    ],
+    "status": "INFERRED"
   },
   "scene_unit_type": "NATURAL_CONTINUOUS_SCENE",
   "schema_version": "scene-evidence/0.1",
@@ -15990,14 +16000,13 @@
     "total_duration": 993.284,
     "unit": "VISIBLE_SHOT"
   },
-  "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+  "text_anchor_status": "TEXT_ANCHOR_VERIFIED",
   "unknowns": [
     {
       "blocks_rule_ids": [
         "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C01-DETAIL-THEN-CONTAINER-REGISTER",
         "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C02-EXTRA-BODY-ANCHOR-IN-CONTAINED-ALTERNATION",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C03-DOCUMENT-STATE-NEEDS-HANDLER-CONTINUITY",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C04-PROGRESSIVE-RELATION-REMOVAL-TO-HELD-SINGLES"
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C03-DOCUMENT-STATE-NEEDS-HANDLER-CONTINUITY"
       ],
       "scope": "AUDIO",
       "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
@@ -16018,7 +16027,8 @@
   "validation_status": "HUMAN_REVIEW_PENDING",
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
-    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
   ],
   "work_id": "MR-ROBOT-S04E07"
 }

@@ -112,10 +112,57 @@
         ],
         "case_id": "ORIGINAL-PUBLIC-REVEAL",
         "conflict_trace": [],
-        "eligible_rule_ids": [],
+        "eligible_rule_ids": [
+          "DR-PERFORMANCE-OWNER-HOLD",
+          "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+          "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+        ],
         "human_review_status": "HUMAN_REVIEW_PENDING",
         "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
-        "rejected_rules": [],
+        "rejected_rules": [
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "missing_fact_types": [
+              "performance_progression",
+              "relation_state"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-PERFORMANCE-OWNER-HOLD"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "missing_fact_types": [
+              "counterpart_relation",
+              "spatial_change"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "missing_fact_types": [
+              "distance_change",
+              "relation_endpoint"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+          }
+        ],
         "rights_boundary": {
           "subject_matter_used_for_selection": false,
           "surface_copy_allowed": false

@@ -1,0 +1,42 @@
+{
+  "generation_authorized": false,
+  "human_review_status": "HUMAN_REVIEW_PENDING",
+  "ir_error_count": 0,
+  "ir_status": "PASS",
+  "ir_warning_count": 4,
+  "issues": [
+    {
+      "code": "IR-VISUAL-PACK",
+      "level": "warning",
+      "message": "visual style pack is not yet bound",
+      "path": "visual_style_pack_path"
+    },
+    {
+      "code": "IR-VISUAL-MODULE",
+      "level": "warning",
+      "message": "visual module is unresolved",
+      "path": "EP01-SC01-SH01"
+    },
+    {
+      "code": "IR-VISUAL-MODULE",
+      "level": "warning",
+      "message": "visual module is unresolved",
+      "path": "EP01-SC01-SH02"
+    },
+    {
+      "code": "IR-VISUAL-MODULE",
+      "level": "warning",
+      "message": "visual module is unresolved",
+      "path": "EP01-SC01-SH03"
+    }
+  ],
+  "positive_selection_claimed": true,
+  "publication_authorized": false,
+  "routing_error_count": 0,
+  "routing_status": "SELECTED",
+  "schema_version": "forward-test-validation/0.1",
+  "selection_count": 1,
+  "structural_status": "PASS",
+  "test_case_id": "ORIGINAL-PERFORMANCE-OWNER-HOLD",
+  "test_mode": "POSITIVE"
+}

@@ -107,12 +107,18 @@
           "level": "warning",
           "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
           "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+          "path": "$.validation_warnings[2]"
         }
       ],
       "passed": true,
       "path": "research/evidence/better-call-saul/BETTER_CALL_SAUL_S03E05_PUBLIC_PROOF_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 105,
-      "warning_count": 2
+      "warning_count": 3
     },
     {
       "candidate_rule_count": 4,
@@ -161,12 +167,18 @@
           "level": "warning",
           "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
           "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+          "path": "$.validation_warnings[2]"
         }
       ],
       "passed": true,
       "path": "research/evidence/bridgerton/BRIDGERTON_S02E05_CONTAINED_PROXIMITY_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 41,
-      "warning_count": 2
+      "warning_count": 3
     },
     {
       "candidate_rule_count": 4,
@@ -185,12 +197,18 @@
           "level": "warning",
           "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
           "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+          "path": "$.validation_warnings[2]"
         }
       ],
       "passed": true,
       "path": "research/evidence/brooklyn-nine-nine/BROOKLYN_NINE_NINE_S05E14_THE_BOX_VISUAL_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 22,
-      "warning_count": 2
+      "warning_count": 3
     },
     {
       "candidate_rule_count": 4,
@@ -263,12 +281,18 @@
           "level": "warning",
           "message": "12 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
           "path": "$.validation_warnings[2]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+          "path": "$.validation_warnings[3]"
         }
       ],
       "passed": true,
       "path": "research/evidence/citizen-kane/CITIZEN_KANE_BREAKFAST_MONTAGE_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 27,
-      "warning_count": 3
+      "warning_count": 4
     },
     {
       "candidate_rule_count": 4,
@@ -359,12 +383,18 @@
           "level": "warning",
           "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
           "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+          "path": "$.validation_warnings[2]"
         }
       ],
       "passed": true,
       "path": "research/evidence/marriage-story/MARRIAGE_STORY_2019_APARTMENT_SEQUENCE_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 85,
-      "warning_count": 2
+      "warning_count": 3
     },
     {
       "candidate_rule_count": 4,
@@ -407,12 +437,18 @@
           "level": "warning",
           "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
           "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+          "path": "$.validation_warnings[2]"
         }
       ],
       "passed": true,
       "path": "research/evidence/mr-robot/MR_ROBOT_S04E07_ACT_FOUR_VISUAL_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 201,
-      "warning_count": 2
+      "warning_count": 3
     },
     {
       "candidate_rule_count": 4,
@@ -629,12 +665,18 @@
           "level": "warning",
           "message": "22 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
           "path": "$.validation_warnings[2]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+          "path": "$.validation_warnings[3]"
         }
       ],
       "passed": true,
       "path": "research/evidence/the-devil-wears-prada/THE_DEVIL_WEARS_PRADA_2006_CERULEAN_CORRECTION_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 26,
-      "warning_count": 3
+      "warning_count": 4
     },
     {
       "candidate_rule_count": 4,
@@ -677,12 +719,18 @@
           "level": "warning",
           "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
           "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+          "path": "$.validation_warnings[2]"
         }
       ],
       "passed": true,
       "path": "research/evidence/the-last-of-us/THE_LAST_OF_US_S01E06_BEDROOM_VISUAL_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 27,
-      "warning_count": 2
+      "warning_count": 3
     },
     {
       "candidate_rule_count": 4,
@@ -725,12 +773,18 @@
           "level": "warning",
           "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
           "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+          "path": "$.validation_warnings[2]"
         }
       ],
       "passed": true,
       "path": "research/evidence/the-social-network/THE_SOCIAL_NETWORK_2010_OPENING_EXCHANGE_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 91,
-      "warning_count": 2
+      "warning_count": 3
     },
     {
       "candidate_rule_count": 4,
@@ -817,7 +871,7 @@
   "total_scenes": 31,
   "total_shots": 2343,
   "validator_version": "scene-evidence-validator/0.1",
-  "warning_count": 72,
+  "warning_count": 81,
   "warnings": [
     {
       "code": "EVIDENCE-DECLARED-WARNING",
@@ -891,6 +945,13 @@
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
+      "level": "warning",
+      "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+      "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
       "evidence_id": "DM-BODYGUARD-S01E01-SEL-001",
       "level": "warning",
       "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
@@ -926,6 +987,13 @@
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+      "level": "warning",
+      "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+      "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
       "evidence_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001",
       "level": "warning",
       "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
@@ -937,6 +1005,13 @@
       "level": "warning",
       "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
       "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001",
+      "level": "warning",
+      "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+      "path": "$.validation_warnings[2]"
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",
@@ -989,6 +1064,13 @@
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+      "level": "warning",
+      "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+      "path": "$.validation_warnings[3]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
       "evidence_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001",
       "level": "warning",
       "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
@@ -1045,6 +1127,13 @@
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+      "level": "warning",
+      "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+      "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
       "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
       "level": "warning",
       "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
@@ -1070,6 +1159,13 @@
       "level": "warning",
       "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
       "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "MRR-S04E07-ACT-FOUR-VISUAL-001",
+      "level": "warning",
+      "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+      "path": "$.validation_warnings[2]"
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",
@@ -1220,6 +1316,13 @@
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
+      "level": "warning",
+      "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+      "path": "$.validation_warnings[3]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
       "evidence_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1",
       "level": "warning",
       "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
@@ -1248,6 +1351,13 @@
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "TLOU-BEDROOM-LOCAL-001",
+      "level": "warning",
+      "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+      "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
       "evidence_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001",
       "level": "warning",
       "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
@@ -1273,6 +1383,13 @@
       "level": "warning",
       "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
       "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
+      "level": "warning",
+      "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+      "path": "$.validation_warnings[2]"
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",

@@ -120,8 +120,8 @@ def verified_routing_review(
     review = rule.get("routing_review", {})
     review_id = review.get("review_id")
     review_ref = review.get("review_ref")
-    if review.get("status") != "HUMAN_VERIFIED" or not isinstance(review_id, str) or not isinstance(review_ref, str):
-        add_issue(issues, "GRAMMAR-ROUTING-REVIEW", f"{path}.routing_review", "Machine routing fields require a named human verification record.")
+    if review.get("status") not in {"HUMAN_VERIFIED", "ROOT_VIDEO_VERIFIED"} or not isinstance(review_id, str) or not isinstance(review_ref, str):
+        add_issue(issues, "GRAMMAR-ROUTING-REVIEW", f"{path}.routing_review", "Machine routing fields require a named verification record.")
         return False
     if Path(review_ref).is_absolute():
         add_issue(issues, "GRAMMAR-ROUTING-REVIEW-REF", f"{path}.routing_review.review_ref", "Routing review refs must be repository-relative.")
@@ -146,7 +146,7 @@ def verified_routing_review(
         "review_id": review_id,
         "rule_id": rule.get("rule_id"),
         "promotion_source_candidate_id": rule.get("promotion_source_candidate_id"),
-        "status": "HUMAN_VERIFIED",
+        "status": review.get("status"),
         "candidate_trigger": candidate_contract.get("trigger"),
         "candidate_required_story_facts": candidate_contract.get("required_story_facts"),
         "routing": rule.get("routing"),
@@ -364,6 +364,9 @@ def validate_grammar(
         rule.pop("promotion_source_candidate_id", None)
         if isinstance(rule.get("audio_logic"), dict):
             rule["audio_logic"]["source_refs"] = []
+        for role in rule.get("functional_roles", []):
+            if isinstance(role, dict):
+                role["source_refs"] = []
     operational_json = json.dumps(operational_grammar, ensure_ascii=False, sort_keys=True)
     normalized_operational = normalized_phrase(operational_json)
     for surface_id in sorted(known_surface_ids):

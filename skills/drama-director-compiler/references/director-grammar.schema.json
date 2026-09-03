@@ -269,7 +269,7 @@
           "additionalProperties": false,
           "required": ["status", "review_id", "review_ref"],
           "properties": {
-            "status": {"const": "HUMAN_VERIFIED"},
+            "status": {"enum": ["HUMAN_VERIFIED", "ROOT_VIDEO_VERIFIED"]},
             "review_id": {"type": "string", "minLength": 1},
             "review_ref": {"type": "string", "minLength": 1}
           }

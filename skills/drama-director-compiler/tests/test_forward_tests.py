@@ -69,13 +69,15 @@ class ForwardTestContractTests(unittest.TestCase):
     def test_repository_forward_packages_pass_live_validation(self) -> None:
         report = self.validate()
         self.assertEqual(report["status"], "PASS")
-        self.assertEqual(report["package_count"], 8)
+        self.assertEqual(report["package_count"], 12)
         self.assertEqual(report["required_scene_problem_count"], 6)
-        self.assertEqual(report["promotion_ready_family_count"], 0)
-        self.assertEqual(report["required_positive_boundary_pairs"], 0)
-        self.assertEqual(report["no_applicable_rule_count"], 8)
-        self.assertEqual(report["selected_rule_count"], 0)
-        self.assertEqual(report["human_review_pending_count"], 8)
+        self.assertEqual(report["promotion_ready_family_count"], 3)
+        self.assertEqual(report["required_positive_boundary_pairs"], 3)
+        self.assertEqual(report["completed_positive_cases"], 3)
+        self.assertEqual(report["completed_boundary_cases"], 3)
+        self.assertEqual(report["no_applicable_rule_count"], 9)
+        self.assertEqual(report["selected_rule_count"], 3)
+        self.assertEqual(report["human_review_pending_count"], 12)
 
     def test_builder_and_repository_report_are_deterministic(self) -> None:
         build = subprocess.run(
@@ -95,20 +97,50 @@ class ForwardTestContractTests(unittest.TestCase):
         )
         self.assertEqual(validate.returncode, 0, validate.stderr)
 
-    def test_zero_eligible_packages_cannot_claim_positive_coverage(self) -> None:
+    def test_rule_level_positive_coverage_cannot_be_removed(self) -> None:
         index = copy.deepcopy(self.index)
-        index["cases"][0]["test_mode"] = "POSITIVE"
-        index["cases"][0]["positive_for_family_ids"] = ["FAKE-FAMILY"]
+        entry = next(item for item in index["cases"] if item["test_case_id"] == "ORIGINAL-PERFORMANCE-OWNER-HOLD")
+        entry["positive_for_rule_ids"] = []
         report = self.validate(index)
-        self.assertIn("FORWARD-FALSE-POSITIVE", issue_codes(report))
+        self.assertIn("FORWARD-RULE-COVERAGE-MISSING", issue_codes(report))
 
     def test_live_eligible_family_drift_cannot_hide_behind_zero_index(self) -> None:
         fake = {"FAKE-CANDIDATE": {"canonical_rule_family": "FAMILY-NOW-ELIGIBLE"}}
         with patch.object(forward_validator, "eligible_candidates", return_value=fake):
             report = self.validate()
         self.assertIn("FORWARD-ELIGIBLE-DRIFT", issue_codes(report))
-        self.assertIn("FORWARD-INDEX-STATUS", issue_codes(report))
-        self.assertIn("FORWARD-FAMILY-COVERAGE-MISSING", issue_codes(report))
+        self.assertIn("FORWARD-RULE-COVERAGE-MISSING", issue_codes(report))
+
+    def test_each_promoted_rule_has_selected_and_boundary_packages(self) -> None:
+        positive = {
+            item["positive_for_rule_ids"][0]: item
+            for item in self.index["cases"]
+            if item["positive_for_rule_ids"]
+        }
+        boundary = {
+            item["boundary_for_rule_ids"][0]: item
+            for item in self.index["cases"]
+            if item["boundary_for_rule_ids"]
+        }
+        self.assertEqual(set(positive), {rule["rule_id"] for rule in self.grammar["rules"]})
+        self.assertEqual(set(boundary), set(positive))
+        for rule_id, entry in positive.items():
+            package = FORWARD_ROOT / entry["test_case_id"]
+            result = read_json(package / "selected-rules.json")
+            ir = read_json(package / "director-ir.json")
+            self.assertEqual([item["rule_id"] for item in result["selected_rules"]], [rule_id])
+            cited = {
+                cited_rule
+                for scene in ir["scenes"]
+                for shot in scene["shots"]
+                for cited_rule in shot["evidence_rule_ids"]
+            }
+            self.assertEqual(cited, {rule_id})
+            self.assertTrue(entry["changed_director_dimensions"])
+        for rule_id, entry in boundary.items():
+            result = read_json(FORWARD_ROOT / entry["test_case_id"] / "selected-rules.json")
+            rejected = next(item for item in result["rejected_rules"] if item["rule_id"] == rule_id)
+            self.assertIn("NOT_APPLICABLE_MATCH", rejected["rejection_reason_codes"])
 
     def test_saved_routing_result_cannot_drift_from_live_router(self) -> None:
         def mutate(root: Path) -> None:

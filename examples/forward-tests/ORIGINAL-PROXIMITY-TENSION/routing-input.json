@@ -27,7 +27,7 @@
     },
     {
       "fact_id": "FACT-03",
-      "fact_type": "no_contact_boundary",
+      "fact_type": "relation_endpoint",
       "source_ref": "locked-script.md#FACT-03",
       "status": "LOCKED",
       "value": "The table remains between them and neither person touches the other."
@@ -40,8 +40,9 @@
     "project_original": true
   },
   "routing_signals": [
-    "distance_change",
-    "no_contact_boundary"
+    "relation_distance_change",
+    "continuous_present_time",
+    "shared_endpoint_required"
   ],
   "scene_problem": {
     "primary": "ROMANTIC_PROXIMITY",

@@ -157,6 +157,7 @@
         "status": "UNKNOWN",
         "value": "Audio remains unknown and is not part of this candidate."
       },
+      "audio_dependency": false,
       "blocking": "Assign neutral side A and side B positions in a project-original set.",
       "candidate_rule_id": "TEST-C01-RELATION-COVERAGE",
       "canonical_rule_family": "RELATION-COVERAGE",

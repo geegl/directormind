@@ -6422,6 +6422,26 @@
       "unknowns": [
         "All semantic audio facts remain unknown."
       ]
+    },
+    {
+      "method_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-METHOD-WAVE1-PICTURE-REVIEW",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "Runtime promotion Wave 1 re-opened the local source video and reviewed the cited Shot start, midpoint, and end frames. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S012",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S013",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S015",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S016",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S017",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S018",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S019"
+      ],
+      "unknowns": [
+        "Dialogue meaning, emotional cause, cross-cut identity, lens metadata, and all semantic audio remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],
@@ -6477,6 +6497,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
+      "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -6573,6 +6594,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
+      "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -6671,6 +6693,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
+      "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -6766,6 +6789,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
+      "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -6867,6 +6891,7 @@
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
     "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-    "22 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review."
+    "22 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
   ]
 }

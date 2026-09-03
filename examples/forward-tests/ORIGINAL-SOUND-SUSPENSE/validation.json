@@ -38,5 +38,5 @@
   "selection_count": 0,
   "structural_status": "PASS",
   "test_case_id": "ORIGINAL-SOUND-SUSPENSE",
-  "test_mode": "ZERO_ELIGIBLE_PROBE"
+  "test_mode": "NO_MATCH_PROBE"
 }

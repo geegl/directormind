@@ -15,6 +15,7 @@ SKILL_ROOT = SCRIPT_DIR.parent
 REPOSITORY_ROOT = SKILL_ROOT.parents[1]
 FORWARD_ROOT = REPOSITORY_ROOT / "examples" / "forward-tests"
 GRAMMAR_PATH = REPOSITORY_ROOT / "research" / "grammar" / "director_grammar_v0.2.json"
+PROMOTION_REVIEW_PATH = REPOSITORY_ROOT / "research" / "grammar" / "runtime_rule_promotion_wave1.review.json"
 
 sys.path.insert(0, str(SCRIPT_DIR))
 from render_director_ir import render_coverage, render_shot_script  # noqa: E402
@@ -64,9 +65,9 @@ CASES: list[dict[str, Any]] = [
         "characters": ["PARTNER_A", "PARTNER_B"],
         "location": "model-making room",
         "facts": [
-            ("FACT-01", "repair_offer", "Partner A leaves a blank name card at the shared model as an invitation to continue."),
+            ("FACT-01", "counterpart_relation", "Partner A leaves a blank name card at the shared model as an invitation to continue."),
             ("FACT-02", "repair_declined", "Partner B returns the blank card without adding a name."),
-            ("FACT-03", "departure", "Partner B removes their tools and exits while Partner A remains at the model."),
+            ("FACT-03", "spatial_change", "Partner B removes their tools and exits while Partner A remains at the model."),
         ],
         "beats": [
             "Partner A aligns the blank card with the two occupied work positions.",
@@ -81,8 +82,10 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "invitation becomes departure",
             "subtext": "returning the untouched card is the answer",
         },
-        "signals": ["repair_declined", "departure"],
+        "signals": ["material_spatial_change", "counterpart_relation_required"],
         "subject_tags": ["partnership"],
+        "test_mode": "POSITIVE",
+        "changed_director_dimensions": ["COVERAGE", "BLOCKING", "EDIT"],
     },
     {
         "case_id": "ORIGINAL-PUBLIC-REVEAL",
@@ -179,7 +182,7 @@ CASES: list[dict[str, Any]] = [
         "facts": [
             ("FACT-01", "shared_object", "Both designers need the same unlit model to complete a joint review."),
             ("FACT-02", "distance_change", "They approach opposite sides of the model table and stop within arm's reach."),
-            ("FACT-03", "no_contact_boundary", "The table remains between them and neither person touches the other."),
+            ("FACT-03", "relation_endpoint", "The table remains between them and neither person touches the other."),
         ],
         "beats": [
             "Designer A switches off the room lights, leaving only the model base illuminated.",
@@ -194,8 +197,10 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "parallel work becomes a shared pause",
             "subtext": "the maintained gap carries the tension",
         },
-        "signals": ["distance_change", "no_contact_boundary"],
+        "signals": ["relation_distance_change", "continuous_present_time", "shared_endpoint_required"],
         "subject_tags": ["relationship_tension"],
+        "test_mode": "POSITIVE",
+        "changed_director_dimensions": ["COVERAGE", "BLOCKING", "PACING", "EDIT"],
     },
     {
         "case_id": "ORIGINAL-SOUND-SUSPENSE",
@@ -241,6 +246,126 @@ CASES: list[dict[str, Any]] = [
         },
         "signals": ["audible_information", "source_confirmation"],
         "subject_tags": ["offscreen_information"],
+    },
+    {
+        "case_id": "ORIGINAL-PERFORMANCE-OWNER-HOLD",
+        "title": "The Missing Safety Entry",
+        "scene_problem": "INTERROGATION",
+        "coverage_tags": [],
+        "characters": ["REVIEWER", "TECHNICIAN"],
+        "location": "plain equipment review room",
+        "facts": [
+            ("FACT-01", "relation_state", "The reviewer and technician are established on opposite sides of a plain table."),
+            ("FACT-02", "performance_progression", "The technician checks three blank log rows, stops at the missing entry, and places both hands flat before answering."),
+            ("FACT-03", "owner_endpoint", "The reviewer remains outside the critical frame until the technician finishes the visible sequence."),
+        ],
+        "beats": [
+            "A neutral shared frame establishes both participants and the plain log sheet.",
+            "One clean technician single holds the complete check-stop-hands-flat progression without a reaction cut.",
+            "Only after the hands settle does a short reviewer single confirm receipt.",
+        ],
+        "dramatic": {
+            "goal": "make one uninterrupted visible answer progression readable",
+            "objectives": ["identify the missing safety entry"],
+            "obstacle": "the technician must complete the visible review before the receiver responds",
+            "stakes": "the equipment cannot be released until the entry is resolved",
+            "tactic_change": "document checking becomes a direct answer",
+            "subtext": "none asserted",
+        },
+        "signals": ["relation_already_registered", "single_performance_progression"],
+        "subject_tags": ["equipment_review"],
+        "test_mode": "POSITIVE",
+        "changed_director_dimensions": ["COVERAGE", "PACING", "EDIT"],
+    },
+    {
+        "case_id": "ORIGINAL-PERFORMANCE-CONCURRENT-STATE",
+        "title": "The Live Pressure Check",
+        "scene_problem": "INTERROGATION",
+        "coverage_tags": [],
+        "characters": ["REVIEWER", "OPERATOR"],
+        "location": "plain control bench",
+        "facts": [
+            ("FACT-01", "relation_state", "The reviewer and operator are established beside a project-original pressure indicator."),
+            ("FACT-02", "performance_progression", "The operator gives a visible step-by-step account while checking the indicator."),
+            ("FACT-03", "simultaneous_state", "The indicator and the reviewer's safety acknowledgment must remain visible throughout the account."),
+        ],
+        "beats": [
+            "A shared frame establishes both participants and the project-original indicator.",
+            "The operator continues the account while the indicator changes and the reviewer marks each safe reading.",
+            "The shared work frame remains until the final mark is complete.",
+        ],
+        "dramatic": {
+            "goal": "preserve an account together with a simultaneous safety state",
+            "objectives": ["verify the pressure sequence"],
+            "obstacle": "the account and indicator must be read together",
+            "stakes": "the test cannot continue if a reading is missed",
+            "tactic_change": "verbal account becomes synchronized checking",
+            "subtext": "none asserted",
+        },
+        "signals": ["relation_already_registered", "single_performance_progression", "simultaneous_required_action"],
+        "subject_tags": ["equipment_review"],
+        "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
+        "changed_director_dimensions": [],
+    },
+    {
+        "case_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
+        "title": "The Empty Second Station",
+        "scene_problem": "RELATIONSHIP_FRACTURE",
+        "coverage_tags": [],
+        "characters": ["MAKER_A", "MAKER_B"],
+        "location": "plain assembly room",
+        "facts": [
+            ("FACT-01", "counterpart_relation", "Maker A leaves the room before Maker B moves from the shared bench."),
+            ("FACT-02", "spatial_change", "After the exit, Maker B crosses alone to a second station visible against the same fixed wall grid."),
+            ("FACT-03", "fixed_anchor", "The wall grid and empty shared bench make the solo destination unambiguous."),
+        ],
+        "beats": [
+            "A shared view shows Maker A leave the established bench and clear the room.",
+            "Maker B remains alone, then crosses to the second station against the fixed wall grid.",
+            "A single frame holds the solo endpoint without adding another two-person reset.",
+        ],
+        "dramatic": {
+            "goal": "show a solo occupancy change after the counterpart has left",
+            "objectives": ["move to the second station"],
+            "obstacle": "none beyond preserving the known room direction",
+            "stakes": "the next task begins at the second station",
+            "tactic_change": "shared occupancy becomes solo work",
+            "subtext": "none asserted",
+        },
+        "signals": ["material_spatial_change", "counterpart_relation_required", "counterpart_relation_not_required"],
+        "subject_tags": ["partnership"],
+        "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
+        "changed_director_dimensions": [],
+    },
+    {
+        "case_id": "ORIGINAL-PROXIMITY-ELLIPSIS",
+        "title": "The Three Calendar Checks",
+        "scene_problem": "ROMANTIC_PROXIMITY",
+        "coverage_tags": [],
+        "characters": ["PLANNER_A", "PLANNER_B"],
+        "location": "plain planning room",
+        "facts": [
+            ("FACT-01", "distance_change", "Three dated checks show the planners at progressively different fixed seats."),
+            ("FACT-02", "relation_endpoint", "Only the final wide must establish the terminal distance across the table."),
+            ("FACT-03", "time_ellipsis", "No continuous move between the dated checks belongs to the story facts."),
+        ],
+        "beats": [
+            "The first dated card precedes a shared near-seat planning view.",
+            "A second dated card precedes isolated task views from different seats.",
+            "The final dated card precedes one shared wide that proves the terminal distance.",
+        ],
+        "dramatic": {
+            "goal": "show a changed relation endpoint across time without inventing a continuous approach",
+            "objectives": ["compare three dated planning checks"],
+            "obstacle": "the intermediate physical transitions are not story facts",
+            "stakes": "only the terminal seating relation must be clear",
+            "tactic_change": "repeated task views become a final shared endpoint",
+            "subtext": "none asserted",
+        },
+        "signals": ["relation_distance_change", "continuous_present_time", "shared_endpoint_required", "elliptical_time_change"],
+        "subject_tags": ["relationship_tension"],
+        "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
+        "changed_director_dimensions": [],
     },
     {
         "case_id": "ORIGINAL-NO-APPLICABLE-RULE",
@@ -433,6 +558,37 @@ def build_ir(
     routing_result: dict[str, Any],
 ) -> dict[str, Any]:
     shots = [shot_for(spec, index) for index in range(len(spec["facts"]))]
+    selected_ids = [item["rule_id"] for item in routing_result["selected_rules"]]
+    if selected_ids:
+        affected_index = {
+            "ORIGINAL-PERFORMANCE-OWNER-HOLD": 1,
+            "ORIGINAL-RELATIONSHIP-FRACTURE": 2,
+            "ORIGINAL-PROXIMITY-TENSION": 1,
+        }[spec["case_id"]]
+        affected = shots[affected_index]
+        affected["evidence_rule_ids"] = selected_ids
+        affected["confidence"] = "MEDIUM"
+        if spec["case_id"] == "ORIGINAL-PERFORMANCE-OWNER-HOLD":
+            affected["duration_seconds"] = 12
+            affected["shot_type"] = "sustained project-original performance-owner single"
+            affected["framing"] = "clean single holding the complete visible progression"
+            affected["blocking"] = "Hold the technician alone through the check-stop-hands-flat progression; do not add a receiver cut before the hands settle."
+            affected["edit_in"] = "cut from the established two-person relation into the owner single"
+            affected["edit_out"] = "cut only after both hands reach the locked endpoint"
+        elif spec["case_id"] == "ORIGINAL-RELATIONSHIP-FRACTURE":
+            affected["duration_seconds"] = 8
+            affected["shot_type"] = "project-original shared relation reset"
+            affected["framing"] = "shared frame containing the mover, relation anchor, route, and exit endpoint"
+            affected["blocking"] = "Keep Partner A at the model while Partner B crosses from the shared position to the exit within the same readable relation frame."
+            affected["edit_in"] = "enter before the zone crossing begins"
+            affected["edit_out"] = "cut after the new two-person distance and exit endpoint read"
+        elif spec["case_id"] == "ORIGINAL-PROXIMITY-TENSION":
+            affected["duration_seconds"] = 8
+            affected["shot_type"] = "project-original continuous shared relation frame"
+            affected["framing"] = "shared frame containing both start zones, the approach path, and the no-contact endpoint"
+            affected["blocking"] = "Designer B approaches the fixed opposite side while Designer A remains the relation anchor; stop with the model between them and no contact."
+            affected["edit_in"] = "enter before the continuous distance change begins"
+            affected["edit_out"] = "hold until the shared no-contact endpoint is readable"
     duration = sum(shot["duration_seconds"] for shot in shots)
     return {
         "schema_version": "director-ir/0.2",
@@ -495,8 +651,8 @@ def case_validation(spec: dict[str, Any], routing_result: dict[str, Any], ir_rep
         "schema_version": "forward-test-validation/0.1",
         "test_case_id": spec["case_id"],
         "structural_status": "PASS" if ir_report["status"] == "PASS" else "FAIL",
-        "test_mode": "ZERO_ELIGIBLE_PROBE",
-        "positive_selection_claimed": False,
+        "test_mode": spec.get("test_mode", "NO_MATCH_PROBE"),
+        "positive_selection_claimed": spec.get("test_mode") == "POSITIVE",
         "routing_status": routing_result["status"],
         "routing_error_count": 0,
         "ir_status": ir_report["status"],
@@ -527,20 +683,48 @@ def human_review_text(spec: dict[str, Any]) -> str:
 
 def expected_files() -> dict[Path, str]:
     grammar = read_json(GRAMMAR_PATH)
+    promotion_review = read_json(PROMOTION_REVIEW_PATH)
+    positive_promotions = {
+        item["positive_forward_test_id"]: item for item in promotion_review["promotions"]
+    }
+    boundary_promotions = {
+        item["boundary_forward_test_id"]: item for item in promotion_review["promotions"]
+    }
     outputs: dict[Path, str] = {}
     index_cases: list[dict[str, Any]] = []
     for spec in CASES:
         case_id = spec["case_id"]
+        promotion = positive_promotions.get(case_id) or boundary_promotions.get(case_id)
+        test_mode = spec.get("test_mode", "NO_MATCH_PROBE")
+        rule_id = promotion["rule_id"] if promotion else None
+        candidate_rule_id = promotion["candidate_rule_id"] if promotion else None
+        family_id = promotion["family_id"] if promotion else None
         locked_script = build_locked_script(spec)
         routing_input = build_routing_input(spec)
         routing_result = route_scene(routing_input, grammar)
+        selected_ids = [item["rule_id"] for item in routing_result["selected_rules"]]
+        rejected_by_id = {
+            item["rule_id"]: item["rejection_reason_codes"]
+            for item in routing_result["rejected_rules"]
+        }
+        if test_mode == "POSITIVE" and selected_ids != [rule_id]:
+            raise ValueError(f"positive case {case_id} did not select exactly {rule_id}: {selected_ids}")
+        if test_mode == "BOUNDARY_OR_NON_APPLICABLE" and (
+            routing_result["status"] != "NO_APPLICABLE_RULE"
+            or "NOT_APPLICABLE_MATCH" not in rejected_by_id.get(rule_id, [])
+        ):
+            raise ValueError(f"boundary case {case_id} did not reject {rule_id} at its declared boundary")
+        if test_mode == "NO_MATCH_PROBE" and routing_result["status"] != "NO_APPLICABLE_RULE":
+            raise ValueError(f"no-match case {case_id} unexpectedly selected a rule")
         ir = build_ir(spec, routing_input, routing_result)
         ir_report = validate_ir(ir, grammar, locked_script)
         manifest = {
             "schema_version": "forward-test-result/0.1",
             "test_case_id": case_id,
-            "candidate_rule_id": None,
-            "canonical_rule_family": None,
+            "candidate_rule_id": candidate_rule_id,
+            "canonical_rule_family": family_id,
+            "rule_id": rule_id,
+            "test_mode": test_mode,
             "status": "HUMAN_REVIEW_PENDING",
         }
         validation = case_validation(spec, routing_result, ir_report)
@@ -559,25 +743,35 @@ def expected_files() -> dict[Path, str]:
             "package_path": f"examples/forward-tests/{case_id}",
             "scene_problem": spec["scene_problem"],
             "coverage_tags": spec["coverage_tags"],
-            "test_mode": "ZERO_ELIGIBLE_PROBE",
-            "positive_for_family_ids": [],
-            "boundary_for_family_ids": [],
-            "expected_routing_status": "NO_APPLICABLE_RULE",
-            "expected_selection_count": 0,
+            "test_mode": test_mode,
+            "positive_for_family_ids": [family_id] if test_mode == "POSITIVE" else [],
+            "boundary_for_family_ids": [family_id] if test_mode == "BOUNDARY_OR_NON_APPLICABLE" else [],
+            "positive_for_rule_ids": [rule_id] if test_mode == "POSITIVE" else [],
+            "boundary_for_rule_ids": [rule_id] if test_mode == "BOUNDARY_OR_NON_APPLICABLE" else [],
+            "expected_routing_status": routing_result["status"],
+            "expected_selection_count": len(selected_ids),
+            "expected_selected_rule_ids": selected_ids,
+            "expected_rejected_rule_id": rule_id if test_mode == "BOUNDARY_OR_NON_APPLICABLE" else None,
+            "expected_rejection_reason_codes": (
+                ["NOT_APPLICABLE_MATCH"] if test_mode == "BOUNDARY_OR_NON_APPLICABLE" else []
+            ),
+            "changed_director_dimensions": spec.get("changed_director_dimensions", []),
             "human_review_status": "HUMAN_REVIEW_PENDING",
         })
+    eligible_families = sorted({item["family_id"] for item in promotion_review["promotions"]})
     index = {
         "schema_version": "forward-test-index/0.1",
-        "status": "NO_ELIGIBLE_FAMILIES",
+        "status": "RULE_COVERAGE_COMPLETE",
         "grammar_path": "research/grammar/director_grammar_v0.2.json",
         "candidate_index_path": "research/grammar/candidate_rule_index.json",
         "support_matrix_path": "research/grammar/cross_work_support_matrix.json",
-        "promotion_ready_family_count": 0,
-        "promotion_ready_family_ids": [],
-        "required_positive_boundary_pairs": 0,
-        "completed_positive_cases": 0,
-        "completed_boundary_cases": 0,
+        "promotion_ready_family_count": len(eligible_families),
+        "promotion_ready_family_ids": eligible_families,
+        "required_positive_boundary_pairs": len(promotion_review["promotions"]),
+        "completed_positive_cases": len(promotion_review["promotions"]),
+        "completed_boundary_cases": len(promotion_review["promotions"]),
         "missing_family_ids": [],
+        "missing_rule_ids": [],
         "required_scene_problem_coverage": [
             "TWO_PARTY_POWER_TRANSFER",
             "MULTI_PARTICIPANT_PUBLIC_REVELATION",

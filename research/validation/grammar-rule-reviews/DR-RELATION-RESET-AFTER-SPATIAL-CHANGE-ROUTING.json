@@ -1,0 +1,31 @@
+{
+  "candidate_required_story_facts": [
+    "A participant changes level, zone, or distance enough to invalidate the prior relation frame.",
+    "The changed relation to a present counterpart remains story-critical."
+  ],
+  "candidate_trigger": "A body-level, zone, or distance change invalidates the prior relation geometry while the counterpart relation remains a locked visible fact.",
+  "promotion_source_candidate_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
+  "review_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE-ROUTING-REVIEW",
+  "routing": {
+    "audit_subject_tags": [],
+    "conflicts_with": [],
+    "not_applicable_if_any": [
+      "counterpart_relation_not_required"
+    ],
+    "required_fact_types": [
+      "spatial_change",
+      "counterpart_relation"
+    ],
+    "scene_problems": [
+      "RELATIONSHIP_FRACTURE"
+    ],
+    "trigger_all_of": [
+      "material_spatial_change",
+      "counterpart_relation_required"
+    ],
+    "trigger_any_of": []
+  },
+  "rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+  "schema_version": "director-grammar-routing-review/0.1",
+  "status": "ROOT_VIDEO_VERIFIED"
+}

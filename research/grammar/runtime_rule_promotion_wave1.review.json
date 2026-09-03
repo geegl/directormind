@@ -1,0 +1,557 @@
+{
+  "schema_version": "runtime-rule-promotion-review/0.1",
+  "status": "ROOT_VIDEO_VERIFIED",
+  "audio_review_status": "NOT_REQUIRED_FOR_VISUAL_RULES",
+  "evidence_reviews": [
+    {
+      "review_id": "WAVE1-PICTURE-MRR-001",
+      "evidence_id": "MRR-S04E07-ACT-FOUR-VISUAL-001",
+      "method_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-METHOD-WAVE1-PICTURE-REVIEW",
+      "text_anchor": {
+        "anchor_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-TA-WAVE1-001",
+        "shot_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-S197",
+        "source_type": "SUBTITLE",
+        "paraphrase": "One participant directly asks whether the other remembers a prior instruction.",
+        "speaker_status": "UNKNOWN",
+        "start": {"timecode": "00:47:26.800", "seconds": 2846.8},
+        "end": {"timecode": "00:47:29.000", "seconds": 2849.0}
+      },
+      "shot_ids": [
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S001",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S194",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S197",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S199",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S201"
+      ],
+      "observations": [
+        "The first and last complete Shots visibly delimit the natural scene interval used for applicability review.",
+        "The cited complete Shots hold one visible appearance in a clean single for 67.401, 42.042, 20.270, and 31.281 seconds.",
+        "Start, midpoint, and end picture review confirms visible posture and facial-state progression inside the held singles.",
+        "The cited interval moves from relation coverage to longer isolated ownership without requiring a simultaneous task state in frame."
+      ],
+      "unknowns": [
+        "Other dialogue meaning, emotional cause, cross-cut identity, lens metadata, and all semantic audio remain unknown."
+      ],
+      "scene_problem": {
+        "primary": "INTERROGATION",
+        "secondary": [],
+        "status": "INFERRED",
+        "source_refs": [
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S194",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S197",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S199",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-TA-WAVE1-001"
+        ],
+        "notes": "The canonical problem is inferred from repeated question-and-response staging plus one short, paraphrased visible-text anchor; no dialogue wording is transferred."
+      },
+      "roles": [
+        {
+          "shot_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-S194",
+          "appearance_id": "APPEARANCE-S194",
+          "functional_role": "performance_owner",
+          "source_refs": ["MRR-S04E07-ACT-FOUR-VISUAL-001-S194"]
+        },
+        {
+          "shot_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-S197",
+          "appearance_id": "APPEARANCE-S197",
+          "functional_role": "performance_owner",
+          "source_refs": ["MRR-S04E07-ACT-FOUR-VISUAL-001-S197"]
+        }
+      ]
+    },
+    {
+      "review_id": "WAVE1-PICTURE-B99-001",
+      "evidence_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001",
+      "method_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-METHOD-WAVE1-PICTURE-REVIEW",
+      "text_anchor": null,
+      "shot_ids": ["B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S016"],
+      "observations": [
+        "Start, midpoint, and end frames confirm a 17.125-second clean single that retains one visible performance progression before the coverage changes."
+      ],
+      "unknowns": ["Dialogue meaning, emotional cause, lens metadata, and all semantic audio remain unknown."],
+      "scene_problem": null,
+      "roles": []
+    },
+    {
+      "review_id": "WAVE1-PICTURE-BCS-001",
+      "evidence_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
+      "method_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-METHOD-WAVE1-PICTURE-REVIEW",
+      "text_anchor": null,
+      "shot_ids": [
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S097",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S098"
+      ],
+      "observations": [
+        "Start, midpoint, and end frames confirm a 71.917-second held single followed by a return to relation coverage."
+      ],
+      "unknowns": ["Dialogue meaning, emotional cause, cross-cut identity, lens metadata, and all semantic audio remain unknown."],
+      "scene_problem": null,
+      "roles": []
+    },
+    {
+      "review_id": "WAVE1-PICTURE-DWP-001",
+      "evidence_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
+      "method_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-METHOD-WAVE1-PICTURE-REVIEW",
+      "text_anchor": null,
+      "shot_ids": [
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S012",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S013",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S015",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S016",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S017",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S018",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S019"
+      ],
+      "observations": [
+        "The cited sequence repeatedly preserves a principal visible performer together with concurrent material and other-body task state.",
+        "Short receiver checks are interleaved instead of replacing the shared work frame with one uninterrupted clean single."
+      ],
+      "unknowns": ["Dialogue meaning, emotional cause, cross-cut identity, lens metadata, and all semantic audio remain unknown."],
+      "scene_problem": null,
+      "roles": []
+    },
+    {
+      "review_id": "WAVE1-PICTURE-MS-001",
+      "evidence_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+      "method_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-WAVE1-PICTURE-REVIEW",
+      "text_anchor": {
+        "anchor_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-TA-WAVE1-001",
+        "shot_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S071",
+        "source_type": "SUBTITLE",
+        "paraphrase": "The exchange turns into a direct personal comparison used as an accusation between the two participants.",
+        "speaker_status": "UNKNOWN",
+        "start": {"timecode": "01:38:29.800", "seconds": 5909.8},
+        "end": {"timecode": "01:38:31.500", "seconds": 5911.5}
+      },
+      "shot_ids": [
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S001",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S058",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S061",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S065",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S071",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S082",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S083",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S084",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085"
+      ],
+      "observations": [
+        "The first and last complete Shots visibly delimit the natural scene interval used for applicability review.",
+        "The cited complete Shots visibly carry seated-to-standing, room-zone crossing, and level changes in shared or continuously reframed relation coverage.",
+        "The final cited Shots preserve both participants and the changed level-and-distance endpoint before the interval ends."
+      ],
+      "unknowns": ["Other dialogue meaning, emotional cause, exact distance, lens metadata, and all semantic audio remain unknown."],
+      "scene_problem": {
+        "primary": "RELATIONSHIP_FRACTURE",
+        "secondary": [],
+        "status": "INFERRED",
+        "source_refs": [
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-TA-WAVE1-001"
+        ],
+        "notes": "The canonical problem is inferred from repeated visible relation resets plus one short, paraphrased visible-text anchor showing direct personal conflict; no dialogue wording is transferred."
+      },
+      "roles": [
+        {
+          "shot_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
+          "appearance_id": "P-B",
+          "functional_role": "spatial_mover",
+          "source_refs": ["MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059"]
+        },
+        {
+          "shot_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
+          "appearance_id": "P-A",
+          "functional_role": "relation_anchor",
+          "source_refs": ["MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059"]
+        }
+      ]
+    },
+    {
+      "review_id": "WAVE1-PICTURE-TLOU-001",
+      "evidence_id": "TLOU-BEDROOM-LOCAL-001",
+      "method_id": "TLOU-BEDROOM-LOCAL-001-METHOD-WAVE1-PICTURE-REVIEW",
+      "text_anchor": null,
+      "shot_ids": [
+        "TLOU-BEDROOM-LOCAL-001-S015",
+        "TLOU-BEDROOM-LOCAL-001-S016",
+        "TLOU-BEDROOM-LOCAL-001-S017",
+        "TLOU-BEDROOM-LOCAL-001-S018",
+        "TLOU-BEDROOM-LOCAL-001-S019"
+      ],
+      "observations": [
+        "The shared seated-to-standing transition is followed by standing singles and a later shared geometry reset."
+      ],
+      "unknowns": ["Dialogue meaning, emotional cause, cross-cut identity, lens metadata, and all semantic audio remain unknown."],
+      "scene_problem": null,
+      "roles": []
+    },
+    {
+      "review_id": "WAVE1-PICTURE-TSN-001",
+      "evidence_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
+      "method_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-METHOD-WAVE1-PICTURE-REVIEW",
+      "text_anchor": null,
+      "shot_ids": [
+        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S090",
+        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091"
+      ],
+      "observations": [
+        "The first departure is shown in shared coverage; the second occupancy change is isolated only after the counterpart is absent and the room anchor remains readable."
+      ],
+      "unknowns": ["Dialogue meaning, emotional cause, cross-cut identity, lens metadata, and all semantic audio remain unknown."],
+      "scene_problem": null,
+      "roles": []
+    },
+    {
+      "review_id": "WAVE1-PICTURE-BRG-001",
+      "evidence_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+      "method_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-WAVE1-PICTURE-REVIEW",
+      "text_anchor": {
+        "anchor_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-TA-WAVE1-001",
+        "shot_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S017",
+        "source_type": "SUBTITLE",
+        "paraphrase": "The exchange explicitly says a prior action threatens whether a proposed marriage can continue.",
+        "speaker_status": "UNKNOWN",
+        "start": {"timecode": "00:43:03.336", "seconds": 2583.336},
+        "end": {"timecode": "00:43:05.338", "seconds": 2585.338}
+      },
+      "shot_ids": [
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S012",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S013",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S017",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S026"
+      ],
+      "observations": [
+        "The first and last complete Shots visibly delimit the natural scene interval used for applicability review.",
+        "The cited natural scene first registers room and body separation, then shows one appearance advancing in shared relation coverage.",
+        "The transition resolves into a tighter shared profile and holds the changed proximity endpoint."
+      ],
+      "unknowns": ["Relationship motive, consent, exact contact, cross-cut identity, lens metadata, and all semantic audio remain unknown."],
+      "scene_problem": {
+        "primary": "ROMANTIC_PROXIMITY",
+        "secondary": [],
+        "status": "INFERRED",
+        "source_refs": [
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-TA-WAVE1-001"
+        ],
+        "notes": "The canonical problem is inferred from the continuous visible distance change, held endpoint, and one short paraphrased visible-text anchor establishing relationship stakes; motive, consent, and contact are not asserted."
+      },
+      "roles": [
+        {
+          "shot_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+          "appearance_id": "P-B",
+          "functional_role": "proximity_mover",
+          "source_refs": ["BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024"]
+        },
+        {
+          "shot_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+          "appearance_id": "P-A",
+          "functional_role": "relation_anchor",
+          "source_refs": ["BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024"]
+        }
+      ]
+    },
+    {
+      "review_id": "WAVE1-PICTURE-CK-001",
+      "evidence_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+      "method_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-METHOD-WAVE1-PICTURE-REVIEW",
+      "text_anchor": null,
+      "shot_ids": [
+        "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S001",
+        "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S002",
+        "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026",
+        "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027"
+      ],
+      "observations": [
+        "Early and late edit units show different shared-distance endpoints separated by many intervening edit units rather than a continuous physical transition.",
+        "The late wide reveals terminal geometry without showing a continuous approach path."
+      ],
+      "unknowns": ["Exact elapsed story time, dialogue meaning, emotional cause, lens metadata, and all semantic audio remain unknown."],
+      "scene_problem": null,
+      "roles": []
+    }
+  ],
+  "promotions": [
+    {
+      "rule_id": "DR-PERFORMANCE-OWNER-HOLD",
+      "name": "Hold the principal visible performance after relation registration",
+      "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C04-PROGRESSIVE-RELATION-REMOVAL-TO-HELD-SINGLES",
+      "family_id": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
+      "scene_problem": "INTERROGATION",
+      "functional_roles": [
+        {
+          "shot_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-S194",
+          "appearance_id": "APPEARANCE-S194",
+          "functional_role": "performance_owner",
+          "source_refs": [
+            "MRR-S04E07-ACT-FOUR-VISUAL-001-S194"
+          ]
+        },
+        {
+          "shot_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-S197",
+          "appearance_id": "APPEARANCE-S197",
+          "functional_role": "performance_owner",
+          "source_refs": ["MRR-S04E07-ACT-FOUR-VISUAL-001-S197"]
+        }
+      ],
+      "trigger": "After the relation is registered, one uninterrupted visible performance progression is the principal locked fact and no concurrent action state must remain visible.",
+      "routing": {
+        "trigger_all_of": ["relation_already_registered", "single_performance_progression"],
+        "trigger_any_of": [],
+        "required_fact_types": ["relation_state", "performance_progression"],
+        "not_applicable_if_any": ["simultaneous_required_action"]
+      },
+      "required_story_facts": [
+        "The participant relation has already been visibly established.",
+        "One project-original performance progression must remain continuously readable.",
+        "No simultaneous action, object, safety, or receiver state is locked for the owner interval."
+      ],
+      "applicable_when": ["One visible performance progression, rather than a concurrent task state, owns the interval."],
+      "not_applicable_when": ["A simultaneous action, object, safety, or receiver state must remain visible."],
+      "director_decision": "Reduce relation anchors progressively, give the performance owner a clean sustained single, and postpone receiver coverage until the owner interval completes.",
+      "coverage": "Register the relation first, then use one clean owner single and a later receiver or relation check.",
+      "blocking": "Keep the performance owner readable without inventing business; retain other participants off the critical visual axis until the owner interval completes.",
+      "pacing": "Let the owner interval run without routine reaction cutting; shorten only when a locked concurrent state appears.",
+      "edit_logic": "Enter after relation registration and cut away after the principal visible progression reaches its locked endpoint.",
+      "continuity": "Preserve entry posture, gaze direction, screen side, and the visible endpoint used by the delayed receiver cut.",
+      "ai_risk": {
+        "camera": {"level": "MEDIUM", "reasons": ["A long clean single can drift in framing or screen direction."]},
+        "performance": {"level": "HIGH", "reasons": ["A sustained subtle progression can flatten, loop, or add unsupported business."]},
+        "continuity": {"level": "MEDIUM", "reasons": ["The delayed receiver cut must match the owner endpoint without inventing overlap."]}
+      },
+      "failure_modes": [
+        "Routine reaction cutting interrupts the locked progression.",
+        "A clean single hides a simultaneous state that the story requires the audience to track."
+      ],
+      "fallback": {
+        "camera": "Use two shorter project-original locked singles on the same screen side, separated only at a verified performance endpoint.",
+        "performance": "Split the progression into two explicit project-original posture or gaze states instead of asking for one continuous subtle arc.",
+        "continuity": "Return to a neutral project-original two-person relation frame before the delayed receiver shot.",
+        "project_original_only": true
+      },
+      "confidence": {"within_source": "HIGH", "transfer": "MEDIUM", "execution": "MEDIUM"},
+      "supporting_relations": [
+        {
+          "relation_id": "WAVE1-REL-PERFORMANCE-B99",
+          "source_candidate_rule_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-MICRO-BRACKET-HOLD-002",
+          "work_id": "BROOKLYN-NINE-NINE-S05E14",
+          "evidence_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001",
+          "source_refs": ["B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S016"],
+          "notes": "The same relation-registered, single-performance trigger produces a sustained clean owner single."
+        },
+        {
+          "relation_id": "WAVE1-REL-PERFORMANCE-BCS",
+          "source_candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C03-SUSTAIN-CONTESTED-PERSON-SCREEN-OWNERSHIP",
+          "work_id": "BETTER-CALL-SAUL-S03E05",
+          "evidence_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
+          "source_refs": [
+            "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S097",
+            "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S098"
+          ],
+          "notes": "A long clean owner single is followed by relation coverage only after the visible owner interval."
+        }
+      ],
+      "counterexample": {
+        "relation_id": "WAVE1-CTR-PERFORMANCE-DWP",
+        "source_candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C02-SUSTAIN-CORRECTOR-IN-SHARED-WORK-FRAME-WITH-SELECTIVE-RECEIVER-CHECKS",
+        "work_id": "THE-DEVIL-WEARS-PRADA-2006",
+        "evidence_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
+        "source_refs": [
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S016",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S019"
+        ],
+        "notes": "The same principal-performance trigger includes required concurrent material and other-body task state, so shared work coverage and selective checks replace the clean owner hold."
+      },
+      "positive_forward_test_id": "ORIGINAL-PERFORMANCE-OWNER-HOLD",
+      "boundary_forward_test_id": "ORIGINAL-PERFORMANCE-CONCURRENT-STATE",
+      "selection_rank": 1,
+      "audio_dependency": false,
+      "runtime_authorized": true,
+      "surface_copy_allowed": false
+    },
+    {
+      "rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+      "name": "Re-establish the relation after a material spatial change",
+      "candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
+      "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+      "scene_problem": "RELATIONSHIP_FRACTURE",
+      "functional_roles": [
+        {
+          "shot_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
+          "appearance_id": "P-B",
+          "functional_role": "spatial_mover",
+          "source_refs": ["MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059"]
+        },
+        {
+          "shot_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
+          "appearance_id": "P-A",
+          "functional_role": "relation_anchor",
+          "source_refs": ["MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059"]
+        }
+      ],
+      "trigger": "A body-level, zone, or distance change invalidates the prior relation geometry while the counterpart relation remains a locked visible fact.",
+      "routing": {
+        "trigger_all_of": ["material_spatial_change", "counterpart_relation_required"],
+        "trigger_any_of": [],
+        "required_fact_types": ["spatial_change", "counterpart_relation"],
+        "not_applicable_if_any": ["counterpart_relation_not_required"]
+      },
+      "required_story_facts": [
+        "A participant changes level, zone, or distance enough to invalidate the prior relation frame.",
+        "The changed relation to a present counterpart remains story-critical."
+      ],
+      "applicable_when": ["The spatial change and its two-person endpoint both occur in continuous present time."],
+      "not_applicable_when": ["The counterpart is already absent and the remaining movement is readable against a fixed room anchor."],
+      "director_decision": "Show the spatial change or its endpoint in shared or continuously reframed relation coverage before returning to isolated coverage.",
+      "coverage": "Use a shared transition or relation-reset frame that contains the mover, counterpart, and changed endpoint.",
+      "blocking": "Let the mover cross the project-original zone while the relation anchor remains readable; do not hide the new relation behind an isolated insert.",
+      "pacing": "Hold the reset until the changed level, zone, or distance reads, then resume singles.",
+      "edit_logic": "Place the return to isolated coverage after the relation endpoint is visible, not during the unregistered spatial change.",
+      "continuity": "Preserve screen side, route direction, source zone, destination zone, and the counterpart's relation anchor.",
+      "ai_risk": {
+        "camera": {"level": "HIGH", "reasons": ["Continuous reframing across a zone change can distort scale or axis."]},
+        "performance": {"level": "MEDIUM", "reasons": ["Body-level and route endpoints can be underspecified or mistimed."]},
+        "continuity": {"level": "HIGH", "reasons": ["The mover, counterpart, and destination zone can drift across coverage. "]}
+      },
+      "failure_modes": [
+        "Returning to singles before the changed relation is visible.",
+        "Adding a relation reset after the counterpart has left and the fixed room anchor already explains the movement."
+      ],
+      "fallback": {
+        "camera": "Use a locked project-original wide that contains source and destination zones instead of a moving reset.",
+        "performance": "Split the movement into a clear start pose and destination pose with one simple crossing action.",
+        "continuity": "Insert a neutral project-original room map showing both screen sides and the destination zone before resuming singles.",
+        "project_original_only": true
+      },
+      "confidence": {"within_source": "HIGH", "transfer": "MEDIUM", "execution": "MEDIUM"},
+      "supporting_relations": [
+        {
+          "relation_id": "WAVE1-REL-SPATIAL-TLOU",
+          "source_candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C03",
+          "work_id": "THE-LAST-OF-US-S01E06",
+          "evidence_id": "TLOU-BEDROOM-LOCAL-001",
+          "source_refs": [
+            "TLOU-BEDROOM-LOCAL-001-S015",
+            "TLOU-BEDROOM-LOCAL-001-S019"
+          ],
+          "notes": "A shared seated-to-standing change is followed by standing coverage and a renewed shared relation."
+        }
+      ],
+      "counterexample": {
+        "relation_id": "WAVE1-CTR-SPATIAL-TSN",
+        "source_candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE",
+        "work_id": "THE-SOCIAL-NETWORK-2010",
+        "evidence_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
+        "source_refs": [
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S090",
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091"
+        ],
+        "notes": "The second occupancy change occurs after the counterpart is absent, so a fixed room anchor makes another relation reset unnecessary."
+      },
+      "positive_forward_test_id": "ORIGINAL-RELATIONSHIP-FRACTURE",
+      "boundary_forward_test_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
+      "selection_rank": 2,
+      "audio_dependency": false,
+      "runtime_authorized": true,
+      "surface_copy_allowed": false
+    },
+    {
+      "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+      "name": "Show a continuous relation change and hold its shared endpoint",
+      "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C02-DELAY-TIGHT-SHARED-FRAME-UNTIL-DISTANCE-CHANGES",
+      "family_id": "PROXIMITY-AND-RELATION-GEOMETRY",
+      "scene_problem": "ROMANTIC_PROXIMITY",
+      "functional_roles": [
+        {
+          "shot_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+          "appearance_id": "P-B",
+          "functional_role": "proximity_mover",
+          "source_refs": ["BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024"]
+        },
+        {
+          "shot_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+          "appearance_id": "P-A",
+          "functional_role": "relation_anchor",
+          "source_refs": ["BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024"]
+        }
+      ],
+      "trigger": "A relationship-relevant distance or level change happens in continuous present time and both its path and shared endpoint are locked visible facts.",
+      "routing": {
+        "trigger_all_of": ["relation_distance_change", "continuous_present_time", "shared_endpoint_required"],
+        "trigger_any_of": [],
+        "required_fact_types": ["distance_change", "relation_endpoint"],
+        "not_applicable_if_any": ["elliptical_time_change"]
+      },
+      "required_story_facts": [
+        "The project-original relation distance or body level changes in continuous present time.",
+        "The transition path and two-person endpoint must both be visible.",
+        "Contact is not inferred unless separately locked."
+      ],
+      "applicable_when": ["The continuous path, not merely the terminal spacing, carries required relation information."],
+      "not_applicable_when": ["The distance change occurs across time ellipsis or only the terminal geometry is story-critical."],
+      "director_decision": "Register the initial zones, show the change in shared or continuous relation coverage, and hold the shared endpoint before isolating faces.",
+      "coverage": "Begin with readable two-person geometry, carry the approach or level change in shared coverage, then hold the endpoint.",
+      "blocking": "Use a project-original route with a fixed relation anchor and a visible stop; do not add contact or surface imitation.",
+      "pacing": "Delay tight isolated coverage until the continuous distance change and endpoint have both registered.",
+      "edit_logic": "Avoid cutting over the critical relation transition; cut after the endpoint reads or use one continuous shared shot.",
+      "continuity": "Preserve axis, start distance, route direction, end distance, level, and the no-contact boundary when locked.",
+      "ai_risk": {
+        "camera": {"level": "HIGH", "reasons": ["A shared approach can produce scale, axis, or collision drift."]},
+        "performance": {"level": "MEDIUM", "reasons": ["Timing the stop and mutual awareness without added contact is delicate."]},
+        "continuity": {"level": "HIGH", "reasons": ["Start and end distances, body levels, and no-contact state must remain consistent."]}
+      },
+      "failure_modes": [
+        "Tight coverage hides the relation-change path.",
+        "A continuous approach is fabricated for an elliptical change.",
+        "Unspecified contact is added at the endpoint."
+      ],
+      "fallback": {
+        "camera": "Use a locked project-original shared wide with marked start and end positions instead of a moving camera.",
+        "performance": "Use one simple approach and a clear stop, with no contact unless the project-original facts require it.",
+        "continuity": "Render separate project-original start and endpoint plates and cut only after each geometry is readable.",
+        "project_original_only": true
+      },
+      "confidence": {"within_source": "HIGH", "transfer": "MEDIUM", "execution": "MEDIUM"},
+      "supporting_relations": [
+        {
+          "relation_id": "WAVE1-REL-PROXIMITY-MS",
+          "source_candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C04-LATE-HOLDS-NEED-VISIBLE-LEVEL-AND-PROXIMITY-ENDPOINTS",
+          "work_id": "MARRIAGE-STORY-2019",
+          "evidence_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+          "source_refs": [
+            "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S082",
+            "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S083",
+            "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085"
+          ],
+          "notes": "A visible level change resolves into shared two-person proximity coverage and a held endpoint."
+        }
+      ],
+      "counterexample": {
+        "relation_id": "WAVE1-CTR-PROXIMITY-CK",
+        "source_candidate_rule_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C03-WITHDRAW-SHARED-FRAME-DELAY-DISTANCE-REVEAL",
+        "work_id": "CITIZEN-KANE-1941",
+        "evidence_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+        "source_refs": [
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S001",
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026",
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027"
+        ],
+        "notes": "The relation distance changes across editorial time ellipsis, so only the terminal shared geometry should be shown; a continuous approach would invent an event."
+      },
+      "positive_forward_test_id": "ORIGINAL-PROXIMITY-TENSION",
+      "boundary_forward_test_id": "ORIGINAL-PROXIMITY-ELLIPSIS",
+      "selection_rank": 3,
+      "audio_dependency": false,
+      "runtime_authorized": true,
+      "surface_copy_allowed": false
+    }
+  ]
+}

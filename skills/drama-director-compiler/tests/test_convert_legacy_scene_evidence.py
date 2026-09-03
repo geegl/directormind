@@ -142,12 +142,25 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
             self.assertGreaterEqual(len(evidence["validation_warnings"]), 2)
             self.assertTrue(any("legacy_migration" in warning for warning in evidence["validation_warnings"]))
             self.assertTrue(any("frame and PTS" in warning for warning in evidence["validation_warnings"]))
-            self.assertEqual(evidence["text_anchor_status"], "TEXT_ANCHOR_NOT_USED")
-            self.assertEqual(evidence["text_anchors"], [])
-            self.assertEqual(evidence["scene_problem"]["primary"], "LEGACY_SCENE_PROBLEM")
-            self.assertEqual(evidence["scene_problem"]["status"], "UNKNOWN")
-            self.assertEqual(evidence["scene_problem"]["source_refs"], [])
-            self.assertIn(SCENE_META[source.stem].primary_problem, evidence["scene_problem"]["notes"])
+            if evidence["evidence_id"] in {
+                "MRR-S04E07-ACT-FOUR-VISUAL-001",
+                "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+                "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+            }:
+                self.assertEqual(evidence["text_anchor_status"], "TEXT_ANCHOR_VERIFIED")
+                self.assertEqual(len(evidence["text_anchors"]), 1)
+                self.assertTrue(any(method["method_type"] == "TEXT_ANCHOR_REVIEW" for method in evidence["methods"]))
+                self.assertEqual(evidence["scene_problem"]["primary"], SCENE_META[source.stem].primary_problem)
+                self.assertEqual(evidence["scene_problem"]["status"], "INFERRED")
+                self.assertTrue(evidence["scene_problem"]["source_refs"])
+                self.assertTrue(any(shot["abstract_role_labels"] for shot in evidence["shots"]))
+            else:
+                self.assertEqual(evidence["text_anchor_status"], "TEXT_ANCHOR_NOT_USED")
+                self.assertEqual(evidence["text_anchors"], [])
+                self.assertEqual(evidence["scene_problem"]["primary"], "LEGACY_SCENE_PROBLEM")
+                self.assertEqual(evidence["scene_problem"]["status"], "UNKNOWN")
+                self.assertEqual(evidence["scene_problem"]["source_refs"], [])
+                self.assertIn(SCENE_META[source.stem].primary_problem, evidence["scene_problem"]["notes"])
             for shot in evidence["shots"]:
                 self.assertTrue(shot["shot_id"].startswith(f"{evidence['evidence_id']}-S"))
                 for axis in ("camera", "performance", "continuity"):
@@ -171,6 +184,7 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
                 self.assertEqual(rule["failure_modes"], ["Applying this migrated lineage row as an operational rule before human review."])
                 self.assertEqual(rule["audio_logic"]["status"], "UNKNOWN")
                 self.assertEqual(rule["audio_logic"]["source_refs"], [])
+                self.assertIsInstance(rule["audio_dependency"], bool)
                 operational_signatures.add(tuple(rule[key] for key in PENDING_OPERATIONAL_FIELDS))
                 operational_text = " ".join(rule[key] for key in PENDING_OPERATIONAL_FIELDS).lower()
                 for term in evidence["rights_boundary"]["reference_surface_terms"]:

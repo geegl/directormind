@@ -1,23 +1,5 @@
 {
-  "schema_version": "director-grammar/0.2",
-  "grammar_id": "DIRECTORMIND-RUNTIME-GRAMMAR-V0-2",
-  "title": "DirectorMind Runtime Grammar v0.2",
-  "status": "VALIDATED",
   "candidate_index_path": "research/grammar/candidate_rule_index.json",
-  "support_matrix_path": "research/grammar/cross_work_support_matrix.json",
-  "selection_policy": {
-    "eligible_promotion_statuses": [
-      "CROSS_WORK_SUPPORTED",
-      "GENERAL_DEFAULT"
-    ],
-    "preferred_minimum": 2,
-    "maximum": 4,
-    "allow_fewer_when_insufficient": true,
-    "no_match_status": "NO_APPLICABLE_RULE",
-    "unreviewed_output_status": "HUMAN_REVIEW_PENDING",
-    "subject_similarity_is_sufficient": false,
-    "constraints_count_as_selected_rules": false
-  },
   "conflict_priority": [
     "LOCKED_STORY_FACTS",
     "REVEAL_AND_INFORMATION_BOUNDARIES",
@@ -29,119 +11,800 @@
     "VISUAL_STYLE",
     "PROVIDER_LIMITATIONS"
   ],
+  "grammar_id": "DIRECTORMIND-RUNTIME-GRAMMAR-V0-2",
   "project_constraints": [
     {
+      "applies_when": "Every compilation from an approved locked source.",
+      "authority_refs": [
+        "skills/drama-director-compiler/references/director-ir-contract.md"
+      ],
+      "constraint_code": "LOCKED_SOURCE_IS_STORY_AUTHORITY",
       "constraint_id": "PC-LOCKED-STORY-AUTHORITY",
       "name": "Locked story remains authoritative",
-      "constraint_code": "LOCKED_SOURCE_IS_STORY_AUTHORITY",
-      "applies_when": "Every compilation from an approved locked source.",
-      "requirements": ["Preserve approved facts, causal order, reveals, relationship state and ending hooks."],
-      "prohibitions": ["Do not add, delete, reorder or reveal a story fact early."],
-      "violation_action": "VALIDATION_ERROR",
-      "authority_refs": ["skills/drama-director-compiler/references/director-ir-contract.md"]
+      "prohibitions": [
+        "Do not add, delete, reorder or reveal a story fact early."
+      ],
+      "requirements": [
+        "Preserve approved facts, causal order, reveals, relationship state and ending hooks."
+      ],
+      "violation_action": "VALIDATION_ERROR"
     },
     {
+      "applies_when": "Every Director IR compilation.",
+      "authority_refs": [
+        "skills/drama-director-compiler/references/director-ir-contract.md"
+      ],
+      "constraint_code": "SOURCE_COVERAGE_COMPLETE",
       "constraint_id": "PC-SOURCE-COVERAGE",
       "name": "Every source beat remains traceable",
-      "constraint_code": "SOURCE_COVERAGE_COMPLETE",
-      "applies_when": "Every Director IR compilation.",
-      "requirements": ["Map every approved source beat to at least one Director IR shot."],
-      "prohibitions": ["Do not silently omit an approved source beat."],
-      "violation_action": "VALIDATION_ERROR",
-      "authority_refs": ["skills/drama-director-compiler/references/director-ir-contract.md"]
+      "prohibitions": [
+        "Do not silently omit an approved source beat."
+      ],
+      "requirements": [
+        "Map every approved source beat to at least one Director IR shot."
+      ],
+      "violation_action": "VALIDATION_ERROR"
     },
     {
+      "applies_when": "Approved dialogue or visible text is present.",
+      "authority_refs": [
+        "skills/drama-director-compiler/references/director-ir-contract.md"
+      ],
+      "constraint_code": "DIALOGUE_AND_VISIBLE_TEXT_VERBATIM",
       "constraint_id": "PC-DIALOGUE-TEXT-LOCK",
       "name": "Approved words remain unchanged",
-      "constraint_code": "DIALOGUE_AND_VISIBLE_TEXT_VERBATIM",
-      "applies_when": "Approved dialogue or visible text is present.",
-      "requirements": ["Preserve approved dialogue and visible text verbatim."],
-      "prohibitions": ["Do not rewrite approved words without separate authorization."],
-      "violation_action": "VALIDATION_ERROR",
-      "authority_refs": ["skills/drama-director-compiler/references/director-ir-contract.md"]
+      "prohibitions": [
+        "Do not rewrite approved words without separate authorization."
+      ],
+      "requirements": [
+        "Preserve approved dialogue and visible text verbatim."
+      ],
+      "violation_action": "VALIDATION_ERROR"
     },
     {
+      "applies_when": "Every Director IR compilation.",
+      "authority_refs": [
+        "skills/drama-director-compiler/SKILL.md"
+      ],
+      "constraint_code": "MODEL_INDEPENDENT_IR_ONLY",
       "constraint_id": "PC-MODEL-INDEPENDENT-IR",
       "name": "Director IR remains model-independent",
-      "constraint_code": "MODEL_INDEPENDENT_IR_ONLY",
-      "applies_when": "Every Director IR compilation.",
-      "requirements": ["Describe directing and execution ownership without provider syntax."],
-      "prohibitions": ["Do not emit provider-specific prompt syntax in Director IR."],
-      "violation_action": "VALIDATION_ERROR",
-      "authority_refs": ["skills/drama-director-compiler/SKILL.md"]
+      "prohibitions": [
+        "Do not emit provider-specific prompt syntax in Director IR."
+      ],
+      "requirements": [
+        "Describe directing and execution ownership without provider syntax."
+      ],
+      "violation_action": "VALIDATION_ERROR"
     },
     {
+      "applies_when": "A downstream execution reference is required.",
+      "authority_refs": [
+        "skills/drama-director-compiler/references/director-ir-contract.md"
+      ],
+      "constraint_code": "PROJECT_ORIGINAL_REFERENCES_ONLY",
       "constraint_id": "PC-ORIGINAL-ASSETS",
       "name": "Generation references are project-original",
-      "constraint_code": "PROJECT_ORIGINAL_REFERENCES_ONLY",
-      "applies_when": "A downstream execution reference is required.",
-      "requirements": ["Use only project-original scene masters, shot frames and asset-state references."],
-      "prohibitions": ["Do not pass research stills or source-work surfaces into generation."],
-      "violation_action": "BLOCK_GENERATION",
-      "authority_refs": ["skills/drama-director-compiler/references/director-ir-contract.md"]
+      "prohibitions": [
+        "Do not pass research stills or source-work surfaces into generation."
+      ],
+      "requirements": [
+        "Use only project-original scene masters, shot frames and asset-state references."
+      ],
+      "violation_action": "BLOCK_GENERATION"
+    }
+  ],
+  "rules": [
+    {
+      "ai_risk": {
+        "camera": {
+          "level": "MEDIUM",
+          "reasons": [
+            "A long clean single can drift in framing or screen direction."
+          ]
+        },
+        "continuity": {
+          "level": "MEDIUM",
+          "reasons": [
+            "The delayed receiver cut must match the owner endpoint without inventing overlap."
+          ]
+        },
+        "performance": {
+          "level": "HIGH",
+          "reasons": [
+            "A sustained subtle progression can flatten, loop, or add unsupported business."
+          ]
+        }
+      },
+      "applicable_when": [
+        "One visible performance progression, rather than a concurrent task state, owns the interval."
+      ],
+      "audio_logic": {
+        "instruction": null,
+        "source_refs": [],
+        "status": "NOT_DEPENDENT"
+      },
+      "blocking": "Keep the performance owner readable without inventing business; retain other participants off the critical visual axis until the owner interval completes.",
+      "canonical_rule_family": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
+      "confidence": {
+        "execution": "MEDIUM",
+        "transfer": "MEDIUM",
+        "within_source": "HIGH"
+      },
+      "conflict_levels": [
+        "LOCKED_STORY_FACTS",
+        "CONTINUITY",
+        "SPATIAL_GEOGRAPHY_AND_AXIS",
+        "TRIGGER_SPECIFIC_DIRECTOR_RULES"
+      ],
+      "conflicts_with_rule_ids": [],
+      "continuity": "Preserve entry posture, gaze direction, screen side, and the visible endpoint used by the delayed receiver cut.",
+      "coverage": "Register the relation first, then use one clean owner single and a later receiver or relation check.",
+      "director_decision": "Reduce relation anchors progressively, give the performance owner a clean sustained single, and postpone receiver coverage until the owner interval completes.",
+      "edit_logic": "Enter after relation registration and cut away after the principal visible progression reaches its locked endpoint.",
+      "evidence_lineage": {
+        "candidate_rule_ids": [
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C04-PROGRESSIVE-RELATION-REMOVAL-TO-HELD-SINGLES",
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-MICRO-BRACKET-HOLD-002",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C03-SUSTAIN-CONTESTED-PERSON-SCREEN-OWNERSHIP",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C02-SUSTAIN-CORRECTOR-IN-SHARED-WORK-FRAME-WITH-SELECTIVE-RECEIVER-CHECKS"
+        ],
+        "counterexample_ids": [
+          "WAVE1-CTR-PERFORMANCE-DWP"
+        ],
+        "director_review_id": null,
+        "evidence_ids": [
+          "MRR-S04E07-ACT-FOUR-VISUAL-001",
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001"
+        ],
+        "evidence_shot_ids": [
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S188",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S189",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S190",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S191",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S192",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S193",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S194",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S195",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S196",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S197",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S198",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S199",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S200",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S201",
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S016",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S097",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S098",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S016",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S019"
+        ],
+        "forward_test_ids": [
+          "ORIGINAL-PERFORMANCE-OWNER-HOLD",
+          "ORIGINAL-PERFORMANCE-CONCURRENT-STATE"
+        ],
+        "relation_review_ids": [
+          "WAVE1-REL-PERFORMANCE-B99-REVIEW",
+          "WAVE1-REL-PERFORMANCE-BCS-REVIEW",
+          "WAVE1-CTR-PERFORMANCE-DWP-REVIEW"
+        ],
+        "work_ids": [
+          "MR-ROBOT-S04E07",
+          "BROOKLYN-NINE-NINE-S05E14",
+          "BETTER-CALL-SAUL-S03E05",
+          "THE-DEVIL-WEARS-PRADA-2006"
+        ]
+      },
+      "failure_modes": [
+        "Routine reaction cutting interrupts the locked progression.",
+        "A clean single hides a simultaneous state that the story requires the audience to track."
+      ],
+      "fallback": {
+        "camera": "Use two shorter project-original locked singles on the same screen side, separated only at a verified performance endpoint.",
+        "continuity": "Return to a neutral project-original two-person relation frame before the delayed receiver shot.",
+        "performance": "Split the progression into two explicit project-original posture or gaze states instead of asking for one continuous subtle arc.",
+        "project_original_only": true
+      },
+      "functional_roles": [
+        {
+          "appearance_id": "APPEARANCE-S194",
+          "functional_role": "performance_owner",
+          "source_refs": [
+            "MRR-S04E07-ACT-FOUR-VISUAL-001-S194"
+          ],
+          "status": "INFERRED"
+        },
+        {
+          "appearance_id": "APPEARANCE-S197",
+          "functional_role": "performance_owner",
+          "source_refs": [
+            "MRR-S04E07-ACT-FOUR-VISUAL-001-S197"
+          ],
+          "status": "INFERRED"
+        }
+      ],
+      "human_review": {
+        "review_id": null,
+        "status": "NOT_REQUIRED_FOR_CROSS_WORK"
+      },
+      "name": "Hold the principal visible performance after relation registration",
+      "not_applicable_when": {
+        "descriptions": [
+          "A simultaneous action, object, safety, or receiver state must remain visible."
+        ],
+        "signals": [
+          "simultaneous_required_action"
+        ]
+      },
+      "pacing": "Let the owner interval run without routine reaction cutting; shorten only when a locked concurrent state appears.",
+      "promotion_source_candidate_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C04-PROGRESSIVE-RELATION-REMOVAL-TO-HELD-SINGLES",
+      "promotion_status": "CROSS_WORK_SUPPORTED",
+      "required_story_facts": [
+        "The participant relation has already been visibly established.",
+        "One project-original performance progression must remain continuously readable.",
+        "No simultaneous action, object, safety, or receiver state is locked for the owner interval."
+      ],
+      "rights_boundary": {
+        "project_original_assets_only": true,
+        "subject_matter_similarity_is_trigger": false,
+        "surface_copy_allowed": false
+      },
+      "routing": {
+        "audit_subject_tags": [],
+        "conflicts_with": [],
+        "not_applicable_if_any": [
+          "simultaneous_required_action"
+        ],
+        "required_fact_types": [
+          "relation_state",
+          "performance_progression"
+        ],
+        "scene_problems": [
+          "INTERROGATION"
+        ],
+        "trigger_all_of": [
+          "relation_already_registered",
+          "single_performance_progression"
+        ],
+        "trigger_any_of": []
+      },
+      "routing_review": {
+        "review_id": "DR-PERFORMANCE-OWNER-HOLD-ROUTING-REVIEW",
+        "review_ref": "research/validation/grammar-rule-reviews/DR-PERFORMANCE-OWNER-HOLD-ROUTING.json",
+        "status": "ROOT_VIDEO_VERIFIED"
+      },
+      "rule_id": "DR-PERFORMANCE-OWNER-HOLD",
+      "runtime_authorized": true,
+      "scene_problem": {
+        "primary": "INTERROGATION",
+        "secondary": []
+      },
+      "selection_rank": 1,
+      "trigger": {
+        "description": "After the relation is registered, one uninterrupted visible performance progression is the principal locked fact and no concurrent action state must remain visible.",
+        "required_signals": [
+          "relation_already_registered",
+          "single_performance_progression"
+        ]
+      }
+    },
+    {
+      "ai_risk": {
+        "camera": {
+          "level": "HIGH",
+          "reasons": [
+            "Continuous reframing across a zone change can distort scale or axis."
+          ]
+        },
+        "continuity": {
+          "level": "HIGH",
+          "reasons": [
+            "The mover, counterpart, and destination zone can drift across coverage. "
+          ]
+        },
+        "performance": {
+          "level": "MEDIUM",
+          "reasons": [
+            "Body-level and route endpoints can be underspecified or mistimed."
+          ]
+        }
+      },
+      "applicable_when": [
+        "The spatial change and its two-person endpoint both occur in continuous present time."
+      ],
+      "audio_logic": {
+        "instruction": null,
+        "source_refs": [],
+        "status": "NOT_DEPENDENT"
+      },
+      "blocking": "Let the mover cross the project-original zone while the relation anchor remains readable; do not hide the new relation behind an isolated insert.",
+      "canonical_rule_family": "SPATIAL-REGISTRATION-AND-RESET",
+      "confidence": {
+        "execution": "MEDIUM",
+        "transfer": "MEDIUM",
+        "within_source": "HIGH"
+      },
+      "conflict_levels": [
+        "LOCKED_STORY_FACTS",
+        "CONTINUITY",
+        "SPATIAL_GEOGRAPHY_AND_AXIS",
+        "TRIGGER_SPECIFIC_DIRECTOR_RULES"
+      ],
+      "conflicts_with_rule_ids": [],
+      "continuity": "Preserve screen side, route direction, source zone, destination zone, and the counterpart's relation anchor.",
+      "coverage": "Use a shared transition or relation-reset frame that contains the mover, counterpart, and changed endpoint.",
+      "director_decision": "Show the spatial change or its endpoint in shared or continuously reframed relation coverage before returning to isolated coverage.",
+      "edit_logic": "Place the return to isolated coverage after the relation endpoint is visible, not during the unregistered spatial change.",
+      "evidence_lineage": {
+        "candidate_rule_ids": [
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
+          "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C03",
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE"
+        ],
+        "counterexample_ids": [
+          "WAVE1-CTR-SPATIAL-TSN"
+        ],
+        "director_review_id": null,
+        "evidence_ids": [
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+          "TLOU-BEDROOM-LOCAL-001",
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001"
+        ],
+        "evidence_shot_ids": [
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S050",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S051",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S052",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S053",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S054",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S055",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S056",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S057",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S058",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S060",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S061",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S062",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S063",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S064",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S065",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S066",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S067",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S068",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S069",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S070",
+          "TLOU-BEDROOM-LOCAL-001-S015",
+          "TLOU-BEDROOM-LOCAL-001-S019",
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S090",
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091"
+        ],
+        "forward_test_ids": [
+          "ORIGINAL-RELATIONSHIP-FRACTURE",
+          "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART"
+        ],
+        "relation_review_ids": [
+          "WAVE1-REL-SPATIAL-TLOU-REVIEW",
+          "WAVE1-CTR-SPATIAL-TSN-REVIEW"
+        ],
+        "work_ids": [
+          "MARRIAGE-STORY-2019",
+          "THE-LAST-OF-US-S01E06",
+          "THE-SOCIAL-NETWORK-2010"
+        ]
+      },
+      "failure_modes": [
+        "Returning to singles before the changed relation is visible.",
+        "Adding a relation reset after the counterpart has left and the fixed room anchor already explains the movement."
+      ],
+      "fallback": {
+        "camera": "Use a locked project-original wide that contains source and destination zones instead of a moving reset.",
+        "continuity": "Insert a neutral project-original room map showing both screen sides and the destination zone before resuming singles.",
+        "performance": "Split the movement into a clear start pose and destination pose with one simple crossing action.",
+        "project_original_only": true
+      },
+      "functional_roles": [
+        {
+          "appearance_id": "P-B",
+          "functional_role": "spatial_mover",
+          "source_refs": [
+            "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059"
+          ],
+          "status": "INFERRED"
+        },
+        {
+          "appearance_id": "P-A",
+          "functional_role": "relation_anchor",
+          "source_refs": [
+            "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059"
+          ],
+          "status": "INFERRED"
+        }
+      ],
+      "human_review": {
+        "review_id": null,
+        "status": "NOT_REQUIRED_FOR_CROSS_WORK"
+      },
+      "name": "Re-establish the relation after a material spatial change",
+      "not_applicable_when": {
+        "descriptions": [
+          "The counterpart is already absent and the remaining movement is readable against a fixed room anchor."
+        ],
+        "signals": [
+          "counterpart_relation_not_required"
+        ]
+      },
+      "pacing": "Hold the reset until the changed level, zone, or distance reads, then resume singles.",
+      "promotion_source_candidate_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
+      "promotion_status": "CROSS_WORK_SUPPORTED",
+      "required_story_facts": [
+        "A participant changes level, zone, or distance enough to invalidate the prior relation frame.",
+        "The changed relation to a present counterpart remains story-critical."
+      ],
+      "rights_boundary": {
+        "project_original_assets_only": true,
+        "subject_matter_similarity_is_trigger": false,
+        "surface_copy_allowed": false
+      },
+      "routing": {
+        "audit_subject_tags": [],
+        "conflicts_with": [],
+        "not_applicable_if_any": [
+          "counterpart_relation_not_required"
+        ],
+        "required_fact_types": [
+          "spatial_change",
+          "counterpart_relation"
+        ],
+        "scene_problems": [
+          "RELATIONSHIP_FRACTURE"
+        ],
+        "trigger_all_of": [
+          "material_spatial_change",
+          "counterpart_relation_required"
+        ],
+        "trigger_any_of": []
+      },
+      "routing_review": {
+        "review_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE-ROUTING-REVIEW",
+        "review_ref": "research/validation/grammar-rule-reviews/DR-RELATION-RESET-AFTER-SPATIAL-CHANGE-ROUTING.json",
+        "status": "ROOT_VIDEO_VERIFIED"
+      },
+      "rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+      "runtime_authorized": true,
+      "scene_problem": {
+        "primary": "RELATIONSHIP_FRACTURE",
+        "secondary": []
+      },
+      "selection_rank": 2,
+      "trigger": {
+        "description": "A body-level, zone, or distance change invalidates the prior relation geometry while the counterpart relation remains a locked visible fact.",
+        "required_signals": [
+          "material_spatial_change",
+          "counterpart_relation_required"
+        ]
+      }
+    },
+    {
+      "ai_risk": {
+        "camera": {
+          "level": "HIGH",
+          "reasons": [
+            "A shared approach can produce scale, axis, or collision drift."
+          ]
+        },
+        "continuity": {
+          "level": "HIGH",
+          "reasons": [
+            "Start and end distances, body levels, and no-contact state must remain consistent."
+          ]
+        },
+        "performance": {
+          "level": "MEDIUM",
+          "reasons": [
+            "Timing the stop and mutual awareness without added contact is delicate."
+          ]
+        }
+      },
+      "applicable_when": [
+        "The continuous path, not merely the terminal spacing, carries required relation information."
+      ],
+      "audio_logic": {
+        "instruction": null,
+        "source_refs": [],
+        "status": "NOT_DEPENDENT"
+      },
+      "blocking": "Use a project-original route with a fixed relation anchor and a visible stop; do not add contact or surface imitation.",
+      "canonical_rule_family": "PROXIMITY-AND-RELATION-GEOMETRY",
+      "confidence": {
+        "execution": "MEDIUM",
+        "transfer": "MEDIUM",
+        "within_source": "HIGH"
+      },
+      "conflict_levels": [
+        "LOCKED_STORY_FACTS",
+        "CONTINUITY",
+        "SPATIAL_GEOGRAPHY_AND_AXIS",
+        "TRIGGER_SPECIFIC_DIRECTOR_RULES"
+      ],
+      "conflicts_with_rule_ids": [],
+      "continuity": "Preserve axis, start distance, route direction, end distance, level, and the no-contact boundary when locked.",
+      "coverage": "Begin with readable two-person geometry, carry the approach or level change in shared coverage, then hold the endpoint.",
+      "director_decision": "Register the initial zones, show the change in shared or continuous relation coverage, and hold the shared endpoint before isolating faces.",
+      "edit_logic": "Avoid cutting over the critical relation transition; cut after the endpoint reads or use one continuous shared shot.",
+      "evidence_lineage": {
+        "candidate_rule_ids": [
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C02-DELAY-TIGHT-SHARED-FRAME-UNTIL-DISTANCE-CHANGES",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C04-LATE-HOLDS-NEED-VISIBLE-LEVEL-AND-PROXIMITY-ENDPOINTS",
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C03-WITHDRAW-SHARED-FRAME-DELAY-DISTANCE-REVEAL"
+        ],
+        "counterexample_ids": [
+          "WAVE1-CTR-PROXIMITY-CK"
+        ],
+        "director_review_id": null,
+        "evidence_ids": [
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001"
+        ],
+        "evidence_shot_ids": [
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S002",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S003",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S004",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S005",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S006",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S007",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S008",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S009",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S010",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S011",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S012",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S013",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S014",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S015",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S016",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S017",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S018",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S019",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S020",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S021",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S022",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S023",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S026",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S082",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S083",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085",
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S001",
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026",
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027"
+        ],
+        "forward_test_ids": [
+          "ORIGINAL-PROXIMITY-TENSION",
+          "ORIGINAL-PROXIMITY-ELLIPSIS"
+        ],
+        "relation_review_ids": [
+          "WAVE1-REL-PROXIMITY-MS-REVIEW",
+          "WAVE1-CTR-PROXIMITY-CK-REVIEW"
+        ],
+        "work_ids": [
+          "BRIDGERTON-S02E05",
+          "MARRIAGE-STORY-2019",
+          "CITIZEN-KANE-1941"
+        ]
+      },
+      "failure_modes": [
+        "Tight coverage hides the relation-change path.",
+        "A continuous approach is fabricated for an elliptical change.",
+        "Unspecified contact is added at the endpoint."
+      ],
+      "fallback": {
+        "camera": "Use a locked project-original shared wide with marked start and end positions instead of a moving camera.",
+        "continuity": "Render separate project-original start and endpoint plates and cut only after each geometry is readable.",
+        "performance": "Use one simple approach and a clear stop, with no contact unless the project-original facts require it.",
+        "project_original_only": true
+      },
+      "functional_roles": [
+        {
+          "appearance_id": "P-B",
+          "functional_role": "proximity_mover",
+          "source_refs": [
+            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024"
+          ],
+          "status": "INFERRED"
+        },
+        {
+          "appearance_id": "P-A",
+          "functional_role": "relation_anchor",
+          "source_refs": [
+            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024"
+          ],
+          "status": "INFERRED"
+        }
+      ],
+      "human_review": {
+        "review_id": null,
+        "status": "NOT_REQUIRED_FOR_CROSS_WORK"
+      },
+      "name": "Show a continuous relation change and hold its shared endpoint",
+      "not_applicable_when": {
+        "descriptions": [
+          "The distance change occurs across time ellipsis or only the terminal geometry is story-critical."
+        ],
+        "signals": [
+          "elliptical_time_change"
+        ]
+      },
+      "pacing": "Delay tight isolated coverage until the continuous distance change and endpoint have both registered.",
+      "promotion_source_candidate_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C02-DELAY-TIGHT-SHARED-FRAME-UNTIL-DISTANCE-CHANGES",
+      "promotion_status": "CROSS_WORK_SUPPORTED",
+      "required_story_facts": [
+        "The project-original relation distance or body level changes in continuous present time.",
+        "The transition path and two-person endpoint must both be visible.",
+        "Contact is not inferred unless separately locked."
+      ],
+      "rights_boundary": {
+        "project_original_assets_only": true,
+        "subject_matter_similarity_is_trigger": false,
+        "surface_copy_allowed": false
+      },
+      "routing": {
+        "audit_subject_tags": [],
+        "conflicts_with": [],
+        "not_applicable_if_any": [
+          "elliptical_time_change"
+        ],
+        "required_fact_types": [
+          "distance_change",
+          "relation_endpoint"
+        ],
+        "scene_problems": [
+          "ROMANTIC_PROXIMITY"
+        ],
+        "trigger_all_of": [
+          "relation_distance_change",
+          "continuous_present_time",
+          "shared_endpoint_required"
+        ],
+        "trigger_any_of": []
+      },
+      "routing_review": {
+        "review_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT-ROUTING-REVIEW",
+        "review_ref": "research/validation/grammar-rule-reviews/DR-SHARED-FRAME-FOR-RELATION-ENDPOINT-ROUTING.json",
+        "status": "ROOT_VIDEO_VERIFIED"
+      },
+      "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+      "runtime_authorized": true,
+      "scene_problem": {
+        "primary": "ROMANTIC_PROXIMITY",
+        "secondary": []
+      },
+      "selection_rank": 3,
+      "trigger": {
+        "description": "A relationship-relevant distance or level change happens in continuous present time and both its path and shared endpoint are locked visible facts.",
+        "required_signals": [
+          "relation_distance_change",
+          "continuous_present_time",
+          "shared_endpoint_required"
+        ]
+      }
     }
   ],
   "safety_constraints": [
     {
+      "applies_when": "Every candidate or runtime rule decision.",
+      "authority_refs": [
+        "context/THIRD_PARTY_GENERALIZATION_AUDIT_TASK.md"
+      ],
+      "constraint_code": "UNKNOWN_CANNOT_AUTHORIZE",
       "constraint_id": "SC-NO-UNKNOWN-PROMOTION",
       "name": "Unknown evidence cannot become a rule",
-      "constraint_code": "UNKNOWN_CANNOT_AUTHORIZE",
-      "applies_when": "Every candidate or runtime rule decision.",
-      "requirements": ["Route only evidence rules whose promotion and review gates are complete."],
-      "prohibitions": ["Do not promote UNKNOWN evidence or invent a fallback evidence rule."],
-      "violation_action": "VALIDATION_ERROR",
-      "authority_refs": ["context/THIRD_PARTY_GENERALIZATION_AUDIT_TASK.md"]
+      "prohibitions": [
+        "Do not promote UNKNOWN evidence or invent a fallback evidence rule."
+      ],
+      "requirements": [
+        "Route only evidence rules whose promotion and review gates are complete."
+      ],
+      "violation_action": "VALIDATION_ERROR"
     },
     {
+      "applies_when": "Every evidence-rule application.",
+      "authority_refs": [
+        "AGENTS.md"
+      ],
+      "constraint_code": "NO_REFERENCE_SURFACE_COPY",
       "constraint_id": "SC-NO-SURFACE-COPY",
       "name": "Transfer mechanism, not source surface",
-      "constraint_code": "NO_REFERENCE_SURFACE_COPY",
-      "applies_when": "Every evidence-rule application.",
-      "requirements": ["Express decisions with target-scene facts and project-original assets."],
-      "prohibitions": ["Do not transfer reference characters, dialogue, costumes, locations, props, signature compositions or scene events."],
-      "violation_action": "VALIDATION_ERROR",
-      "authority_refs": ["AGENTS.md"]
+      "prohibitions": [
+        "Do not transfer reference characters, dialogue, costumes, locations, props, signature compositions or scene events."
+      ],
+      "requirements": [
+        "Express decisions with target-scene facts and project-original assets."
+      ],
+      "violation_action": "VALIDATION_ERROR"
     },
     {
+      "applies_when": "Any camera, performance or continuity risk is HIGH.",
+      "authority_refs": [
+        "skills/drama-director-compiler/references/director-ir-contract.md"
+      ],
+      "constraint_code": "HIGH_RISK_REQUIRES_FALLBACK",
       "constraint_id": "SC-HIGH-RISK-FALLBACK",
       "name": "High execution risk requires a fallback",
-      "constraint_code": "HIGH_RISK_REQUIRES_FALLBACK",
-      "applies_when": "Any camera, performance or continuity risk is HIGH.",
-      "requirements": ["Provide a concrete simpler fallback that preserves narrative function."],
-      "prohibitions": ["Do not use vague simplification language as a fallback."],
-      "violation_action": "VALIDATION_ERROR",
-      "authority_refs": ["skills/drama-director-compiler/references/director-ir-contract.md"]
+      "prohibitions": [
+        "Do not use vague simplification language as a fallback."
+      ],
+      "requirements": [
+        "Provide a concrete simpler fallback that preserves narrative function."
+      ],
+      "violation_action": "VALIDATION_ERROR"
     },
     {
+      "applies_when": "A scene and rule share topic, genre or emotional labels.",
+      "authority_refs": [
+        "context/THIRD_PARTY_GENERALIZATION_AUDIT_TASK.md"
+      ],
+      "constraint_code": "SUBJECT_SIMILARITY_NOT_APPLICABILITY",
       "constraint_id": "SC-NO-SUBJECT-SHORTCUT",
       "name": "Subject similarity is not applicability",
-      "constraint_code": "SUBJECT_SIMILARITY_NOT_APPLICABILITY",
-      "applies_when": "A scene and rule share topic, genre or emotional labels.",
-      "requirements": ["Check scene problem, trigger, required facts and non-applicability independently."],
-      "prohibitions": ["Do not select a rule from subject-matter similarity."],
-      "violation_action": "VALIDATION_ERROR",
-      "authority_refs": ["context/THIRD_PARTY_GENERALIZATION_AUDIT_TASK.md"]
+      "prohibitions": [
+        "Do not select a rule from subject-matter similarity."
+      ],
+      "requirements": [
+        "Check scene problem, trigger, required facts and non-applicability independently."
+      ],
+      "violation_action": "VALIDATION_ERROR"
     },
     {
+      "applies_when": "Every Director IR compilation before separate authorization.",
+      "authority_refs": [
+        "skills/drama-director-compiler/references/director-ir-contract.md"
+      ],
+      "constraint_code": "GENERATION_AND_PUBLICATION_NOT_AUTHORIZED",
       "constraint_id": "SC-AUTHORIZATION-GATES",
       "name": "Compilation does not authorize external action",
-      "constraint_code": "GENERATION_AND_PUBLICATION_NOT_AUTHORIZED",
-      "applies_when": "Every Director IR compilation before separate authorization.",
-      "requirements": ["Keep generation and publication authorization false."],
-      "prohibitions": ["Do not call a provider or publish from this compilation step."],
-      "violation_action": "BLOCK_GENERATION",
-      "authority_refs": ["skills/drama-director-compiler/references/director-ir-contract.md"]
+      "prohibitions": [
+        "Do not call a provider or publish from this compilation step."
+      ],
+      "requirements": [
+        "Keep generation and publication authorization false."
+      ],
+      "violation_action": "BLOCK_GENERATION"
     },
     {
+      "applies_when": "Every newly routed creative output.",
+      "authority_refs": [
+        "context/THIRD_PARTY_GENERALIZATION_AUDIT_TASK.md"
+      ],
+      "constraint_code": "UNREVIEWED_OUTPUT_HUMAN_REVIEW_PENDING",
       "constraint_id": "SC-HUMAN-REVIEW",
       "name": "Unreviewed output remains pending",
-      "constraint_code": "UNREVIEWED_OUTPUT_HUMAN_REVIEW_PENDING",
-      "applies_when": "Every newly routed creative output.",
-      "requirements": ["Mark output HUMAN_REVIEW_PENDING until a human director approves it."],
-      "prohibitions": ["Do not label unreviewed output production-ready or successful."],
-      "violation_action": "HUMAN_REVIEW_PENDING",
-      "authority_refs": ["context/THIRD_PARTY_GENERALIZATION_AUDIT_TASK.md"]
+      "prohibitions": [
+        "Do not label unreviewed output production-ready or successful."
+      ],
+      "requirements": [
+        "Mark output HUMAN_REVIEW_PENDING until a human director approves it."
+      ],
+      "violation_action": "HUMAN_REVIEW_PENDING"
     }
   ],
-  "rules": []
+  "schema_version": "director-grammar/0.2",
+  "selection_policy": {
+    "allow_fewer_when_insufficient": true,
+    "constraints_count_as_selected_rules": false,
+    "eligible_promotion_statuses": [
+      "CROSS_WORK_SUPPORTED",
+      "GENERAL_DEFAULT"
+    ],
+    "maximum": 4,
+    "no_match_status": "NO_APPLICABLE_RULE",
+    "preferred_minimum": 2,
+    "subject_similarity_is_sufficient": false,
+    "unreviewed_output_status": "HUMAN_REVIEW_PENDING"
+  },
+  "status": "VALIDATED",
+  "support_matrix_path": "research/grammar/cross_work_support_matrix.json",
+  "title": "DirectorMind Runtime Grammar v0.2"
 }
