@@ -1,7 +1,9 @@
 {
-  "candidate_rule_id": null,
-  "canonical_rule_family": null,
+  "candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
+  "canonical_rule_family": "SPATIAL-REGISTRATION-AND-RESET",
+  "rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
   "schema_version": "forward-test-result/0.1",
   "status": "HUMAN_REVIEW_PENDING",
-  "test_case_id": "ORIGINAL-RELATIONSHIP-FRACTURE"
+  "test_case_id": "ORIGINAL-RELATIONSHIP-FRACTURE",
+  "test_mode": "POSITIVE"
 }

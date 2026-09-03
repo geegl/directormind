@@ -13,7 +13,7 @@
   "locked_facts": [
     {
       "fact_id": "FACT-01",
-      "fact_type": "repair_offer",
+      "fact_type": "counterpart_relation",
       "source_ref": "locked-script.md#FACT-01",
       "status": "LOCKED",
       "value": "Partner A leaves a blank name card at the shared model as an invitation to continue."
@@ -27,7 +27,7 @@
     },
     {
       "fact_id": "FACT-03",
-      "fact_type": "departure",
+      "fact_type": "spatial_change",
       "source_ref": "locked-script.md#FACT-03",
       "status": "LOCKED",
       "value": "Partner B removes their tools and exits while Partner A remains at the model."
@@ -40,8 +40,8 @@
     "project_original": true
   },
   "routing_signals": [
-    "repair_declined",
-    "departure"
+    "material_spatial_change",
+    "counterpart_relation_required"
   ],
   "scene_problem": {
     "primary": "RELATIONSHIP_FRACTURE",

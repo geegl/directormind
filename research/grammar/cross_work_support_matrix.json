@@ -4,9 +4,7 @@
   "families": [
     {
       "blocked_reasons": [
-        "Every member retains an UNKNOWN canonical scene problem.",
-        "No member has evidence-backed functional roles.",
-        "No unrelated same-trigger verified counterexample is registered."
+        "No member has passed all evidence, boundary, confidence, and forward-test gates."
       ],
       "description": "Keep source, preparation, contact or event, result and carried consequence readable.",
       "family_id": "ACTION-CAUSAL-CHAIN",
@@ -19,6 +17,7 @@
       "relations": [
         {
           "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-APERTURE-EVENT-BEFORE-GROSS-BODY-RESPONSE-002",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -26,6 +25,7 @@
         },
         {
           "candidate_rule_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-MAKE-ASSISTANCE-AND-OBJECT-STATES-COMPLETE-003",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -33,6 +33,7 @@
         },
         {
           "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C01-ACTION-CAUSAL-CHAIN",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -40,6 +41,7 @@
         },
         {
           "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C03-SEPARATE-PERFORMER-ACTION-TARGET-STATE-AND-RESULT-CLAIM",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -51,9 +53,7 @@
     },
     {
       "blocked_reasons": [
-        "Every member retains an UNKNOWN canonical scene problem.",
-        "No member has evidence-backed functional roles.",
-        "No unrelated same-trigger verified counterexample is registered."
+        "No member has passed all evidence, boundary, confidence, and forward-test gates."
       ],
       "description": "Hold or restore the visible terminal state after a consequential change.",
       "family_id": "AFTERMATH-AND-TERMINAL-STATE",
@@ -66,6 +66,7 @@
       "relations": [
         {
           "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C03-SUBTRACTIVE-AFTERMATH",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -73,6 +74,7 @@
         },
         {
           "candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-RETURN-TO-FORMAL-ROOM-AFTER-PEAK-004",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -80,6 +82,7 @@
         },
         {
           "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C04-RECOVERY-AND-CARE-ARE-STATE",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -87,6 +90,7 @@
         },
         {
           "candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C04-RESULT-AND-EXIT-VERIFICATION-BEFORE-RESUME",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -94,6 +98,7 @@
         },
         {
           "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C04-DISTRIBUTE-POST-RESULT-BODY-STATES-BY-NEXT-ACTION",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -105,9 +110,7 @@
     },
     {
       "blocked_reasons": [
-        "Every member retains an UNKNOWN canonical scene problem.",
-        "No member has evidence-backed functional roles.",
-        "No unrelated same-trigger verified counterexample is registered."
+        "No member has passed all evidence, boundary, confidence, and forward-test gates."
       ],
       "description": "Use a stable axis and limited coverage grammar until a relation change requires reset.",
       "family_id": "AXIS-AND-COVERAGE-GRAMMAR",
@@ -120,13 +123,15 @@
       "relations": [
         {
           "candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C02-STABLE-SEAT-ANCHORS-CARRY-DENSE-ALTERNATION",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
-          "scene_problem_status": "UNKNOWN",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "MARRIAGE-STORY-2019"
         },
         {
           "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C02-VARY-HOLD-LENGTH-WITHIN-FIXED-ANGLE-GRAMMAR",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -138,9 +143,7 @@
     },
     {
       "blocked_reasons": [
-        "Every member retains an UNKNOWN canonical scene problem.",
-        "No member has evidence-backed functional roles.",
-        "No unrelated same-trigger verified counterexample is registered."
+        "No member has passed all evidence, boundary, confidence, and forward-test gates."
       ],
       "description": "Version and carry person, object, surface and location states across cuts.",
       "family_id": "CONTINUITY-LEDGER-AND-VERSIONING",
@@ -153,6 +156,7 @@
       "relations": [
         {
           "candidate_rule_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C02-VERSIONED-OBJECT-HANDOFF",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -160,6 +164,7 @@
         },
         {
           "candidate_rule_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C04-TASK-LEDGER-OVER-CAMERA-CONTINUITY",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -167,6 +172,7 @@
         },
         {
           "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CARRY-SURFACE-BODY-STATE-THROUGH-VEHICLE-REVERSAL-003",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -174,6 +180,7 @@
         },
         {
           "candidate_rule_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C01-INVARIANT-SPACE-MULTICHANNEL-DELTA",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -181,6 +188,7 @@
         },
         {
           "candidate_rule_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C04",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -188,6 +196,7 @@
         },
         {
           "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -199,9 +208,7 @@
     },
     {
       "blocked_reasons": [
-        "Every member retains an UNKNOWN canonical scene problem.",
-        "No member has evidence-backed functional roles.",
-        "No unrelated same-trigger verified counterexample is registered."
+        "No member has passed all evidence, boundary, confidence, and forward-test gates."
       ],
       "description": "Preserve orientation and state through sustained movement, occlusion or a continuous-looking route.",
       "family_id": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
@@ -214,6 +221,7 @@
       "relations": [
         {
           "candidate_rule_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-MOBILE-ZONE-CAP-004",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -221,6 +229,7 @@
         },
         {
           "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -228,6 +237,7 @@
         },
         {
           "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C04-FUNCTIONAL-LONG-TAKE-FALLBACK",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -235,6 +245,7 @@
         },
         {
           "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C01",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -242,6 +253,7 @@
         },
         {
           "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C03-REACQUIRE-VISUAL-TRACK-AFTER-OCCLUSION",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -249,6 +261,7 @@
         },
         {
           "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C04-FUNCTIONAL-SEGMENTATION-FALLBACK-FOR-LONG-ROUTE",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -256,6 +269,7 @@
         },
         {
           "candidate_rule_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C04-LONG-TAKE-WHEN-CONTINUITY-IS-THE-PROOF",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -267,9 +281,7 @@
     },
     {
       "blocked_reasons": [
-        "Every member retains an UNKNOWN canonical scene problem.",
-        "No member has evidence-backed functional roles.",
-        "No unrelated same-trigger verified counterexample is registered."
+        "No member has passed all evidence, boundary, confidence, and forward-test gates."
       ],
       "description": "Intercut separate zones or threads only on meaningful visible state updates.",
       "family_id": "MULTI-THREAD-STATE-INTERCUT",
@@ -282,6 +294,7 @@
       "relations": [
         {
           "candidate_rule_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C02-GROUP-PARALLEL-THREADS-BY-VISIBLE-STATE-CHANGE",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -289,6 +302,7 @@
         },
         {
           "candidate_rule_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C02",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -296,6 +310,7 @@
         },
         {
           "candidate_rule_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C02",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -303,6 +318,7 @@
         },
         {
           "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C02",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -314,9 +330,7 @@
     },
     {
       "blocked_reasons": [
-        "Every member retains an UNKNOWN canonical scene problem.",
-        "No member has evidence-backed functional roles.",
-        "No unrelated same-trigger verified counterexample is registered."
+        "No member has passed all evidence, boundary, confidence, and forward-test gates."
       ],
       "description": "Keep visible object source, holder, state and handoff legible.",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
@@ -329,6 +343,7 @@
       "relations": [
         {
           "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C02-SOURCED-MATERIAL-FIELD-BEFORE-SELECTION",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -336,6 +351,7 @@
         },
         {
           "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -343,6 +359,7 @@
         },
         {
           "candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C02-SEPARATE-OBJECT-STATE-FROM-CAUSAL-CLAIM",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -350,6 +367,7 @@
         },
         {
           "candidate_rule_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C04-PARALLEL-PROP-BARRIER-CLOSURE",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -357,6 +375,7 @@
         },
         {
           "candidate_rule_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C01",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -364,6 +383,7 @@
         },
         {
           "candidate_rule_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C04",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -371,6 +391,7 @@
         },
         {
           "candidate_rule_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-GETOUT-C02-TREAT-RECURRING-HANDLED-OBJECT-AS-STATE-CUE-NOT-CAUSAL-PROOF",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -378,6 +399,7 @@
         },
         {
           "candidate_rule_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C01",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -385,6 +407,7 @@
         },
         {
           "candidate_rule_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C03",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -392,6 +415,7 @@
         },
         {
           "candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-OBJECT-INSERT-THEN-FACE-RETURN-004",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -399,13 +423,15 @@
         },
         {
           "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C03-DOCUMENT-STATE-NEEDS-HANDLER-CONTINUITY",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
-          "scene_problem_status": "UNKNOWN",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "MR-ROBOT-S04E07"
         },
         {
           "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C02-OBJECT-CONTROL-LEDGER",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -413,6 +439,7 @@
         },
         {
           "candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C03-USE-WORK-OBJECT-UPDATES-AS-PUNCTUATION-NOT-SEMANTIC-PROOF",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -420,6 +447,7 @@
         },
         {
           "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C03-KEEP-SECONDARY-PROP-ACTIONS-INSIDE-PERSON-SINGLES",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -427,6 +455,7 @@
         },
         {
           "candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C02",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -434,6 +463,7 @@
         },
         {
           "candidate_rule_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C01-REGISTER-RECORD-TO-LIVE-SPACE",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -445,9 +475,7 @@
     },
     {
       "blocked_reasons": [
-        "Every member retains an UNKNOWN canonical scene problem.",
-        "No member has evidence-backed functional roles.",
-        "No unrelated same-trigger verified counterexample is registered."
+        "No member has passed all evidence, boundary, confidence, and forward-test gates."
       ],
       "description": "Track assessment, task ownership, demonstration, work onset and handoff.",
       "family_id": "PROCEDURAL-HANDOFF-AND-WORKFLOW",
@@ -460,6 +488,7 @@
       "relations": [
         {
           "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C01-ASSESSMENT-RECEIVER-TO-NEW-ROOM-ACTION",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -467,6 +496,7 @@
         },
         {
           "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C04-DEMONSTRATION-TO-DISTRIBUTED-WORK",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -474,6 +504,7 @@
         },
         {
           "candidate_rule_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C01-COMPETENCE-CLOSED-LOOP",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -481,6 +512,7 @@
         },
         {
           "candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-SCRIPT-VERIFIED-TASK-BUFFER-002",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -488,6 +520,7 @@
         },
         {
           "candidate_rule_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C02-EMBODY-HYPOTHESIS-THEN-TEST-TRACE",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -498,50 +531,52 @@
       "verified_unrelated_same_trigger_counterexample_ids": []
     },
     {
-      "blocked_reasons": [
-        "Every member retains an UNKNOWN canonical scene problem.",
-        "No member has evidence-backed functional roles.",
-        "No unrelated same-trigger verified counterexample is registered."
-      ],
+      "blocked_reasons": [],
       "description": "Make distance, shared-frame and two-person relation changes visible.",
       "family_id": "PROXIMITY-AND-RELATION-GEOMETRY",
       "grouped_work_count": 4,
       "member_count": 8,
-      "promotion_eligibility": "BLOCKED_BY_UNKNOWN",
+      "promotion_eligibility": "CROSS_WORK_SUPPORTED",
       "relation_counts": {
-        "NARROWS": 8
+        "NARROWS": 7,
+        "SUPPORTS": 1
       },
       "relations": [
         {
           "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C01-REGISTER-ROOM-AXIS-BEFORE-PROXIMITY",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
-          "scene_problem_status": "UNKNOWN",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "BRIDGERTON-S02E05"
         },
         {
           "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C02-DELAY-TIGHT-SHARED-FRAME-UNTIL-DISTANCE-CHANGES",
-          "relation": "NARROWS",
-          "scene_problem_status": "UNKNOWN",
-          "unknown_dependency_present": true,
+          "promotion_status": "CROSS_WORK_SUPPORTED",
+          "relation": "SUPPORTS",
+          "scene_problem_status": "INFERRED",
+          "unknown_dependency_present": false,
           "work_id": "BRIDGERTON-S02E05"
         },
         {
           "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C03-KEEP-HAND-SOURCE-HEAD-RELATION-AND-WITHDRAWAL-READABLE",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
-          "scene_problem_status": "UNKNOWN",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "BRIDGERTON-S02E05"
         },
         {
           "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C04-DECOMPRESS-THROUGH-SINGLES-AND-ROOM-RESET",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
-          "scene_problem_status": "UNKNOWN",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "BRIDGERTON-S02E05"
         },
         {
           "candidate_rule_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C03-WITHDRAW-SHARED-FRAME-DELAY-DISTANCE-REVEAL",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -549,13 +584,15 @@
         },
         {
           "candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C04-LATE-HOLDS-NEED-VISIBLE-LEVEL-AND-PROXIMITY-ENDPOINTS",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
-          "scene_problem_status": "UNKNOWN",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "MARRIAGE-STORY-2019"
         },
         {
           "candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-CONTRACT-EXPAND-DISTANCE-WITH-MINIMAL-ACTION-003",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -563,20 +600,23 @@
         },
         {
           "candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-SEPARATED-ZONES-BEFORE-SHARED-DISTANCE-001",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "MOONLIGHT-2016"
         }
       ],
-      "verified_support_relation_ids": [],
-      "verified_unrelated_same_trigger_counterexample_ids": []
+      "verified_support_relation_ids": [
+        "WAVE1-REL-PROXIMITY-MS"
+      ],
+      "verified_unrelated_same_trigger_counterexample_ids": [
+        "WAVE1-CTR-PROXIMITY-CK"
+      ]
     },
     {
       "blocked_reasons": [
-        "Every member retains an UNKNOWN canonical scene problem.",
-        "No member has evidence-backed functional roles.",
-        "No unrelated same-trigger verified counterexample is registered."
+        "No member has passed all evidence, boundary, confidence, and forward-test gates."
       ],
       "description": "Choose receiver, observer, witness or reaction coverage only when the receiving state matters.",
       "family_id": "RECEIVER-AND-REACTION-DISTRIBUTION",
@@ -589,6 +629,7 @@
       "relations": [
         {
           "candidate_rule_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-DELAYED-OBSERVER-003",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -596,6 +637,7 @@
         },
         {
           "candidate_rule_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C03-DUAL-RESULT-RECEIPT",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -603,6 +645,7 @@
         },
         {
           "candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C01-REGISTER-PUBLIC-PROOF-GEOMETRY",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -610,6 +653,7 @@
         },
         {
           "candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C04-HIERARCHICAL-RECEIPT-AFTER-SINGLE-OWNER-TURN",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -617,6 +661,7 @@
         },
         {
           "candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-READOUT-RECEIVER-GROUP-CASCADE-002",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -624,6 +669,7 @@
         },
         {
           "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C04",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -631,6 +677,7 @@
         },
         {
           "candidate_rule_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-SEATED-ANCHOR-THEN-SELECTIVE-RECEIPT-004",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -638,6 +685,7 @@
         },
         {
           "candidate_rule_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C02-DISTRIBUTE-SCREEN-OWNERSHIP-WHEN-BODIES-DIVERGE",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -645,6 +693,7 @@
         },
         {
           "candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C02-MULTI-WINDOW-DISTRIBUTED-THREAT-PUZZLE",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -652,6 +701,7 @@
         },
         {
           "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C01",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -659,6 +709,7 @@
         },
         {
           "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C03",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -666,6 +717,7 @@
         },
         {
           "candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C01-REGISTER-TRIGGER-OBJECT-BEFORE-ATTENTION-CASCADE",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -677,9 +729,7 @@
     },
     {
       "blocked_reasons": [
-        "Every member retains an UNKNOWN canonical scene problem.",
-        "No member has evidence-backed functional roles.",
-        "No unrelated same-trigger verified counterexample is registered."
+        "No member has passed all evidence, boundary, confidence, and forward-test gates."
       ],
       "description": "Change scale or reveal order only after the relevant relation is established.",
       "family_id": "SCALE-AND-REVEAL-LADDER",
@@ -692,6 +742,7 @@
       "relations": [
         {
           "candidate_rule_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C01-HOLD-SUBJECT-THEN-SEPARATE-THREAT-STATES",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -699,6 +750,7 @@
         },
         {
           "candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-SCALE-LADDER-BEFORE-PHYSICAL-PEAK-003",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -706,6 +758,7 @@
         },
         {
           "candidate_rule_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-GETOUT-C03-CONTINUOUS-TRANSFORM-THEN-SEGMENT-SUBJECTIVE-SCALE-STATES",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -713,8 +766,9 @@
         },
         {
           "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C01-DETAIL-THEN-CONTAINER-REGISTER",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
-          "scene_problem_status": "UNKNOWN",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "MR-ROBOT-S04E07"
         }
@@ -723,22 +777,20 @@
       "verified_unrelated_same_trigger_counterexample_ids": []
     },
     {
-      "blocked_reasons": [
-        "Every member retains an UNKNOWN canonical scene problem.",
-        "No member has evidence-backed functional roles.",
-        "No unrelated same-trigger verified counterexample is registered."
-      ],
+      "blocked_reasons": [],
       "description": "Allocate sustained screen ownership when one visible performance progression is primary.",
       "family_id": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
       "grouped_work_count": 5,
       "member_count": 7,
-      "promotion_eligibility": "BLOCKED_BY_UNKNOWN",
+      "promotion_eligibility": "CROSS_WORK_SUPPORTED",
       "relation_counts": {
-        "NARROWS": 7
+        "NARROWS": 6,
+        "SUPPORTS": 1
       },
       "relations": [
         {
           "candidate_rule_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-MICRO-BRACKET-HOLD-002",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -746,6 +798,7 @@
         },
         {
           "candidate_rule_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-PRIDE-LADDER-001",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -753,6 +806,7 @@
         },
         {
           "candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C03-SUSTAIN-CONTESTED-PERSON-SCREEN-OWNERSHIP",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -760,13 +814,15 @@
         },
         {
           "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C04-PROGRESSIVE-RELATION-REMOVAL-TO-HELD-SINGLES",
-          "relation": "NARROWS",
-          "scene_problem_status": "UNKNOWN",
-          "unknown_dependency_present": true,
+          "promotion_status": "CROSS_WORK_SUPPORTED",
+          "relation": "SUPPORTS",
+          "scene_problem_status": "INFERRED",
+          "unknown_dependency_present": false,
           "work_id": "MR-ROBOT-S04E07"
         },
         {
           "candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C02-SUSTAIN-CORRECTOR-IN-SHARED-WORK-FRAME-WITH-SELECTIVE-RECEIVER-CHECKS",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -774,6 +830,7 @@
         },
         {
           "candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C04-END-ON-TERMINAL-OWNER-WHILE-BACKGROUND-TASK-CONTINUES",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -781,32 +838,35 @@
         },
         {
           "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C04-HOLD-VISIBLE-BODY-OR-HAND-OBJECT-STATE",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "UNBELIEVABLE-S01E02"
         }
       ],
-      "verified_support_relation_ids": [],
-      "verified_unrelated_same_trigger_counterexample_ids": []
+      "verified_support_relation_ids": [
+        "WAVE1-REL-PERFORMANCE-BCS"
+      ],
+      "verified_unrelated_same_trigger_counterexample_ids": [
+        "WAVE1-CTR-PERFORMANCE-DWP"
+      ]
     },
     {
-      "blocked_reasons": [
-        "Every member retains an UNKNOWN canonical scene problem.",
-        "No member has evidence-backed functional roles.",
-        "No unrelated same-trigger verified counterexample is registered."
-      ],
+      "blocked_reasons": [],
       "description": "Establish or restore readable geography before tighter coverage or a new state.",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
       "grouped_work_count": 13,
-      "member_count": 16,
-      "promotion_eligibility": "BLOCKED_BY_UNKNOWN",
+      "member_count": 18,
+      "promotion_eligibility": "CROSS_WORK_SUPPORTED",
       "relation_counts": {
-        "NARROWS": 16
+        "NARROWS": 17,
+        "SUPPORTS": 1
       },
       "relations": [
         {
           "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -814,6 +874,7 @@
         },
         {
           "candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-ANCHOR-EXPLANATION-WITH-VISUALIZED-PROCESS-001",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -821,6 +882,7 @@
         },
         {
           "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -828,6 +890,7 @@
         },
         {
           "candidate_rule_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C01",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -835,6 +898,7 @@
         },
         {
           "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C02",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -842,6 +906,7 @@
         },
         {
           "candidate_rule_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C01-REGISTER-ENSEMBLE-GEOMETRY-BEFORE-DISTRIBUTED-CHANGE",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -849,6 +914,7 @@
         },
         {
           "candidate_rule_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C03-SEATED-TO-STANDING-DENSITY-LEDGER",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -856,20 +922,31 @@
         },
         {
           "candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C01-SPATIAL-ROUTE-BEFORE-ANCHORED-SEATING",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
-          "scene_problem_status": "UNKNOWN",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "MARRIAGE-STORY-2019"
         },
         {
+          "candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
+          "promotion_status": "CROSS_WORK_SUPPORTED",
+          "relation": "SUPPORTS",
+          "scene_problem_status": "INFERRED",
+          "unknown_dependency_present": false,
+          "work_id": "MARRIAGE-STORY-2019"
+        },
+        {
           "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C02-EXTRA-BODY-ANCHOR-IN-CONTAINED-ALTERNATION",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
-          "scene_problem_status": "UNKNOWN",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "MR-ROBOT-S04E07"
         },
         {
           "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C03-SPATIAL-RESET-AFTER-BURST",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -877,6 +954,7 @@
         },
         {
           "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C01-REGISTER-PUBLIC-OBJECT-CONTEST-GEOMETRY",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -884,6 +962,7 @@
         },
         {
           "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C02-RETURN-THROUGH-PRIMARY-ANCHOR-AFTER-DISTINCT-LOCATION-BLOCK",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -891,6 +970,15 @@
         },
         {
           "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C01-REGISTER-PAIR-GEOMETRY-THEN-RELY-ON-STABLE-SINGLES",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
+          "relation": "NARROWS",
+          "scene_problem_status": "UNKNOWN",
+          "unknown_dependency_present": true,
+          "work_id": "THE-SOCIAL-NETWORK-2010"
+        },
+        {
+          "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -898,6 +986,7 @@
         },
         {
           "candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C03",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -905,6 +994,7 @@
         },
         {
           "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C02-PARTIAL-COMPANION-ANCHOR-IN-CONTAINED-TWO-HANDER",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -912,20 +1002,23 @@
         },
         {
           "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C03-RE-REGISTER-CONTAINED-GEOMETRY-AFTER-PARALLEL-INSERT",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "UNBELIEVABLE-S01E02"
         }
       ],
-      "verified_support_relation_ids": [],
-      "verified_unrelated_same_trigger_counterexample_ids": []
+      "verified_support_relation_ids": [
+        "WAVE1-REL-SPATIAL-TLOU"
+      ],
+      "verified_unrelated_same_trigger_counterexample_ids": [
+        "WAVE1-CTR-SPATIAL-TSN"
+      ]
     },
     {
       "blocked_reasons": [
-        "Every member retains an UNKNOWN canonical scene problem.",
-        "No member has evidence-backed functional roles.",
-        "No unrelated same-trigger verified counterexample is registered."
+        "No member has passed all evidence, boundary, confidence, and forward-test gates."
       ],
       "description": "Place cuts or reframes on a visible state change without inventing causality.",
       "family_id": "STATE-CHANGE-EDITING",
@@ -938,6 +1031,7 @@
       "relations": [
         {
           "candidate_rule_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C03-CUT-TO-VISIBLE-ENVIRONMENT-EVENT-AT-BODY-STATE-PEAK",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -945,6 +1039,7 @@
         },
         {
           "candidate_rule_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C02-REPEATED-BRIDGE-AS-ELLIPSIS-PUNCTUATION",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -952,6 +1047,7 @@
         },
         {
           "candidate_rule_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C02",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -959,6 +1055,7 @@
         },
         {
           "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -966,6 +1063,7 @@
         },
         {
           "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -973,6 +1071,7 @@
         },
         {
           "candidate_rule_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C03-CUT-ON-EPISTEMIC-STATE-CHANGE",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -984,9 +1083,7 @@
     },
     {
       "blocked_reasons": [
-        "Every member retains an UNKNOWN canonical scene problem.",
-        "No member has evidence-backed functional roles.",
-        "No unrelated same-trigger verified counterexample is registered."
+        "No member has passed all evidence, boundary, confidence, and forward-test gates."
       ],
       "description": "Control subjective or asymmetric audience access without asserting unproved semantics.",
       "family_id": "SUBJECTIVE-ACCESS-AND-INFORMATION",
@@ -999,6 +1096,7 @@
       "relations": [
         {
           "candidate_rule_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-GETOUT-C01-REGISTER-ORDINARY-RELATION-BEFORE-SUBJECTIVE-BREAK",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1006,6 +1104,7 @@
         },
         {
           "candidate_rule_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-GETOUT-C04-BRIEF-ROOM-RESET-CAN-REOPEN-SUBJECTIVE-LOOP",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1013,6 +1112,7 @@
         },
         {
           "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1024,21 +1124,20 @@
     },
     {
       "blocked_reasons": [
-        "Every member retains an UNKNOWN canonical scene problem.",
-        "No member has evidence-backed functional roles.",
-        "No unrelated same-trigger verified counterexample is registered."
+        "No member has passed all evidence, boundary, confidence, and forward-test gates."
       ],
       "description": "Carry people, direction and state through routes, apertures and thresholds.",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "grouped_work_count": 14,
-      "member_count": 19,
+      "grouped_work_count": 12,
+      "member_count": 17,
       "promotion_eligibility": "BLOCKED_BY_UNKNOWN",
       "relation_counts": {
-        "NARROWS": 19
+        "NARROWS": 17
       },
       "relations": [
         {
           "candidate_rule_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C04-DELAY-REJOIN-WITH-EMPTY-GEOMETRY-TRACE-AND-CONTACT-RECEIPT",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1046,6 +1145,7 @@
         },
         {
           "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-DOOR-THRESHOLD-EXIT-RETURN-DEPARTURE-004",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1053,6 +1153,7 @@
         },
         {
           "candidate_rule_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C03",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1060,6 +1161,7 @@
         },
         {
           "candidate_rule_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C04",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1067,6 +1169,7 @@
         },
         {
           "candidate_rule_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C03",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1074,6 +1177,7 @@
         },
         {
           "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C03",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1081,6 +1185,7 @@
         },
         {
           "candidate_rule_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-PRELOAD-ENSEMBLE-THEN-REVEAL-ENTRY-001",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1088,6 +1193,7 @@
         },
         {
           "candidate_rule_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-PUNCTUATE-LONG-AXIS-TRAVEL-002",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1095,20 +1201,15 @@
         },
         {
           "candidate_rule_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C04-SPATIAL-SPILLOVER-CARRIES-AFTERMATH-PAST-ROOM-BOUNDARY",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "KNIVES-OUT-2019"
         },
         {
-          "candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
-          "relation": "NARROWS",
-          "scene_problem_status": "UNKNOWN",
-          "unknown_dependency_present": true,
-          "work_id": "MARRIAGE-STORY-2019"
-        },
-        {
           "candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1116,6 +1217,7 @@
         },
         {
           "candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C03-READINESS-TO-DEPLOYMENT-STATE-LEDGER",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1123,20 +1225,15 @@
         },
         {
           "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C04",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "SUCCESSION-S01E06"
         },
         {
-          "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE",
-          "relation": "NARROWS",
-          "scene_problem_status": "UNKNOWN",
-          "unknown_dependency_present": true,
-          "work_id": "THE-SOCIAL-NETWORK-2010"
-        },
-        {
           "candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C01",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1144,6 +1241,7 @@
         },
         {
           "candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C04",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1151,6 +1249,7 @@
         },
         {
           "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C01-WAYPOINT-REGISTERED-MOBILE-GEOGRAPHY",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1158,6 +1257,7 @@
         },
         {
           "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C02-THRESHOLD-AS-STATE-CHECKPOINT",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1165,6 +1265,7 @@
         },
         {
           "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C01-APPROACH-TO-CONTAINER-STATE-HANDOFF",
+          "promotion_status": "BLOCKED_BY_UNKNOWN",
           "relation": "NARROWS",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1177,5 +1278,5 @@
   ],
   "family_count": 16,
   "schema_version": "cross-work-support-matrix/0.1",
-  "status": "NO_RULE_PROMOTED"
+  "status": "RUNTIME_RULES_AVAILABLE"
 }

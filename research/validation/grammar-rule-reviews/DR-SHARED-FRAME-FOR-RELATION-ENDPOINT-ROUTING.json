@@ -1,0 +1,33 @@
+{
+  "candidate_required_story_facts": [
+    "The project-original relation distance or body level changes in continuous present time.",
+    "The transition path and two-person endpoint must both be visible.",
+    "Contact is not inferred unless separately locked."
+  ],
+  "candidate_trigger": "A relationship-relevant distance or level change happens in continuous present time and both its path and shared endpoint are locked visible facts.",
+  "promotion_source_candidate_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C02-DELAY-TIGHT-SHARED-FRAME-UNTIL-DISTANCE-CHANGES",
+  "review_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT-ROUTING-REVIEW",
+  "routing": {
+    "audit_subject_tags": [],
+    "conflicts_with": [],
+    "not_applicable_if_any": [
+      "elliptical_time_change"
+    ],
+    "required_fact_types": [
+      "distance_change",
+      "relation_endpoint"
+    ],
+    "scene_problems": [
+      "ROMANTIC_PROXIMITY"
+    ],
+    "trigger_all_of": [
+      "relation_distance_change",
+      "continuous_present_time",
+      "shared_endpoint_required"
+    ],
+    "trigger_any_of": []
+  },
+  "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+  "schema_version": "director-grammar-routing-review/0.1",
+  "status": "ROOT_VIDEO_VERIFIED"
+}

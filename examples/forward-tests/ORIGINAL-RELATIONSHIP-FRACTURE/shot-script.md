@@ -2,14 +2,14 @@
 
 - 来源：`examples/forward-tests/ORIGINAL-RELATIONSHIP-FRACTURE/locked-script.md`
 - 状态：`HUMAN_REVIEW_PENDING`
-- 规格：16:9｜目标 15 秒
+- 规格：16:9｜目标 18 秒
 - 执行媒介：`AI_PHOTOREAL_HUMAN`
 - 生成授权：`false`
 - 视觉风格包：`None`
 
 > 本文由Director IR确定性渲染；JSON是单一事实源。原剧本对白和可见文字保持锁定。
 
-## EP01-SC01｜The Removed Name Card｜15秒
+## EP01-SC01｜The Removed Name Card｜18秒
 
 **场景目标：** show a final attempt at repair fail
 
@@ -21,7 +21,7 @@
 |---|---:|---|---|---|---|---|---|---|---|
 | EP01-SC01-SH01 | 5 | Partner A leaves a blank name card at the shared model as an invitation to continue. | project-original coverage<br>START: stable view before the listed beat<br>PATH: LOCKED / NONE / NONE / NONE<br>END: stable view after the listed beat | Partner A aligns the blank card with the two occupied work positions.<br>Partner A aligns the blank card with the two occupied work positions. | — | AUDIO: PROJECT_ORIGINAL_ONLY<br>IN: cut on the prior locked state<br>OUT: cut after the new locked state is readable | BASE: AI_VIDEO<br>POST: —<br>STATE: —<br>REF: SHOT_GOLDEN/PLANNED | — | 摄LOW/表LOW/连MEDIUM |
 | EP01-SC01-SH02 | 5 | Partner B returns the blank card without adding a name. | project-original coverage<br>START: stable view before the listed beat<br>PATH: LOCKED / NONE / NONE / NONE<br>END: stable view after the listed beat | Partner B slides the untouched card back across the work surface.<br>Partner B slides the untouched card back across the work surface. | — | AUDIO: PROJECT_ORIGINAL_ONLY<br>IN: cut on the prior locked state<br>OUT: cut after the new locked state is readable | BASE: AI_VIDEO<br>POST: —<br>STATE: —<br>REF: NONE/NOT_REQUIRED | — | 摄LOW/表LOW/连MEDIUM |
-| EP01-SC01-SH03 | 5 | Partner B removes their tools and exits while Partner A remains at the model. | project-original coverage<br>START: stable view before the listed beat<br>PATH: LOCKED / NONE / NONE / NONE<br>END: stable view after the listed beat | Partner B takes one tool case and leaves; Partner A does not follow.<br>Partner B takes one tool case and leaves; Partner A does not follow. | — | AUDIO: PROJECT_ORIGINAL_ONLY<br>IN: cut on the prior locked state<br>OUT: cut after the new locked state is readable | BASE: AI_VIDEO<br>POST: —<br>STATE: —<br>REF: NONE/NOT_REQUIRED | — | 摄LOW/表LOW/连MEDIUM |
+| EP01-SC01-SH03 | 8 | Partner B removes their tools and exits while Partner A remains at the model. | project-original shared relation reset<br>START: stable view before the listed beat<br>PATH: LOCKED / NONE / NONE / NONE<br>END: stable view after the listed beat | Keep Partner A at the model while Partner B crosses from the shared position to the exit within the same readable relation frame.<br>Partner B takes one tool case and leaves; Partner A does not follow. | — | AUDIO: PROJECT_ORIGINAL_ONLY<br>IN: enter before the zone crossing begins<br>OUT: cut after the new two-person distance and exit endpoint read | BASE: AI_VIDEO<br>POST: —<br>STATE: —<br>REF: NONE/NOT_REQUIRED | DR-RELATION-RESET-AFTER-SPATIAL-CHANGE | 摄LOW/表LOW/连MEDIUM |
 
 **场景结束状态：** the final locked beat positions
 

@@ -72,6 +72,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C01-HOLD-SUBJECT-THEN-SEPARATE-THREAT-STATES-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -231,6 +232,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C02-GROUP-PARALLEL-THREADS-BY-VISIBLE-STATE-CHANGE-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -411,6 +413,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C03-CUT-TO-VISIBLE-ENVIRONMENT-EVENT-AT-BODY-STATE-PEAK-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -570,6 +573,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C04-DELAY-REJOIN-WITH-EMPTY-GEOMETRY-TRACE-AND-CONTACT-RECEIPT-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -728,6 +732,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C01-ASSESSMENT-RECEIVER-TO-NEW-ROOM-ACTION-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -889,6 +894,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C02-SOURCED-MATERIAL-FIELD-BEFORE-SELECTION-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -1045,6 +1051,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -1199,6 +1206,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C04-DEMONSTRATION-TO-DISTRIBUTED-WORK-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -1353,6 +1361,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-DELAYED-OBSERVER-003-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -1509,6 +1518,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-MICRO-BRACKET-HOLD-002-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -1669,6 +1679,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-MOBILE-ZONE-CAP-004-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -1822,6 +1833,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-PRIDE-LADDER-001-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -1990,6 +2002,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -2143,6 +2156,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -2296,6 +2310,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "BEAR-S01E07-REVIEW-001-BEAR-C03-SUBTRACTIVE-AFTERMATH-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -2449,6 +2464,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "BEAR-S01E07-REVIEW-001-BEAR-C04-FUNCTIONAL-LONG-TAKE-FALLBACK-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -2602,6 +2618,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C01-COMPETENCE-CLOSED-LOOP-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -2868,6 +2885,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C02-VERSIONED-OBJECT-HANDOFF-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -3036,6 +3054,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C03-DUAL-RESULT-RECEIPT-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -3231,6 +3250,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C04-TASK-LEDGER-OVER-CAMERA-CONTINUITY-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -3497,6 +3517,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C01-REGISTER-PUBLIC-PROOF-GEOMETRY-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -3753,6 +3774,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C02-SEPARATE-OBJECT-STATE-FROM-CAUSAL-CLAIM-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -3928,6 +3950,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C03-SUSTAIN-CONTESTED-PERSON-SCREEN-OWNERSHIP-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -4082,6 +4105,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C04-HIERARCHICAL-RECEIPT-AFTER-SINGLE-OWNER-TURN-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -4242,6 +4266,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C01-REGISTER-ROOM-AXIS-BEFORE-PROXIMITY-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -4296,11 +4321,16 @@
         "surface_copy_allowed": false
       },
       "scene_problem": {
-        "lineage_label": "ROMANTIC_PROXIMITY",
-        "primary": "LEGACY_SCENE_PROBLEM",
+        "lineage_label": "LEGACY_SCENE_PROBLEM",
+        "primary": "ROMANTIC_PROXIMITY",
         "secondary": [],
-        "source_refs": [],
-        "status": "UNKNOWN"
+        "source_refs": [
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-TA-WAVE1-001"
+        ],
+        "status": "INFERRED"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -4332,40 +4362,64 @@
         "audio": true,
         "functional_roles": true,
         "natural_scene_boundary": true,
-        "scene_problem": true
+        "scene_problem": false
       }
     },
     {
       "applicability_evidence": {
-        "notes": "No natural-scene non-applicability boundary is authorized before human review.",
-        "source_refs": [],
-        "status": "UNKNOWN"
+        "notes": "The canonical natural scene has picture-observed start and end boundaries.",
+        "source_refs": [
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S041"
+        ],
+        "status": "VERIFIED"
       },
       "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C02-DELAY-TIGHT-SHARED-FRAME-UNTIL-DISTANCE-CHANGES",
       "canonical_rule_family": "PROXIMITY-AND-RELATION-GEOMETRY",
       "confidence": {
-        "execution": "UNKNOWN",
-        "transfer": "UNKNOWN",
-        "within_source": "UNKNOWN"
+        "execution": "MEDIUM",
+        "transfer": "MEDIUM",
+        "within_source": "HIGH"
       },
       "counterexamples": [
         {
-          "counterexample_id": null,
-          "evidence_id": null,
-          "notes": "COUNTEREXAMPLE UNKNOWN; different-trigger boundary: TSN-C02-VARY-HOLD-LENGTH-WITHIN-FIXED-ANGLE-GRAMMAR in THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001 retains fixed-angle alternation because no mid-scene body-distance compression is its central visible event. Same-trigger contrary evidence remains pending.",
+          "counterexample_id": "WAVE1-CTR-PROXIMITY-CK",
+          "evidence_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+          "notes": "The relation distance changes across editorial time ellipsis, so only the terminal shared geometry should be shown; a continuous approach would invent an event.",
           "relation": "NARROWS",
-          "review_id": null,
-          "review_ref": null,
-          "review_status": "NOT_REVIEWED",
-          "same_trigger_status": "DIFFERENT_TRIGGER",
-          "source_candidate_rule_id": null,
-          "source_refs": [],
-          "status": "BOUNDARY_ONLY",
-          "work_id": null
+          "review_id": "WAVE1-CTR-PROXIMITY-CK-REVIEW",
+          "review_ref": "research/validation/relation-reviews/WAVE1-CTR-PROXIMITY-CK.json",
+          "review_status": "ROOT_VIDEO_VERIFIED",
+          "same_trigger_status": "VERIFIED_SAME_TRIGGER",
+          "source_candidate_rule_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C03-WITHDRAW-SHARED-FRAME-DELAY-DISTANCE-REVEAL",
+          "source_refs": [
+            "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S001",
+            "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026",
+            "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027"
+          ],
+          "status": "VERIFIED",
+          "work_id": "CITIZEN-KANE-1941"
         }
       ],
       "family_assignment_status": "ROOT_REVIEWED_TEXTUAL_CLUSTER",
-      "functional_roles": [],
+      "functional_roles": [
+        {
+          "appearance_id": "P-B",
+          "functional_role": "proximity_mover",
+          "source_refs": [
+            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024"
+          ],
+          "status": "INFERRED"
+        },
+        {
+          "appearance_id": "P-A",
+          "functional_role": "relation_anchor",
+          "source_refs": [
+            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024"
+          ],
+          "status": "INFERRED"
+        }
+      ],
       "legacy_lineage": {
         "ai_risk": "camera=HIGH: scale changes from registered room singles to tight shared profiles; performance=CRITICAL: two face/mouth/head-height progressions and one approach; continuity=CRITICAL: eyelines, foreground occlusion, identity and distance states across scales",
         "applicability": "Two-person scenes where physical distance becomes more informative than new room geography",
@@ -4386,54 +4440,61 @@
       "operational_contract": {
         "ai_risk": {
           "camera": {
-            "level": "UNKNOWN",
+            "level": "HIGH",
             "reasons": [
-              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+              "A shared approach can produce scale, axis, or collision drift."
             ]
           },
           "continuity": {
-            "level": "UNKNOWN",
+            "level": "HIGH",
             "reasons": [
-              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+              "Start and end distances, body levels, and no-contact state must remain consistent."
             ]
           },
           "performance": {
-            "level": "UNKNOWN",
+            "level": "MEDIUM",
             "reasons": [
-              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+              "Timing the stop and mutual awareness without added contact is delicate."
             ]
           }
         },
         "applicable_when": [
-          "No applicability condition is authorized before human review."
+          "The continuous path, not merely the terminal spacing, carries required relation information."
         ],
+        "audio_dependency": false,
         "audio_logic": {
-          "claim_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C02-DELAY-TIGHT-SHARED-FRAME-UNTIL-DISTANCE-CHANGES-AUDIO",
-          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+          "claim_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT-AUDIO",
+          "notes": "audio_dependency=false; semantic source audio remains unknown and is outside this rule.",
           "source_refs": [],
           "status": "UNKNOWN",
-          "value": "Pending human review; audio remains unknown and no audio instruction is authorized."
+          "value": "This visual rule has no audio instruction or audio-dependent trigger."
         },
-        "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
-        "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
-        "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
-        "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
-        "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+        "blocking": "Use a project-original route with a fixed relation anchor and a visible stop; do not add contact or surface imitation.",
+        "continuity": "Preserve axis, start distance, route direction, end distance, level, and the no-contact boundary when locked.",
+        "coverage": "Begin with readable two-person geometry, carry the approach or level change in shared coverage, then hold the endpoint.",
+        "director_decision": "Register the initial zones, show the change in shared or continuous relation coverage, and hold the shared endpoint before isolating faces.",
+        "edit_logic": "Avoid cutting over the critical relation transition; cut after the endpoint reads or use one continuous shared shot.",
         "failure_modes": [
-          "Applying this migrated lineage row as an operational rule before human review."
+          "Tight coverage hides the relation-change path.",
+          "A continuous approach is fabricated for an elliptical change.",
+          "Unspecified contact is added at the endpoint."
         ],
         "fallback": {
-          "camera": null,
-          "continuity": null,
-          "performance": null,
+          "camera": "Use a locked project-original shared wide with marked start and end positions instead of a moving camera.",
+          "continuity": "Render separate project-original start and endpoint plates and cut only after each geometry is readable.",
+          "performance": "Use one simple approach and a clear stop, with no contact unless the project-original facts require it.",
           "project_original_only": true
         },
         "not_applicable_when": [
-          "No non-applicability boundary is authorized before human review."
+          "The distance change occurs across time ellipsis or only the terminal geometry is story-critical."
         ],
-        "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
-        "required_story_facts": [],
-        "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration."
+        "pacing": "Delay tight isolated coverage until the continuous distance change and endpoint have both registered.",
+        "required_story_facts": [
+          "The project-original relation distance or body level changes in continuous present time.",
+          "The transition path and two-person endpoint must both be visible.",
+          "Contact is not inferred unless separately locked."
+        ],
+        "trigger": "A relationship-relevant distance or level change happens in continuous present time and both its path and shared endpoint are locked visible facts."
       },
       "promotion": {
         "human_director_review": {
@@ -4441,31 +4502,45 @@
           "source_ref": null,
           "status": "NOT_APPROVED"
         },
-        "original_forward_test_count": 0,
-        "original_forward_tests": [],
-        "reasons": [
-          "Canonical scene problem remains UNKNOWN.",
-          "No evidence-backed functional role is available.",
-          "Within-source, transfer and execution confidence remain UNKNOWN.",
-          "No unrelated same-trigger verified counterexample is registered."
+        "original_forward_test_count": 2,
+        "original_forward_tests": [
+          {
+            "source_ref": "examples/forward-tests/ORIGINAL-PROXIMITY-TENSION",
+            "status": "PASS",
+            "test_case_id": "ORIGINAL-PROXIMITY-TENSION"
+          },
+          {
+            "source_ref": "examples/forward-tests/ORIGINAL-PROXIMITY-ELLIPSIS",
+            "status": "PASS",
+            "test_case_id": "ORIGINAL-PROXIMITY-ELLIPSIS"
+          }
         ],
-        "status": "BLOCKED_BY_UNKNOWN",
-        "unknown_dependency_present": true,
-        "verified_same_trigger_counterexample_count": 0,
-        "verified_support_work_count": 1
+        "reasons": [
+          "Fresh picture review verifies the source mechanism, unrelated support, and a same-trigger boundary case.",
+          "Two project-original packages verify positive selection and non-applicability routing while creative review remains pending."
+        ],
+        "status": "CROSS_WORK_SUPPORTED",
+        "unknown_dependency_present": false,
+        "verified_same_trigger_counterexample_count": 1,
+        "verified_support_work_count": 2
       },
-      "relation_to_family": "NARROWS",
+      "relation_to_family": "SUPPORTS",
       "rights_boundary": {
         "evidence_lineage_only": true,
-        "runtime_authorized": false,
+        "runtime_authorized": true,
         "surface_copy_allowed": false
       },
       "scene_problem": {
-        "lineage_label": "ROMANTIC_PROXIMITY",
-        "primary": "LEGACY_SCENE_PROBLEM",
+        "lineage_label": "LEGACY_SCENE_PROBLEM",
+        "primary": "ROMANTIC_PROXIMITY",
         "secondary": [],
-        "source_refs": [],
-        "status": "UNKNOWN"
+        "source_refs": [
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-TA-WAVE1-001"
+        ],
+        "status": "INFERRED"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -4501,16 +4576,36 @@
         "source_candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C02-DELAY-TIGHT-SHARED-FRAME-UNTIL-DISTANCE-CHANGES",
         "source_method_ids": [
           "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-LEGACY-PICTURE-REVIEW",
-          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-STRUCTURAL-CONVERSION"
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-STRUCTURAL-CONVERSION",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-WAVE1-PICTURE-REVIEW"
         ],
         "work_id": "BRIDGERTON-S02E05"
       },
-      "supporting_relations": [],
+      "supporting_relations": [
+        {
+          "evidence_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+          "notes": "A visible level change resolves into shared two-person proximity coverage and a held endpoint.",
+          "relation": "SUPPORTS",
+          "relation_id": "WAVE1-REL-PROXIMITY-MS",
+          "review_id": "WAVE1-REL-PROXIMITY-MS-REVIEW",
+          "review_ref": "research/validation/relation-reviews/WAVE1-REL-PROXIMITY-MS.json",
+          "review_status": "ROOT_VIDEO_VERIFIED",
+          "same_trigger_status": "VERIFIED_SAME_TRIGGER",
+          "source_candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C04-LATE-HOLDS-NEED-VISIBLE-LEVEL-AND-PROXIMITY-ENDPOINTS",
+          "source_refs": [
+            "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S082",
+            "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S083",
+            "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085"
+          ],
+          "status": "VERIFIED",
+          "work_id": "MARRIAGE-STORY-2019"
+        }
+      ],
       "unknown_dependencies": {
-        "audio": true,
-        "functional_roles": true,
-        "natural_scene_boundary": true,
-        "scene_problem": true
+        "audio": false,
+        "functional_roles": false,
+        "natural_scene_boundary": false,
+        "scene_problem": false
       }
     },
     {
@@ -4585,6 +4680,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C03-KEEP-HAND-SOURCE-HEAD-RELATION-AND-WITHDRAWAL-READABLE-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -4639,11 +4735,16 @@
         "surface_copy_allowed": false
       },
       "scene_problem": {
-        "lineage_label": "ROMANTIC_PROXIMITY",
-        "primary": "LEGACY_SCENE_PROBLEM",
+        "lineage_label": "LEGACY_SCENE_PROBLEM",
+        "primary": "ROMANTIC_PROXIMITY",
         "secondary": [],
-        "source_refs": [],
-        "status": "UNKNOWN"
+        "source_refs": [
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-TA-WAVE1-001"
+        ],
+        "status": "INFERRED"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -4668,7 +4769,7 @@
         "audio": true,
         "functional_roles": true,
         "natural_scene_boundary": true,
-        "scene_problem": true
+        "scene_problem": false
       }
     },
     {
@@ -4743,6 +4844,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C04-DECOMPRESS-THROUGH-SINGLES-AND-ROOM-RESET-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -4797,11 +4899,16 @@
         "surface_copy_allowed": false
       },
       "scene_problem": {
-        "lineage_label": "ROMANTIC_PROXIMITY",
-        "primary": "LEGACY_SCENE_PROBLEM",
+        "lineage_label": "LEGACY_SCENE_PROBLEM",
+        "primary": "ROMANTIC_PROXIMITY",
         "secondary": [],
-        "source_refs": [],
-        "status": "UNKNOWN"
+        "source_refs": [
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-TA-WAVE1-001"
+        ],
+        "status": "INFERRED"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -4833,7 +4940,7 @@
         "audio": true,
         "functional_roles": true,
         "natural_scene_boundary": true,
-        "scene_problem": true
+        "scene_problem": false
       }
     },
     {
@@ -4908,6 +5015,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-ANCHOR-EXPLANATION-WITH-VISUALIZED-PROCESS-001-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -5150,6 +5258,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-READOUT-RECEIVER-GROUP-CASCADE-002-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -5361,6 +5470,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-RETURN-TO-FORMAL-ROOM-AFTER-PEAK-004-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -5530,6 +5640,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-SCALE-LADDER-BEFORE-PHYSICAL-PEAK-003-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -5713,6 +5824,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-APERTURE-EVENT-BEFORE-GROSS-BODY-RESPONSE-002-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -5866,6 +5978,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -6019,6 +6132,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CARRY-SURFACE-BODY-STATE-THROUGH-VEHICLE-REVERSAL-003-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -6172,6 +6286,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-DOOR-THRESHOLD-EXIT-RETURN-DEPARTURE-004-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -6325,6 +6440,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C01-INVARIANT-SPACE-MULTICHANNEL-DELTA-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -6484,6 +6600,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C02-REPEATED-BRIDGE-AS-ELLIPSIS-PUNCTUATION-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -6641,6 +6758,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C03-WITHDRAW-SHARED-FRAME-DELAY-DISTANCE-REVEAL-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -6820,6 +6938,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C04-PARALLEL-PROP-BARRIER-CLOSURE-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -6974,6 +7093,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C01-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -7156,6 +7276,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C02-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -7332,6 +7453,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C03-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -7509,6 +7631,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C04-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -7679,6 +7802,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C01-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -7862,6 +7986,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C02-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -8076,6 +8201,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C03-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -8307,6 +8433,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C04-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -8499,6 +8626,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C01-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -8652,6 +8780,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C02-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -8805,6 +8934,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C03-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -8958,6 +9088,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C04-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -9111,6 +9242,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-GETOUT-C01-REGISTER-ORDINARY-RELATION-BEFORE-SUBJECTIVE-BREAK-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -9309,6 +9441,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-GETOUT-C02-TREAT-RECURRING-HANDLED-OBJECT-AS-STATE-CUE-NOT-CAUSAL-PROOF-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -9469,6 +9602,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-GETOUT-C03-CONTINUOUS-TRANSFORM-THEN-SEGMENT-SUBJECTIVE-SCALE-STATES-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -9633,6 +9767,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-GETOUT-C04-BRIEF-ROOM-RESET-CAN-REOPEN-SUBJECTIVE-LOOP-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -9802,6 +9937,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-MAKE-ASSISTANCE-AND-OBJECT-STATES-COMPLETE-003-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -9967,6 +10103,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-PRELOAD-ENSEMBLE-THEN-REVEAL-ENTRY-001-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -10132,6 +10269,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-PUNCTUATE-LONG-AXIS-TRAVEL-002-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -10308,6 +10446,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-SEATED-ANCHOR-THEN-SELECTIVE-RECEIPT-004-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -10486,6 +10625,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C01-REGISTER-ENSEMBLE-GEOMETRY-BEFORE-DISTRIBUTED-CHANGE-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -10723,6 +10863,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C02-DISTRIBUTE-SCREEN-OWNERSHIP-WHEN-BODIES-DIVERGE-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -10925,6 +11066,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C03-SEATED-TO-STANDING-DENSITY-LEDGER-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -11104,6 +11246,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C04-SPATIAL-SPILLOVER-CARRIES-AFTERMATH-PAST-ROOM-BOUNDARY-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -11287,6 +11430,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C01-SPATIAL-ROUTE-BEFORE-ANCHORED-SEATING-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -11341,11 +11485,16 @@
         "surface_copy_allowed": false
       },
       "scene_problem": {
-        "lineage_label": "RELATIONSHIP_FRACTURE",
-        "primary": "LEGACY_SCENE_PROBLEM",
+        "lineage_label": "LEGACY_SCENE_PROBLEM",
+        "primary": "RELATIONSHIP_FRACTURE",
         "secondary": [],
-        "source_refs": [],
-        "status": "UNKNOWN"
+        "source_refs": [
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-TA-WAVE1-001"
+        ],
+        "status": "INFERRED"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -11372,7 +11521,7 @@
         "audio": true,
         "functional_roles": true,
         "natural_scene_boundary": true,
-        "scene_problem": true
+        "scene_problem": false
       }
     },
     {
@@ -11447,6 +11596,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C02-STABLE-SEAT-ANCHORS-CARRY-DENSE-ALTERNATION-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -11501,11 +11651,16 @@
         "surface_copy_allowed": false
       },
       "scene_problem": {
-        "lineage_label": "RELATIONSHIP_FRACTURE",
-        "primary": "LEGACY_SCENE_PROBLEM",
+        "lineage_label": "LEGACY_SCENE_PROBLEM",
+        "primary": "RELATIONSHIP_FRACTURE",
         "secondary": [],
-        "source_refs": [],
-        "status": "UNKNOWN"
+        "source_refs": [
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-TA-WAVE1-001"
+        ],
+        "status": "INFERRED"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -11564,40 +11719,63 @@
         "audio": true,
         "functional_roles": true,
         "natural_scene_boundary": true,
-        "scene_problem": true
+        "scene_problem": false
       }
     },
     {
       "applicability_evidence": {
-        "notes": "No natural-scene non-applicability boundary is authorized before human review.",
-        "source_refs": [],
-        "status": "UNKNOWN"
+        "notes": "The canonical natural scene has picture-observed start and end boundaries.",
+        "source_refs": [
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S001",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085"
+        ],
+        "status": "VERIFIED"
       },
       "candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
-      "canonical_rule_family": "THRESHOLD-AND-ROUTE-CONTINUITY",
+      "canonical_rule_family": "SPATIAL-REGISTRATION-AND-RESET",
       "confidence": {
-        "execution": "UNKNOWN",
-        "transfer": "UNKNOWN",
-        "within_source": "UNKNOWN"
+        "execution": "MEDIUM",
+        "transfer": "MEDIUM",
+        "within_source": "HIGH"
       },
       "counterexamples": [
         {
-          "counterexample_id": null,
-          "evidence_id": null,
-          "notes": "COUNTEREXAMPLE UNKNOWN: same-trigger contrary source pending. Boundary / within-source exception: MS-APT-S050-MS-APT-S058 repeatedly return to simple singles after the visible level change, so movement does not eliminate static coverage",
-          "relation": "UNKNOWN",
-          "review_id": null,
-          "review_ref": null,
-          "review_status": "NOT_REVIEWED",
-          "same_trigger_status": "UNKNOWN",
-          "source_candidate_rule_id": null,
-          "source_refs": [],
-          "status": "UNKNOWN",
-          "work_id": null
+          "counterexample_id": "WAVE1-CTR-SPATIAL-TSN",
+          "evidence_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
+          "notes": "The second occupancy change occurs after the counterpart is absent, so a fixed room anchor makes another relation reset unnecessary.",
+          "relation": "NARROWS",
+          "review_id": "WAVE1-CTR-SPATIAL-TSN-REVIEW",
+          "review_ref": "research/validation/relation-reviews/WAVE1-CTR-SPATIAL-TSN.json",
+          "review_status": "ROOT_VIDEO_VERIFIED",
+          "same_trigger_status": "VERIFIED_SAME_TRIGGER",
+          "source_candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE",
+          "source_refs": [
+            "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S090",
+            "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091"
+          ],
+          "status": "VERIFIED",
+          "work_id": "THE-SOCIAL-NETWORK-2010"
         }
       ],
       "family_assignment_status": "ROOT_REVIEWED_TEXTUAL_CLUSTER",
-      "functional_roles": [],
+      "functional_roles": [
+        {
+          "appearance_id": "P-B",
+          "functional_role": "spatial_mover",
+          "source_refs": [
+            "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059"
+          ],
+          "status": "INFERRED"
+        },
+        {
+          "appearance_id": "P-A",
+          "functional_role": "relation_anchor",
+          "source_refs": [
+            "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059"
+          ],
+          "status": "INFERRED"
+        }
+      ],
       "legacy_lineage": {
         "ai_risk": "camera=CRITICAL for long reframing and multi-zone route coverage; performance=HIGH for coordinated body endpoints; continuity=CRITICAL for subject identity, changing backgrounds, foreground layers, hands, objects and route endpoints",
         "applicability": "Two-person interiors where locked-script movement changes geography or visible relation state and deserves more than isolated static singles",
@@ -11618,54 +11796,59 @@
       "operational_contract": {
         "ai_risk": {
           "camera": {
-            "level": "UNKNOWN",
+            "level": "HIGH",
             "reasons": [
-              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+              "Continuous reframing across a zone change can distort scale or axis."
             ]
           },
           "continuity": {
-            "level": "UNKNOWN",
+            "level": "HIGH",
             "reasons": [
-              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+              "The mover, counterpart, and destination zone can drift across coverage."
             ]
           },
           "performance": {
-            "level": "UNKNOWN",
+            "level": "MEDIUM",
             "reasons": [
-              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+              "Body-level and route endpoints can be underspecified or mistimed."
             ]
           }
         },
         "applicable_when": [
-          "No applicability condition is authorized before human review."
+          "The spatial change and its two-person endpoint both occur in continuous present time."
         ],
+        "audio_dependency": false,
         "audio_logic": {
-          "claim_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP-AUDIO",
-          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+          "claim_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE-AUDIO",
+          "notes": "audio_dependency=false; semantic source audio remains unknown and is outside this rule.",
           "source_refs": [],
           "status": "UNKNOWN",
-          "value": "Pending human review; audio remains unknown and no audio instruction is authorized."
+          "value": "This visual rule has no audio instruction or audio-dependent trigger."
         },
-        "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
-        "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
-        "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
-        "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
-        "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+        "blocking": "Let the mover cross the project-original zone while the relation anchor remains readable; do not hide the new relation behind an isolated insert.",
+        "continuity": "Preserve screen side, route direction, source zone, destination zone, and the counterpart's relation anchor.",
+        "coverage": "Use a shared transition or relation-reset frame that contains the mover, counterpart, and changed endpoint.",
+        "director_decision": "Show the spatial change or its endpoint in shared or continuously reframed relation coverage before returning to isolated coverage.",
+        "edit_logic": "Place the return to isolated coverage after the relation endpoint is visible, not during the unregistered spatial change.",
         "failure_modes": [
-          "Applying this migrated lineage row as an operational rule before human review."
+          "Returning to singles before the changed relation is visible.",
+          "Adding a relation reset after the counterpart has left and the fixed room anchor already explains the movement."
         ],
         "fallback": {
-          "camera": null,
-          "continuity": null,
-          "performance": null,
+          "camera": "Use a locked project-original wide that contains source and destination zones instead of a moving reset.",
+          "continuity": "Insert a neutral project-original room map showing both screen sides and the destination zone before resuming singles.",
+          "performance": "Split the movement into a clear start pose and destination pose with one simple crossing action.",
           "project_original_only": true
         },
         "not_applicable_when": [
-          "No non-applicability boundary is authorized before human review."
+          "The counterpart is already absent and the remaining movement is readable against a fixed room anchor."
         ],
-        "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
-        "required_story_facts": [],
-        "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration."
+        "pacing": "Hold the reset until the changed level, zone, or distance reads, then resume singles.",
+        "required_story_facts": [
+          "A participant changes level, zone, or distance enough to invalidate the prior relation frame.",
+          "The changed relation to a present counterpart remains story-critical."
+        ],
+        "trigger": "A body-level, zone, or distance change invalidates the prior relation geometry while the counterpart relation remains a locked visible fact."
       },
       "promotion": {
         "human_director_review": {
@@ -11673,31 +11856,45 @@
           "source_ref": null,
           "status": "NOT_APPROVED"
         },
-        "original_forward_test_count": 0,
-        "original_forward_tests": [],
-        "reasons": [
-          "Canonical scene problem remains UNKNOWN.",
-          "No evidence-backed functional role is available.",
-          "Within-source, transfer and execution confidence remain UNKNOWN.",
-          "No unrelated same-trigger verified counterexample is registered."
+        "original_forward_test_count": 2,
+        "original_forward_tests": [
+          {
+            "source_ref": "examples/forward-tests/ORIGINAL-RELATIONSHIP-FRACTURE",
+            "status": "PASS",
+            "test_case_id": "ORIGINAL-RELATIONSHIP-FRACTURE"
+          },
+          {
+            "source_ref": "examples/forward-tests/ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
+            "status": "PASS",
+            "test_case_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART"
+          }
         ],
-        "status": "BLOCKED_BY_UNKNOWN",
-        "unknown_dependency_present": true,
-        "verified_same_trigger_counterexample_count": 0,
-        "verified_support_work_count": 1
+        "reasons": [
+          "Fresh picture review verifies the source mechanism, unrelated support, and a same-trigger boundary case.",
+          "Two project-original packages verify positive selection and non-applicability routing while creative review remains pending."
+        ],
+        "status": "CROSS_WORK_SUPPORTED",
+        "unknown_dependency_present": false,
+        "verified_same_trigger_counterexample_count": 1,
+        "verified_support_work_count": 2
       },
-      "relation_to_family": "NARROWS",
+      "relation_to_family": "SUPPORTS",
       "rights_boundary": {
         "evidence_lineage_only": true,
-        "runtime_authorized": false,
+        "runtime_authorized": true,
         "surface_copy_allowed": false
       },
       "scene_problem": {
-        "lineage_label": "RELATIONSHIP_FRACTURE",
-        "primary": "LEGACY_SCENE_PROBLEM",
+        "lineage_label": "LEGACY_SCENE_PROBLEM",
+        "primary": "RELATIONSHIP_FRACTURE",
         "secondary": [],
-        "source_refs": [],
-        "status": "UNKNOWN"
+        "source_refs": [
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-TA-WAVE1-001"
+        ],
+        "status": "INFERRED"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -11729,16 +11926,35 @@
         "source_candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
         "source_method_ids": [
           "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-LEGACY-PICTURE-REVIEW",
-          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-STRUCTURAL-CONVERSION"
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-STRUCTURAL-CONVERSION",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-WAVE1-PICTURE-REVIEW"
         ],
         "work_id": "MARRIAGE-STORY-2019"
       },
-      "supporting_relations": [],
+      "supporting_relations": [
+        {
+          "evidence_id": "TLOU-BEDROOM-LOCAL-001",
+          "notes": "A shared seated-to-standing change is followed by standing coverage and a renewed shared relation.",
+          "relation": "SUPPORTS",
+          "relation_id": "WAVE1-REL-SPATIAL-TLOU",
+          "review_id": "WAVE1-REL-SPATIAL-TLOU-REVIEW",
+          "review_ref": "research/validation/relation-reviews/WAVE1-REL-SPATIAL-TLOU.json",
+          "review_status": "ROOT_VIDEO_VERIFIED",
+          "same_trigger_status": "VERIFIED_SAME_TRIGGER",
+          "source_candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C03",
+          "source_refs": [
+            "TLOU-BEDROOM-LOCAL-001-S015",
+            "TLOU-BEDROOM-LOCAL-001-S019"
+          ],
+          "status": "VERIFIED",
+          "work_id": "THE-LAST-OF-US-S01E06"
+        }
+      ],
       "unknown_dependencies": {
-        "audio": true,
-        "functional_roles": true,
-        "natural_scene_boundary": true,
-        "scene_problem": true
+        "audio": false,
+        "functional_roles": false,
+        "natural_scene_boundary": false,
+        "scene_problem": false
       }
     },
     {
@@ -11813,6 +12029,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C04-LATE-HOLDS-NEED-VISIBLE-LEVEL-AND-PROXIMITY-ENDPOINTS-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -11867,11 +12084,16 @@
         "surface_copy_allowed": false
       },
       "scene_problem": {
-        "lineage_label": "RELATIONSHIP_FRACTURE",
-        "primary": "LEGACY_SCENE_PROBLEM",
+        "lineage_label": "LEGACY_SCENE_PROBLEM",
+        "primary": "RELATIONSHIP_FRACTURE",
         "secondary": [],
-        "source_refs": [],
-        "status": "UNKNOWN"
+        "source_refs": [
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-TA-WAVE1-001"
+        ],
+        "status": "INFERRED"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -11905,7 +12127,7 @@
         "audio": true,
         "functional_roles": true,
         "natural_scene_boundary": true,
-        "scene_problem": true
+        "scene_problem": false
       }
     },
     {
@@ -11980,6 +12202,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C01-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -12167,6 +12390,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C02-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -12322,6 +12546,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C03-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -12479,6 +12704,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C04-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -12645,6 +12871,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-CONTRACT-EXPAND-DISTANCE-WITH-MINIMAL-ACTION-003-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -12832,6 +13059,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-OBJECT-INSERT-THEN-FACE-RETURN-004-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -12988,6 +13216,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-SCRIPT-VERIFIED-TASK-BUFFER-002-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -13164,6 +13393,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-SEPARATED-ZONES-BEFORE-SHARED-DISTANCE-001-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -13335,6 +13565,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C01-DETAIL-THEN-CONTAINER-REGISTER-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -13389,11 +13620,16 @@
         "surface_copy_allowed": false
       },
       "scene_problem": {
-        "lineage_label": "INTERROGATION",
-        "primary": "LEGACY_SCENE_PROBLEM",
+        "lineage_label": "LEGACY_SCENE_PROBLEM",
+        "primary": "INTERROGATION",
         "secondary": [],
-        "source_refs": [],
-        "status": "UNKNOWN"
+        "source_refs": [
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S194",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S197",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S199",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-TA-WAVE1-001"
+        ],
+        "status": "INFERRED"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -13419,7 +13655,7 @@
         "audio": true,
         "functional_roles": true,
         "natural_scene_boundary": true,
-        "scene_problem": true
+        "scene_problem": false
       }
     },
     {
@@ -13494,6 +13730,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C02-EXTRA-BODY-ANCHOR-IN-CONTAINED-ALTERNATION-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -13548,11 +13785,16 @@
         "surface_copy_allowed": false
       },
       "scene_problem": {
-        "lineage_label": "INTERROGATION",
-        "primary": "LEGACY_SCENE_PROBLEM",
+        "lineage_label": "LEGACY_SCENE_PROBLEM",
+        "primary": "INTERROGATION",
         "secondary": [],
-        "source_refs": [],
-        "status": "UNKNOWN"
+        "source_refs": [
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S194",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S197",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S199",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-TA-WAVE1-001"
+        ],
+        "status": "INFERRED"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -13602,7 +13844,7 @@
         "audio": true,
         "functional_roles": true,
         "natural_scene_boundary": true,
-        "scene_problem": true
+        "scene_problem": false
       }
     },
     {
@@ -13677,6 +13919,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C03-DOCUMENT-STATE-NEEDS-HANDLER-CONTINUITY-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -13731,11 +13974,16 @@
         "surface_copy_allowed": false
       },
       "scene_problem": {
-        "lineage_label": "INTERROGATION",
-        "primary": "LEGACY_SCENE_PROBLEM",
+        "lineage_label": "LEGACY_SCENE_PROBLEM",
+        "primary": "INTERROGATION",
         "secondary": [],
-        "source_refs": [],
-        "status": "UNKNOWN"
+        "source_refs": [
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S194",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S197",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S199",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-TA-WAVE1-001"
+        ],
+        "status": "INFERRED"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -13763,40 +14011,63 @@
         "audio": true,
         "functional_roles": true,
         "natural_scene_boundary": true,
-        "scene_problem": true
+        "scene_problem": false
       }
     },
     {
       "applicability_evidence": {
-        "notes": "No natural-scene non-applicability boundary is authorized before human review.",
-        "source_refs": [],
-        "status": "UNKNOWN"
+        "notes": "The canonical natural scene has picture-observed start and end boundaries.",
+        "source_refs": [
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S001",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S201"
+        ],
+        "status": "VERIFIED"
       },
       "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C04-PROGRESSIVE-RELATION-REMOVAL-TO-HELD-SINGLES",
       "canonical_rule_family": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
       "confidence": {
-        "execution": "UNKNOWN",
-        "transfer": "UNKNOWN",
-        "within_source": "UNKNOWN"
+        "execution": "MEDIUM",
+        "transfer": "MEDIUM",
+        "within_source": "HIGH"
       },
       "counterexamples": [
         {
-          "counterexample_id": null,
-          "evidence_id": null,
-          "notes": "Same-trigger counterexample UNKNOWN; adjacent different-trigger boundary: UNB-S01E02-C03-RE-REGISTER-CONTAINED-GEOMETRY-AFTER-PARALLEL-INSERT re-registers a two-person container after a distinct-location interval, while this source's late S188-S201 run has no distinct-location interval and no room reset",
+          "counterexample_id": "WAVE1-CTR-PERFORMANCE-DWP",
+          "evidence_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
+          "notes": "The same principal-performance trigger includes required concurrent material and other-body task state, so shared work coverage and selective checks replace the clean owner hold.",
           "relation": "NARROWS",
-          "review_id": null,
-          "review_ref": null,
-          "review_status": "NOT_REVIEWED",
-          "same_trigger_status": "DIFFERENT_TRIGGER",
-          "source_candidate_rule_id": null,
-          "source_refs": [],
-          "status": "BOUNDARY_ONLY",
-          "work_id": null
+          "review_id": "WAVE1-CTR-PERFORMANCE-DWP-REVIEW",
+          "review_ref": "research/validation/relation-reviews/WAVE1-CTR-PERFORMANCE-DWP.json",
+          "review_status": "ROOT_VIDEO_VERIFIED",
+          "same_trigger_status": "VERIFIED_SAME_TRIGGER",
+          "source_candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C02-SUSTAIN-CORRECTOR-IN-SHARED-WORK-FRAME-WITH-SELECTIVE-RECEIVER-CHECKS",
+          "source_refs": [
+            "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S016",
+            "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S019"
+          ],
+          "status": "VERIFIED",
+          "work_id": "THE-DEVIL-WEARS-PRADA-2006"
         }
       ],
       "family_assignment_status": "ROOT_REVIEWED_TEXTUAL_CLUSTER",
-      "functional_roles": [],
+      "functional_roles": [
+        {
+          "appearance_id": "APPEARANCE-S194",
+          "functional_role": "performance_owner",
+          "source_refs": [
+            "MRR-S04E07-ACT-FOUR-VISUAL-001-S194"
+          ],
+          "status": "INFERRED"
+        },
+        {
+          "appearance_id": "APPEARANCE-S197",
+          "functional_role": "performance_owner",
+          "source_refs": [
+            "MRR-S04E07-ACT-FOUR-VISUAL-001-S197"
+          ],
+          "status": "INFERRED"
+        }
+      ],
       "legacy_lineage": {
         "ai_risk": "HIGH-CRITICAL: long face/performance consistency, moisture/highlight continuity, assigned seat/background states and exact fade endpoint",
         "applicability": "Contained exchanges whose locked script makes late facial/body progression dominant and makes all additional body states safely non-essential during the hold",
@@ -13817,54 +14088,60 @@
       "operational_contract": {
         "ai_risk": {
           "camera": {
-            "level": "UNKNOWN",
+            "level": "MEDIUM",
             "reasons": [
-              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+              "A long clean single can drift in framing or screen direction."
             ]
           },
           "continuity": {
-            "level": "UNKNOWN",
+            "level": "MEDIUM",
             "reasons": [
-              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+              "The delayed receiver cut must match the owner endpoint without inventing overlap."
             ]
           },
           "performance": {
-            "level": "UNKNOWN",
+            "level": "HIGH",
             "reasons": [
-              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
+              "A sustained subtle progression can flatten, loop, or add unsupported business."
             ]
           }
         },
         "applicable_when": [
-          "No applicability condition is authorized before human review."
+          "One visible performance progression, rather than a concurrent task state, owns the interval."
         ],
+        "audio_dependency": false,
         "audio_logic": {
-          "claim_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C04-PROGRESSIVE-RELATION-REMOVAL-TO-HELD-SINGLES-AUDIO",
-          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+          "claim_id": "DR-PERFORMANCE-OWNER-HOLD-AUDIO",
+          "notes": "audio_dependency=false; semantic source audio remains unknown and is outside this rule.",
           "source_refs": [],
           "status": "UNKNOWN",
-          "value": "Pending human review; audio remains unknown and no audio instruction is authorized."
+          "value": "This visual rule has no audio instruction or audio-dependent trigger."
         },
-        "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
-        "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
-        "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
-        "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
-        "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
+        "blocking": "Keep the performance owner readable without inventing business; retain other participants off the critical visual axis until the owner interval completes.",
+        "continuity": "Preserve entry posture, gaze direction, screen side, and the visible endpoint used by the delayed receiver cut.",
+        "coverage": "Register the relation first, then use one clean owner single and a later receiver or relation check.",
+        "director_decision": "Reduce relation anchors progressively, give the performance owner a clean sustained single, and postpone receiver coverage until the owner interval completes.",
+        "edit_logic": "Enter after relation registration and cut away after the principal visible progression reaches its locked endpoint.",
         "failure_modes": [
-          "Applying this migrated lineage row as an operational rule before human review."
+          "Routine reaction cutting interrupts the locked progression.",
+          "A clean single hides a simultaneous state that the story requires the audience to track."
         ],
         "fallback": {
-          "camera": null,
-          "continuity": null,
-          "performance": null,
+          "camera": "Use two shorter project-original locked singles on the same screen side, separated only at a verified performance endpoint.",
+          "continuity": "Return to a neutral project-original two-person relation frame before the delayed receiver shot.",
+          "performance": "Split the progression into two explicit project-original posture or gaze states instead of asking for one continuous subtle arc.",
           "project_original_only": true
         },
         "not_applicable_when": [
-          "No non-applicability boundary is authorized before human review."
+          "A simultaneous action, object, safety, or receiver state must remain visible."
         ],
-        "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
-        "required_story_facts": [],
-        "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration."
+        "pacing": "Let the owner interval run without routine reaction cutting; shorten only when a locked concurrent state appears.",
+        "required_story_facts": [
+          "The participant relation has already been visibly established.",
+          "One project-original performance progression must remain continuously readable.",
+          "No simultaneous action, object, safety, or receiver state is locked for the owner interval."
+        ],
+        "trigger": "After the relation is registered, one uninterrupted visible performance progression is the principal locked fact and no concurrent action state must remain visible."
       },
       "promotion": {
         "human_director_review": {
@@ -13872,31 +14149,45 @@
           "source_ref": null,
           "status": "NOT_APPROVED"
         },
-        "original_forward_test_count": 0,
-        "original_forward_tests": [],
-        "reasons": [
-          "Canonical scene problem remains UNKNOWN.",
-          "No evidence-backed functional role is available.",
-          "Within-source, transfer and execution confidence remain UNKNOWN.",
-          "No unrelated same-trigger verified counterexample is registered."
+        "original_forward_test_count": 2,
+        "original_forward_tests": [
+          {
+            "source_ref": "examples/forward-tests/ORIGINAL-PERFORMANCE-OWNER-HOLD",
+            "status": "PASS",
+            "test_case_id": "ORIGINAL-PERFORMANCE-OWNER-HOLD"
+          },
+          {
+            "source_ref": "examples/forward-tests/ORIGINAL-PERFORMANCE-CONCURRENT-STATE",
+            "status": "PASS",
+            "test_case_id": "ORIGINAL-PERFORMANCE-CONCURRENT-STATE"
+          }
         ],
-        "status": "BLOCKED_BY_UNKNOWN",
-        "unknown_dependency_present": true,
-        "verified_same_trigger_counterexample_count": 0,
-        "verified_support_work_count": 1
+        "reasons": [
+          "Fresh picture review verifies the source mechanism, unrelated support, and a same-trigger boundary case.",
+          "Two project-original packages verify positive selection and non-applicability routing while creative review remains pending."
+        ],
+        "status": "CROSS_WORK_SUPPORTED",
+        "unknown_dependency_present": false,
+        "verified_same_trigger_counterexample_count": 1,
+        "verified_support_work_count": 2
       },
-      "relation_to_family": "NARROWS",
+      "relation_to_family": "SUPPORTS",
       "rights_boundary": {
         "evidence_lineage_only": true,
-        "runtime_authorized": false,
+        "runtime_authorized": true,
         "surface_copy_allowed": false
       },
       "scene_problem": {
-        "lineage_label": "INTERROGATION",
-        "primary": "LEGACY_SCENE_PROBLEM",
+        "lineage_label": "LEGACY_SCENE_PROBLEM",
+        "primary": "INTERROGATION",
         "secondary": [],
-        "source_refs": [],
-        "status": "UNKNOWN"
+        "source_refs": [
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S194",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S197",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S199",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-TA-WAVE1-001"
+        ],
+        "status": "INFERRED"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -13920,16 +14211,36 @@
         "source_candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C04-PROGRESSIVE-RELATION-REMOVAL-TO-HELD-SINGLES",
         "source_method_ids": [
           "MRR-S04E07-ACT-FOUR-VISUAL-001-METHOD-LEGACY-PICTURE-REVIEW",
-          "MRR-S04E07-ACT-FOUR-VISUAL-001-METHOD-STRUCTURAL-CONVERSION"
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-METHOD-STRUCTURAL-CONVERSION",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-METHOD-WAVE1-PICTURE-REVIEW"
         ],
         "work_id": "MR-ROBOT-S04E07"
       },
-      "supporting_relations": [],
+      "supporting_relations": [
+        {
+          "evidence_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
+          "notes": "A two-person relation frame precedes a long clean owner single, followed by relation coverage only after the visible owner interval.",
+          "relation": "SUPPORTS",
+          "relation_id": "WAVE1-REL-PERFORMANCE-BCS",
+          "review_id": "WAVE1-REL-PERFORMANCE-BCS-REVIEW",
+          "review_ref": "research/validation/relation-reviews/WAVE1-REL-PERFORMANCE-BCS.json",
+          "review_status": "ROOT_VIDEO_VERIFIED",
+          "same_trigger_status": "VERIFIED_SAME_TRIGGER",
+          "source_candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C03-SUSTAIN-CONTESTED-PERSON-SCREEN-OWNERSHIP",
+          "source_refs": [
+            "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S082",
+            "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S097",
+            "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S098"
+          ],
+          "status": "VERIFIED",
+          "work_id": "BETTER-CALL-SAUL-S03E05"
+        }
+      ],
       "unknown_dependencies": {
-        "audio": true,
-        "functional_roles": true,
-        "natural_scene_boundary": true,
-        "scene_problem": true
+        "audio": false,
+        "functional_roles": false,
+        "natural_scene_boundary": false,
+        "scene_problem": false
       }
     },
     {
@@ -14004,6 +14315,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "NOBODY-2021-BUS-001-NOBODY-C01-ACTION-CAUSAL-CHAIN-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -14195,6 +14507,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "NOBODY-2021-BUS-001-NOBODY-C02-OBJECT-CONTROL-LEDGER-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -14365,6 +14678,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "NOBODY-2021-BUS-001-NOBODY-C03-SPATIAL-RESET-AFTER-BURST-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -14531,6 +14845,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "NOBODY-2021-BUS-001-NOBODY-C04-RECOVERY-AND-CARE-ARE-STATE-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -14710,6 +15025,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -14875,6 +15191,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C02-MULTI-WINDOW-DISTRIBUTED-THREAT-PUZZLE-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -15063,6 +15380,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C03-READINESS-TO-DEPLOYMENT-STATE-LEDGER-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -15245,6 +15563,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C04-RESULT-AND-EXIT-VERIFICATION-BEFORE-RESUME-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -15430,6 +15749,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -15590,6 +15910,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -15747,6 +16068,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -15924,6 +16246,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -16079,6 +16402,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C01-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -16242,6 +16566,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C02-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -16410,6 +16735,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C03-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -16574,6 +16900,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C04-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -16732,6 +17059,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C01-REGISTER-PUBLIC-OBJECT-CONTEST-GEOMETRY-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -16966,6 +17294,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C02-RETURN-THROUGH-PRIMARY-ANCHOR-AFTER-DISTINCT-LOCATION-BLOCK-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -17171,6 +17500,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C03-SEPARATE-PERFORMER-ACTION-TARGET-STATE-AND-RESULT-CLAIM-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -17348,6 +17678,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C04-DISTRIBUTE-POST-RESULT-BODY-STATES-BY-NEXT-ACTION-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -17520,6 +17851,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C01-REGISTER-TRIGGER-OBJECT-BEFORE-ATTENTION-CASCADE-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -17678,6 +18010,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C02-SUSTAIN-CORRECTOR-IN-SHARED-WORK-FRAME-WITH-SELECTIVE-RECEIVER-CHECKS-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -17838,6 +18171,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C03-USE-WORK-OBJECT-UPDATES-AS-PUNCTUATION-NOT-SEMANTIC-PROOF-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -17995,6 +18329,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C04-END-ON-TERMINAL-OWNER-WHILE-BACKGROUND-TASK-CONTINUES-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -18150,6 +18485,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C01-REGISTER-PAIR-GEOMETRY-THEN-RELY-ON-STABLE-SINGLES-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -18393,6 +18729,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C02-VARY-HOLD-LENGTH-WITHIN-FIXED-ANGLE-GRAMMAR-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -18633,6 +18970,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C03-KEEP-SECONDARY-PROP-ACTIONS-INSIDE-PERSON-SINGLES-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -18722,7 +19060,7 @@
         "status": "UNKNOWN"
       },
       "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE",
-      "canonical_rule_family": "THRESHOLD-AND-ROUTE-CONTINUITY",
+      "canonical_rule_family": "SPATIAL-REGISTRATION-AND-RESET",
       "confidence": {
         "execution": "UNKNOWN",
         "transfer": "UNKNOWN",
@@ -18787,6 +19125,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -18943,6 +19282,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C01-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -19099,6 +19439,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C02-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -19261,6 +19602,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C03-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -19418,6 +19760,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C04-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -19578,6 +19921,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C01-WAYPOINT-REGISTERED-MOBILE-GEOGRAPHY-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -19731,6 +20075,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C02-THRESHOLD-AS-STATE-CHECKPOINT-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -19884,6 +20229,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C03-REACQUIRE-VISUAL-TRACK-AFTER-OCCLUSION-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -20037,6 +20383,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C04-FUNCTIONAL-SEGMENTATION-FALLBACK-FOR-LONG-ROUTE-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -20190,6 +20537,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C01-APPROACH-TO-CONTAINER-STATE-HANDOFF-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -20352,6 +20700,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C02-PARTIAL-COMPANION-ANCHOR-IN-CONTAINED-TWO-HANDER-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -20563,6 +20912,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C03-RE-REGISTER-CONTAINED-GEOMETRY-AFTER-PARALLEL-INSERT-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -20753,6 +21103,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C04-HOLD-VISIBLE-BODY-OR-HAND-OBJECT-STATE-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -20913,6 +21264,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C01-REGISTER-RECORD-TO-LIVE-SPACE-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -21087,6 +21439,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C02-EMBODY-HYPOTHESIS-THEN-TEST-TRACE-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -21270,6 +21623,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C03-CUT-ON-EPISTEMIC-STATE-CHANGE-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -21469,6 +21823,7 @@
         "applicable_when": [
           "No applicability condition is authorized before human review."
         ],
+        "audio_dependency": true,
         "audio_logic": {
           "claim_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C04-LONG-TAKE-WHEN-CONTINUITY-IS-THE-PROOF-AUDIO",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
@@ -21822,11 +22177,13 @@
         "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C01-REGISTER-ENSEMBLE-GEOMETRY-BEFORE-DISTRIBUTED-CHANGE",
         "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C03-SEATED-TO-STANDING-DENSITY-LEDGER",
         "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C01-SPATIAL-ROUTE-BEFORE-ANCHORED-SEATING",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
         "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C02-EXTRA-BODY-ANCHOR-IN-CONTAINED-ALTERNATION",
         "NOBODY-2021-BUS-001-NOBODY-C03-SPATIAL-RESET-AFTER-BURST",
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C01-REGISTER-PUBLIC-OBJECT-CONTEST-GEOMETRY",
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C02-RETURN-THROUGH-PRIMARY-ANCHOR-AFTER-DISTINCT-LOCATION-BLOCK",
         "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C01-REGISTER-PAIR-GEOMETRY-THEN-RELY-ON-STABLE-SINGLES",
+        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE",
         "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C03",
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C02-PARTIAL-COMPANION-ANCHOR-IN-CONTAINED-TWO-HANDER",
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C03-RE-REGISTER-CONTAINED-GEOMETRY-AFTER-PARALLEL-INSERT"
@@ -21895,11 +22252,9 @@
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-PRELOAD-ENSEMBLE-THEN-REVEAL-ENTRY-001",
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-PUNCTUATE-LONG-AXIS-TRAVEL-002",
         "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C04-SPATIAL-SPILLOVER-CARRIES-AFTERMATH-PAST-ROOM-BOUNDARY",
-        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
         "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS",
         "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C03-READINESS-TO-DEPLOYMENT-STATE-LEDGER",
         "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C04",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE",
         "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C01",
         "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C04",
         "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C01-WAYPOINT-REGISTERED-MOBILE-GEOGRAPHY",
@@ -21914,11 +22269,9 @@
         "HILL-HOUSE-S01E06",
         "HOUSE-OF-THE-DRAGON-S01E08",
         "KNIVES-OUT-2019",
-        "MARRIAGE-STORY-2019",
         "SICARIO-2015",
         "SUCCESSION-S01E06",
         "THE-LAST-OF-US-S01E06",
-        "THE-SOCIAL-NETWORK-2010",
         "TRUE-DETECTIVE-S01E04",
         "UNBELIEVABLE-S01E02"
       ]
@@ -21926,12 +22279,12 @@
   ],
   "normalization_policy": {
     "family_assignment_basis": "Root-reviewed deterministic textual mechanism clusters over canonical legacy lineage.",
-    "promotion_boundary": "Family membership is not promotion. Every current candidate remains blocked while required evidence is UNKNOWN.",
+    "promotion_boundary": "Family membership is not promotion. Only candidates that pass fresh video review, cross-work support, same-trigger boundary, and original forward tests become runtime eligible.",
     "source_of_truth": "research/evidence/**/*.scene-evidence.json",
     "surface_copy_allowed": false
   },
   "schema_version": "candidate-rule-index/0.1",
   "source_candidate_count": 124,
   "source_scene_count": 31,
-  "status": "EVIDENCE_LINEAGE_ONLY"
+  "status": "RUNTIME_RULES_AVAILABLE"
 }

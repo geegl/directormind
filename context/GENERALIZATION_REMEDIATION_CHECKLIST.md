@@ -1,6 +1,15 @@
 # DirectorMind Generalization Remediation Checklist
 
-Updated: 2026-09-02
+Updated: 2026-09-03
+
+## 2026-09-03 runtime-promotion follow-on
+
+This file preserves the completed A–M infrastructure/remediation history and
+its snapshot-specific zero-rule evidence. Runtime Rule Promotion Wave 1 is a
+new task on a new branch and PR; its current task card and checklist are
+`context/RUNTIME_RULE_PROMOTION_WAVE1_TASK.md` and
+`context/RUNTIME_RULE_PROMOTION_WAVE1_CHECKLIST.md`. Current counts and next
+action live only in `context/STATE.md`.
 
 ## 2026-09-01 authorized closed-corpus completion
 
@@ -211,17 +220,20 @@ Remaining validation boundary: these checks do not replay source media, directly
 | M5 | VERIFIED_DONE | Deliver original forward-test packages. | Eight deterministic packages, six required problem tags, zero false positive selections, 31 preserved visual-binding warnings and Phase 4 independent review PASS. |
 | M6 | VERIFIED_DONE | Deliver full validation, independent audit, reduced STATE, clean Succession integration, CI, and updated PR description. | H1/H3/H4, L2-L4 and M4 are verified; PR #3 records the new review and repairs; final implementation-head CI and the clean-checkout independent review pass; no checklist row remains open. |
 
-## Current blockers and known defects
+## Historical closed-corpus limitations before Wave 1
 
 - The 31 JSON units are deterministic machine-readable conversions, but legacy candidate semantics remain non-operational lineage pending human review.
 - Explicit frame/PTS and legacy fallback gaps remain visible; converter warnings prohibit treating provisional values as source-proven facts.
 - The known 13 absent legacy artifacts are closed as explicit absence records; broader historical claims outside this closed register were not re-proved.
 - Direct semantic audio audition is absent; signal measurement is not semantic sound evidence.
 - PR #1 was closed without merge because it contained prohibited media-fingerprint material and older evidence semantics; its 88-unit evidence was migrated through the current contracts instead.
-- The runtime grammar is active but correctly contains zero evidence rules because none of the 124 candidates passes the promotion gates; all eight original packages therefore prove the no-ready/no-applicable branch, while a real positive selection remains unproved until evidence becomes eligible.
+- At this checklist's completion snapshot, the runtime Grammar contained zero
+  evidence rules and all eight original packages exercised the no-ready branch.
+  Wave 1 supersedes that runtime count without rewriting this historical record.
 - A final read-only review found that a complete result from another scene could be substituted and that the upgrader could overwrite an unrelated existing output. Both P1s are fixed; the repair-head hosted CI and fresh independent replay pass. Final acceptance now waits only for the documentation-head CI and updated PR description.
 - A still later review found two new P1s: `LEGACY_COMPATIBLE` could carry a schema-valid but unbound v0.2 route, and the routing CLI could overwrite its inputs or any existing output. Both are fixed; final implementation-head CI and a clean-checkout independent replay pass with no remaining must-fix finding.
 
-## Current next action
+## Current follow-on
 
-All authorized repair and validation work is complete. Keep PR #3 open and stop; wait for the user's separate merge decision without merging `main`.
+Follow `context/RUNTIME_RULE_PROMOTION_WAVE1_CHECKLIST.md`. The new task must use
+a new PR, preserve the closed corpus and stop without merging `main`.

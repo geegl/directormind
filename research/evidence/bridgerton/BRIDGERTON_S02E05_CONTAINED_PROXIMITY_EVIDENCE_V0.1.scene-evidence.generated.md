@@ -17,7 +17,7 @@
 | duration | 184.618 |
 | picture_evidence_status | PICTURE_OBSERVED |
 | audio_evidence_status | BLOCKED_DIRECT_AUDITION |
-| text_anchor_status | TEXT_ANCHOR_NOT_USED |
+| text_anchor_status | TEXT_ANCHOR_VERIFIED |
 | production_take_status | PRODUCTION_METHOD_UNKNOWN |
 | source_identity_status | SOURCE_OR_FILENAME_SUPPLIED |
 | validation_status | HUMAN_REVIEW_PENDING |
@@ -26,11 +26,16 @@
 
 ```json
 {
-  "notes": "The legacy primary label ROMANTIC_PROXIMITY is retained only as non-operational lineage and was not proved by structural conversion.",
-  "primary": "LEGACY_SCENE_PROBLEM",
+  "notes": "The canonical problem is inferred from the continuous visible distance change, held endpoint, and one short paraphrased visible-text anchor establishing relationship stakes; motive, consent, and contact are not asserted.",
+  "primary": "ROMANTIC_PROXIMITY",
   "secondary": [],
-  "source_refs": [],
-  "status": "UNKNOWN"
+  "source_refs": [
+    "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+    "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+    "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
+    "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-TA-WAVE1-001"
+  ],
+  "status": "INFERRED"
 }
 ```
 
@@ -115,7 +120,6 @@
   {
     "blocks_rule_ids": [
       "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C01-REGISTER-ROOM-AXIS-BEFORE-PROXIMITY",
-      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C02-DELAY-TIGHT-SHARED-FRAME-UNTIL-DISTANCE-CHANGES",
       "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C03-KEEP-HAND-SOURCE-HEAD-RELATION-AND-WITHDRAWAL-READABLE",
       "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C04-DECOMPRESS-THROUGH-SINGLES-AND-ROOM-RESET"
     ],
@@ -157,7 +161,8 @@
 ```json
 [
   "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
-  "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+  "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+  "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
 ]
 ```
 
@@ -313,11 +318,16 @@
   "picture_evidence_status": "PICTURE_OBSERVED",
   "production_take_status": "PRODUCTION_METHOD_UNKNOWN",
   "scene_problem": {
-    "notes": "The legacy primary label ROMANTIC_PROXIMITY is retained only as non-operational lineage and was not proved by structural conversion.",
-    "primary": "LEGACY_SCENE_PROBLEM",
+    "notes": "The canonical problem is inferred from the continuous visible distance change, held endpoint, and one short paraphrased visible-text anchor establishing relationship stakes; motive, consent, and contact are not asserted.",
+    "primary": "ROMANTIC_PROXIMITY",
     "secondary": [],
-    "source_refs": [],
-    "status": "UNKNOWN"
+    "source_refs": [
+      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
+      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-TA-WAVE1-001"
+    ],
+    "status": "INFERRED"
   },
   "scene_unit_type": "NATURAL_CONTINUOUS_SCENE",
   "schema_version": "scene-evidence/0.1",
@@ -3509,12 +3519,11 @@
     "total_duration": 184.618,
     "unit": "VISIBLE_SHOT"
   },
-  "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+  "text_anchor_status": "TEXT_ANCHOR_VERIFIED",
   "unknowns": [
     {
       "blocks_rule_ids": [
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C01-REGISTER-ROOM-AXIS-BEFORE-PROXIMITY",
-        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C02-DELAY-TIGHT-SHARED-FRAME-UNTIL-DISTANCE-CHANGES",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C03-KEEP-HAND-SOURCE-HEAD-RELATION-AND-WITHDRAWAL-READABLE",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C04-DECOMPRESS-THROUGH-SINGLES-AND-ROOM-RESET"
       ],
@@ -3537,7 +3546,8 @@
   "validation_status": "HUMAN_REVIEW_PENDING",
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
-    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
   ],
   "work_id": "BRIDGERTON-S02E05"
 }

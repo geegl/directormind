@@ -26,6 +26,8 @@ GRAMMAR_ROOT = REPOSITORY_ROOT / "research" / "grammar"
 INDEX_PATH = GRAMMAR_ROOT / "candidate_rule_index.json"
 MATRIX_JSON_PATH = GRAMMAR_ROOT / "cross_work_support_matrix.json"
 MATRIX_MD_PATH = GRAMMAR_ROOT / "cross_work_support_matrix.md"
+WAVE1_REVIEW_PATH = GRAMMAR_ROOT / "runtime_rule_promotion_wave1.review.json"
+RELATION_REVIEW_ROOT = REPOSITORY_ROOT / "research" / "validation" / "relation-reviews"
 
 
 FAMILY_TERMS: tuple[tuple[str, str, tuple[str, ...]], ...] = (
@@ -138,6 +140,7 @@ FAMILY_OVERRIDES: dict[str, str] = {
     "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C02-DISTRIBUTE-SCREEN-OWNERSHIP-WHEN-BODIES-DIVERGE": "RECEIVER-AND-REACTION-DISTRIBUTION",
     "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C03-SEATED-TO-STANDING-DENSITY-LEDGER": "SPATIAL-REGISTRATION-AND-RESET",
     "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C02-STABLE-SEAT-ANCHORS-CARRY-DENSE-ALTERNATION": "AXIS-AND-COVERAGE-GRAMMAR",
+    "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP": "SPATIAL-REGISTRATION-AND-RESET",
     "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C04": "CONTINUITY-LEDGER-AND-VERSIONING",
     "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C01-DETAIL-THEN-CONTAINER-REGISTER": "SCALE-AND-REVEAL-LADDER",
     "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C04-PROGRESSIVE-RELATION-REMOVAL-TO-HELD-SINGLES": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
@@ -154,6 +157,7 @@ FAMILY_OVERRIDES: dict[str, str] = {
     "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C02-SUSTAIN-CORRECTOR-IN-SHARED-WORK-FRAME-WITH-SELECTIVE-RECEIVER-CHECKS": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
     "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C04-END-ON-TERMINAL-OWNER-WHILE-BACKGROUND-TASK-CONTINUES": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
     "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C02-VARY-HOLD-LENGTH-WITHIN-FIXED-ANGLE-GRAMMAR": "AXIS-AND-COVERAGE-GRAMMAR",
+    "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE": "SPATIAL-REGISTRATION-AND-RESET",
     "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C04-FUNCTIONAL-SEGMENTATION-FALLBACK-FOR-LONG-ROUTE": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
     "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C04-HOLD-VISIBLE-BODY-OR-HAND-OBJECT-STATE": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
     "WIRE-S01E04-OLD-CASES-001-WIRE-C01-REGISTER-RECORD-TO-LIVE-SPACE": "OBJECT-STATE-AND-CUSTODY",
@@ -298,6 +302,7 @@ def _candidate_record(
             "edit_logic": rule["edit_logic"],
             "continuity": rule["continuity"],
             "audio_logic": rule["audio_logic"],
+            "audio_dependency": rule["audio_dependency"],
             "applicable_when": rule["applicable_when"],
             "not_applicable_when": rule["not_applicable_when"],
             "failure_modes": rule["failure_modes"],
@@ -318,9 +323,7 @@ def _candidate_record(
         "unknown_dependencies": {
             "scene_problem": scene_problem["status"] == "UNKNOWN",
             "audio": rule["audio_logic"].get("status") != "AUDIO_OBSERVED",
-            "functional_roles": not any(
-                shot.get("abstract_role_labels") for shot in evidence["shots"]
-            ),
+            "functional_roles": True,
             "natural_scene_boundary": True,
         },
         "counterexamples": [counterexample],
@@ -352,8 +355,183 @@ def _candidate_record(
     }
 
 
+def _review_ref(record_id: str) -> str:
+    return f"research/validation/relation-reviews/{record_id}.json"
+
+
+def _promoted_candidate_record(
+    base: dict[str, Any],
+    evidence: dict[str, Any],
+    promotion: dict[str, Any],
+) -> dict[str, Any]:
+    support_records = [
+        {
+            "relation_id": item["relation_id"],
+            "status": "VERIFIED",
+            "relation": "SUPPORTS",
+            "same_trigger_status": "VERIFIED_SAME_TRIGGER",
+            "source_candidate_rule_id": item["source_candidate_rule_id"],
+            "work_id": item["work_id"],
+            "evidence_id": item["evidence_id"],
+            "source_refs": item["source_refs"],
+            "review_status": "ROOT_VIDEO_VERIFIED",
+            "review_id": f"{item['relation_id']}-REVIEW",
+            "review_ref": _review_ref(item["relation_id"]),
+            "notes": item["notes"],
+        }
+        for item in promotion["supporting_relations"]
+    ]
+    counter = promotion["counterexample"]
+    counter_record = {
+        "counterexample_id": counter["relation_id"],
+        "status": "VERIFIED",
+        "same_trigger_status": "VERIFIED_SAME_TRIGGER",
+        "relation": "NARROWS",
+        "source_candidate_rule_id": counter["source_candidate_rule_id"],
+        "work_id": counter["work_id"],
+        "evidence_id": counter["evidence_id"],
+        "source_refs": counter["source_refs"],
+        "review_status": "ROOT_VIDEO_VERIFIED",
+        "review_id": f"{counter['relation_id']}-REVIEW",
+        "review_ref": _review_ref(counter["relation_id"]),
+        "notes": counter["notes"],
+    }
+    roles = [
+        {
+            "appearance_id": role["appearance_id"],
+            "functional_role": role["functional_role"],
+            "status": "INFERRED",
+            "source_refs": role["source_refs"],
+        }
+        for role in promotion["functional_roles"]
+    ]
+    contract = {
+        "trigger": promotion["trigger"],
+        "required_story_facts": promotion["required_story_facts"],
+        "director_decision": promotion["director_decision"],
+        "coverage": promotion["coverage"],
+        "blocking": promotion["blocking"],
+        "pacing": promotion["pacing"],
+        "edit_logic": promotion["edit_logic"],
+        "continuity": promotion["continuity"],
+        "audio_logic": {
+            "claim_id": f"{promotion['rule_id']}-AUDIO",
+            "status": "UNKNOWN",
+            "value": "This visual rule has no audio instruction or audio-dependent trigger.",
+            "source_refs": [],
+            "notes": "audio_dependency=false; semantic source audio remains unknown and is outside this rule.",
+        },
+        "audio_dependency": promotion["audio_dependency"],
+        "applicable_when": promotion["applicable_when"],
+        "not_applicable_when": promotion["not_applicable_when"],
+        "failure_modes": promotion["failure_modes"],
+        "ai_risk": promotion["ai_risk"],
+        "fallback": promotion["fallback"],
+    }
+    forward_tests = [
+        {
+            "test_case_id": case_id,
+            "status": "PASS",
+            "source_ref": f"examples/forward-tests/{case_id}",
+        }
+        for case_id in (
+            promotion["positive_forward_test_id"],
+            promotion["boundary_forward_test_id"],
+        )
+    ]
+    base.update(
+        {
+            "canonical_rule_family": promotion["family_id"],
+            "family_assignment_status": "ROOT_REVIEWED_TEXTUAL_CLUSTER",
+            "relation_to_family": "SUPPORTS",
+            "scene_problem": {
+                "primary": evidence["scene_problem"]["primary"],
+                "secondary": evidence["scene_problem"]["secondary"],
+                "status": evidence["scene_problem"]["status"],
+                "source_refs": evidence["scene_problem"]["source_refs"],
+                "lineage_label": _lineage_problem(evidence["scene_problem"]),
+            },
+            "functional_roles": roles,
+            "operational_contract": contract,
+            "confidence": promotion["confidence"],
+            "supporting_relations": support_records,
+            "applicability_evidence": {
+                "status": "VERIFIED",
+                "source_refs": evidence["boundary_evidence"]["source_refs"],
+                "notes": "The canonical natural scene has picture-observed start and end boundaries.",
+            },
+            "unknown_dependencies": {
+                "scene_problem": False,
+                "audio": False,
+                "functional_roles": False,
+                "natural_scene_boundary": False,
+            },
+            "counterexamples": [counter_record],
+            "promotion": {
+                "status": "CROSS_WORK_SUPPORTED",
+                "reasons": [
+                    "Fresh picture review verifies the source mechanism, unrelated support, and a same-trigger boundary case.",
+                    "Two project-original packages verify positive selection and non-applicability routing while creative review remains pending.",
+                ],
+                "verified_support_work_count": len({evidence["work_id"], *[item["work_id"] for item in promotion["supporting_relations"]]}),
+                "verified_same_trigger_counterexample_count": 1,
+                "original_forward_test_count": 2,
+                "original_forward_tests": forward_tests,
+                "human_director_review": {
+                    "status": "NOT_APPROVED",
+                    "review_id": None,
+                    "source_ref": None,
+                },
+                "unknown_dependency_present": False,
+            },
+            "rights_boundary": {
+                "evidence_lineage_only": True,
+                "surface_copy_allowed": promotion["surface_copy_allowed"],
+                "runtime_authorized": promotion["runtime_authorized"],
+            },
+        }
+    )
+    return base
+
+
+def build_relation_reviews(index: dict[str, Any]) -> dict[Path, dict[str, Any]]:
+    reviews: dict[Path, dict[str, Any]] = {}
+    for candidate in index["candidates"]:
+        records = [
+            (record, "relation_id")
+            for record in candidate["supporting_relations"]
+            if record.get("status") == "VERIFIED"
+        ] + [
+            (record, "counterexample_id")
+            for record in candidate["counterexamples"]
+            if record.get("status") == "VERIFIED"
+        ]
+        for record, record_id_key in records:
+            record_id = record[record_id_key]
+            reviews[RELATION_REVIEW_ROOT / f"{record_id}.json"] = {
+                "schema_version": "candidate-relation-review/0.1",
+                "review_id": record["review_id"],
+                "candidate_rule_id": candidate["candidate_rule_id"],
+                "record_id": record_id,
+                "status": record["review_status"],
+                "relation": record["relation"],
+                "same_trigger_status": record["same_trigger_status"],
+                "source_candidate_rule_id": record["source_candidate_rule_id"],
+                "work_id": record["work_id"],
+                "evidence_id": record["evidence_id"],
+                "source_refs": record["source_refs"],
+            }
+    return reviews
+
+
 def build_index(sources: Iterable[Path] | None = None) -> dict[str, Any]:
     evidence_units = [_read_json(path) for path in (sources or discover_sources())]
+    review = _read_json(WAVE1_REVIEW_PATH)
+    promotions = {
+        item["candidate_rule_id"]: item for item in review.get("promotions", [])
+    }
+    if len(promotions) != len(review.get("promotions", [])):
+        raise ValueError("duplicate promotion source candidate ID")
     assignments: list[tuple[dict[str, Any], dict[str, Any], str, str]] = []
     family_works: dict[str, set[str]] = defaultdict(set)
     family_descriptions = {family_id: description for family_id, description, _ in FAMILY_TERMS}
@@ -364,15 +542,20 @@ def build_index(sources: Iterable[Path] | None = None) -> dict[str, Any]:
             assignments.append((evidence, rule, family_id, assignment_status))
             family_works[family_id].add(evidence["work_id"])
 
-    candidates = [
-        _candidate_record(
-            evidence,
-            rule,
-            family_id,
-            assignment_status,
-        )
-        for evidence, rule, family_id, assignment_status in assignments
-    ]
+    candidates = []
+    for evidence, rule, family_id, assignment_status in assignments:
+        record = _candidate_record(evidence, rule, family_id, assignment_status)
+        promotion = promotions.get(rule["candidate_rule_id"])
+        if promotion is not None:
+            if family_id != promotion["family_id"]:
+                raise ValueError(
+                    f"promotion family drift for {rule['candidate_rule_id']}: {family_id} != {promotion['family_id']}"
+                )
+            record = _promoted_candidate_record(record, evidence, promotion)
+        candidates.append(record)
+    unknown_promotions = sorted(set(promotions) - {item["candidate_rule_id"] for item in candidates})
+    if unknown_promotions:
+        raise ValueError(f"promotion sources not found: {unknown_promotions}")
     candidates.sort(key=lambda item: item["candidate_rule_id"])
 
     family_members: dict[str, list[str]] = defaultdict(list)
@@ -400,13 +583,13 @@ def build_index(sources: Iterable[Path] | None = None) -> dict[str, Any]:
 
     return {
         "schema_version": "candidate-rule-index/0.1",
-        "status": "EVIDENCE_LINEAGE_ONLY",
+        "status": "RUNTIME_RULES_AVAILABLE" if promotions else "EVIDENCE_LINEAGE_ONLY",
         "source_scene_count": len(evidence_units),
         "source_candidate_count": len(candidates),
         "normalization_policy": {
             "source_of_truth": "research/evidence/**/*.scene-evidence.json",
             "family_assignment_basis": "Root-reviewed deterministic textual mechanism clusters over canonical legacy lineage.",
-            "promotion_boundary": "Family membership is not promotion. Every current candidate remains blocked while required evidence is UNKNOWN.",
+            "promotion_boundary": "Family membership is not promotion. Only candidates that pass fresh video review, cross-work support, same-trigger boundary, and original forward tests become runtime eligible.",
             "surface_copy_allowed": False,
         },
         "families": families,
@@ -426,9 +609,27 @@ def build_matrix(index: dict[str, Any]) -> dict[str, Any]:
                 "relation": member["relation_to_family"],
                 "scene_problem_status": member["scene_problem"]["status"],
                 "unknown_dependency_present": member["promotion"]["unknown_dependency_present"],
+                "promotion_status": member["promotion"]["status"],
             }
             for member in members
         ]
+        promoted = [
+            member
+            for member in members
+            if member["promotion"]["status"] in {"CROSS_WORK_SUPPORTED", "GENERAL_DEFAULT"}
+        ]
+        support_ids = sorted(
+            relation["relation_id"]
+            for member in promoted
+            for relation in member["supporting_relations"]
+            if relation["status"] == "VERIFIED"
+        )
+        counterexample_ids = sorted(
+            counterexample["counterexample_id"]
+            for member in promoted
+            for counterexample in member["counterexamples"]
+            if counterexample["status"] == "VERIFIED"
+        )
         families.append(
             {
                 "family_id": family["family_id"],
@@ -437,19 +638,27 @@ def build_matrix(index: dict[str, Any]) -> dict[str, Any]:
                 "grouped_work_count": len({member["source"]["work_id"] for member in members}),
                 "relation_counts": dict(sorted(Counter(item["relation"] for item in relations).items())),
                 "relations": relations,
-                "verified_support_relation_ids": [],
-                "verified_unrelated_same_trigger_counterexample_ids": [],
-                "promotion_eligibility": "BLOCKED_BY_UNKNOWN",
-                "blocked_reasons": [
-                    "Every member retains an UNKNOWN canonical scene problem.",
-                    "No member has evidence-backed functional roles.",
-                    "No unrelated same-trigger verified counterexample is registered.",
-                ],
+                "verified_support_relation_ids": support_ids,
+                "verified_unrelated_same_trigger_counterexample_ids": counterexample_ids,
+                "promotion_eligibility": (
+                    "CROSS_WORK_SUPPORTED" if promoted else "BLOCKED_BY_UNKNOWN"
+                ),
+                "blocked_reasons": (
+                    []
+                    if promoted
+                    else [
+                        "No member has passed all evidence, boundary, confidence, and forward-test gates.",
+                    ]
+                ),
             }
         )
+    promoted_count = sum(
+        candidate["promotion"]["status"] in {"CROSS_WORK_SUPPORTED", "GENERAL_DEFAULT"}
+        for candidate in index["candidates"]
+    )
     return {
         "schema_version": "cross-work-support-matrix/0.1",
-        "status": "NO_RULE_PROMOTED",
+        "status": "RUNTIME_RULES_AVAILABLE" if promoted_count else "NO_RULE_PROMOTED",
         "candidate_index_path": "research/grammar/candidate_rule_index.json",
         "family_count": len(families),
         "candidate_count": len(index["candidates"]),
@@ -461,9 +670,9 @@ def render_matrix(matrix: dict[str, Any]) -> str:
     lines = [
         "# Cross-Work Support Matrix",
         "",
-        "Status: NO_RULE_PROMOTED",
+        f"Status: {matrix['status']}",
         "",
-        "This is a deterministic review view of cross_work_support_matrix.json. Family membership records textual mechanism similarity only; it is not evidence of transfer validity.",
+        "This is a deterministic review view of cross_work_support_matrix.json. Family membership alone is not evidence of transfer validity; eligible rows cite fresh video review, support, boundary, and forward-test records.",
         "",
         "| Family | Members | Grouped works | Relations | Verified support relations | Same-trigger unrelated counterexamples | Eligibility |",
         "|---|---:|---:|---|---:|---:|---|",
@@ -484,7 +693,7 @@ def render_matrix(matrix: dict[str, Any]) -> str:
             "",
             "## Boundary",
             "",
-            "- All current candidates remain BLOCKED_BY_UNKNOWN.",
+            "- Only explicitly listed eligible candidates are runtime authorized; every other candidate remains BLOCKED_BY_UNKNOWN.",
             "- Different-trigger comparisons and internal boundaries do not count as promotion counterexamples.",
             "- Work names and source-specific content remain evidence lineage, never runtime instructions.",
             "",
@@ -520,13 +729,18 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     index, matrix, matrix_markdown = build_all()
-    expected = (
+    relation_reviews = build_relation_reviews(index)
+    expected = [
         (INDEX_PATH, _serialized(index)),
         (MATRIX_JSON_PATH, _serialized(matrix)),
         (MATRIX_MD_PATH, matrix_markdown),
-    )
+        *[(path, _serialized(data)) for path, data in sorted(relation_reviews.items())],
+    ]
     if args.check:
         failures = [failure for path, text in expected if (failure := _check(path, text))]
+        actual_review_paths = set(RELATION_REVIEW_ROOT.glob("*.json")) if RELATION_REVIEW_ROOT.exists() else set()
+        stale_reviews = sorted(actual_review_paths - set(relation_reviews))
+        failures.extend(f"STALE {path}" for path in stale_reviews)
         for failure in failures:
             print(failure, file=sys.stderr)
         if failures:
@@ -537,11 +751,14 @@ def main(argv: Sequence[str] | None = None) -> int:
         )
         return 0
     GRAMMAR_ROOT.mkdir(parents=True, exist_ok=True)
+    RELATION_REVIEW_ROOT.mkdir(parents=True, exist_ok=True)
     for path, text in expected:
+        path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(text, encoding="utf-8")
     print(
         f"built {index['source_candidate_count']} candidates in "
-        f"{matrix['family_count']} textual mechanism families; 0 promoted"
+        f"{matrix['family_count']} textual mechanism families; "
+        f"{sum(candidate['promotion']['status'] == 'CROSS_WORK_SUPPORTED' for candidate in index['candidates'])} promoted"
     )
     return 0
 

@@ -3,11 +3,16 @@
   "evidence_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
   "work_id": "BRIDGERTON-S02E05",
   "scene_problem": {
-    "primary": "LEGACY_SCENE_PROBLEM",
+    "primary": "ROMANTIC_PROXIMITY",
     "secondary": [],
-    "status": "UNKNOWN",
-    "source_refs": [],
-    "notes": "The legacy primary label ROMANTIC_PROXIMITY is retained only as non-operational lineage and was not proved by structural conversion."
+    "status": "INFERRED",
+    "source_refs": [
+      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
+      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-TA-WAVE1-001"
+    ],
+    "notes": "The canonical problem is inferred from the continuous visible distance change, held endpoint, and one short paraphrased visible-text anchor establishing relationship stakes; motive, consent, and contact are not asserted."
   },
   "scene_unit_type": "NATURAL_CONTINUOUS_SCENE",
   "boundary_status": "NATURAL_START_END_VERIFIED",
@@ -41,7 +46,7 @@
   "time_tolerance_seconds": 0.001,
   "picture_evidence_status": "PICTURE_OBSERVED",
   "audio_evidence_status": "BLOCKED_DIRECT_AUDITION",
-  "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+  "text_anchor_status": "TEXT_ANCHOR_VERIFIED",
   "scene_dramatic_structure": {
     "start_state": {
       "claim_id": "DS-START",
@@ -4126,7 +4131,7 @@
       },
       "picture_status": "PICTURE_OBSERVED",
       "audio_status": "BLOCKED_DIRECT_AUDITION",
-      "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+      "text_anchor_status": "TEXT_ANCHOR_VERIFIED",
       "AI_complexity": {
         "camera": {
           "level": "HIGH",
@@ -5685,7 +5690,28 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [],
+      "abstract_role_labels": [
+        {
+          "appearance_id": "P-B",
+          "functional_role": "proximity_mover",
+          "status": "INFERRED",
+          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+          "appearance_track_id": null,
+          "source_refs": [
+            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024"
+          ]
+        },
+        {
+          "appearance_id": "P-A",
+          "functional_role": "relation_anchor",
+          "status": "INFERRED",
+          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+          "appearance_track_id": null,
+          "source_refs": [
+            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024"
+          ]
+        }
+      ],
       "blocking": {
         "claim_id": "S024-BLOCK",
         "status": "INFERRED",
@@ -9919,7 +9945,23 @@
       "Dialogue, ambience, score, silence, source, timing, and causal sound meaning remain unknown."
     ]
   },
-  "text_anchors": [],
+  "text_anchors": [
+    {
+      "anchor_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-TA-WAVE1-001",
+      "status": "TEXT_ANCHOR_VERIFIED",
+      "source_type": "SUBTITLE",
+      "paraphrase": "The exchange explicitly says a prior action threatens whether a proposed marriage can continue.",
+      "speaker_status": "UNKNOWN",
+      "start": {
+        "timecode": "00:43:03.336",
+        "seconds": 2583.336
+      },
+      "end": {
+        "timecode": "00:43:05.338",
+        "seconds": 2585.338
+      }
+    }
+  ],
   "methods": [
     {
       "method_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-LEGACY-PICTURE-REVIEW",
@@ -9961,6 +10003,41 @@
       "source_refs": [],
       "unknowns": [
         "All semantic audio facts remain unknown."
+      ]
+    },
+    {
+      "method_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-WAVE1-PICTURE-REVIEW",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "Runtime promotion Wave 1 re-opened the local source video and reviewed the cited Shot start, midpoint, and end frames. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S012",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S013",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S017",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S026"
+      ],
+      "unknowns": [
+        "Relationship motive, consent, exact contact, cross-cut identity, lens metadata, and all semantic audio remain unknown."
+      ]
+    },
+    {
+      "method_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-WAVE1-PICTURE-REVIEW-TEXT-ANCHOR",
+      "method_type": "TEXT_ANCHOR_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "Runtime promotion Wave 1 reviewed a short visible subtitle in the local video and retained only a rights-safe paraphrase.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S017",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-TA-WAVE1-001"
+      ],
+      "unknowns": [
+        "Speaker identity, uncited dialogue, and semantic audio remain unknown."
       ]
     }
   ],
@@ -10017,6 +10094,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
+      "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -10120,6 +10198,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
+      "audio_dependency": false,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -10160,7 +10239,8 @@
       "counterexample_ids": [],
       "source_method_ids": [
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-LEGACY-PICTURE-REVIEW",
-        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-STRUCTURAL-CONVERSION"
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-STRUCTURAL-CONVERSION",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-WAVE1-PICTURE-REVIEW"
       ],
       "evidence_scene_ids": [
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001"
@@ -10236,6 +10316,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
+      "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -10332,6 +10413,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
+      "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -10407,7 +10489,6 @@
       "scope": "AUDIO",
       "blocks_rule_ids": [
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C01-REGISTER-ROOM-AXIS-BEFORE-PROXIMITY",
-        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C02-DELAY-TIGHT-SHARED-FRAME-UNTIL-DISTANCE-CHANGES",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C03-KEEP-HAND-SOURCE-HEAD-RELATION-AND-WITHDRAWAL-READABLE",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C04-DECOMPRESS-THROUGH-SINGLES-AND-ROOM-RESET"
       ]
@@ -10442,6 +10523,7 @@
   "validation_status": "HUMAN_REVIEW_PENDING",
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
-    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
   ]
 }

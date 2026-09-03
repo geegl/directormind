@@ -19,6 +19,7 @@ INDEX_PATH = REPOSITORY_ROOT / "research" / "grammar" / "candidate_rule_index.js
 MATRIX_PATH = REPOSITORY_ROOT / "research" / "grammar" / "cross_work_support_matrix.json"
 REPORT_PATH = REPOSITORY_ROOT / "research" / "validation" / "candidate-rule-validation.json"
 SCHEMA_PATH = SKILL_ROOT / "references" / "candidate-director-rule.schema.json"
+WAVE1_REVIEW_PATH = REPOSITORY_ROOT / "research" / "grammar" / "runtime_rule_promotion_wave1.review.json"
 
 sys.path.insert(0, str(SCRIPT_DIR))
 from build_candidate_rule_index import build_all, render_matrix  # noqa: E402
@@ -131,8 +132,8 @@ def _verified_review_ref(
     path: str,
     issues: list[dict[str, str]],
 ) -> bool:
-    if record.get("review_status") != "HUMAN_VERIFIED":
-        _issue(issues, "RELATION-REVIEW-MISSING", path, "Verified relation requires human review evidence.")
+    if record.get("review_status") not in {"HUMAN_VERIFIED", "ROOT_VIDEO_VERIFIED"}:
+        _issue(issues, "RELATION-REVIEW-MISSING", path, "Verified relation requires a named review record.")
         return False
     review_id = record.get("review_id")
     review_ref = record.get("review_ref")
@@ -163,7 +164,7 @@ def _verified_review_ref(
         "review_id": review_id,
         "candidate_rule_id": candidate_id,
         "record_id": record_id,
-        "status": "HUMAN_VERIFIED",
+        "status": record.get("review_status"),
         "relation": record.get("relation"),
         "same_trigger_status": record.get("same_trigger_status"),
         "source_candidate_rule_id": record.get("source_candidate_rule_id"),
@@ -214,7 +215,9 @@ def _validate_roles_problem_audio_boundary(
                 issues,
             )
 
-    audio = candidate.get("operational_contract", {}).get("audio_logic", {})
+    contract = candidate.get("operational_contract", {})
+    audio = contract.get("audio_logic", {})
+    audio_dependency = contract.get("audio_dependency") is not False
     if audio.get("status") == "AUDIO_OBSERVED":
         if evidence.get("audio_evidence_status") != "AUDIO_OBSERVED":
             _issue(
@@ -264,7 +267,7 @@ def _validate_roles_problem_audio_boundary(
 
     return {
         "scene_problem": problem.get("status") == "UNKNOWN",
-        "audio": audio.get("status") != "AUDIO_OBSERVED",
+        "audio": audio_dependency and audio.get("status") != "AUDIO_OBSERVED",
         "functional_roles": not candidate.get("functional_roles")
         or any(role.get("status") == "UNKNOWN" for role in candidate.get("functional_roles", [])),
         "natural_scene_boundary": boundary.get("status") != "VERIFIED",
@@ -388,6 +391,16 @@ def _verified_forward_tests(
     count = 0
     seen: set[str] = set()
     seen_refs: set[str] = set()
+    promotion_review = _read_json(WAVE1_REVIEW_PATH)
+    promotion = next(
+        (
+            item
+            for item in promotion_review.get("promotions", [])
+            if item.get("candidate_rule_id") == candidate.get("candidate_rule_id")
+        ),
+        None,
+    )
+    verified_modes: set[str] = set()
     for index, test in enumerate(candidate.get("promotion", {}).get("original_forward_tests", [])):
         test_path = f"{path}.promotion.original_forward_tests[{index}]"
         case_id = test.get("test_case_id")
@@ -430,17 +443,34 @@ def _verified_forward_tests(
         except (OSError, ValueError, json.JSONDecodeError):
             _issue(issues, "FORWARD-TEST-MANIFEST", test_path, "Forward-test manifest JSON is invalid.")
             continue
+        if promotion is None:
+            _issue(issues, "FORWARD-TEST-PROMOTION-REVIEW", test_path, "Passing forward test lacks a canonical promotion review.")
+            continue
+        expected_mode = (
+            "POSITIVE"
+            if case_id == promotion["positive_forward_test_id"]
+            else "BOUNDARY_OR_NON_APPLICABLE"
+            if case_id == promotion["boundary_forward_test_id"]
+            else None
+        )
         expected_manifest = {
             "schema_version": "forward-test-result/0.1",
             "test_case_id": case_id,
             "candidate_rule_id": candidate.get("candidate_rule_id"),
             "canonical_rule_family": candidate.get("canonical_rule_family"),
-            "status": "PASS",
+            "rule_id": promotion["rule_id"],
+            "test_mode": expected_mode,
+            # The package can pass its structural routing assertion while the
+            # creative result remains intentionally unapproved.
+            "status": "HUMAN_REVIEW_PENDING",
         }
-        if manifest != expected_manifest or case_id == candidate.get("candidate_rule_id"):
+        if expected_mode is None or manifest != expected_manifest or case_id == candidate.get("candidate_rule_id"):
             _issue(issues, "FORWARD-TEST-MANIFEST", test_path, "Forward-test manifest does not exactly bind the case and candidate.")
             continue
+        verified_modes.add(expected_mode)
         count += 1
+    if candidate.get("promotion", {}).get("status") == "CROSS_WORK_SUPPORTED" and verified_modes != {"POSITIVE", "BOUNDARY_OR_NON_APPLICABLE"}:
+        _issue(issues, "FORWARD-TEST-PAIR", path, "Cross-work promotion requires one distinct positive and one distinct boundary package.")
     return count
 
 
@@ -683,8 +713,8 @@ def validate_repository(
         "issues": issues,
         "boundaries": [
             "Textual family clustering is not promotion evidence.",
-            "Source media and semantic audio were not re-reviewed.",
-            "UNKNOWN-dependent candidates remain blocked.",
+            "Runtime-eligible visual rules require fresh picture review; semantic audio remains outside rules with audio_dependency=false.",
+            "Every candidate not explicitly promoted remains blocked by its unresolved dependencies.",
         ],
     }
 

@@ -25,8 +25,10 @@ LIVE_CHECK_NAMES = (
     "canonical conversion determinism",
     "generated review determinism",
     "candidate index determinism",
+    "runtime promotion review",
     "Scene Evidence validation",
     "candidate promotion gates",
+    "runtime Grammar build determinism",
     "runtime Grammar validation",
     "routing-case validation",
     "forward-test build determinism",
@@ -34,6 +36,7 @@ LIVE_CHECK_NAMES = (
     "unit and CLI suite",
     "whitespace",
     "versioned report scene-evidence-validation.json",
+    "versioned report runtime-rule-promotion-wave1-validation.json",
     "versioned report candidate-rule-validation.json",
     "versioned report director-grammar-validation.json",
     "versioned report director-routing-validation.json",
@@ -101,6 +104,7 @@ def _live_pr_state_required() -> dict[str, str]:
 
 def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, Any]:
     scene = _load_report("scene-evidence-validation.json")
+    promotion = _load_report("runtime-rule-promotion-wave1-validation.json")
     candidate = _load_report("candidate-rule-validation.json")
     grammar = _load_report("director-grammar-validation.json")
     routing = _load_report("director-routing-validation.json")
@@ -116,11 +120,17 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
     ]
     validation_errors = sum(
         report["error_count"]
-        for report in (scene, candidate, grammar, routing, forward)
+        for report in (scene, promotion, candidate, grammar, routing, forward)
     )
     errors = _evidence_errors(live_evidence)
     expected_report_statuses = (
         ("SCENE_VALIDATION_NOT_PASSING", scene["status"] == "PASS_STRUCTURAL"),
+        ("PROMOTION_REVIEW_NOT_PASSING", promotion["status"] == "PASS" and promotion["phase_status"] == "COMPLETE"),
+        (
+            "PROMOTION_SCENE_PROBLEM_COUNT_INSUFFICIENT",
+            isinstance(promotion.get("promoted_scene_problem_count"), int)
+            and promotion["promoted_scene_problem_count"] >= 3,
+        ),
         ("CANDIDATE_VALIDATION_NOT_PASSING", candidate["status"] == "PASS"),
         ("GRAMMAR_VALIDATION_NOT_PASSING", grammar["status"] == "PASS"),
         ("ROUTING_VALIDATION_NOT_PASSING", routing["status"] == "PASS"),
@@ -146,6 +156,9 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
             "shot_edit_units": scene["total_shots"],
             "candidate_identities": candidate["candidate_count"],
             "candidate_families": candidate["family_count"],
+            "reviewed_evidence_units": promotion["reviewed_evidence_count"],
+            "promoted_rule_families": promotion["promoted_family_count"],
+            "promoted_scene_problem_count": promotion["promoted_scene_problem_count"],
             "blocked_candidates": blocked_count,
             "cross_work_supported_candidates": promotion_counts.get("CROSS_WORK_SUPPORTED", 0),
             "general_default_candidates": promotion_counts.get("GENERAL_DEFAULT", 0),
@@ -181,9 +194,11 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
             "converter_determinism": "PASS" if evidence_pass("canonical conversion determinism") else "FAIL",
             "renderer_determinism": "PASS" if evidence_pass("generated review determinism") else "FAIL",
             "candidate_index_determinism": "PASS" if evidence_pass("candidate index determinism") else "FAIL",
+            "promotion_review": "PASS" if evidence_pass("runtime promotion review") and promotion["status"] == "PASS" else "FAIL",
             "scene_validation": "PASS_STRUCTURAL" if evidence_pass("Scene Evidence validation") and scene["status"] == "PASS_STRUCTURAL" else "FAIL",
             "candidate_validation": "PASS" if evidence_pass("candidate promotion gates") and candidate["status"] == "PASS" else "FAIL",
             "grammar_validation": "PASS" if evidence_pass("runtime Grammar validation") and grammar["status"] == "PASS" else "FAIL",
+            "grammar_build_determinism": "PASS" if evidence_pass("runtime Grammar build determinism") else "FAIL",
             "routing_validation": "PASS" if evidence_pass("routing-case validation") and routing["status"] == "PASS" else "FAIL",
             "forward_build_determinism": "PASS" if evidence_pass("forward-test build determinism") else "FAIL",
             "forward_validation": "PASS" if evidence_pass("forward-test repository") and forward["status"] == "PASS" else "FAIL",
@@ -209,9 +224,9 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
             "media_deleted": _declared_not_performed(),
         },
         "unverified_boundaries": [
-            "SOURCE_MEDIA_NOT_REPLAYED",
+            "ONLY_NINE_EVIDENCE_UNITS_REPLAYED_FOR_WAVE1_RULES",
             "SEMANTIC_AUDIO_NOT_DIRECTLY_AUDITIONED",
-            "NO_ELIGIBLE_RULE_POSITIVE_SELECTION_AVAILABLE",
+            "FORWARD_SELECTION_IS_STRUCTURAL_NOT_CREATIVE_APPROVAL",
             "CREATIVE_QUALITY_AND_AUDIENCE_EFFECT_NOT_PROVED",
             "REMOTE_CI_RESULT_IS_POST_COMMIT_EXTERNAL_EVIDENCE",
             "PULL_REQUEST_STATE_IS_POST_COMMIT_EXTERNAL_EVIDENCE",

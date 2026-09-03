@@ -17,7 +17,7 @@
 | duration | 610.834 |
 | picture_evidence_status | PICTURE_OBSERVED |
 | audio_evidence_status | BLOCKED_DIRECT_AUDITION |
-| text_anchor_status | TEXT_ANCHOR_NOT_USED |
+| text_anchor_status | TEXT_ANCHOR_VERIFIED |
 | production_take_status | PRODUCTION_METHOD_UNKNOWN |
 | source_identity_status | SOURCE_OR_FILENAME_SUPPLIED |
 | validation_status | HUMAN_REVIEW_PENDING |
@@ -26,11 +26,16 @@
 
 ```json
 {
-  "notes": "The legacy primary label RELATIONSHIP_FRACTURE is retained only as non-operational lineage and was not proved by structural conversion.",
-  "primary": "LEGACY_SCENE_PROBLEM",
+  "notes": "The canonical problem is inferred from repeated visible relation resets plus one short, paraphrased visible-text anchor showing direct personal conflict; no dialogue wording is transferred.",
+  "primary": "RELATIONSHIP_FRACTURE",
   "secondary": [],
-  "source_refs": [],
-  "status": "UNKNOWN"
+  "source_refs": [
+    "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
+    "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
+    "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085",
+    "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-TA-WAVE1-001"
+  ],
+  "status": "INFERRED"
 }
 ```
 
@@ -160,7 +165,6 @@
     "blocks_rule_ids": [
       "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C01-SPATIAL-ROUTE-BEFORE-ANCHORED-SEATING",
       "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C02-STABLE-SEAT-ANCHORS-CARRY-DENSE-ALTERNATION",
-      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
       "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C04-LATE-HOLDS-NEED-VISIBLE-LEVEL-AND-PROXIMITY-ENDPOINTS"
     ],
     "scope": "AUDIO",
@@ -201,7 +205,8 @@
 ```json
 [
   "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
-  "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+  "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+  "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
 ]
 ```
 
@@ -384,11 +389,16 @@
   "picture_evidence_status": "PICTURE_OBSERVED",
   "production_take_status": "PRODUCTION_METHOD_UNKNOWN",
   "scene_problem": {
-    "notes": "The legacy primary label RELATIONSHIP_FRACTURE is retained only as non-operational lineage and was not proved by structural conversion.",
-    "primary": "LEGACY_SCENE_PROBLEM",
+    "notes": "The canonical problem is inferred from repeated visible relation resets plus one short, paraphrased visible-text anchor showing direct personal conflict; no dialogue wording is transferred.",
+    "primary": "RELATIONSHIP_FRACTURE",
     "secondary": [],
-    "source_refs": [],
-    "status": "UNKNOWN"
+    "source_refs": [
+      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
+      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
+      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085",
+      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-TA-WAVE1-001"
+    ],
+    "status": "INFERRED"
   },
   "scene_unit_type": "NATURAL_CONTINUOUS_SCENE",
   "schema_version": "scene-evidence/0.1",
@@ -6968,13 +6978,12 @@
     "total_duration": 610.834,
     "unit": "VISIBLE_SHOT"
   },
-  "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+  "text_anchor_status": "TEXT_ANCHOR_VERIFIED",
   "unknowns": [
     {
       "blocks_rule_ids": [
         "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C01-SPATIAL-ROUTE-BEFORE-ANCHORED-SEATING",
         "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C02-STABLE-SEAT-ANCHORS-CARRY-DENSE-ALTERNATION",
-        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
         "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C04-LATE-HOLDS-NEED-VISIBLE-LEVEL-AND-PROXIMITY-ENDPOINTS"
       ],
       "scope": "AUDIO",
@@ -6996,7 +7005,8 @@
   "validation_status": "HUMAN_REVIEW_PENDING",
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
-    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
   ],
   "work_id": "MARRIAGE-STORY-2019"
 }

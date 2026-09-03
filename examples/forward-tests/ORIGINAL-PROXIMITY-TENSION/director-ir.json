@@ -18,7 +18,8 @@
         "locked_fact_ids": [
           "FACT-01",
           "FACT-02",
-          "FACT-03"
+          "FACT-03",
+          "FACT-04"
         ]
       },
       "dramatic_engine": {
@@ -31,7 +32,7 @@
         "subtext": "the maintained gap carries the tension",
         "tactic_change": "parallel work becomes a shared pause"
       },
-      "duration_seconds": 15,
+      "duration_seconds": 23,
       "location": "quiet prototype studio",
       "narrative_goal": "make mutual awareness legible through distance without physical contact",
       "pov": {
@@ -53,10 +54,10 @@
         "locked_facts": [
           {
             "fact_id": "FACT-01",
-            "fact_type": "shared_object",
+            "fact_type": "relationship_context",
             "source_ref": "locked-script.md#FACT-01",
             "status": "LOCKED",
-            "value": "Both designers need the same unlit model to complete a joint review."
+            "value": "The two designers are former romantic partners, and their agreed no-contact distance during the joint model review is a relationship-relevant story fact."
           },
           {
             "fact_id": "FACT-02",
@@ -67,10 +68,17 @@
           },
           {
             "fact_id": "FACT-03",
-            "fact_type": "no_contact_boundary",
+            "fact_type": "relation_endpoint",
             "source_ref": "locked-script.md#FACT-03",
             "status": "LOCKED",
             "value": "The table remains between them and neither person touches the other."
+          },
+          {
+            "fact_id": "FACT-04",
+            "fact_type": "continuous_time_change",
+            "source_ref": "locked-script.md#FACT-04",
+            "status": "LOCKED",
+            "value": "The approach and stop occur in one continuous present-time interval without ellipsis."
           }
         ],
         "priority_constraints": [],
@@ -80,8 +88,9 @@
           "project_original": true
         },
         "routing_signals": [
-          "distance_change",
-          "no_contact_boundary"
+          "relation_distance_change",
+          "continuous_present_time",
+          "shared_endpoint_required"
         ],
         "scene_problem": {
           "primary": "ROMANTIC_PROXIMITY",
@@ -110,19 +119,66 @@
         ],
         "case_id": "ORIGINAL-PROXIMITY-TENSION",
         "conflict_trace": [],
-        "eligible_rule_ids": [],
+        "eligible_rule_ids": [
+          "DR-PERFORMANCE-OWNER-HOLD",
+          "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+          "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+        ],
         "human_review_status": "HUMAN_REVIEW_PENDING",
-        "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
-        "rejected_rules": [],
+        "ir_handoff": "CONTINUE_WITH_SELECTED_RULES",
+        "rejected_rules": [
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "missing_fact_types": [
+              "performance_progression",
+              "relation_state"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-PERFORMANCE-OWNER-HOLD"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "missing_fact_types": [
+              "counterpart_relation",
+              "spatial_change"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+          }
+        ],
         "rights_boundary": {
           "subject_matter_used_for_selection": false,
           "surface_copy_allowed": false
         },
         "scene_problem": "ROMANTIC_PROXIMITY",
         "schema_version": "director-routing-result/0.1",
-        "selected_rules": [],
-        "selection_count": 0,
-        "status": "NO_APPLICABLE_RULE"
+        "selected_rules": [
+          {
+            "matched_fact_ids": [
+              "FACT-02",
+              "FACT-03"
+            ],
+            "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+            "selection_reason_codes": [
+              "PRIMARY_PROBLEM_MATCH",
+              "REQUIRED_FACTS_LOCKED",
+              "RUNTIME_AUTHORIZED",
+              "TRIGGER_MATCH"
+            ]
+          }
+        ],
+        "selection_count": 1,
+        "status": "SELECTED"
       },
       "scene_id": "EP01-SC01",
       "shots": [
@@ -166,7 +222,7 @@
               "FACT-01"
             ],
             "must_hold": [
-              "Both designers need the same unlit model to complete a joint review."
+              "The two designers are former romantic partners, and their agreed no-contact distance during the joint model review is a relationship-relevant story fact."
             ],
             "must_not_appear": [
               "research-work surface elements"
@@ -204,7 +260,7 @@
           "fallback": null,
           "focus_strategy": "keep the locked action readable",
           "framing": "readable neutral frame",
-          "narrative_goal": "Both designers need the same unlit model to complete a joint review.",
+          "narrative_goal": "The two designers are former romantic partners, and their agreed no-contact distance during the joint model review is a relationship-relevant story fact.",
           "order": 1,
           "performance_beats": [
             "Designer A switches off the room lights, leaving only the model base illuminated."
@@ -251,7 +307,7 @@
             "source_refs": [],
             "status": "PROJECT_ORIGINAL_ONLY"
           },
-          "blocking": "Designer B approaches the opposite side; both stop with the model centered between them.",
+          "blocking": "Designer B approaches the fixed opposite side while Designer A remains the relation anchor; stop with the model between them and no contact.",
           "camera_angle": "eye level",
           "camera_end": "stable view after the listed beat",
           "camera_motion": {
@@ -267,7 +323,7 @@
             "trigger": "FACT-02"
           },
           "camera_start": "stable view before the listed beat",
-          "confidence": "UNKNOWN",
+          "confidence": "MEDIUM",
           "constraints": {
             "changes_here": [
               "FACT-02"
@@ -282,10 +338,12 @@
           "continuity_in": "state before FACT-02",
           "continuity_out": "state after FACT-02",
           "dialogue": [],
-          "duration_seconds": 5,
-          "edit_in": "cut on the prior locked state",
-          "edit_out": "cut after the new locked state is readable",
-          "evidence_rule_ids": [],
+          "duration_seconds": 8,
+          "edit_in": "enter before the continuous distance change begins",
+          "edit_out": "hold until the shared no-contact endpoint is readable",
+          "evidence_rule_ids": [
+            "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+          ],
           "evidence_status": "HYPOTHESIS",
           "execution_plan": {
             "base_generation": {
@@ -310,7 +368,7 @@
           },
           "fallback": null,
           "focus_strategy": "keep the locked action readable",
-          "framing": "readable neutral frame",
+          "framing": "shared frame containing both start zones, the approach path, and the no-contact endpoint",
           "narrative_goal": "They approach opposite sides of the model table and stop within arm's reach.",
           "order": 2,
           "performance_beats": [
@@ -327,7 +385,7 @@
             "status": "NOT_REQUIRED"
           },
           "shot_id": "EP01-SC01-SH02",
-          "shot_type": "project-original coverage",
+          "shot_type": "project-original continuous shared relation frame",
           "source_refs": [
             "locked-script.md#FACT-02"
           ],
@@ -434,6 +492,107 @@
           ],
           "visible_text": [],
           "visual_style_module": "UNRESOLVED"
+        },
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "DESIGNER_A",
+            "DESIGNER_B"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "The review continues after the stop without a time jump.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-04"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-04"
+            ],
+            "must_hold": [
+              "The approach and stop occur in one continuous present-time interval without ellipsis."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-04",
+          "continuity_out": "state after FACT-04",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "The approach and stop occur in one continuous present-time interval without ellipsis.",
+          "order": 4,
+          "performance_beats": [
+            "The review continues after the stop without a time jump."
+          ],
+          "reference_plan": {
+            "exclude": [],
+            "inherit": [],
+            "reference_id": null,
+            "reference_type": "NONE",
+            "required": false,
+            "rights_status": "NOT_APPLICABLE",
+            "scope": "",
+            "status": "NOT_REQUIRED"
+          },
+          "shot_id": "EP01-SC01-SH04",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-04"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
         }
       ],
       "source_scene": "locked-script.md",
@@ -452,7 +611,7 @@
       "covered_by": [
         "EP01-SC01-SH01"
       ],
-      "description": "Both designers need the same unlit model to complete a joint review.",
+      "description": "The two designers are former romantic partners, and their agreed no-contact distance during the joint model review is a relationship-relevant story fact.",
       "notes": "Structural coverage only; human creative review remains pending.",
       "source_ref": "locked-script.md#FACT-01",
       "status": "covered"
@@ -474,6 +633,15 @@
       "notes": "Structural coverage only; human creative review remains pending.",
       "source_ref": "locked-script.md#FACT-03",
       "status": "covered"
+    },
+    {
+      "covered_by": [
+        "EP01-SC01-SH04"
+      ],
+      "description": "The approach and stop occur in one continuous present-time interval without ellipsis.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-04",
+      "status": "covered"
     }
   ],
   "source_facts": {
@@ -482,11 +650,11 @@
     ],
     "cross_episode_state_in": [],
     "cross_episode_state_out": [],
-    "source_unit_count": 3
+    "source_unit_count": 4
   },
   "source_script": "examples/forward-tests/ORIGINAL-PROXIMITY-TENSION/locked-script.md",
   "status": "HUMAN_REVIEW_PENDING",
-  "target_duration_seconds": 15,
+  "target_duration_seconds": 23,
   "unresolved": [
     "Human creative review has not been performed."
   ],

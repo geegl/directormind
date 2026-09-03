@@ -127,53 +127,54 @@ class CandidateRuleContractTests(unittest.TestCase):
         })
         self.assertIn("not promotion", self.index["normalization_policy"]["promotion_boundary"].lower())
 
-    def test_current_corpus_stays_blocked_and_runtime_unauthorized(self) -> None:
+    def test_wave1_promotes_three_and_keeps_remaining_candidates_blocked(self) -> None:
         candidates = self.index["candidates"]
         self.assertTrue(candidates)
         self.assertEqual(
-            {candidate["promotion"]["status"] for candidate in candidates},
-            {"BLOCKED_BY_UNKNOWN"},
+            Counter(candidate["promotion"]["status"] for candidate in candidates),
+            Counter({"BLOCKED_BY_UNKNOWN": 121, "CROSS_WORK_SUPPORTED": 3}),
         )
         self.assertEqual(
             sum(candidate["rights_boundary"]["runtime_authorized"] for candidate in candidates),
-            0,
+            3,
         )
         self.assertEqual(
             {tuple(candidate["confidence"]) for candidate in candidates},
             {("execution", "transfer", "within_source")},
         )
-        self.assertTrue(
-            all(
-                set(candidate["confidence"].values()) == {"UNKNOWN"}
-                for candidate in candidates
-            )
-        )
-        self.assertTrue(
-            all(
-                all(candidate["unknown_dependencies"].values())
-                for candidate in candidates
-            )
-        )
+        promoted = [candidate for candidate in candidates if candidate["promotion"]["status"] == "CROSS_WORK_SUPPORTED"]
+        blocked = [candidate for candidate in candidates if candidate["promotion"]["status"] == "BLOCKED_BY_UNKNOWN"]
+        self.assertTrue(all(not any(candidate["unknown_dependencies"].values()) for candidate in promoted))
+        self.assertTrue(all("UNKNOWN" not in candidate["confidence"].values() for candidate in promoted))
+        self.assertTrue(all(any(candidate["unknown_dependencies"].values()) for candidate in blocked))
 
-    def test_scene_problem_and_roles_remain_honestly_unknown(self) -> None:
+    def test_only_wave1_sources_gain_reviewed_problem_and_roles(self) -> None:
+        reviewed_ids = {
+            "MRR-S04E07-ACT-FOUR-VISUAL-001",
+            "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+        }
         for evidence in self.sources:
             problem = evidence["scene_problem"]
-            self.assertEqual(problem["status"], "UNKNOWN")
             self.assertLessEqual(len(problem["secondary"]), 2)
-            self.assertEqual(problem["source_refs"], [])
-            for shot in evidence["shots"]:
-                self.assertEqual(shot["abstract_role_labels"], [])
-        for candidate in self.index["candidates"]:
-            self.assertEqual(candidate["functional_roles"], [])
-            self.assertEqual(candidate["scene_problem"]["status"], "UNKNOWN")
-            self.assertEqual(candidate["scene_problem"]["source_refs"], [])
+            if evidence["evidence_id"] in reviewed_ids:
+                self.assertEqual(problem["status"], "INFERRED")
+                self.assertTrue(problem["source_refs"])
+                self.assertTrue(any(shot["abstract_role_labels"] for shot in evidence["shots"]))
+            else:
+                self.assertEqual(problem["status"], "UNKNOWN")
+                self.assertEqual(problem["source_refs"], [])
+        promoted = [candidate for candidate in self.index["candidates"] if candidate["promotion"]["status"] == "CROSS_WORK_SUPPORTED"]
+        self.assertEqual(len(promoted), 3)
+        self.assertTrue(all(candidate["functional_roles"] for candidate in promoted))
+        self.assertTrue(all(candidate["scene_problem"]["status"] == "INFERRED" for candidate in promoted))
 
     def test_repository_candidate_validation_passes(self) -> None:
         report = validate_repository(copy.deepcopy(self.index), copy.deepcopy(self.matrix))
         self.assertEqual(report["status"], "PASS")
         self.assertEqual(report["candidate_count"], 124)
         self.assertEqual(report["family_count"], 16)
-        self.assertEqual(report["runtime_authorized_count"], 0)
+        self.assertEqual(report["runtime_authorized_count"], 3)
         self.assertEqual(report["error_count"], 0)
 
     def test_unknown_candidate_cannot_be_promoted(self) -> None:
@@ -539,7 +540,7 @@ class CandidateRuleContractTests(unittest.TestCase):
         candidate_ids = {
             candidate["candidate_rule_id"] for candidate in self.index["candidates"]
         }
-        self.assertEqual(len(FAMILY_OVERRIDES), 44)
+        self.assertEqual(len(FAMILY_OVERRIDES), 46)
         self.assertLessEqual(set(FAMILY_OVERRIDES), candidate_ids)
         self.assertEqual(
             {

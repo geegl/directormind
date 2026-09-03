@@ -1,17 +1,18 @@
 {
   "boundaries": [
     "Textual family clustering is not promotion evidence.",
-    "Source media and semantic audio were not re-reviewed.",
-    "UNKNOWN-dependent candidates remain blocked."
+    "Runtime-eligible visual rules require fresh picture review; semantic audio remains outside rules with audio_dependency=false.",
+    "Every candidate not explicitly promoted remains blocked by its unresolved dependencies."
   ],
   "candidate_count": 124,
   "error_count": 0,
   "family_count": 16,
   "issues": [],
   "promotion_status_counts": {
-    "BLOCKED_BY_UNKNOWN": 124
+    "BLOCKED_BY_UNKNOWN": 121,
+    "CROSS_WORK_SUPPORTED": 3
   },
-  "runtime_authorized_count": 0,
+  "runtime_authorized_count": 3,
   "schema_version": "candidate-rule-validation/0.1",
   "status": "PASS"
 }

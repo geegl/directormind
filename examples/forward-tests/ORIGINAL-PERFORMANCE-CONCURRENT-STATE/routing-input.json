@@ -1,0 +1,57 @@
+{
+  "case_id": "ORIGINAL-PERFORMANCE-CONCURRENT-STATE",
+  "dramatic_structure": {
+    "goal": "preserve an account together with a simultaneous safety state",
+    "objectives": [
+      "verify the pressure sequence"
+    ],
+    "obstacle": "the account and indicator must be read together",
+    "stakes": "the test cannot continue if a reading is missed",
+    "subtext": "none asserted",
+    "tactic_change": "verbal account becomes synchronized checking"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "relation_state",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "The reviewer and operator are established beside a project-original pressure indicator."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "performance_progression",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "The operator gives a visible step-by-step account while checking the indicator."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "simultaneous_state",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "The indicator and the reviewer's safety acknowledgment must remain visible throughout the account."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "relation_already_registered",
+    "single_performance_progression",
+    "simultaneous_required_action"
+  ],
+  "scene_problem": {
+    "primary": "INTERROGATION",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "equipment_review"
+  ],
+  "unknown_fact_types": []
+}

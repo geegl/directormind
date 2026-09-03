@@ -34,8 +34,10 @@ def checks(report_root: Path) -> list[Check]:
         Check("canonical conversion determinism", (python, f"{script}/convert_legacy_scene_evidence.py", "--check")),
         Check("generated review determinism", (python, f"{script}/render_scene_evidence.py", "--check")),
         Check("candidate index determinism", (python, f"{script}/build_candidate_rule_index.py", "--check")),
+        Check("runtime promotion review", (python, f"{script}/validate_runtime_rule_promotion_review.py", "--report", str(report_root / "runtime-rule-promotion-wave1-validation.json"))),
         Check("Scene Evidence validation", (python, f"{script}/validate_scene_evidence.py", "research/evidence", "--report", str(report_root / "scene-evidence-validation.json"), "--quiet")),
         Check("candidate promotion gates", (python, f"{script}/validate_candidate_rules.py", "--report", str(report_root / "candidate-rule-validation.json"), "--quiet")),
+        Check("runtime Grammar build determinism", (python, f"{script}/build_director_grammar.py", "--check")),
         Check("runtime Grammar validation", (python, f"{script}/validate_director_grammar.py", "--report", str(report_root / "director-grammar-validation.json"))),
         Check("routing-case validation", (python, f"{script}/validate_director_routing_cases.py", "--report", str(report_root / "director-routing-validation.json"))),
         Check("forward-test build determinism", (python, f"{script}/build_forward_tests.py", "--check")),
@@ -94,6 +96,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             versioned_root = REPOSITORY_ROOT / "research" / "validation"
             for name in (
                 "scene-evidence-validation.json",
+                "runtime-rule-promotion-wave1-validation.json",
                 "candidate-rule-validation.json",
                 "director-grammar-validation.json",
                 "director-routing-validation.json",
@@ -146,7 +149,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                 return 1
             final_report_count = 1
 
-        total = len(selected) + 5 + final_report_count
+        total = len(selected) + 6 + final_report_count
         print(f"PASS: {total} repository checks")
         return 0
 

@@ -1,8 +1,17 @@
 # Closed Corpus — 33 Local Source Status
 
-Updated: 2026-09-01
+Updated: 2026-09-03
 
 Status: `READ_ONLY_CORPUS_REGISTER_COMPLETE / NO_DELETE_AUTHORIZED`
+
+## Runtime Rule Promotion Wave 1 note
+
+Nine existing evidence units were reopened from their local source videos for
+three runtime-rule promotions. This adds no work and changes no retention
+decision. Three source units now include one short paraphrased visible-text
+anchor each; semantic audio remains unauditioned. The remaining 24 evidence
+units were not freshly replayed in this phase. Exact rule-level review scope is
+recorded in `RUNTIME_RULE_PROMOTION_WAVE1_EVIDENCE_REVIEW.md`.
 
 This register covers the 33 media files currently in the closed local corpus. A row is one local source file, not necessarily one different feature film: episodic sources and combined episode files are counted as files. *Fleabag* S02E01 is not included because no local file exists. No source media, still, audio excerpt, subtitle, dialogue transcript, raw release label, download-site label, or absolute local path is recorded here.
 

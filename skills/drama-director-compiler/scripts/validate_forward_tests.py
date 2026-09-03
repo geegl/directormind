@@ -56,6 +56,22 @@ REQUIRED_COVERAGE_TAGS = {
     "NON_CONTACT_RELATION_TENSION",
     "SOUND_DRIVEN_SUSPENSE",
 }
+MUTUALLY_EXCLUSIVE_ROUTING_SIGNALS = {
+    frozenset({"counterpart_relation_required", "counterpart_relation_not_required"}),
+    frozenset({"continuous_present_time", "elliptical_time_change"}),
+}
+ROUTING_SIGNAL_FACT_TYPES = {
+    "relation_already_registered": "relation_state",
+    "single_performance_progression": "performance_progression",
+    "simultaneous_required_action": "simultaneous_state",
+    "material_spatial_change": "spatial_change",
+    "counterpart_relation_required": "counterpart_relation",
+    "counterpart_relation_not_required": "counterpart_absent",
+    "relation_distance_change": "distance_change",
+    "continuous_present_time": "continuous_time_change",
+    "shared_endpoint_required": "relation_endpoint",
+    "elliptical_time_change": "time_ellipsis",
+}
 REQUIRED_CASE_IDS = {
     "ORIGINAL-POWER-DIALOGUE",
     "ORIGINAL-RELATIONSHIP-FRACTURE",
@@ -64,6 +80,10 @@ REQUIRED_CASE_IDS = {
     "ORIGINAL-ACTION-CAUSALITY",
     "ORIGINAL-PROXIMITY-TENSION",
     "ORIGINAL-SOUND-SUSPENSE",
+    "ORIGINAL-PERFORMANCE-OWNER-HOLD",
+    "ORIGINAL-PERFORMANCE-CONCURRENT-STATE",
+    "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
+    "ORIGINAL-PROXIMITY-ELLIPSIS",
     "ORIGINAL-NO-APPLICABLE-RULE",
 }
 FORBIDDEN_STATUS_RE = re.compile(r"\b(PRODUCTION_READY|WINNER|CREATIVE_SUCCESS)\b", re.IGNORECASE)
@@ -172,6 +192,10 @@ def surface_issues(
             except json.JSONDecodeError:
                 decoded = None
             if decoded is not None:
+                if file_path.name == "manifest.json" and isinstance(decoded, dict):
+                    decoded = dict(decoded)
+                    decoded["candidate_rule_id"] = None
+                scan_text = json.dumps(decoded, ensure_ascii=False, sort_keys=True)
                 scan_text += "\n" + "\n".join(value for _, value in iter_strings(decoded))
         if FORBIDDEN_STATUS_RE.search(scan_text):
             issue(issues, "FORWARD-APPROVAL-CLAIM", relative, "Unreviewed package contains a prohibited success label.")
@@ -192,16 +216,16 @@ def surface_issues(
 
 
 def expected_case_validation(
-    case_id: str,
+    entry: dict[str, Any],
     routing_result: dict[str, Any],
     ir_report: dict[str, Any],
 ) -> dict[str, Any]:
     return {
         "schema_version": "forward-test-validation/0.1",
-        "test_case_id": case_id,
+        "test_case_id": entry["test_case_id"],
         "structural_status": "PASS" if ir_report["status"] == "PASS" else "FAIL",
-        "test_mode": "ZERO_ELIGIBLE_PROBE",
-        "positive_selection_claimed": False,
+        "test_mode": entry["test_mode"],
+        "positive_selection_claimed": entry["test_mode"] == "POSITIVE",
         "routing_status": routing_result["status"],
         "routing_error_count": 0,
         "ir_status": ir_report["status"],
@@ -242,12 +266,28 @@ def validate_package(
     expected_manifest = {
         "schema_version": "forward-test-result/0.1",
         "test_case_id": case_id,
-        "candidate_rule_id": None,
-        "canonical_rule_family": None,
+        "candidate_rule_id": (
+            None
+            if not entry.get("positive_for_rule_ids") and not entry.get("boundary_for_rule_ids")
+            else next(
+                candidate.get("candidate_rule_id")
+                for candidate in candidate_index.get("candidates", [])
+                if candidate.get("canonical_rule_family")
+                in set(entry.get("positive_for_family_ids", []) + entry.get("boundary_for_family_ids", []))
+                and candidate.get("promotion", {}).get("status") == "CROSS_WORK_SUPPORTED"
+            )
+        ),
+        "canonical_rule_family": (
+            (entry.get("positive_for_family_ids") or entry.get("boundary_for_family_ids") or [None])[0]
+        ),
+        "rule_id": (
+            (entry.get("positive_for_rule_ids") or entry.get("boundary_for_rule_ids") or [None])[0]
+        ),
+        "test_mode": entry.get("test_mode"),
         "status": "HUMAN_REVIEW_PENDING",
     }
-    if zero_eligible and manifest != expected_manifest:
-        issue(issues, "FORWARD-MANIFEST", f"{relative_package}/manifest.json", "Zero-eligible probe manifest drifted or claims a promotion result.")
+    if manifest != expected_manifest:
+        issue(issues, "FORWARD-MANIFEST", f"{relative_package}/manifest.json", "Forward-test manifest does not exactly bind its rule-level purpose.")
     if package.name != case_id:
         issue(issues, "FORWARD-CASE-ID", relative_package, "Directory and case IDs differ.")
     input_issues = schema_issues(routing_input, INPUT_SCHEMA_PATH)
@@ -255,6 +295,39 @@ def validate_package(
         issue(issues, "FORWARD-ROUTING-INPUT", f"{relative_package}/routing-input.json:{item['path']}", item["message"])
     if routing_input.get("case_id") != case_id or routing_input.get("scene_problem", {}).get("primary") != entry.get("scene_problem"):
         issue(issues, "FORWARD-ROUTING-BINDING", f"{relative_package}/routing-input.json", "Routing input does not bind the indexed case and scene problem.")
+    signal_set = set(routing_input.get("routing_signals", []))
+    for signal_pair in MUTUALLY_EXCLUSIVE_ROUTING_SIGNALS:
+        if signal_pair.issubset(signal_set):
+            issue(
+                issues,
+                "FORWARD-SIGNAL-CONTRADICTION",
+                f"{relative_package}/routing-input.json",
+                f"Routing input asserts mutually exclusive signals: {sorted(signal_pair)}.",
+            )
+    fact_types = {
+        fact.get("fact_type")
+        for fact in routing_input.get("locked_facts", [])
+        if isinstance(fact, dict)
+    }
+    for signal in sorted(signal_set):
+        required_fact_type = ROUTING_SIGNAL_FACT_TYPES.get(signal)
+        if required_fact_type is not None and required_fact_type not in fact_types:
+            issue(
+                issues,
+                "FORWARD-SIGNAL-AUTHORITY",
+                f"{relative_package}/routing-input.json",
+                f"Routing signal {signal} requires locked fact type {required_fact_type}.",
+            )
+    if (
+        routing_input.get("scene_problem", {}).get("primary") == "ROMANTIC_PROXIMITY"
+        and "relationship_context" not in fact_types
+    ):
+        issue(
+            issues,
+            "FORWARD-SCENE-PROBLEM-AUTHORITY",
+            f"{relative_package}/routing-input.json",
+            "ROMANTIC_PROXIMITY requires an explicit project-original relationship fact in the locked script.",
+        )
     locked_text = (package / "locked-script.md").read_text(encoding="utf-8")
     expected_headers = {
         "RIGHTS_STATUS": "PROJECT_ORIGINAL_SYNTHETIC",
@@ -296,6 +369,19 @@ def validate_package(
         issue(issues, "FORWARD-ROUTING-REVIEW", f"{relative_package}/selected-rules.json", "Routing output must remain HUMAN_REVIEW_PENDING.")
     if live_routing.get("status") != entry.get("expected_routing_status") or live_routing.get("selection_count") != entry.get("expected_selection_count"):
         issue(issues, "FORWARD-ROUTING-EXPECTATION", f"{relative_package}/selected-rules.json", "Live routing result differs from the indexed expectation.")
+    live_selected_ids = [item.get("rule_id") for item in live_routing.get("selected_rules", [])]
+    if live_selected_ids != entry.get("expected_selected_rule_ids"):
+        issue(issues, "FORWARD-RULE-SELECTION", f"{relative_package}/selected-rules.json", "Selected rule IDs differ from the rule-level expectation.")
+    expected_rejected_id = entry.get("expected_rejected_rule_id")
+    if expected_rejected_id:
+        rejected = next(
+            (item for item in live_routing.get("rejected_rules", []) if item.get("rule_id") == expected_rejected_id),
+            None,
+        )
+        if rejected is None or not set(entry.get("expected_rejection_reason_codes", [])).issubset(
+            rejected.get("rejection_reason_codes", [])
+        ):
+            issue(issues, "FORWARD-RULE-BOUNDARY", f"{relative_package}/selected-rules.json", "Boundary rule was not rejected for the declared reason.")
     if zero_eligible and (live_routing.get("status") != "NO_APPLICABLE_RULE" or live_routing.get("selection_count") != 0):
         issue(issues, "FORWARD-ZERO-ELIGIBLE", f"{relative_package}/selected-rules.json", "Zero eligible families cannot produce a positive selection.")
 
@@ -362,7 +448,24 @@ def validate_package(
         issue(issues, "FORWARD-SHOT-RENDER", f"{relative_package}/shot-script.md", "Shot script differs from deterministic IR rendering.")
     if (package / "source-coverage.md").read_text(encoding="utf-8") != expected_coverage:
         issue(issues, "FORWARD-COVERAGE-RENDER", f"{relative_package}/source-coverage.md", "Coverage Markdown differs from deterministic IR rendering.")
-    expected_validation = expected_case_validation(case_id, live_routing, ir_report)
+    selected_shot_rule_ids = {
+        rule_id
+        for scene in ir.get("scenes", [])
+        for shot in scene.get("shots", [])
+        for rule_id in shot.get("evidence_rule_ids", [])
+    }
+    if entry.get("test_mode") == "POSITIVE":
+        if not entry.get("changed_director_dimensions") or selected_shot_rule_ids != set(entry.get("expected_selected_rule_ids", [])):
+            issue(issues, "FORWARD-DIRECTOR-CHANGE", f"{relative_package}/director-ir.json", "Positive case must name changed directing dimensions and bind selected rules to affected Shots.")
+        changed_shots = [
+            shot
+            for scene in ir.get("scenes", [])
+            for shot in scene.get("shots", [])
+            if shot.get("evidence_rule_ids")
+        ]
+        if not changed_shots or all(shot.get("shot_type") == "project-original coverage" for shot in changed_shots):
+            issue(issues, "FORWARD-DIRECTOR-CHANGE", f"{relative_package}/director-ir.json", "Selected rule did not materially change the generated Shot plan.")
+    expected_validation = expected_case_validation(entry, live_routing, ir_report)
     if saved_validation != expected_validation:
         issue(issues, "FORWARD-VALIDATION-DRIFT", f"{relative_package}/validation.json", "Saved package validation differs from live recomputation.")
     review_text = (package / "human-review.md").read_text(encoding="utf-8")
@@ -400,13 +503,13 @@ def validate_repository(
     zero_eligible = not eligible_families
     if index.get("promotion_ready_family_ids") != eligible_families or index.get("promotion_ready_family_count") != len(eligible_families):
         issue(issues, "FORWARD-ELIGIBLE-DRIFT", "promotion_ready_family_ids", "Index does not match the live eligible family set.")
-    expected_status = "NO_ELIGIBLE_FAMILIES" if zero_eligible else "FAMILY_COVERAGE_COMPLETE"
+    expected_status = "NO_ELIGIBLE_FAMILIES" if zero_eligible else "RULE_COVERAGE_COMPLETE"
     if index.get("status") != expected_status:
         issue(issues, "FORWARD-INDEX-STATUS", "status", "Index status does not match the live eligible family set.")
     entries = index.get("cases", []) if isinstance(index.get("cases"), list) else []
     case_ids = [entry.get("test_case_id") for entry in entries if isinstance(entry, dict)]
     if len(case_ids) != len(set(case_ids)) or set(case_ids) != REQUIRED_CASE_IDS:
-        issue(issues, "FORWARD-CASE-SET", "cases", "The eight required unique original cases are not present.")
+        issue(issues, "FORWARD-CASE-SET", "cases", "The twelve required unique original cases are not present.")
     tags = {tag for entry in entries if isinstance(entry, dict) for tag in entry.get("coverage_tags", [])}
     if tags != REQUIRED_COVERAGE_TAGS or set(index.get("required_scene_problem_coverage", [])) != REQUIRED_COVERAGE_TAGS:
         issue(issues, "FORWARD-COVERAGE-TAGS", "required_scene_problem_coverage", "The six required original scene problems are not covered exactly.")
@@ -420,6 +523,9 @@ def validate_repository(
 
     positive_by_family: dict[str, set[str]] = {family: set() for family in eligible_families}
     boundary_by_family: dict[str, set[str]] = {family: set() for family in eligible_families}
+    eligible_rule_ids = sorted(rule["rule_id"] for rule in grammar.get("rules", []))
+    positive_by_rule: dict[str, set[str]] = {rule_id: set() for rule_id in eligible_rule_ids}
+    boundary_by_rule: dict[str, set[str]] = {rule_id: set() for rule_id in eligible_rule_ids}
     results: list[dict[str, Any]] = []
     for entry_index, entry in enumerate(entries):
         if not isinstance(entry, dict):
@@ -437,6 +543,12 @@ def validate_repository(
         for family in entry.get("boundary_for_family_ids", []):
             if family in boundary_by_family:
                 boundary_by_family[family].add(entry["test_case_id"])
+        for rule_id in entry.get("positive_for_rule_ids", []):
+            if rule_id in positive_by_rule:
+                positive_by_rule[rule_id].add(entry["test_case_id"])
+        for rule_id in entry.get("boundary_for_rule_ids", []):
+            if rule_id in boundary_by_rule:
+                boundary_by_rule[rule_id].add(entry["test_case_id"])
         package = safe_package_path(entry.get("package_path"), issues, f"cases[{entry_index}].package_path")
         if package is None:
             continue
@@ -451,17 +563,25 @@ def validate_repository(
         or not boundary_by_family[family]
         or positive_by_family[family] & boundary_by_family[family]
     )
-    completed_positive = sum(bool(values) for values in positive_by_family.values())
-    completed_boundary = sum(bool(values) for values in boundary_by_family.values())
+    missing_rules = sorted(
+        rule_id
+        for rule_id in eligible_rule_ids
+        if not positive_by_rule[rule_id]
+        or not boundary_by_rule[rule_id]
+        or positive_by_rule[rule_id] & boundary_by_rule[rule_id]
+    )
+    completed_positive = sum(bool(values) for values in positive_by_rule.values())
+    completed_boundary = sum(bool(values) for values in boundary_by_rule.values())
     if (
         index.get("required_positive_boundary_pairs") != len(eligible_families)
         or index.get("completed_positive_cases") != completed_positive
         or index.get("completed_boundary_cases") != completed_boundary
         or index.get("missing_family_ids") != missing_families
+        or index.get("missing_rule_ids") != missing_rules
     ):
-        issue(issues, "FORWARD-FAMILY-COVERAGE-DRIFT", "family coverage", "Family positive/boundary coverage counts do not match live package bindings.")
-    if missing_families:
-        issue(issues, "FORWARD-FAMILY-COVERAGE-MISSING", "missing_family_ids", "Every eligible family needs distinct positive and boundary packages.")
+        issue(issues, "FORWARD-RULE-COVERAGE-DRIFT", "rule coverage", "Rule positive/boundary coverage counts do not match live package bindings.")
+    if missing_families or missing_rules:
+        issue(issues, "FORWARD-RULE-COVERAGE-MISSING", "missing_rule_ids", "Every eligible rule needs distinct positive and boundary packages.")
     results.sort(key=lambda item: str(item.get("test_case_id")))
     return {
         "schema_version": "forward-test-repository-validation/0.1",
@@ -473,6 +593,7 @@ def validate_repository(
         "completed_positive_cases": completed_positive,
         "completed_boundary_cases": completed_boundary,
         "missing_family_count": len(missing_families),
+        "missing_rule_count": len(missing_rules),
         "no_applicable_rule_count": sum(result.get("routing_status") == "NO_APPLICABLE_RULE" for result in results),
         "selected_rule_count": sum(int(result.get("selection_count", 0)) for result in results),
         "human_review_pending_count": sum(result.get("human_review_status") == "HUMAN_REVIEW_PENDING" for result in results),

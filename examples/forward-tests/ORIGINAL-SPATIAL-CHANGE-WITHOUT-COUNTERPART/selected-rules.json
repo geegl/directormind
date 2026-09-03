@@ -1,0 +1,76 @@
+{
+  "applied_constraint_ids": [
+    "PC-DIALOGUE-TEXT-LOCK",
+    "PC-LOCKED-STORY-AUTHORITY",
+    "PC-MODEL-INDEPENDENT-IR",
+    "PC-ORIGINAL-ASSETS",
+    "PC-SOURCE-COVERAGE",
+    "SC-AUTHORIZATION-GATES",
+    "SC-HIGH-RISK-FALLBACK",
+    "SC-HUMAN-REVIEW",
+    "SC-NO-SUBJECT-SHORTCUT",
+    "SC-NO-SURFACE-COPY",
+    "SC-NO-UNKNOWN-PROMOTION"
+  ],
+  "case_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
+  "conflict_trace": [],
+  "eligible_rule_ids": [
+    "DR-PERFORMANCE-OWNER-HOLD",
+    "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+    "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+  ],
+  "human_review_status": "HUMAN_REVIEW_PENDING",
+  "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+  "rejected_rules": [
+    {
+      "blocking_fact_ids": [],
+      "conflicting_rule_ids": [],
+      "missing_fact_types": [
+        "performance_progression",
+        "relation_state"
+      ],
+      "rejection_reason_codes": [
+        "REQUIRED_FACT_MISSING",
+        "SCENE_PROBLEM_MISMATCH",
+        "TRIGGER_NOT_MET"
+      ],
+      "rule_id": "DR-PERFORMANCE-OWNER-HOLD"
+    },
+    {
+      "blocking_fact_ids": [],
+      "conflicting_rule_ids": [],
+      "missing_fact_types": [
+        "counterpart_relation"
+      ],
+      "rejection_reason_codes": [
+        "NOT_APPLICABLE_MATCH",
+        "REQUIRED_FACT_MISSING",
+        "TRIGGER_NOT_MET"
+      ],
+      "rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+    },
+    {
+      "blocking_fact_ids": [],
+      "conflicting_rule_ids": [],
+      "missing_fact_types": [
+        "distance_change",
+        "relation_endpoint"
+      ],
+      "rejection_reason_codes": [
+        "REQUIRED_FACT_MISSING",
+        "SCENE_PROBLEM_MISMATCH",
+        "TRIGGER_NOT_MET"
+      ],
+      "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+    }
+  ],
+  "rights_boundary": {
+    "subject_matter_used_for_selection": false,
+    "surface_copy_allowed": false
+  },
+  "scene_problem": "RELATIONSHIP_FRACTURE",
+  "schema_version": "director-routing-result/0.1",
+  "selected_rules": [],
+  "selection_count": 0,
+  "status": "NO_APPLICABLE_RULE"
+}

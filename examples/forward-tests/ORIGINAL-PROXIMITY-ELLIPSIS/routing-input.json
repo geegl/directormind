@@ -1,0 +1,64 @@
+{
+  "case_id": "ORIGINAL-PROXIMITY-ELLIPSIS",
+  "dramatic_structure": {
+    "goal": "show a changed relation endpoint across time without inventing a continuous approach",
+    "objectives": [
+      "compare three dated planning checks"
+    ],
+    "obstacle": "the intermediate physical transitions are not story facts",
+    "stakes": "only the terminal seating relation must be clear",
+    "subtext": "none asserted",
+    "tactic_change": "repeated task views become a final shared endpoint"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "relationship_context",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "The planners are romantic partners, and their changing seating distance is a relationship-relevant story fact."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "distance_change",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "Three dated checks show the planners at progressively different fixed seats."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "relation_endpoint",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "Only the final wide must establish their relationship-relevant terminal distance across the table."
+    },
+    {
+      "fact_id": "FACT-04",
+      "fact_type": "time_ellipsis",
+      "source_ref": "locked-script.md#FACT-04",
+      "status": "LOCKED",
+      "value": "No continuous move between the dated checks belongs to the story facts."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "relation_distance_change",
+    "shared_endpoint_required",
+    "elliptical_time_change"
+  ],
+  "scene_problem": {
+    "primary": "ROMANTIC_PROXIMITY",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "relationship_tension"
+  ],
+  "unknown_fact_types": []
+}

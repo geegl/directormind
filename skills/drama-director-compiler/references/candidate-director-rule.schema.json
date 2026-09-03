@@ -150,6 +150,10 @@
             "receiver",
             "absent_mover",
             "decision_owner",
+            "performance_owner",
+            "relation_anchor",
+            "spatial_mover",
+            "proximity_mover",
             "UNKNOWN"
           ]
         },
@@ -174,6 +178,7 @@
         "edit_logic",
         "continuity",
         "audio_logic",
+        "audio_dependency",
         "applicable_when",
         "not_applicable_when",
         "failure_modes",
@@ -193,6 +198,7 @@
         "edit_logic": {"type": "string", "minLength": 1},
         "continuity": {"type": "string", "minLength": 1},
         "audio_logic": {"$ref": "#/$defs/evidenceClaim"},
+        "audio_dependency": {"type": "boolean"},
         "applicable_when": {
           "type": "array",
           "minItems": 1,
@@ -328,7 +334,7 @@
           "uniqueItems": true,
           "items": {"type": "string", "minLength": 1}
         },
-        "review_status": {"enum": ["HUMAN_VERIFIED", "NOT_REVIEWED"]},
+        "review_status": {"enum": ["HUMAN_VERIFIED", "ROOT_VIDEO_VERIFIED", "NOT_REVIEWED"]},
         "review_id": {"type": ["string", "null"]},
         "review_ref": {"type": ["string", "null"]},
         "notes": {"type": "string", "minLength": 1}
@@ -378,7 +384,7 @@
           "uniqueItems": true,
           "items": {"type": "string", "minLength": 1}
         },
-        "review_status": {"enum": ["HUMAN_VERIFIED", "NOT_REVIEWED"]},
+        "review_status": {"enum": ["HUMAN_VERIFIED", "ROOT_VIDEO_VERIFIED", "NOT_REVIEWED"]},
         "review_id": {"type": ["string", "null"]},
         "review_ref": {"type": ["string", "null"]},
         "notes": {"type": "string", "minLength": 1}

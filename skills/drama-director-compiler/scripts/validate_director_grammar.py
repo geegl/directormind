@@ -19,12 +19,15 @@ REPOSITORY_ROOT = SKILL_ROOT.parents[1]
 GRAMMAR_PATH = REPOSITORY_ROOT / "research" / "grammar" / "director_grammar_v0.2.json"
 INDEX_PATH = REPOSITORY_ROOT / "research" / "grammar" / "candidate_rule_index.json"
 MATRIX_PATH = REPOSITORY_ROOT / "research" / "grammar" / "cross_work_support_matrix.json"
+PROMOTION_REVIEW_PATH = REPOSITORY_ROOT / "research" / "grammar" / "runtime_rule_promotion_wave1.review.json"
 SCHEMA_PATH = SKILL_ROOT / "references" / "director-grammar.schema.json"
+PROMOTION_REVIEW_SCHEMA_PATH = SKILL_ROOT / "references" / "runtime-rule-promotion-review.schema.json"
 REPORT_PATH = REPOSITORY_ROOT / "research" / "validation" / "director-grammar-validation.json"
 
 sys.path.insert(0, str(SCRIPT_DIR))
 from validate_scene_evidence import validate_schema_subset  # noqa: E402
 from validate_candidate_rules import validate_repository as validate_candidate_repository  # noqa: E402
+from validate_runtime_rule_promotion_review import validate as validate_promotion_review  # noqa: E402
 
 
 ELIGIBLE_PROMOTIONS = {"CROSS_WORK_SUPPORTED", "GENERAL_DEFAULT"}
@@ -111,6 +114,31 @@ def eligible_candidates(
     return result
 
 
+def fresh_lineage_by_candidate(review: dict[str, Any]) -> dict[str, list[str]]:
+    result: dict[str, list[str]] = {}
+    for promotion in review.get("promotions", []):
+        if not isinstance(promotion, dict):
+            continue
+        candidate_id = promotion.get("candidate_rule_id")
+        if not isinstance(candidate_id, str):
+            continue
+        related = [
+            *promotion.get("supporting_relations", []),
+            promotion.get("counterexample", {}),
+        ]
+        refs = [
+            *promotion.get("source_refs", []),
+            *[
+                ref
+                for relation in related
+                if isinstance(relation, dict)
+                for ref in relation.get("source_refs", [])
+            ],
+        ]
+        result[candidate_id] = list(dict.fromkeys(refs))
+    return result
+
+
 def verified_routing_review(
     rule: dict[str, Any],
     candidate_contract: dict[str, Any],
@@ -120,8 +148,8 @@ def verified_routing_review(
     review = rule.get("routing_review", {})
     review_id = review.get("review_id")
     review_ref = review.get("review_ref")
-    if review.get("status") != "HUMAN_VERIFIED" or not isinstance(review_id, str) or not isinstance(review_ref, str):
-        add_issue(issues, "GRAMMAR-ROUTING-REVIEW", f"{path}.routing_review", "Machine routing fields require a named human verification record.")
+    if review.get("status") not in {"HUMAN_VERIFIED", "ROOT_VIDEO_VERIFIED"} or not isinstance(review_id, str) or not isinstance(review_ref, str):
+        add_issue(issues, "GRAMMAR-ROUTING-REVIEW", f"{path}.routing_review", "Machine routing fields require a named verification record.")
         return False
     if Path(review_ref).is_absolute():
         add_issue(issues, "GRAMMAR-ROUTING-REVIEW-REF", f"{path}.routing_review.review_ref", "Routing review refs must be repository-relative.")
@@ -146,7 +174,7 @@ def verified_routing_review(
         "review_id": review_id,
         "rule_id": rule.get("rule_id"),
         "promotion_source_candidate_id": rule.get("promotion_source_candidate_id"),
-        "status": "HUMAN_VERIFIED",
+        "status": review.get("status"),
         "candidate_trigger": candidate_contract.get("trigger"),
         "candidate_required_story_facts": candidate_contract.get("required_story_facts"),
         "routing": rule.get("routing"),
@@ -162,6 +190,7 @@ def validate_grammar(
     index: dict[str, Any],
     matrix: dict[str, Any],
     schema: dict[str, Any] | None = None,
+    promotion_review: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     issues: list[dict[str, str]] = []
     if schema is not None:
@@ -173,6 +202,33 @@ def validate_grammar(
         add_issue(issues, "GRAMMAR-LEGACY-SOURCES", "sources", "v0.1 source lists are lineage, not runtime grammar.")
     if grammar.get("conflict_priority") != CONFLICT_PRIORITY:
         add_issue(issues, "GRAMMAR-CONFLICT-ORDER", "conflict_priority", "The fixed nine-level conflict order changed.")
+
+    fresh_lineage: dict[str, list[str]] = {}
+    try:
+        active_promotion_review = (
+            promotion_review
+            if promotion_review is not None
+            else read_json(PROMOTION_REVIEW_PATH)
+        )
+        promotion_report = validate_promotion_review(
+            active_promotion_review,
+            read_json(PROMOTION_REVIEW_SCHEMA_PATH),
+        )
+    except (OSError, ValueError, json.JSONDecodeError):
+        promotion_report = {"status": "FAIL"}
+        active_promotion_review = {}
+    if (
+        promotion_report.get("status") != "PASS"
+        or promotion_report.get("phase_status") != "COMPLETE"
+    ):
+        add_issue(
+            issues,
+            "GRAMMAR-PROMOTION-REVIEW-AUTHORITY",
+            "promotion_review",
+            "Runtime lineage requires a valid and complete fresh promotion-review authority.",
+        )
+    else:
+        fresh_lineage = fresh_lineage_by_candidate(active_promotion_review)
 
     project_constraints = grammar.get("project_constraints", []) if isinstance(grammar.get("project_constraints"), list) else []
     safety_constraints = grammar.get("safety_constraints", []) if isinstance(grammar.get("safety_constraints"), list) else []
@@ -319,9 +375,22 @@ def validate_grammar(
             add_issue(issues, "GRAMMAR-LINEAGE-WORK", f"{path}.evidence_lineage.work_ids", "Promotion source work is missing from lineage.")
         if source.get("evidence_id") not in lineage.get("evidence_ids", []):
             add_issue(issues, "GRAMMAR-LINEAGE-EVIDENCE", f"{path}.evidence_lineage.evidence_ids", "Promotion evidence ID is missing from lineage.")
-        missing_shots = sorted(set(source.get("evidence_shot_ids", [])) - set(lineage.get("evidence_shot_ids", [])))
-        if missing_shots:
-            add_issue(issues, "GRAMMAR-LINEAGE-SHOTS", f"{path}.evidence_lineage.evidence_shot_ids", f"Promotion evidence shots are missing: {missing_shots}.")
+        expected_fresh_shots = fresh_lineage.get(source_id)
+        actual_lineage_shots = lineage.get("evidence_shot_ids", [])
+        if expected_fresh_shots is None:
+            add_issue(
+                issues,
+                "GRAMMAR-LINEAGE-FRESH-AUTHORITY",
+                f"{path}.evidence_lineage.evidence_shot_ids",
+                "Runtime rule has no matching fresh promotion-review authority.",
+            )
+        elif set(actual_lineage_shots) != set(expected_fresh_shots):
+            add_issue(
+                issues,
+                "GRAMMAR-LINEAGE-FRESH-SHOTS",
+                f"{path}.evidence_lineage.evidence_shot_ids",
+                "Runtime Shot lineage must exactly equal the promotion source, support, and counterexample fresh refs.",
+            )
 
         declared_problems = [actual_problem.get("primary"), *actual_problem.get("secondary", [])]
         if set(routing.get("scene_problems", [])) != set(declared_problems):
@@ -364,6 +433,9 @@ def validate_grammar(
         rule.pop("promotion_source_candidate_id", None)
         if isinstance(rule.get("audio_logic"), dict):
             rule["audio_logic"]["source_refs"] = []
+        for role in rule.get("functional_roles", []):
+            if isinstance(role, dict):
+                role["source_refs"] = []
     operational_json = json.dumps(operational_grammar, ensure_ascii=False, sort_keys=True)
     normalized_operational = normalized_phrase(operational_json)
     for surface_id in sorted(known_surface_ids):
