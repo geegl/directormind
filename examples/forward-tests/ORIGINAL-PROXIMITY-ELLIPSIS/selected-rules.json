@@ -55,7 +55,8 @@
       "conflicting_rule_ids": [],
       "missing_fact_types": [],
       "rejection_reason_codes": [
-        "NOT_APPLICABLE_MATCH"
+        "NOT_APPLICABLE_MATCH",
+        "TRIGGER_NOT_MET"
       ],
       "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
     }

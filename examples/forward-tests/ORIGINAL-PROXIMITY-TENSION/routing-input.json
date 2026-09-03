@@ -13,10 +13,10 @@
   "locked_facts": [
     {
       "fact_id": "FACT-01",
-      "fact_type": "shared_object",
+      "fact_type": "relationship_context",
       "source_ref": "locked-script.md#FACT-01",
       "status": "LOCKED",
-      "value": "Both designers need the same unlit model to complete a joint review."
+      "value": "The two designers are former romantic partners, and their agreed no-contact distance during the joint model review is a relationship-relevant story fact."
     },
     {
       "fact_id": "FACT-02",
@@ -31,6 +31,13 @@
       "source_ref": "locked-script.md#FACT-03",
       "status": "LOCKED",
       "value": "The table remains between them and neither person touches the other."
+    },
+    {
+      "fact_id": "FACT-04",
+      "fact_type": "continuous_time_change",
+      "source_ref": "locked-script.md#FACT-04",
+      "status": "LOCKED",
+      "value": "The approach and stop occur in one continuous present-time interval without ellipsis."
     }
   ],
   "priority_constraints": [],

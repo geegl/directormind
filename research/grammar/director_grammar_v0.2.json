@@ -145,7 +145,6 @@
       "evidence_lineage": {
         "candidate_rule_ids": [
           "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C04-PROGRESSIVE-RELATION-REMOVAL-TO-HELD-SINGLES",
-          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-MICRO-BRACKET-HOLD-002",
           "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C03-SUSTAIN-CONTESTED-PERSON-SCREEN-OWNERSHIP",
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C02-SUSTAIN-CORRECTOR-IN-SHARED-WORK-FRAME-WITH-SELECTIVE-RECEIVER-CHECKS"
         ],
@@ -155,7 +154,6 @@
         "director_review_id": null,
         "evidence_ids": [
           "MRR-S04E07-ACT-FOUR-VISUAL-001",
-          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001",
           "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001"
         ],
@@ -174,7 +172,7 @@
           "MRR-S04E07-ACT-FOUR-VISUAL-001-S199",
           "MRR-S04E07-ACT-FOUR-VISUAL-001-S200",
           "MRR-S04E07-ACT-FOUR-VISUAL-001-S201",
-          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S016",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S082",
           "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S097",
           "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S098",
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S016",
@@ -185,13 +183,11 @@
           "ORIGINAL-PERFORMANCE-CONCURRENT-STATE"
         ],
         "relation_review_ids": [
-          "WAVE1-REL-PERFORMANCE-B99-REVIEW",
           "WAVE1-REL-PERFORMANCE-BCS-REVIEW",
           "WAVE1-CTR-PERFORMANCE-DWP-REVIEW"
         ],
         "work_ids": [
           "MR-ROBOT-S04E07",
-          "BROOKLYN-NINE-NINE-S05E14",
           "BETTER-CALL-SAUL-S03E05",
           "THE-DEVIL-WEARS-PRADA-2006"
         ]
@@ -300,7 +296,7 @@
         "continuity": {
           "level": "HIGH",
           "reasons": [
-            "The mover, counterpart, and destination zone can drift across coverage. "
+            "The mover, counterpart, and destination zone can drift across coverage."
           ]
         },
         "performance": {

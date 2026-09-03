@@ -18,7 +18,8 @@
         "locked_fact_ids": [
           "FACT-01",
           "FACT-02",
-          "FACT-03"
+          "FACT-03",
+          "FACT-04"
         ]
       },
       "dramatic_engine": {
@@ -31,7 +32,7 @@
         "subtext": "none asserted",
         "tactic_change": "repeated task views become a final shared endpoint"
       },
-      "duration_seconds": 15,
+      "duration_seconds": 20,
       "location": "plain planning room",
       "narrative_goal": "show a changed relation endpoint across time without inventing a continuous approach",
       "pov": {
@@ -53,22 +54,29 @@
         "locked_facts": [
           {
             "fact_id": "FACT-01",
-            "fact_type": "distance_change",
+            "fact_type": "relationship_context",
             "source_ref": "locked-script.md#FACT-01",
+            "status": "LOCKED",
+            "value": "The planners are romantic partners, and their changing seating distance is a relationship-relevant story fact."
+          },
+          {
+            "fact_id": "FACT-02",
+            "fact_type": "distance_change",
+            "source_ref": "locked-script.md#FACT-02",
             "status": "LOCKED",
             "value": "Three dated checks show the planners at progressively different fixed seats."
           },
           {
-            "fact_id": "FACT-02",
+            "fact_id": "FACT-03",
             "fact_type": "relation_endpoint",
-            "source_ref": "locked-script.md#FACT-02",
+            "source_ref": "locked-script.md#FACT-03",
             "status": "LOCKED",
-            "value": "Only the final wide must establish the terminal distance across the table."
+            "value": "Only the final wide must establish their relationship-relevant terminal distance across the table."
           },
           {
-            "fact_id": "FACT-03",
+            "fact_id": "FACT-04",
             "fact_type": "time_ellipsis",
-            "source_ref": "locked-script.md#FACT-03",
+            "source_ref": "locked-script.md#FACT-04",
             "status": "LOCKED",
             "value": "No continuous move between the dated checks belongs to the story facts."
           }
@@ -81,7 +89,6 @@
         },
         "routing_signals": [
           "relation_distance_change",
-          "continuous_present_time",
           "shared_endpoint_required",
           "elliptical_time_change"
         ],
@@ -153,7 +160,8 @@
             "conflicting_rule_ids": [],
             "missing_fact_types": [],
             "rejection_reason_codes": [
-              "NOT_APPLICABLE_MATCH"
+              "NOT_APPLICABLE_MATCH",
+              "TRIGGER_NOT_MET"
             ],
             "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
           }
@@ -188,7 +196,7 @@
             "source_refs": [],
             "status": "PROJECT_ORIGINAL_ONLY"
           },
-          "blocking": "The first dated card precedes a shared near-seat planning view.",
+          "blocking": "The romantic partners begin the first dated planning check at the same table.",
           "camera_angle": "eye level",
           "camera_end": "stable view after the listed beat",
           "camera_motion": {
@@ -210,7 +218,7 @@
               "FACT-01"
             ],
             "must_hold": [
-              "Three dated checks show the planners at progressively different fixed seats."
+              "The planners are romantic partners, and their changing seating distance is a relationship-relevant story fact."
             ],
             "must_not_appear": [
               "research-work surface elements"
@@ -248,10 +256,10 @@
           "fallback": null,
           "focus_strategy": "keep the locked action readable",
           "framing": "readable neutral frame",
-          "narrative_goal": "Three dated checks show the planners at progressively different fixed seats.",
+          "narrative_goal": "The planners are romantic partners, and their changing seating distance is a relationship-relevant story fact.",
           "order": 1,
           "performance_beats": [
-            "The first dated card precedes a shared near-seat planning view."
+            "The romantic partners begin the first dated planning check at the same table."
           ],
           "reference_plan": {
             "exclude": [
@@ -295,7 +303,7 @@
             "source_refs": [],
             "status": "PROJECT_ORIGINAL_ONLY"
           },
-          "blocking": "A second dated card precedes isolated task views from different seats.",
+          "blocking": "The first dated card precedes a shared near-seat planning view.",
           "camera_angle": "eye level",
           "camera_end": "stable view after the listed beat",
           "camera_motion": {
@@ -317,7 +325,7 @@
               "FACT-02"
             ],
             "must_hold": [
-              "Only the final wide must establish the terminal distance across the table."
+              "Three dated checks show the planners at progressively different fixed seats."
             ],
             "must_not_appear": [
               "research-work surface elements"
@@ -355,10 +363,10 @@
           "fallback": null,
           "focus_strategy": "keep the locked action readable",
           "framing": "readable neutral frame",
-          "narrative_goal": "Only the final wide must establish the terminal distance across the table.",
+          "narrative_goal": "Three dated checks show the planners at progressively different fixed seats.",
           "order": 2,
           "performance_beats": [
-            "A second dated card precedes isolated task views from different seats."
+            "The first dated card precedes a shared near-seat planning view."
           ],
           "reference_plan": {
             "exclude": [],
@@ -396,7 +404,7 @@
             "source_refs": [],
             "status": "PROJECT_ORIGINAL_ONLY"
           },
-          "blocking": "The final dated card precedes one shared wide that proves the terminal distance.",
+          "blocking": "A second dated card precedes isolated task views from different seats.",
           "camera_angle": "eye level",
           "camera_end": "stable view after the listed beat",
           "camera_motion": {
@@ -418,7 +426,7 @@
               "FACT-03"
             ],
             "must_hold": [
-              "No continuous move between the dated checks belongs to the story facts."
+              "Only the final wide must establish their relationship-relevant terminal distance across the table."
             ],
             "must_not_appear": [
               "research-work surface elements"
@@ -456,10 +464,10 @@
           "fallback": null,
           "focus_strategy": "keep the locked action readable",
           "framing": "readable neutral frame",
-          "narrative_goal": "No continuous move between the dated checks belongs to the story facts.",
+          "narrative_goal": "Only the final wide must establish their relationship-relevant terminal distance across the table.",
           "order": 3,
           "performance_beats": [
-            "The final dated card precedes one shared wide that proves the terminal distance."
+            "A second dated card precedes isolated task views from different seats."
           ],
           "reference_plan": {
             "exclude": [],
@@ -475,6 +483,107 @@
           "shot_type": "project-original coverage",
           "source_refs": [
             "locked-script.md#FACT-03"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        },
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "PLANNER_A",
+            "PLANNER_B"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "The final dated card precedes one shared wide that proves the terminal distance.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-04"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-04"
+            ],
+            "must_hold": [
+              "No continuous move between the dated checks belongs to the story facts."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-04",
+          "continuity_out": "state after FACT-04",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "No continuous move between the dated checks belongs to the story facts.",
+          "order": 4,
+          "performance_beats": [
+            "The final dated card precedes one shared wide that proves the terminal distance."
+          ],
+          "reference_plan": {
+            "exclude": [],
+            "inherit": [],
+            "reference_id": null,
+            "reference_type": "NONE",
+            "required": false,
+            "rights_status": "NOT_APPLICABLE",
+            "scope": "",
+            "status": "NOT_REQUIRED"
+          },
+          "shot_id": "EP01-SC01-SH04",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-04"
           ],
           "visible_text": [],
           "visual_style_module": "UNRESOLVED"
@@ -496,7 +605,7 @@
       "covered_by": [
         "EP01-SC01-SH01"
       ],
-      "description": "Three dated checks show the planners at progressively different fixed seats.",
+      "description": "The planners are romantic partners, and their changing seating distance is a relationship-relevant story fact.",
       "notes": "Structural coverage only; human creative review remains pending.",
       "source_ref": "locked-script.md#FACT-01",
       "status": "covered"
@@ -505,7 +614,7 @@
       "covered_by": [
         "EP01-SC01-SH02"
       ],
-      "description": "Only the final wide must establish the terminal distance across the table.",
+      "description": "Three dated checks show the planners at progressively different fixed seats.",
       "notes": "Structural coverage only; human creative review remains pending.",
       "source_ref": "locked-script.md#FACT-02",
       "status": "covered"
@@ -514,9 +623,18 @@
       "covered_by": [
         "EP01-SC01-SH03"
       ],
-      "description": "No continuous move between the dated checks belongs to the story facts.",
+      "description": "Only the final wide must establish their relationship-relevant terminal distance across the table.",
       "notes": "Structural coverage only; human creative review remains pending.",
       "source_ref": "locked-script.md#FACT-03",
+      "status": "covered"
+    },
+    {
+      "covered_by": [
+        "EP01-SC01-SH04"
+      ],
+      "description": "No continuous move between the dated checks belongs to the story facts.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-04",
       "status": "covered"
     }
   ],
@@ -526,11 +644,11 @@
     ],
     "cross_episode_state_in": [],
     "cross_episode_state_out": [],
-    "source_unit_count": 3
+    "source_unit_count": 4
   },
   "source_script": "examples/forward-tests/ORIGINAL-PROXIMITY-ELLIPSIS/locked-script.md",
   "status": "HUMAN_REVIEW_PENDING",
-  "target_duration_seconds": 15,
+  "target_duration_seconds": 20,
   "unresolved": [
     "Human creative review has not been performed."
   ],

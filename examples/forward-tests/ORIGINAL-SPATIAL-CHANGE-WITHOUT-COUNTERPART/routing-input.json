@@ -13,7 +13,7 @@
   "locked_facts": [
     {
       "fact_id": "FACT-01",
-      "fact_type": "counterpart_relation",
+      "fact_type": "counterpart_absent",
       "source_ref": "locked-script.md#FACT-01",
       "status": "LOCKED",
       "value": "Maker A leaves the room before Maker B moves from the shared bench."
@@ -41,7 +41,6 @@
   },
   "routing_signals": [
     "material_spatial_change",
-    "counterpart_relation_required",
     "counterpart_relation_not_required"
   ],
   "scene_problem": {

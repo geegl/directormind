@@ -2,7 +2,7 @@
 
 Updated: 2026-09-03
 
-Status: `ROOT_VIDEO_REVIEW_RECORDED / INDEPENDENT_REVIEW_PENDING`
+Status: `ROOT_VIDEO_REVIEW_RECORDED / INITIAL_P1_REPAIRED / RE_REVIEW_PENDING`
 
 The canonical authority is
 `research/grammar/runtime_rule_promotion_wave1.review.json`. This document is a
@@ -28,11 +28,14 @@ audio was not auditioned. All promoted rules therefore declare
 - Text boundary: one short paraphrased visible-text anchor inside S197
   (`00:47:26.800–00:47:29.000`) establishes direct questioning; all other
   dialogue meaning and all sound remain unknown.
-- Cross-work support: *Brooklyn Nine-Nine* S05E14 S016
-  (`00:42:02.958–00:42:20.083`) holds one clean progression before coverage
-  changes; *Better Call Saul* S03E05 S097–S098
-  (`00:46:16.625–00:47:31.750`) holds the owner, then returns to relation
+- Cross-work support: *Better Call Saul* S03E05 S082 and S097–S098
+  (`00:45:45.083–00:47:31.750`) first registers the two-person spatial
+  relation, then holds a clean owner single before returning to relation
   coverage.
+- Excluded adjacent evidence: *Brooklyn Nine-Nine* S05E14 S016
+  (`00:42:02.958–00:42:20.083`) sustains an owner-dominant OTS, but retains the
+  counterpart's foreground shoulder. It is not counted as cross-work support
+  for the clean-single decision.
 - Real boundary: *The Devil Wears Prada* S016 and S019
   (`00:20:26.000–00:20:48.958`) require concurrent material and other-body task
   state. A clean isolated hold would hide required information, so shared work

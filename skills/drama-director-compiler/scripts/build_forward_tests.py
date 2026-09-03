@@ -180,14 +180,24 @@ CASES: list[dict[str, Any]] = [
         "characters": ["DESIGNER_A", "DESIGNER_B"],
         "location": "quiet prototype studio",
         "facts": [
-            ("FACT-01", "shared_object", "Both designers need the same unlit model to complete a joint review."),
+            (
+                "FACT-01",
+                "relationship_context",
+                "The two designers are former romantic partners, and their agreed no-contact distance during the joint model review is a relationship-relevant story fact.",
+            ),
             ("FACT-02", "distance_change", "They approach opposite sides of the model table and stop within arm's reach."),
             ("FACT-03", "relation_endpoint", "The table remains between them and neither person touches the other."),
+            (
+                "FACT-04",
+                "continuous_time_change",
+                "The approach and stop occur in one continuous present-time interval without ellipsis.",
+            ),
         ],
         "beats": [
             "Designer A switches off the room lights, leaving only the model base illuminated.",
             "Designer B approaches the opposite side; both stop with the model centered between them.",
             "They reach toward different controls at the same moment, pause without contact, then continue the review.",
+            "The review continues after the stop without a time jump.",
         ],
         "dramatic": {
             "goal": "make mutual awareness legible through distance without physical contact",
@@ -315,7 +325,7 @@ CASES: list[dict[str, Any]] = [
         "characters": ["MAKER_A", "MAKER_B"],
         "location": "plain assembly room",
         "facts": [
-            ("FACT-01", "counterpart_relation", "Maker A leaves the room before Maker B moves from the shared bench."),
+            ("FACT-01", "counterpart_absent", "Maker A leaves the room before Maker B moves from the shared bench."),
             ("FACT-02", "spatial_change", "After the exit, Maker B crosses alone to a second station visible against the same fixed wall grid."),
             ("FACT-03", "fixed_anchor", "The wall grid and empty shared bench make the solo destination unambiguous."),
         ],
@@ -332,7 +342,7 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "shared occupancy becomes solo work",
             "subtext": "none asserted",
         },
-        "signals": ["material_spatial_change", "counterpart_relation_required", "counterpart_relation_not_required"],
+        "signals": ["material_spatial_change", "counterpart_relation_not_required"],
         "subject_tags": ["partnership"],
         "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
         "changed_director_dimensions": [],
@@ -345,11 +355,21 @@ CASES: list[dict[str, Any]] = [
         "characters": ["PLANNER_A", "PLANNER_B"],
         "location": "plain planning room",
         "facts": [
-            ("FACT-01", "distance_change", "Three dated checks show the planners at progressively different fixed seats."),
-            ("FACT-02", "relation_endpoint", "Only the final wide must establish the terminal distance across the table."),
-            ("FACT-03", "time_ellipsis", "No continuous move between the dated checks belongs to the story facts."),
+            (
+                "FACT-01",
+                "relationship_context",
+                "The planners are romantic partners, and their changing seating distance is a relationship-relevant story fact.",
+            ),
+            ("FACT-02", "distance_change", "Three dated checks show the planners at progressively different fixed seats."),
+            (
+                "FACT-03",
+                "relation_endpoint",
+                "Only the final wide must establish their relationship-relevant terminal distance across the table.",
+            ),
+            ("FACT-04", "time_ellipsis", "No continuous move between the dated checks belongs to the story facts."),
         ],
         "beats": [
+            "The romantic partners begin the first dated planning check at the same table.",
             "The first dated card precedes a shared near-seat planning view.",
             "A second dated card precedes isolated task views from different seats.",
             "The final dated card precedes one shared wide that proves the terminal distance.",
@@ -362,7 +382,7 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "repeated task views become a final shared endpoint",
             "subtext": "none asserted",
         },
-        "signals": ["relation_distance_change", "continuous_present_time", "shared_endpoint_required", "elliptical_time_change"],
+        "signals": ["relation_distance_change", "shared_endpoint_required", "elliptical_time_change"],
         "subject_tags": ["relationship_tension"],
         "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
         "changed_director_dimensions": [],

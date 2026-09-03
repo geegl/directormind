@@ -11804,7 +11804,7 @@
           "continuity": {
             "level": "HIGH",
             "reasons": [
-              "The mover, counterpart, and destination zone can drift across coverage. "
+              "The mover, counterpart, and destination zone can drift across coverage."
             ]
           },
           "performance": {
@@ -14169,7 +14169,7 @@
         "status": "CROSS_WORK_SUPPORTED",
         "unknown_dependency_present": false,
         "verified_same_trigger_counterexample_count": 1,
-        "verified_support_work_count": 3
+        "verified_support_work_count": 2
       },
       "relation_to_family": "SUPPORTS",
       "rights_boundary": {
@@ -14218,24 +14218,8 @@
       },
       "supporting_relations": [
         {
-          "evidence_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001",
-          "notes": "The same relation-registered, single-performance trigger produces a sustained clean owner single.",
-          "relation": "SUPPORTS",
-          "relation_id": "WAVE1-REL-PERFORMANCE-B99",
-          "review_id": "WAVE1-REL-PERFORMANCE-B99-REVIEW",
-          "review_ref": "research/validation/relation-reviews/WAVE1-REL-PERFORMANCE-B99.json",
-          "review_status": "ROOT_VIDEO_VERIFIED",
-          "same_trigger_status": "VERIFIED_SAME_TRIGGER",
-          "source_candidate_rule_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-MICRO-BRACKET-HOLD-002",
-          "source_refs": [
-            "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S016"
-          ],
-          "status": "VERIFIED",
-          "work_id": "BROOKLYN-NINE-NINE-S05E14"
-        },
-        {
           "evidence_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
-          "notes": "A long clean owner single is followed by relation coverage only after the visible owner interval.",
+          "notes": "A two-person relation frame precedes a long clean owner single, followed by relation coverage only after the visible owner interval.",
           "relation": "SUPPORTS",
           "relation_id": "WAVE1-REL-PERFORMANCE-BCS",
           "review_id": "WAVE1-REL-PERFORMANCE-BCS-REVIEW",
@@ -14244,6 +14228,7 @@
           "same_trigger_status": "VERIFIED_SAME_TRIGGER",
           "source_candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C03-SUSTAIN-CONTESTED-PERSON-SCREEN-OWNERSHIP",
           "source_refs": [
+            "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S082",
             "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S097",
             "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S098"
           ],

@@ -56,7 +56,7 @@
     },
     {
       "human_review_status": "HUMAN_REVIEW_PENDING",
-      "ir_warning_count": 4,
+      "ir_warning_count": 5,
       "routing_status": "NO_APPLICABLE_RULE",
       "scene_problem": "ROMANTIC_PROXIMITY",
       "selection_count": 0,
@@ -65,7 +65,7 @@
     },
     {
       "human_review_status": "HUMAN_REVIEW_PENDING",
-      "ir_warning_count": 4,
+      "ir_warning_count": 5,
       "routing_status": "SELECTED",
       "scene_problem": "ROMANTIC_PROXIMITY",
       "selection_count": 1,
@@ -125,5 +125,5 @@
   "selected_rule_count": 3,
   "status": "PASS",
   "structural_pass_count": 12,
-  "warning_count": 47
+  "warning_count": 49
 }

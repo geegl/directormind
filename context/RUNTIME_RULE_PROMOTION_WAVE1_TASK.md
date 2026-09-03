@@ -2,7 +2,7 @@
 
 Updated: 2026-09-03
 
-Status: `IN_PROGRESS / LOCAL_VALIDATION_PASS / REMOTE_AND_INDEPENDENT_PENDING`
+Status: `IN_PROGRESS / INDEPENDENT_P1_REPAIRED_LOCAL / RE_REVIEW_PENDING`
 
 ## 1. Why this work exists
 
@@ -53,9 +53,9 @@ repository's deterministic builders may change derived JSON and review views.
 - [x] The router actually returns `SELECTED`, and Director IR evidence IDs bind
   to the selected rules.
 - [x] One full `NO_APPLICABLE_RULE` path remains.
-- [x] Complete local repository runner passes before commit; the committed-diff
-  whitespace check will be repeated immediately after commit.
-- [ ] New PR hosted CI passes.
+- [x] Complete local repository runner passes after the independent P1 repair;
+  the committed-diff check will be repeated on the repair commit.
+- [ ] New PR hosted CI passes on the final repaired head.
 - [ ] A fresh non-writing reviewer checks real video and returns no must-fix
   finding from a clean checkout.
 
@@ -64,15 +64,17 @@ repository's deterministic builders may change derived JSON and review views.
 - Current sole implementer and shared-file writer: root agent.
 - Completed: nine source-video replays; three canonical promotions; deterministic
   Scene Evidence, candidate, matrix, Grammar and forward-test builds; three
-  positive and three boundary routes; focused validation.
-- Remaining: commit, committed-diff check, new PR, hosted CI, and clean-checkout
-  independent review.
+  positive and three boundary routes; PR #4; initial hosted CI; and local repair
+  of the two P1 findings from the first independent review.
+- Remaining: commit and push the P1 repair, rerun the complete committed-diff
+  check, wait for hosted CI on the repaired head, and obtain an independent
+  clean-checkout re-review.
 - Known limitations: semantic audio remains unauditioned; the visible-text
   anchors are short paraphrases; creative quality and audience response are not
   machine-proved.
-- Current validation: 241/241 tests and all 21 repository checks pass locally.
-- Next single action: commit the isolated Wave 1 diff and rerun the committed-diff
-  check.
+- Current validation: 244/244 tests and all 21 repository checks pass locally.
+- Next single action: commit the P1 repair and rerun the complete committed-diff
+  check before pushing to PR #4.
 
 ## Rollback
 

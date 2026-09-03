@@ -2,7 +2,7 @@
 
 Updated: 2026-09-03
 
-Status: `PASS_LOCAL / REMOTE_AND_INDEPENDENT_PENDING`
+Status: `PASS_LOCAL / INDEPENDENT_P1_REPAIRED / RE_REVIEW_PENDING`
 
 ## Current result
 
@@ -15,13 +15,28 @@ Status: `PASS_LOCAL / REMOTE_AND_INDEPENDENT_PENDING`
 - Director Grammar: PASS — 3 eligible candidates and 3 runtime rules.
 - Forward tests: PASS — 12 packages, 3 positive selections, 3 target boundary
   cases, 9 total `NO_APPLICABLE_RULE`, 12 `HUMAN_REVIEW_PENDING`, 0 errors and
-  47 warnings.
-- Complete unit/CLI suite: PASS — 241 tests.
+  49 warnings.
+- Complete unit/CLI suite: PASS — 244 tests.
 - Complete repository runner: PASS — 21 checks, including deterministic
   builders, six versioned reports, repository boundaries and final report.
 
-The local product threshold is met. The phase is not yet final because the
-committed-diff check, hosted CI and clean-checkout independent review remain.
+The local product threshold is met. The first clean-checkout review found two
+P1s; both are repaired locally. The phase is not yet final because the repair
+commit's complete diff, hosted CI and clean-checkout re-review remain.
+
+## Independent P1 repair evidence
+
+- B99 S016 is now recorded as an owner-dominant OTS and removed from the
+  clean-single support relation. Better Call Saul S082 now explicitly proves
+  pre-hold relation registration before S097–S098.
+- The spatial boundary no longer asserts that a counterpart relation is both
+  required and not required.
+- The proximity ellipsis boundary no longer asserts continuous present time,
+  and both proximity packages now have explicit project-original locked
+  relationship facts.
+- Forward validation rejects the two observed contradictory signal pairs,
+  signals without their matching locked fact type, and `ROMANTIC_PROXIMITY`
+  without locked relationship authority.
 
 ## Required final commands
 
@@ -39,7 +54,8 @@ git diff --check origin/main...HEAD
   evidence; the remaining uncited dialogue and story semantics are unknown.
 - Structural routing and Director IR binding do not prove creative quality,
   audience effect, or production readiness.
-- Hosted CI and a fresh independent real-video review are not yet recorded.
+- Hosted CI succeeded on the initial PR head, but the repaired head still needs
+  a new run and independent re-review.
 
 ## Rollback
 

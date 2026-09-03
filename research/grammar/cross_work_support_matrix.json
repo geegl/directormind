@@ -846,7 +846,6 @@
         }
       ],
       "verified_support_relation_ids": [
-        "WAVE1-REL-PERFORMANCE-B99",
         "WAVE1-REL-PERFORMANCE-BCS"
       ],
       "verified_unrelated_same_trigger_counterexample_ids": [

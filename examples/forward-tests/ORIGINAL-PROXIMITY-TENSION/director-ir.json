@@ -18,7 +18,8 @@
         "locked_fact_ids": [
           "FACT-01",
           "FACT-02",
-          "FACT-03"
+          "FACT-03",
+          "FACT-04"
         ]
       },
       "dramatic_engine": {
@@ -31,7 +32,7 @@
         "subtext": "the maintained gap carries the tension",
         "tactic_change": "parallel work becomes a shared pause"
       },
-      "duration_seconds": 18,
+      "duration_seconds": 23,
       "location": "quiet prototype studio",
       "narrative_goal": "make mutual awareness legible through distance without physical contact",
       "pov": {
@@ -53,10 +54,10 @@
         "locked_facts": [
           {
             "fact_id": "FACT-01",
-            "fact_type": "shared_object",
+            "fact_type": "relationship_context",
             "source_ref": "locked-script.md#FACT-01",
             "status": "LOCKED",
-            "value": "Both designers need the same unlit model to complete a joint review."
+            "value": "The two designers are former romantic partners, and their agreed no-contact distance during the joint model review is a relationship-relevant story fact."
           },
           {
             "fact_id": "FACT-02",
@@ -71,6 +72,13 @@
             "source_ref": "locked-script.md#FACT-03",
             "status": "LOCKED",
             "value": "The table remains between them and neither person touches the other."
+          },
+          {
+            "fact_id": "FACT-04",
+            "fact_type": "continuous_time_change",
+            "source_ref": "locked-script.md#FACT-04",
+            "status": "LOCKED",
+            "value": "The approach and stop occur in one continuous present-time interval without ellipsis."
           }
         ],
         "priority_constraints": [],
@@ -214,7 +222,7 @@
               "FACT-01"
             ],
             "must_hold": [
-              "Both designers need the same unlit model to complete a joint review."
+              "The two designers are former romantic partners, and their agreed no-contact distance during the joint model review is a relationship-relevant story fact."
             ],
             "must_not_appear": [
               "research-work surface elements"
@@ -252,7 +260,7 @@
           "fallback": null,
           "focus_strategy": "keep the locked action readable",
           "framing": "readable neutral frame",
-          "narrative_goal": "Both designers need the same unlit model to complete a joint review.",
+          "narrative_goal": "The two designers are former romantic partners, and their agreed no-contact distance during the joint model review is a relationship-relevant story fact.",
           "order": 1,
           "performance_beats": [
             "Designer A switches off the room lights, leaving only the model base illuminated."
@@ -484,6 +492,107 @@
           ],
           "visible_text": [],
           "visual_style_module": "UNRESOLVED"
+        },
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "DESIGNER_A",
+            "DESIGNER_B"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "The review continues after the stop without a time jump.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-04"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-04"
+            ],
+            "must_hold": [
+              "The approach and stop occur in one continuous present-time interval without ellipsis."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-04",
+          "continuity_out": "state after FACT-04",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "The approach and stop occur in one continuous present-time interval without ellipsis.",
+          "order": 4,
+          "performance_beats": [
+            "The review continues after the stop without a time jump."
+          ],
+          "reference_plan": {
+            "exclude": [],
+            "inherit": [],
+            "reference_id": null,
+            "reference_type": "NONE",
+            "required": false,
+            "rights_status": "NOT_APPLICABLE",
+            "scope": "",
+            "status": "NOT_REQUIRED"
+          },
+          "shot_id": "EP01-SC01-SH04",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-04"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
         }
       ],
       "source_scene": "locked-script.md",
@@ -502,7 +611,7 @@
       "covered_by": [
         "EP01-SC01-SH01"
       ],
-      "description": "Both designers need the same unlit model to complete a joint review.",
+      "description": "The two designers are former romantic partners, and their agreed no-contact distance during the joint model review is a relationship-relevant story fact.",
       "notes": "Structural coverage only; human creative review remains pending.",
       "source_ref": "locked-script.md#FACT-01",
       "status": "covered"
@@ -524,6 +633,15 @@
       "notes": "Structural coverage only; human creative review remains pending.",
       "source_ref": "locked-script.md#FACT-03",
       "status": "covered"
+    },
+    {
+      "covered_by": [
+        "EP01-SC01-SH04"
+      ],
+      "description": "The approach and stop occur in one continuous present-time interval without ellipsis.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-04",
+      "status": "covered"
     }
   ],
   "source_facts": {
@@ -532,11 +650,11 @@
     ],
     "cross_episode_state_in": [],
     "cross_episode_state_out": [],
-    "source_unit_count": 3
+    "source_unit_count": 4
   },
   "source_script": "examples/forward-tests/ORIGINAL-PROXIMITY-TENSION/locked-script.md",
   "status": "HUMAN_REVIEW_PENDING",
-  "target_duration_seconds": 18,
+  "target_duration_seconds": 23,
   "unresolved": [
     "Human creative review has not been performed."
   ],

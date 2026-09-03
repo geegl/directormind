@@ -56,6 +56,22 @@ REQUIRED_COVERAGE_TAGS = {
     "NON_CONTACT_RELATION_TENSION",
     "SOUND_DRIVEN_SUSPENSE",
 }
+MUTUALLY_EXCLUSIVE_ROUTING_SIGNALS = {
+    frozenset({"counterpart_relation_required", "counterpart_relation_not_required"}),
+    frozenset({"continuous_present_time", "elliptical_time_change"}),
+}
+ROUTING_SIGNAL_FACT_TYPES = {
+    "relation_already_registered": "relation_state",
+    "single_performance_progression": "performance_progression",
+    "simultaneous_required_action": "simultaneous_state",
+    "material_spatial_change": "spatial_change",
+    "counterpart_relation_required": "counterpart_relation",
+    "counterpart_relation_not_required": "counterpart_absent",
+    "relation_distance_change": "distance_change",
+    "continuous_present_time": "continuous_time_change",
+    "shared_endpoint_required": "relation_endpoint",
+    "elliptical_time_change": "time_ellipsis",
+}
 REQUIRED_CASE_IDS = {
     "ORIGINAL-POWER-DIALOGUE",
     "ORIGINAL-RELATIONSHIP-FRACTURE",
@@ -279,6 +295,39 @@ def validate_package(
         issue(issues, "FORWARD-ROUTING-INPUT", f"{relative_package}/routing-input.json:{item['path']}", item["message"])
     if routing_input.get("case_id") != case_id or routing_input.get("scene_problem", {}).get("primary") != entry.get("scene_problem"):
         issue(issues, "FORWARD-ROUTING-BINDING", f"{relative_package}/routing-input.json", "Routing input does not bind the indexed case and scene problem.")
+    signal_set = set(routing_input.get("routing_signals", []))
+    for signal_pair in MUTUALLY_EXCLUSIVE_ROUTING_SIGNALS:
+        if signal_pair.issubset(signal_set):
+            issue(
+                issues,
+                "FORWARD-SIGNAL-CONTRADICTION",
+                f"{relative_package}/routing-input.json",
+                f"Routing input asserts mutually exclusive signals: {sorted(signal_pair)}.",
+            )
+    fact_types = {
+        fact.get("fact_type")
+        for fact in routing_input.get("locked_facts", [])
+        if isinstance(fact, dict)
+    }
+    for signal in sorted(signal_set):
+        required_fact_type = ROUTING_SIGNAL_FACT_TYPES.get(signal)
+        if required_fact_type is not None and required_fact_type not in fact_types:
+            issue(
+                issues,
+                "FORWARD-SIGNAL-AUTHORITY",
+                f"{relative_package}/routing-input.json",
+                f"Routing signal {signal} requires locked fact type {required_fact_type}.",
+            )
+    if (
+        routing_input.get("scene_problem", {}).get("primary") == "ROMANTIC_PROXIMITY"
+        and "relationship_context" not in fact_types
+    ):
+        issue(
+            issues,
+            "FORWARD-SCENE-PROBLEM-AUTHORITY",
+            f"{relative_package}/routing-input.json",
+            "ROMANTIC_PROXIMITY requires an explicit project-original relationship fact in the locked script.",
+        )
     locked_text = (package / "locked-script.md").read_text(encoding="utf-8")
     expected_headers = {
         "RIGHTS_STATUS": "PROJECT_ORIGINAL_SYNTHETIC",

@@ -66,7 +66,7 @@
       "text_anchor": null,
       "shot_ids": ["B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S016"],
       "observations": [
-        "Start, midpoint, and end frames confirm a 17.125-second clean single that retains one visible performance progression before the coverage changes."
+        "Start, midpoint, and end frames confirm a 17.125-second owner-dominant over-the-shoulder Shot that retains the counterpart's foreground shoulder while one visible performance progression remains primary."
       ],
       "unknowns": ["Dialogue meaning, emotional cause, lens metadata, and all semantic audio remain unknown."],
       "scene_problem": null,
@@ -78,11 +78,12 @@
       "method_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-METHOD-WAVE1-PICTURE-REVIEW",
       "text_anchor": null,
       "shot_ids": [
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S082",
         "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S097",
         "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S098"
       ],
       "observations": [
-        "Start, midpoint, and end frames confirm a 71.917-second held single followed by a return to relation coverage."
+        "S082 visibly registers the two-person spatial relation before start, midpoint, and end frames confirm a 71.917-second held single followed by a return to relation coverage."
       ],
       "unknowns": ["Dialogue meaning, emotional cause, cross-cut identity, lens metadata, and all semantic audio remain unknown."],
       "scene_problem": null,
@@ -340,23 +341,16 @@
       "confidence": {"within_source": "HIGH", "transfer": "MEDIUM", "execution": "MEDIUM"},
       "supporting_relations": [
         {
-          "relation_id": "WAVE1-REL-PERFORMANCE-B99",
-          "source_candidate_rule_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-MICRO-BRACKET-HOLD-002",
-          "work_id": "BROOKLYN-NINE-NINE-S05E14",
-          "evidence_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001",
-          "source_refs": ["B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S016"],
-          "notes": "The same relation-registered, single-performance trigger produces a sustained clean owner single."
-        },
-        {
           "relation_id": "WAVE1-REL-PERFORMANCE-BCS",
           "source_candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C03-SUSTAIN-CONTESTED-PERSON-SCREEN-OWNERSHIP",
           "work_id": "BETTER-CALL-SAUL-S03E05",
           "evidence_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
           "source_refs": [
+            "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S082",
             "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S097",
             "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S098"
           ],
-          "notes": "A long clean owner single is followed by relation coverage only after the visible owner interval."
+          "notes": "A two-person relation frame precedes a long clean owner single, followed by relation coverage only after the visible owner interval."
         }
       ],
       "counterexample": {
@@ -419,7 +413,7 @@
       "ai_risk": {
         "camera": {"level": "HIGH", "reasons": ["Continuous reframing across a zone change can distort scale or axis."]},
         "performance": {"level": "MEDIUM", "reasons": ["Body-level and route endpoints can be underspecified or mistimed."]},
-        "continuity": {"level": "HIGH", "reasons": ["The mover, counterpart, and destination zone can drift across coverage. "]}
+        "continuity": {"level": "HIGH", "reasons": ["The mover, counterpart, and destination zone can drift across coverage."]}
       },
       "failure_modes": [
         "Returning to singles before the changed relation is visible.",

@@ -152,6 +152,60 @@ class ForwardTestContractTests(unittest.TestCase):
         report = self.validate_temp_mutation(mutate)
         self.assertIn("FORWARD-ROUTING-DRIFT", issue_codes(report))
 
+    def test_mutually_exclusive_routing_signals_are_rejected(self) -> None:
+        cases = (
+            (
+                "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
+                "counterpart_relation_required",
+            ),
+            ("ORIGINAL-PROXIMITY-ELLIPSIS", "continuous_present_time"),
+        )
+        for case_id, contradictory_signal in cases:
+            with self.subTest(case_id=case_id):
+                def mutate(root: Path) -> None:
+                    path = root / case_id / "routing-input.json"
+                    data = json.loads(path.read_text(encoding="utf-8"))
+                    data["routing_signals"].append(contradictory_signal)
+                    path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+
+                report = self.validate_temp_mutation(mutate)
+                self.assertIn("FORWARD-SIGNAL-CONTRADICTION", issue_codes(report))
+
+    def test_romantic_scene_problem_requires_locked_relationship_authority(self) -> None:
+        def mutate(root: Path) -> None:
+            path = root / "ORIGINAL-PROXIMITY-TENSION" / "routing-input.json"
+            data = json.loads(path.read_text(encoding="utf-8"))
+            data["locked_facts"][0]["fact_type"] = "shared_object"
+            data["locked_facts"][0]["value"] = "Both designers need the same model for a joint review."
+            path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+
+        report = self.validate_temp_mutation(mutate)
+        self.assertIn("FORWARD-SCENE-PROBLEM-AUTHORITY", issue_codes(report))
+
+    def test_runtime_signals_require_matching_locked_fact_authority(self) -> None:
+        cases = (
+            (
+                "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
+                "counterpart_absent",
+                "counterpart_relation",
+            ),
+            ("ORIGINAL-PROXIMITY-ELLIPSIS", "time_ellipsis", "calendar_state"),
+        )
+        for case_id, fact_type, replacement in cases:
+            with self.subTest(case_id=case_id):
+                def mutate(root: Path) -> None:
+                    path = root / case_id / "routing-input.json"
+                    data = json.loads(path.read_text(encoding="utf-8"))
+                    fact = next(
+                        item for item in data["locked_facts"]
+                        if item["fact_type"] == fact_type
+                    )
+                    fact["fact_type"] = replacement
+                    path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+
+                report = self.validate_temp_mutation(mutate)
+                self.assertIn("FORWARD-SIGNAL-AUTHORITY", issue_codes(report))
+
     def test_ir_cannot_add_rule_or_enable_external_action(self) -> None:
         def mutate(root: Path) -> None:
             path = root / "ORIGINAL-PROCEDURE" / "director-ir.json"

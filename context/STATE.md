@@ -4,17 +4,20 @@ Updated: 2026-09-03
 
 ## Current phase
 
-Runtime Rule Promotion Wave 1 is in final verification on
-`codex/runtime-rule-promotion-wave1`, based on the current `origin/main`.
+Runtime Rule Promotion Wave 1 is in P1 repair verification on
+`codex/runtime-rule-promotion-wave1`, based on the current `origin/main` and
+published as PR #4.
 The locally verified implementation now produces three real `CROSS_WORK_SUPPORTED`
 runtime rules from nine newly replayed evidence units and three mechanism
 families. This meets the numerical product threshold for `COMPLETE`, but the
-final status remains pending until the committed-diff check, the new PR's hosted
-CI, and a fresh clean-checkout read-only review all pass. The local contract is
-currently green at 241 tests and 21 repository checks.
+first independent clean-checkout review replayed all nine units and found two
+P1s: an OTS mislabeled as clean-single support, and contradictory/unbound
+original routing facts. Both are repaired locally. Final status remains pending
+until the repair commit's complete diff, hosted CI and independent re-review all
+pass. The repaired local contract is green at 244 tests and 21 repository checks.
 
-Only the root agent writes shared files. Earlier screening agents were read-only
-and cannot issue the final independent verdict. No source media was added,
+Only the root agent writes shared files. The independent reviewer remained
+read-only and issued the initial P1 findings. No source media was added,
 deleted, moved, or committed. `main` remains unchanged and must not be merged by
 this task.
 
@@ -74,9 +77,15 @@ provenance. Material catalogs do not authorize rules.
   remain `UNKNOWN`.
 - Structural selection proves routing behavior, not creative quality, audience
   effect, generation approval, or publication approval.
+- B99 S016 is recorded as an owner-dominant OTS with a foreground counterpart,
+  not clean-single support. The performance rule instead uses the verified
+  Mr. Robot source plus Better Call Saul cross-work support.
+- Boundary routing signals now exclude mutually contradictory positive and
+  non-applicable claims. Romantic proximity classification and continuous-time
+  or elliptical signals resolve to explicit project-original locked facts.
 
 ## Next single action
 
-Commit the isolated diff, rerun the committed-diff check, push the new branch,
-open a new PR, wait for hosted CI, and obtain a fresh clean-checkout read-only
-verdict. Stop without merging `main`.
+Commit the two P1 repairs, rerun the complete committed-diff check, push to PR
+#4, wait for hosted CI on that repaired head, and obtain a fresh clean-checkout
+re-review verdict. Stop without merging `main`.

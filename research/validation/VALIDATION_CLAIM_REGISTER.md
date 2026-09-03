@@ -2,7 +2,7 @@
 
 Updated: 2026-09-03
 
-Status: `WAVE1_LOCAL_PASS / REMOTE_CI_AND_INDEPENDENT_REVIEW_PENDING`
+Status: `WAVE1_P1_REPAIR_LOCAL_PASS / FINAL_CI_AND_RE_REVIEW_PENDING`
 
 This register maps current claims to reproducible evidence. A structural pass
 does not prove creative quality, audience response, or production readiness.
@@ -14,17 +14,17 @@ does not prove creative quality, audience response, or production readiness.
 | Generated evidence views | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/render_scene_evidence.py --check` | PASS — 31/31 | Generated Markdown is a review view; legacy Markdown is not overwritten |
 | Scene Evidence structure | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_scene_evidence.py research/evidence --quiet` | PASS_STRUCTURAL — 31 passed, 0 failed, 0 errors, 81 warnings | Nine evidence units received fresh picture review; semantic audio remains unknown |
 | Candidate build | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/build_candidate_rule_index.py --check` | PASS — 124 candidates, 16 families | Family assignment alone never authorizes a rule |
-| Candidate promotion gates | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_candidate_rules.py --check` | PASS — 3 `CROSS_WORK_SUPPORTED`, 121 blocked, 0 errors | Eligibility is recomputed from canonical support, boundary and forward-test records |
+| Candidate promotion gates | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_candidate_rules.py` | PASS — 3 `CROSS_WORK_SUPPORTED`, 121 blocked, 0 errors | Eligibility is recomputed from canonical support, boundary and forward-test records |
 | Grammar build | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/build_director_grammar.py --check` | PASS — 3 deterministic runtime rules | No second rule source and no manual edit of the generated Grammar |
-| Runtime Grammar | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_director_grammar.py --check` | PASS — 3 eligible candidates, 3 runtime rules, 0 errors | All three are visual-only, project-original-fallback rules |
-| Legacy routing fixtures | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_director_routing_cases.py --check` | PASS — 8 cases, 8 `NO_APPLICABLE_RULE` | Preserves the earlier negative fixtures; positive selection is proved separately |
-| Original forward build | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/build_forward_tests.py --check` | PASS — 12 packages | Locked story text remains unchanged; derived directing outputs are deterministic |
-| Original forward repository | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_forward_tests.py --check` | PASS — 3 selected, 3 target boundaries, 9 total no-rule results, 12 pending, 0 errors, 47 warnings | Positive Shot rule IDs bind exactly; creative review remains pending |
+| Runtime Grammar | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_director_grammar.py` | PASS — 3 eligible candidates, 3 runtime rules, 0 errors | All three are visual-only, project-original-fallback rules |
+| Legacy routing fixtures | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_director_routing_cases.py` | PASS — 8 cases, 8 `NO_APPLICABLE_RULE` | Preserves the earlier negative fixtures; positive selection is proved separately |
+| Original forward build | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/build_forward_tests.py --check` | PASS — 12 packages | Project-original locked scripts and derived directing outputs are deterministic |
+| Original forward repository | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_forward_tests.py --check` | PASS — 3 selected, 3 target boundaries, 9 total no-rule results, 12 pending, 0 errors, 49 warnings | Positive Shot rule IDs bind exactly; contradictory signals and unbound scene problems are rejected; creative review remains pending |
 | Director IR compatibility | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s skills/drama-director-compiler/tests -p 'test_director_*.py' -v` | PASS | Preserves prior route replay and output-safety contracts |
-| Complete unit/CLI behavior | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s skills/drama-director-compiler/tests -v` | PASS — 241 tests | Includes role, text-anchor, reviewed-Shot, candidate, Grammar and forward-route attacks |
+| Complete unit/CLI behavior | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s skills/drama-director-compiler/tests -v` | PASS — 244 tests | Includes role, text-anchor, reviewed-Shot, candidate, Grammar and forward-route attacks |
 | Repository boundaries | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_repository_boundaries.py --quiet` | PASS — 0 broken refs, prohibited files, current-artifact string issues, or whitespace issues | The 30 immutable historical ledgers remain explicitly excluded provenance |
 | Complete local automation | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/run_repository_checks.py --write-final-report` | PASS — 21 checks; final report is `PASS_LOCAL` | Hosted CI is post-push evidence, not self-attested here |
-| Complete committed diff | `git diff --check origin/main...HEAD` | Pending final commit | Must be rerun after the Wave 1 commit exists |
+| Complete committed diff | `git diff --check origin/main...HEAD` | Initial implementation passed; repair commit pending | Must be rerun after the P1 repair commit exists |
 
 ## Rule-level evidence
 
@@ -36,9 +36,10 @@ Machine authority remains
 
 ## External and independent evidence
 
-- New PR: pending.
-- Hosted CI on the new PR: pending.
-- Fresh clean-checkout independent review: pending.
+- PR #4: open and unmerged.
+- Hosted CI: initial head passed; repaired head pending.
+- Fresh clean-checkout independent review: first review replayed 9/9 units and
+  found two P1s; both are repaired locally and re-review is pending.
 - Merge, deployment, publication, generation and media deletion: not performed.
 
 ## Unverified boundaries
