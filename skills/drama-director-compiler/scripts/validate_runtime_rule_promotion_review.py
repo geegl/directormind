@@ -44,6 +44,14 @@ def ids_for(evidence: dict[str, Any]) -> set[str]:
     return ids
 
 
+def shot_ids_for(evidence: dict[str, Any]) -> set[str]:
+    return {
+        shot["shot_id"]
+        for shot in evidence.get("shots", [])
+        if isinstance(shot, dict) and isinstance(shot.get("shot_id"), str)
+    }
+
+
 def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
     issues: list[dict[str, str]] = []
     validate_schema_subset(review, schema, schema, issues, "$")
@@ -70,7 +78,8 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
         if evidence is None:
             add_issue(issues, "WAVE1-EVIDENCE-MISSING", path, "Reviewed evidence unit does not exist.")
             continue
-        unknown_shots = sorted(set(item.get("shot_ids", [])) - ids_for(evidence))
+        reviewed_shot_ids = set(item.get("shot_ids", []))
+        unknown_shots = sorted(reviewed_shot_ids - shot_ids_for(evidence))
         if unknown_shots:
             add_issue(issues, "WAVE1-SHOT-REF", path, f"Unknown reviewed Shot IDs: {unknown_shots}.")
         text_anchor = item.get("text_anchor")
@@ -86,17 +95,31 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
             ):
                 add_issue(issues, "WAVE1-TEXT-RANGE", path, "Text anchor must be a positive interval inside its reviewed Shot.")
         problem = item.get("scene_problem")
-        if isinstance(problem, dict) and not set(problem.get("source_refs", [])).issubset(ids_for(evidence)):
-            add_issue(issues, "WAVE1-PROBLEM-REF", path, "Scene-problem refs must resolve inside the reviewed evidence unit.")
+        allowed_problem_refs = set(reviewed_shot_ids)
+        if isinstance(text_anchor, dict) and isinstance(text_anchor.get("anchor_id"), str):
+            allowed_problem_refs.add(text_anchor["anchor_id"])
+        if isinstance(problem, dict) and not set(problem.get("source_refs", [])).issubset(allowed_problem_refs):
+            add_issue(
+                issues,
+                "WAVE1-PROBLEM-REF",
+                path,
+                "Scene-problem refs must be freshly reviewed Shots or this review's own text anchor.",
+            )
         for role in item.get("roles", []):
-            if role.get("shot_id") not in ids_for(evidence) or not set(role.get("source_refs", [])).issubset(ids_for(evidence)):
-                add_issue(issues, "WAVE1-ROLE-REF", path, "Functional-role refs must resolve inside the reviewed evidence unit.")
+            if role.get("shot_id") not in reviewed_shot_ids or not set(role.get("source_refs", [])).issubset(reviewed_shot_ids):
+                add_issue(
+                    issues,
+                    "WAVE1-ROLE-REF",
+                    path,
+                    "Functional-role Shot and source refs must belong to this fresh picture review.",
+                )
 
     promotion_ids = [item.get("candidate_rule_id") for item in review.get("promotions", [])]
     rule_ids = [item.get("rule_id") for item in review.get("promotions", [])]
     if len(promotion_ids) != len(set(promotion_ids)) or len(rule_ids) != len(set(rule_ids)):
         add_issue(issues, "WAVE1-PROMOTION-ID", "promotions", "Promotion source and runtime rule IDs must be unique.")
     families: set[str] = set()
+    scene_problems: set[str] = set()
     for index, promotion in enumerate(review.get("promotions", [])):
         path = f"promotions[{index}]"
         source_pair = candidate_by_id.get(promotion.get("candidate_rule_id"))
@@ -106,6 +129,8 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
         source_evidence, source_candidate = source_pair
         family_id, _assignment = classify_family(source_candidate)
         families.add(promotion.get("family_id"))
+        if isinstance(promotion.get("scene_problem"), str) and promotion["scene_problem"]:
+            scene_problems.add(promotion["scene_problem"])
         if family_id != promotion.get("family_id"):
             add_issue(issues, "WAVE1-FAMILY-DRIFT", path, "Promotion family differs from deterministic candidate classification.")
         if source_evidence.get("boundary_status") != "NATURAL_START_END_VERIFIED":
@@ -113,6 +138,21 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
         if source_evidence.get("evidence_id") not in reviewed_evidence_ids:
             add_issue(issues, "WAVE1-FRESH-PICTURE-REVIEW", path, "Promotion source lacks a fresh Wave 1 picture review.")
         source_review = review_by_evidence_id.get(source_evidence.get("evidence_id"), {})
+        promotion_source_refs = set(promotion.get("source_refs", []))
+        if not promotion_source_refs or not promotion_source_refs.issubset(shot_ids_for(source_evidence)):
+            add_issue(
+                issues,
+                "WAVE1-PROMOTION-SOURCE-REF",
+                path,
+                "Promotion source refs must be non-empty Shots from the source evidence unit.",
+            )
+        if not promotion_source_refs.issubset(set(source_review.get("shot_ids", []))):
+            add_issue(
+                issues,
+                "WAVE1-PROMOTION-SOURCE-REVIEW-BINDING",
+                path,
+                "Promotion source refs must be explicitly authorized by the source evidence review.",
+            )
         source_problem = source_review.get("scene_problem") if isinstance(source_review, dict) else None
         if not isinstance(source_problem, dict) or source_problem.get("primary") != promotion.get("scene_problem"):
             add_issue(issues, "WAVE1-PROBLEM-BINDING", path, "Promotion scene problem must equal the freshly reviewed source problem.")
@@ -156,13 +196,20 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
             add_issue(issues, "WAVE1-FORWARD-PAIR", path, "Positive and boundary forward tests must be distinct.")
 
     promotion_count = len(review.get("promotions", []))
-    phase_status = "COMPLETE" if promotion_count >= 3 and len(families) >= 3 else "PARTIAL" if promotion_count else "BLOCKED"
+    phase_status = (
+        "COMPLETE"
+        if promotion_count >= 3 and len(families) >= 3 and len(scene_problems) >= 3
+        else "PARTIAL"
+        if promotion_count
+        else "BLOCKED"
+    )
     return {
         "schema_version": "runtime-rule-promotion-wave1-validation/0.1",
         "status": "PASS" if not issues else "FAIL",
         "phase_status": phase_status if not issues else "BLOCKED",
         "promoted_rule_count": promotion_count,
         "promoted_family_count": len(families),
+        "promoted_scene_problem_count": len(scene_problems),
         "reviewed_evidence_count": len(reviewed_evidence_ids),
         "error_count": len(issues),
         "issues": issues,

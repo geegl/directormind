@@ -73,7 +73,7 @@ def build_rule(
     work_ids = [candidate["source"]["work_id"], *[item["work_id"] for item in related]]
     evidence_ids = [candidate["source"]["evidence_id"], *[item["evidence_id"] for item in related]]
     evidence_shot_ids = [
-        *candidate["source"]["evidence_shot_ids"],
+        *promotion["source_refs"],
         *[ref for item in related for ref in item["source_refs"]],
     ]
     rule = {

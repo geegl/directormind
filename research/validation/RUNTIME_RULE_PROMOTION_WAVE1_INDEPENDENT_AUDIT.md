@@ -1,8 +1,8 @@
 # Runtime Rule Promotion Wave 1 — Independent Audit
 
-Updated: 2026-09-03
+Updated: 2026-09-04
 
-Status: `PASS_LOCAL / NO_MUST_FIX_FINDINGS`
+Status: `PREVIOUS_PASS_OVERRIDDEN / TWO_NEW_P1_REPAIRED_LOCAL / FRESH_AUDIT_PENDING`
 
 ## Review independence and scope
 
@@ -43,7 +43,9 @@ The initial verdict was `FAIL` with two P1 findings and no P0.
 - The repaired packages still yield three correct positive selections and
   three target-rule boundary rejections. All remain `HUMAN_REVIEW_PENDING` and
   unauthorized for generation or publication.
-- Local verification passes 244 tests and all 21 repository checks.
+- The earlier head passed 244 tests and all 21 repository checks. The current P1
+  repair passes 257 tests and all 21 repository checks; hosted CI and independent
+  audit are pending.
 
 ## Independent re-review result
 
@@ -55,7 +57,17 @@ repository contract and complete branch diff; and verified PR #4 remained open
 and unmerged with successful hosted validation.
 
 Both P1 findings were reproduced as closed. No new P0 or P1 was found. The
-review verdict is `PASS_LOCAL / NO_MUST_FIX_FINDINGS`.
+review verdict for that earlier head was `PASS_LOCAL / NO_MUST_FIX_FINDINGS`.
+
+## Later acceptance findings
+
+A later independent review found two new P1 gaps not covered by the earlier
+matrix: runtime source lineage accepted legacy-candidate Shots outside the fresh
+review list, and phase `COMPLETE` did not require three distinct scene problems.
+The root implementation now repairs both locally, but this file does not
+self-approve that repair. A new non-writing reviewer must reproduce both attacks
+and inspect every runtime Shot ref from a clean checkout before the status can
+return to pass.
 
 ## Preserved boundaries
 

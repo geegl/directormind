@@ -1,8 +1,8 @@
 # DirectorMind Runtime Rule Promotion Wave 1 — Task Card
 
-Updated: 2026-09-03
+Updated: 2026-09-04
 
-Status: `COMPLETE / INDEPENDENT_RE_REVIEW_PASSED / MAIN_UNMERGED`
+Status: `IN_PROGRESS / TWO_NEW_P1_REPAIRED_LOCAL / FINAL_CI_AND_AUDIT_PENDING`
 
 ## 1. Why this work exists
 
@@ -59,6 +59,13 @@ repository's deterministic builders may change derived JSON and review views.
   status-only commit is also checked before delivery.
 - [x] A fresh non-writing reviewer checks real video and returns no must-fix
   finding from a clean checkout.
+- [x] Runtime Grammar Shot lineage is restricted to explicit fresh-review source,
+  support and counterexample refs; legacy candidate Shot lineage remains separate.
+- [x] `COMPLETE` independently requires three distinct promoted scene problems.
+- [x] The latest P1 repair passes the complete 21-check repository runner.
+- [ ] The latest P1 repair passes hosted CI.
+- [ ] A new non-writing reviewer independently reproduces both attacks and checks
+  every runtime Shot ref from a clean checkout.
 
 ## 6. Current status
 
@@ -68,15 +75,15 @@ repository's deterministic builders may change derived JSON and review views.
   positive and three boundary routes; PR #4; initial hosted CI; and local repair
   of the two P1 findings from the first independent review. The repaired head
   passed hosted CI and independent clean-checkout re-review with no must-fix
-  finding.
-- Remaining: no implementation or validation item. Stop for the user's separate
-  merge decision after the final status-only commit's hosted check succeeds.
+  finding. Two later P1 acceptance gaps are repaired locally with explicit fresh
+  source refs and live distinct-scene-problem counting.
+- Remaining: commit and push, hosted CI and a new independent clean-checkout
+  audit of both P1 repairs.
 - Known limitations: semantic audio remains unauditioned; the visible-text
   anchors are short paraphrases; creative quality and audience response are not
   machine-proved.
-- Current validation: 244/244 tests and all 21 repository checks pass locally.
-- Next single action: stop without merging `main` and wait for the user's merge
-  decision.
+- Current validation: 257/257 tests and all 21 repository checks pass locally.
+- Next single action: commit and push the P1 repair to PR #4.
 
 ## Rollback
 

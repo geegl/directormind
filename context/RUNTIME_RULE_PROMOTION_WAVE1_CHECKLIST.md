@@ -1,6 +1,6 @@
 # Runtime Rule Promotion Wave 1 — Checklist
 
-Updated: 2026-09-03
+Updated: 2026-09-04
 
 Status vocabulary: `TODO`, `IN_PROGRESS`, `BLOCKED`, `VERIFIED_DONE`.
 
@@ -18,11 +18,15 @@ Status vocabulary: `TODO`, `IN_PROGRESS`, `BLOCKED`, `VERIFIED_DONE`.
 | W1-10 | VERIFIED_DONE | Bind selected rules to Director IR and material directing changes. | Positive Shot IDs carry the exact selected IDs and change Coverage/Blocking/Pacing/Edit; boundary cases reject the target rule. |
 | W1-11 | VERIFIED_DONE | Preserve rights, audio and private-script boundaries. | No media/surface copy/private script change; `audio_dependency=false`; generation and publication remain unauthorized. |
 | W1-12 | VERIFIED_DONE | Add adversarial and deterministic regression coverage. | Role, reviewed-Shot, text-anchor, audio, candidate, Grammar, contradictory-signal, signal-authority and scene-problem-authority attacks are covered. |
-| W1-13 | VERIFIED_DONE | Run the final local contract against the complete working-tree diff. | 244 tests, all 21 repository checks and `git diff --check origin/main...HEAD` pass after both P1 repairs. |
+| W1-13 | VERIFIED_DONE | Run the final local contract against the complete working-tree diff. | 257 tests, all 21 repository checks and `git diff --check origin/main...HEAD` pass after both P1 repairs. |
 | W1-14 | VERIFIED_DONE | Commit, push and create a new PR. | PR #4 targets `main`; the implementation and P1 repair are pushed. PR #3 was not reused; no merge was performed. |
 | W1-15 | VERIFIED_DONE | Wait for hosted CI on the final repaired implementation head. | GitHub `validate` passed on the repaired head. The final status-only commit is also checked before delivery rather than self-attested by this file. |
 | W1-16 | VERIFIED_DONE | Obtain fresh independent read-only review. | Clean-checkout re-review reopened the affected real-video Shots, replayed both P1s and five attacks, reran the full contract, and returned `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. |
-| W1-17 | VERIFIED_DONE | Stop for user merge decision. | State is `COMPLETE`; PR #4 remains open and `main` remains unmerged. |
+| W1-17 | IN_PROGRESS | Stop for user merge decision. | Two newer P1 acceptance gaps reopened final readiness; PR #4 remains open and `main` remains unmerged. |
+| W1-18 | IN_PROGRESS | Bind runtime source Shot lineage to the explicit fresh review set. | Local attacks reject unreviewed/missing source, problem and role refs; Grammar lineage is exactly 9, 9 and 13 fresh-authorized Shots. Final independent replay is pending. |
+| W1-19 | IN_PROGRESS | Require three distinct promoted scene problems for `COMPLETE`. | Local 1-problem and 2-problem attacks return `PARTIAL`; the real set recomputes to 3. Final independent replay is pending. |
+| W1-20 | IN_PROGRESS | Run full local and hosted validation on the new P1 repair. | 257 unit/CLI tests and all 21 repository checks pass locally; hosted CI is pending. |
+| W1-21 | TODO | Obtain a clean-checkout independent audit of both new P1 repairs. | Reviewer must reproduce both count attacks and prove every runtime Shot ref belongs to the explicit fresh-review union. |
 
 ## Blocked-candidate rule
 

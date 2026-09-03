@@ -1,12 +1,11 @@
 # Current State
 
-Updated: 2026-09-03
+Updated: 2026-09-04
 
 ## Current phase
 
-Runtime Rule Promotion Wave 1 is complete on
-`codex/runtime-rule-promotion-wave1`, based on the current `origin/main` and
-published as open PR #4. `main` remains unmerged.
+Runtime Rule Promotion Wave 1 is in final P1 repair verification on
+`codex/runtime-rule-promotion-wave1`; PR #4 is open and `main` remains unmerged.
 The locally verified implementation now produces three real `CROSS_WORK_SUPPORTED`
 runtime rules from nine newly replayed evidence units and three mechanism
 families. This meets the numerical product threshold for `COMPLETE`, but the
@@ -14,7 +13,11 @@ first independent clean-checkout review replayed all nine units and found two
 P1s: an OTS mislabeled as clean-single support, and contradictory/unbound
 original routing facts. Both were repaired. The repaired implementation passed
 the complete diff, hosted CI and independent re-review with no must-fix finding.
-The local contract is green at 244 tests and 21 repository checks.
+The latest independent review found two additional P1 acceptance gaps: runtime
+Shot lineage could inherit unreviewed legacy-candidate Shots, and `COMPLETE` did
+not independently require three distinct scene problems. Both are repaired
+locally. The local contract is green at 257 tests and all 21 repository checks;
+hosted CI and a fresh independent clean-checkout audit remain pending.
 
 Only the root agent writes shared files. The independent reviewer remained
 read-only and issued the initial P1 findings. No source media was added,
@@ -34,6 +37,7 @@ this task.
 | `CROSS_WORK_SUPPORTED` candidates | 3 |
 | Runtime-authorized rules | 3 |
 | Runtime-rule families | 3 |
+| Runtime-rule scene problems | 3 |
 | Candidates still blocked | 121 |
 | Forward-test packages | 12 |
 | Positive `SELECTED` packages | 3 |
@@ -75,6 +79,11 @@ provenance. Material catalogs do not authorize rules.
 - Scene-problem labels and functional roles are `INFERRED`, with exact picture
   and text sources; unproved motive, identity, contact, lens and audio facts
   remain `UNKNOWN`.
+- Runtime Grammar Shot lineage is now the exact fresh-reviewed union of source,
+  support and boundary refs: 9, 9 and 13 Shots for the three rules. Full legacy
+  candidate lineage remains separate in the candidate index.
+- `COMPLETE` is recomputed from three promoted rules, three families and three
+  distinct canonical scene problems.
 - Structural selection proves routing behavior, not creative quality, audience
   effect, generation approval, or publication approval.
 - B99 S016 is recorded as an owner-dominant OTS with a foreground counterpart,
@@ -86,5 +95,5 @@ provenance. Material catalogs do not authorize rules.
 
 ## Next single action
 
-Stop without merging `main` and wait for the user's separate merge decision on
-PR #4.
+Run the 21-check contract, push to PR #4, wait for CI, then obtain a new
+clean-checkout independent audit. Do not merge `main`.

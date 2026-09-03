@@ -9,6 +9,7 @@
   "phase_status": "COMPLETE",
   "promoted_family_count": 3,
   "promoted_rule_count": 3,
+  "promoted_scene_problem_count": 3,
   "reviewed_evidence_count": 9,
   "schema_version": "runtime-rule-promotion-wave1-validation/0.1",
   "status": "PASS"

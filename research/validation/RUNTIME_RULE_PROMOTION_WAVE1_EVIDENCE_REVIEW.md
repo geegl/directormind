@@ -1,8 +1,8 @@
 # Runtime Rule Promotion Wave 1 — Evidence Review
 
-Updated: 2026-09-03
+Updated: 2026-09-04
 
-Status: `ROOT_VIDEO_REVIEW_RECORDED / INDEPENDENT_RE_REVIEW_PASSED`
+Status: `ROOT_VIDEO_REVIEW_RECORDED / FRESH_LINEAGE_REPAIR_LOCAL / AUDIT_PENDING`
 
 The canonical authority is
 `research/grammar/runtime_rule_promotion_wave1.review.json`. This document is a
@@ -10,6 +10,11 @@ human-readable review view. Real local video was reopened and exact canonical
 Shot intervals were checked at start, midpoint and end. The host did not provide
 `ffmpeg`/`ffprobe`, so the equivalent local decode/frame inspection used Apple's
 AVFoundation. Temporary review images were kept outside the repository.
+
+Each promotion now declares the exact freshly reviewed source Shots used by the
+runtime rule. The Grammar combines only those source refs with the reviewed
+support and counterexample refs; full legacy candidate Shot lists remain outside
+runtime lineage.
 
 Three short visible subtitles were reviewed only to establish broad scene
 context; the repository retains paraphrases rather than subtitle text. Semantic
@@ -25,6 +30,8 @@ audio was not auditioned. All promoted rules therefore declare
   (`00:47:54.789–00:48:15.059`) visibly move from registered relation coverage
   into long clean performance-owner singles. Start/mid/end frames show posture,
   gaze and facial-state progression without a required concurrent task state.
+  The runtime source lineage is limited to the freshly reviewed S194, S197,
+  S199 and S201.
 - Text boundary: one short paraphrased visible-text anchor inside S197
   (`00:47:26.800–00:47:29.000`) establishes direct questioning; all other
   dialogue meaning and all sound remain unknown.
@@ -51,8 +58,10 @@ audio was not auditioned. All promoted rules therefore declare
   `RELATIONSHIP_FRACTURE`.
 - Promotion source: *Marriage Story*. S049
   (`01:35:25.833–01:35:38.958`) registers the two-person room relation; S058–S061
-  (`01:36:04.542–01:36:44.708`) carry sitting/standing and zone changes; S082–S085
-  (`01:40:53.292–01:41:26.792`) preserve the changed level-and-distance endpoint.
+  (`01:36:04.542–01:36:44.708`) carry sitting/standing and zone changes. The
+  runtime source lineage is limited to the freshly reviewed S049, S058, S059,
+  S061 and S065. S082–S085 are used separately as cross-work support for the
+  proximity rule below, not as this rule's promotion source.
 - Text boundary: one short paraphrased visible-text anchor inside S071
   (`01:38:29.800–01:38:31.500`) records direct personal conflict; other dialogue
   meaning, emotional cause and all sound remain unknown.
@@ -76,7 +85,8 @@ audio was not auditioned. All promoted rules therefore declare
 - Promotion source: *Bridgerton* S02E05. S001
   (`00:42:07.380–00:42:14.253`) registers separation; S024–S026
   (`00:43:40.973–00:44:07.834`) show an approach in shared coverage and hold the
-  changed non-contact endpoint.
+  changed non-contact endpoint. The runtime source lineage is limited to the
+  freshly reviewed S001, S012, S013, S017, S024, S025 and S026.
 - Text boundary: one short paraphrased visible-text anchor inside S017
   (`00:43:03.336–00:43:05.338`) establishes relationship stakes; motive,
   consent, exact contact and all sound remain unknown.

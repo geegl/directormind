@@ -126,6 +126,11 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
     expected_report_statuses = (
         ("SCENE_VALIDATION_NOT_PASSING", scene["status"] == "PASS_STRUCTURAL"),
         ("PROMOTION_REVIEW_NOT_PASSING", promotion["status"] == "PASS" and promotion["phase_status"] == "COMPLETE"),
+        (
+            "PROMOTION_SCENE_PROBLEM_COUNT_INSUFFICIENT",
+            isinstance(promotion.get("promoted_scene_problem_count"), int)
+            and promotion["promoted_scene_problem_count"] >= 3,
+        ),
         ("CANDIDATE_VALIDATION_NOT_PASSING", candidate["status"] == "PASS"),
         ("GRAMMAR_VALIDATION_NOT_PASSING", grammar["status"] == "PASS"),
         ("ROUTING_VALIDATION_NOT_PASSING", routing["status"] == "PASS"),
@@ -153,6 +158,7 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
             "candidate_families": candidate["family_count"],
             "reviewed_evidence_units": promotion["reviewed_evidence_count"],
             "promoted_rule_families": promotion["promoted_family_count"],
+            "promoted_scene_problem_count": promotion["promoted_scene_problem_count"],
             "blocked_candidates": blocked_count,
             "cross_work_supported_candidates": promotion_counts.get("CROSS_WORK_SUPPORTED", 0),
             "general_default_candidates": promotion_counts.get("GENERAL_DEFAULT", 0),

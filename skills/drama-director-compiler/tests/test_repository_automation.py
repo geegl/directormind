@@ -4,10 +4,12 @@
 from __future__ import annotations
 
 import copy
+import json
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 
 SKILL_ROOT = Path(__file__).resolve().parents[1]
@@ -15,6 +17,7 @@ REPO_ROOT = SKILL_ROOT.parents[1]
 SCRIPT_ROOT = SKILL_ROOT / "scripts"
 sys.path.insert(0, str(SCRIPT_ROOT))
 
+import build_final_generalization_validation as final_validation  # noqa: E402
 from build_final_generalization_validation import (  # noqa: E402
     LIVE_CHECK_NAMES,
     build_report,
@@ -121,6 +124,49 @@ class RepositoryAutomationTests(unittest.TestCase):
         self.assertEqual(failed_report["status"], "FAIL_LOCAL")
         self.assertEqual(failed_report["checks"]["unit_suite"], "FAIL")
         self.assertIn("LIVE_CHECK_NOT_PASSED: unit and CLI suite", failed_report["errors"])
+
+    def test_final_report_recomputes_three_distinct_promoted_scene_problems(self) -> None:
+        review = json.loads(
+            (REPO_ROOT / "research" / "grammar" / "runtime_rule_promotion_wave1.review.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        runtime_report = json.loads(
+            (REPO_ROOT / "research" / "validation" / "runtime-rule-promotion-wave1-validation.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        final_report = json.loads(
+            (REPO_ROOT / "research" / "validation" / "FINAL_GENERALIZATION_VALIDATION.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        state = (REPO_ROOT / "context" / "STATE.md").read_text(encoding="utf-8")
+        recomputed = len({item["scene_problem"] for item in review["promotions"]})
+        self.assertEqual(recomputed, 3)
+        self.assertEqual(runtime_report["promoted_scene_problem_count"], recomputed)
+        self.assertEqual(final_report["counts"]["promoted_scene_problem_count"], recomputed)
+        self.assertIn("| Runtime-rule scene problems | 3 |", state)
+
+    def test_final_report_rejects_declared_complete_with_too_few_scene_problems(self) -> None:
+        real_load_report = final_validation._load_report
+
+        def load_mutated_report(name: str) -> dict:
+            report = copy.deepcopy(real_load_report(name))
+            if name == "runtime-rule-promotion-wave1-validation.json":
+                report.update(
+                    status="PASS",
+                    phase_status="COMPLETE",
+                    promoted_rule_count=3,
+                    promoted_family_count=3,
+                    promoted_scene_problem_count=2,
+                )
+            return report
+
+        with patch.object(final_validation, "_load_report", side_effect=load_mutated_report):
+            report = final_validation.build_report(successful_live_evidence())
+        self.assertEqual(report["status"], "FAIL_LOCAL")
+        self.assertIn("PROMOTION_SCENE_PROBLEM_COUNT_INSUFFICIENT", report["errors"])
 
     def test_local_runner_covers_every_required_contract(self) -> None:
         configured_checks = checks(Path("/tmp/reports"))

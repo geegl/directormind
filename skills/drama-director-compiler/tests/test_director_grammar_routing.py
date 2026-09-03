@@ -217,6 +217,21 @@ def full_synthetic_candidate() -> dict:
     }
 
 
+def full_synthetic_promotion_review() -> dict:
+    return {
+        "promotions": [
+            {
+                "candidate_rule_id": "SYNTHETIC-CANDIDATE-1",
+                "source_refs": ["SYNTHETIC-SHOT-ALPHA"],
+                "supporting_relations": [
+                    {"source_refs": ["SYNTHETIC-SHOT-BETA"]},
+                ],
+                "counterexample": {"source_refs": []},
+            }
+        ]
+    }
+
+
 def validate_synthetic_grammar(
     grammar: dict, index: dict, matrix: dict, schema: dict
 ) -> dict:
@@ -226,8 +241,17 @@ def validate_synthetic_grammar(
     ), patch(
         "validate_director_grammar.verified_routing_review",
         return_value=True,
+    ), patch(
+        "validate_director_grammar.validate_promotion_review",
+        return_value={"status": "PASS", "phase_status": "COMPLETE"},
     ):
-        return validate_grammar(grammar, index, matrix, schema)
+        return validate_grammar(
+            grammar,
+            index,
+            matrix,
+            schema,
+            full_synthetic_promotion_review(),
+        )
 
 
 class DirectorGrammarRoutingTests(unittest.TestCase):
@@ -251,6 +275,22 @@ class DirectorGrammarRoutingTests(unittest.TestCase):
         self.assertEqual(report["runtime_rule_count"], 3)
         self.assertEqual(report["project_constraint_count"], 5)
         self.assertEqual(report["safety_constraint_count"], 6)
+
+    def test_runtime_lineage_rejects_any_unreviewed_source_shot(self) -> None:
+        grammar = copy.deepcopy(self.grammar)
+        grammar["rules"][0]["evidence_lineage"]["evidence_shot_ids"].append(
+            "MRR-S04E07-ACT-FOUR-VISUAL-001-S188"
+        )
+        report = validate_grammar(grammar, self.index, self.matrix, self.schema)
+        self.assertEqual(report["status"], "FAIL")
+        self.assertIn("GRAMMAR-LINEAGE-FRESH-SHOTS", issue_codes(report))
+
+    def test_runtime_lineage_rejects_missing_fresh_approved_shot(self) -> None:
+        grammar = copy.deepcopy(self.grammar)
+        grammar["rules"][0]["evidence_lineage"]["evidence_shot_ids"].pop()
+        report = validate_grammar(grammar, self.index, self.matrix, self.schema)
+        self.assertEqual(report["status"], "FAIL")
+        self.assertIn("GRAMMAR-LINEAGE-FRESH-SHOTS", issue_codes(report))
 
     def test_required_constraint_cannot_be_removed(self) -> None:
         grammar = copy.deepcopy(self.grammar)

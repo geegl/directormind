@@ -1,13 +1,13 @@
 # Runtime Rule Promotion Wave 1 — Final Validation
 
-Updated: 2026-09-03
+Updated: 2026-09-04
 
-Status: `COMPLETE / INDEPENDENT_RE_REVIEW_PASSED / MAIN_UNMERGED`
+Status: `P1_REPAIR_PASS_LOCAL / CI_AUDIT_PENDING / MAIN_UNMERGED`
 
 ## Current result
 
 - Canonical promotion review: PASS — 9 reviewed evidence units, 3 promoted
-  rules, 3 families, 0 errors.
+  rules, 3 families, 3 distinct scene problems, 0 errors.
 - Scene Evidence: PASS_STRUCTURAL — 31 scenes, 2,343 Shot/edit units, 0 errors,
   81 preserved warnings.
 - Candidate rules: PASS — 124 candidates, 16 families, 3
@@ -16,13 +16,20 @@ Status: `COMPLETE / INDEPENDENT_RE_REVIEW_PASSED / MAIN_UNMERGED`
 - Forward tests: PASS — 12 packages, 3 positive selections, 3 target boundary
   cases, 9 total `NO_APPLICABLE_RULE`, 12 `HUMAN_REVIEW_PENDING`, 0 errors and
   49 warnings.
-- Complete unit/CLI suite: PASS — 244 tests.
+- Complete unit/CLI suite: PASS — 257 tests.
 - Complete repository runner: PASS — 21 checks, including deterministic
   builders, six versioned reports, repository boundaries and final report.
 
 The product threshold is met. The first clean-checkout review found two P1s;
 both were repaired, and the repaired implementation passed complete local
 validation, hosted CI and independent clean-checkout re-review.
+
+A later independent acceptance review found two further P1 gaps. Runtime
+lineage previously inherited unreviewed legacy-candidate Shots, and phase
+completion counted families but not distinct scene problems. The local repair
+now produces exact fresh Shot sets of 9, 9 and 13 and reports three distinct
+promoted scene problems. The full 21-check contract passes; hosted CI and
+independent-audit evidence for this repair are still pending.
 
 ## Independent P1 repair evidence
 

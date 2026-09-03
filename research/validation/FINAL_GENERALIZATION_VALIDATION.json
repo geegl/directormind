@@ -39,6 +39,7 @@
     "invalid_python_files": 0,
     "prohibited_repository_files": 0,
     "promoted_rule_families": 3,
+    "promoted_scene_problem_count": 3,
     "promotion_ready_families": 3,
     "rejected_candidates": 0,
     "required_scene_problems": 6,
@@ -52,7 +53,7 @@
     "shot_edit_units": 2343,
     "source_dispositions": 33,
     "symlink_escapes": 0,
-    "unit_tests": 244,
+    "unit_tests": 257,
     "validation_errors": 0,
     "validation_warnings": 130,
     "whitespace_errors": 0
