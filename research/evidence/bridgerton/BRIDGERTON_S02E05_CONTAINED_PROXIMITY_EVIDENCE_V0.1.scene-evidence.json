@@ -8,11 +8,14 @@
     "status": "INFERRED",
     "source_refs": [
       "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S012",
+      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S013",
+      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S017",
       "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
       "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
-      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-TA-WAVE1-001"
+      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S026"
     ],
-    "notes": "The canonical problem is inferred from the continuous visible distance change, held endpoint, and one short paraphrased visible-text anchor establishing relationship stakes; motive, consent, and contact are not asserted."
+    "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown."
   },
   "scene_unit_type": "NATURAL_CONTINUOUS_SCENE",
   "boundary_status": "NATURAL_START_END_VERIFIED",
@@ -10039,6 +10042,33 @@
       "unknowns": [
         "Speaker identity, uncited dialogue, and semantic audio remain unknown."
       ]
+    },
+    {
+      "method_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S007",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S012",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S013",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S014",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S017",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S026",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S028",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S029",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S030",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S035",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S039"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],
@@ -10240,7 +10270,8 @@
       "source_method_ids": [
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-LEGACY-PICTURE-REVIEW",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-STRUCTURAL-CONVERSION",
-        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-WAVE1-PICTURE-REVIEW"
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-WAVE1-PICTURE-REVIEW",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
       ],
       "evidence_scene_ids": [
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001"
@@ -10524,6 +10555,7 @@
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
     "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
+    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+    "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
   ]
 }

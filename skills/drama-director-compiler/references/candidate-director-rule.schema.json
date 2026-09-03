@@ -21,6 +21,7 @@
     "unknown_dependencies",
     "counterexamples",
     "promotion",
+    "runtime_integration",
     "rights_boundary",
     "legacy_lineage"
   ],
@@ -57,6 +58,7 @@
       "items": {"$ref": "#/$defs/counterexample"}
     },
     "promotion": {"$ref": "#/$defs/promotion"},
+    "runtime_integration": {"$ref": "#/$defs/runtimeIntegration"},
     "rights_boundary": {"$ref": "#/$defs/rightsBoundary"},
     "legacy_lineage": {"$ref": "#/$defs/legacyLineage"}
   },
@@ -154,6 +156,13 @@
             "relation_anchor",
             "spatial_mover",
             "proximity_mover",
+            "action_source",
+            "result_receiver",
+            "comparison_field",
+            "selected_relation",
+            "comparison_relation",
+            "before_state_anchor",
+            "after_state_anchor",
             "UNKNOWN"
           ]
         },
@@ -410,7 +419,8 @@
             "CROSS_WORK_SUPPORTED",
             "GENERAL_DEFAULT",
             "REJECTED",
-            "BLOCKED_BY_UNKNOWN"
+            "BLOCKED_BY_UNKNOWN",
+            "EVIDENCE_GAP_PENDING"
           ]
         },
         "reasons": {
@@ -428,6 +438,41 @@
         },
         "human_director_review": {"$ref": "#/$defs/humanReview"},
         "unknown_dependency_present": {"type": "boolean"}
+      }
+    },
+    "runtimeIntegration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "final_status",
+        "runtime_effect_key",
+        "review_ids",
+        "source_refs",
+        "target_rule_id",
+        "merged_into_candidate_id",
+        "boundary_signal_ids",
+        "rejection_reason_code",
+        "evidence_gap_id"
+      ],
+      "properties": {
+        "final_status": {
+          "enum": [
+            "POSITIVE_RUNTIME_RULE",
+            "SUPPORTING_EVIDENCE",
+            "BOUNDARY_OR_COUNTEREXAMPLE",
+            "MERGED_DUPLICATE",
+            "REJECTED_WITH_REASON",
+            "EVIDENCE_GAP_PENDING"
+          ]
+        },
+        "runtime_effect_key": {"type": ["string", "null"]},
+        "review_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "source_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "target_rule_id": {"type": ["string", "null"]},
+        "merged_into_candidate_id": {"type": ["string", "null"]},
+        "boundary_signal_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "rejection_reason_code": {"type": ["string", "null"]},
+        "evidence_gap_id": {"type": ["string", "null"]}
       }
     },
     "forwardTest": {

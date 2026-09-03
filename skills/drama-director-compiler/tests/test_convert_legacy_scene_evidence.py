@@ -124,6 +124,25 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
 
     def test_all_converted_evidence_validates_and_keeps_boundaries(self) -> None:
         converted = [build_evidence(source) for source in self.sources]
+        integration = json.loads(
+            (REPO_ROOT / "research" / "grammar" / "runtime_integration.review.json").read_text(encoding="utf-8")
+        )
+        positive_problems = {
+            next(
+                evidence["evidence_id"]
+                for evidence in converted
+                if any(
+                    rule["candidate_rule_id"] == spec["candidate_rule_id"]
+                    for rule in evidence["candidate_rules"]
+                )
+            ): spec["scene_problem"]
+            for spec in integration["runtime_rule_specs"]
+        }
+        wave1_text_anchor_ids = {
+            "MRR-S04E07-ACT-FOUR-VISUAL-001",
+            "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+        }
         candidate_ids: list[str] = []
         canonical_families: list[str] = []
         operational_signatures: set[tuple[str, ...]] = set()
@@ -142,21 +161,19 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
             self.assertGreaterEqual(len(evidence["validation_warnings"]), 2)
             self.assertTrue(any("legacy_migration" in warning for warning in evidence["validation_warnings"]))
             self.assertTrue(any("frame and PTS" in warning for warning in evidence["validation_warnings"]))
-            if evidence["evidence_id"] in {
-                "MRR-S04E07-ACT-FOUR-VISUAL-001",
-                "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
-                "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
-            }:
+            if evidence["evidence_id"] in wave1_text_anchor_ids:
                 self.assertEqual(evidence["text_anchor_status"], "TEXT_ANCHOR_VERIFIED")
                 self.assertEqual(len(evidence["text_anchors"]), 1)
                 self.assertTrue(any(method["method_type"] == "TEXT_ANCHOR_REVIEW" for method in evidence["methods"]))
-                self.assertEqual(evidence["scene_problem"]["primary"], SCENE_META[source.stem].primary_problem)
+            else:
+                self.assertEqual(evidence["text_anchor_status"], "TEXT_ANCHOR_NOT_USED")
+                self.assertEqual(evidence["text_anchors"], [])
+            if evidence["evidence_id"] in positive_problems:
+                self.assertEqual(evidence["scene_problem"]["primary"], positive_problems[evidence["evidence_id"]])
                 self.assertEqual(evidence["scene_problem"]["status"], "INFERRED")
                 self.assertTrue(evidence["scene_problem"]["source_refs"])
                 self.assertTrue(any(shot["abstract_role_labels"] for shot in evidence["shots"]))
             else:
-                self.assertEqual(evidence["text_anchor_status"], "TEXT_ANCHOR_NOT_USED")
-                self.assertEqual(evidence["text_anchors"], [])
                 self.assertEqual(evidence["scene_problem"]["primary"], "LEGACY_SCENE_PROBLEM")
                 self.assertEqual(evidence["scene_problem"]["status"], "UNKNOWN")
                 self.assertEqual(evidence["scene_problem"]["source_refs"], [])
@@ -226,6 +243,22 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
             ],
             121,
         )
+
+    def test_wire_s040_renewed_video_correction_cannot_regress_to_legacy_insert_claim(self) -> None:
+        source = next(path for path in self.sources if path.stem.startswith("THE_WIRE_"))
+        evidence = build_evidence(source)
+        shot = next(
+            item
+            for item in evidence["shots"]
+            if item["shot_id"] == "WIRE-S01E04-OLD-CASES-001-S040"
+        )
+        self.assertEqual(shot["shot_size"]["status"], "PICTURE_OBSERVED")
+        self.assertIn("person", shot["shot_size"]["value"].lower())
+        self.assertIn("medium", shot["shot_size"]["value"].lower())
+        self.assertEqual(shot["visible_action"]["status"], "PICTURE_OBSERVED")
+        self.assertEqual(shot["camera_motion"]["status"], "UNKNOWN")
+        self.assertEqual(shot["cut_motivation"]["status"], "UNKNOWN")
+        self.assertNotIn("extreme close", shot["shot_size"]["value"].lower())
 
     def test_succession_migration_preserves_eighty_eight_units_and_four_lineage_rows(self) -> None:
         source = next(path for path in self.sources if path.stem.startswith("SUCCESSION_"))

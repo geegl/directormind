@@ -26,14 +26,15 @@
 
 ```json
 {
-  "notes": "The canonical problem is inferred from repeated visible relation resets plus one short, paraphrased visible-text anchor showing direct personal conflict; no dialogue wording is transferred.",
+  "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown.",
   "primary": "RELATIONSHIP_FRACTURE",
   "secondary": [],
   "source_refs": [
     "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
+    "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S058",
     "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
-    "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085",
-    "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-TA-WAVE1-001"
+    "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S061",
+    "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S065"
   ],
   "status": "INFERRED"
 }
@@ -206,7 +207,8 @@
 [
   "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
   "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-  "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
+  "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+  "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
 ]
 ```
 
@@ -389,14 +391,15 @@
   "picture_evidence_status": "PICTURE_OBSERVED",
   "production_take_status": "PRODUCTION_METHOD_UNKNOWN",
   "scene_problem": {
-    "notes": "The canonical problem is inferred from repeated visible relation resets plus one short, paraphrased visible-text anchor showing direct personal conflict; no dialogue wording is transferred.",
+    "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown.",
     "primary": "RELATIONSHIP_FRACTURE",
     "secondary": [],
     "source_refs": [
       "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
+      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S058",
       "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
-      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085",
-      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-TA-WAVE1-001"
+      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S061",
+      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S065"
     ],
     "status": "INFERRED"
   },
@@ -7006,7 +7009,8 @@
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
     "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
+    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+    "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
   ],
   "work_id": "MARRIAGE-STORY-2019"
 }

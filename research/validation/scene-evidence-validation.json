@@ -83,12 +83,18 @@
           "level": "warning",
           "message": "8 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
           "path": "$.validation_warnings[2]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
+          "path": "$.validation_warnings[3]"
         }
       ],
       "passed": true,
       "path": "research/evidence/apollo-13/APOLLO_13_CONSTRAINED_MATERIAL_HANDOFF_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 12,
-      "warning_count": 3
+      "warning_count": 4
     },
     {
       "candidate_rule_count": 4,
@@ -173,12 +179,18 @@
           "level": "warning",
           "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
           "path": "$.validation_warnings[2]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
+          "path": "$.validation_warnings[3]"
         }
       ],
       "passed": true,
       "path": "research/evidence/bridgerton/BRIDGERTON_S02E05_CONTAINED_PROXIMITY_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 41,
-      "warning_count": 3
+      "warning_count": 4
     },
     {
       "candidate_rule_count": 4,
@@ -389,12 +401,18 @@
           "level": "warning",
           "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
           "path": "$.validation_warnings[2]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
+          "path": "$.validation_warnings[3]"
         }
       ],
       "passed": true,
       "path": "research/evidence/marriage-story/MARRIAGE_STORY_2019_APARTMENT_SEQUENCE_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 85,
-      "warning_count": 3
+      "warning_count": 4
     },
     {
       "candidate_rule_count": 4,
@@ -443,12 +461,18 @@
           "level": "warning",
           "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
           "path": "$.validation_warnings[2]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
+          "path": "$.validation_warnings[3]"
         }
       ],
       "passed": true,
       "path": "research/evidence/mr-robot/MR_ROBOT_S04E07_ACT_FOUR_VISUAL_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 201,
-      "warning_count": 3
+      "warning_count": 4
     },
     {
       "candidate_rule_count": 4,
@@ -871,7 +895,7 @@
   "total_scenes": 31,
   "total_shots": 2343,
   "validator_version": "scene-evidence-validator/0.1",
-  "warning_count": 81,
+  "warning_count": 85,
   "warnings": [
     {
       "code": "EVIDENCE-DECLARED-WARNING",
@@ -928,6 +952,13 @@
       "level": "warning",
       "message": "8 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
       "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
+      "level": "warning",
+      "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
+      "path": "$.validation_warnings[3]"
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",
@@ -991,6 +1022,13 @@
       "level": "warning",
       "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
       "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+      "level": "warning",
+      "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
+      "path": "$.validation_warnings[3]"
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",
@@ -1134,6 +1172,13 @@
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+      "level": "warning",
+      "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
+      "path": "$.validation_warnings[3]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
       "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
       "level": "warning",
       "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
@@ -1166,6 +1211,13 @@
       "level": "warning",
       "message": "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
       "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "MRR-S04E07-ACT-FOUR-VISUAL-001",
+      "level": "warning",
+      "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
+      "path": "$.validation_warnings[3]"
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",

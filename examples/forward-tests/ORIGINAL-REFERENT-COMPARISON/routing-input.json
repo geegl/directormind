@@ -1,0 +1,56 @@
+{
+  "case_id": "ORIGINAL-REFERENT-COMPARISON",
+  "dramatic_structure": {
+    "goal": "make a physical comparison explain the next handling relation",
+    "objectives": [
+      "establish the relevant coupler-to-gauge relation"
+    ],
+    "obstacle": "the options are similar until compared against the gauge",
+    "stakes": "the next assembly step requires the compatible part",
+    "subtext": "none asserted",
+    "tactic_change": "field comparison becomes one readable handling relation"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "referent_set",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "Three project-original couplers remain visible on the same marked grid."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "relation_constraint",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "The openings must be read together against one fixed gauge before the next handling step."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "comparison_result",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "The assembler moves to one handling relation only after the shared comparison is readable."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "multiple_visible_referents",
+    "comparative_relation_required"
+  ],
+  "scene_problem": {
+    "primary": "PROCEDURAL_COMPETENCE",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "assembly"
+  ],
+  "unknown_fact_types": []
+}

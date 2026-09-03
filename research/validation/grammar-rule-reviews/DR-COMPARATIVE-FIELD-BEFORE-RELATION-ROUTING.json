@@ -1,0 +1,31 @@
+{
+  "candidate_required_story_facts": [
+    "At least two project-original referents are simultaneously visible.",
+    "Their visible relation must be understood before the next action or detail."
+  ],
+  "candidate_trigger": "Two or more project-original referents must be read together before one visible relation can guide the next action.",
+  "promotion_source_candidate_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
+  "review_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION-ROUTING-REVIEW",
+  "routing": {
+    "audit_subject_tags": [],
+    "conflicts_with": [],
+    "not_applicable_if_any": [
+      "comparative_field_not_required"
+    ],
+    "required_fact_types": [
+      "referent_set",
+      "relation_constraint"
+    ],
+    "scene_problems": [
+      "PROCEDURAL_COMPETENCE"
+    ],
+    "trigger_all_of": [
+      "multiple_visible_referents",
+      "comparative_relation_required"
+    ],
+    "trigger_any_of": []
+  },
+  "rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+  "schema_version": "director-grammar-routing-review/0.1",
+  "status": "ROOT_VIDEO_VERIFIED"
+}

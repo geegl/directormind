@@ -1,9 +1,9 @@
 {
-  "eligible_candidate_count": 3,
+  "eligible_candidate_count": 4,
   "error_count": 0,
   "issues": [],
   "project_constraint_count": 5,
-  "runtime_rule_count": 3,
+  "runtime_rule_count": 4,
   "safety_constraint_count": 6,
   "schema_version": "director-grammar-validation/0.1",
   "status": "PASS"

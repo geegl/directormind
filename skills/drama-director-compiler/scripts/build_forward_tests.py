@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import sys
 from pathlib import Path
@@ -15,7 +16,7 @@ SKILL_ROOT = SCRIPT_DIR.parent
 REPOSITORY_ROOT = SKILL_ROOT.parents[1]
 FORWARD_ROOT = REPOSITORY_ROOT / "examples" / "forward-tests"
 GRAMMAR_PATH = REPOSITORY_ROOT / "research" / "grammar" / "director_grammar_v0.2.json"
-PROMOTION_REVIEW_PATH = REPOSITORY_ROOT / "research" / "grammar" / "runtime_rule_promotion_wave1.review.json"
+PROMOTION_REVIEW_PATH = REPOSITORY_ROOT / "research" / "grammar" / "runtime_integration.review.json"
 
 sys.path.insert(0, str(SCRIPT_DIR))
 from render_director_ir import render_coverage, render_shot_script  # noqa: E402
@@ -82,7 +83,7 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "invitation becomes departure",
             "subtext": "returning the untouched card is the answer",
         },
-        "signals": ["material_spatial_change", "counterpart_relation_required"],
+        "signals": ["material_spatial_change", "counterpart_relation_context_locked"],
         "subject_tags": ["partnership"],
         "test_mode": "POSITIVE",
         "changed_director_dimensions": ["COVERAGE", "BLOCKING", "EDIT"],
@@ -152,9 +153,9 @@ CASES: list[dict[str, Any]] = [
         "characters": ["FLOOR_LEAD", "CREW_1", "CREW_2", "CREW_3"],
         "location": "empty rehearsal hall",
         "facts": [
-            ("FACT-01", "cause_effect_chain", "A loose wheel stop lets an unpowered equipment rack begin rolling."),
-            ("FACT-02", "one_to_many_response", "The floor lead signals three crew members to clear three marked lanes."),
-            ("FACT-03", "safe_resolution", "The floor lead pushes a floor chock into the rack path after all three lanes are clear."),
+            ("FACT-01", "action_source", "A loose wheel stop is visibly displaced before an unpowered equipment rack begins rolling."),
+            ("FACT-02", "target_state", "The rack changes from stationary to rolling while three marked lanes remain visible."),
+            ("FACT-03", "visible_result", "After the lanes clear, a floor chock stops the rack and the stopped state remains readable."),
         ],
         "beats": [
             "The loose stop tips away and the unpowered rack begins moving across the empty hall.",
@@ -169,8 +170,19 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "warning becomes coordinated clearance and then restraint",
             "subtext": "the lead acts only after every response is visible",
         },
-        "signals": ["cause_effect_chain", "one_to_many_response"],
+        "signals": ["visible_action_source", "target_state_change", "result_readable"],
         "subject_tags": ["safe_physical_action"],
+        "test_mode": "POSITIVE",
+        "changed_director_dimensions": ["COVERAGE", "REACTION", "PACING", "EDIT"],
+        "affected_shot_index": 2,
+        "selected_shot_overrides": {
+            "duration_seconds": 8,
+            "shot_type": "project-original result-and-response hold",
+            "framing": "shared frame holding the stopped result before the response allocation",
+            "blocking": "Keep the stopped rack and cleared lanes visible before assigning the final response beat.",
+            "edit_in": "enter on the locked target-state change",
+            "edit_out": "cut only after the stopped result is readable",
+        },
     },
     {
         "case_id": "ORIGINAL-PROXIMITY-TENSION",
@@ -189,7 +201,7 @@ CASES: list[dict[str, Any]] = [
             ("FACT-03", "relation_endpoint", "The table remains between them and neither person touches the other."),
             (
                 "FACT-04",
-                "continuous_time_change",
+                "time_structure",
                 "The approach and stop occur in one continuous present-time interval without ellipsis.",
             ),
         ],
@@ -207,7 +219,7 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "parallel work becomes a shared pause",
             "subtext": "the maintained gap carries the tension",
         },
-        "signals": ["relation_distance_change", "continuous_present_time", "shared_endpoint_required"],
+        "signals": ["relation_distance_change", "time_structure_locked", "shared_endpoint_required"],
         "subject_tags": ["relationship_tension"],
         "test_mode": "POSITIVE",
         "changed_director_dimensions": ["COVERAGE", "BLOCKING", "PACING", "EDIT"],
@@ -325,14 +337,16 @@ CASES: list[dict[str, Any]] = [
         "characters": ["MAKER_A", "MAKER_B"],
         "location": "plain assembly room",
         "facts": [
-            ("FACT-01", "counterpart_absent", "Maker A leaves the room before Maker B moves from the shared bench."),
+            ("FACT-01", "counterpart_relation", "Maker A and Maker B begin from an established shared bench relation before Maker A leaves."),
             ("FACT-02", "spatial_change", "After the exit, Maker B crosses alone to a second station visible against the same fixed wall grid."),
             ("FACT-03", "fixed_anchor", "The wall grid and empty shared bench make the solo destination unambiguous."),
+            ("FACT-04", "counterpart_endpoint_state", "Maker A is absent from the changed endpoint, so no new two-person relation must be established."),
         ],
         "beats": [
             "A shared view shows Maker A leave the established bench and clear the room.",
             "Maker B remains alone, then crosses to the second station against the fixed wall grid.",
             "A single frame holds the solo endpoint without adding another two-person reset.",
+            "The held endpoint confirms that the absent counterpart creates no new relation to reset.",
         ],
         "dramatic": {
             "goal": "show a solo occupancy change after the counterpart has left",
@@ -342,7 +356,7 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "shared occupancy becomes solo work",
             "subtext": "none asserted",
         },
-        "signals": ["material_spatial_change", "counterpart_relation_not_required"],
+        "signals": ["material_spatial_change", "counterpart_relation_context_locked", "counterpart_absent_at_changed_endpoint"],
         "subject_tags": ["partnership"],
         "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
         "changed_director_dimensions": [],
@@ -366,7 +380,7 @@ CASES: list[dict[str, Any]] = [
                 "relation_endpoint",
                 "Only the final wide must establish their relationship-relevant terminal distance across the table.",
             ),
-            ("FACT-04", "time_ellipsis", "No continuous move between the dated checks belongs to the story facts."),
+            ("FACT-04", "time_structure", "The distance change occurs across three dated checks; no continuous move between them belongs to the story facts."),
         ],
         "beats": [
             "The romantic partners begin the first dated planning check at the same table.",
@@ -382,8 +396,176 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "repeated task views become a final shared endpoint",
             "subtext": "none asserted",
         },
-        "signals": ["relation_distance_change", "shared_endpoint_required", "elliptical_time_change"],
+        "signals": ["relation_distance_change", "time_structure_locked", "shared_endpoint_required", "distance_change_across_ellipsis"],
         "subject_tags": ["relationship_tension"],
+        "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
+        "changed_director_dimensions": [],
+    },
+    {
+        "case_id": "ORIGINAL-ACTION-CONTINUOUS-CHAIN",
+        "title": "The Continuous Cart Stop",
+        "scene_problem": "ACTION_CAUSALITY",
+        "coverage_tags": ["ONE_TO_MANY_ACTION"],
+        "characters": ["FLOOR_LEAD", "CREW_1", "CREW_2"],
+        "location": "empty project-original loading room",
+        "facts": [
+            ("FACT-01", "action_source", "A loose wheel stop is visibly displaced beside a rolling cart."),
+            ("FACT-02", "target_state", "The cart crosses one clear lane while both crew members remain visible."),
+            ("FACT-03", "visible_result", "The lead places a chock and the cart stops inside the same continuous view."),
+        ],
+        "beats": [
+            "One stable shared view establishes the stop, cart, lead, and two clear positions.",
+            "The stop moves, the cart rolls, and both crew members clear the lane without leaving the frame.",
+            "The lead places the chock and the stopped result remains readable in that same view.",
+        ],
+        "dramatic": {
+            "goal": "preserve an already readable continuous action chain",
+            "objectives": ["clear and stop the cart"],
+            "obstacle": "the cart is already moving",
+            "stakes": "the lane must be clear before the cart stops",
+            "tactic_change": "clearance becomes restraint",
+            "subtext": "none asserted",
+        },
+        "signals": ["visible_action_source", "target_state_change", "result_readable", "continuous_view_preserves_action_chain"],
+        "subject_tags": ["safe_physical_action"],
+        "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
+        "changed_director_dimensions": [],
+    },
+    {
+        "case_id": "ORIGINAL-REFERENT-COMPARISON",
+        "title": "The Three Couplers",
+        "scene_problem": "PROCEDURAL_COMPETENCE",
+        "coverage_tags": ["PROCEDURE_SUCCESS_AND_FAILURE"],
+        "characters": ["ASSEMBLER", "CHECKER"],
+        "location": "plain project-original assembly bench",
+        "facts": [
+            ("FACT-01", "referent_set", "Three project-original couplers remain visible on the same marked grid."),
+            ("FACT-02", "relation_constraint", "The openings must be read together against one fixed gauge before the next handling step."),
+            ("FACT-03", "comparison_result", "The assembler moves to one handling relation only after the shared comparison is readable."),
+        ],
+        "beats": [
+            "A locked field view establishes all three couplers beside one neutral gauge.",
+            "The checker aligns the gauge across the three openings without removing any option.",
+            "The assembler begins the next handling step only after the comparison relation is visible.",
+        ],
+        "dramatic": {
+            "goal": "make a physical comparison explain the next handling relation",
+            "objectives": ["establish the relevant coupler-to-gauge relation"],
+            "obstacle": "the options are similar until compared against the gauge",
+            "stakes": "the next assembly step requires the compatible part",
+            "tactic_change": "field comparison becomes one readable handling relation",
+            "subtext": "none asserted",
+        },
+        "signals": ["multiple_visible_referents", "comparative_relation_required"],
+        "subject_tags": ["assembly"],
+        "test_mode": "POSITIVE",
+        "changed_director_dimensions": ["COVERAGE", "BLOCKING", "PACING", "EDIT"],
+        "affected_shot_index": 1,
+        "selected_shot_overrides": {
+            "duration_seconds": 8,
+            "shot_type": "project-original comparative field",
+            "framing": "locked field containing every option and the common gauge",
+            "blocking": "Keep all three couplers in place while the gauge relation is made readable.",
+            "edit_in": "enter before comparison begins",
+            "edit_out": "cut to the handling relation only after the shared comparison reads",
+        },
+    },
+    {
+        "case_id": "ORIGINAL-COMPARISON-NOT-REQUIRED",
+        "title": "The Single Seal Check",
+        "scene_problem": "PROCEDURAL_COMPETENCE",
+        "coverage_tags": ["PROCEDURE_SUCCESS_AND_FAILURE"],
+        "characters": ["INSPECTOR"],
+        "location": "plain project-original inspection table",
+        "facts": [
+            ("FACT-01", "referent_set", "One sealed project-original container is the only item in the inspection area."),
+            ("FACT-02", "relation_constraint", "The task is to read that container's existing seal state, not to compare multiple referents."),
+            ("FACT-03", "single_item_state", "The inspector records the intact seal and leaves the container in place."),
+        ],
+        "beats": [
+            "A neutral frame establishes one container and no alternatives.",
+            "The inspector checks the existing seal in one readable detail.",
+            "The same frame confirms the unchanged single-item state.",
+        ],
+        "dramatic": {
+            "goal": "record one existing item state",
+            "objectives": ["verify the seal"],
+            "obstacle": "the small seal must remain readable",
+            "stakes": "the record must match the visible item",
+            "tactic_change": "overview becomes detail check",
+            "subtext": "none asserted",
+        },
+        "signals": ["multiple_visible_referents", "comparative_relation_required", "comparative_field_not_required"],
+        "subject_tags": ["inspection"],
+        "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
+        "changed_director_dimensions": [],
+    },
+    {
+        "case_id": "ORIGINAL-THRESHOLD-STATE-CHANGE",
+        "title": "The Clean-Zone Handoff",
+        "scene_problem": "ACTION_CAUSALITY",
+        "coverage_tags": ["ONE_TO_MANY_ACTION"],
+        "characters": ["TECHNICIAN_A", "TECHNICIAN_B"],
+        "location": "plain project-original clean-room threshold",
+        "facts": [
+            ("FACT-01", "threshold_state_change", "A sealed sample changes from corridor custody to clean-zone custody at the marked threshold."),
+            ("FACT-02", "route_endpoint", "Technician B must stop with the sealed sample at the inner verification mark."),
+            ("FACT-03", "after_state", "The inner indicator and Technician B's hold make the new custody and next vector visible."),
+        ],
+        "beats": [
+            "A shared frame establishes corridor custody, the marked threshold, and the inner verification mark.",
+            "The sealed sample crosses once between the two project-original technicians.",
+            "The inner indicator changes and Technician B stops at the verification mark.",
+        ],
+        "dramatic": {
+            "goal": "show a state-changing threshold handoff",
+            "objectives": ["transfer the sealed sample into the clean zone"],
+            "obstacle": "the handoff and landing mark must remain visible",
+            "stakes": "the next test cannot begin without confirmed clean-zone custody",
+            "tactic_change": "approach becomes verified transfer",
+            "subtext": "none asserted",
+        },
+        "signals": ["threshold_changes_locked_state", "before_after_route_required"],
+        "subject_tags": ["safe_handoff"],
+        "test_mode": "POSITIVE",
+        "changed_director_dimensions": ["COVERAGE", "BLOCKING", "PACING", "EDIT"],
+        "affected_shot_index": 1,
+        "selected_shot_overrides": {
+            "duration_seconds": 9,
+            "shot_type": "project-original threshold state checkpoint",
+            "framing": "shared frame containing before-state, threshold, and landing mark",
+            "blocking": "Keep both custody states, one crossing direction, and the inner landing mark readable.",
+            "edit_in": "enter before the handoff begins",
+            "edit_out": "cut after the new custody state and next vector read",
+        },
+    },
+    {
+        "case_id": "ORIGINAL-THRESHOLD-UNCHANGED",
+        "title": "The Ordinary Room Entry",
+        "scene_problem": "ACTION_CAUSALITY",
+        "coverage_tags": ["ONE_TO_MANY_ACTION"],
+        "characters": ["COURIER", "CLERK"],
+        "location": "plain project-original receiving room",
+        "facts": [
+            ("FACT-01", "threshold_state_change", "The courier keeps the same sealed box and access state before and after an ordinary doorway."),
+            ("FACT-02", "route_endpoint", "The occupied receiving desk is the only required destination fact."),
+            ("FACT-03", "unchanged_state", "No custody, safety, readiness, or permission state changes at the doorway."),
+        ],
+        "beats": [
+            "An exterior approach ends at the ordinary doorway.",
+            "A cut moves directly to the courier already facing the occupied receiving desk.",
+            "The unchanged sealed box remains visible at the destination.",
+        ],
+        "dramatic": {
+            "goal": "arrive at a known destination without over-covering an ordinary entry",
+            "objectives": ["reach the receiving desk"],
+            "obstacle": "none at the doorway",
+            "stakes": "the delivery beat begins inside",
+            "tactic_change": "approach becomes arrival",
+            "subtext": "none asserted",
+        },
+        "signals": ["threshold_changes_locked_state", "before_after_route_required", "threshold_state_unchanged"],
+        "subject_tags": ["delivery"],
         "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
         "changed_director_dimensions": [],
     },
@@ -580,14 +762,16 @@ def build_ir(
     shots = [shot_for(spec, index) for index in range(len(spec["facts"]))]
     selected_ids = [item["rule_id"] for item in routing_result["selected_rules"]]
     if selected_ids:
-        affected_index = {
+        default_affected_index = {
             "ORIGINAL-PERFORMANCE-OWNER-HOLD": 1,
             "ORIGINAL-RELATIONSHIP-FRACTURE": 2,
             "ORIGINAL-PROXIMITY-TENSION": 1,
-        }[spec["case_id"]]
+        }
+        affected_index = spec.get("affected_shot_index", default_affected_index.get(spec["case_id"], 0))
         affected = shots[affected_index]
         affected["evidence_rule_ids"] = selected_ids
         affected["confidence"] = "MEDIUM"
+        affected.update(spec.get("selected_shot_overrides", {}))
         if spec["case_id"] == "ORIGINAL-PERFORMANCE-OWNER-HOLD":
             affected["duration_seconds"] = 12
             affected["shot_type"] = "sustained project-original performance-owner single"
@@ -704,18 +888,24 @@ def human_review_text(spec: dict[str, Any]) -> str:
 def expected_files() -> dict[Path, str]:
     grammar = read_json(GRAMMAR_PATH)
     promotion_review = read_json(PROMOTION_REVIEW_PATH)
+    promotions = promotion_review["runtime_rule_specs"]
     positive_promotions = {
-        item["positive_forward_test_id"]: item for item in promotion_review["promotions"]
+        item["positive_forward_test_id"]: item for item in promotions
     }
     boundary_promotions = {
-        item["boundary_forward_test_id"]: item for item in promotion_review["promotions"]
+        item["boundary_forward_test_id"]: item for item in promotions
     }
     outputs: dict[Path, str] = {}
     index_cases: list[dict[str, Any]] = []
     for spec in CASES:
+        spec = copy.deepcopy(spec)
         case_id = spec["case_id"]
         promotion = positive_promotions.get(case_id) or boundary_promotions.get(case_id)
         test_mode = spec.get("test_mode", "NO_MATCH_PROBE")
+        if promotion is None and test_mode in {"POSITIVE", "BOUNDARY_OR_NON_APPLICABLE"}:
+            test_mode = "NO_MATCH_PROBE"
+            spec["test_mode"] = test_mode
+            spec["changed_director_dimensions"] = []
         rule_id = promotion["rule_id"] if promotion else None
         candidate_rule_id = promotion["candidate_rule_id"] if promotion else None
         family_id = promotion["family_id"] if promotion else None
@@ -724,16 +914,34 @@ def expected_files() -> dict[Path, str]:
         routing_result = route_scene(routing_input, grammar)
         selected_ids = [item["rule_id"] for item in routing_result["selected_rules"]]
         rejected_by_id = {
-            item["rule_id"]: item["rejection_reason_codes"]
+            item["rule_id"]: item
             for item in routing_result["rejected_rules"]
         }
         if test_mode == "POSITIVE" and selected_ids != [rule_id]:
             raise ValueError(f"positive case {case_id} did not select exactly {rule_id}: {selected_ids}")
         if test_mode == "BOUNDARY_OR_NON_APPLICABLE" and (
             routing_result["status"] != "NO_APPLICABLE_RULE"
-            or "NOT_APPLICABLE_MATCH" not in rejected_by_id.get(rule_id, [])
+            or "NOT_APPLICABLE_MATCH" not in rejected_by_id.get(rule_id, {}).get("rejection_reason_codes", [])
+            or not set(promotion["routing"]["not_applicable_if_any"]).intersection(
+                rejected_by_id.get(rule_id, {}).get("matched_not_applicable_signal_ids", [])
+            )
         ):
             raise ValueError(f"boundary case {case_id} did not reject {rule_id} at its declared boundary")
+        if test_mode == "BOUNDARY_OR_NON_APPLICABLE":
+            counterfactual_input = copy.deepcopy(routing_input)
+            blocked_signals = set(promotion["routing"]["not_applicable_if_any"])
+            counterfactual_input["routing_signals"] = [
+                signal
+                for signal in counterfactual_input.get("routing_signals", [])
+                if signal not in blocked_signals
+            ]
+            counterfactual = route_scene(counterfactual_input, grammar)
+            if rule_id not in {
+                item["rule_id"] for item in counterfactual.get("selected_rules", [])
+            }:
+                raise ValueError(
+                    f"boundary case {case_id} has a redundant negative guard for {rule_id}"
+                )
         if test_mode == "NO_MATCH_PROBE" and routing_result["status"] != "NO_APPLICABLE_RULE":
             raise ValueError(f"no-match case {case_id} unexpectedly selected a rule")
         ir = build_ir(spec, routing_input, routing_result)
@@ -778,7 +986,7 @@ def expected_files() -> dict[Path, str]:
             "changed_director_dimensions": spec.get("changed_director_dimensions", []),
             "human_review_status": "HUMAN_REVIEW_PENDING",
         })
-    eligible_families = sorted({item["family_id"] for item in promotion_review["promotions"]})
+    eligible_families = sorted({item["family_id"] for item in promotions})
     index = {
         "schema_version": "forward-test-index/0.1",
         "status": "RULE_COVERAGE_COMPLETE",
@@ -787,9 +995,9 @@ def expected_files() -> dict[Path, str]:
         "support_matrix_path": "research/grammar/cross_work_support_matrix.json",
         "promotion_ready_family_count": len(eligible_families),
         "promotion_ready_family_ids": eligible_families,
-        "required_positive_boundary_pairs": len(promotion_review["promotions"]),
-        "completed_positive_cases": len(promotion_review["promotions"]),
-        "completed_boundary_cases": len(promotion_review["promotions"]),
+        "required_positive_boundary_pairs": len(promotions),
+        "completed_positive_cases": len(promotions),
+        "completed_boundary_cases": len(promotions),
         "missing_family_ids": [],
         "missing_rule_ids": [],
         "required_scene_problem_coverage": [

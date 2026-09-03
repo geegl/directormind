@@ -17506,6 +17506,30 @@
       "unknowns": [
         "All semantic audio facts remain unknown."
       ]
+    },
+    {
+      "method_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S001",
+        "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S024",
+        "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S026",
+        "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S045",
+        "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S054",
+        "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S057",
+        "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S058",
+        "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S061",
+        "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S064",
+        "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S066",
+        "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S074"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],

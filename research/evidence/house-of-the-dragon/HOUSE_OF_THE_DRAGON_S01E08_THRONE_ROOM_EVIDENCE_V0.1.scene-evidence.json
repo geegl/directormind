@@ -16334,6 +16334,30 @@
       "unknowns": [
         "All semantic audio facts remain unknown."
       ]
+    },
+    {
+      "method_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S001",
+        "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S007",
+        "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S013",
+        "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S019",
+        "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S029",
+        "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S030",
+        "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S035",
+        "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S041",
+        "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S043",
+        "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S056",
+        "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S068"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],

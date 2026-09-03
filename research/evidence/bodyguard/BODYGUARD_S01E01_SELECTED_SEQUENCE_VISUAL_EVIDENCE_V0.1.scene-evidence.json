@@ -45692,6 +45692,30 @@
       "unknowns": [
         "All semantic audio facts remain unknown."
       ]
+    },
+    {
+      "method_id": "DM-BODYGUARD-S01E01-SEL-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "DM-BODYGUARD-S01E01-SEL-001-S001",
+        "DM-BODYGUARD-S01E01-SEL-001-S016",
+        "DM-BODYGUARD-S01E01-SEL-001-S031",
+        "DM-BODYGUARD-S01E01-SEL-001-S032",
+        "DM-BODYGUARD-S01E01-SEL-001-S063",
+        "DM-BODYGUARD-S01E01-SEL-001-S093",
+        "DM-BODYGUARD-S01E01-SEL-001-S132",
+        "DM-BODYGUARD-S01E01-SEL-001-S171",
+        "DM-BODYGUARD-S01E01-SEL-001-S172",
+        "DM-BODYGUARD-S01E01-SEL-001-S192",
+        "DM-BODYGUARD-S01E01-SEL-001-S211"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],

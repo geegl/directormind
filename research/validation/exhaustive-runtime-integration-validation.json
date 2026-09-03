@@ -1,0 +1,290 @@
+{
+  "boundaries": [
+    "A PASS report proves repository bindings and deterministic routing, not creative approval.",
+    "All creative packages remain HUMAN_REVIEW_PENDING and do not authorize generation or publication.",
+    "Semantic audio remains outside rules whose audio_dependency is false.",
+    "PARTIAL_EVIDENCE_GAP is mandatory while any candidate remains pending."
+  ],
+  "boundary_forward_case_count": 4,
+  "candidate_disposition_count": 124,
+  "candidate_final_status_counts": {
+    "BOUNDARY_OR_COUNTEREXAMPLE": 5,
+    "EVIDENCE_GAP_PENDING": 107,
+    "MERGED_DUPLICATE": 1,
+    "POSITIVE_RUNTIME_RULE": 4,
+    "SUPPORTING_EVIDENCE": 7
+  },
+  "canonical_scene_evidence_count": 31,
+  "canonical_shot_edit_unit_count": 2343,
+  "error_count": 0,
+  "family_results": [
+    {
+      "active_rule_ids": [],
+      "candidate_count": 4,
+      "family_id": "ACTION-CAUSAL-CHAIN",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 4,
+      "runtime_status": "PARTIAL_EVIDENCE_GAP"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 5,
+      "family_id": "AFTERMATH-AND-TERMINAL-STATE",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 5,
+      "runtime_status": "PARTIAL_EVIDENCE_GAP"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 2,
+      "family_id": "AXIS-AND-COVERAGE-GRAMMAR",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 2,
+      "runtime_status": "PARTIAL_EVIDENCE_GAP"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 6,
+      "family_id": "CONTINUITY-LEDGER-AND-VERSIONING",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 6,
+      "runtime_status": "PARTIAL_EVIDENCE_GAP"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 7,
+      "family_id": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 7,
+      "runtime_status": "PARTIAL_EVIDENCE_GAP"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 4,
+      "family_id": "MULTI-THREAD-STATE-INTERCUT",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 4,
+      "runtime_status": "PARTIAL_EVIDENCE_GAP"
+    },
+    {
+      "active_rule_ids": [
+        "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+      ],
+      "candidate_count": 16,
+      "family_id": "OBJECT-STATE-AND-CUSTODY",
+      "final_disposition_count": 4,
+      "pending_evidence_gap_count": 12,
+      "runtime_status": "ACTIVE"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 5,
+      "family_id": "PROCEDURAL-HANDOFF-AND-WORKFLOW",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 5,
+      "runtime_status": "PARTIAL_EVIDENCE_GAP"
+    },
+    {
+      "active_rule_ids": [
+        "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+      ],
+      "candidate_count": 8,
+      "family_id": "PROXIMITY-AND-RELATION-GEOMETRY",
+      "final_disposition_count": 4,
+      "pending_evidence_gap_count": 4,
+      "runtime_status": "ACTIVE"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 12,
+      "family_id": "RECEIVER-AND-REACTION-DISTRIBUTION",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 12,
+      "runtime_status": "PARTIAL_EVIDENCE_GAP"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 4,
+      "family_id": "SCALE-AND-REVEAL-LADDER",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 4,
+      "runtime_status": "PARTIAL_EVIDENCE_GAP"
+    },
+    {
+      "active_rule_ids": [
+        "DR-PERFORMANCE-OWNER-HOLD"
+      ],
+      "candidate_count": 7,
+      "family_id": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
+      "final_disposition_count": 5,
+      "pending_evidence_gap_count": 2,
+      "runtime_status": "ACTIVE"
+    },
+    {
+      "active_rule_ids": [
+        "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      ],
+      "candidate_count": 18,
+      "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+      "final_disposition_count": 4,
+      "pending_evidence_gap_count": 14,
+      "runtime_status": "ACTIVE"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 6,
+      "family_id": "STATE-CHANGE-EDITING",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 6,
+      "runtime_status": "PARTIAL_EVIDENCE_GAP"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 3,
+      "family_id": "SUBJECTIVE-ACCESS-AND-INFORMATION",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 3,
+      "runtime_status": "PARTIAL_EVIDENCE_GAP"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 17,
+      "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 17,
+      "runtime_status": "PARTIAL_EVIDENCE_GAP"
+    }
+  ],
+  "final_disposition_count": 17,
+  "issues": [],
+  "mechanism_family_count": 16,
+  "no_applicable_rule_case_count": 13,
+  "pending_evidence_gap_count": 107,
+  "phase_status": "PARTIAL_EVIDENCE_GAP",
+  "positive_forward_case_count": 4,
+  "prioritized_evidence_gaps": [
+    {
+      "candidate_count": 4,
+      "close_condition": "Every sound-dependent claim is either supported by direct audition or removed before an evidence-backed final disposition.",
+      "gap_id": "GAP-DIRECT-AUDITION-SOUND-OF-METAL",
+      "priority": 1,
+      "required_review": "Directly audition the existing local Sound of Metal intervals and record exact audible state observations."
+    },
+    {
+      "candidate_count": 4,
+      "close_condition": "Each candidate reaches one of the five final states only after a single exact source-to-change-to-result chain is verified in moving image; a new positive rule also needs unrelated same-trigger support and a real boundary.",
+      "gap_id": "GAP-MOVING-REVIEW-ACTION-CAUSAL-CHAIN",
+      "priority": 2,
+      "required_review": "Select and replay one complete adjacent micro-action chain per work, including source, target before-state, visible change, result, and response; do not combine unrelated action fragments or infer cross-cut identity and causality."
+    },
+    {
+      "candidate_count": 17,
+      "close_condition": "Each route-anchor candidate is either bound to a shared state-changing threshold trigger with one same-trigger boundary, merged into DR-STATE-CHANGING-THRESHOLD-CHECKPOINT, or rejected because the reviewed motion shows only travel continuity without a distinct directing decision.",
+      "gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+      "priority": 2,
+      "required_review": "Replay the full entry, checkpoint, interruption, and exit intervals for all 13 candidates; distinguish a story-state-changing threshold from ordinary route coverage, then locate a same-trigger non-use case inside the closed corpus."
+    },
+    {
+      "candidate_count": 12,
+      "close_condition": "Each candidate is classified as a comparative-field decision, a visible custody/state-change decision, a continuity-only constraint, a duplicate, or an evidence-backed rejection; any new positive has two works and a same-trigger boundary.",
+      "gap_id": "GAP-MOVING-REVIEW-OBJECT-STATE-AND-CUSTODY",
+      "priority": 3,
+      "required_review": "Replay the object reveal, handoff, update, and return intervals for all 12 candidates; record who can see or control the object before and after each cut, and separate active shot/edit choices from passive prop continuity."
+    },
+    {
+      "candidate_count": 14,
+      "close_condition": "Each candidate is either fresh support for a named reset rule, a distinct positive rule with cross-work support and a same-trigger boundary, a duplicate, or rejected because no spatial change alters coverage or blocking.",
+      "gap_id": "GAP-MOVING-REVIEW-SPATIAL-REGISTRATION-AND-RESET",
+      "priority": 4,
+      "required_review": "Replay the complete pre-change, change, and post-change motion for all 10 candidates; mark the last stable geometry and first usable reset, and distinguish material relation changes from stable-axis coverage that needs no reset."
+    },
+    {
+      "candidate_count": 12,
+      "close_condition": "Each candidate has a verified information/event receiver, an observable reaction-distribution choice, and a same-trigger boundary, or is merged/rejected when the image only shows generic singles without receiver priority.",
+      "gap_id": "GAP-MOVING-REVIEW-RECEIVER-AND-REACTION-DISTRIBUTION",
+      "priority": 5,
+      "required_review": "Replay the trigger and every proposed receiver interval for all 12 candidates; directly audition or bind a short text anchor whenever the triggering information is not visible, then compare event/receiver ordering across unrelated works."
+    },
+    {
+      "candidate_count": 7,
+      "close_condition": "Every candidate has continuous moving-image evidence for duration, occlusion, route reacquisition, and visible cut points; each is then promoted with a same-trigger boundary, merged, or rejected as a descriptive long-take label.",
+      "gap_id": "GAP-MOVING-REVIEW-CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+      "priority": 6,
+      "required_review": "Inspect each proposed continuous passage in motion from entry through exit, including suspected hidden joins and occlusions; verify whether continuity itself carries story evidence and find a same-trigger case where segmentation is preferable."
+    },
+    {
+      "candidate_count": 5,
+      "close_condition": "Each candidate identifies a visibly completed event, the first stable aftermath state, and a director decision that differs from ordinary scene closure; otherwise it is merged or rejected, and any positive has a same-trigger boundary.",
+      "gap_id": "GAP-MOVING-REVIEW-AFTERMATH-AND-TERMINAL-STATE",
+      "priority": 7,
+      "required_review": "Replay the decisive event through the proposed recovery or exit for all five candidates; establish whether the event is actually terminal at that point and whether the hold, distribution, or exit verification changes coverage, pacing, or edit."
+    },
+    {
+      "candidate_count": 5,
+      "close_condition": "Each candidate has a shot-by-shot before/after ledger tied to a visible version or state change that changes coverage, blocking, or edit; continuity-only reminders without a directing delta receive REJECTED_WITH_REASON.",
+      "gap_id": "GAP-MOVING-REVIEW-CONTINUITY-LEDGER-AND-VERSIONING",
+      "priority": 8,
+      "required_review": "Replay every visible handoff, version change, body/surface change, and return for the five candidates; record the exact shot where the state changes and the exact later shot whose director choice depends on remembering it."
+    },
+    {
+      "candidate_count": 5,
+      "close_condition": "Each workflow candidate has verified step order, actor/receiver handoff, and a shot/edit consequence; audio- or text-dependent semantics are directly established, otherwise the candidate is merged or rejected rather than promoted.",
+      "gap_id": "GAP-MOVING-REVIEW-PROCEDURAL-HANDOFF-AND-WORKFLOW",
+      "priority": 9,
+      "required_review": "Replay the full task sequence for all five candidates and directly audition or bind short text anchors where step order, authority, hypothesis, or handoff meaning is not visible; compare only genuinely equivalent workflow triggers."
+    },
+    {
+      "candidate_count": 4,
+      "close_condition": "Both remaining candidates are either merged into a reviewed relation-geometry rule, used as a verified same-trigger boundary, or rejected because room registration/decompression does not change a distinct director decision.",
+      "gap_id": "GAP-MOVING-REVIEW-PROXIMITY-AND-RELATION-GEOMETRY",
+      "priority": 10,
+      "required_review": "Replay the complete approach, closest relation point, separation, singles, and room reset for the two remaining candidates; test whether they add a distinct trigger or are only neighboring phases of DR-SHARED-FRAME-FOR-RELATION-ENDPOINT."
+    },
+    {
+      "candidate_count": 4,
+      "close_condition": "Each candidate has verified concurrent story threads, visible or directly established state changes in each thread, and a specific intercut/merge point; otherwise it is merged or rejected rather than treated as generic cross-cutting.",
+      "gap_id": "GAP-MOVING-REVIEW-MULTI-THREAD-STATE-INTERCUT",
+      "priority": 12,
+      "required_review": "Replay all four proposed thread structures from first split through recombination; directly audition or bind text where thread goals are not visible, and verify that cut order follows state change rather than chronology alone."
+    },
+    {
+      "candidate_count": 4,
+      "close_condition": "Each candidate has a measurable detail-to-container or scale progression that changes coverage/pacing, plus a same-trigger case where that ladder should not be used; descriptive shot-size variation alone is rejected.",
+      "gap_id": "GAP-MOVING-REVIEW-SCALE-AND-REVEAL-LADDER",
+      "priority": 13,
+      "required_review": "Replay the four proposed scale/reveal sequences in motion, record the information disclosed at each scale change, and distinguish deliberate reveal order from ordinary shot-size coverage before seeking cross-work support."
+    },
+    {
+      "candidate_count": 2,
+      "close_condition": "Each remaining candidate is either fresh support/boundary for DR-PERFORMANCE-OWNER-HOLD or rejected as generic subject coverage; no new rule is allowed without a distinct trigger and same-trigger boundary.",
+      "gap_id": "GAP-MOVING-REVIEW-SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
+      "priority": 14,
+      "required_review": "Replay the full ownership transfer around the two remaining candidates; establish who owns the decisive performance beat, whether a counterpart stays visible, and whether the hold changes reaction or edit timing."
+    },
+    {
+      "candidate_count": 4,
+      "close_condition": "Each candidate has a verified before-state, visible event, after-state, and exact cut/hold decision; sound-linked timing is directly auditioned, and any promoted rule has a same-trigger boundary rather than merely a temporal sequence.",
+      "gap_id": "GAP-MOVING-REVIEW-STATE-CHANGE-EDITING",
+      "priority": 15,
+      "required_review": "Replay the four listed visual state-change windows around the proposed cut and verify whether the edit is caused by a visible state change or merely coincides with it; Sound of Metal remains exclusively in GAP-DIRECT-AUDITION-SOUND-OF-METAL."
+    },
+    {
+      "candidate_count": 2,
+      "close_condition": "Both candidates demonstrate that a stable axis or fixed angle grammar changes coverage or hold timing across the exchange, with a same-trigger boundary; otherwise they are rejected as descriptive coverage patterns.",
+      "gap_id": "GAP-MOVING-REVIEW-AXIS-AND-COVERAGE-GRAMMAR",
+      "priority": 16,
+      "required_review": "Replay the complete exchanges for both candidates, record axis, angle, subject size, and hold-duration changes shot by shot, and test whether stability is an active decision rather than a baseline continuity condition."
+    },
+    {
+      "candidate_count": 2,
+      "close_condition": "Both candidates have direct moving-image review establishing the ordinary-to-subjective visual access change and reset; semantic sound is required only if a disposition depends on it, and a second unrelated work plus one same-trigger non-use case are required before runtime promotion.",
+      "gap_id": "GAP-MOVING-REVIEW-SUBJECTIVE-ACCESS-AND-INFORMATION",
+      "priority": 17,
+      "required_review": "Replay the complete ordinary-space, visual subjective-break, and room-reset loop; directly audition only if a claimed trigger depends on sound, and compare with another closed-corpus unit only when the observed trigger is genuinely equivalent."
+    }
+  ],
+  "runtime_rule_count": 4,
+  "schema_version": "exhaustive-runtime-integration-validation/0.1",
+  "source_disposition_count": 33,
+  "status": "PASS"
+}

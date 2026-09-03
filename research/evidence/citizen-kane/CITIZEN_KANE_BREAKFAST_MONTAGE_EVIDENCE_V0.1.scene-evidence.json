@@ -6672,6 +6672,27 @@
       "unknowns": [
         "Exact elapsed story time, dialogue meaning, emotional cause, lens metadata, and all semantic audio remain unknown."
       ]
+    },
+    {
+      "method_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S001",
+        "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S002",
+        "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S008",
+        "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S015",
+        "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S020",
+        "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S024",
+        "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026",
+        "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],

@@ -25342,6 +25342,29 @@
       "unknowns": [
         "All semantic audio facts remain unknown."
       ]
+    },
+    {
+      "method_id": "KNIVES-OUT-2019-WILL-READING-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "KNIVES-OUT-2019-WILL-READING-001-S006",
+        "KNIVES-OUT-2019-WILL-READING-001-S041",
+        "KNIVES-OUT-2019-WILL-READING-001-S048",
+        "KNIVES-OUT-2019-WILL-READING-001-S065",
+        "KNIVES-OUT-2019-WILL-READING-001-S066",
+        "KNIVES-OUT-2019-WILL-READING-001-S078",
+        "KNIVES-OUT-2019-WILL-READING-001-S090",
+        "KNIVES-OUT-2019-WILL-READING-001-S091",
+        "KNIVES-OUT-2019-WILL-READING-001-S093",
+        "KNIVES-OUT-2019-WILL-READING-001-S108"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],

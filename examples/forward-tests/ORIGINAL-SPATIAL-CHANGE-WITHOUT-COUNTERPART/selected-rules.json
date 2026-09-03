@@ -15,6 +15,7 @@
   "case_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
   "conflict_trace": [],
   "eligible_rule_ids": [
+    "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
     "DR-PERFORMANCE-OWNER-HOLD",
     "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
     "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
@@ -25,6 +26,22 @@
     {
       "blocking_fact_ids": [],
       "conflicting_rule_ids": [],
+      "matched_not_applicable_signal_ids": [],
+      "missing_fact_types": [
+        "referent_set",
+        "relation_constraint"
+      ],
+      "rejection_reason_codes": [
+        "REQUIRED_FACT_MISSING",
+        "SCENE_PROBLEM_MISMATCH",
+        "TRIGGER_NOT_MET"
+      ],
+      "rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+    },
+    {
+      "blocking_fact_ids": [],
+      "conflicting_rule_ids": [],
+      "matched_not_applicable_signal_ids": [],
       "missing_fact_types": [
         "performance_progression",
         "relation_state"
@@ -39,22 +56,23 @@
     {
       "blocking_fact_ids": [],
       "conflicting_rule_ids": [],
-      "missing_fact_types": [
-        "counterpart_relation"
+      "matched_not_applicable_signal_ids": [
+        "counterpart_absent_at_changed_endpoint"
       ],
+      "missing_fact_types": [],
       "rejection_reason_codes": [
-        "NOT_APPLICABLE_MATCH",
-        "REQUIRED_FACT_MISSING",
-        "TRIGGER_NOT_MET"
+        "NOT_APPLICABLE_MATCH"
       ],
       "rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
     },
     {
       "blocking_fact_ids": [],
       "conflicting_rule_ids": [],
+      "matched_not_applicable_signal_ids": [],
       "missing_fact_types": [
         "distance_change",
-        "relation_endpoint"
+        "relation_endpoint",
+        "time_structure"
       ],
       "rejection_reason_codes": [
         "REQUIRED_FACT_MISSING",

@@ -11,6 +11,24 @@
     },
     {
       "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "ACTION_CAUSALITY",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-ACTION-CONTINUOUS-CHAIN"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "PROCEDURAL_COMPETENCE",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-COMPARISON-NOT-REQUIRED"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
       "ir_warning_count": 3,
       "routing_status": "NO_APPLICABLE_RULE",
       "scene_problem": "NO_SPECIALIZED_PROBLEM",
@@ -85,6 +103,15 @@
       "human_review_status": "HUMAN_REVIEW_PENDING",
       "ir_warning_count": 4,
       "routing_status": "SELECTED",
+      "scene_problem": "PROCEDURAL_COMPETENCE",
+      "selection_count": 1,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-REFERENT-COMPARISON"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "SELECTED",
       "scene_problem": "RELATIONSHIP_FRACTURE",
       "selection_count": 1,
       "status": "PASS",
@@ -101,29 +128,47 @@
     },
     {
       "human_review_status": "HUMAN_REVIEW_PENDING",
-      "ir_warning_count": 4,
+      "ir_warning_count": 5,
       "routing_status": "NO_APPLICABLE_RULE",
       "scene_problem": "RELATIONSHIP_FRACTURE",
       "selection_count": 0,
       "status": "PASS",
       "test_case_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "ACTION_CAUSALITY",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-THRESHOLD-STATE-CHANGE"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "ACTION_CAUSALITY",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-THRESHOLD-UNCHANGED"
     }
   ],
-  "completed_boundary_cases": 3,
-  "completed_positive_cases": 3,
+  "completed_boundary_cases": 4,
+  "completed_positive_cases": 4,
   "error_count": 0,
-  "human_review_pending_count": 12,
+  "human_review_pending_count": 17,
   "issues": [],
   "missing_family_count": 0,
   "missing_rule_count": 0,
-  "no_applicable_rule_count": 9,
-  "package_count": 12,
-  "promotion_ready_family_count": 3,
-  "required_positive_boundary_pairs": 3,
+  "no_applicable_rule_count": 13,
+  "package_count": 17,
+  "promotion_ready_family_count": 4,
+  "required_positive_boundary_pairs": 4,
   "required_scene_problem_count": 6,
   "schema_version": "forward-test-repository-validation/0.1",
-  "selected_rule_count": 3,
+  "selected_rule_count": 4,
   "status": "PASS",
-  "structural_pass_count": 12,
-  "warning_count": 49
+  "structural_pass_count": 17,
+  "warning_count": 70
 }

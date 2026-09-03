@@ -10,9 +10,9 @@
       "MRR-S04E07-ACT-FOUR-VISUAL-001-S194",
       "MRR-S04E07-ACT-FOUR-VISUAL-001-S197",
       "MRR-S04E07-ACT-FOUR-VISUAL-001-S199",
-      "MRR-S04E07-ACT-FOUR-VISUAL-001-TA-WAVE1-001"
+      "MRR-S04E07-ACT-FOUR-VISUAL-001-S201"
     ],
-    "notes": "The canonical problem is inferred from repeated question-and-response staging plus one short, paraphrased visible-text anchor; no dialogue wording is transferred."
+    "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown."
   },
   "scene_unit_type": "NATURAL_CONTINUOUS_SCENE",
   "boundary_status": "NATURAL_START_END_VERIFIED",
@@ -47794,6 +47794,34 @@
       "unknowns": [
         "Speaker identity, uncited dialogue, and semantic audio remain unknown."
       ]
+    },
+    {
+      "method_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S001",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S016",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S023",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S046",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S058",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S078",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S087",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S090",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S174",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S188",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S194",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S195",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S197",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S199",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S201"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],
@@ -48211,7 +48239,8 @@
       "source_method_ids": [
         "MRR-S04E07-ACT-FOUR-VISUAL-001-METHOD-LEGACY-PICTURE-REVIEW",
         "MRR-S04E07-ACT-FOUR-VISUAL-001-METHOD-STRUCTURAL-CONVERSION",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-METHOD-WAVE1-PICTURE-REVIEW"
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-METHOD-WAVE1-PICTURE-REVIEW",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
       ],
       "evidence_scene_ids": [
         "MRR-S04E07-ACT-FOUR-VISUAL-001"
@@ -48282,6 +48311,7 @@
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
     "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
+    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+    "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
   ]
 }

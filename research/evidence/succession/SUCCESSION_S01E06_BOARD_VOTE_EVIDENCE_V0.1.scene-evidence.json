@@ -20534,6 +20534,31 @@
       "unknowns": [
         "All semantic audio facts remain unknown."
       ]
+    },
+    {
+      "method_id": "SUCCESSION-S01E06-BOARD-VOTE-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S002",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S008",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S014",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S050",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S057",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S064",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S067",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S071",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S075",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S077",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S086",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S088"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],

@@ -41,7 +41,7 @@
   },
   "routing_signals": [
     "material_spatial_change",
-    "counterpart_relation_required"
+    "counterpart_relation_context_locked"
   ],
   "scene_problem": {
     "primary": "RELATIONSHIP_FRACTURE",

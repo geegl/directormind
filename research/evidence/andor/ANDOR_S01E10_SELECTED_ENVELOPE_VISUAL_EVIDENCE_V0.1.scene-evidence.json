@@ -28842,6 +28842,31 @@
       "unknowns": [
         "All semantic audio facts remain unknown."
       ]
+    },
+    {
+      "method_id": "DM-ANDOR-S01E10-SEL-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "DM-ANDOR-S01E10-SEL-001-S001",
+        "DM-ANDOR-S01E10-SEL-001-S016",
+        "DM-ANDOR-S01E10-SEL-001-S030",
+        "DM-ANDOR-S01E10-SEL-001-S052",
+        "DM-ANDOR-S01E10-SEL-001-S064",
+        "DM-ANDOR-S01E10-SEL-001-S075",
+        "DM-ANDOR-S01E10-SEL-001-S076",
+        "DM-ANDOR-S01E10-SEL-001-S088",
+        "DM-ANDOR-S01E10-SEL-001-S100",
+        "DM-ANDOR-S01E10-SEL-001-S104",
+        "DM-ANDOR-S01E10-SEL-001-S113",
+        "DM-ANDOR-S01E10-SEL-001-S121"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],

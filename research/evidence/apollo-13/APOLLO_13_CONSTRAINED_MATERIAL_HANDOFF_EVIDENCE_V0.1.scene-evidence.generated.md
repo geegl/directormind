@@ -26,11 +26,14 @@
 
 ```json
 {
-  "notes": "The legacy primary label PROCEDURAL_COMPETENCE is retained only as non-operational lineage and was not proved by structural conversion.",
-  "primary": "LEGACY_SCENE_PROBLEM",
+  "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown.",
+  "primary": "PROCEDURAL_COMPETENCE",
   "secondary": [],
-  "source_refs": [],
-  "status": "UNKNOWN"
+  "source_refs": [
+    "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
+    "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+  ],
+  "status": "INFERRED"
 }
 ```
 
@@ -87,7 +90,6 @@
     "blocks_rule_ids": [
       "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C01-ASSESSMENT-RECEIVER-TO-NEW-ROOM-ACTION",
       "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C02-SOURCED-MATERIAL-FIELD-BEFORE-SELECTION",
-      "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
       "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C04-DEMONSTRATION-TO-DISTRIBUTED-WORK"
     ],
     "scope": "AUDIO",
@@ -129,7 +131,8 @@
 [
   "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
   "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-  "8 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review."
+  "8 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+  "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
 ]
 ```
 
@@ -244,11 +247,14 @@
   "picture_evidence_status": "PICTURE_OBSERVED",
   "production_take_status": "PRODUCTION_METHOD_UNKNOWN",
   "scene_problem": {
-    "notes": "The legacy primary label PROCEDURAL_COMPETENCE is retained only as non-operational lineage and was not proved by structural conversion.",
-    "primary": "LEGACY_SCENE_PROBLEM",
+    "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown.",
+    "primary": "PROCEDURAL_COMPETENCE",
     "secondary": [],
-    "source_refs": [],
-    "status": "UNKNOWN"
+    "source_refs": [
+      "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
+      "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+    ],
+    "status": "INFERRED"
   },
   "scene_unit_type": "CONTIGUOUS_EDITORIAL_SEQUENCE",
   "schema_version": "scene-evidence/0.1",
@@ -1213,7 +1219,6 @@
       "blocks_rule_ids": [
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C01-ASSESSMENT-RECEIVER-TO-NEW-ROOM-ACTION",
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C02-SOURCED-MATERIAL-FIELD-BEFORE-SELECTION",
-        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C04-DEMONSTRATION-TO-DISTRIBUTED-WORK"
       ],
       "scope": "AUDIO",
@@ -1236,7 +1241,8 @@
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
     "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-    "8 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review."
+    "8 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+    "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
   ],
   "work_id": "APOLLO-13-1995"
 }

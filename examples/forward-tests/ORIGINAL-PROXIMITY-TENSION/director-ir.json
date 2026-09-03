@@ -75,7 +75,7 @@
           },
           {
             "fact_id": "FACT-04",
-            "fact_type": "continuous_time_change",
+            "fact_type": "time_structure",
             "source_ref": "locked-script.md#FACT-04",
             "status": "LOCKED",
             "value": "The approach and stop occur in one continuous present-time interval without ellipsis."
@@ -89,7 +89,7 @@
         },
         "routing_signals": [
           "relation_distance_change",
-          "continuous_present_time",
+          "time_structure_locked",
           "shared_endpoint_required"
         ],
         "scene_problem": {
@@ -120,6 +120,7 @@
         "case_id": "ORIGINAL-PROXIMITY-TENSION",
         "conflict_trace": [],
         "eligible_rule_ids": [
+          "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
           "DR-PERFORMANCE-OWNER-HOLD",
           "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
           "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
@@ -130,6 +131,22 @@
           {
             "blocking_fact_ids": [],
             "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "referent_set",
+              "relation_constraint"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
             "missing_fact_types": [
               "performance_progression",
               "relation_state"
@@ -144,6 +161,7 @@
           {
             "blocking_fact_ids": [],
             "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
             "missing_fact_types": [
               "counterpart_relation",
               "spatial_change"
@@ -166,7 +184,8 @@
           {
             "matched_fact_ids": [
               "FACT-02",
-              "FACT-03"
+              "FACT-03",
+              "FACT-04"
             ],
             "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
             "selection_reason_codes": [

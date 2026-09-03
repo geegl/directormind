@@ -6201,6 +6201,29 @@
       "unknowns": [
         "Signal source, meaning, perception, and causal edit logic remain unknown."
       ]
+    },
+    {
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S003",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S013",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S015",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S016",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S023",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [

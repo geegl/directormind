@@ -1,0 +1,562 @@
+{
+  "aspect_ratio": "16:9",
+  "dialogue_must_be_verbatim": true,
+  "director_grammar_path": "research/grammar/director_grammar_v0.2.json",
+  "duration_tolerance_seconds": 0,
+  "episode_id": "EP01",
+  "execution_medium": "AI_PHOTOREAL_HUMAN",
+  "generation_authorized": false,
+  "project_id": "FORWARD-TEST-ORIGINAL-REFERENT-COMPARISON",
+  "publication_authorized": false,
+  "scenes": [
+    {
+      "allowed_characters": [
+        "ASSEMBLER",
+        "CHECKER"
+      ],
+      "audience_information": {
+        "locked_fact_ids": [
+          "FACT-01",
+          "FACT-02",
+          "FACT-03"
+        ]
+      },
+      "dramatic_engine": {
+        "goal": "make a physical comparison explain the next handling relation",
+        "objectives": [
+          "establish the relevant coupler-to-gauge relation"
+        ],
+        "obstacle": "the options are similar until compared against the gauge",
+        "stakes": "the next assembly step requires the compatible part",
+        "subtext": "none asserted",
+        "tactic_change": "field comparison becomes one readable handling relation"
+      },
+      "duration_seconds": 18,
+      "location": "plain project-original assembly bench",
+      "narrative_goal": "make a physical comparison explain the next handling relation",
+      "pov": {
+        "character": "ENSEMBLE_NEUTRAL",
+        "identification_level": "STRUCTURAL_TEST_ONLY"
+      },
+      "routing_input": {
+        "case_id": "ORIGINAL-REFERENT-COMPARISON",
+        "dramatic_structure": {
+          "goal": "make a physical comparison explain the next handling relation",
+          "objectives": [
+            "establish the relevant coupler-to-gauge relation"
+          ],
+          "obstacle": "the options are similar until compared against the gauge",
+          "stakes": "the next assembly step requires the compatible part",
+          "subtext": "none asserted",
+          "tactic_change": "field comparison becomes one readable handling relation"
+        },
+        "locked_facts": [
+          {
+            "fact_id": "FACT-01",
+            "fact_type": "referent_set",
+            "source_ref": "locked-script.md#FACT-01",
+            "status": "LOCKED",
+            "value": "Three project-original couplers remain visible on the same marked grid."
+          },
+          {
+            "fact_id": "FACT-02",
+            "fact_type": "relation_constraint",
+            "source_ref": "locked-script.md#FACT-02",
+            "status": "LOCKED",
+            "value": "The openings must be read together against one fixed gauge before the next handling step."
+          },
+          {
+            "fact_id": "FACT-03",
+            "fact_type": "comparison_result",
+            "source_ref": "locked-script.md#FACT-03",
+            "status": "LOCKED",
+            "value": "The assembler moves to one handling relation only after the shared comparison is readable."
+          }
+        ],
+        "priority_constraints": [],
+        "rights_boundary": {
+          "contains_private_script": false,
+          "contains_reference_surface": false,
+          "project_original": true
+        },
+        "routing_signals": [
+          "multiple_visible_referents",
+          "comparative_relation_required"
+        ],
+        "scene_problem": {
+          "primary": "PROCEDURAL_COMPETENCE",
+          "secondary": [],
+          "status": "LOCKED"
+        },
+        "schema_version": "director-routing-input/0.1",
+        "subject_matter_tags": [
+          "assembly"
+        ],
+        "unknown_fact_types": []
+      },
+      "routing_result": {
+        "applied_constraint_ids": [
+          "PC-DIALOGUE-TEXT-LOCK",
+          "PC-LOCKED-STORY-AUTHORITY",
+          "PC-MODEL-INDEPENDENT-IR",
+          "PC-ORIGINAL-ASSETS",
+          "PC-SOURCE-COVERAGE",
+          "SC-AUTHORIZATION-GATES",
+          "SC-HIGH-RISK-FALLBACK",
+          "SC-HUMAN-REVIEW",
+          "SC-NO-SUBJECT-SHORTCUT",
+          "SC-NO-SURFACE-COPY",
+          "SC-NO-UNKNOWN-PROMOTION"
+        ],
+        "case_id": "ORIGINAL-REFERENT-COMPARISON",
+        "conflict_trace": [],
+        "eligible_rule_ids": [
+          "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+          "DR-PERFORMANCE-OWNER-HOLD",
+          "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+          "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+        ],
+        "human_review_status": "HUMAN_REVIEW_PENDING",
+        "ir_handoff": "CONTINUE_WITH_SELECTED_RULES",
+        "rejected_rules": [
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "performance_progression",
+              "relation_state"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-PERFORMANCE-OWNER-HOLD"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "counterpart_relation",
+              "spatial_change"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "distance_change",
+              "relation_endpoint",
+              "time_structure"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+          }
+        ],
+        "rights_boundary": {
+          "subject_matter_used_for_selection": false,
+          "surface_copy_allowed": false
+        },
+        "scene_problem": "PROCEDURAL_COMPETENCE",
+        "schema_version": "director-routing-result/0.1",
+        "selected_rules": [
+          {
+            "matched_fact_ids": [
+              "FACT-01",
+              "FACT-02"
+            ],
+            "rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+            "selection_reason_codes": [
+              "PRIMARY_PROBLEM_MATCH",
+              "REQUIRED_FACTS_LOCKED",
+              "RUNTIME_AUTHORIZED",
+              "TRIGGER_MATCH"
+            ]
+          }
+        ],
+        "selection_count": 1,
+        "status": "SELECTED"
+      },
+      "scene_id": "EP01-SC01",
+      "shots": [
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "ASSEMBLER",
+            "CHECKER"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "A locked field view establishes all three couplers beside one neutral gauge.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-01"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-01"
+            ],
+            "must_hold": [
+              "Three project-original couplers remain visible on the same marked grid."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-01",
+          "continuity_out": "state after FACT-01",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "Three project-original couplers remain visible on the same marked grid.",
+          "order": 1,
+          "performance_beats": [
+            "A locked field view establishes all three couplers beside one neutral gauge."
+          ],
+          "reference_plan": {
+            "exclude": [
+              "research stills",
+              "source-work surfaces"
+            ],
+            "inherit": [
+              "identity",
+              "geometry"
+            ],
+            "reference_id": "REF-REFERENT-COMPARISON-SH01",
+            "reference_type": "SHOT_GOLDEN",
+            "required": true,
+            "rights_status": "PROJECT_ORIGINAL",
+            "scope": "project-original identity and geometry only",
+            "status": "PLANNED"
+          },
+          "shot_id": "EP01-SC01-SH01",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-01"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        },
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "ASSEMBLER",
+            "CHECKER"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "Keep all three couplers in place while the gauge relation is made readable.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-02"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "MEDIUM",
+          "constraints": {
+            "changes_here": [
+              "FACT-02"
+            ],
+            "must_hold": [
+              "The openings must be read together against one fixed gauge before the next handling step."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-02",
+          "continuity_out": "state after FACT-02",
+          "dialogue": [],
+          "duration_seconds": 8,
+          "edit_in": "enter before comparison begins",
+          "edit_out": "cut to the handling relation only after the shared comparison reads",
+          "evidence_rule_ids": [
+            "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+          ],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "locked field containing every option and the common gauge",
+          "narrative_goal": "The openings must be read together against one fixed gauge before the next handling step.",
+          "order": 2,
+          "performance_beats": [
+            "The checker aligns the gauge across the three openings without removing any option."
+          ],
+          "reference_plan": {
+            "exclude": [],
+            "inherit": [],
+            "reference_id": null,
+            "reference_type": "NONE",
+            "required": false,
+            "rights_status": "NOT_APPLICABLE",
+            "scope": "",
+            "status": "NOT_REQUIRED"
+          },
+          "shot_id": "EP01-SC01-SH02",
+          "shot_type": "project-original comparative field",
+          "source_refs": [
+            "locked-script.md#FACT-02"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        },
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "ASSEMBLER",
+            "CHECKER"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "The assembler begins the next handling step only after the comparison relation is visible.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-03"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-03"
+            ],
+            "must_hold": [
+              "The assembler moves to one handling relation only after the shared comparison is readable."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-03",
+          "continuity_out": "state after FACT-03",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "The assembler moves to one handling relation only after the shared comparison is readable.",
+          "order": 3,
+          "performance_beats": [
+            "The assembler begins the next handling step only after the comparison relation is visible."
+          ],
+          "reference_plan": {
+            "exclude": [],
+            "inherit": [],
+            "reference_id": null,
+            "reference_type": "NONE",
+            "required": false,
+            "rights_status": "NOT_APPLICABLE",
+            "scope": "",
+            "status": "NOT_REQUIRED"
+          },
+          "shot_id": "EP01-SC01-SH03",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-03"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        }
+      ],
+      "source_scene": "locked-script.md",
+      "spatial_plan": {
+        "close_positions": "the final locked beat positions",
+        "geometry": "simple project-original working area",
+        "primary_axis": "one stable readable axis"
+      },
+      "time_of_day": "UNSPECIFIED_AND_NOT_REQUIRED",
+      "title": "The Three Couplers"
+    }
+  ],
+  "schema_version": "director-ir/0.2",
+  "source_coverage": [
+    {
+      "covered_by": [
+        "EP01-SC01-SH01"
+      ],
+      "description": "Three project-original couplers remain visible on the same marked grid.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "covered"
+    },
+    {
+      "covered_by": [
+        "EP01-SC01-SH02"
+      ],
+      "description": "The openings must be read together against one fixed gauge before the next handling step.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "covered"
+    },
+    {
+      "covered_by": [
+        "EP01-SC01-SH03"
+      ],
+      "description": "The assembler moves to one handling relation only after the shared comparison is readable.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "covered"
+    }
+  ],
+  "source_facts": {
+    "continuity_output": [
+      "Keep every project-original participant, prop and position consistent across this test scene."
+    ],
+    "cross_episode_state_in": [],
+    "cross_episode_state_out": [],
+    "source_unit_count": 3
+  },
+  "source_script": "examples/forward-tests/ORIGINAL-REFERENT-COMPARISON/locked-script.md",
+  "status": "HUMAN_REVIEW_PENDING",
+  "target_duration_seconds": 18,
+  "unresolved": [
+    "Human creative review has not been performed."
+  ],
+  "visual_style_pack_path": null
+}

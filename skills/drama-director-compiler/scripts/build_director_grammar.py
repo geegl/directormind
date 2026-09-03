@@ -9,6 +9,8 @@ import sys
 from pathlib import Path
 from typing import Any, Sequence
 
+from build_candidate_rule_index import assert_runtime_review_lineage
+
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 SKILL_ROOT = SCRIPT_DIR.parent
@@ -16,7 +18,7 @@ REPOSITORY_ROOT = SKILL_ROOT.parents[1]
 GRAMMAR_ROOT = REPOSITORY_ROOT / "research" / "grammar"
 GRAMMAR_PATH = GRAMMAR_ROOT / "director_grammar_v0.2.json"
 INDEX_PATH = GRAMMAR_ROOT / "candidate_rule_index.json"
-REVIEW_PATH = GRAMMAR_ROOT / "runtime_rule_promotion_wave1.review.json"
+REVIEW_PATH = GRAMMAR_ROOT / "runtime_integration.review.json"
 ROUTING_REVIEW_ROOT = REPOSITORY_ROOT / "research" / "validation" / "grammar-rule-reviews"
 
 
@@ -38,6 +40,8 @@ def review_ref(rule_id: str) -> str:
 def build_rule(
     promotion: dict[str, Any],
     candidate: dict[str, Any],
+    related_dispositions: list[dict[str, Any]],
+    candidate_by_id: dict[str, dict[str, Any]],
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     if candidate["promotion"]["status"] != "CROSS_WORK_SUPPORTED":
         raise ValueError(f"candidate is not cross-work supported: {candidate['candidate_rule_id']}")
@@ -62,19 +66,15 @@ def build_rule(
         "candidate_required_story_facts": contract["required_story_facts"],
         "routing": routing,
     }
-    related = [
-        *promotion["supporting_relations"],
-        promotion["counterexample"],
+    related_candidates = [
+        candidate_by_id[item["candidate_rule_id"]] for item in related_dispositions
     ]
-    candidate_ids = [
-        candidate["candidate_rule_id"],
-        *[item["source_candidate_rule_id"] for item in related],
-    ]
-    work_ids = [candidate["source"]["work_id"], *[item["work_id"] for item in related]]
-    evidence_ids = [candidate["source"]["evidence_id"], *[item["evidence_id"] for item in related]]
+    candidate_ids = [candidate["candidate_rule_id"], *[item["candidate_rule_id"] for item in related_candidates]]
+    work_ids = [candidate["source"]["work_id"], *[item["source"]["work_id"] for item in related_candidates]]
+    evidence_ids = [candidate["source"]["evidence_id"], *[item["source"]["evidence_id"] for item in related_candidates]]
     evidence_shot_ids = [
         *promotion["source_refs"],
-        *[ref for item in related for ref in item["source_refs"]],
+        *[ref for item in related_dispositions for ref in item["source_refs"]],
     ]
     rule = {
         "rule_id": promotion["rule_id"],
@@ -131,11 +131,14 @@ def build_rule(
             "work_ids": list(dict.fromkeys(work_ids)),
             "evidence_ids": list(dict.fromkeys(evidence_ids)),
             "evidence_shot_ids": list(dict.fromkeys(evidence_shot_ids)),
-            "relation_review_ids": [
-                *[f"{item['relation_id']}-REVIEW" for item in promotion["supporting_relations"]],
-                f"{promotion['counterexample']['relation_id']}-REVIEW",
+            "relation_review_ids": list(dict.fromkeys(
+                item["runtime_effect_key"] for item in related_dispositions
+            )),
+            "counterexample_ids": [
+                item["candidate_rule_id"]
+                for item in related_dispositions
+                if item["final_status"] == "BOUNDARY_OR_COUNTEREXAMPLE"
             ],
-            "counterexample_ids": [promotion["counterexample"]["relation_id"]],
             "forward_test_ids": [
                 promotion["positive_forward_test_id"],
                 promotion["boundary_forward_test_id"],
@@ -157,16 +160,74 @@ def build_outputs() -> tuple[dict[str, Any], dict[Path, dict[str, Any]]]:
     index = read_json(INDEX_PATH)
     promotion_review = read_json(REVIEW_PATH)
     by_id = {item["candidate_rule_id"]: item for item in index["candidates"]}
+    assert_runtime_review_lineage(promotion_review, by_id)
     rules: list[dict[str, Any]] = []
     reviews: dict[Path, dict[str, Any]] = {}
-    for promotion in sorted(promotion_review["promotions"], key=lambda item: item["selection_rank"]):
+    for promotion in sorted(promotion_review["runtime_rule_specs"], key=lambda item: item["selection_rank"]):
         candidate = by_id.get(promotion["candidate_rule_id"])
         if candidate is None:
             raise ValueError(f"missing promoted candidate: {promotion['candidate_rule_id']}")
-        rule, routing_review = build_rule(promotion, candidate)
+        related_dispositions = [
+            item
+            for item in promotion_review["candidate_dispositions"]
+            if (
+                item.get("target_rule_id") == promotion["rule_id"]
+                and item.get("final_status") in {
+                    "SUPPORTING_EVIDENCE",
+                    "BOUNDARY_OR_COUNTEREXAMPLE",
+                }
+            )
+            or (
+                item.get("final_status") == "MERGED_DUPLICATE"
+                and item.get("merged_into_candidate_id") == promotion["candidate_rule_id"]
+            )
+        ]
+        boundary_signals = {
+            signal
+            for item in related_dispositions
+            if item["final_status"] == "BOUNDARY_OR_COUNTEREXAMPLE"
+            for signal in item["boundary_signal_ids"]
+        }
+        if boundary_signals != set(promotion["routing"]["not_applicable_if_any"]):
+            raise ValueError(
+                f"boundary signals do not compile exactly for {promotion['rule_id']}"
+            )
+        rule, routing_review = build_rule(
+            promotion, candidate, related_dispositions, by_id
+        )
         rules.append(rule)
         reviews[ROUTING_REVIEW_ROOT / f"{promotion['rule_id']}-ROUTING.json"] = routing_review
     grammar["rules"] = rules
+    disposition_keys = (
+        "candidate_rule_id",
+        "family_id",
+        "evidence_id",
+        "final_status",
+        "runtime_effect_key",
+        "review_ids",
+        "source_refs",
+        "target_rule_id",
+        "merged_into_candidate_id",
+        "boundary_signal_ids",
+        "rejection_reason_code",
+        "evidence_gap_id",
+    )
+    dispositions = [
+        {key: item[key] for key in disposition_keys}
+        for item in promotion_review["candidate_dispositions"]
+    ]
+    final_count = sum(
+        item["final_status"] != "EVIDENCE_GAP_PENDING" for item in dispositions
+    )
+    grammar["runtime_integration"] = {
+        "authority_path": "research/grammar/runtime_integration.review.json",
+        "phase_status": promotion_review["declared_phase_status"],
+        "source_count": len(promotion_review["source_dispositions"]),
+        "evidence_count": len(promotion_review["evidence_reviews"]),
+        "candidate_count": len(dispositions),
+        "final_candidate_count": final_count,
+        "dispositions": dispositions,
+    }
     return grammar, reviews
 
 

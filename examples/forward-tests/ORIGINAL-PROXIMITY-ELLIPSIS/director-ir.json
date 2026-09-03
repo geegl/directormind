@@ -75,10 +75,10 @@
           },
           {
             "fact_id": "FACT-04",
-            "fact_type": "time_ellipsis",
+            "fact_type": "time_structure",
             "source_ref": "locked-script.md#FACT-04",
             "status": "LOCKED",
-            "value": "No continuous move between the dated checks belongs to the story facts."
+            "value": "The distance change occurs across three dated checks; no continuous move between them belongs to the story facts."
           }
         ],
         "priority_constraints": [],
@@ -89,8 +89,9 @@
         },
         "routing_signals": [
           "relation_distance_change",
+          "time_structure_locked",
           "shared_endpoint_required",
-          "elliptical_time_change"
+          "distance_change_across_ellipsis"
         ],
         "scene_problem": {
           "primary": "ROMANTIC_PROXIMITY",
@@ -120,6 +121,7 @@
         "case_id": "ORIGINAL-PROXIMITY-ELLIPSIS",
         "conflict_trace": [],
         "eligible_rule_ids": [
+          "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
           "DR-PERFORMANCE-OWNER-HOLD",
           "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
           "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
@@ -130,6 +132,22 @@
           {
             "blocking_fact_ids": [],
             "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "referent_set",
+              "relation_constraint"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
             "missing_fact_types": [
               "performance_progression",
               "relation_state"
@@ -144,6 +162,7 @@
           {
             "blocking_fact_ids": [],
             "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
             "missing_fact_types": [
               "counterpart_relation",
               "spatial_change"
@@ -158,10 +177,12 @@
           {
             "blocking_fact_ids": [],
             "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [
+              "distance_change_across_ellipsis"
+            ],
             "missing_fact_types": [],
             "rejection_reason_codes": [
-              "NOT_APPLICABLE_MATCH",
-              "TRIGGER_NOT_MET"
+              "NOT_APPLICABLE_MATCH"
             ],
             "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
           }
@@ -527,7 +548,7 @@
               "FACT-04"
             ],
             "must_hold": [
-              "No continuous move between the dated checks belongs to the story facts."
+              "The distance change occurs across three dated checks; no continuous move between them belongs to the story facts."
             ],
             "must_not_appear": [
               "research-work surface elements"
@@ -565,7 +586,7 @@
           "fallback": null,
           "focus_strategy": "keep the locked action readable",
           "framing": "readable neutral frame",
-          "narrative_goal": "No continuous move between the dated checks belongs to the story facts.",
+          "narrative_goal": "The distance change occurs across three dated checks; no continuous move between them belongs to the story facts.",
           "order": 4,
           "performance_beats": [
             "The final dated card precedes one shared wide that proves the terminal distance."
@@ -632,7 +653,7 @@
       "covered_by": [
         "EP01-SC01-SH04"
       ],
-      "description": "No continuous move between the dated checks belongs to the story facts.",
+      "description": "The distance change occurs across three dated checks; no continuous move between them belongs to the story facts.",
       "notes": "Structural coverage only; human creative review remains pending.",
       "source_ref": "locked-script.md#FACT-04",
       "status": "covered"

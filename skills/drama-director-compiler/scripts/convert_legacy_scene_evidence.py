@@ -31,6 +31,7 @@ REPOSITORY_ROOT = SKILL_ROOT.parents[1]
 EVIDENCE_ROOT = REPOSITORY_ROOT / "research" / "evidence"
 SCHEMA_PATH = SKILL_ROOT / "references" / "scene-evidence.schema.json"
 WAVE1_REVIEW_PATH = REPOSITORY_ROOT / "research" / "grammar" / "runtime_rule_promotion_wave1.review.json"
+INTEGRATION_REVIEW_PATH = REPOSITORY_ROOT / "research" / "grammar" / "runtime_integration.review.json"
 
 sys.path.insert(0, str(SCRIPT_DIR))
 from validate_scene_evidence import load_json, validate_evidence  # noqa: E402
@@ -675,6 +676,131 @@ def convert_shots(meta: SceneMeta, rows: Sequence[dict[str, str]]) -> list[dict[
     return shots
 
 
+def apply_verified_shot_corrections(shots: list[dict[str, Any]]) -> None:
+    """Apply narrow corrections established by a renewed moving-image review.
+
+    The legacy ledger remains immutable provenance. Corrections live here so
+    regeneration cannot silently restore a disproved legacy description.
+    """
+    by_id = {shot["shot_id"]: shot for shot in shots}
+    shot = by_id.get("WIRE-S01E04-OLD-CASES-001-S040")
+    if shot is None:
+        return
+
+    shot_id = shot["shot_id"]
+
+    def corrected_claim(field: str, value: str, status: str) -> dict[str, Any]:
+        original = shot[field]
+        return claim(
+            original["claim_id"],
+            value,
+            [shot_id] if status != "UNKNOWN" else [],
+            status,
+            "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance.",
+        )
+
+    shot["shot_size"] = corrected_claim(
+        "shot_size",
+        "A person at the window is shown in medium framing.",
+        "PICTURE_OBSERVED",
+    )
+    shot["camera_height"] = corrected_claim(
+        "camera_height",
+        "The exact camera height remains unknown.",
+        "UNKNOWN",
+    )
+    shot["camera_angle"] = corrected_claim(
+        "camera_angle",
+        "Side-on window-area framing.",
+        "PICTURE_OBSERVED",
+    )
+    shot["camera_motion"] = corrected_claim(
+        "camera_motion",
+        "The exact camera motion remains unknown.",
+        "UNKNOWN",
+    )
+    shot["camera_start"] = corrected_claim(
+        "camera_start",
+        "A person is visible beside a window, holding or indicating an object.",
+        "PICTURE_OBSERVED",
+    )
+    shot["camera_path"] = corrected_claim(
+        "camera_path",
+        "The exact camera path remains unknown.",
+        "UNKNOWN",
+    )
+    shot["camera_end"] = corrected_claim(
+        "camera_end",
+        "The person remains visible beside the window with the object.",
+        "PICTURE_OBSERVED",
+    )
+    shot["focus_strategy"] = corrected_claim(
+        "focus_strategy",
+        "The exact focus strategy remains unknown.",
+        "UNKNOWN",
+    )
+    shot["spatial_zone"] = [
+        claim(
+            shot["spatial_zone"][0]["claim_id"],
+            "Window-side area.",
+            [shot_id],
+            "PICTURE_OBSERVED",
+            "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance.",
+        )
+    ]
+    shot["axis_and_screen_direction"] = corrected_claim(
+        "axis_and_screen_direction",
+        "The exact axis and screen direction remain unknown.",
+        "UNKNOWN",
+    )
+    shot["blocking"] = corrected_claim(
+        "blocking",
+        "A person occupies the window-side area while holding or indicating an object.",
+        "PICTURE_OBSERVED",
+    )
+    shot["visible_action"] = corrected_claim(
+        "visible_action",
+        "The person holds or indicates an object near the window.",
+        "PICTURE_OBSERVED",
+    )
+    shot["visible_state_in"] = corrected_claim(
+        "visible_state_in",
+        "A person and an object are visible in the window-side area.",
+        "PICTURE_OBSERVED",
+    )
+    shot["visible_state_out"] = corrected_claim(
+        "visible_state_out",
+        "The person and object remain visible in the window-side area.",
+        "PICTURE_OBSERVED",
+    )
+    shot["event_or_reaction"] = corrected_claim(
+        "event_or_reaction",
+        "The exact event or reaction classification remains unknown.",
+        "UNKNOWN",
+    )
+    shot["performance_beat"] = corrected_claim(
+        "performance_beat",
+        "The exact performance beat remains unknown.",
+        "UNKNOWN",
+    )
+    shot["cut_motivation"] = corrected_claim(
+        "cut_motivation",
+        "The exact cut motivation remains unknown.",
+        "UNKNOWN",
+    )
+    shot["narrative_function"] = corrected_claim(
+        "narrative_function",
+        "The exact narrative function remains unknown.",
+        "UNKNOWN",
+    )
+    shot["unknowns"] = [
+        "Exact object identity and meaning remain unknown.",
+        "Any relation to earlier records or a window-surface result remains unknown.",
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities and causality remain unknown.",
+    ]
+
+
 def expand_shot_refs(value: str, shot_ids: Sequence[str]) -> list[str]:
     """Expand legacy ``S001-S004``/``S001..S004``/individual references."""
     by_number = {index: shot_id for index, shot_id in enumerate(shot_ids, start=1)}
@@ -925,6 +1051,122 @@ def _apply_wave1_review(evidence: dict[str, Any]) -> None:
     )
 
 
+def _integration_review() -> dict[str, Any]:
+    if not INTEGRATION_REVIEW_PATH.is_file():
+        return {"evidence_reviews": [], "runtime_rule_specs": []}
+    data = json.loads(INTEGRATION_REVIEW_PATH.read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        raise ValueError("runtime integration review root must be an object")
+    return data
+
+
+def _apply_integration_review(evidence: dict[str, Any]) -> None:
+    """Apply only fresh, source-bound facts from the exhaustive review authority."""
+    review_data = _integration_review()
+    review = next(
+        (
+            item
+            for item in review_data.get("evidence_reviews", [])
+            if item.get("evidence_id") == evidence["evidence_id"]
+        ),
+        None,
+    )
+    if review is None:
+        return
+
+    shots_by_id = {shot["shot_id"]: shot for shot in evidence["shots"]}
+    reviewed_shot_ids = [item["shot_id"] for item in review.get("reviewed_shots", [])]
+    missing_shots = sorted(set(reviewed_shot_ids) - set(shots_by_id))
+    if missing_shots:
+        raise ValueError(
+            f"runtime integration review cites unknown Shot IDs for {evidence['evidence_id']}: {missing_shots}"
+        )
+    evidence["methods"].append(
+        {
+            "method_id": review["method_id"],
+            "method_type": "PICTURE_FRAME_REVIEW",
+            "status": "MANUAL_REVIEW_RECORDED",
+            "description": (
+                "The exhaustive runtime-integration pass re-opened the registered local video at the "
+                "listed canonical Shot intervals. Temporary review images remain outside the repository."
+            ),
+            "repository_command": None,
+            "tool_version_status": "VERSION_UNKNOWN",
+            "source_refs": reviewed_shot_ids,
+            "unknowns": ["Exact identity, dialogue, sound, intention, and production method remain unknown."],
+        }
+    )
+
+    specs = [
+        item
+        for item in review_data.get("runtime_rule_specs", [])
+        if item.get("candidate_rule_id")
+        and any(
+            rule.get("candidate_rule_id") == item.get("candidate_rule_id")
+            for rule in evidence["candidate_rules"]
+        )
+    ]
+    if len(specs) > 1:
+        raise ValueError(f"multiple positive runtime specs use {evidence['evidence_id']}")
+    if not specs:
+        return
+    spec = specs[0]
+    unreviewed_refs = sorted(set(spec["source_refs"]) - set(reviewed_shot_ids))
+    if unreviewed_refs:
+        raise ValueError(
+            f"runtime rule spec cites unreviewed Shot IDs for {evidence['evidence_id']}: {unreviewed_refs}"
+        )
+    evidence["scene_problem"] = {
+        "primary": spec["scene_problem"],
+        "secondary": [],
+        "status": "INFERRED",
+        "source_refs": spec["source_refs"],
+        "notes": (
+            "The source-neutral scene problem is inferred only for the promoted visual mechanism; "
+            "semantic audio and source-specific identities remain unknown."
+        ),
+    }
+    existing_roles = {
+        (role.get("appearance_id"), role.get("functional_role"), tuple(role.get("source_refs", [])))
+        for shot in evidence["shots"]
+        for role in shot.get("abstract_role_labels", [])
+    }
+    for role in spec["functional_roles"]:
+        shot = shots_by_id.get(role["shot_id"])
+        if shot is None:
+            raise ValueError(f"runtime integration role cites unknown Shot ID: {role['shot_id']}")
+        key = (role["appearance_id"], role["functional_role"], tuple(role["source_refs"]))
+        if key in existing_roles:
+            continue
+        shot["abstract_role_labels"].append(
+            {
+                "appearance_id": role["appearance_id"],
+                "functional_role": role["functional_role"],
+                "status": "INFERRED",
+                "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+                "appearance_track_id": None,
+                "source_refs": role["source_refs"],
+            }
+        )
+        existing_roles.add(key)
+
+    positive_id = spec["candidate_rule_id"]
+    for rule in evidence["candidate_rules"]:
+        if rule["candidate_rule_id"] != positive_id:
+            continue
+        rule["audio_dependency"] = False
+        if review["method_id"] not in rule["source_method_ids"]:
+            rule["source_method_ids"].append(review["method_id"])
+    for unknown in evidence["unknowns"]:
+        if unknown["unknown_id"] == "UNKNOWN-AUDIO":
+            unknown["blocks_rule_ids"] = [
+                rule_id for rule_id in unknown["blocks_rule_ids"] if rule_id != positive_id
+            ]
+    evidence["validation_warnings"].append(
+        "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
+    )
+
+
 def build_evidence(source: Path) -> dict[str, Any]:
     meta = SCENE_META.get(source.stem)
     if meta is None:
@@ -941,6 +1183,7 @@ def build_evidence(source: Path) -> dict[str, Any]:
         )
     )
     shots = convert_shots(meta, shot_rows)
+    apply_verified_shot_corrections(shots)
     first_id = shots[0]["shot_id"]
     last_id = shots[-1]["shot_id"]
     scene_refs = [first_id] if first_id == last_id else [first_id, last_id]
@@ -1148,6 +1391,7 @@ def build_evidence(source: Path) -> dict[str, Any]:
         ),
     }
     _apply_wave1_review(evidence)
+    _apply_integration_review(evidence)
     return evidence
 
 

@@ -1,0 +1,17 @@
+{
+  "candidate_disposition_count": 124,
+  "candidate_final_disposition_count": 17,
+  "candidate_runtime_effect_count": 17,
+  "error_count": 0,
+  "evidence_final_mapping_count": 12,
+  "evidence_gap_count": 17,
+  "evidence_review_count": 31,
+  "issues": [],
+  "phase_status": "PARTIAL_EVIDENCE_GAP",
+  "positive_runtime_rule_count": 4,
+  "runtime_active_family_count": 4,
+  "schema_version": "runtime-integration-validation/0.1",
+  "source_disposition_count": 33,
+  "status": "PASS",
+  "unresolved_candidate_count": 107
+}

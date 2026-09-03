@@ -34474,6 +34474,30 @@
       "unknowns": [
         "All semantic audio facts remain unknown."
       ]
+    },
+    {
+      "method_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S001",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S016",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S017",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S043",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S061",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S087",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S091",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S092",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S128",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S129",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S139"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],

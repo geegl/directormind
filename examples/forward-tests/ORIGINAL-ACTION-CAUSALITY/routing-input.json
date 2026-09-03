@@ -14,24 +14,24 @@
   "locked_facts": [
     {
       "fact_id": "FACT-01",
-      "fact_type": "cause_effect_chain",
+      "fact_type": "action_source",
       "source_ref": "locked-script.md#FACT-01",
       "status": "LOCKED",
-      "value": "A loose wheel stop lets an unpowered equipment rack begin rolling."
+      "value": "A loose wheel stop is visibly displaced before an unpowered equipment rack begins rolling."
     },
     {
       "fact_id": "FACT-02",
-      "fact_type": "one_to_many_response",
+      "fact_type": "target_state",
       "source_ref": "locked-script.md#FACT-02",
       "status": "LOCKED",
-      "value": "The floor lead signals three crew members to clear three marked lanes."
+      "value": "The rack changes from stationary to rolling while three marked lanes remain visible."
     },
     {
       "fact_id": "FACT-03",
-      "fact_type": "safe_resolution",
+      "fact_type": "visible_result",
       "source_ref": "locked-script.md#FACT-03",
       "status": "LOCKED",
-      "value": "The floor lead pushes a floor chock into the rack path after all three lanes are clear."
+      "value": "After the lanes clear, a floor chock stops the rack and the stopped state remains readable."
     }
   ],
   "priority_constraints": [],
@@ -41,8 +41,9 @@
     "project_original": true
   },
   "routing_signals": [
-    "cause_effect_chain",
-    "one_to_many_response"
+    "visible_action_source",
+    "target_state_change",
+    "result_readable"
   ],
   "scene_problem": {
     "primary": "ACTION_CAUSALITY",

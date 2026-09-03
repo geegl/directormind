@@ -9,10 +9,11 @@
   "family_count": 16,
   "issues": [],
   "promotion_status_counts": {
-    "BLOCKED_BY_UNKNOWN": 121,
-    "CROSS_WORK_SUPPORTED": 3
+    "CROSS_WORK_SUPPORTED": 4,
+    "EVIDENCE_GAP_PENDING": 107,
+    "SINGLE_WORK_CANDIDATE": 13
   },
-  "runtime_authorized_count": 3,
+  "runtime_authorized_count": 4,
   "schema_version": "candidate-rule-validation/0.1",
   "status": "PASS"
 }

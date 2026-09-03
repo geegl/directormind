@@ -18,7 +18,8 @@
         "locked_fact_ids": [
           "FACT-01",
           "FACT-02",
-          "FACT-03"
+          "FACT-03",
+          "FACT-04"
         ]
       },
       "dramatic_engine": {
@@ -31,7 +32,7 @@
         "subtext": "none asserted",
         "tactic_change": "shared occupancy becomes solo work"
       },
-      "duration_seconds": 15,
+      "duration_seconds": 20,
       "location": "plain assembly room",
       "narrative_goal": "show a solo occupancy change after the counterpart has left",
       "pov": {
@@ -53,10 +54,10 @@
         "locked_facts": [
           {
             "fact_id": "FACT-01",
-            "fact_type": "counterpart_absent",
+            "fact_type": "counterpart_relation",
             "source_ref": "locked-script.md#FACT-01",
             "status": "LOCKED",
-            "value": "Maker A leaves the room before Maker B moves from the shared bench."
+            "value": "Maker A and Maker B begin from an established shared bench relation before Maker A leaves."
           },
           {
             "fact_id": "FACT-02",
@@ -71,6 +72,13 @@
             "source_ref": "locked-script.md#FACT-03",
             "status": "LOCKED",
             "value": "The wall grid and empty shared bench make the solo destination unambiguous."
+          },
+          {
+            "fact_id": "FACT-04",
+            "fact_type": "counterpart_endpoint_state",
+            "source_ref": "locked-script.md#FACT-04",
+            "status": "LOCKED",
+            "value": "Maker A is absent from the changed endpoint, so no new two-person relation must be established."
           }
         ],
         "priority_constraints": [],
@@ -81,7 +89,8 @@
         },
         "routing_signals": [
           "material_spatial_change",
-          "counterpart_relation_not_required"
+          "counterpart_relation_context_locked",
+          "counterpart_absent_at_changed_endpoint"
         ],
         "scene_problem": {
           "primary": "RELATIONSHIP_FRACTURE",
@@ -111,6 +120,7 @@
         "case_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
         "conflict_trace": [],
         "eligible_rule_ids": [
+          "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
           "DR-PERFORMANCE-OWNER-HOLD",
           "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
           "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
@@ -121,6 +131,22 @@
           {
             "blocking_fact_ids": [],
             "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "referent_set",
+              "relation_constraint"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
             "missing_fact_types": [
               "performance_progression",
               "relation_state"
@@ -135,22 +161,23 @@
           {
             "blocking_fact_ids": [],
             "conflicting_rule_ids": [],
-            "missing_fact_types": [
-              "counterpart_relation"
+            "matched_not_applicable_signal_ids": [
+              "counterpart_absent_at_changed_endpoint"
             ],
+            "missing_fact_types": [],
             "rejection_reason_codes": [
-              "NOT_APPLICABLE_MATCH",
-              "REQUIRED_FACT_MISSING",
-              "TRIGGER_NOT_MET"
+              "NOT_APPLICABLE_MATCH"
             ],
             "rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
           },
           {
             "blocking_fact_ids": [],
             "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
             "missing_fact_types": [
               "distance_change",
-              "relation_endpoint"
+              "relation_endpoint",
+              "time_structure"
             ],
             "rejection_reason_codes": [
               "REQUIRED_FACT_MISSING",
@@ -212,7 +239,7 @@
               "FACT-01"
             ],
             "must_hold": [
-              "Maker A leaves the room before Maker B moves from the shared bench."
+              "Maker A and Maker B begin from an established shared bench relation before Maker A leaves."
             ],
             "must_not_appear": [
               "research-work surface elements"
@@ -250,7 +277,7 @@
           "fallback": null,
           "focus_strategy": "keep the locked action readable",
           "framing": "readable neutral frame",
-          "narrative_goal": "Maker A leaves the room before Maker B moves from the shared bench.",
+          "narrative_goal": "Maker A and Maker B begin from an established shared bench relation before Maker A leaves.",
           "order": 1,
           "performance_beats": [
             "A shared view shows Maker A leave the established bench and clear the room."
@@ -480,6 +507,107 @@
           ],
           "visible_text": [],
           "visual_style_module": "UNRESOLVED"
+        },
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "MAKER_A",
+            "MAKER_B"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "The held endpoint confirms that the absent counterpart creates no new relation to reset.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-04"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-04"
+            ],
+            "must_hold": [
+              "Maker A is absent from the changed endpoint, so no new two-person relation must be established."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-04",
+          "continuity_out": "state after FACT-04",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "Maker A is absent from the changed endpoint, so no new two-person relation must be established.",
+          "order": 4,
+          "performance_beats": [
+            "The held endpoint confirms that the absent counterpart creates no new relation to reset."
+          ],
+          "reference_plan": {
+            "exclude": [],
+            "inherit": [],
+            "reference_id": null,
+            "reference_type": "NONE",
+            "required": false,
+            "rights_status": "NOT_APPLICABLE",
+            "scope": "",
+            "status": "NOT_REQUIRED"
+          },
+          "shot_id": "EP01-SC01-SH04",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-04"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
         }
       ],
       "source_scene": "locked-script.md",
@@ -498,7 +626,7 @@
       "covered_by": [
         "EP01-SC01-SH01"
       ],
-      "description": "Maker A leaves the room before Maker B moves from the shared bench.",
+      "description": "Maker A and Maker B begin from an established shared bench relation before Maker A leaves.",
       "notes": "Structural coverage only; human creative review remains pending.",
       "source_ref": "locked-script.md#FACT-01",
       "status": "covered"
@@ -520,6 +648,15 @@
       "notes": "Structural coverage only; human creative review remains pending.",
       "source_ref": "locked-script.md#FACT-03",
       "status": "covered"
+    },
+    {
+      "covered_by": [
+        "EP01-SC01-SH04"
+      ],
+      "description": "Maker A is absent from the changed endpoint, so no new two-person relation must be established.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-04",
+      "status": "covered"
     }
   ],
   "source_facts": {
@@ -528,11 +665,11 @@
     ],
     "cross_episode_state_in": [],
     "cross_episode_state_out": [],
-    "source_unit_count": 3
+    "source_unit_count": 4
   },
   "source_script": "examples/forward-tests/ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART/locked-script.md",
   "status": "HUMAN_REVIEW_PENDING",
-  "target_duration_seconds": 15,
+  "target_duration_seconds": 20,
   "unresolved": [
     "Human creative review has not been performed."
   ],

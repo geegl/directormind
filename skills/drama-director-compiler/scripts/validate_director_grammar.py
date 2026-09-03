@@ -20,14 +20,17 @@ GRAMMAR_PATH = REPOSITORY_ROOT / "research" / "grammar" / "director_grammar_v0.2
 INDEX_PATH = REPOSITORY_ROOT / "research" / "grammar" / "candidate_rule_index.json"
 MATRIX_PATH = REPOSITORY_ROOT / "research" / "grammar" / "cross_work_support_matrix.json"
 PROMOTION_REVIEW_PATH = REPOSITORY_ROOT / "research" / "grammar" / "runtime_rule_promotion_wave1.review.json"
+INTEGRATION_REVIEW_PATH = REPOSITORY_ROOT / "research" / "grammar" / "runtime_integration.review.json"
 SCHEMA_PATH = SKILL_ROOT / "references" / "director-grammar.schema.json"
 PROMOTION_REVIEW_SCHEMA_PATH = SKILL_ROOT / "references" / "runtime-rule-promotion-review.schema.json"
+INTEGRATION_REVIEW_SCHEMA_PATH = SKILL_ROOT / "references" / "runtime-integration-review.schema.json"
 REPORT_PATH = REPOSITORY_ROOT / "research" / "validation" / "director-grammar-validation.json"
 
 sys.path.insert(0, str(SCRIPT_DIR))
 from validate_scene_evidence import validate_schema_subset  # noqa: E402
 from validate_candidate_rules import validate_repository as validate_candidate_repository  # noqa: E402
 from validate_runtime_rule_promotion_review import validate as validate_promotion_review  # noqa: E402
+from validate_runtime_integration_review import validate as validate_integration_review  # noqa: E402
 
 
 ELIGIBLE_PROMOTIONS = {"CROSS_WORK_SUPPORTED", "GENERAL_DEFAULT"}
@@ -94,21 +97,22 @@ def iter_strings(value: Any, path: str = "$") -> Iterable[tuple[str, str]]:
 def eligible_candidates(
     index: dict[str, Any], matrix: dict[str, Any]
 ) -> dict[str, dict[str, Any]]:
-    eligible_families = {
-        family.get("family_id")
-        for family in matrix.get("families", [])
-        if family.get("promotion_eligibility") in ELIGIBLE_PROMOTIONS
-    }
     result: dict[str, dict[str, Any]] = {}
     for candidate in index.get("candidates", []):
         promotion = candidate.get("promotion", {})
+        integration = candidate.get("runtime_integration")
+        integration_eligible = (
+            integration.get("final_status") == "POSITIVE_RUNTIME_RULE"
+            if isinstance(integration, dict)
+            else promotion.get("status") in ELIGIBLE_PROMOTIONS
+        )
         rights = candidate.get("rights_boundary", {})
         if (
-            promotion.get("status") in ELIGIBLE_PROMOTIONS
+            integration_eligible
+            and promotion.get("status") in ELIGIBLE_PROMOTIONS
             and promotion.get("unknown_dependency_present") is False
             and rights.get("runtime_authorized") is True
             and rights.get("surface_copy_allowed") is False
-            and candidate.get("canonical_rule_family") in eligible_families
         ):
             result[candidate["candidate_rule_id"]] = candidate
     return result
@@ -116,24 +120,37 @@ def eligible_candidates(
 
 def fresh_lineage_by_candidate(review: dict[str, Any]) -> dict[str, list[str]]:
     result: dict[str, list[str]] = {}
-    for promotion in review.get("promotions", []):
+    promotions = review.get("runtime_rule_specs", review.get("promotions", []))
+    for promotion in promotions:
         if not isinstance(promotion, dict):
             continue
         candidate_id = promotion.get("candidate_rule_id")
         if not isinstance(candidate_id, str):
             continue
-        related = [
-            *promotion.get("supporting_relations", []),
-            promotion.get("counterexample", {}),
-        ]
+        if "runtime_rule_specs" in review:
+            related = [
+                item
+                for item in review.get("candidate_dispositions", [])
+                if (
+                    item.get("target_rule_id") == promotion.get("rule_id")
+                    and item.get("final_status") in {
+                        "SUPPORTING_EVIDENCE",
+                        "BOUNDARY_OR_COUNTEREXAMPLE",
+                    }
+                )
+                or (
+                    item.get("final_status") == "MERGED_DUPLICATE"
+                    and item.get("merged_into_candidate_id") == promotion.get("candidate_rule_id")
+                )
+            ]
+        else:
+            related = [
+                *promotion.get("supporting_relations", []),
+                promotion.get("counterexample", {}),
+            ]
         refs = [
             *promotion.get("source_refs", []),
-            *[
-                ref
-                for relation in related
-                if isinstance(relation, dict)
-                for ref in relation.get("source_refs", [])
-            ],
+            *[ref for relation in related if isinstance(relation, dict) for ref in relation.get("source_refs", [])],
         ]
         result[candidate_id] = list(dict.fromkeys(refs))
     return result
@@ -204,31 +221,76 @@ def validate_grammar(
         add_issue(issues, "GRAMMAR-CONFLICT-ORDER", "conflict_priority", "The fixed nine-level conflict order changed.")
 
     fresh_lineage: dict[str, list[str]] = {}
+    legacy_review_mode = promotion_review is not None and "promotions" in promotion_review
     try:
         active_promotion_review = (
             promotion_review
             if promotion_review is not None
-            else read_json(PROMOTION_REVIEW_PATH)
+            else read_json(INTEGRATION_REVIEW_PATH)
         )
-        promotion_report = validate_promotion_review(
-            active_promotion_review,
-            read_json(PROMOTION_REVIEW_SCHEMA_PATH),
-        )
+        if legacy_review_mode:
+            promotion_report = validate_promotion_review(
+                active_promotion_review,
+                read_json(PROMOTION_REVIEW_SCHEMA_PATH),
+            )
+        else:
+            promotion_report = validate_integration_review(
+                active_promotion_review,
+                read_json(INTEGRATION_REVIEW_SCHEMA_PATH),
+            )
     except (OSError, ValueError, json.JSONDecodeError):
         promotion_report = {"status": "FAIL"}
         active_promotion_review = {}
     if (
         promotion_report.get("status") != "PASS"
-        or promotion_report.get("phase_status") != "COMPLETE"
+        or (legacy_review_mode and promotion_report.get("phase_status") != "COMPLETE")
     ):
         add_issue(
             issues,
             "GRAMMAR-PROMOTION-REVIEW-AUTHORITY",
             "promotion_review",
-            "Runtime lineage requires a valid and complete fresh promotion-review authority.",
+            "Runtime lineage requires a valid fresh runtime-integration authority.",
         )
     else:
         fresh_lineage = fresh_lineage_by_candidate(active_promotion_review)
+        if not legacy_review_mode:
+            disposition_keys = (
+                "candidate_rule_id",
+                "family_id",
+                "evidence_id",
+                "final_status",
+                "runtime_effect_key",
+                "review_ids",
+                "source_refs",
+                "target_rule_id",
+                "merged_into_candidate_id",
+                "boundary_signal_ids",
+                "rejection_reason_code",
+                "evidence_gap_id",
+            )
+            expected_dispositions = [
+                {key: item[key] for key in disposition_keys}
+                for item in active_promotion_review.get("candidate_dispositions", [])
+            ]
+            expected_integration = {
+                "authority_path": "research/grammar/runtime_integration.review.json",
+                "phase_status": active_promotion_review.get("declared_phase_status"),
+                "source_count": len(active_promotion_review.get("source_dispositions", [])),
+                "evidence_count": len(active_promotion_review.get("evidence_reviews", [])),
+                "candidate_count": len(expected_dispositions),
+                "final_candidate_count": sum(
+                    item.get("final_status") != "EVIDENCE_GAP_PENDING"
+                    for item in expected_dispositions
+                ),
+                "dispositions": expected_dispositions,
+            }
+            if grammar.get("runtime_integration") != expected_integration:
+                add_issue(
+                    issues,
+                    "GRAMMAR-INTEGRATION-DRIFT",
+                    "runtime_integration",
+                    "Grammar runtime dispositions must exactly match the canonical integration authority.",
+                )
 
     project_constraints = grammar.get("project_constraints", []) if isinstance(grammar.get("project_constraints"), list) else []
     safety_constraints = grammar.get("safety_constraints", []) if isinstance(grammar.get("safety_constraints"), list) else []
@@ -426,6 +488,7 @@ def validate_grammar(
         )
 
     operational_grammar = copy.deepcopy(grammar)
+    operational_grammar.pop("runtime_integration", None)
     for rule in operational_grammar.get("rules", []) if isinstance(operational_grammar.get("rules"), list) else []:
         if not isinstance(rule, dict):
             continue

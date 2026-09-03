@@ -71,6 +71,7 @@ class CandidateRuleContractTests(unittest.TestCase):
         self.assertIn("applicability_evidence", required)
         self.assertIn("unknown_dependencies", required)
         self.assertIn("promotion", required)
+        self.assertIn("runtime_integration", required)
         confidence = schema["$defs"]["confidence"]
         self.assertFalse(confidence["additionalProperties"])
         self.assertEqual(
@@ -85,6 +86,7 @@ class CandidateRuleContractTests(unittest.TestCase):
                 "GENERAL_DEFAULT",
                 "REJECTED",
                 "BLOCKED_BY_UNKNOWN",
+                "EVIDENCE_GAP_PENDING",
             },
         )
 
@@ -127,32 +129,38 @@ class CandidateRuleContractTests(unittest.TestCase):
         })
         self.assertIn("not promotion", self.index["normalization_policy"]["promotion_boundary"].lower())
 
-    def test_wave1_promotes_three_and_keeps_remaining_candidates_blocked(self) -> None:
+    def test_exhaustive_dispositions_replace_blocked_as_the_runtime_authority(self) -> None:
         candidates = self.index["candidates"]
         self.assertTrue(candidates)
+        review = read_json(REPO_ROOT / "research" / "grammar" / "runtime_integration.review.json")
+        expected = {
+            item["candidate_rule_id"]: item["final_status"]
+            for item in review["candidate_dispositions"]
+        }
         self.assertEqual(
-            Counter(candidate["promotion"]["status"] for candidate in candidates),
-            Counter({"BLOCKED_BY_UNKNOWN": 121, "CROSS_WORK_SUPPORTED": 3}),
+            {candidate["candidate_rule_id"]: candidate["runtime_integration"]["final_status"] for candidate in candidates},
+            expected,
         )
+        self.assertNotIn("BLOCKED_BY_UNKNOWN", Counter(candidate["promotion"]["status"] for candidate in candidates))
         self.assertEqual(
             sum(candidate["rights_boundary"]["runtime_authorized"] for candidate in candidates),
-            3,
+            sum(status == "POSITIVE_RUNTIME_RULE" for status in expected.values()),
         )
         self.assertEqual(
             {tuple(candidate["confidence"]) for candidate in candidates},
             {("execution", "transfer", "within_source")},
         )
         promoted = [candidate for candidate in candidates if candidate["promotion"]["status"] == "CROSS_WORK_SUPPORTED"]
-        blocked = [candidate for candidate in candidates if candidate["promotion"]["status"] == "BLOCKED_BY_UNKNOWN"]
+        pending = [candidate for candidate in candidates if candidate["runtime_integration"]["final_status"] == "EVIDENCE_GAP_PENDING"]
         self.assertTrue(all(not any(candidate["unknown_dependencies"].values()) for candidate in promoted))
         self.assertTrue(all("UNKNOWN" not in candidate["confidence"].values() for candidate in promoted))
-        self.assertTrue(all(any(candidate["unknown_dependencies"].values()) for candidate in blocked))
+        self.assertTrue(all(any(candidate["unknown_dependencies"].values()) for candidate in pending))
 
-    def test_only_wave1_sources_gain_reviewed_problem_and_roles(self) -> None:
+    def test_only_positive_runtime_sources_gain_reviewed_problem_and_roles(self) -> None:
         reviewed_ids = {
-            "MRR-S04E07-ACT-FOUR-VISUAL-001",
-            "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
-            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+            candidate["source"]["evidence_id"]
+            for candidate in self.index["candidates"]
+            if candidate["promotion"]["status"] == "CROSS_WORK_SUPPORTED"
         }
         for evidence in self.sources:
             problem = evidence["scene_problem"]
@@ -165,7 +173,8 @@ class CandidateRuleContractTests(unittest.TestCase):
                 self.assertEqual(problem["status"], "UNKNOWN")
                 self.assertEqual(problem["source_refs"], [])
         promoted = [candidate for candidate in self.index["candidates"] if candidate["promotion"]["status"] == "CROSS_WORK_SUPPORTED"]
-        self.assertEqual(len(promoted), 3)
+        review = read_json(REPO_ROOT / "research" / "grammar" / "runtime_integration.review.json")
+        self.assertEqual(len(promoted), len(review["runtime_rule_specs"]))
         self.assertTrue(all(candidate["functional_roles"] for candidate in promoted))
         self.assertTrue(all(candidate["scene_problem"]["status"] == "INFERRED" for candidate in promoted))
 
@@ -174,7 +183,10 @@ class CandidateRuleContractTests(unittest.TestCase):
         self.assertEqual(report["status"], "PASS")
         self.assertEqual(report["candidate_count"], 124)
         self.assertEqual(report["family_count"], 16)
-        self.assertEqual(report["runtime_authorized_count"], 3)
+        self.assertEqual(
+            report["runtime_authorized_count"],
+            sum(candidate["rights_boundary"]["runtime_authorized"] for candidate in self.index["candidates"]),
+        )
         self.assertEqual(report["error_count"], 0)
 
     def test_unknown_candidate_cannot_be_promoted(self) -> None:

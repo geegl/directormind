@@ -35,6 +35,7 @@ def checks(report_root: Path) -> list[Check]:
         Check("generated review determinism", (python, f"{script}/render_scene_evidence.py", "--check")),
         Check("candidate index determinism", (python, f"{script}/build_candidate_rule_index.py", "--check")),
         Check("runtime promotion review", (python, f"{script}/validate_runtime_rule_promotion_review.py", "--report", str(report_root / "runtime-rule-promotion-wave1-validation.json"))),
+        Check("exhaustive runtime integration authority", (python, f"{script}/validate_runtime_integration_review.py", "--report", str(report_root / "runtime-integration-validation.json"))),
         Check("Scene Evidence validation", (python, f"{script}/validate_scene_evidence.py", "research/evidence", "--report", str(report_root / "scene-evidence-validation.json"), "--quiet")),
         Check("candidate promotion gates", (python, f"{script}/validate_candidate_rules.py", "--report", str(report_root / "candidate-rule-validation.json"), "--quiet")),
         Check("runtime Grammar build determinism", (python, f"{script}/build_director_grammar.py", "--check")),
@@ -42,6 +43,7 @@ def checks(report_root: Path) -> list[Check]:
         Check("routing-case validation", (python, f"{script}/validate_director_routing_cases.py", "--report", str(report_root / "director-routing-validation.json"))),
         Check("forward-test build determinism", (python, f"{script}/build_forward_tests.py", "--check")),
         Check("forward-test repository", (python, f"{script}/validate_forward_tests.py", "--report", str(report_root / "forward-test-validation.json"))),
+        Check("exhaustive runtime integration report", (python, f"{script}/build_exhaustive_runtime_integration_validation.py", "--report", str(report_root / "exhaustive-runtime-integration-validation.json"))),
         Check("unit and CLI suite", (python, "-m", "unittest", "discover", "-s", "skills/drama-director-compiler/tests"), quick=False),
         Check("whitespace", ("git", "diff", "--check", "origin/main...HEAD")),
     ]
@@ -94,14 +96,17 @@ def main(argv: Sequence[str] | None = None) -> int:
 
         if not failures:
             versioned_root = REPOSITORY_ROOT / "research" / "validation"
-            for name in (
+            versioned_report_names = (
                 "scene-evidence-validation.json",
                 "runtime-rule-promotion-wave1-validation.json",
+                "runtime-integration-validation.json",
                 "candidate-rule-validation.json",
                 "director-grammar-validation.json",
                 "director-routing-validation.json",
                 "forward-test-validation.json",
-            ):
+                "exhaustive-runtime-integration-validation.json",
+            )
+            for name in versioned_report_names:
                 generated = report_root / name
                 versioned = versioned_root / name
                 passed = generated.is_file() and versioned.is_file() and generated.read_bytes() == versioned.read_bytes()
@@ -149,7 +154,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                 return 1
             final_report_count = 1
 
-        total = len(selected) + 6 + final_report_count
+        total = len(selected) + len(versioned_report_names) + final_report_count
         print(f"PASS: {total} repository checks")
         return 0
 

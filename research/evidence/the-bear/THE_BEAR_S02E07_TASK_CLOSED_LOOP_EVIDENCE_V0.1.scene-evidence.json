@@ -27190,6 +27190,27 @@
       "unknowns": [
         "All semantic audio facts remain unknown."
       ]
+    },
+    {
+      "method_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "BEAR-S02E07-TASK-CLOSED-LOOP-001-S001",
+        "BEAR-S02E07-TASK-CLOSED-LOOP-001-S042",
+        "BEAR-S02E07-TASK-CLOSED-LOOP-001-S044",
+        "BEAR-S02E07-TASK-CLOSED-LOOP-001-S058",
+        "BEAR-S02E07-TASK-CLOSED-LOOP-001-S072",
+        "BEAR-S02E07-TASK-CLOSED-LOOP-001-S095",
+        "BEAR-S02E07-TASK-CLOSED-LOOP-001-S104",
+        "BEAR-S02E07-TASK-CLOSED-LOOP-001-S114"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],

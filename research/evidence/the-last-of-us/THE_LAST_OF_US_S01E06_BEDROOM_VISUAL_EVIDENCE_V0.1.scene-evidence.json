@@ -6673,6 +6673,33 @@
       "unknowns": [
         "Dialogue meaning, emotional cause, cross-cut identity, lens metadata, and all semantic audio remain unknown."
       ]
+    },
+    {
+      "method_id": "TLOU-BEDROOM-LOCAL-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "TLOU-BEDROOM-LOCAL-001-S001",
+        "TLOU-BEDROOM-LOCAL-001-S003",
+        "TLOU-BEDROOM-LOCAL-001-S004",
+        "TLOU-BEDROOM-LOCAL-001-S005",
+        "TLOU-BEDROOM-LOCAL-001-S010",
+        "TLOU-BEDROOM-LOCAL-001-S014",
+        "TLOU-BEDROOM-LOCAL-001-S015",
+        "TLOU-BEDROOM-LOCAL-001-S016",
+        "TLOU-BEDROOM-LOCAL-001-S017",
+        "TLOU-BEDROOM-LOCAL-001-S018",
+        "TLOU-BEDROOM-LOCAL-001-S019",
+        "TLOU-BEDROOM-LOCAL-001-S020",
+        "TLOU-BEDROOM-LOCAL-001-S024",
+        "TLOU-BEDROOM-LOCAL-001-S027"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],

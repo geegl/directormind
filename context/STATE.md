@@ -4,96 +4,96 @@ Updated: 2026-09-04
 
 ## Current phase
 
-Runtime Rule Promotion Wave 1 is complete and awaiting the user's merge decision on
-`codex/runtime-rule-promotion-wave1`; PR #4 is open and `main` remains unmerged.
-The locally verified implementation now produces three real `CROSS_WORK_SUPPORTED`
-runtime rules from nine newly replayed evidence units and three mechanism
-families. This meets the numerical product threshold for `COMPLETE`, but the
-first independent clean-checkout review replayed all nine units and found two
-P1s: an OTS mislabeled as clean-single support, and contradictory/unbound
-original routing facts. Both were repaired. The repaired implementation passed
-the complete diff, hosted CI and independent re-review with no must-fix finding.
-The latest independent review found two additional P1 acceptance gaps: runtime
-Shot lineage could inherit unreviewed legacy-candidate Shots, and `COMPLETE` did
-not independently require three distinct scene problems. Both are repaired.
-The local contract is green at 257 tests and all 21 repository checks; hosted CI
-passed, and a new clean-checkout independent audit returned
-`PASS_LOCAL / NO_MUST_FIX_FINDINGS`.
+Exhaustive Runtime Integration is `PARTIAL_EVIDENCE_GAP` on
+`codex/exhaustive-runtime-integration`. The fixed corpus is fully inventoried,
+but the task is not complete: 17 of 124 candidates have evidence-backed final
+dispositions and 107 still require the exact reviews listed in the canonical
+gap register. Four runtime rules are active across four mechanism families.
 
-Only the root agent writes shared files. The independent reviewers remained
-read-only and did not implement the repairs. No source media was added,
-deleted, moved, or committed. `main` remains unchanged and must not be merged by
-this task.
+Root is the only repository writer. Read-only reviewers replayed selected local
+video intervals and did not sign the final audit. No source media was added,
+deleted, moved, or committed. `main` remains unchanged. All 283 tests and 25
+local repository checks pass. A new PR, hosted CI, and the final clean-checkout
+independent audit are still pending.
 
 ## Current counts
 
 | Item | Current value |
 |---|---:|
 | Local source dispositions | 33 |
-| Canonical current-local Scene Evidence JSON | 31 |
+| Canonical Scene Evidence JSON | 31 |
 | Shot/edit units | 2,343 |
 | Candidate identities | 124 |
 | Mechanism families | 16 |
-| Freshly replayed evidence units | 9 |
-| `CROSS_WORK_SUPPORTED` candidates | 3 |
-| Runtime-authorized rules | 3 |
-| Runtime-rule families | 3 |
-| Runtime-rule scene problems | 3 |
-| Candidates still blocked | 121 |
-| Forward-test packages | 12 |
-| Positive `SELECTED` packages | 3 |
-| Boundary/non-applicable packages | 3 |
-| `NO_APPLICABLE_RULE` packages | 9 |
+| Evidence records reviewed | 31 |
+| Moving-image reviewed Shot refs | 53 |
+| Final candidate dispositions | 17 |
+| Candidates pending evidence | 107 |
+| Precise evidence gaps | 17 |
+| Evidence units with a final decision mapping | 12 |
+| Runtime-active families | 4 |
+| Runtime-authorized rules | 4 |
+| Positive forward packages | 4 |
+| Boundary forward packages | 4 |
+| Total forward packages | 17 |
 | Directly auditioned semantic-audio scenes | 0 |
 
-The three runtime rules address performance ownership, spatial relation reset,
-and proximity endpoint coverage. They are visual-only (`audio_dependency=false`),
-forbid surface copying, use project-original fallbacks, and remain
-`HUMAN_REVIEW_PENDING` in every creative package.
+Final dispositions currently comprise four positive rules, seven supporting
+candidates, five boundary/counterexample candidates, one merged duplicate and
+zero evidence-backed rejections. `EVIDENCE_GAP_PENDING` is an interim state,
+not one of the five required final outcomes.
+
+## Active runtime rules
+
+| Rule | Family | Director decision changed |
+|---|---|---|
+| `DR-PERFORMANCE-OWNER-HOLD` | Screen ownership and performance hold | Coverage, blocking, reaction timing and edit |
+| `DR-RELATION-RESET-AFTER-SPATIAL-CHANGE` | Spatial registration and reset | Coverage, blocking and edit |
+| `DR-SHARED-FRAME-FOR-RELATION-ENDPOINT` | Proximity and relation geometry | Coverage, blocking, pacing and edit |
+| `DR-COMPARATIVE-FIELD-BEFORE-RELATION` | Object state and custody | Coverage, blocking and edit |
+
+Each active rule has exact moving-image-reviewed Shot lineage, unrelated-work
+support, a real reviewed boundary, a project-original fallback, and original
+positive plus boundary routing packages. All creative outputs remain
+`HUMAN_REVIEW_PENDING`; none authorizes generation or publication.
+
+## Important evidence correction
+
+Renewed multi-frame review disproved the legacy description of
+`WIRE-S01E04-OLD-CASES-001-S040`. The canonical converter now records a person
+at the window in medium framing and leaves the object's identity, relation to
+earlier records, camera motion, cut motivation and narrative meaning unknown.
+That Shot is not part of the comparison rule's runtime lineage. The immutable
+legacy Markdown remains unchanged.
 
 ## Authoritative sources
 
 | Authority | Path | Current status |
 |---|---|---|
-| Per-scene facts | `research/evidence/**/*.scene-evidence.json` | ACTIVE — 31 canonical JSON units |
-| Wave 1 video-review and promotion decisions | `research/grammar/runtime_rule_promotion_wave1.review.json` | ACTIVE — 9 reviews, 3 promotions |
-| Candidate-rule lineage and grouping | `research/grammar/candidate_rule_index.json` | ACTIVE — 124 candidates, 16 families |
-| Cross-work support and contrary evidence | `research/grammar/cross_work_support_matrix.json` | ACTIVE — 3 supported families with real boundaries |
-| Runtime directing rules | `research/grammar/director_grammar_v0.2.json` | ACTIVE — 3 runtime rules |
-| Original positive and boundary tests | `examples/forward-tests/index.json` | ACTIVE — 12 packages |
-| Phase checklist and evidence | `context/RUNTIME_RULE_PROMOTION_WAVE1_CHECKLIST.md` | ACTIVE |
-| Phase, counts, blockers and next step | `context/STATE.md` | ACTIVE |
+| Live phase summary | `context/STATE.md` | ACTIVE — single current status entrypoint |
+| Exhaustive dispositions and precise gaps | `research/grammar/runtime_integration.review.json` | ACTIVE — canonical authority |
+| Per-scene facts | `research/evidence/**/*.scene-evidence.json` | ACTIVE — 31 records |
+| Candidate lineage and grouping | `research/grammar/candidate_rule_index.json` | GENERATED — 124 candidates, 16 families |
+| Cross-work support and boundaries | `research/grammar/cross_work_support_matrix.json` | GENERATED |
+| Runtime directing rules | `research/grammar/director_grammar_v0.2.json` | GENERATED — 4 rules |
+| Original routing packages | `examples/forward-tests/index.json` | GENERATED — 17 packages |
+| Machine validation summary | `research/validation/exhaustive-runtime-integration-validation.json` | PASS / PARTIAL_EVIDENCE_GAP |
+| Human-readable phase report | `research/validation/EXHAUSTIVE_RUNTIME_INTEGRATION_REPORT.md` | ACTIVE |
 
 Generated `*.scene-evidence.generated.md` files are review views, not separate
 fact sources. The 30 legacy evidence Markdown ledgers remain immutable
 provenance. Material catalogs do not authorize rules.
 
-## Verified boundaries
+## Remaining boundary
 
-- Fresh review used the local source videos and exact canonical Shot intervals.
-  Temporary review frames remain outside the repository.
-- Three short visible-text anchors are stored only as paraphrases. No subtitle
-  file, dialogue transcript, still, contact sheet, or local media path is
-  committed.
-- Semantic audio was not directly auditioned and cannot support any promoted
-  rule.
-- Scene-problem labels and functional roles are `INFERRED`, with exact picture
-  and text sources; unproved motive, identity, contact, lens and audio facts
-  remain `UNKNOWN`.
-- Runtime Grammar Shot lineage is now the exact fresh-reviewed union of source,
-  support and boundary refs: 9, 9 and 13 Shots for the three rules. Full legacy
-  candidate lineage remains separate in the candidate index.
-- `COMPLETE` is recomputed from three promoted rules, three families and three
-  distinct canonical scene problems.
-- Structural selection proves routing behavior, not creative quality, audience
-  effect, generation approval, or publication approval.
-- B99 S016 is recorded as an owner-dominant OTS with a foreground counterpart,
-  not clean-single support. The performance rule instead uses the verified
-  Mr. Robot source plus Better Call Saul cross-work support.
-- Boundary routing signals now exclude mutually contradictory positive and
-  non-applicable claims. Romantic proximity classification and continuous-time
-  or elliptical signals resolve to explicit project-original locked facts.
+The existing corpus has not yet supplied enough reviewed evidence to assign
+the remaining 107 candidates one of the five final outcomes or to give all 16
+families a final runtime role. The 17 prioritized gaps name the exact intervals
+and closure conditions needed. Sound-dependent candidates remain open until
+the existing audio is directly auditioned.
 
 ## Next single action
 
-Stop and wait for the user's separate PR #4 merge decision. Do not merge `main`.
+Commit and recheck the complete branch diff, then push the new branch, open a
+new PR, wait for its final-head CI, and obtain a clean-checkout read-only audit
+across all 16 families. Do not merge `main`.

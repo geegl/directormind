@@ -26,6 +26,7 @@ LIVE_CHECK_NAMES = (
     "generated review determinism",
     "candidate index determinism",
     "runtime promotion review",
+    "exhaustive runtime integration authority",
     "Scene Evidence validation",
     "candidate promotion gates",
     "runtime Grammar build determinism",
@@ -33,14 +34,17 @@ LIVE_CHECK_NAMES = (
     "routing-case validation",
     "forward-test build determinism",
     "forward-test repository",
+    "exhaustive runtime integration report",
     "unit and CLI suite",
     "whitespace",
     "versioned report scene-evidence-validation.json",
     "versioned report runtime-rule-promotion-wave1-validation.json",
+    "versioned report runtime-integration-validation.json",
     "versioned report candidate-rule-validation.json",
     "versioned report director-grammar-validation.json",
     "versioned report director-routing-validation.json",
     "versioned report forward-test-validation.json",
+    "versioned report exhaustive-runtime-integration-validation.json",
 )
 
 sys.path.insert(0, str(SCRIPT_DIR))
@@ -104,37 +108,60 @@ def _live_pr_state_required() -> dict[str, str]:
 
 def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, Any]:
     scene = _load_report("scene-evidence-validation.json")
-    promotion = _load_report("runtime-rule-promotion-wave1-validation.json")
+    wave1_promotion = _load_report("runtime-rule-promotion-wave1-validation.json")
+    integration = _load_report("runtime-integration-validation.json")
     candidate = _load_report("candidate-rule-validation.json")
     grammar = _load_report("director-grammar-validation.json")
     routing = _load_report("director-routing-validation.json")
     forward = _load_report("forward-test-validation.json")
+    exhaustive = _load_report("exhaustive-runtime-integration-validation.json")
     boundaries = validate_repository()
     suite = unittest.defaultTestLoader.discover(str(TEST_ROOT))
     unit_test_count = _count_tests(suite)
-    promotion_counts = candidate.get("promotion_status_counts", {})
-    blocked_count = promotion_counts.get("BLOCKED_BY_UNKNOWN", 0)
+    integration_review = load_json(
+        REPOSITORY_ROOT / "research" / "grammar" / "runtime_integration.review.json"
+    )
+    final_status_counts = exhaustive.get("candidate_final_status_counts", {})
+    moving_image_reviewed_shots = len({
+        shot_id
+        for item in integration_review.get("evidence_reviews", [])
+        for shot_id in item.get("moving_image_reviewed_shot_ids", [])
+    })
     candidate_ids = [
         item["candidate_rule_id"]
         for item in load_json(REPOSITORY_ROOT / "research" / "grammar" / "candidate_rule_index.json")["candidates"]
     ]
     validation_errors = sum(
         report["error_count"]
-        for report in (scene, promotion, candidate, grammar, routing, forward)
+        for report in (
+            scene,
+            wave1_promotion,
+            integration,
+            candidate,
+            grammar,
+            routing,
+            forward,
+            exhaustive,
+        )
     )
     errors = _evidence_errors(live_evidence)
     expected_report_statuses = (
         ("SCENE_VALIDATION_NOT_PASSING", scene["status"] == "PASS_STRUCTURAL"),
-        ("PROMOTION_REVIEW_NOT_PASSING", promotion["status"] == "PASS" and promotion["phase_status"] == "COMPLETE"),
+        ("WAVE1_PROMOTION_REVIEW_NOT_PASSING", wave1_promotion["status"] == "PASS"),
         (
-            "PROMOTION_SCENE_PROBLEM_COUNT_INSUFFICIENT",
-            isinstance(promotion.get("promoted_scene_problem_count"), int)
-            and promotion["promoted_scene_problem_count"] >= 3,
+            "RUNTIME_INTEGRATION_AUTHORITY_NOT_PASSING",
+            integration["status"] == "PASS"
+            and integration["phase_status"] == "PARTIAL_EVIDENCE_GAP",
         ),
         ("CANDIDATE_VALIDATION_NOT_PASSING", candidate["status"] == "PASS"),
         ("GRAMMAR_VALIDATION_NOT_PASSING", grammar["status"] == "PASS"),
         ("ROUTING_VALIDATION_NOT_PASSING", routing["status"] == "PASS"),
         ("FORWARD_VALIDATION_NOT_PASSING", forward["status"] == "PASS"),
+        (
+            "EXHAUSTIVE_INTEGRATION_REPORT_NOT_PASSING",
+            exhaustive["status"] == "PASS"
+            and exhaustive["phase_status"] == "PARTIAL_EVIDENCE_GAP",
+        ),
         ("REPOSITORY_BOUNDARIES_NOT_PASSING", boundaries["status"] == "PASS"),
     )
     errors.extend(code for code, passed in expected_report_statuses if not passed)
@@ -148,21 +175,27 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
     local_runner_pass = not errors
 
     return {
-        "schema_version": "final-generalization-validation/0.4",
+        "schema_version": "final-generalization-validation/0.5",
         "status": "PASS_LOCAL" if local_runner_pass else "FAIL_LOCAL",
+        "phase_status": integration["phase_status"],
         "counts": {
             "source_dispositions": _source_disposition_count(),
             "canonical_scenes": scene["total_scenes"],
             "shot_edit_units": scene["total_shots"],
             "candidate_identities": candidate["candidate_count"],
             "candidate_families": candidate["family_count"],
-            "reviewed_evidence_units": promotion["reviewed_evidence_count"],
-            "promoted_rule_families": promotion["promoted_family_count"],
-            "promoted_scene_problem_count": promotion["promoted_scene_problem_count"],
-            "blocked_candidates": blocked_count,
-            "cross_work_supported_candidates": promotion_counts.get("CROSS_WORK_SUPPORTED", 0),
-            "general_default_candidates": promotion_counts.get("GENERAL_DEFAULT", 0),
-            "rejected_candidates": promotion_counts.get("REJECTED", 0),
+            "reviewed_evidence_units": integration["evidence_review_count"],
+            "moving_image_reviewed_shots": moving_image_reviewed_shots,
+            "final_candidate_dispositions": integration["candidate_final_disposition_count"],
+            "pending_evidence_gap_candidates": integration["unresolved_candidate_count"],
+            "evidence_gaps": integration["evidence_gap_count"],
+            "runtime_active_families": integration["runtime_active_family_count"],
+            "evidence_final_mappings": integration["evidence_final_mapping_count"],
+            "positive_runtime_candidates": final_status_counts.get("POSITIVE_RUNTIME_RULE", 0),
+            "supporting_evidence_candidates": final_status_counts.get("SUPPORTING_EVIDENCE", 0),
+            "boundary_candidates": final_status_counts.get("BOUNDARY_OR_COUNTEREXAMPLE", 0),
+            "merged_duplicate_candidates": final_status_counts.get("MERGED_DUPLICATE", 0),
+            "rejected_candidates": final_status_counts.get("REJECTED_WITH_REASON", 0),
             "duplicate_candidate_ids": len(candidate_ids) - len(set(candidate_ids)),
             "eligible_candidates": grammar["eligible_candidate_count"],
             "runtime_rules": grammar["runtime_rule_count"],
@@ -194,7 +227,8 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
             "converter_determinism": "PASS" if evidence_pass("canonical conversion determinism") else "FAIL",
             "renderer_determinism": "PASS" if evidence_pass("generated review determinism") else "FAIL",
             "candidate_index_determinism": "PASS" if evidence_pass("candidate index determinism") else "FAIL",
-            "promotion_review": "PASS" if evidence_pass("runtime promotion review") and promotion["status"] == "PASS" else "FAIL",
+            "wave1_promotion_review": "PASS" if evidence_pass("runtime promotion review") and wave1_promotion["status"] == "PASS" else "FAIL",
+            "runtime_integration_authority": "PASS" if evidence_pass("exhaustive runtime integration authority") and integration["status"] == "PASS" else "FAIL",
             "scene_validation": "PASS_STRUCTURAL" if evidence_pass("Scene Evidence validation") and scene["status"] == "PASS_STRUCTURAL" else "FAIL",
             "candidate_validation": "PASS" if evidence_pass("candidate promotion gates") and candidate["status"] == "PASS" else "FAIL",
             "grammar_validation": "PASS" if evidence_pass("runtime Grammar validation") and grammar["status"] == "PASS" else "FAIL",
@@ -202,6 +236,7 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
             "routing_validation": "PASS" if evidence_pass("routing-case validation") and routing["status"] == "PASS" else "FAIL",
             "forward_build_determinism": "PASS" if evidence_pass("forward-test build determinism") else "FAIL",
             "forward_validation": "PASS" if evidence_pass("forward-test repository") and forward["status"] == "PASS" else "FAIL",
+            "exhaustive_integration_report": "PASS" if evidence_pass("exhaustive runtime integration report") and exhaustive["status"] == "PASS" else "FAIL",
             "unit_suite": "PASS" if evidence_pass("unit and CLI suite") else "FAIL",
             "repository_boundaries": "PASS" if evidence_pass("repository syntax, references and public boundaries") and boundaries["status"] == "PASS" else "FAIL",
             "whitespace": "PASS" if evidence_pass("whitespace") and boundaries["whitespace_issue_count"] == 0 else "FAIL",
@@ -217,15 +252,17 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
         },
         "external_actions": {
             "pushed": _live_pr_state_required(),
-            "old_pull_request_closed": _live_pr_state_required(),
+            "pull_request_created": _live_pr_state_required(),
             "merged": _declared_not_performed(),
             "deployed": _declared_not_performed(),
             "published": _declared_not_performed(),
             "media_deleted": _declared_not_performed(),
         },
         "unverified_boundaries": [
-            "ONLY_NINE_EVIDENCE_UNITS_REPLAYED_FOR_WAVE1_RULES",
-            "SEMANTIC_AUDIO_NOT_DIRECTLY_AUDITIONED",
+            "ONE_HUNDRED_SEVEN_CANDIDATES_REMAIN_EVIDENCE_GAP_PENDING",
+            "TWELVE_OF_THIRTY_ONE_EVIDENCE_UNITS_HAVE_FINAL_DECISION_MAPPINGS",
+            "TWELVE_OF_SIXTEEN_FAMILIES_HAVE_NO_ACTIVE_RUNTIME_RULE",
+            "SEMANTIC_AUDIO_REMAINS_UNAUDITIONED",
             "FORWARD_SELECTION_IS_STRUCTURAL_NOT_CREATIVE_APPROVAL",
             "CREATIVE_QUALITY_AND_AUDIENCE_EFFECT_NOT_PROVED",
             "REMOTE_CI_RESULT_IS_POST_COMMIT_EXTERNAL_EVIDENCE",

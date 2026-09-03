@@ -145,15 +145,19 @@
       "evidence_lineage": {
         "candidate_rule_ids": [
           "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C04-PROGRESSIVE-RELATION-REMOVAL-TO-HELD-SINGLES",
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-MICRO-BRACKET-HOLD-002",
           "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C03-SUSTAIN-CONTESTED-PERSON-SCREEN-OWNERSHIP",
-          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C02-SUSTAIN-CORRECTOR-IN-SHARED-WORK-FRAME-WITH-SELECTIVE-RECEIVER-CHECKS"
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C02-SUSTAIN-CORRECTOR-IN-SHARED-WORK-FRAME-WITH-SELECTIVE-RECEIVER-CHECKS",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C04-END-ON-TERMINAL-OWNER-WHILE-BACKGROUND-TASK-CONTINUES"
         ],
         "counterexample_ids": [
-          "WAVE1-CTR-PERFORMANCE-DWP"
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C02-SUSTAIN-CORRECTOR-IN-SHARED-WORK-FRAME-WITH-SELECTIVE-RECEIVER-CHECKS",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C04-END-ON-TERMINAL-OWNER-WHILE-BACKGROUND-TASK-CONTINUES"
         ],
         "director_review_id": null,
         "evidence_ids": [
           "MRR-S04E07-ACT-FOUR-VISUAL-001",
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001",
           "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001"
         ],
@@ -162,22 +166,31 @@
           "MRR-S04E07-ACT-FOUR-VISUAL-001-S197",
           "MRR-S04E07-ACT-FOUR-VISUAL-001-S199",
           "MRR-S04E07-ACT-FOUR-VISUAL-001-S201",
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S011",
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S015",
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S016",
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S018",
           "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S082",
           "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S097",
           "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S098",
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S016",
-          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S019"
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S019",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S024",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S025",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S026"
         ],
         "forward_test_ids": [
           "ORIGINAL-PERFORMANCE-OWNER-HOLD",
           "ORIGINAL-PERFORMANCE-CONCURRENT-STATE"
         ],
         "relation_review_ids": [
-          "WAVE1-REL-PERFORMANCE-BCS-REVIEW",
-          "WAVE1-CTR-PERFORMANCE-DWP-REVIEW"
+          "SUPPORT:DR-PERFORMANCE-OWNER-HOLD",
+          "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:wave1-reviewed-boundary",
+          "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous-work"
         ],
         "work_ids": [
           "MR-ROBOT-S04E07",
+          "BROOKLYN-NINE-NINE-S05E14",
           "BETTER-CALL-SAUL-S03E05",
           "THE-DEVIL-WEARS-PRADA-2006"
         ]
@@ -325,17 +338,19 @@
       "evidence_lineage": {
         "candidate_rule_ids": [
           "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
-          "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C03",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE"
+          "NOBODY-2021-BUS-001-NOBODY-C03-SPATIAL-RESET-AFTER-BURST",
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE",
+          "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C03"
         ],
         "counterexample_ids": [
-          "WAVE1-CTR-SPATIAL-TSN"
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE"
         ],
         "director_review_id": null,
         "evidence_ids": [
           "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
-          "TLOU-BEDROOM-LOCAL-001",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001"
+          "NOBODY-2021-BUS-001",
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
+          "TLOU-BEDROOM-LOCAL-001"
         ],
         "evidence_shot_ids": [
           "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
@@ -343,23 +358,27 @@
           "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
           "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S061",
           "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S065",
-          "TLOU-BEDROOM-LOCAL-001-S015",
-          "TLOU-BEDROOM-LOCAL-001-S019",
+          "NOBODY-2021-BUS-001-S088",
+          "NOBODY-2021-BUS-001-S100",
+          "NOBODY-2021-BUS-001-S118",
           "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S090",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091"
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091",
+          "TLOU-BEDROOM-LOCAL-001-S015",
+          "TLOU-BEDROOM-LOCAL-001-S019"
         ],
         "forward_test_ids": [
           "ORIGINAL-RELATIONSHIP-FRACTURE",
           "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART"
         ],
         "relation_review_ids": [
-          "WAVE1-REL-SPATIAL-TLOU-REVIEW",
-          "WAVE1-CTR-SPATIAL-TSN-REVIEW"
+          "SUPPORT:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+          "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:wave1-reviewed-boundary"
         ],
         "work_ids": [
           "MARRIAGE-STORY-2019",
-          "THE-LAST-OF-US-S01E06",
-          "THE-SOCIAL-NETWORK-2010"
+          "NOBODY-2021",
+          "THE-SOCIAL-NETWORK-2010",
+          "THE-LAST-OF-US-S01E06"
         ]
       },
       "failure_modes": [
@@ -400,7 +419,7 @@
           "The counterpart is already absent and the remaining movement is readable against a fixed room anchor."
         ],
         "signals": [
-          "counterpart_relation_not_required"
+          "counterpart_absent_at_changed_endpoint"
         ]
       },
       "pacing": "Hold the reset until the changed level, zone, or distance reads, then resume singles.",
@@ -419,7 +438,7 @@
         "audit_subject_tags": [],
         "conflicts_with": [],
         "not_applicable_if_any": [
-          "counterpart_relation_not_required"
+          "counterpart_absent_at_changed_endpoint"
         ],
         "required_fact_types": [
           "spatial_change",
@@ -430,7 +449,7 @@
         ],
         "trigger_all_of": [
           "material_spatial_change",
-          "counterpart_relation_required"
+          "counterpart_relation_context_locked"
         ],
         "trigger_any_of": []
       },
@@ -450,7 +469,7 @@
         "description": "A body-level, zone, or distance change invalidates the prior relation geometry while the counterpart relation remains a locked visible fact.",
         "required_signals": [
           "material_spatial_change",
-          "counterpart_relation_required"
+          "counterpart_relation_context_locked"
         ]
       }
     },
@@ -504,17 +523,18 @@
       "evidence_lineage": {
         "candidate_rule_ids": [
           "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C02-DELAY-TIGHT-SHARED-FRAME-UNTIL-DISTANCE-CHANGES",
-          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C04-LATE-HOLDS-NEED-VISIBLE-LEVEL-AND-PROXIMITY-ENDPOINTS",
-          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C03-WITHDRAW-SHARED-FRAME-DELAY-DISTANCE-REVEAL"
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C03-KEEP-HAND-SOURCE-HEAD-RELATION-AND-WITHDRAWAL-READABLE",
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C03-WITHDRAW-SHARED-FRAME-DELAY-DISTANCE-REVEAL",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C04-LATE-HOLDS-NEED-VISIBLE-LEVEL-AND-PROXIMITY-ENDPOINTS"
         ],
         "counterexample_ids": [
-          "WAVE1-CTR-PROXIMITY-CK"
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C03-WITHDRAW-SHARED-FRAME-DELAY-DISTANCE-REVEAL"
         ],
         "director_review_id": null,
         "evidence_ids": [
           "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
-          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
-          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001"
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001"
         ],
         "evidence_shot_ids": [
           "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
@@ -524,25 +544,28 @@
           "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
           "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
           "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S026",
-          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S082",
-          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S083",
-          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S028",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S029",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S030",
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S001",
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026",
-          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027"
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S082",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S083",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085"
         ],
         "forward_test_ids": [
           "ORIGINAL-PROXIMITY-TENSION",
           "ORIGINAL-PROXIMITY-ELLIPSIS"
         ],
         "relation_review_ids": [
-          "WAVE1-REL-PROXIMITY-MS-REVIEW",
-          "WAVE1-CTR-PROXIMITY-CK-REVIEW"
+          "SUPPORT:DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+          "BOUNDARY:DR-SHARED-FRAME-FOR-RELATION-ENDPOINT:wave1-reviewed-boundary"
         ],
         "work_ids": [
           "BRIDGERTON-S02E05",
-          "MARRIAGE-STORY-2019",
-          "CITIZEN-KANE-1941"
+          "CITIZEN-KANE-1941",
+          "MARRIAGE-STORY-2019"
         ]
       },
       "failure_modes": [
@@ -584,7 +607,7 @@
           "The distance change occurs across time ellipsis or only the terminal geometry is story-critical."
         ],
         "signals": [
-          "elliptical_time_change"
+          "distance_change_across_ellipsis"
         ]
       },
       "pacing": "Delay tight isolated coverage until the continuous distance change and endpoint have both registered.",
@@ -604,18 +627,19 @@
         "audit_subject_tags": [],
         "conflicts_with": [],
         "not_applicable_if_any": [
-          "elliptical_time_change"
+          "distance_change_across_ellipsis"
         ],
         "required_fact_types": [
           "distance_change",
-          "relation_endpoint"
+          "relation_endpoint",
+          "time_structure"
         ],
         "scene_problems": [
           "ROMANTIC_PROXIMITY"
         ],
         "trigger_all_of": [
           "relation_distance_change",
-          "continuous_present_time",
+          "time_structure_locked",
           "shared_endpoint_required"
         ],
         "trigger_any_of": []
@@ -636,12 +660,2663 @@
         "description": "A relationship-relevant distance or level change happens in continuous present time and both its path and shared endpoint are locked visible facts.",
         "required_signals": [
           "relation_distance_change",
-          "continuous_present_time",
+          "time_structure_locked",
           "shared_endpoint_required"
+        ]
+      }
+    },
+    {
+      "ai_risk": {
+        "camera": {
+          "level": "MEDIUM",
+          "reasons": [
+            "Scale can drift between the field and selected detail."
+          ]
+        },
+        "continuity": {
+          "level": "HIGH",
+          "reasons": [
+            "Referents can change count, shape, or orientation across cuts."
+          ]
+        },
+        "performance": {
+          "level": "LOW",
+          "reasons": [
+            "Performance requirements are limited to clear handling."
+          ]
+        }
+      },
+      "applicable_when": [
+        "The audience must compare visible referents before an isolated relation or handling detail becomes readable."
+      ],
+      "audio_logic": {
+        "instruction": null,
+        "source_refs": [],
+        "status": "NOT_DEPENDENT"
+      },
+      "blocking": "Keep the visible referents simultaneously readable long enough to establish their relation; do not copy source props.",
+      "canonical_rule_family": "OBJECT-STATE-AND-CUSTODY",
+      "confidence": {
+        "execution": "MEDIUM",
+        "transfer": "MEDIUM",
+        "within_source": "HIGH"
+      },
+      "conflict_levels": [
+        "LOCKED_STORY_FACTS",
+        "CONTINUITY",
+        "SPATIAL_GEOGRAPHY_AND_AXIS",
+        "TRIGGER_SPECIFIC_DIRECTOR_RULES"
+      ],
+      "conflicts_with_rule_ids": [],
+      "continuity": "Preserve referent count, relative scale, orientation, and the relation used by the next action.",
+      "coverage": "Use a field view containing all relevant referents, then move to the relation or handling detail without claiming an unseen selection.",
+      "director_decision": "Establish the full comparison field and common visual relation before isolating the relation used by the next action.",
+      "edit_logic": "Cut from the established comparison field to the relevant relation, not from an unexplained isolated insert.",
+      "evidence_lineage": {
+        "candidate_rule_ids": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C02-SOURCED-MATERIAL-FIELD-BEFORE-SELECTION",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C02-SEPARATE-OBJECT-STATE-FROM-CAUSAL-CLAIM",
+          "WIRE-S01E04-OLD-CASES-001-WIRE-C01-REGISTER-RECORD-TO-LIVE-SPACE"
+        ],
+        "counterexample_ids": [
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C02-SEPARATE-OBJECT-STATE-FROM-CAUSAL-CLAIM"
+        ],
+        "director_review_id": null,
+        "evidence_ids": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
+          "WIRE-S01E04-OLD-CASES-001"
+        ],
+        "evidence_shot_ids": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011",
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009",
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S062",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S081",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S082",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S087",
+          "WIRE-S01E04-OLD-CASES-001-S007",
+          "WIRE-S01E04-OLD-CASES-001-S038"
+        ],
+        "forward_test_ids": [
+          "ORIGINAL-REFERENT-COMPARISON",
+          "ORIGINAL-COMPARISON-NOT-REQUIRED"
+        ],
+        "relation_review_ids": [
+          "MERGE:DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+          "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:single-item-state",
+          "SUPPORT:DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+        ],
+        "work_ids": [
+          "APOLLO-13-1995",
+          "BETTER-CALL-SAUL-S03E05",
+          "THE-WIRE-S01E04"
+        ]
+      },
+      "failure_modes": [
+        "An isolated item appears before the comparison condition is readable.",
+        "Generated alternatives drift or become indistinguishable."
+      ],
+      "fallback": {
+        "camera": "Use a locked project-original overhead comparison plate.",
+        "continuity": "Label project-original referent positions in the IR and preserve them across Shots.",
+        "performance": "Use one simple point-and-place action after the field is established.",
+        "project_original_only": true
+      },
+      "functional_roles": [
+        {
+          "appearance_id": "COMPARISON-FIELD",
+          "functional_role": "comparison_field",
+          "source_refs": [
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
+          ],
+          "status": "INFERRED"
+        },
+        {
+          "appearance_id": "COMPARISON-RELATION",
+          "functional_role": "comparison_relation",
+          "source_refs": [
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+          ],
+          "status": "INFERRED"
+        }
+      ],
+      "human_review": {
+        "review_id": null,
+        "status": "NOT_REQUIRED_FOR_CROSS_WORK"
+      },
+      "name": "Register the comparative field before isolating the relevant relation",
+      "not_applicable_when": {
+        "descriptions": [
+          "Only one item state matters and no comparative field is required."
+        ],
+        "signals": [
+          "comparative_field_not_required"
+        ]
+      },
+      "pacing": "Hold the comparison field until the relation reads, then move into the next project-original action.",
+      "promotion_source_candidate_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
+      "promotion_status": "CROSS_WORK_SUPPORTED",
+      "required_story_facts": [
+        "At least two project-original referents are simultaneously visible.",
+        "Their visible relation must be understood before the next action or detail."
+      ],
+      "rights_boundary": {
+        "project_original_assets_only": true,
+        "subject_matter_similarity_is_trigger": false,
+        "surface_copy_allowed": false
+      },
+      "routing": {
+        "audit_subject_tags": [],
+        "conflicts_with": [],
+        "not_applicable_if_any": [
+          "comparative_field_not_required"
+        ],
+        "required_fact_types": [
+          "referent_set",
+          "relation_constraint"
+        ],
+        "scene_problems": [
+          "PROCEDURAL_COMPETENCE"
+        ],
+        "trigger_all_of": [
+          "multiple_visible_referents",
+          "comparative_relation_required"
+        ],
+        "trigger_any_of": []
+      },
+      "routing_review": {
+        "review_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION-ROUTING-REVIEW",
+        "review_ref": "research/validation/grammar-rule-reviews/DR-COMPARATIVE-FIELD-BEFORE-RELATION-ROUTING.json",
+        "status": "ROOT_VIDEO_VERIFIED"
+      },
+      "rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+      "runtime_authorized": true,
+      "scene_problem": {
+        "primary": "PROCEDURAL_COMPETENCE",
+        "secondary": []
+      },
+      "selection_rank": 5,
+      "trigger": {
+        "description": "Two or more project-original referents must be read together before one visible relation can guide the next action.",
+        "required_signals": [
+          "multiple_visible_referents",
+          "comparative_relation_required"
         ]
       }
     }
   ],
+  "runtime_integration": {
+    "authority_path": "research/grammar/runtime_integration.review.json",
+    "candidate_count": 124,
+    "dispositions": [
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C01-HOLD-SUBJECT-THEN-SEPARATE-THREAT-STATES",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SCALE-AND-REVEAL-LADDER",
+        "evidence_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
+        "family_id": "SCALE-AND-REVEAL-LADDER",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S001",
+          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S004",
+          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S007"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C02-GROUP-PARALLEL-THREADS-BY-VISIBLE-STATE-CHANGE",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-MULTI-THREAD-STATE-INTERCUT",
+        "evidence_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
+        "family_id": "MULTI-THREAD-STATE-INTERCUT",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S007",
+          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S021",
+          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S034"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C03-CUT-TO-VISIBLE-ENVIRONMENT-EVENT-AT-BODY-STATE-PEAK",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-STATE-CHANGE-EDITING",
+        "evidence_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
+        "family_id": "STATE-CHANGE-EDITING",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S024",
+          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S027",
+          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S021"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C04-DELAY-REJOIN-WITH-EMPTY-GEOMETRY-TRACE-AND-CONTACT-RECEIPT",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S029",
+          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S032",
+          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S034"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C01-ASSESSMENT-RECEIVER-TO-NEW-ROOM-ACTION",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-PROCEDURAL-HANDOFF-AND-WORKFLOW",
+        "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
+        "family_id": "PROCEDURAL-HANDOFF-AND-WORKFLOW",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S005",
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C02-SOURCED-MATERIAL-FIELD-BEFORE-SELECTION",
+        "evidence_gap_id": null,
+        "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
+        "family_id": "OBJECT-STATE-AND-CUSTODY",
+        "final_status": "MERGED_DUPLICATE",
+        "merged_into_candidate_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
+        ],
+        "runtime_effect_key": "MERGE:DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009",
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011",
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
+        "evidence_gap_id": null,
+        "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
+        "family_id": "OBJECT-STATE-AND-CUSTODY",
+        "final_status": "POSITIVE_RUNTIME_RULE",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
+        ],
+        "runtime_effect_key": "RULE:DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
+        ],
+        "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C04-DEMONSTRATION-TO-DISTRIBUTED-WORK",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-PROCEDURAL-HANDOFF-AND-WORKFLOW",
+        "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
+        "family_id": "PROCEDURAL-HANDOFF-AND-WORKFLOW",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011",
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-DELAYED-OBSERVER-003",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-RECEIVER-AND-REACTION-DISTRIBUTION",
+        "evidence_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001",
+        "family_id": "RECEIVER-AND-REACTION-DISTRIBUTION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S019",
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S021",
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S022"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-MICRO-BRACKET-HOLD-002",
+        "evidence_gap_id": null,
+        "evidence_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001",
+        "family_id": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
+        "final_status": "SUPPORTING_EVIDENCE",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001"
+        ],
+        "runtime_effect_key": "SUPPORT:DR-PERFORMANCE-OWNER-HOLD",
+        "source_refs": [
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S011",
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S015",
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S016",
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S018"
+        ],
+        "target_rule_id": "DR-PERFORMANCE-OWNER-HOLD"
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-MOBILE-ZONE-CAP-004",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+        "evidence_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001",
+        "family_id": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S022"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-PRIDE-LADDER-001",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
+        "evidence_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001",
+        "family_id": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S001",
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S009",
+          "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S016"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+        "evidence_id": "BEAR-S01E07-REVIEW-001",
+        "family_id": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-BEAR-S01E07-REVIEW-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SPATIAL-REGISTRATION-AND-RESET",
+        "evidence_id": "BEAR-S01E07-REVIEW-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-BEAR-S01E07-REVIEW-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C03-SUBTRACTIVE-AFTERMATH",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-AFTERMATH-AND-TERMINAL-STATE",
+        "evidence_id": "BEAR-S01E07-REVIEW-001",
+        "family_id": "AFTERMATH-AND-TERMINAL-STATE",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-BEAR-S01E07-REVIEW-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C04-FUNCTIONAL-LONG-TAKE-FALLBACK",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+        "evidence_id": "BEAR-S01E07-REVIEW-001",
+        "family_id": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-BEAR-S01E07-REVIEW-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "BEAR-S01E07-REVIEW-001-S001"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C01-COMPETENCE-CLOSED-LOOP",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-PROCEDURAL-HANDOFF-AND-WORKFLOW",
+        "evidence_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001",
+        "family_id": "PROCEDURAL-HANDOFF-AND-WORKFLOW",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-BEAR-S02E07-TASK-CLOSED-LOOP-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "BEAR-S02E07-TASK-CLOSED-LOOP-001-S001",
+          "BEAR-S02E07-TASK-CLOSED-LOOP-001-S058",
+          "BEAR-S02E07-TASK-CLOSED-LOOP-001-S114"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C02-VERSIONED-OBJECT-HANDOFF",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-CONTINUITY-LEDGER-AND-VERSIONING",
+        "evidence_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001",
+        "family_id": "CONTINUITY-LEDGER-AND-VERSIONING",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-BEAR-S02E07-TASK-CLOSED-LOOP-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "BEAR-S02E07-TASK-CLOSED-LOOP-001-S044",
+          "BEAR-S02E07-TASK-CLOSED-LOOP-001-S042",
+          "BEAR-S02E07-TASK-CLOSED-LOOP-001-S072"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C03-DUAL-RESULT-RECEIPT",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-RECEIVER-AND-REACTION-DISTRIBUTION",
+        "evidence_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001",
+        "family_id": "RECEIVER-AND-REACTION-DISTRIBUTION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-BEAR-S02E07-TASK-CLOSED-LOOP-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "BEAR-S02E07-TASK-CLOSED-LOOP-001-S072",
+          "BEAR-S02E07-TASK-CLOSED-LOOP-001-S095",
+          "BEAR-S02E07-TASK-CLOSED-LOOP-001-S104"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C04-TASK-LEDGER-OVER-CAMERA-CONTINUITY",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-CONTINUITY-LEDGER-AND-VERSIONING",
+        "evidence_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001",
+        "family_id": "CONTINUITY-LEDGER-AND-VERSIONING",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-BEAR-S02E07-TASK-CLOSED-LOOP-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "BEAR-S02E07-TASK-CLOSED-LOOP-001-S001",
+          "BEAR-S02E07-TASK-CLOSED-LOOP-001-S058",
+          "BEAR-S02E07-TASK-CLOSED-LOOP-001-S114"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C01-REGISTER-PUBLIC-PROOF-GEOMETRY",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-RECEIVER-AND-REACTION-DISTRIBUTION",
+        "evidence_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
+        "family_id": "RECEIVER-AND-REACTION-DISTRIBUTION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S001",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S053",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S105"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [
+          "comparative_field_not_required"
+        ],
+        "candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C02-SEPARATE-OBJECT-STATE-FROM-CAUSAL-CLAIM",
+        "evidence_gap_id": null,
+        "evidence_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
+        "family_id": "OBJECT-STATE-AND-CUSTODY",
+        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001"
+        ],
+        "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:single-item-state",
+        "source_refs": [
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S062",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S081",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S082",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S087"
+        ],
+        "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C03-SUSTAIN-CONTESTED-PERSON-SCREEN-OWNERSHIP",
+        "evidence_gap_id": null,
+        "evidence_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
+        "family_id": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
+        "final_status": "SUPPORTING_EVIDENCE",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001"
+        ],
+        "runtime_effect_key": "SUPPORT:DR-PERFORMANCE-OWNER-HOLD",
+        "source_refs": [
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S082",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S097",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S098"
+        ],
+        "target_rule_id": "DR-PERFORMANCE-OWNER-HOLD"
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C04-HIERARCHICAL-RECEIPT-AFTER-SINGLE-OWNER-TURN",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-RECEIVER-AND-REACTION-DISTRIBUTION",
+        "evidence_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
+        "family_id": "RECEIVER-AND-REACTION-DISTRIBUTION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S103",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S099",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S102"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C01-REGISTER-ROOM-AXIS-BEFORE-PROXIMITY",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-PROXIMITY-AND-RELATION-GEOMETRY",
+        "evidence_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+        "family_id": "PROXIMITY-AND-RELATION-GEOMETRY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S007",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S013"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C02-DELAY-TIGHT-SHARED-FRAME-UNTIL-DISTANCE-CHANGES",
+        "evidence_gap_id": null,
+        "evidence_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+        "family_id": "PROXIMITY-AND-RELATION-GEOMETRY",
+        "final_status": "POSITIVE_RUNTIME_RULE",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001"
+        ],
+        "runtime_effect_key": "RULE:DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+        "source_refs": [
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S012",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S013",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S017",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S026"
+        ],
+        "target_rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C03-KEEP-HAND-SOURCE-HEAD-RELATION-AND-WITHDRAWAL-READABLE",
+        "evidence_gap_id": null,
+        "evidence_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+        "family_id": "PROXIMITY-AND-RELATION-GEOMETRY",
+        "final_status": "SUPPORTING_EVIDENCE",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001"
+        ],
+        "runtime_effect_key": "SUPPORT:DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+        "source_refs": [
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S026",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S028",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S029",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S030"
+        ],
+        "target_rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C04-DECOMPRESS-THROUGH-SINGLES-AND-ROOM-RESET",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-PROXIMITY-AND-RELATION-GEOMETRY",
+        "evidence_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+        "family_id": "PROXIMITY-AND-RELATION-GEOMETRY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S029",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S035",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S039"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-ANCHOR-EXPLANATION-WITH-VISUALIZED-PROCESS-001",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SPATIAL-REGISTRATION-AND-RESET",
+        "evidence_id": "CHERNOBYL-S01E05-HEARING-RECON-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-CHERNOBYL-S01E05-HEARING-RECON-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S001",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S046",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S169"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-READOUT-RECEIVER-GROUP-CASCADE-002",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-RECEIVER-AND-REACTION-DISTRIBUTION",
+        "evidence_id": "CHERNOBYL-S01E05-HEARING-RECON-001",
+        "family_id": "RECEIVER-AND-REACTION-DISTRIBUTION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-CHERNOBYL-S01E05-HEARING-RECON-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S017",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S046",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S165"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-RETURN-TO-FORMAL-ROOM-AFTER-PEAK-004",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-AFTERMATH-AND-TERMINAL-STATE",
+        "evidence_id": "CHERNOBYL-S01E05-HEARING-RECON-001",
+        "family_id": "AFTERMATH-AND-TERMINAL-STATE",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-CHERNOBYL-S01E05-HEARING-RECON-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S189",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S197",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S205"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-SCALE-LADDER-BEFORE-PHYSICAL-PEAK-003",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SCALE-AND-REVEAL-LADDER",
+        "evidence_id": "CHERNOBYL-S01E05-HEARING-RECON-001",
+        "family_id": "SCALE-AND-REVEAL-LADDER",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-CHERNOBYL-S01E05-HEARING-RECON-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S158",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S173",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S188"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-APERTURE-EVENT-BEFORE-GROSS-BODY-RESPONSE-002",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-ACTION-CAUSAL-CHAIN",
+        "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
+        "family_id": "ACTION-CAUSAL-CHAIN",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SPATIAL-REGISTRATION-AND-RESET",
+        "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CARRY-SURFACE-BODY-STATE-THROUGH-VEHICLE-REVERSAL-003",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-CONTINUITY-LEDGER-AND-VERSIONING",
+        "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
+        "family_id": "CONTINUITY-LEDGER-AND-VERSIONING",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-DOOR-THRESHOLD-EXIT-RETURN-DEPARTURE-004",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C01-INVARIANT-SPACE-MULTICHANNEL-DELTA",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-CONTINUITY-LEDGER-AND-VERSIONING",
+        "evidence_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+        "family_id": "CONTINUITY-LEDGER-AND-VERSIONING",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026",
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S008",
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S024"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C02-REPEATED-BRIDGE-AS-ELLIPSIS-PUNCTUATION",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-STATE-CHANGE-EDITING",
+        "evidence_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+        "family_id": "STATE-CHANGE-EDITING",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S008",
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S020",
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [
+          "distance_change_across_ellipsis"
+        ],
+        "candidate_rule_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C03-WITHDRAW-SHARED-FRAME-DELAY-DISTANCE-REVEAL",
+        "evidence_gap_id": null,
+        "evidence_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+        "family_id": "PROXIMITY-AND-RELATION-GEOMETRY",
+        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001"
+        ],
+        "runtime_effect_key": "BOUNDARY:DR-SHARED-FRAME-FOR-RELATION-ENDPOINT:wave1-reviewed-boundary",
+        "source_refs": [
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S001",
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026",
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027"
+        ],
+        "target_rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C04-PARALLEL-PROP-BARRIER-CLOSURE",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-OBJECT-STATE-AND-CUSTODY",
+        "evidence_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+        "family_id": "OBJECT-STATE-AND-CUSTODY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026",
+          "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C01",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SPATIAL-REGISTRATION-AND-RESET",
+        "evidence_id": "DM-ANDOR-S01E10-SEL-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-DM-ANDOR-S01E10-SEL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "DM-ANDOR-S01E10-SEL-001-S001",
+          "DM-ANDOR-S01E10-SEL-001-S030"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C02",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-MULTI-THREAD-STATE-INTERCUT",
+        "evidence_id": "DM-ANDOR-S01E10-SEL-001",
+        "family_id": "MULTI-THREAD-STATE-INTERCUT",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-DM-ANDOR-S01E10-SEL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "DM-ANDOR-S01E10-SEL-001-S052",
+          "DM-ANDOR-S01E10-SEL-001-S064",
+          "DM-ANDOR-S01E10-SEL-001-S075"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C03",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "DM-ANDOR-S01E10-SEL-001",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-DM-ANDOR-S01E10-SEL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "DM-ANDOR-S01E10-SEL-001-S076",
+          "DM-ANDOR-S01E10-SEL-001-S088",
+          "DM-ANDOR-S01E10-SEL-001-S100"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C04",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "DM-ANDOR-S01E10-SEL-001",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-DM-ANDOR-S01E10-SEL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "DM-ANDOR-S01E10-SEL-001-S104",
+          "DM-ANDOR-S01E10-SEL-001-S113",
+          "DM-ANDOR-S01E10-SEL-001-S121"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C01",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-OBJECT-STATE-AND-CUSTODY",
+        "evidence_id": "DM-BODYGUARD-S01E01-SEL-001",
+        "family_id": "OBJECT-STATE-AND-CUSTODY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-DM-BODYGUARD-S01E01-SEL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "DM-BODYGUARD-S01E01-SEL-001-S001",
+          "DM-BODYGUARD-S01E01-SEL-001-S016",
+          "DM-BODYGUARD-S01E01-SEL-001-S031"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C02",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-MULTI-THREAD-STATE-INTERCUT",
+        "evidence_id": "DM-BODYGUARD-S01E01-SEL-001",
+        "family_id": "MULTI-THREAD-STATE-INTERCUT",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-DM-BODYGUARD-S01E01-SEL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "DM-BODYGUARD-S01E01-SEL-001-S032",
+          "DM-BODYGUARD-S01E01-SEL-001-S063",
+          "DM-BODYGUARD-S01E01-SEL-001-S093"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C03",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "DM-BODYGUARD-S01E01-SEL-001",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-DM-BODYGUARD-S01E01-SEL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "DM-BODYGUARD-S01E01-SEL-001-S093",
+          "DM-BODYGUARD-S01E01-SEL-001-S132",
+          "DM-BODYGUARD-S01E01-SEL-001-S171"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C04",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-OBJECT-STATE-AND-CUSTODY",
+        "evidence_id": "DM-BODYGUARD-S01E01-SEL-001",
+        "family_id": "OBJECT-STATE-AND-CUSTODY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-DM-BODYGUARD-S01E01-SEL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "DM-BODYGUARD-S01E01-SEL-001-S172",
+          "DM-BODYGUARD-S01E01-SEL-001-S192",
+          "DM-BODYGUARD-S01E01-SEL-001-S211"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C01",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+        "evidence_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1",
+        "family_id": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C02",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SPATIAL-REGISTRATION-AND-RESET",
+        "evidence_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C03",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C04",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-RECEIVER-AND-REACTION-DISTRIBUTION",
+        "evidence_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1",
+        "family_id": "RECEIVER-AND-REACTION-DISTRIBUTION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-GETOUT-C01-REGISTER-ORDINARY-RELATION-BEFORE-SUBJECTIVE-BREAK",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SUBJECTIVE-ACCESS-AND-INFORMATION",
+        "evidence_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001",
+        "family_id": "SUBJECTIVE-ACCESS-AND-INFORMATION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S001",
+          "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S024",
+          "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S064"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-GETOUT-C02-TREAT-RECURRING-HANDLED-OBJECT-AS-STATE-CUE-NOT-CAUSAL-PROOF",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-OBJECT-STATE-AND-CUSTODY",
+        "evidence_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001",
+        "family_id": "OBJECT-STATE-AND-CUSTODY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S026",
+          "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S045",
+          "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S057"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-GETOUT-C03-CONTINUOUS-TRANSFORM-THEN-SEGMENT-SUBJECTIVE-SCALE-STATES",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SCALE-AND-REVEAL-LADDER",
+        "evidence_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001",
+        "family_id": "SCALE-AND-REVEAL-LADDER",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S054",
+          "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S061",
+          "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S058"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-GETOUT-C04-BRIEF-ROOM-RESET-CAN-REOPEN-SUBJECTIVE-LOOP",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SUBJECTIVE-ACCESS-AND-INFORMATION",
+        "evidence_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001",
+        "family_id": "SUBJECTIVE-ACCESS-AND-INFORMATION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S058",
+          "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S066",
+          "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S074"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-MAKE-ASSISTANCE-AND-OBJECT-STATES-COMPLETE-003",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-ACTION-CAUSAL-CHAIN",
+        "evidence_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001",
+        "family_id": "ACTION-CAUSAL-CHAIN",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S029",
+          "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S030",
+          "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S035",
+          "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S041"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-PRELOAD-ENSEMBLE-THEN-REVEAL-ENTRY-001",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S001",
+          "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S007",
+          "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S013"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-PUNCTUATE-LONG-AXIS-TRAVEL-002",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S007",
+          "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S019",
+          "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S030"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-SEATED-ANCHOR-THEN-SELECTIVE-RECEIPT-004",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-RECEIVER-AND-REACTION-DISTRIBUTION",
+        "evidence_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001",
+        "family_id": "RECEIVER-AND-REACTION-DISTRIBUTION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S043",
+          "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S056",
+          "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S068"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C01-REGISTER-ENSEMBLE-GEOMETRY-BEFORE-DISTRIBUTED-CHANGE",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SPATIAL-REGISTRATION-AND-RESET",
+        "evidence_id": "KNIVES-OUT-2019-WILL-READING-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-KNIVES-OUT-2019-WILL-READING-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "KNIVES-OUT-2019-WILL-READING-001-S006",
+          "KNIVES-OUT-2019-WILL-READING-001-S048",
+          "KNIVES-OUT-2019-WILL-READING-001-S090"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C02-DISTRIBUTE-SCREEN-OWNERSHIP-WHEN-BODIES-DIVERGE",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-RECEIVER-AND-REACTION-DISTRIBUTION",
+        "evidence_id": "KNIVES-OUT-2019-WILL-READING-001",
+        "family_id": "RECEIVER-AND-REACTION-DISTRIBUTION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-KNIVES-OUT-2019-WILL-READING-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "KNIVES-OUT-2019-WILL-READING-001-S041",
+          "KNIVES-OUT-2019-WILL-READING-001-S066",
+          "KNIVES-OUT-2019-WILL-READING-001-S090"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C03-SEATED-TO-STANDING-DENSITY-LEDGER",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SPATIAL-REGISTRATION-AND-RESET",
+        "evidence_id": "KNIVES-OUT-2019-WILL-READING-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-KNIVES-OUT-2019-WILL-READING-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "KNIVES-OUT-2019-WILL-READING-001-S065",
+          "KNIVES-OUT-2019-WILL-READING-001-S091"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C04-SPATIAL-SPILLOVER-CARRIES-AFTERMATH-PAST-ROOM-BOUNDARY",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "KNIVES-OUT-2019-WILL-READING-001",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-KNIVES-OUT-2019-WILL-READING-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "KNIVES-OUT-2019-WILL-READING-001-S078",
+          "KNIVES-OUT-2019-WILL-READING-001-S093",
+          "KNIVES-OUT-2019-WILL-READING-001-S108"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C01-SPATIAL-ROUTE-BEFORE-ANCHORED-SEATING",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SPATIAL-REGISTRATION-AND-RESET",
+        "evidence_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S001",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S005",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S008"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C02-STABLE-SEAT-ANCHORS-CARRY-DENSE-ALTERNATION",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-AXIS-AND-COVERAGE-GRAMMAR",
+        "evidence_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+        "family_id": "AXIS-AND-COVERAGE-GRAMMAR",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S009",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S029",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S048"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C03-MOVEMENT-REOPENS-GEOMETRY-AND-SCREEN-OWNERSHIP",
+        "evidence_gap_id": null,
+        "evidence_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "POSITIVE_RUNTIME_RULE",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001"
+        ],
+        "runtime_effect_key": "RULE:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+        "source_refs": [
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S058",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S061",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S065"
+        ],
+        "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C04-LATE-HOLDS-NEED-VISIBLE-LEVEL-AND-PROXIMITY-ENDPOINTS",
+        "evidence_gap_id": null,
+        "evidence_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+        "family_id": "PROXIMITY-AND-RELATION-GEOMETRY",
+        "final_status": "SUPPORTING_EVIDENCE",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001"
+        ],
+        "runtime_effect_key": "SUPPORT:DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+        "source_refs": [
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S082",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S083",
+          "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085"
+        ],
+        "target_rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C01",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-OBJECT-STATE-AND-CUSTODY",
+        "evidence_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001",
+        "family_id": "OBJECT-STATE-AND-CUSTODY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S004",
+          "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S021",
+          "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S038"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C02",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-STATE-CHANGE-EDITING",
+        "evidence_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001",
+        "family_id": "STATE-CHANGE-EDITING",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S039",
+          "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S040",
+          "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S041"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C03",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-OBJECT-STATE-AND-CUSTODY",
+        "evidence_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001",
+        "family_id": "OBJECT-STATE-AND-CUSTODY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S041",
+          "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S043",
+          "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S045"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C04",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-CONTINUITY-LEDGER-AND-VERSIONING",
+        "evidence_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001",
+        "family_id": "CONTINUITY-LEDGER-AND-VERSIONING",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S046",
+          "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S053",
+          "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S059"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-CONTRACT-EXPAND-DISTANCE-WITH-MINIMAL-ACTION-003",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-PROXIMITY-AND-RELATION-GEOMETRY",
+        "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
+        "family_id": "PROXIMITY-AND-RELATION-GEOMETRY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S040",
+          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S075"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-OBJECT-INSERT-THEN-FACE-RETURN-004",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-OBJECT-STATE-AND-CUSTODY",
+        "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
+        "family_id": "OBJECT-STATE-AND-CUSTODY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S047",
+          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S049",
+          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S050"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-SCRIPT-VERIFIED-TASK-BUFFER-002",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-PROCEDURAL-HANDOFF-AND-WORKFLOW",
+        "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
+        "family_id": "PROCEDURAL-HANDOFF-AND-WORKFLOW",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S020",
+          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S032",
+          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S044"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-SEPARATED-ZONES-BEFORE-SHARED-DISTANCE-001",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-PROXIMITY-AND-RELATION-GEOMETRY",
+        "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
+        "family_id": "PROXIMITY-AND-RELATION-GEOMETRY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S001",
+          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S019"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C01-DETAIL-THEN-CONTAINER-REGISTER",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SCALE-AND-REVEAL-LADDER",
+        "evidence_id": "MRR-S04E07-ACT-FOUR-VISUAL-001",
+        "family_id": "SCALE-AND-REVEAL-LADDER",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-MRR-S04E07-ACT-FOUR-VISUAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S001",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S016",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S023"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C02-EXTRA-BODY-ANCHOR-IN-CONTAINED-ALTERNATION",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SPATIAL-REGISTRATION-AND-RESET",
+        "evidence_id": "MRR-S04E07-ACT-FOUR-VISUAL-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-MRR-S04E07-ACT-FOUR-VISUAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S087",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S174",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S058"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C03-DOCUMENT-STATE-NEEDS-HANDLER-CONTINUITY",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-OBJECT-STATE-AND-CUSTODY",
+        "evidence_id": "MRR-S04E07-ACT-FOUR-VISUAL-001",
+        "family_id": "OBJECT-STATE-AND-CUSTODY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-MRR-S04E07-ACT-FOUR-VISUAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S046",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S078",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S090"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C04-PROGRESSIVE-RELATION-REMOVAL-TO-HELD-SINGLES",
+        "evidence_gap_id": null,
+        "evidence_id": "MRR-S04E07-ACT-FOUR-VISUAL-001",
+        "family_id": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
+        "final_status": "POSITIVE_RUNTIME_RULE",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-MRR-S04E07-ACT-FOUR-VISUAL-001"
+        ],
+        "runtime_effect_key": "RULE:DR-PERFORMANCE-OWNER-HOLD",
+        "source_refs": [
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S194",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S197",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S199",
+          "MRR-S04E07-ACT-FOUR-VISUAL-001-S201"
+        ],
+        "target_rule_id": "DR-PERFORMANCE-OWNER-HOLD"
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C01-ACTION-CAUSAL-CHAIN",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-ACTION-CAUSAL-CHAIN",
+        "evidence_id": "NOBODY-2021-BUS-001",
+        "family_id": "ACTION-CAUSAL-CHAIN",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-NOBODY-2021-BUS-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "NOBODY-2021-BUS-001-S029",
+          "NOBODY-2021-BUS-001-S059",
+          "NOBODY-2021-BUS-001-S103",
+          "NOBODY-2021-BUS-001-S121"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C02-OBJECT-CONTROL-LEDGER",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-OBJECT-STATE-AND-CUSTODY",
+        "evidence_id": "NOBODY-2021-BUS-001",
+        "family_id": "OBJECT-STATE-AND-CUSTODY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-NOBODY-2021-BUS-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "NOBODY-2021-BUS-001-S059",
+          "NOBODY-2021-BUS-001-S121",
+          "NOBODY-2021-BUS-001-S042"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C03-SPATIAL-RESET-AFTER-BURST",
+        "evidence_gap_id": null,
+        "evidence_id": "NOBODY-2021-BUS-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "SUPPORTING_EVIDENCE",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-NOBODY-2021-BUS-001"
+        ],
+        "runtime_effect_key": "SUPPORT:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+        "source_refs": [
+          "NOBODY-2021-BUS-001-S088",
+          "NOBODY-2021-BUS-001-S100",
+          "NOBODY-2021-BUS-001-S118"
+        ],
+        "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C04-RECOVERY-AND-CARE-ARE-STATE",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-AFTERMATH-AND-TERMINAL-STATE",
+        "evidence_id": "NOBODY-2021-BUS-001",
+        "family_id": "AFTERMATH-AND-TERMINAL-STATE",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-NOBODY-2021-BUS-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "NOBODY-2021-BUS-001-S068",
+          "NOBODY-2021-BUS-001-S100",
+          "NOBODY-2021-BUS-001-S128"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "SICARIO-2015-BORDER-CHECKPOINT-001",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-SICARIO-2015-BORDER-CHECKPOINT-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S001",
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S007",
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C02-MULTI-WINDOW-DISTRIBUTED-THREAT-PUZZLE",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-RECEIVER-AND-REACTION-DISTRIBUTION",
+        "evidence_id": "SICARIO-2015-BORDER-CHECKPOINT-001",
+        "family_id": "RECEIVER-AND-REACTION-DISTRIBUTION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-SICARIO-2015-BORDER-CHECKPOINT-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S014",
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S032",
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S049"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C03-READINESS-TO-DEPLOYMENT-STATE-LEDGER",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "SICARIO-2015-BORDER-CHECKPOINT-001",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-SICARIO-2015-BORDER-CHECKPOINT-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S034",
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S063"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C04-RESULT-AND-EXIT-VERIFICATION-BEFORE-RESUME",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-AFTERMATH-AND-TERMINAL-STATE",
+        "evidence_id": "SICARIO-2015-BORDER-CHECKPOINT-001",
+        "family_id": "AFTERMATH-AND-TERMINAL-STATE",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-SICARIO-2015-BORDER-CHECKPOINT-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S064",
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S080",
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S096"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
+        "evidence_gap_id": "GAP-DIRECT-AUDITION-SOUND-OF-METAL",
+        "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
+        "family_id": "STATE-CHANGE-EDITING",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004",
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S015",
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001",
+        "evidence_gap_id": "GAP-DIRECT-AUDITION-SOUND-OF-METAL",
+        "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
+        "family_id": "SUBJECTIVE-ACCESS-AND-INFORMATION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S003",
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S016",
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004",
+        "evidence_gap_id": "GAP-DIRECT-AUDITION-SOUND-OF-METAL",
+        "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
+        "family_id": "CONTINUITY-LEDGER-AND-VERSIONING",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001",
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S013",
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003",
+        "evidence_gap_id": "GAP-DIRECT-AUDITION-SOUND-OF-METAL",
+        "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
+        "family_id": "STATE-CHANGE-EDITING",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002",
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S023",
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C01",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-RECEIVER-AND-REACTION-DISTRIBUTION",
+        "evidence_id": "SUCCESSION-S01E06-BOARD-VOTE-001",
+        "family_id": "RECEIVER-AND-REACTION-DISTRIBUTION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-SUCCESSION-S01E06-BOARD-VOTE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S002",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S050",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S067"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C02",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-MULTI-THREAD-STATE-INTERCUT",
+        "evidence_id": "SUCCESSION-S01E06-BOARD-VOTE-001",
+        "family_id": "MULTI-THREAD-STATE-INTERCUT",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-SUCCESSION-S01E06-BOARD-VOTE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S008",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S071",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S064"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C03",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-RECEIVER-AND-REACTION-DISTRIBUTION",
+        "evidence_id": "SUCCESSION-S01E06-BOARD-VOTE-001",
+        "family_id": "RECEIVER-AND-REACTION-DISTRIBUTION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-SUCCESSION-S01E06-BOARD-VOTE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S014",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S057",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S077"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C04",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "SUCCESSION-S01E06-BOARD-VOTE-001",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-SUCCESSION-S01E06-BOARD-VOTE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S075",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S086",
+          "SUCCESSION-S01E06-BOARD-VOTE-001-S088"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C01-REGISTER-PUBLIC-OBJECT-CONTEST-GEOMETRY",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SPATIAL-REGISTRATION-AND-RESET",
+        "evidence_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-TED-LASSO-S01E08-DARTS-REVERSAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "TED-LASSO-S01E08-DARTS-REVERSAL-001-S001",
+          "TED-LASSO-S01E08-DARTS-REVERSAL-001-S043",
+          "TED-LASSO-S01E08-DARTS-REVERSAL-001-S017"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C02-RETURN-THROUGH-PRIMARY-ANCHOR-AFTER-DISTINCT-LOCATION-BLOCK",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SPATIAL-REGISTRATION-AND-RESET",
+        "evidence_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-TED-LASSO-S01E08-DARTS-REVERSAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "TED-LASSO-S01E08-DARTS-REVERSAL-001-S061",
+          "TED-LASSO-S01E08-DARTS-REVERSAL-001-S087",
+          "TED-LASSO-S01E08-DARTS-REVERSAL-001-S092"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C03-SEPARATE-PERFORMER-ACTION-TARGET-STATE-AND-RESULT-CLAIM",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-ACTION-CAUSAL-CHAIN",
+        "evidence_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001",
+        "family_id": "ACTION-CAUSAL-CHAIN",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-TED-LASSO-S01E08-DARTS-REVERSAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "TED-LASSO-S01E08-DARTS-REVERSAL-001-S016",
+          "TED-LASSO-S01E08-DARTS-REVERSAL-001-S017",
+          "TED-LASSO-S01E08-DARTS-REVERSAL-001-S091",
+          "TED-LASSO-S01E08-DARTS-REVERSAL-001-S092",
+          "TED-LASSO-S01E08-DARTS-REVERSAL-001-S128"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C04-DISTRIBUTE-POST-RESULT-BODY-STATES-BY-NEXT-ACTION",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-AFTERMATH-AND-TERMINAL-STATE",
+        "evidence_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001",
+        "family_id": "AFTERMATH-AND-TERMINAL-STATE",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-TED-LASSO-S01E08-DARTS-REVERSAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "TED-LASSO-S01E08-DARTS-REVERSAL-001-S129",
+          "TED-LASSO-S01E08-DARTS-REVERSAL-001-S139",
+          "TED-LASSO-S01E08-DARTS-REVERSAL-001-S128"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C01-REGISTER-TRIGGER-OBJECT-BEFORE-ATTENTION-CASCADE",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-RECEIVER-AND-REACTION-DISTRIBUTION",
+        "evidence_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
+        "family_id": "RECEIVER-AND-REACTION-DISTRIBUTION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S003",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S001",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S006"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [
+          "simultaneous_required_action"
+        ],
+        "candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C02-SUSTAIN-CORRECTOR-IN-SHARED-WORK-FRAME-WITH-SELECTIVE-RECEIVER-CHECKS",
+        "evidence_gap_id": null,
+        "evidence_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
+        "family_id": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
+        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001"
+        ],
+        "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:wave1-reviewed-boundary",
+        "source_refs": [
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S016",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S019"
+        ],
+        "target_rule_id": "DR-PERFORMANCE-OWNER-HOLD"
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C03-USE-WORK-OBJECT-UPDATES-AS-PUNCTUATION-NOT-SEMANTIC-PROOF",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-OBJECT-STATE-AND-CUSTODY",
+        "evidence_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
+        "family_id": "OBJECT-STATE-AND-CUSTODY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S019",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S022",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S025"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [
+          "simultaneous_required_action"
+        ],
+        "candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C04-END-ON-TERMINAL-OWNER-WHILE-BACKGROUND-TASK-CONTINUES",
+        "evidence_gap_id": null,
+        "evidence_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
+        "family_id": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
+        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001"
+        ],
+        "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous-work",
+        "source_refs": [
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S024",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S025",
+          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S026"
+        ],
+        "target_rule_id": "DR-PERFORMANCE-OWNER-HOLD"
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C01-REGISTER-PAIR-GEOMETRY-THEN-RELY-ON-STABLE-SINGLES",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SPATIAL-REGISTRATION-AND-RESET",
+        "evidence_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S002",
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S047",
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C02-VARY-HOLD-LENGTH-WITHIN-FIXED-ANGLE-GRAMMAR",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-AXIS-AND-COVERAGE-GRAMMAR",
+        "evidence_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
+        "family_id": "AXIS-AND-COVERAGE-GRAMMAR",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S002",
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S046",
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S089"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C03-KEEP-SECONDARY-PROP-ACTIONS-INSIDE-PERSON-SINGLES",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-OBJECT-STATE-AND-CUSTODY",
+        "evidence_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
+        "family_id": "OBJECT-STATE-AND-CUSTODY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S017",
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [
+          "counterpart_absent_at_changed_endpoint"
+        ],
+        "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE",
+        "evidence_gap_id": null,
+        "evidence_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001"
+        ],
+        "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:wave1-reviewed-boundary",
+        "source_refs": [
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S090",
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091"
+        ],
+        "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C01",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "TLOU-BEDROOM-LOCAL-001",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-TLOU-BEDROOM-LOCAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "TLOU-BEDROOM-LOCAL-001-S001",
+          "TLOU-BEDROOM-LOCAL-001-S003",
+          "TLOU-BEDROOM-LOCAL-001-S004"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C02",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-OBJECT-STATE-AND-CUSTODY",
+        "evidence_id": "TLOU-BEDROOM-LOCAL-001",
+        "family_id": "OBJECT-STATE-AND-CUSTODY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-TLOU-BEDROOM-LOCAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "TLOU-BEDROOM-LOCAL-001-S005",
+          "TLOU-BEDROOM-LOCAL-001-S010",
+          "TLOU-BEDROOM-LOCAL-001-S014"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C03",
+        "evidence_gap_id": null,
+        "evidence_id": "TLOU-BEDROOM-LOCAL-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "SUPPORTING_EVIDENCE",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-TLOU-BEDROOM-LOCAL-001"
+        ],
+        "runtime_effect_key": "SUPPORT:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+        "source_refs": [
+          "TLOU-BEDROOM-LOCAL-001-S015",
+          "TLOU-BEDROOM-LOCAL-001-S019"
+        ],
+        "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C04",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "TLOU-BEDROOM-LOCAL-001",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-TLOU-BEDROOM-LOCAL-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "TLOU-BEDROOM-LOCAL-001-S020",
+          "TLOU-BEDROOM-LOCAL-001-S024",
+          "TLOU-BEDROOM-LOCAL-001-S027"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C01-WAYPOINT-REGISTERED-MOBILE-GEOGRAPHY",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C02-THRESHOLD-AS-STATE-CHECKPOINT",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C03-REACQUIRE-VISUAL-TRACK-AFTER-OCCLUSION",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+        "evidence_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001",
+        "family_id": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C04-FUNCTIONAL-SEGMENTATION-FALLBACK-FOR-LONG-ROUTE",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+        "evidence_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001",
+        "family_id": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C01-APPROACH-TO-CONTAINER-STATE-HANDOFF",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-THRESHOLD-AND-ROUTE-CONTINUITY",
+        "evidence_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001",
+        "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S001",
+          "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S006",
+          "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S010"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C02-PARTIAL-COMPANION-ANCHOR-IN-CONTAINED-TWO-HANDER",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SPATIAL-REGISTRATION-AND-RESET",
+        "evidence_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S010",
+          "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S039",
+          "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S077"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C03-RE-REGISTER-CONTAINED-GEOMETRY-AFTER-PARALLEL-INSERT",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SPATIAL-REGISTRATION-AND-RESET",
+        "evidence_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001",
+        "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S061",
+          "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S072",
+          "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S077"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C04-HOLD-VISIBLE-BODY-OR-HAND-OBJECT-STATE",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
+        "evidence_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001",
+        "family_id": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S065",
+          "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S072",
+          "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S050"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C01-REGISTER-RECORD-TO-LIVE-SPACE",
+        "evidence_gap_id": null,
+        "evidence_id": "WIRE-S01E04-OLD-CASES-001",
+        "family_id": "OBJECT-STATE-AND-CUSTODY",
+        "final_status": "SUPPORTING_EVIDENCE",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-WIRE-S01E04-OLD-CASES-001"
+        ],
+        "runtime_effect_key": "SUPPORT:DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+        "source_refs": [
+          "WIRE-S01E04-OLD-CASES-001-S007",
+          "WIRE-S01E04-OLD-CASES-001-S038"
+        ],
+        "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C02-EMBODY-HYPOTHESIS-THEN-TEST-TRACE",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-PROCEDURAL-HANDOFF-AND-WORKFLOW",
+        "evidence_id": "WIRE-S01E04-OLD-CASES-001",
+        "family_id": "PROCEDURAL-HANDOFF-AND-WORKFLOW",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-WIRE-S01E04-OLD-CASES-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "WIRE-S01E04-OLD-CASES-001-S023",
+          "WIRE-S01E04-OLD-CASES-001-S038",
+          "WIRE-S01E04-OLD-CASES-001-S060"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C03-CUT-ON-EPISTEMIC-STATE-CHANGE",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-STATE-CHANGE-EDITING",
+        "evidence_id": "WIRE-S01E04-OLD-CASES-001",
+        "family_id": "STATE-CHANGE-EDITING",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-WIRE-S01E04-OLD-CASES-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "WIRE-S01E04-OLD-CASES-001-S007",
+          "WIRE-S01E04-OLD-CASES-001-S030",
+          "WIRE-S01E04-OLD-CASES-001-S060"
+        ],
+        "target_rule_id": null
+      },
+      {
+        "boundary_signal_ids": [],
+        "candidate_rule_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C04-LONG-TAKE-WHEN-CONTINUITY-IS-THE-PROOF",
+        "evidence_gap_id": "GAP-MOVING-REVIEW-CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+        "evidence_id": "WIRE-S01E04-OLD-CASES-001",
+        "family_id": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": null,
+        "review_ids": [
+          "EXHAUSTIVE-PICTURE-WIRE-S01E04-OLD-CASES-001"
+        ],
+        "runtime_effect_key": null,
+        "source_refs": [
+          "WIRE-S01E04-OLD-CASES-001-S061",
+          "WIRE-S01E04-OLD-CASES-001-S063",
+          "WIRE-S01E04-OLD-CASES-001-S001"
+        ],
+        "target_rule_id": null
+      }
+    ],
+    "evidence_count": 31,
+    "final_candidate_count": 17,
+    "phase_status": "PARTIAL_EVIDENCE_GAP",
+    "source_count": 33
+  },
   "safety_constraints": [
     {
       "applies_when": "Every candidate or runtime rule decision.",

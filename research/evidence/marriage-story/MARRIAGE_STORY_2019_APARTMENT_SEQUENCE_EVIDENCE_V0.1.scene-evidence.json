@@ -8,11 +8,12 @@
     "status": "INFERRED",
     "source_refs": [
       "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
+      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S058",
       "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
-      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085",
-      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-TA-WAVE1-001"
+      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S061",
+      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S065"
     ],
-    "notes": "The canonical problem is inferred from repeated visible relation resets plus one short, paraphrased visible-text anchor showing direct personal conflict; no dialogue wording is transferred."
+    "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown."
   },
   "scene_unit_type": "NATURAL_CONTINUOUS_SCENE",
   "boundary_status": "NATURAL_START_END_VERIFIED",
@@ -20427,6 +20428,38 @@
       "unknowns": [
         "Speaker identity, uncited dialogue, and semantic audio remain unknown."
       ]
+    },
+    {
+      "method_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S001",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S005",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S008",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S009",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S029",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S048",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S058",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S060",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S061",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S065",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S070",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S071",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S078",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S082",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S083",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S084",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],
@@ -20754,7 +20787,8 @@
       "source_method_ids": [
         "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-LEGACY-PICTURE-REVIEW",
         "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-STRUCTURAL-CONVERSION",
-        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-WAVE1-PICTURE-REVIEW"
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-WAVE1-PICTURE-REVIEW",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
       ],
       "evidence_scene_ids": [
         "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001"
@@ -20939,6 +20973,7 @@
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
     "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
+    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+    "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
   ]
 }

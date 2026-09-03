@@ -68,16 +68,18 @@ class ForwardTestContractTests(unittest.TestCase):
 
     def test_repository_forward_packages_pass_live_validation(self) -> None:
         report = self.validate()
+        rule_count = len(self.grammar["rules"])
+        package_count = len(self.index["cases"])
         self.assertEqual(report["status"], "PASS")
-        self.assertEqual(report["package_count"], 12)
+        self.assertEqual(report["package_count"], package_count)
         self.assertEqual(report["required_scene_problem_count"], 6)
-        self.assertEqual(report["promotion_ready_family_count"], 3)
-        self.assertEqual(report["required_positive_boundary_pairs"], 3)
-        self.assertEqual(report["completed_positive_cases"], 3)
-        self.assertEqual(report["completed_boundary_cases"], 3)
-        self.assertEqual(report["no_applicable_rule_count"], 9)
-        self.assertEqual(report["selected_rule_count"], 3)
-        self.assertEqual(report["human_review_pending_count"], 12)
+        self.assertEqual(report["promotion_ready_family_count"], rule_count)
+        self.assertEqual(report["required_positive_boundary_pairs"], rule_count)
+        self.assertEqual(report["completed_positive_cases"], rule_count)
+        self.assertEqual(report["completed_boundary_cases"], rule_count)
+        self.assertEqual(report["no_applicable_rule_count"], package_count - rule_count)
+        self.assertEqual(report["selected_rule_count"], rule_count)
+        self.assertEqual(report["human_review_pending_count"], package_count)
 
     def test_builder_and_repository_report_are_deterministic(self) -> None:
         build = subprocess.run(
@@ -141,12 +143,17 @@ class ForwardTestContractTests(unittest.TestCase):
             result = read_json(FORWARD_ROOT / entry["test_case_id"] / "selected-rules.json")
             rejected = next(item for item in result["rejected_rules"] if item["rule_id"] == rule_id)
             self.assertIn("NOT_APPLICABLE_MATCH", rejected["rejection_reason_codes"])
+            rule = next(item for item in self.grammar["rules"] if item["rule_id"] == rule_id)
+            self.assertEqual(
+                set(rejected["matched_not_applicable_signal_ids"]),
+                set(rule["routing"]["not_applicable_if_any"]),
+            )
 
     def test_saved_routing_result_cannot_drift_from_live_router(self) -> None:
         def mutate(root: Path) -> None:
-            path = root / "ORIGINAL-ACTION-CAUSALITY" / "selected-rules.json"
+            path = root / "ORIGINAL-PERFORMANCE-OWNER-HOLD" / "selected-rules.json"
             data = json.loads(path.read_text(encoding="utf-8"))
-            data["status"] = "SELECTED"
+            data["status"] = "NO_APPLICABLE_RULE"
             path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
 
         report = self.validate_temp_mutation(mutate)
@@ -156,16 +163,16 @@ class ForwardTestContractTests(unittest.TestCase):
         cases = (
             (
                 "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
-                "counterpart_relation_required",
+                ("counterpart_relation_required", "counterpart_relation_not_required"),
             ),
-            ("ORIGINAL-PROXIMITY-ELLIPSIS", "continuous_present_time"),
+            ("ORIGINAL-PROXIMITY-ELLIPSIS", ("continuous_present_time", "elliptical_time_change")),
         )
-        for case_id, contradictory_signal in cases:
+        for case_id, contradictory_signals in cases:
             with self.subTest(case_id=case_id):
                 def mutate(root: Path) -> None:
                     path = root / case_id / "routing-input.json"
                     data = json.loads(path.read_text(encoding="utf-8"))
-                    data["routing_signals"].append(contradictory_signal)
+                    data["routing_signals"].extend(contradictory_signals)
                     path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
 
                 report = self.validate_temp_mutation(mutate)
@@ -186,10 +193,10 @@ class ForwardTestContractTests(unittest.TestCase):
         cases = (
             (
                 "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
-                "counterpart_absent",
+                "counterpart_endpoint_state",
                 "counterpart_relation",
             ),
-            ("ORIGINAL-PROXIMITY-ELLIPSIS", "time_ellipsis", "calendar_state"),
+            ("ORIGINAL-PROXIMITY-ELLIPSIS", "time_structure", "calendar_state"),
         )
         for case_id, fact_type, replacement in cases:
             with self.subTest(case_id=case_id):
@@ -248,7 +255,7 @@ class ForwardTestContractTests(unittest.TestCase):
             path = root / "ORIGINAL-ACTION-CAUSALITY" / "locked-script.md"
             text = path.read_text(encoding="utf-8")
             text = text.replace(
-                "A loose wheel stop lets an unpowered equipment rack begin rolling.",
+                "A loose wheel stop is visibly displaced before an unpowered equipment rack begins rolling.",
                 "The equipment rack remains locked and never moves.",
             )
             path.write_text(text, encoding="utf-8")

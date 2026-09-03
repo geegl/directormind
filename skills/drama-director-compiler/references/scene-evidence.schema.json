@@ -282,6 +282,13 @@
             "relation_anchor",
             "spatial_mover",
             "proximity_mover",
+            "action_source",
+            "result_receiver",
+            "comparison_field",
+            "selected_relation",
+            "comparison_relation",
+            "before_state_anchor",
+            "after_state_anchor",
             "UNKNOWN"
           ]
         },

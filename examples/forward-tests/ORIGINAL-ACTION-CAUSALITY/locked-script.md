@@ -11,11 +11,11 @@ Participants: FLOOR_LEAD, CREW_1, CREW_2, CREW_3
 ## Locked facts
 
 <a id="FACT-01"></a>
-- FACT-01: A loose wheel stop lets an unpowered equipment rack begin rolling.
+- FACT-01: A loose wheel stop is visibly displaced before an unpowered equipment rack begins rolling.
 <a id="FACT-02"></a>
-- FACT-02: The floor lead signals three crew members to clear three marked lanes.
+- FACT-02: The rack changes from stationary to rolling while three marked lanes remain visible.
 <a id="FACT-03"></a>
-- FACT-03: The floor lead pushes a floor chock into the rack path after all three lanes are clear.
+- FACT-03: After the lanes clear, a floor chock stops the rack and the stopped state remains readable.
 
 ## Locked beats
 

@@ -22942,6 +22942,30 @@
       "unknowns": [
         "All semantic audio facts remain unknown."
       ]
+    },
+    {
+      "method_id": "SICARIO-2015-BORDER-CHECKPOINT-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S001",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S007",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S013",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S014",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S032",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S034",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S049",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S063",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S064",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S080",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S096"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],

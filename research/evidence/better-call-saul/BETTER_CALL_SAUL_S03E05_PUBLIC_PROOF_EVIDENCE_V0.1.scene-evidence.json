@@ -24666,6 +24666,31 @@
       "unknowns": [
         "Dialogue meaning, emotional cause, cross-cut identity, lens metadata, and all semantic audio remain unknown."
       ]
+    },
+    {
+      "method_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S001",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S053",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S062",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S081",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S082",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S087",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S097",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S098",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S099",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S102",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S103",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S105"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],

@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import re
 import sys
@@ -67,10 +68,24 @@ ROUTING_SIGNAL_FACT_TYPES = {
     "material_spatial_change": "spatial_change",
     "counterpart_relation_required": "counterpart_relation",
     "counterpart_relation_not_required": "counterpart_absent",
+    "counterpart_relation_context_locked": "counterpart_relation",
+    "counterpart_absent_at_changed_endpoint": "counterpart_endpoint_state",
     "relation_distance_change": "distance_change",
     "continuous_present_time": "continuous_time_change",
     "shared_endpoint_required": "relation_endpoint",
     "elliptical_time_change": "time_ellipsis",
+    "time_structure_locked": "time_structure",
+    "distance_change_across_ellipsis": "time_structure",
+    "visible_action_source": "action_source",
+    "target_state_change": "target_state",
+    "result_readable": "visible_result",
+    "continuous_view_preserves_action_chain": "visible_result",
+    "multiple_visible_referents": "referent_set",
+    "comparative_relation_required": "relation_constraint",
+    "comparative_field_not_required": "single_item_state",
+    "threshold_changes_locked_state": "threshold_state_change",
+    "before_after_route_required": "route_endpoint",
+    "threshold_state_unchanged": "unchanged_state",
 }
 REQUIRED_CASE_IDS = {
     "ORIGINAL-POWER-DIALOGUE",
@@ -84,6 +99,11 @@ REQUIRED_CASE_IDS = {
     "ORIGINAL-PERFORMANCE-CONCURRENT-STATE",
     "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
     "ORIGINAL-PROXIMITY-ELLIPSIS",
+    "ORIGINAL-ACTION-CONTINUOUS-CHAIN",
+    "ORIGINAL-REFERENT-COMPARISON",
+    "ORIGINAL-COMPARISON-NOT-REQUIRED",
+    "ORIGINAL-THRESHOLD-STATE-CHANGE",
+    "ORIGINAL-THRESHOLD-UNCHANGED",
     "ORIGINAL-NO-APPLICABLE-RULE",
 }
 FORBIDDEN_STATUS_RE = re.compile(r"\b(PRODUCTION_READY|WINNER|CREATIVE_SUCCESS)\b", re.IGNORECASE)
@@ -382,6 +402,28 @@ def validate_package(
             rejected.get("rejection_reason_codes", [])
         ):
             issue(issues, "FORWARD-RULE-BOUNDARY", f"{relative_package}/selected-rules.json", "Boundary rule was not rejected for the declared reason.")
+        target_rule = next(
+            (item for item in grammar.get("rules", []) if item.get("rule_id") == expected_rejected_id),
+            None,
+        )
+        if target_rule is not None:
+            counterfactual_input = copy.deepcopy(routing_input)
+            blocked_signals = set(target_rule.get("routing", {}).get("not_applicable_if_any", []))
+            counterfactual_input["routing_signals"] = [
+                signal
+                for signal in counterfactual_input.get("routing_signals", [])
+                if signal not in blocked_signals
+            ]
+            counterfactual = route_scene(counterfactual_input, grammar)
+            if expected_rejected_id not in {
+                item.get("rule_id") for item in counterfactual.get("selected_rules", [])
+            }:
+                issue(
+                    issues,
+                    "FORWARD-BOUNDARY-CAUSALITY",
+                    f"{relative_package}/routing-input.json",
+                    "Removing only the reviewed negative signal must make the target rule selectable.",
+                )
     if zero_eligible and (live_routing.get("status") != "NO_APPLICABLE_RULE" or live_routing.get("selection_count") != 0):
         issue(issues, "FORWARD-ZERO-ELIGIBLE", f"{relative_package}/selected-rules.json", "Zero eligible families cannot produce a positive selection.")
 
@@ -509,7 +551,7 @@ def validate_repository(
     entries = index.get("cases", []) if isinstance(index.get("cases"), list) else []
     case_ids = [entry.get("test_case_id") for entry in entries if isinstance(entry, dict)]
     if len(case_ids) != len(set(case_ids)) or set(case_ids) != REQUIRED_CASE_IDS:
-        issue(issues, "FORWARD-CASE-SET", "cases", "The twelve required unique original cases are not present.")
+        issue(issues, "FORWARD-CASE-SET", "cases", "The required unique original cases are not present.")
     tags = {tag for entry in entries if isinstance(entry, dict) for tag in entry.get("coverage_tags", [])}
     if tags != REQUIRED_COVERAGE_TAGS or set(index.get("required_scene_problem_coverage", [])) != REQUIRED_COVERAGE_TAGS:
         issue(issues, "FORWARD-COVERAGE-TAGS", "required_scene_problem_coverage", "The six required original scene problems are not covered exactly.")
@@ -573,7 +615,7 @@ def validate_repository(
     completed_positive = sum(bool(values) for values in positive_by_rule.values())
     completed_boundary = sum(bool(values) for values in boundary_by_rule.values())
     if (
-        index.get("required_positive_boundary_pairs") != len(eligible_families)
+        index.get("required_positive_boundary_pairs") != len(eligible_rule_ids)
         or index.get("completed_positive_cases") != completed_positive
         or index.get("completed_boundary_cases") != completed_boundary
         or index.get("missing_family_ids") != missing_families
@@ -589,7 +631,7 @@ def validate_repository(
         "package_count": len(results),
         "required_scene_problem_count": len(REQUIRED_COVERAGE_TAGS),
         "promotion_ready_family_count": len(eligible_families),
-        "required_positive_boundary_pairs": len(eligible_families),
+        "required_positive_boundary_pairs": len(eligible_rule_ids),
         "completed_positive_cases": completed_positive,
         "completed_boundary_cases": completed_boundary,
         "missing_family_count": len(missing_families),

@@ -111,6 +111,7 @@
         "case_id": "ORIGINAL-PERFORMANCE-OWNER-HOLD",
         "conflict_trace": [],
         "eligible_rule_ids": [
+          "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
           "DR-PERFORMANCE-OWNER-HOLD",
           "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
           "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
@@ -121,6 +122,22 @@
           {
             "blocking_fact_ids": [],
             "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "referent_set",
+              "relation_constraint"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
             "missing_fact_types": [
               "counterpart_relation",
               "spatial_change"
@@ -135,9 +152,11 @@
           {
             "blocking_fact_ids": [],
             "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
             "missing_fact_types": [
               "distance_change",
-              "relation_endpoint"
+              "relation_endpoint",
+              "time_structure"
             ],
             "rejection_reason_codes": [
               "REQUIRED_FACT_MISSING",
