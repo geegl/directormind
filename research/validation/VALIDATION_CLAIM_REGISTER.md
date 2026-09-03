@@ -2,7 +2,7 @@
 
 Updated: 2026-09-04
 
-Status: `WAVE1_P1_REPAIR_PASS_LOCAL / FINAL_CI_AND_AUDIT_PENDING / MAIN_UNMERGED`
+Status: `COMPLETE / INDEPENDENT_REVIEW_PASSED / MAIN_UNMERGED`
 
 This register maps current claims to reproducible evidence. A structural pass
 does not prove creative quality, audience response, or production readiness.
@@ -37,11 +37,12 @@ Machine authority remains
 ## External and independent evidence
 
 - PR #4: open and unmerged.
-- Hosted CI: repaired implementation head passed; final status-only commit is
+- Hosted CI: latest repaired implementation head passed; final status-only commit is
   checked before delivery.
-- Fresh clean-checkout independent review: the earlier repair passed, but a later
-  acceptance review found two new P1 gaps. Their local repair requires fresh
-  hosted CI and a new non-writing clean-checkout audit.
+- Fresh clean-checkout independent review: a new non-writing reviewer rejected
+  every requested Shot-lineage and problem-count attack, recomputed the 9, 9 and
+  13 Shot sets, reran 257 tests and all 21 checks, and returned
+  `PASS_LOCAL / NO_MUST_FIX_FINDINGS`.
 - Merge, deployment, publication, generation and media deletion: not performed.
 
 ## Unverified boundaries

@@ -2,7 +2,7 @@
 
 Updated: 2026-09-04
 
-Status: `PREVIOUS_PASS_OVERRIDDEN / TWO_NEW_P1_REPAIRED_LOCAL / FRESH_AUDIT_PENDING`
+Status: `PASS_LOCAL / NO_MUST_FIX_FINDINGS / MAIN_UNMERGED`
 
 ## Review independence and scope
 
@@ -43,9 +43,9 @@ The initial verdict was `FAIL` with two P1 findings and no P0.
 - The repaired packages still yield three correct positive selections and
   three target-rule boundary rejections. All remain `HUMAN_REVIEW_PENDING` and
   unauthorized for generation or publication.
-- The earlier head passed 244 tests and all 21 repository checks. The current P1
-  repair passes 257 tests and all 21 repository checks; hosted CI and independent
-  audit are pending.
+- The earlier head passed 244 tests and all 21 repository checks. The latest P1
+  repair passes 257 tests and all 21 repository checks; hosted CI and the new
+  independent audit also pass.
 
 ## Independent re-review result
 
@@ -64,10 +64,27 @@ review verdict for that earlier head was `PASS_LOCAL / NO_MUST_FIX_FINDINGS`.
 A later independent review found two new P1 gaps not covered by the earlier
 matrix: runtime source lineage accepted legacy-candidate Shots outside the fresh
 review list, and phase `COMPLETE` did not require three distinct scene problems.
-The root implementation now repairs both locally, but this file does not
-self-approve that repair. A new non-writing reviewer must reproduce both attacks
-and inspect every runtime Shot ref from a clean checkout before the status can
-return to pass.
+The root implementation repaired both. A new non-writing reviewer then
+reproduced both attacks and inspected every runtime Shot ref from a clean
+checkout; the implementation Agent did not sign the result.
+
+## Latest P1 independent result
+
+- Removing a scene-problem or role Shot from its fresh review fails.
+- A role or promotion source ref aimed at a real but unreviewed Shot fails.
+- Adding an unauthorized Runtime Grammar Shot or removing an approved one fails.
+- Actual Runtime lineages exactly equal source, support and counterexample refs:
+  9 Shots for performance ownership, 9 for spatial reset and 13 for proximity.
+- Three rules and three families with only one or two scene problems remain
+  `PARTIAL`; the real three-problem set is `COMPLETE`.
+- Runtime validation, the final report and `STATE` all record three promoted
+  scene problems; a forged count of two makes the final builder fail.
+- 66 targeted tests, all 257 tests, all 21 repository checks, the full committed
+  diff and latest hosted validation pass. The clean checkout remained unchanged.
+
+The latest verdict is `PASS_LOCAL / NO_MUST_FIX_FINDINGS` with no new P0, P1 or
+P2. This review checked binding to the existing fresh-review authority; it did
+not reopen every source video or re-audition semantic audio.
 
 ## Preserved boundaries
 

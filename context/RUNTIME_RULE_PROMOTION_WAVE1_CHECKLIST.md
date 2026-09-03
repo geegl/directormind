@@ -22,11 +22,11 @@ Status vocabulary: `TODO`, `IN_PROGRESS`, `BLOCKED`, `VERIFIED_DONE`.
 | W1-14 | VERIFIED_DONE | Commit, push and create a new PR. | PR #4 targets `main`; the implementation and P1 repair are pushed. PR #3 was not reused; no merge was performed. |
 | W1-15 | VERIFIED_DONE | Wait for hosted CI on the final repaired implementation head. | GitHub `validate` passed on the repaired head. The final status-only commit is also checked before delivery rather than self-attested by this file. |
 | W1-16 | VERIFIED_DONE | Obtain fresh independent read-only review. | Clean-checkout re-review reopened the affected real-video Shots, replayed both P1s and five attacks, reran the full contract, and returned `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. |
-| W1-17 | IN_PROGRESS | Stop for user merge decision. | Two newer P1 acceptance gaps reopened final readiness; PR #4 remains open and `main` remains unmerged. |
-| W1-18 | IN_PROGRESS | Bind runtime source Shot lineage to the explicit fresh review set. | Local attacks reject unreviewed/missing source, problem and role refs; Grammar lineage is exactly 9, 9 and 13 fresh-authorized Shots. Final independent replay is pending. |
-| W1-19 | IN_PROGRESS | Require three distinct promoted scene problems for `COMPLETE`. | Local 1-problem and 2-problem attacks return `PARTIAL`; the real set recomputes to 3. Final independent replay is pending. |
-| W1-20 | IN_PROGRESS | Run full local and hosted validation on the new P1 repair. | 257 unit/CLI tests and all 21 repository checks pass locally; hosted CI is pending. |
-| W1-21 | TODO | Obtain a clean-checkout independent audit of both new P1 repairs. | Reviewer must reproduce both count attacks and prove every runtime Shot ref belongs to the explicit fresh-review union. |
+| W1-17 | VERIFIED_DONE | Stop for user merge decision. | All acceptance evidence is complete; PR #4 remains open and `main` remains unmerged. |
+| W1-18 | VERIFIED_DONE | Bind runtime source Shot lineage to the explicit fresh review set. | Independent attacks reject unreviewed/missing source, problem and role refs; Grammar lineage is exactly 9, 9 and 13 fresh-authorized Shots. |
+| W1-19 | VERIFIED_DONE | Require three distinct promoted scene problems for `COMPLETE`. | Independent 1-problem and 2-problem attacks return `PARTIAL`; the real set recomputes to 3. |
+| W1-20 | VERIFIED_DONE | Run full local and hosted validation on the new P1 repair. | 257 unit/CLI tests, all 21 repository checks and latest implementation hosted CI pass. |
+| W1-21 | VERIFIED_DONE | Obtain a clean-checkout independent audit of both new P1 repairs. | A new non-writing reviewer reproduced both count attacks, inspected every runtime Shot ref, and returned `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. |
 
 ## Blocked-candidate rule
 

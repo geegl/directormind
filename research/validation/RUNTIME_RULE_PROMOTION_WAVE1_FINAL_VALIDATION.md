@@ -2,7 +2,7 @@
 
 Updated: 2026-09-04
 
-Status: `P1_REPAIR_PASS_LOCAL / CI_AUDIT_PENDING / MAIN_UNMERGED`
+Status: `COMPLETE / INDEPENDENT_REVIEW_PASSED / MAIN_UNMERGED`
 
 ## Current result
 
@@ -29,7 +29,14 @@ lineage previously inherited unreviewed legacy-candidate Shots, and phase
 completion counted families but not distinct scene problems. The local repair
 now produces exact fresh Shot sets of 9, 9 and 13 and reports three distinct
 promoted scene problems. The full 21-check contract passes; hosted CI and
-independent-audit evidence for this repair are still pending.
+independent-audit evidence for this repair both pass.
+
+The new non-writing reviewer independently rejected removed or unreviewed
+scene-problem, role, promotion-source and Runtime Grammar Shot refs. The reviewer
+recomputed the three runtime lineages as 9, 9 and 13 exact fresh-approved Shots;
+replayed the one- and two-problem attacks as `PARTIAL`; confirmed the real
+three-problem set as `COMPLETE`; and returned
+`PASS_LOCAL / NO_MUST_FIX_FINDINGS` from a clean checkout.
 
 ## Independent P1 repair evidence
 

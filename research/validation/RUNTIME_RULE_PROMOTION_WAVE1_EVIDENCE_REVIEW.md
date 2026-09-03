@@ -2,7 +2,7 @@
 
 Updated: 2026-09-04
 
-Status: `ROOT_VIDEO_REVIEW_RECORDED / FRESH_LINEAGE_REPAIR_LOCAL / AUDIT_PENDING`
+Status: `ROOT_VIDEO_REVIEW_RECORDED / FRESH_LINEAGE_INDEPENDENT_AUDIT_PASSED`
 
 The canonical authority is
 `research/grammar/runtime_rule_promotion_wave1.review.json`. This document is a

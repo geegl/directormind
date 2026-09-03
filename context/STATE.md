@@ -4,7 +4,7 @@ Updated: 2026-09-04
 
 ## Current phase
 
-Runtime Rule Promotion Wave 1 is in final P1 repair verification on
+Runtime Rule Promotion Wave 1 is complete and awaiting the user's merge decision on
 `codex/runtime-rule-promotion-wave1`; PR #4 is open and `main` remains unmerged.
 The locally verified implementation now produces three real `CROSS_WORK_SUPPORTED`
 runtime rules from nine newly replayed evidence units and three mechanism
@@ -15,12 +15,13 @@ original routing facts. Both were repaired. The repaired implementation passed
 the complete diff, hosted CI and independent re-review with no must-fix finding.
 The latest independent review found two additional P1 acceptance gaps: runtime
 Shot lineage could inherit unreviewed legacy-candidate Shots, and `COMPLETE` did
-not independently require three distinct scene problems. Both are repaired
-locally. The local contract is green at 257 tests and all 21 repository checks;
-hosted CI and a fresh independent clean-checkout audit remain pending.
+not independently require three distinct scene problems. Both are repaired.
+The local contract is green at 257 tests and all 21 repository checks; hosted CI
+passed, and a new clean-checkout independent audit returned
+`PASS_LOCAL / NO_MUST_FIX_FINDINGS`.
 
-Only the root agent writes shared files. The independent reviewer remained
-read-only and issued the initial P1 findings. No source media was added,
+Only the root agent writes shared files. The independent reviewers remained
+read-only and did not implement the repairs. No source media was added,
 deleted, moved, or committed. `main` remains unchanged and must not be merged by
 this task.
 
@@ -95,5 +96,4 @@ provenance. Material catalogs do not authorize rules.
 
 ## Next single action
 
-Run the 21-check contract, push to PR #4, wait for CI, then obtain a new
-clean-checkout independent audit. Do not merge `main`.
+Stop and wait for the user's separate PR #4 merge decision. Do not merge `main`.
