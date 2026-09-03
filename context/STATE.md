@@ -4,17 +4,17 @@ Updated: 2026-09-03
 
 ## Current phase
 
-Runtime Rule Promotion Wave 1 is in P1 repair verification on
+Runtime Rule Promotion Wave 1 is complete on
 `codex/runtime-rule-promotion-wave1`, based on the current `origin/main` and
-published as PR #4.
+published as open PR #4. `main` remains unmerged.
 The locally verified implementation now produces three real `CROSS_WORK_SUPPORTED`
 runtime rules from nine newly replayed evidence units and three mechanism
 families. This meets the numerical product threshold for `COMPLETE`, but the
 first independent clean-checkout review replayed all nine units and found two
 P1s: an OTS mislabeled as clean-single support, and contradictory/unbound
-original routing facts. Both are repaired locally. Final status remains pending
-until the repair commit's complete diff, hosted CI and independent re-review all
-pass. The repaired local contract is green at 244 tests and 21 repository checks.
+original routing facts. Both were repaired. The repaired implementation passed
+the complete diff, hosted CI and independent re-review with no must-fix finding.
+The local contract is green at 244 tests and 21 repository checks.
 
 Only the root agent writes shared files. The independent reviewer remained
 read-only and issued the initial P1 findings. No source media was added,
@@ -86,6 +86,5 @@ provenance. Material catalogs do not authorize rules.
 
 ## Next single action
 
-Commit the two P1 repairs, rerun the complete committed-diff check, push to PR
-#4, wait for hosted CI on that repaired head, and obtain a fresh clean-checkout
-re-review verdict. Stop without merging `main`.
+Stop without merging `main` and wait for the user's separate merge decision on
+PR #4.

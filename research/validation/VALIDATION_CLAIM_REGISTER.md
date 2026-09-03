@@ -2,7 +2,7 @@
 
 Updated: 2026-09-03
 
-Status: `WAVE1_P1_REPAIR_LOCAL_PASS / FINAL_CI_AND_RE_REVIEW_PENDING`
+Status: `WAVE1_COMPLETE / INDEPENDENT_RE_REVIEW_PASSED / MAIN_UNMERGED`
 
 This register maps current claims to reproducible evidence. A structural pass
 does not prove creative quality, audience response, or production readiness.
@@ -24,7 +24,7 @@ does not prove creative quality, audience response, or production readiness.
 | Complete unit/CLI behavior | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s skills/drama-director-compiler/tests -v` | PASS — 244 tests | Includes role, text-anchor, reviewed-Shot, candidate, Grammar and forward-route attacks |
 | Repository boundaries | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/validate_repository_boundaries.py --quiet` | PASS — 0 broken refs, prohibited files, current-artifact string issues, or whitespace issues | The 30 immutable historical ledgers remain explicitly excluded provenance |
 | Complete local automation | `PYTHONDONTWRITEBYTECODE=1 python3 skills/drama-director-compiler/scripts/run_repository_checks.py --write-final-report` | PASS — 21 checks; final report is `PASS_LOCAL` | Hosted CI is post-push evidence, not self-attested here |
-| Complete committed diff | `git diff --check origin/main...HEAD` | Initial implementation passed; repair commit pending | Must be rerun after the P1 repair commit exists |
+| Complete committed diff | `git diff --check origin/main...HEAD` | PASS on the repaired implementation | Covers the complete branch diff, not only a clean working tree |
 
 ## Rule-level evidence
 
@@ -37,9 +37,11 @@ Machine authority remains
 ## External and independent evidence
 
 - PR #4: open and unmerged.
-- Hosted CI: initial head passed; repaired head pending.
+- Hosted CI: repaired implementation head passed; final status-only commit is
+  checked before delivery.
 - Fresh clean-checkout independent review: first review replayed 9/9 units and
-  found two P1s; both are repaired locally and re-review is pending.
+  found two P1s; repaired-head re-review closed both and returned no must-fix
+  finding.
 - Merge, deployment, publication, generation and media deletion: not performed.
 
 ## Unverified boundaries

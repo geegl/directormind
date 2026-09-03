@@ -18,11 +18,11 @@ Status vocabulary: `TODO`, `IN_PROGRESS`, `BLOCKED`, `VERIFIED_DONE`.
 | W1-10 | VERIFIED_DONE | Bind selected rules to Director IR and material directing changes. | Positive Shot IDs carry the exact selected IDs and change Coverage/Blocking/Pacing/Edit; boundary cases reject the target rule. |
 | W1-11 | VERIFIED_DONE | Preserve rights, audio and private-script boundaries. | No media/surface copy/private script change; `audio_dependency=false`; generation and publication remain unauthorized. |
 | W1-12 | VERIFIED_DONE | Add adversarial and deterministic regression coverage. | Role, reviewed-Shot, text-anchor, audio, candidate, Grammar, contradictory-signal, signal-authority and scene-problem-authority attacks are covered. |
-| W1-13 | VERIFIED_DONE | Run the final local contract against the complete working-tree diff. | 244 tests, all 21 repository checks and working-tree `git diff --check` pass after both P1 repairs; committed-diff check is repeated after the repair commit. |
-| W1-14 | IN_PROGRESS | Commit, push and create a new PR. | PR #4 targets `main` and its initial head was pushed; the local P1 repair still needs its follow-up commit and push. PR #3 is not reused; no merge is performed. |
-| W1-15 | IN_PROGRESS | Wait for hosted CI on the final PR head. | Initial PR head passed; the repaired final head still requires a new successful run. |
-| W1-16 | IN_PROGRESS | Obtain fresh independent read-only review. | First clean-checkout video review found two P1s; both are repaired locally, and the repaired head requires a new no-must-fix verdict. |
-| W1-17 | TODO | Stop for user merge decision. | State is `COMPLETE` only after W1-13 through W1-16 pass; `main` remains unmerged. |
+| W1-13 | VERIFIED_DONE | Run the final local contract against the complete working-tree diff. | 244 tests, all 21 repository checks and `git diff --check origin/main...HEAD` pass after both P1 repairs. |
+| W1-14 | VERIFIED_DONE | Commit, push and create a new PR. | PR #4 targets `main`; the implementation and P1 repair are pushed. PR #3 was not reused; no merge was performed. |
+| W1-15 | VERIFIED_DONE | Wait for hosted CI on the final repaired implementation head. | GitHub `validate` passed on the repaired head. The final status-only commit is also checked before delivery rather than self-attested by this file. |
+| W1-16 | VERIFIED_DONE | Obtain fresh independent read-only review. | Clean-checkout re-review reopened the affected real-video Shots, replayed both P1s and five attacks, reran the full contract, and returned `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. |
+| W1-17 | VERIFIED_DONE | Stop for user merge decision. | State is `COMPLETE`; PR #4 remains open and `main` remains unmerged. |
 
 ## Blocked-candidate rule
 

@@ -2,7 +2,7 @@
 
 Updated: 2026-09-03
 
-Status: `ROOT_VIDEO_REVIEW_RECORDED / INITIAL_P1_REPAIRED / RE_REVIEW_PENDING`
+Status: `ROOT_VIDEO_REVIEW_RECORDED / INDEPENDENT_RE_REVIEW_PASSED`
 
 The canonical authority is
 `research/grammar/runtime_rule_promotion_wave1.review.json`. This document is a

@@ -2,7 +2,7 @@
 
 Updated: 2026-09-03
 
-Status: `INITIAL_REVIEW_FAIL / TWO_P1_REPAIRED_LOCAL / RE_REVIEW_PENDING`
+Status: `PASS_LOCAL / NO_MUST_FIX_FINDINGS`
 
 ## Review independence and scope
 
@@ -45,12 +45,17 @@ The initial verdict was `FAIL` with two P1 findings and no P0.
   unauthorized for generation or publication.
 - Local verification passes 244 tests and all 21 repository checks.
 
-## Pending exit condition
+## Independent re-review result
 
-This record does not self-approve the repair. The status may advance only after
-the repaired commit is pushed, hosted CI succeeds on that head, and the
-independent reviewer replays both P1 cases from a new clean checkout and returns
-no must-fix finding.
+The repaired head was checked from a new clean detached checkout by the same
+non-writing reviewer. The reviewer reopened B99 S016, Better Call Saul S082 and
+S097–S098, and the affected Mr. Robot owner holds; replayed all six target
+forward packages; injected five temporary semantic attacks; ran the complete
+repository contract and complete branch diff; and verified PR #4 remained open
+and unmerged with successful hosted validation.
+
+Both P1 findings were reproduced as closed. No new P0 or P1 was found. The
+review verdict is `PASS_LOCAL / NO_MUST_FIX_FINDINGS`.
 
 ## Preserved boundaries
 

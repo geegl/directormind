@@ -2,7 +2,7 @@
 
 Updated: 2026-09-03
 
-Status: `PASS_LOCAL / INDEPENDENT_P1_REPAIRED / RE_REVIEW_PENDING`
+Status: `COMPLETE / INDEPENDENT_RE_REVIEW_PASSED / MAIN_UNMERGED`
 
 ## Current result
 
@@ -20,9 +20,9 @@ Status: `PASS_LOCAL / INDEPENDENT_P1_REPAIRED / RE_REVIEW_PENDING`
 - Complete repository runner: PASS — 21 checks, including deterministic
   builders, six versioned reports, repository boundaries and final report.
 
-The local product threshold is met. The first clean-checkout review found two
-P1s; both are repaired locally. The phase is not yet final because the repair
-commit's complete diff, hosted CI and clean-checkout re-review remain.
+The product threshold is met. The first clean-checkout review found two P1s;
+both were repaired, and the repaired implementation passed complete local
+validation, hosted CI and independent clean-checkout re-review.
 
 ## Independent P1 repair evidence
 
@@ -54,8 +54,10 @@ git diff --check origin/main...HEAD
   evidence; the remaining uncited dialogue and story semantics are unknown.
 - Structural routing and Director IR binding do not prove creative quality,
   audience effect, or production readiness.
-- Hosted CI succeeded on the initial PR head, but the repaired head still needs
-  a new run and independent re-review.
+- Hosted CI succeeded on the repaired implementation head. Independent re-review
+  returned `PASS_LOCAL / NO_MUST_FIX_FINDINGS`. The final status-only commit is
+  checked externally before delivery because a versioned report cannot attest
+  to its own future CI result.
 
 ## Rollback
 

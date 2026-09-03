@@ -2,7 +2,7 @@
 
 Updated: 2026-09-03
 
-Status: `IN_PROGRESS / INDEPENDENT_P1_REPAIRED_LOCAL / RE_REVIEW_PENDING`
+Status: `COMPLETE / INDEPENDENT_RE_REVIEW_PASSED / MAIN_UNMERGED`
 
 ## 1. Why this work exists
 
@@ -55,8 +55,9 @@ repository's deterministic builders may change derived JSON and review views.
 - [x] One full `NO_APPLICABLE_RULE` path remains.
 - [x] Complete local repository runner passes after the independent P1 repair;
   the committed-diff check will be repeated on the repair commit.
-- [ ] New PR hosted CI passes on the final repaired head.
-- [ ] A fresh non-writing reviewer checks real video and returns no must-fix
+- [x] New PR hosted CI passes on the repaired implementation head; the final
+  status-only commit is also checked before delivery.
+- [x] A fresh non-writing reviewer checks real video and returns no must-fix
   finding from a clean checkout.
 
 ## 6. Current status
@@ -65,19 +66,20 @@ repository's deterministic builders may change derived JSON and review views.
 - Completed: nine source-video replays; three canonical promotions; deterministic
   Scene Evidence, candidate, matrix, Grammar and forward-test builds; three
   positive and three boundary routes; PR #4; initial hosted CI; and local repair
-  of the two P1 findings from the first independent review.
-- Remaining: commit and push the P1 repair, rerun the complete committed-diff
-  check, wait for hosted CI on the repaired head, and obtain an independent
-  clean-checkout re-review.
+  of the two P1 findings from the first independent review. The repaired head
+  passed hosted CI and independent clean-checkout re-review with no must-fix
+  finding.
+- Remaining: no implementation or validation item. Stop for the user's separate
+  merge decision after the final status-only commit's hosted check succeeds.
 - Known limitations: semantic audio remains unauditioned; the visible-text
   anchors are short paraphrases; creative quality and audience response are not
   machine-proved.
 - Current validation: 244/244 tests and all 21 repository checks pass locally.
-- Next single action: commit the P1 repair and rerun the complete committed-diff
-  check before pushing to PR #4.
+- Next single action: stop without merging `main` and wait for the user's merge
+  decision.
 
 ## Rollback
 
-Revert the isolated Wave 1 commit with a normal revert commit. This restores the
+Revert the PR #4 Wave 1 commits with normal revert commits. This restores the
 zero-rule Grammar and eight-package forward-test state without touching source
 media, legacy evidence Markdown, private scripts, or `main` history.
