@@ -296,7 +296,6 @@ def make_auxiliary_status_evidence(status: str, source_refs: list[str] | None = 
         method_type = "PICTURE_FRAME_REVIEW"
     elif status == "AUDIO_OBSERVED":
         method_id = "METHOD-AUDIO-AUX"
-        kind = "AUDIO_AUDIT_EVENT"
         method_type = "AUDIO_DIRECT_AUDITION"
         evidence["audio_evidence_status"] = "AUDIO_OBSERVED"
     elif status == "TEXT_ANCHOR":

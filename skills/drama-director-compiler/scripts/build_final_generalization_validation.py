@@ -187,6 +187,9 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
             "candidate_identities": candidate["candidate_count"],
             "candidate_families": candidate["family_count"],
             "reviewed_evidence_units": integration["evidence_review_count"],
+            "directly_auditioned_semantic_audio_scenes": integration[
+                "directly_auditioned_evidence_count"
+            ],
             "moving_image_reviewed_shots": moving_image_reviewed_shots,
             "final_candidate_dispositions": integration["candidate_final_disposition_count"],
             "pending_evidence_gap_candidates": integration["pending_evidence_gap_count"],
@@ -264,11 +267,11 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
             "media_deleted": _declared_not_performed(),
         },
         "unverified_boundaries": [
-            "SIXTY_FIVE_CANDIDATES_REMAIN_FIXED_CORPUS_EVIDENCE_GAPS",
-            "FOUR_CANDIDATES_REQUIRE_DIRECT_AUDITION_OF_EXISTING_MATERIAL",
+            "SIXTY_NINE_CANDIDATES_REMAIN_FIXED_CORPUS_EVIDENCE_GAPS",
+            "SOUND_SOURCE_CAUSALITY_SUBJECTIVITY_AND_SUBSECOND_OFFSETS_REMAIN_UNPROVED",
             "TWENTY_SIX_OF_THIRTY_ONE_EVIDENCE_UNITS_HAVE_FINAL_DECISION_MAPPINGS",
             "FIVE_OF_SIXTEEN_FAMILIES_ARE_NOT_YET_RUNTIME_PARTICIPATING",
-            "SEMANTIC_AUDIO_REMAINS_UNAUDITIONED",
+            "ONLY_ONE_SCENE_HAS_DIRECT_SEMANTIC_AUDIO_AUDITION",
             "FORWARD_SELECTION_IS_STRUCTURAL_NOT_CREATIVE_APPROVAL",
             "CREATIVE_QUALITY_AND_AUDIENCE_EFFECT_NOT_PROVED",
             "REMOTE_CI_RESULT_IS_POST_COMMIT_EXTERNAL_EVIDENCE",

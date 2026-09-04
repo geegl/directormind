@@ -23,7 +23,7 @@
       "enum": ["PASS_LOCAL", "FAIL_LOCAL"]
     },
     "phase_status": {
-      "const": "IN_PROGRESS"
+      "const": "PARTIAL_EVIDENCE_GAP"
     },
     "counts": {
       "type": "object",
@@ -35,6 +35,7 @@
         "candidate_identities",
         "candidate_families",
         "reviewed_evidence_units",
+        "directly_auditioned_semantic_audio_scenes",
         "moving_image_reviewed_shots",
         "final_candidate_dispositions",
         "pending_evidence_gap_candidates",
@@ -79,11 +80,12 @@
         "candidate_identities": {"const": 124},
         "candidate_families": {"const": 16},
         "reviewed_evidence_units": {"const": 31},
+        "directly_auditioned_semantic_audio_scenes": {"const": 1},
         "moving_image_reviewed_shots": {"const": 1840},
         "final_candidate_dispositions": {"const": 55},
-        "pending_evidence_gap_candidates": {"const": 65},
-        "existing_material_review_required_candidates": {"const": 4},
-        "evidence_gaps": {"const": 10},
+        "pending_evidence_gap_candidates": {"const": 69},
+        "existing_material_review_required_candidates": {"const": 0},
+        "evidence_gaps": {"const": 14},
         "runtime_active_families": {"const": 11},
         "evidence_final_mappings": {"const": 26},
         "positive_runtime_candidates": {"const": 7},
@@ -102,10 +104,10 @@
         "promotion_ready_families": {"const": 7},
         "forward_selected_rules": {"const": 7},
         "human_review_pending_packages": {"const": 29},
-        "scene_warnings": {"const": 87},
+        "scene_warnings": {"const": 88},
         "forward_warnings": {"const": 119},
         "validation_errors": {"const": 0},
-        "validation_warnings": {"const": 206},
+        "validation_warnings": {"const": 207},
         "unit_tests": {"type": "integer", "minimum": 257},
         "broken_references": {"const": 0},
         "prohibited_repository_files": {"const": 0},

@@ -244,6 +244,10 @@ def build_report() -> dict[str, Any]:
         "phase_status": phase_status if not issues else "IN_PROGRESS",
         "source_disposition_count": len(review["source_dispositions"]),
         "canonical_scene_evidence_count": len(review["evidence_reviews"]),
+        "directly_auditioned_audio_scene_count": sum(
+            item.get("audio_review_status") == "DIRECT_AUDITION_COMPLETE"
+            for item in review["evidence_reviews"]
+        ),
         "canonical_shot_edit_unit_count": sum(item["stats"]["shot_count"] for item in evidence_units),
         "candidate_disposition_count": len(dispositions),
         "candidate_final_status_counts": dict(sorted(final_counts.items())),

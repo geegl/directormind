@@ -27,6 +27,7 @@ from build_candidate_rule_index import classify_family  # noqa: E402
 from validate_scene_evidence import (  # noqa: E402
     _same_file_target,
     _write_report_atomically,
+    parse_timecode,
     validate_schema_subset,
 )
 
@@ -142,6 +143,8 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
     review_by_evidence = {item.get("evidence_id"): item for item in evidence_reviews if isinstance(item, dict)}
     reviewed_shots_by_review: dict[str, set[str]] = {}
     moving_shots_by_review: dict[str, set[str]] = {}
+    auditioned_shots_by_review: dict[str, set[str]] = {}
+    audio_observations_by_review: dict[str, dict[str, dict]] = {}
     for index, item in enumerate(evidence_reviews):
         if not isinstance(item, dict):
             continue
@@ -156,6 +159,8 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
         reviewed_shots_by_review[item.get("review_id")] = set(shot_ids)
         moving_shot_ids = item.get("moving_image_reviewed_shot_ids", [])
         moving_shots_by_review[item.get("review_id")] = set(moving_shot_ids)
+        auditioned_shot_ids = item.get("directly_auditioned_shot_ids", [])
+        auditioned_shots_by_review[item.get("review_id")] = set(auditioned_shot_ids)
         if not _unique(shot_ids):
             add_issue(issues, "INTEGRATION-REVIEW-SHOT-DUPLICATE", path, "Reviewed Shot IDs must be unique.")
         if not _unique(moving_shot_ids) or not set(moving_shot_ids).issubset(set(shot_ids)):
@@ -174,6 +179,152 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
                 continue
             if reviewed_shot.get("start") != source_shot.get("start") or reviewed_shot.get("end") != source_shot.get("end"):
                 add_issue(issues, "INTEGRATION-REVIEW-TIMECODE", f"{path}.reviewed_shots[{shot_index}]", "Reviewed Shot timecodes must exactly match canonical Shot bounds.")
+
+        audio_status = item.get("audio_review_status")
+        audio_method_id = item.get("audio_method_id")
+        audio_observations = item.get("audio_observations", [])
+        if audio_status == "DIRECT_AUDITION_COMPLETE":
+            if (
+                not isinstance(audio_method_id, str)
+                or not audio_method_id
+                or audio_method_id == item.get("method_id")
+                or not auditioned_shot_ids
+                or set(auditioned_shot_ids) != set(shot_ids)
+                or not audio_observations
+            ):
+                add_issue(
+                    issues,
+                    "INTEGRATION-AUDIO-OBSERVATION-REQUIRED",
+                    path,
+                    "Direct audition requires its own method, complete reviewed-Shot coverage, and at least one bound human-audition observation.",
+                )
+            audio_method = next(
+                (
+                    method
+                    for method in evidence.get("methods", [])
+                    if isinstance(method, dict) and method.get("method_id") == audio_method_id
+                ),
+                None,
+            )
+            if (
+                not isinstance(audio_method, dict)
+                or audio_method.get("method_type") != "AUDIO_DIRECT_AUDITION"
+                or audio_method.get("status") != "MANUAL_REVIEW_RECORDED"
+                or set(audio_method.get("source_refs", [])) != set(auditioned_shot_ids)
+            ):
+                add_issue(
+                    issues,
+                    "INTEGRATION-AUDIO-METHOD-BINDING",
+                    f"{path}.audio_method_id",
+                    "Direct audition must bind a recorded AUDIO_DIRECT_AUDITION method covering exactly the auditioned Shots in its canonical evidence record.",
+                )
+        elif audio_method_id is not None or auditioned_shot_ids or audio_observations:
+            add_issue(
+                issues,
+                "INTEGRATION-AUDIO-OBSERVATION-WITHOUT-AUDITION",
+                path,
+                "Audio observations and auditioned Shot IDs are allowed only after direct audition.",
+            )
+
+        observation_ids = [
+            observation.get("observation_id")
+            for observation in audio_observations
+            if isinstance(observation, dict)
+        ]
+        audio_observations_by_review[item.get("review_id")] = {
+            observation.get("observation_id"): observation
+            for observation in audio_observations
+            if isinstance(observation, dict) and isinstance(observation.get("observation_id"), str)
+        }
+        if not _unique(observation_ids):
+            add_issue(
+                issues,
+                "INTEGRATION-AUDIO-OBSERVATION-ID",
+                f"{path}.audio_observations",
+                "Audio observation IDs must be unique within the review.",
+            )
+        scene_start = evidence.get("source_start", {}).get("seconds")
+        scene_end = evidence.get("source_end", {}).get("seconds")
+        for observation_index, observation in enumerate(audio_observations):
+            if not isinstance(observation, dict):
+                continue
+            observation_path = f"{path}.audio_observations[{observation_index}]"
+            start = observation.get("start", {})
+            end = observation.get("end", {})
+            start_seconds = start.get("seconds") if isinstance(start, dict) else None
+            end_seconds = end.get("seconds") if isinstance(end, dict) else None
+            precision = observation.get("precision_seconds")
+            numeric_values = (start_seconds, end_seconds, precision, scene_start, scene_end)
+            if not all(isinstance(value, (int, float)) and not isinstance(value, bool) for value in numeric_values):
+                continue
+            start_seconds = float(start_seconds)
+            end_seconds = float(end_seconds)
+            precision = float(precision)
+            parsed_start = parse_timecode(start.get("timecode", ""))
+            parsed_end = parse_timecode(end.get("timecode", ""))
+            if (
+                parsed_start is None
+                or parsed_end is None
+                or abs(parsed_start - start_seconds) > 0.001
+                or abs(parsed_end - end_seconds) > 0.001
+            ):
+                add_issue(
+                    issues,
+                    "INTEGRATION-AUDIO-OBSERVATION-TIMECODE",
+                    observation_path,
+                    "Audio observation timecodes and seconds must agree within one millisecond.",
+                )
+            if start_seconds > end_seconds or start_seconds < float(scene_start) - precision or end_seconds > float(scene_end) + precision:
+                add_issue(
+                    issues,
+                    "INTEGRATION-AUDIO-OBSERVATION-RANGE",
+                    observation_path,
+                    "Audio observation range must be ordered and remain inside the reviewed scene envelope at its declared precision.",
+                )
+            clip_start = observation.get("clip_offset_start_seconds")
+            clip_end = observation.get("clip_offset_end_seconds")
+            if (
+                not isinstance(clip_start, (int, float))
+                or isinstance(clip_start, bool)
+                or not isinstance(clip_end, (int, float))
+                or isinstance(clip_end, bool)
+                or abs(float(clip_start) - (start_seconds - float(scene_start))) > 0.001
+                or abs(float(clip_end) - (end_seconds - float(scene_start))) > 0.001
+            ):
+                add_issue(
+                    issues,
+                    "INTEGRATION-AUDIO-OBSERVATION-OFFSET",
+                    observation_path,
+                    "Clip-relative offsets must exactly bind the absolute source timecodes.",
+                )
+            expected_refs = {
+                shot_id
+                for shot_id in auditioned_shot_ids
+                if shot_id in shot_by_id
+                and float(shot_by_id[shot_id]["start"]["seconds"]) <= end_seconds + precision
+                and float(shot_by_id[shot_id]["end"]["seconds"]) >= start_seconds - precision
+            }
+            if set(observation.get("source_refs", [])) != expected_refs:
+                add_issue(
+                    issues,
+                    "INTEGRATION-AUDIO-OBSERVATION-SOURCE-REF",
+                    f"{observation_path}.source_refs",
+                    "Audio observation refs must exactly equal the directly auditioned Shots intersecting its precision envelope.",
+                )
+        if audio_status == "DIRECT_AUDITION_COMPLETE":
+            observation_refs = {
+                source_ref
+                for observation in audio_observations
+                if isinstance(observation, dict)
+                for source_ref in observation.get("source_refs", [])
+            }
+            if observation_refs != set(auditioned_shot_ids):
+                add_issue(
+                    issues,
+                    "INTEGRATION-AUDIO-OBSERVATION-COVERAGE",
+                    f"{path}.audio_observations",
+                    "Direct-audition observations must collectively cover every declared auditioned Shot.",
+                )
 
     dispositions = review.get("candidate_dispositions", [])
     disposition_ids = [item.get("candidate_rule_id") for item in dispositions if isinstance(item, dict)]
@@ -330,9 +481,79 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
                 )
         if status != "EVIDENCE_GAP_PENDING" and gap_memberships.get(item.get("candidate_rule_id")):
             add_issue(issues, "INTEGRATION-FINAL-GAP-MEMBERSHIP", path, "A final candidate cannot remain listed in an evidence gap.")
-        if item.get("audio_dependency") and status in FINAL_STATUSES:
-            if not any(review_by_id.get(review_id, {}).get("audio_review_status") == "DIRECT_AUDITION_COMPLETE" for review_id in candidate_review_ids):
-                add_issue(issues, "INTEGRATION-AUDIO-REVIEW", path, "Audio-dependent disposition requires direct audition evidence.")
+        if item.get("audio_dependency") and status in FINAL_STATUSES | {"EVIDENCE_GAP_PENDING"}:
+            auditioned_refs = {
+                shot_id
+                for review_id in candidate_review_ids
+                for shot_id in auditioned_shots_by_review.get(review_id, set())
+            }
+            if not source_refs or not source_refs.issubset(auditioned_refs):
+                add_issue(issues, "INTEGRATION-AUDIO-REVIEW", path, "Audio-dependent final or corpus-gap disposition requires direct audition of every cited Shot.")
+            selected_observation_ids = item.get("audio_observation_ids", [])
+            unresolved_observation_ids: list[str] = []
+            off_lineage_observation_ids: list[str] = []
+            for observation_id in selected_observation_ids:
+                matches = [
+                    audio_observations_by_review.get(review_id, {}).get(observation_id)
+                    for review_id in candidate_review_ids
+                    if audio_observations_by_review.get(review_id, {}).get(observation_id) is not None
+                ]
+                if len(matches) != 1:
+                    unresolved_observation_ids.append(observation_id)
+                    continue
+                if not source_refs.intersection(matches[0].get("source_refs", [])):
+                    off_lineage_observation_ids.append(observation_id)
+            audio_claims = item.get("audio_claims", [])
+            claim_observation_ids = [
+                claim.get("observation_id")
+                for claim in audio_claims
+                if isinstance(claim, dict)
+            ]
+            invalid_claim_observation_ids: list[str] = []
+            for claim in audio_claims:
+                if not isinstance(claim, dict):
+                    continue
+                observation_id = claim.get("observation_id")
+                matches = [
+                    audio_observations_by_review.get(review_id, {}).get(observation_id)
+                    for review_id in candidate_review_ids
+                    if audio_observations_by_review.get(review_id, {}).get(observation_id) is not None
+                ]
+                if len(matches) != 1 or claim.get("claim") != matches[0].get("description"):
+                    invalid_claim_observation_ids.append(observation_id)
+            if (
+                not selected_observation_ids
+                or unresolved_observation_ids
+                or off_lineage_observation_ids
+                or not audio_claims
+                or not _unique(claim_observation_ids)
+                or invalid_claim_observation_ids
+                or set(selected_observation_ids) != set(claim_observation_ids)
+            ):
+                add_issue(
+                    issues,
+                    "INTEGRATION-CANDIDATE-AUDIO-OBSERVATION-BINDING",
+                    f"{path}.audio_observation_ids",
+                    "An audio-dependent final or corpus-gap disposition must bind each audio claim exactly to the same-review observation description it uses.",
+                )
+        elif item.get("audio_observation_ids") or item.get("audio_claims"):
+            add_issue(
+                issues,
+                "INTEGRATION-CANDIDATE-AUDIO-OBSERVATION-WITHOUT-DEPENDENCY",
+                f"{path}.audio_observation_ids",
+                "Only an audio-dependent final or corpus-gap disposition may bind audition observations or claims.",
+            )
+        if item.get("audio_dependency") and status == "EXISTING_MATERIAL_REVIEW_REQUIRED":
+            if any(
+                review_by_id.get(review_id, {}).get("audio_review_status") == "DIRECT_AUDITION_COMPLETE"
+                for review_id in candidate_review_ids
+            ):
+                add_issue(
+                    issues,
+                    "INTEGRATION-EXISTING-REVIEW-AUDIO-COMPLETE",
+                    path,
+                    "A completed direct audition cannot remain labeled as unfinished existing-material review.",
+                )
 
         target_rule_id = item.get("target_rule_id")
         if status == "POSITIVE_RUNTIME_RULE":
@@ -654,6 +875,11 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
         "phase_status": computed_phase_status if not issues else "IN_PROGRESS",
         "source_disposition_count": len(source_numbers),
         "evidence_review_count": len(reviewed_evidence_ids),
+        "directly_auditioned_evidence_count": sum(
+            1
+            for item in evidence_reviews
+            if isinstance(item, dict) and item.get("audio_review_status") == "DIRECT_AUDITION_COMPLETE"
+        ),
         "candidate_disposition_count": len(disposition_ids),
         "candidate_final_disposition_count": len(final_ids),
         "candidate_runtime_effect_count": sum(

@@ -2,9 +2,10 @@
 """Convert the closed canonical legacy Scene Evidence corpus to JSON.
 
 The converter is intentionally conservative.  It treats the checked-in Markdown
-tables as migration input, never as fresh observation: semantic audio remains
-blocked, text anchors remain unused, cross-cut identity is not upgraded, and all
-embedded transfer candidates remain blocked pending human review.
+tables as migration input, never as fresh observation; any later picture or
+audio observation is applied only from a separately validated review authority.
+Text anchors remain unused unless separately reviewed, cross-cut identity is not
+upgraded, and embedded transfer candidates remain blocked pending human review.
 
 Generated files are written next to their source Markdown by default.  Use
 ``--output-root`` to mirror the ``research/evidence`` tree elsewhere (for tests
@@ -1060,6 +1061,176 @@ def _integration_review() -> dict[str, Any]:
     return data
 
 
+def _apply_integration_audio_review(evidence: dict[str, Any], review: dict[str, Any]) -> None:
+    """Bind direct human audition separately from decoded-signal measurements."""
+    if review.get("audio_review_status") != "DIRECT_AUDITION_COMPLETE":
+        return
+
+    shots_by_id = {shot["shot_id"]: shot for shot in evidence["shots"]}
+    auditioned_shot_ids = review.get("directly_auditioned_shot_ids", [])
+    if not auditioned_shot_ids or not set(auditioned_shot_ids).issubset(shots_by_id):
+        raise ValueError(
+            f"direct audition cites unknown Shot IDs for {evidence['evidence_id']}"
+        )
+    audio_method_id = review.get("audio_method_id")
+    expected_audio_method_id = f"{evidence['evidence_id']}-METHOD-DIRECT-AUDIO"
+    if audio_method_id != expected_audio_method_id:
+        raise ValueError(
+            f"direct audition method differs from canonical method for {evidence['evidence_id']}"
+        )
+    audio_observations = review.get("audio_observations", [])
+    if not audio_observations:
+        raise ValueError(
+            f"direct audition lacks observations for {evidence['evidence_id']}"
+        )
+
+    evidence["audio_evidence_status"] = "AUDIO_OBSERVED"
+    for shot_id in auditioned_shot_ids:
+        shot = shots_by_id[shot_id]
+        shot["audio_status"] = "AUDIO_OBSERVED"
+        shot["unknowns"] = [
+            (
+                "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown."
+                if unknown == "Audio remains unknown and was not directly auditioned."
+                else unknown
+            )
+            for unknown in shot["unknowns"]
+        ]
+
+    audio_method = next(
+        (
+            method
+            for method in evidence["methods"]
+            if method.get("method_id") == audio_method_id
+        ),
+        None,
+    )
+    if audio_method is None:
+        raise ValueError(f"canonical direct-audition method is missing for {evidence['evidence_id']}")
+    audio_method.update(
+        {
+            "status": "MANUAL_REVIEW_RECORDED",
+            "description": (
+                "A human listener directly auditioned the complete selected local interval and reported "
+                "source-neutral audible states at approximate one-second precision."
+            ),
+            "repository_command": None,
+            "tool_version_status": "NOT_APPLICABLE",
+            "source_refs": auditioned_shot_ids,
+            "unknowns": [
+                "Exact source ownership, subjective hearing status, narrative causality, mix construction, and director intent remain unknown."
+            ],
+        }
+    )
+
+    for auxiliary in evidence["auxiliary_evidence"]:
+        if auxiliary.get("status") == "SIGNAL_MEASURED_NOT_AUDITIONED":
+            auxiliary["status"] = "SIGNAL_MEASURED"
+            auxiliary["measurements"]["direct_audition_completed"] = True
+            auxiliary["unknowns"] = [
+                "Exact signal-to-percept causal mapping, source ownership, and director intent remain unknown."
+            ]
+
+    auxiliary_ids_by_field: dict[str, list[str]] = {
+        "silence_intervals": [],
+        "ambience": [],
+        "object_sound": [],
+        "audio_information_change": [],
+    }
+    for observation in audio_observations:
+        auxiliary_id = observation["observation_id"]
+        evidence["auxiliary_evidence"].append(
+            {
+                "auxiliary_id": auxiliary_id,
+                "kind": "AUDIO_AUDIT_EVENT",
+                "status": "AUDIO_OBSERVED",
+                "start": observation["start"],
+                "end": observation["end"],
+                "method_id": audio_method_id,
+                "measurements": {
+                    "precision": observation["precision"],
+                    "precision_seconds": observation["precision_seconds"],
+                    "clip_offset_start_seconds": observation["clip_offset_start_seconds"],
+                    "clip_offset_end_seconds": observation["clip_offset_end_seconds"],
+                    "description": observation["description"],
+                },
+                "source_refs": observation["source_refs"],
+                "unknowns": observation["unknowns"],
+            }
+        )
+        for field in observation["audit_fields"]:
+            auxiliary_ids_by_field[field].append(auxiliary_id)
+
+    summaries = {
+        "silence_intervals": (
+            "A substantially quieter interval follows the gull-like calls; absolute silence is not asserted."
+        ),
+        "ambience": (
+            "The audition contains changing muffled and clearer speech states, a short drum passage, "
+            "gull-like outdoor ambience, road-like noise, and an indoor-like state."
+        ),
+        "object_sound": "A short drum passage is audible; its production-layer ownership remains unknown.",
+        "audio_information_change": (
+            "The directly auditioned interval repeatedly changes between muffled, clearer, quieter, "
+            "and environmental-noise states."
+        ),
+    }
+    evidence["audio_audit"] = _audio_audit()
+    for field, refs in auxiliary_ids_by_field.items():
+        if refs:
+            evidence["audio_audit"][field] = claim(
+                f"AUDIO-DIRECT-{field.upper().replace('_', '-')}",
+                summaries[field],
+                refs,
+                "AUDIO_OBSERVED",
+                notes="Recorded from direct human audition at declared approximate precision.",
+            )
+    for key, audio_claim in evidence["audio_audit"].items():
+        if key == "audio_unknowns" or audio_claim["status"] != "UNKNOWN":
+            continue
+        audio_claim["value"] = (
+            f"Direct audition did not establish {key.replace('_', ' ')}; this remains unknown."
+        )
+        audio_claim["notes"] = "Direct audition completed, but this specific semantic field was not established."
+    evidence["audio_audit"]["audio_unknowns"] = [
+        "Exact speaker identities, dialogue content, score status, offscreen ownership, sound bridging, subjective hearing, narrative causality, and mix intent remain unknown."
+    ]
+
+    audio_candidate_ids = {
+        item["candidate_rule_id"]
+        for item in _integration_review().get("candidate_dispositions", [])
+        if item.get("evidence_id") == evidence["evidence_id"] and item.get("audio_dependency")
+    }
+    for rule in evidence["candidate_rules"]:
+        if rule["candidate_rule_id"] not in audio_candidate_ids:
+            continue
+        if audio_method_id not in rule["source_method_ids"]:
+            rule["source_method_ids"].append(audio_method_id)
+        rule["audio_logic"]["value"] = (
+            "Exact source, subjective ownership, dramatic causality, and rule-level edit relationship "
+            "remain unknown; no audio instruction is authorized."
+        )
+        rule["audio_logic"]["notes"] = (
+            "Direct audition records audible surface states only; runtime use remains blocked by the listed unknowns."
+        )
+    for unknown in evidence["unknowns"]:
+        if unknown["unknown_id"] == "UNKNOWN-AUDIO":
+            unknown["statement"] = (
+                "After direct audition, exact audio ownership, subjective hearing status, shared dramatic trigger, narrative causality, and director intent remain unknown."
+            )
+    evidence["validation_warnings"].append(
+        "Direct human audition covers the selected interval at approximate one-second precision; decoded-signal measurements remain a separate timing aid, and subjective hearing, causality, and intent are not proved."
+    )
+    evidence["validation_warnings"] = [
+        (
+            "The structural conversion preserved recorded frame and PTS endpoints; separate exhaustive picture and direct-audio reviews reopened the selected local interval."
+            if warning == "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+            else warning
+        )
+        for warning in evidence["validation_warnings"]
+    ]
+
+
 def _apply_integration_review(evidence: dict[str, Any]) -> None:
     """Apply only fresh, source-bound facts from the exhaustive review authority."""
     review_data = _integration_review()
@@ -1093,9 +1264,16 @@ def _apply_integration_review(evidence: dict[str, Any]) -> None:
             "repository_command": None,
             "tool_version_status": "VERSION_UNKNOWN",
             "source_refs": reviewed_shot_ids,
-            "unknowns": ["Exact identity, dialogue, sound, intention, and production method remain unknown."],
+            "unknowns": [
+                (
+                    "Exact identity, dialogue content, intention, and production method remain unknown."
+                    if review.get("audio_review_status") == "DIRECT_AUDITION_COMPLETE"
+                    else "Exact identity, dialogue, sound, intention, and production method remain unknown."
+                )
+            ],
         }
     )
+    _apply_integration_audio_review(evidence, review)
 
     # The exhaustive review may expand a legacy candidate's Shot lineage after
     # reopening additional intervals from the same canonical scene. Preserve

@@ -71,6 +71,43 @@
         "end": {"$ref": "#/$defs/timePoint"}
       }
     },
+    "audioObservation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "observation_id", "status", "precision", "precision_seconds",
+        "clip_offset_start_seconds", "clip_offset_end_seconds", "start", "end",
+        "description", "audit_fields", "source_refs", "unknowns"
+      ],
+      "properties": {
+        "observation_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+        "status": {"const": "AUDIO_OBSERVED"},
+        "precision": {"const": "APPROXIMATE_HUMAN_AUDITION"},
+        "precision_seconds": {"type": "number", "exclusiveMinimum": 0, "maximum": 5},
+        "clip_offset_start_seconds": {"type": "number", "minimum": 0},
+        "clip_offset_end_seconds": {"type": "number", "minimum": 0},
+        "start": {"$ref": "#/$defs/timePoint"},
+        "end": {"$ref": "#/$defs/timePoint"},
+        "description": {"type": "string", "minLength": 1},
+        "audit_fields": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"enum": ["silence_intervals", "ambience", "object_sound", "audio_information_change"]}
+        },
+        "source_refs": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "unknowns": {"$ref": "#/$defs/nonEmptyStringArray"}
+      }
+    },
+    "audioClaim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observation_id", "claim"],
+      "properties": {
+        "observation_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+        "claim": {"type": "string", "minLength": 1}
+      }
+    },
     "sourceDisposition": {
       "type": "object",
       "additionalProperties": false,
@@ -97,6 +134,9 @@
         "method_id": {"type": "string", "minLength": 1},
         "picture_review_status": {"enum": ["FRAME_REPLAY_COMPLETE", "MOVING_IMAGE_REVIEW_COMPLETE", "PICTURE_PARTIAL"]},
         "audio_review_status": {"enum": ["DIRECT_AUDITION_COMPLETE", "NOT_AUDITIONED", "SIGNAL_MEASURED_NOT_AUDITIONED"]},
+        "audio_method_id": {"anyOf": [{"type": "string", "minLength": 1}, {"type": "null"}]},
+        "directly_auditioned_shot_ids": {"$ref": "#/$defs/stringArray"},
+        "audio_observations": {"type": "array", "items": {"$ref": "#/$defs/audioObservation"}},
         "reviewed_shots": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/reviewedShot"}},
         "moving_image_reviewed_shot_ids": {"$ref": "#/$defs/stringArray"},
         "observations": {"$ref": "#/$defs/nonEmptyStringArray"},
@@ -126,6 +166,8 @@
         "inferences": {"$ref": "#/$defs/stringArray"},
         "material_unknowns": {"$ref": "#/$defs/stringArray"},
         "audio_dependency": {"type": "boolean"},
+        "audio_observation_ids": {"$ref": "#/$defs/stringArray"},
+        "audio_claims": {"type": "array", "items": {"$ref": "#/$defs/audioClaim"}},
         "target_rule_id": {"anyOf": [{"type": "string", "pattern": "^DR-[A-Z0-9-]+$"}, {"type": "null"}]},
         "merged_into_candidate_id": {"anyOf": [{"type": "string", "minLength": 1}, {"type": "null"}]},
         "boundary_signal_ids": {"$ref": "#/$defs/stringArray"},

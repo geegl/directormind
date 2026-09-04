@@ -40,7 +40,7 @@
   "duration": 391.182459,
   "time_tolerance_seconds": 0.001,
   "picture_evidence_status": "PICTURE_OBSERVED",
-  "audio_evidence_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+  "audio_evidence_status": "AUDIO_OBSERVED",
   "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
   "scene_dramatic_structure": {
     "start_state": {
@@ -349,7 +349,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -378,7 +378,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -585,7 +585,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -614,7 +614,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -821,7 +821,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -850,7 +850,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -1057,7 +1057,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -1086,7 +1086,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -1293,7 +1293,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -1322,7 +1322,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -1529,7 +1529,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -1558,7 +1558,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -1765,7 +1765,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -1794,7 +1794,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -2001,7 +2001,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -2030,7 +2030,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -2237,7 +2237,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -2266,7 +2266,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -2473,7 +2473,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -2502,7 +2502,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -2709,7 +2709,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -2738,7 +2738,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -2945,7 +2945,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -2974,7 +2974,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -3181,7 +3181,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -3210,7 +3210,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -3417,7 +3417,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -3446,7 +3446,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -3653,7 +3653,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -3682,7 +3682,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -3889,7 +3889,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -3918,7 +3918,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -4125,7 +4125,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -4154,7 +4154,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -4361,7 +4361,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -4390,7 +4390,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -4597,7 +4597,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -4626,7 +4626,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -4833,7 +4833,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -4862,7 +4862,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -5069,7 +5069,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -5098,7 +5098,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -5305,7 +5305,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -5334,7 +5334,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -5541,7 +5541,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -5570,7 +5570,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -5777,7 +5777,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -5806,7 +5806,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     },
@@ -6013,7 +6013,7 @@
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
       "picture_status": "PICTURE_OBSERVED",
-      "audio_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_status": "AUDIO_OBSERVED",
       "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
       "AI_complexity": {
         "camera": {
@@ -6042,7 +6042,7 @@
         "project_original_only": true
       },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
+        "Exact sound source, causal ownership, subjective status, and intended audience effect remain unknown.",
         "Cross-cut identities remain unknown."
       ]
     }
@@ -6065,82 +6065,111 @@
     "dialogue_overlap": {
       "claim_id": "AUDIO-01",
       "status": "UNKNOWN",
-      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "value": "Direct audition did not establish dialogue overlap; this remains unknown.",
       "source_refs": [],
-      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      "notes": "Direct audition completed, but this specific semantic field was not established."
     },
     "silence_intervals": {
-      "claim_id": "AUDIO-02",
-      "status": "UNKNOWN",
-      "value": "Direct audition was not completed; this audio fact remains unknown.",
-      "source_refs": [],
-      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      "claim_id": "AUDIO-DIRECT-SILENCE-INTERVALS",
+      "status": "AUDIO_OBSERVED",
+      "value": "A substantially quieter interval follows the gull-like calls; absolute silence is not asserted.",
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E007"
+      ],
+      "notes": "Recorded from direct human audition at declared approximate precision."
     },
     "ambience": {
-      "claim_id": "AUDIO-03",
-      "status": "UNKNOWN",
-      "value": "Direct audition was not completed; this audio fact remains unknown.",
-      "source_refs": [],
-      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      "claim_id": "AUDIO-DIRECT-AMBIENCE",
+      "status": "AUDIO_OBSERVED",
+      "value": "The audition contains changing muffled and clearer speech states, a short drum passage, gull-like outdoor ambience, road-like noise, and an indoor-like state.",
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E007",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E008",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E014",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E015",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E016"
+      ],
+      "notes": "Recorded from direct human audition at declared approximate precision."
     },
     "score_entry": {
       "claim_id": "AUDIO-04",
       "status": "UNKNOWN",
-      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "value": "Direct audition did not establish score entry; this remains unknown.",
       "source_refs": [],
-      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      "notes": "Direct audition completed, but this specific semantic field was not established."
     },
     "score_exit": {
       "claim_id": "AUDIO-05",
       "status": "UNKNOWN",
-      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "value": "Direct audition did not establish score exit; this remains unknown.",
       "source_refs": [],
-      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      "notes": "Direct audition completed, but this specific semantic field was not established."
     },
     "sound_before_image": {
       "claim_id": "AUDIO-06",
       "status": "UNKNOWN",
-      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "value": "Direct audition did not establish sound before image; this remains unknown.",
       "source_refs": [],
-      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      "notes": "Direct audition completed, but this specific semantic field was not established."
     },
     "offscreen_sound": {
       "claim_id": "AUDIO-07",
       "status": "UNKNOWN",
-      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "value": "Direct audition did not establish offscreen sound; this remains unknown.",
       "source_refs": [],
-      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      "notes": "Direct audition completed, but this specific semantic field was not established."
     },
     "sound_bridge": {
       "claim_id": "AUDIO-08",
       "status": "UNKNOWN",
-      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "value": "Direct audition did not establish sound bridge; this remains unknown.",
       "source_refs": [],
-      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      "notes": "Direct audition completed, but this specific semantic field was not established."
     },
     "subjective_sound": {
       "claim_id": "AUDIO-09",
       "status": "UNKNOWN",
-      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "value": "Direct audition did not establish subjective sound; this remains unknown.",
       "source_refs": [],
-      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      "notes": "Direct audition completed, but this specific semantic field was not established."
     },
     "object_sound": {
       "claim_id": "AUDIO-10",
       "status": "UNKNOWN",
-      "value": "Direct audition was not completed; this audio fact remains unknown.",
+      "value": "Direct audition did not establish object sound; this remains unknown.",
       "source_refs": [],
-      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      "notes": "Direct audition completed, but this specific semantic field was not established."
     },
     "audio_information_change": {
-      "claim_id": "AUDIO-11",
-      "status": "UNKNOWN",
-      "value": "Direct audition was not completed; this audio fact remains unknown.",
-      "source_refs": [],
-      "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+      "claim_id": "AUDIO-DIRECT-AUDIO-INFORMATION-CHANGE",
+      "status": "AUDIO_OBSERVED",
+      "value": "The directly auditioned interval repeatedly changes between muffled, clearer, quieter, and environmental-noise states.",
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E007",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E008",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E010",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E011",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E012",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E014",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E015",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E016"
+      ],
+      "notes": "Recorded from direct human audition at declared approximate precision."
     },
     "audio_unknowns": [
-      "Dialogue, ambience, score, silence, source, timing, and causal sound meaning remain unknown."
+      "Exact speaker identities, dialogue content, score status, offscreen ownership, sound bridging, subjective hearing, narrative causality, and mix intent remain unknown."
     ]
   },
   "text_anchors": [],
@@ -6178,13 +6207,39 @@
     {
       "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
       "method_type": "AUDIO_DIRECT_AUDITION",
-      "status": "BLOCKED",
-      "description": "Direct soundtrack audition was not completed for this conversion.",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "A human listener directly auditioned the complete selected local interval and reported source-neutral audible states at approximate one-second precision.",
       "repository_command": null,
       "tool_version_status": "NOT_APPLICABLE",
-      "source_refs": [],
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S003",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S005",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S006",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S007",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S008",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S009",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S010",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S011",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S012",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S013",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S014",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S015",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S016",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S017",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S018",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S019",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S020",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S022",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S023",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S024",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025"
+      ],
       "unknowns": [
-        "All semantic audio facts remain unknown."
+        "Exact source ownership, subjective hearing status, narrative causality, mix construction, and director intent remain unknown."
       ]
     },
     {
@@ -6237,7 +6292,7 @@
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025"
       ],
       "unknowns": [
-        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+        "Exact identity, dialogue content, intention, and production method remain unknown."
       ]
     }
   ],
@@ -6245,7 +6300,7 @@
     {
       "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUX-SIGNAL-SUMMARY",
       "kind": "OTHER",
-      "status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "status": "SIGNAL_MEASURED",
       "start": {
         "timecode": "00:09:21.352458",
         "seconds": 561.352458,
@@ -6263,14 +6318,569 @@
       "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DECODED-SIGNAL",
       "measurements": {
         "legacy_signal_ledger_present": true,
-        "direct_audition_completed": false
+        "direct_audition_completed": true
       },
       "source_refs": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001",
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025"
       ],
       "unknowns": [
-        "Signal-event semantics and exact perceptual interpretation remain unknown."
+        "Exact signal-to-percept causal mapping, source ownership, and director intent remain unknown."
+      ]
+    },
+    {
+      "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001",
+      "kind": "AUDIO_AUDIT_EVENT",
+      "status": "AUDIO_OBSERVED",
+      "start": {
+        "frame": null,
+        "pts": null,
+        "seconds": 561.352458,
+        "time_base": null,
+        "timecode": "00:09:21.352458"
+      },
+      "end": {
+        "frame": null,
+        "pts": null,
+        "seconds": 571.352458,
+        "time_base": null,
+        "timecode": "00:09:31.352458"
+      },
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "measurements": {
+        "precision": "APPROXIMATE_HUMAN_AUDITION",
+        "precision_seconds": 1.0,
+        "clip_offset_start_seconds": 0.0,
+        "clip_offset_end_seconds": 10.0,
+        "description": "The selected interval begins in a muffled-sounding state."
+      },
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002"
+      ],
+      "unknowns": [
+        "Exact endpoints inside the declared one-second precision, physical source, subjective ownership, dramatic causality, and edit intent remain unknown."
+      ]
+    },
+    {
+      "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002",
+      "kind": "AUDIO_AUDIT_EVENT",
+      "status": "AUDIO_OBSERVED",
+      "start": {
+        "frame": null,
+        "pts": null,
+        "seconds": 571.352458,
+        "time_base": null,
+        "timecode": "00:09:31.352458"
+      },
+      "end": {
+        "frame": null,
+        "pts": null,
+        "seconds": 571.352458,
+        "time_base": null,
+        "timecode": "00:09:31.352458"
+      },
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "measurements": {
+        "precision": "APPROXIMATE_HUMAN_AUDITION",
+        "precision_seconds": 1.0,
+        "clip_offset_start_seconds": 10.0,
+        "clip_offset_end_seconds": 10.0,
+        "description": "The overall noise becomes less prominent around this point."
+      },
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002"
+      ],
+      "unknowns": [
+        "Exact onset inside the declared one-second precision, physical source, subjective ownership, dramatic causality, and edit intent remain unknown."
+      ]
+    },
+    {
+      "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003",
+      "kind": "AUDIO_AUDIT_EVENT",
+      "status": "AUDIO_OBSERVED",
+      "start": {
+        "frame": null,
+        "pts": null,
+        "seconds": 587.352458,
+        "time_base": null,
+        "timecode": "00:09:47.352458"
+      },
+      "end": {
+        "frame": null,
+        "pts": null,
+        "seconds": 613.352458,
+        "time_base": null,
+        "timecode": "00:10:13.352458"
+      },
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "measurements": {
+        "precision": "APPROXIMATE_HUMAN_AUDITION",
+        "precision_seconds": 1.0,
+        "clip_offset_start_seconds": 26.0,
+        "clip_offset_end_seconds": 52.0,
+        "description": "Speech is audibly clearer from around 26 seconds until it returns to a muffled-sounding state around 52 seconds; no words or speaker identity are retained."
+      },
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S003",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004"
+      ],
+      "unknowns": [
+        "Exact endpoints inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."
+      ]
+    },
+    {
+      "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004",
+      "kind": "AUDIO_AUDIT_EVENT",
+      "status": "AUDIO_OBSERVED",
+      "start": {
+        "frame": null,
+        "pts": null,
+        "seconds": 613.352458,
+        "time_base": null,
+        "timecode": "00:10:13.352458"
+      },
+      "end": {
+        "frame": null,
+        "pts": null,
+        "seconds": 613.352458,
+        "time_base": null,
+        "timecode": "00:10:13.352458"
+      },
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "measurements": {
+        "precision": "APPROXIMATE_HUMAN_AUDITION",
+        "precision_seconds": 1.0,
+        "clip_offset_start_seconds": 52.0,
+        "clip_offset_end_seconds": 52.0,
+        "description": "The speech returns to a muffled-sounding state around this point."
+      },
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004"
+      ],
+      "unknowns": [
+        "Exact onset inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."
+      ]
+    },
+    {
+      "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005",
+      "kind": "AUDIO_AUDIT_EVENT",
+      "status": "AUDIO_OBSERVED",
+      "start": {
+        "frame": null,
+        "pts": null,
+        "seconds": 641.352458,
+        "time_base": null,
+        "timecode": "00:10:41.352458"
+      },
+      "end": {
+        "frame": null,
+        "pts": null,
+        "seconds": 661.352458,
+        "time_base": null,
+        "timecode": "00:11:01.352458"
+      },
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "measurements": {
+        "precision": "APPROXIMATE_HUMAN_AUDITION",
+        "precision_seconds": 1.0,
+        "clip_offset_start_seconds": 80.0,
+        "clip_offset_end_seconds": 100.0,
+        "description": "A sudden drum passage is audible and ends near the end of this reported interval."
+      },
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S005"
+      ],
+      "unknowns": [
+        "Exact endpoints inside the declared one-second precision, production-layer ownership, subjective ownership, dramatic causality, and edit intent remain unknown."
+      ]
+    },
+    {
+      "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006",
+      "kind": "AUDIO_AUDIT_EVENT",
+      "status": "AUDIO_OBSERVED",
+      "start": {
+        "frame": null,
+        "pts": null,
+        "seconds": 672.352458,
+        "time_base": null,
+        "timecode": "00:11:12.352458"
+      },
+      "end": {
+        "frame": null,
+        "pts": null,
+        "seconds": 678.352458,
+        "time_base": null,
+        "timecode": "00:11:18.352458"
+      },
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "measurements": {
+        "precision": "APPROXIMATE_HUMAN_AUDITION",
+        "precision_seconds": 1.0,
+        "clip_offset_start_seconds": 111.0,
+        "clip_offset_end_seconds": 117.0,
+        "description": "Gull-like calls and broad outdoor ambience are audible during this reported interval."
+      },
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S005",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S006",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S007"
+      ],
+      "unknowns": [
+        "Exact endpoints inside the declared one-second precision, physical location and source, subjective ownership, dramatic causality, and edit intent remain unknown."
+      ]
+    },
+    {
+      "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E007",
+      "kind": "AUDIO_AUDIT_EVENT",
+      "status": "AUDIO_OBSERVED",
+      "start": {
+        "frame": null,
+        "pts": null,
+        "seconds": 678.352458,
+        "time_base": null,
+        "timecode": "00:11:18.352458"
+      },
+      "end": {
+        "frame": null,
+        "pts": null,
+        "seconds": 721.352458,
+        "time_base": null,
+        "timecode": "00:12:01.352458"
+      },
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "measurements": {
+        "precision": "APPROXIMATE_HUMAN_AUDITION",
+        "precision_seconds": 1.0,
+        "clip_offset_start_seconds": 117.0,
+        "clip_offset_end_seconds": 160.0,
+        "description": "The soundtrack becomes substantially quieter after the gull-like calls; absolute silence is not asserted."
+      },
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S006",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S007",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S008",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S009"
+      ],
+      "unknowns": [
+        "Exact endpoints inside the declared one-second precision, absolute silence, subjective ownership, dramatic causality, and edit intent remain unknown."
+      ]
+    },
+    {
+      "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E008",
+      "kind": "AUDIO_AUDIT_EVENT",
+      "status": "AUDIO_OBSERVED",
+      "start": {
+        "frame": null,
+        "pts": null,
+        "seconds": 721.352458,
+        "time_base": null,
+        "timecode": "00:12:01.352458"
+      },
+      "end": {
+        "frame": null,
+        "pts": null,
+        "seconds": 780.352458,
+        "time_base": null,
+        "timecode": "00:13:00.352458"
+      },
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "measurements": {
+        "precision": "APPROXIMATE_HUMAN_AUDITION",
+        "precision_seconds": 1.0,
+        "clip_offset_start_seconds": 160.0,
+        "clip_offset_end_seconds": 219.0,
+        "description": "Intermittent short speech-like sounds are heavily muffled and difficult to understand before clearer speech begins."
+      },
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S009",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S010",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S011",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S012",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S013",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S014",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S015",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S016"
+      ],
+      "unknowns": [
+        "Exact speech intervals inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."
+      ]
+    },
+    {
+      "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009",
+      "kind": "AUDIO_AUDIT_EVENT",
+      "status": "AUDIO_OBSERVED",
+      "start": {
+        "frame": null,
+        "pts": null,
+        "seconds": 780.352458,
+        "time_base": null,
+        "timecode": "00:13:00.352458"
+      },
+      "end": {
+        "frame": null,
+        "pts": null,
+        "seconds": 780.352458,
+        "time_base": null,
+        "timecode": "00:13:00.352458"
+      },
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "measurements": {
+        "precision": "APPROXIMATE_HUMAN_AUDITION",
+        "precision_seconds": 1.0,
+        "clip_offset_start_seconds": 219.0,
+        "clip_offset_end_seconds": 219.0,
+        "description": "Speech becomes audibly clearer around this point."
+      },
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S015",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S016"
+      ],
+      "unknowns": [
+        "Exact onset inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."
+      ]
+    },
+    {
+      "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E010",
+      "kind": "AUDIO_AUDIT_EVENT",
+      "status": "AUDIO_OBSERVED",
+      "start": {
+        "frame": null,
+        "pts": null,
+        "seconds": 801.352458,
+        "time_base": null,
+        "timecode": "00:13:21.352458"
+      },
+      "end": {
+        "frame": null,
+        "pts": null,
+        "seconds": 801.352458,
+        "time_base": null,
+        "timecode": "00:13:21.352458"
+      },
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "measurements": {
+        "precision": "APPROXIMATE_HUMAN_AUDITION",
+        "precision_seconds": 1.0,
+        "clip_offset_start_seconds": 240.0,
+        "clip_offset_end_seconds": 240.0,
+        "description": "Speech becomes muffled-sounding again around this point."
+      },
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S017"
+      ],
+      "unknowns": [
+        "Exact onset inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."
+      ]
+    },
+    {
+      "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E011",
+      "kind": "AUDIO_AUDIT_EVENT",
+      "status": "AUDIO_OBSERVED",
+      "start": {
+        "frame": null,
+        "pts": null,
+        "seconds": 819.352458,
+        "time_base": null,
+        "timecode": "00:13:39.352458"
+      },
+      "end": {
+        "frame": null,
+        "pts": null,
+        "seconds": 819.352458,
+        "time_base": null,
+        "timecode": "00:13:39.352458"
+      },
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "measurements": {
+        "precision": "APPROXIMATE_HUMAN_AUDITION",
+        "precision_seconds": 1.0,
+        "clip_offset_start_seconds": 258.0,
+        "clip_offset_end_seconds": 258.0,
+        "description": "Speech becomes audibly clearer around this point."
+      },
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S018",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S019"
+      ],
+      "unknowns": [
+        "Exact onset inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."
+      ]
+    },
+    {
+      "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E012",
+      "kind": "AUDIO_AUDIT_EVENT",
+      "status": "AUDIO_OBSERVED",
+      "start": {
+        "frame": null,
+        "pts": null,
+        "seconds": 831.352458,
+        "time_base": null,
+        "timecode": "00:13:51.352458"
+      },
+      "end": {
+        "frame": null,
+        "pts": null,
+        "seconds": 833.352458,
+        "time_base": null,
+        "timecode": "00:13:53.352458"
+      },
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "measurements": {
+        "precision": "APPROXIMATE_HUMAN_AUDITION",
+        "precision_seconds": 1.0,
+        "clip_offset_start_seconds": 270.0,
+        "clip_offset_end_seconds": 272.0,
+        "description": "A brief muffled-sounding interval is audible."
+      },
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S019",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S020"
+      ],
+      "unknowns": [
+        "Exact endpoints inside the declared one-second precision, speech content, subjective ownership, dramatic causality, and edit intent remain unknown."
+      ]
+    },
+    {
+      "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013",
+      "kind": "AUDIO_AUDIT_EVENT",
+      "status": "AUDIO_OBSERVED",
+      "start": {
+        "frame": null,
+        "pts": null,
+        "seconds": 834.352458,
+        "time_base": null,
+        "timecode": "00:13:54.352458"
+      },
+      "end": {
+        "frame": null,
+        "pts": null,
+        "seconds": 847.352458,
+        "time_base": null,
+        "timecode": "00:14:07.352458"
+      },
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "measurements": {
+        "precision": "APPROXIMATE_HUMAN_AUDITION",
+        "precision_seconds": 1.0,
+        "clip_offset_start_seconds": 273.0,
+        "clip_offset_end_seconds": 286.0,
+        "description": "Road-like environmental noise is prominent during this reported interval."
+      },
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S020",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S022"
+      ],
+      "unknowns": [
+        "Exact endpoints inside the declared one-second precision, physical location and source, subjective ownership, dramatic causality, and edit intent remain unknown."
+      ]
+    },
+    {
+      "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E014",
+      "kind": "AUDIO_AUDIT_EVENT",
+      "status": "AUDIO_OBSERVED",
+      "start": {
+        "frame": null,
+        "pts": null,
+        "seconds": 847.352458,
+        "time_base": null,
+        "timecode": "00:14:07.352458"
+      },
+      "end": {
+        "frame": null,
+        "pts": null,
+        "seconds": 854.352458,
+        "time_base": null,
+        "timecode": "00:14:14.352458"
+      },
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "measurements": {
+        "precision": "APPROXIMATE_HUMAN_AUDITION",
+        "precision_seconds": 1.0,
+        "clip_offset_start_seconds": 286.0,
+        "clip_offset_end_seconds": 293.0,
+        "description": "The ambience changes to an indoor-like state during this reported interval."
+      },
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S022"
+      ],
+      "unknowns": [
+        "Exact endpoints inside the declared one-second precision, physical location and source, subjective ownership, dramatic causality, and edit intent remain unknown."
+      ]
+    },
+    {
+      "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E015",
+      "kind": "AUDIO_AUDIT_EVENT",
+      "status": "AUDIO_OBSERVED",
+      "start": {
+        "frame": null,
+        "pts": null,
+        "seconds": 854.352458,
+        "time_base": null,
+        "timecode": "00:14:14.352458"
+      },
+      "end": {
+        "frame": null,
+        "pts": null,
+        "seconds": 901.352458,
+        "time_base": null,
+        "timecode": "00:15:01.352458"
+      },
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "measurements": {
+        "precision": "APPROXIMATE_HUMAN_AUDITION",
+        "precision_seconds": 1.0,
+        "clip_offset_start_seconds": 293.0,
+        "clip_offset_end_seconds": 340.0,
+        "description": "The soundtrack returns to a muffled-sounding speech state before clearer speech resumes."
+      },
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S022",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S023",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S024"
+      ],
+      "unknowns": [
+        "Exact speech intervals inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."
+      ]
+    },
+    {
+      "auxiliary_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E016",
+      "kind": "AUDIO_AUDIT_EVENT",
+      "status": "AUDIO_OBSERVED",
+      "start": {
+        "frame": null,
+        "pts": null,
+        "seconds": 901.352458,
+        "time_base": null,
+        "timecode": "00:15:01.352458"
+      },
+      "end": {
+        "frame": null,
+        "pts": null,
+        "seconds": 952.534917,
+        "time_base": null,
+        "timecode": "00:15:52.534917"
+      },
+      "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "measurements": {
+        "precision": "APPROXIMATE_HUMAN_AUDITION",
+        "precision_seconds": 1.0,
+        "clip_offset_start_seconds": 340.0,
+        "clip_offset_end_seconds": 391.182459,
+        "description": "Speech becomes clear and continues as repeated short name-like utterances; the names and speakers are not retained."
+      },
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S023",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S024",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025"
+      ],
+      "unknowns": [
+        "Exact endpoints inside the declared one-second precision, speaker identity, exact wording, subjective ownership, dramatic causality, and edit intent remain unknown."
       ]
     }
   ],
@@ -6322,9 +6932,9 @@
       "audio_logic": {
         "claim_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001-AUDIO",
         "status": "UNKNOWN",
-        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "value": "Exact source, subjective ownership, dramatic causality, and rule-level edit relationship remain unknown; no audio instruction is authorized.",
         "source_refs": [],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Direct audition records audible surface states only; runtime use remains blocked by the listed unknowns."
       },
       "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
@@ -6367,7 +6977,8 @@
       "counterexample_ids": [],
       "source_method_ids": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-LEGACY-PICTURE-REVIEW",
-        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-STRUCTURAL-CONVERSION"
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-STRUCTURAL-CONVERSION",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO"
       ],
       "evidence_scene_ids": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
@@ -6420,9 +7031,9 @@
       "audio_logic": {
         "claim_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002-AUDIO",
         "status": "UNKNOWN",
-        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "value": "Exact source, subjective ownership, dramatic causality, and rule-level edit relationship remain unknown; no audio instruction is authorized.",
         "source_refs": [],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Direct audition records audible surface states only; runtime use remains blocked by the listed unknowns."
       },
       "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
@@ -6465,7 +7076,8 @@
       "counterexample_ids": [],
       "source_method_ids": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-LEGACY-PICTURE-REVIEW",
-        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-STRUCTURAL-CONVERSION"
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-STRUCTURAL-CONVERSION",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO"
       ],
       "evidence_scene_ids": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
@@ -6521,9 +7133,9 @@
       "audio_logic": {
         "claim_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003-AUDIO",
         "status": "UNKNOWN",
-        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "value": "Exact source, subjective ownership, dramatic causality, and rule-level edit relationship remain unknown; no audio instruction is authorized.",
         "source_refs": [],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Direct audition records audible surface states only; runtime use remains blocked by the listed unknowns."
       },
       "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
@@ -6566,7 +7178,8 @@
       "counterexample_ids": [],
       "source_method_ids": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-LEGACY-PICTURE-REVIEW",
-        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-STRUCTURAL-CONVERSION"
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-STRUCTURAL-CONVERSION",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO"
       ],
       "evidence_scene_ids": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
@@ -6617,9 +7230,9 @@
       "audio_logic": {
         "claim_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004-AUDIO",
         "status": "UNKNOWN",
-        "value": "Pending human review; audio remains unknown and no audio instruction is authorized.",
+        "value": "Exact source, subjective ownership, dramatic causality, and rule-level edit relationship remain unknown; no audio instruction is authorized.",
         "source_refs": [],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Direct audition records audible surface states only; runtime use remains blocked by the listed unknowns."
       },
       "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
@@ -6662,7 +7275,8 @@
       "counterexample_ids": [],
       "source_method_ids": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-LEGACY-PICTURE-REVIEW",
-        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-STRUCTURAL-CONVERSION"
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-STRUCTURAL-CONVERSION",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO"
       ],
       "evidence_scene_ids": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
@@ -6707,7 +7321,7 @@
   "unknowns": [
     {
       "unknown_id": "UNKNOWN-AUDIO",
-      "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
+      "statement": "After direct audition, exact audio ownership, subjective hearing status, shared dramatic trigger, narrative causality, and director intent remain unknown.",
       "scope": "AUDIO",
       "blocks_rule_ids": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001",
@@ -6746,6 +7360,7 @@
   "validation_status": "HUMAN_REVIEW_PENDING",
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
-    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+    "The structural conversion preserved recorded frame and PTS endpoints; separate exhaustive picture and direct-audio reviews reopened the selected local interval.",
+    "Direct human audition covers the selected interval at approximate one-second precision; decoded-signal measurements remain a separate timing aid, and subjective hearing, causality, and intent are not proved."
   ]
 }

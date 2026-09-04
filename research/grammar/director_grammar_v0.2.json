@@ -5534,10 +5534,10 @@
       {
         "boundary_signal_ids": [],
         "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
-        "evidence_gap_id": null,
+        "evidence_gap_id": "GAP-AUDIO-PICTURE-BOUNDARY-ALIGNMENT",
         "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
         "family_id": "STATE-CHANGE-EDITING",
-        "final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
@@ -5559,10 +5559,10 @@
       {
         "boundary_signal_ids": [],
         "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001",
-        "evidence_gap_id": null,
+        "evidence_gap_id": "GAP-AUDIO-STATE-WITHIN-HELD-PICTURE",
         "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
         "family_id": "SUBJECTIVE-ACCESS-AND-INFORMATION",
-        "final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
@@ -5581,10 +5581,10 @@
       {
         "boundary_signal_ids": [],
         "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004",
-        "evidence_gap_id": null,
+        "evidence_gap_id": "GAP-RECURRING-AUDIO-STATE-VISUAL-LEDGER",
         "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
         "family_id": "CONTINUITY-LEDGER-AND-VERSIONING",
-        "final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
@@ -5623,10 +5623,10 @@
       {
         "boundary_signal_ids": [],
         "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003",
-        "evidence_gap_id": null,
+        "evidence_gap_id": "GAP-PICTURE-FIRST-AUDIO-STATE-OFFSET",
         "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
         "family_id": "STATE-CHANGE-EDITING",
-        "final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
@@ -6772,7 +6772,7 @@
     ],
     "evidence_count": 31,
     "final_candidate_count": 55,
-    "phase_status": "IN_PROGRESS",
+    "phase_status": "PARTIAL_EVIDENCE_GAP",
     "source_count": 33
   },
   "safety_constraints": [

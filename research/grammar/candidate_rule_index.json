@@ -19203,10 +19203,10 @@
         "audio_dependency": true,
         "audio_logic": {
           "claim_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002-AUDIO",
-          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+          "notes": "Direct audition records audible surface states only; runtime use remains blocked by the listed unknowns.",
           "source_refs": [],
           "status": "UNKNOWN",
-          "value": "Pending human review; audio remains unknown and no audio instruction is authorized."
+          "value": "Exact source, subjective ownership, dramatic causality, and rule-level edit relationship remain unknown; no audio instruction is authorized."
         },
         "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
         "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
@@ -19243,7 +19243,7 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
@@ -19256,8 +19256,8 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+        "evidence_gap_id": "GAP-AUDIO-PICTURE-BOUNDARY-ALIGNMENT",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
@@ -19299,7 +19299,8 @@
         "source_candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
         "source_method_ids": [
           "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-LEGACY-PICTURE-REVIEW",
-          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-STRUCTURAL-CONVERSION"
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-STRUCTURAL-CONVERSION",
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO"
         ],
         "work_id": "SOUND-OF-METAL"
       },
@@ -19386,10 +19387,10 @@
         "audio_dependency": true,
         "audio_logic": {
           "claim_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001-AUDIO",
-          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+          "notes": "Direct audition records audible surface states only; runtime use remains blocked by the listed unknowns.",
           "source_refs": [],
           "status": "UNKNOWN",
-          "value": "Pending human review; audio remains unknown and no audio instruction is authorized."
+          "value": "Exact source, subjective ownership, dramatic causality, and rule-level edit relationship remain unknown; no audio instruction is authorized."
         },
         "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
         "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
@@ -19426,7 +19427,7 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
@@ -19439,8 +19440,8 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+        "evidence_gap_id": "GAP-AUDIO-STATE-WITHIN-HELD-PICTURE",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
@@ -19476,7 +19477,8 @@
         "source_candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001",
         "source_method_ids": [
           "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-LEGACY-PICTURE-REVIEW",
-          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-STRUCTURAL-CONVERSION"
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-STRUCTURAL-CONVERSION",
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO"
         ],
         "work_id": "SOUND-OF-METAL"
       },
@@ -19563,10 +19565,10 @@
         "audio_dependency": true,
         "audio_logic": {
           "claim_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004-AUDIO",
-          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+          "notes": "Direct audition records audible surface states only; runtime use remains blocked by the listed unknowns.",
           "source_refs": [],
           "status": "UNKNOWN",
-          "value": "Pending human review; audio remains unknown and no audio instruction is authorized."
+          "value": "Exact source, subjective ownership, dramatic causality, and rule-level edit relationship remain unknown; no audio instruction is authorized."
         },
         "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
         "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
@@ -19603,7 +19605,7 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
@@ -19616,8 +19618,8 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+        "evidence_gap_id": "GAP-RECURRING-AUDIO-STATE-VISUAL-LEDGER",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
@@ -19693,7 +19695,8 @@
         "source_candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004",
         "source_method_ids": [
           "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-LEGACY-PICTURE-REVIEW",
-          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-STRUCTURAL-CONVERSION"
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-STRUCTURAL-CONVERSION",
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO"
         ],
         "work_id": "SOUND-OF-METAL"
       },
@@ -19780,10 +19783,10 @@
         "audio_dependency": true,
         "audio_logic": {
           "claim_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003-AUDIO",
-          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+          "notes": "Direct audition records audible surface states only; runtime use remains blocked by the listed unknowns.",
           "source_refs": [],
           "status": "UNKNOWN",
-          "value": "Pending human review; audio remains unknown and no audio instruction is authorized."
+          "value": "Exact source, subjective ownership, dramatic causality, and rule-level edit relationship remain unknown; no audio instruction is authorized."
         },
         "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
         "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
@@ -19820,7 +19823,7 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
@@ -19833,8 +19836,8 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+        "evidence_gap_id": "GAP-PICTURE-FIRST-AUDIO-STATE-OFFSET",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
@@ -19866,7 +19869,8 @@
         "source_candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003",
         "source_method_ids": [
           "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-LEGACY-PICTURE-REVIEW",
-          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-STRUCTURAL-CONVERSION"
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-STRUCTURAL-CONVERSION",
+          "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO"
         ],
         "work_id": "SOUND-OF-METAL"
       },
@@ -26996,5 +27000,5 @@
   "schema_version": "candidate-rule-index/0.1",
   "source_candidate_count": 124,
   "source_scene_count": 31,
-  "status": "IN_PROGRESS"
+  "status": "PARTIAL_EVIDENCE_GAP"
 }

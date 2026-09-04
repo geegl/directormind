@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import contextlib
+import copy
 import io
 import json
 import re
@@ -34,6 +35,7 @@ from convert_legacy_scene_evidence import (  # noqa: E402
     split_risk,
     validate_generated,
 )
+from validate_scene_evidence import load_json, validate_evidence  # noqa: E402
 
 
 LEGACY_FIELDS = {
@@ -220,7 +222,7 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
         self.assertEqual(len(set(canonical_families)), 124)
         statuses = [item["audio_evidence_status"] for item in converted]
         self.assertEqual(statuses.count("BLOCKED_DIRECT_AUDITION"), 30)
-        self.assertEqual(statuses.count("SIGNAL_MEASURED_NOT_AUDITIONED"), 1)
+        self.assertEqual(statuses.count("AUDIO_OBSERVED"), 1)
 
     def test_existing_ordinals_are_frozen_and_succession_uses_new_slots(self) -> None:
         self.assertEqual(
@@ -389,13 +391,50 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
         self.assertEqual(high_risk_missing_fallback, 599)
         self.assertEqual(high_axis_counts, {"camera": 1034, "performance": 1788, "continuity": 1669})
 
-    def test_sound_of_metal_signal_is_auxiliary_not_semantic_audio(self) -> None:
+    def test_sound_of_metal_keeps_waveform_and_direct_audition_tracks_separate(self) -> None:
         source = next(path for path in self.sources if path.stem.startswith("SOUND_OF_METAL"))
         evidence = build_evidence(source)
-        self.assertEqual(evidence["audio_evidence_status"], "SIGNAL_MEASURED_NOT_AUDITIONED")
-        self.assertEqual(len(evidence["auxiliary_evidence"]), 1)
-        self.assertEqual(evidence["auxiliary_evidence"][0]["status"], "SIGNAL_MEASURED_NOT_AUDITIONED")
+        self.assertEqual(evidence["audio_evidence_status"], "AUDIO_OBSERVED")
+        self.assertEqual({shot["audio_status"] for shot in evidence["shots"]}, {"AUDIO_OBSERVED"})
+        self.assertEqual(len(evidence["auxiliary_evidence"]), 17)
+        self.assertEqual(evidence["auxiliary_evidence"][0]["status"], "SIGNAL_MEASURED")
+        self.assertTrue(evidence["auxiliary_evidence"][0]["measurements"]["direct_audition_completed"])
+        audio_events = [
+            item for item in evidence["auxiliary_evidence"]
+            if item["kind"] == "AUDIO_AUDIT_EVENT"
+        ]
+        self.assertEqual(len(audio_events), 16)
+        self.assertTrue(all(item["status"] == "AUDIO_OBSERVED" for item in audio_events))
+        direct_methods = [
+            item for item in evidence["methods"]
+            if item["method_type"] == "AUDIO_DIRECT_AUDITION"
+        ]
+        self.assertEqual(len(direct_methods), 1)
+        self.assertEqual(direct_methods[0]["status"], "MANUAL_REVIEW_RECORDED")
+        self.assertEqual(len(direct_methods[0]["source_refs"]), 25)
+        self.assertEqual(evidence["audio_audit"]["ambience"]["status"], "AUDIO_OBSERVED")
+        self.assertEqual(evidence["audio_audit"]["silence_intervals"]["status"], "AUDIO_OBSERVED")
+        self.assertEqual(evidence["audio_audit"]["audio_information_change"]["status"], "AUDIO_OBSERVED")
+        self.assertEqual(evidence["audio_audit"]["subjective_sound"]["status"], "UNKNOWN")
+        self.assertEqual(evidence["audio_audit"]["object_sound"]["status"], "UNKNOWN")
+        self.assertIn("subjective", evidence["unknowns"][0]["statement"].lower())
+        self.assertNotIn("not directly auditioned", evidence["unknowns"][0]["statement"].lower())
         self.assertTrue(all(rule["promotion_status"] == "BLOCKED_BY_UNKNOWN" for rule in evidence["candidate_rules"]))
+
+        mutated = copy.deepcopy(evidence)
+        first_event = next(
+            item for item in mutated["auxiliary_evidence"]
+            if item["kind"] == "AUDIO_AUDIT_EVENT"
+        )
+        first_event["source_refs"].pop()
+        report = validate_evidence(
+            mutated,
+            load_json(SKILL_ROOT / "references" / "scene-evidence.schema.json"),
+        )
+        self.assertIn(
+            "AUXILIARY-AUDIO-TIME-REF",
+            {item["code"] for item in report["issues"]},
+        )
 
     def test_bear_missing_non_applicability_is_preserved_as_null_lineage(self) -> None:
         source = next(path for path in self.sources if path.stem == "THE_BEAR_S01E07_REVIEW_EVIDENCE_V0.1")

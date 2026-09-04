@@ -47,7 +47,7 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
         cls.forward_index = read_json(FORWARD_INDEX_PATH)
         cls.report = build_report()
 
-    def test_live_report_is_in_progress_and_corpus_enumerated(self) -> None:
+    def test_live_report_is_partial_evidence_gap_and_corpus_enumerated(self) -> None:
         report = self.report
         final_count = sum(item["final_status"] in FINAL_STATUSES for item in self.review["candidate_dispositions"])
         pending_count = sum(item["final_status"] == "EVIDENCE_GAP_PENDING" for item in self.review["candidate_dispositions"])
@@ -57,9 +57,10 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
         )
         rule_count = len(self.review["runtime_rule_specs"])
         self.assertEqual(report["status"], "PASS", report["issues"])
-        self.assertEqual(report["phase_status"], "IN_PROGRESS")
+        self.assertEqual(report["phase_status"], "PARTIAL_EVIDENCE_GAP")
         self.assertEqual(report["source_disposition_count"], 33)
         self.assertEqual(report["canonical_scene_evidence_count"], 31)
+        self.assertEqual(report["directly_auditioned_audio_scene_count"], 1)
         self.assertEqual(report["canonical_shot_edit_unit_count"], 2343)
         self.assertEqual(report["candidate_disposition_count"], 124)
         self.assertEqual(report["final_disposition_count"], final_count)
@@ -73,6 +74,25 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
         self.assertEqual(report["runtime_rule_count"], rule_count)
         self.assertEqual(report["positive_forward_case_count"], rule_count)
         self.assertEqual(report["boundary_forward_case_count"], rule_count)
+
+    def test_sound_candidates_are_precise_gaps_and_do_not_enter_runtime_grammar(self) -> None:
+        sound = [
+            item for item in self.review["candidate_dispositions"]
+            if item["evidence_id"] == "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+        ]
+        self.assertEqual(len(sound), 4)
+        self.assertTrue(all(item["final_status"] == "EVIDENCE_GAP_PENDING" for item in sound))
+        self.assertEqual(len({item["evidence_gap_id"] for item in sound}), 4)
+        grammar_candidates = {
+            item["promotion_source_candidate_id"] for item in self.grammar["rules"]
+        }
+        self.assertTrue(grammar_candidates.isdisjoint({item["candidate_rule_id"] for item in sound}))
+        self.assertTrue(
+            all(
+                any("same-trigger" in unknown.lower() for unknown in item["material_unknowns"])
+                for item in sound
+            )
+        )
 
     def test_every_candidate_is_final_or_has_one_precise_unresolved_class(self) -> None:
         gap_ids = {item["gap_id"] for item in self.review["evidence_gaps"]}

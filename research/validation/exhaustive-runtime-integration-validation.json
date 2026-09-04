@@ -10,8 +10,7 @@
   "candidate_disposition_count": 124,
   "candidate_final_status_counts": {
     "BOUNDARY_OR_COUNTEREXAMPLE": 20,
-    "EVIDENCE_GAP_PENDING": 65,
-    "EXISTING_MATERIAL_REVIEW_REQUIRED": 4,
+    "EVIDENCE_GAP_PENDING": 69,
     "MERGED_DUPLICATE": 1,
     "POSITIVE_RUNTIME_RULE": 7,
     "REJECTED_WITH_REASON": 3,
@@ -19,8 +18,9 @@
   },
   "canonical_scene_evidence_count": 31,
   "canonical_shot_edit_unit_count": 2343,
+  "directly_auditioned_audio_scene_count": 1,
   "error_count": 0,
-  "existing_material_review_required_count": 4,
+  "existing_material_review_required_count": 0,
   "family_results": [
     {
       "active_rule_ids": [
@@ -58,10 +58,10 @@
     {
       "active_rule_ids": [],
       "candidate_count": 6,
-      "existing_material_review_required_count": 1,
+      "existing_material_review_required_count": 0,
       "family_id": "CONTINUITY-LEDGER-AND-VERSIONING",
       "final_disposition_count": 1,
-      "pending_evidence_gap_count": 4,
+      "pending_evidence_gap_count": 5,
       "runtime_status": "PARTICIPATING"
     },
     {
@@ -165,19 +165,19 @@
         "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN"
       ],
       "candidate_count": 6,
-      "existing_material_review_required_count": 2,
+      "existing_material_review_required_count": 0,
       "family_id": "STATE-CHANGE-EDITING",
       "final_disposition_count": 4,
-      "pending_evidence_gap_count": 0,
+      "pending_evidence_gap_count": 2,
       "runtime_status": "PARTICIPATING"
     },
     {
       "active_rule_ids": [],
       "candidate_count": 3,
-      "existing_material_review_required_count": 1,
+      "existing_material_review_required_count": 0,
       "family_id": "SUBJECTIVE-ACCESS-AND-INFORMATION",
       "final_disposition_count": 0,
-      "pending_evidence_gap_count": 2,
+      "pending_evidence_gap_count": 3,
       "runtime_status": "IN_PROGRESS"
     },
     {
@@ -194,8 +194,8 @@
   "issues": [],
   "mechanism_family_count": 16,
   "no_applicable_rule_case_count": 22,
-  "pending_evidence_gap_count": 65,
-  "phase_status": "IN_PROGRESS",
+  "pending_evidence_gap_count": 69,
+  "phase_status": "PARTIAL_EVIDENCE_GAP",
   "positive_forward_case_count": 7,
   "prioritized_evidence_gaps": [
     {
@@ -267,6 +267,34 @@
       "gap_id": "GAP-SUBJECTIVE-ACCESS-CROSS-WORK",
       "priority": 10,
       "required_review": "Add one rights-cleared unrelated subjective-access transition and one same-trigger boundary where ordinary relation coverage must remain primary."
+    },
+    {
+      "candidate_count": 1,
+      "close_condition": "Close only when unrelated support and a same-trigger contrary case are directly auditioned, Shot/timecode bound, and separate audible state from unproved subjective ownership.",
+      "gap_id": "GAP-AUDIO-STATE-WITHIN-HELD-PICTURE",
+      "priority": 11,
+      "required_review": "Add one unrelated same-trigger case where an auditioned information-state change occurs inside a necessary held picture, plus one case where a picture change is required at the same trigger."
+    },
+    {
+      "candidate_count": 1,
+      "close_condition": "Close only when shared event ownership, perceptual tolerance, unrelated support, and a same-trigger non-alignment boundary are directly auditioned and independently timed.",
+      "gap_id": "GAP-AUDIO-PICTURE-BOUNDARY-ALIGNMENT",
+      "priority": 12,
+      "required_review": "Add one unrelated event requiring picture and auditioned audio-state alignment, plus one same-trigger case where comprehension requires different picture and audio timing."
+    },
+    {
+      "candidate_count": 1,
+      "close_condition": "Close only when the visual-first trigger and measured offset are directly established in unrelated support and an audio-first or simultaneous same-trigger boundary.",
+      "gap_id": "GAP-PICTURE-FIRST-AUDIO-STATE-OFFSET",
+      "priority": 13,
+      "required_review": "Add one unrelated scene that must register a new picture field before an auditioned audio-information change, plus one same-trigger case requiring simultaneous or audio-first disclosure."
+    },
+    {
+      "candidate_count": 1,
+      "close_condition": "Close only when unrelated support and a same-trigger simpler-audio boundary prove that a recurring audio-state schedule changes a concrete continuity or edit decision.",
+      "gap_id": "GAP-RECURRING-AUDIO-STATE-VISUAL-LEDGER",
+      "priority": 14,
+      "required_review": "Add one unrelated multi-state sequence requiring an independently auditioned audio schedule and visual continuity ledger, plus one same-trigger case where one stable audio state is clearer."
     }
   ],
   "runtime_rule_count": 7,

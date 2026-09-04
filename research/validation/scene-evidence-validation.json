@@ -543,14 +543,20 @@
         {
           "code": "EVIDENCE-DECLARED-WARNING",
           "level": "warning",
-          "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+          "message": "The structural conversion preserved recorded frame and PTS endpoints; separate exhaustive picture and direct-audio reviews reopened the selected local interval.",
           "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Direct human audition covers the selected interval at approximate one-second precision; decoded-signal measurements remain a separate timing aid, and subjective hearing, causality, and intent are not proved.",
+          "path": "$.validation_warnings[2]"
         }
       ],
       "passed": true,
       "path": "research/evidence/sound-of-metal/SOUND_OF_METAL_SIGNAL_STATE_EDITORIAL_ENVELOPE_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 25,
-      "warning_count": 2
+      "warning_count": 3
     },
     {
       "candidate_rule_count": 4,
@@ -907,7 +913,7 @@
   "total_scenes": 31,
   "total_shots": 2343,
   "validator_version": "scene-evidence-validator/0.1",
-  "warning_count": 87,
+  "warning_count": 88,
   "warnings": [
     {
       "code": "EVIDENCE-DECLARED-WARNING",
@@ -1277,8 +1283,15 @@
       "code": "EVIDENCE-DECLARED-WARNING",
       "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
       "level": "warning",
-      "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+      "message": "The structural conversion preserved recorded frame and PTS endpoints; separate exhaustive picture and direct-audio reviews reopened the selected local interval.",
       "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
+      "level": "warning",
+      "message": "Direct human audition covers the selected interval at approximate one-second precision; decoded-signal measurements remain a separate timing aid, and subjective hearing, causality, and intent are not proved.",
+      "path": "$.validation_warnings[2]"
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",

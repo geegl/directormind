@@ -594,6 +594,7 @@
           "enum": [
             "PICTURE_OBSERVED",
             "AUDIO_OBSERVED",
+            "SIGNAL_MEASURED",
             "SIGNAL_MEASURED_NOT_AUDITIONED",
             "TEXT_ANCHOR",
             "INFERRED",

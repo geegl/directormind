@@ -237,10 +237,10 @@
         },
         {
           "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004",
-          "promotion_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+          "promotion_status": "EVIDENCE_GAP_PENDING",
           "relation": "NARROWS",
           "runtime_effect_key": null,
-          "runtime_final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+          "runtime_final_status": "EVIDENCE_GAP_PENDING",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "SOUND-OF-METAL"
@@ -1277,20 +1277,20 @@
         },
         {
           "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
-          "promotion_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+          "promotion_status": "EVIDENCE_GAP_PENDING",
           "relation": "NARROWS",
           "runtime_effect_key": null,
-          "runtime_final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+          "runtime_final_status": "EVIDENCE_GAP_PENDING",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "SOUND-OF-METAL"
         },
         {
           "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003",
-          "promotion_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+          "promotion_status": "EVIDENCE_GAP_PENDING",
           "relation": "NARROWS",
           "runtime_effect_key": null,
-          "runtime_final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+          "runtime_final_status": "EVIDENCE_GAP_PENDING",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "SOUND-OF-METAL"
@@ -1344,10 +1344,10 @@
         },
         {
           "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001",
-          "promotion_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+          "promotion_status": "EVIDENCE_GAP_PENDING",
           "relation": "NARROWS",
           "runtime_effect_key": null,
-          "runtime_final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+          "runtime_final_status": "EVIDENCE_GAP_PENDING",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "SOUND-OF-METAL"

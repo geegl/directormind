@@ -4733,28 +4733,43 @@
     },
     {
       "audio_dependency": true,
+      "audio_observation_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013"
+      ],
+      "audio_claims": [
+        {"claim": "The speech returns to a muffled-sounding state around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004"},
+        {"claim": "A sudden drum passage is audible and ends near the end of this reported interval.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005"},
+        {"claim": "Gull-like calls and broad outdoor ambience are audible during this reported interval.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006"},
+        {"claim": "Speech becomes audibly clearer around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009"},
+        {"claim": "Road-like environmental noise is prominent during this reported interval.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013"}
+      ],
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
       "decision_axes": [],
-      "evidence_gap_id": null,
+      "evidence_gap_id": "GAP-AUDIO-PICTURE-BOUNDARY-ALIGNMENT",
       "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
       "family_id": "STATE-CHANGE-EDITING",
-      "final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004: visible_action remains INFERRED after the fresh frame check: A light-haired, dark-bearded adult-like figure dominates a close/profile field against hanging garments and other partial figures; head, hand and torso positions change over a long interval.",
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021: blocking remains INFERRED after the fresh frame check: vehicles and/or small figure forms change position across street, curb or wall zones; exact paths through occlusion and cross-cut identity UNKNOWN.",
-        "All cited video intervals were picture-reviewed, but this candidate's proposed director decision expressly depends on measured/audible signal state. It cannot be finally disposed from silent frame review and is not yet an evidence gap."
+        "The structured audio_claims are compared with the cited picture handoffs at approximate one-second precision; they do not establish one shared dramatic event, causal ownership, or sub-second alignment."
       ],
       "material_unknowns": [
-        "Direct human audition of the exact existing local intervals is unfinished; signal measurements and ASR navigation cannot prove audible state, ownership, causality or edit intent."
+        "The fixed corpus lacks unrelated same-trigger support and a same-trigger boundary for aligning one picture cut with one auditioned audio-state change; shared causality, director intent, and sub-second perceptual tolerance remain unknown."
       ],
       "merged_into_candidate_id": null,
-      "notes": "This is existing-material review debt, not a claim that the fixed corpus lacks evidence.",
+      "notes": "Existing local picture, waveform and direct-audition review are complete. The remaining gap is cross-work same-trigger support plus a real contrary boundary, so no runtime rule is authorized.",
       "observations": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004 00:09:58.598000-00:10:44.518875: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=close/medium single-body coverage; exact lens and focal length UNKNOWN; camera_motion=The view visibly recomposes around the figure from rear/side relations toward profile/face relations; exact arc, lens and support are UNKNOWN.. Burned text, if present, was ignored as picture evidence.",
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021 00:13:56.085250-00:14:06.929417: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=wide environmental coverage; exact lens and focal length UNKNOWN; camera_motion=Stable wide view; exact support and micro-movement are UNKNOWN.. Burned text, if present, was ignored as picture evidence.",
-        "All 8 canonical candidate Shots were reopened as moving image at exact stored bounds."
+        "All 8 canonical candidate Shots were reopened as moving image at exact stored bounds.",
+        "The complete selected interval was directly auditioned; only audio_claims carry candidate-level audio facts, and waveform markers remain the separate mechanical timing track."
       ],
       "rejection_reason_code": null,
       "review_ids": [
@@ -4775,24 +4790,33 @@
     },
     {
       "audio_dependency": true,
+      "audio_observation_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004"
+      ],
+      "audio_claims": [
+        {"claim": "Speech is audibly clearer from around 26 seconds until it returns to a muffled-sounding state around 52 seconds; no words or speaker identity are retained.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003"},
+        {"claim": "The speech returns to a muffled-sounding state around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004"}
+      ],
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001",
       "decision_axes": [],
-      "evidence_gap_id": null,
+      "evidence_gap_id": "GAP-AUDIO-STATE-WITHIN-HELD-PICTURE",
       "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
       "family_id": "SUBJECTIVE-ACCESS-AND-INFORMATION",
-      "final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
-        "If a verified auditory-access transition occurs inside one held picture field, holding picture across that transition could separate access-state change from visual continuity."
+        "The structured audio_claims are the only authorized audio facts evaluated against S004's uninterrupted picture interval; subjective access, a shared dramatic trigger and transfer remain unproved."
       ],
       "material_unknowns": [
-        "Direct human audition of the exact existing local intervals is unfinished; signal measurements and ASR navigation cannot prove audible state, ownership, causality or edit intent."
+        "The fixed corpus lacks unrelated same-trigger support and a same-trigger case where holding picture would be the wrong decision; subjective ownership, dramatic causality, and director intent remain unknown."
       ],
       "merged_into_candidate_id": null,
-      "notes": "This is existing-material review debt, not a claim that the fixed corpus lacks evidence.",
+      "notes": "Existing local picture, waveform and direct-audition review are complete. The remaining gap is cross-work same-trigger support and a real contrary boundary.",
       "observations": [
-        "The cited picture intervals show stable people/environments across a merchandise area, a wider retail/pharmacy field, a tight headphone-wearing subject, and a clinic relation; picture changes and holds are visible."
+        "The cited picture intervals show stable people/environments across a merchandise area, a wider retail/pharmacy field, a tight headphone-wearing subject, and a clinic relation; picture changes and holds are visible.",
+        "The relation between S004's picture bounds and audio_claims is computed only from their structured offsets; no sub-second or causal assertion is made."
       ],
       "rejection_reason_code": null,
       "review_ids": [
@@ -4810,28 +4834,65 @@
     },
     {
       "audio_dependency": true,
+      "audio_observation_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E007",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E008",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E010",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E011",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E012",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E014",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E015",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E016"
+      ],
+      "audio_claims": [
+        {"claim": "The selected interval begins in a muffled-sounding state.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001"},
+        {"claim": "The overall noise becomes less prominent around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002"},
+        {"claim": "Speech is audibly clearer from around 26 seconds until it returns to a muffled-sounding state around 52 seconds; no words or speaker identity are retained.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003"},
+        {"claim": "The speech returns to a muffled-sounding state around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004"},
+        {"claim": "A sudden drum passage is audible and ends near the end of this reported interval.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005"},
+        {"claim": "Gull-like calls and broad outdoor ambience are audible during this reported interval.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006"},
+        {"claim": "The soundtrack becomes substantially quieter after the gull-like calls; absolute silence is not asserted.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E007"},
+        {"claim": "Intermittent short speech-like sounds are heavily muffled and difficult to understand before clearer speech begins.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E008"},
+        {"claim": "Speech becomes audibly clearer around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009"},
+        {"claim": "Speech becomes muffled-sounding again around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E010"},
+        {"claim": "Speech becomes audibly clearer around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E011"},
+        {"claim": "A brief muffled-sounding interval is audible.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E012"},
+        {"claim": "Road-like environmental noise is prominent during this reported interval.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013"},
+        {"claim": "The ambience changes to an indoor-like state during this reported interval.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E014"},
+        {"claim": "The soundtrack returns to a muffled-sounding speech state before clearer speech resumes.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E015"},
+        {"claim": "Speech becomes clear and continues as repeated short name-like utterances; the names and speakers are not retained.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E016"}
+      ],
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004",
       "decision_axes": [],
-      "evidence_gap_id": null,
+      "evidence_gap_id": "GAP-RECURRING-AUDIO-STATE-VISUAL-LEDGER",
       "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
       "family_id": "CONTINUITY-LEDGER-AND-VERSIONING",
-      "final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001: visible_action remains INFERRED after the fresh frame check: A street, buildings, trees, moving road vehicles and a silver rectangular vehicle remain visible while the viewpoint advances; small pedestrian-like forms appear near sidewalks.",
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025: blocking remains INFERRED after the fresh frame check: one principal body changes head, torso, hand or zone position relative to fixed environmental anchors; motive and cross-cut identity UNKNOWN.",
-        "All cited video intervals were picture-reviewed, but this candidate's proposed director decision expressly depends on measured/audible signal state. It cannot be finally disposed from silent frame review and is not yet an evidence gap."
+        "The structured audio_claims are the complete authorized audio surface record for this candidate, while the independent picture ledger remains separately observed. Story chronology, state ownership and causal linkage remain unproved."
       ],
       "material_unknowns": [
-        "Direct human audition of the exact existing local intervals is unfinished; signal measurements and ASR navigation cannot prove audible state, ownership, causality or edit intent."
+        "The fixed corpus lacks unrelated same-trigger support and a same-trigger boundary for a recurring audio-state schedule paired with an independent visual ledger; story chronology, state ownership, and director intent remain unknown."
       ],
       "merged_into_candidate_id": null,
-      "notes": "This is existing-material review debt, not a claim that the fixed corpus lacks evidence.",
+      "notes": "Existing local picture, waveform and direct-audition review are complete. The remaining gap is a transferable cross-work trigger and real contrary boundary.",
       "observations": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001 00:09:21.352458-00:09:30.903667: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=wide environmental coverage; exact lens and focal length UNKNOWN; camera_motion=The viewpoint visibly advances along the road and slightly changes lateral relation to vehicles; exact platform, mount, speed and stabilization are UNKNOWN.. Burned text, if present, was ignored as picture evidence.",
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025 00:15:46.028417-00:15:52.534917: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=close/medium single-body coverage; exact lens and focal length UNKNOWN; camera_motion=Stable medium/reverse field with small visible reframing; exact support is UNKNOWN.. Burned text, if present, was ignored as picture evidence.",
-        "All 25 canonical candidate Shots were reopened as moving image at exact stored bounds."
+        "All 25 canonical candidate Shots were reopened as moving image at exact stored bounds.",
+        "The complete 00:09:21.352458-00:15:52.534917 interval was directly auditioned, with 16 source-neutral audio observations recorded at approximate one-second precision."
       ],
       "rejection_reason_code": null,
       "review_ids": [
@@ -4869,28 +4930,35 @@
     },
     {
       "audio_dependency": true,
+      "audio_observation_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002"
+      ],
+      "audio_claims": [
+        {"claim": "The overall noise becomes less prominent around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002"}
+      ],
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003",
       "decision_axes": [],
-      "evidence_gap_id": null,
+      "evidence_gap_id": "GAP-PICTURE-FIRST-AUDIO-STATE-OFFSET",
       "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
       "family_id": "STATE-CHANGE-EDITING",
-      "final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002: visible_action remains INFERRED after the fresh frame check: A high view of cloth-like items and boxes changes through a moving shared field containing several adult-like figures, hanging printed garments and display surfaces.",
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025: blocking remains INFERRED after the fresh frame check: one principal body changes head, torso, hand or zone position relative to fixed environmental anchors; motive and cross-cut identity UNKNOWN.",
-        "All cited video intervals were picture-reviewed, but this candidate's proposed director decision expressly depends on measured/audible signal state. It cannot be finally disposed from silent frame review and is not yet an evidence gap."
+        "The structured audio_claims are the only authorized audio facts; their approximate timing cannot prove the old sub-second offset examples or a deliberate picture-first causal relationship."
       ],
       "material_unknowns": [
-        "Direct human audition of the exact existing local intervals is unfinished; signal measurements and ASR navigation cannot prove audible state, ownership, causality or edit intent."
+        "The fixed corpus lacks unrelated same-trigger support and a same-trigger simultaneous-or-audio-first boundary; the exact offset, shared trigger, semantic ownership, perceptual threshold, and director intent remain unknown."
       ],
       "merged_into_candidate_id": null,
-      "notes": "This is existing-material review debt, not a claim that the fixed corpus lacks evidence.",
+      "notes": "Existing local picture, waveform and direct-audition review are complete. The remaining gap is cross-work same-trigger support, a real contrary boundary, and timing evidence precise enough for the claimed directing distinction.",
       "observations": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002 00:09:30.903667-00:09:48.504583: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium-wide/shared multi-body or multi-zone coverage; exact lens and focal length UNKNOWN; camera_motion=A continuous moving/recomposing view travels from the high work surface toward the group; exact support and path are UNKNOWN.. Burned text, if present, was ignored as picture evidence.",
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S023 00:14:17.439917-00:15:01.317083: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=close/medium single-body coverage; exact lens and focal length UNKNOWN; camera_motion=Stable-looking close/medium view with small visible reframing; exact support is UNKNOWN.. Burned text, if present, was ignored as picture evidence.",
-        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025 00:15:46.028417-00:15:52.534917: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=close/medium single-body coverage; exact lens and focal length UNKNOWN; camera_motion=Stable medium/reverse field with small visible reframing; exact support is UNKNOWN.. Burned text, if present, was ignored as picture evidence."
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025 00:15:46.028417-00:15:52.534917: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=close/medium single-body coverage; exact lens and focal length UNKNOWN; camera_motion=Stable medium/reverse field with small visible reframing; exact support is UNKNOWN.. Burned text, if present, was ignored as picture evidence.",
+        "The selected audio_claims are compared with the S001-to-S002 cut only at approximate one-second precision and cannot establish millisecond ordering."
       ],
       "rejection_reason_code": null,
       "review_ids": [
@@ -6533,7 +6601,7 @@
       "target_rule_id": "DR-MOBILE-ATTENTION-HANDOFF"
     }
   ],
-  "declared_phase_status": "IN_PROGRESS",
+  "declared_phase_status": "PARTIAL_EVIDENCE_GAP",
   "evidence_gaps": [
     {
       "candidate_count": 19,
@@ -6689,6 +6757,46 @@
       "gap_id": "GAP-SUBJECTIVE-ACCESS-CROSS-WORK",
       "priority": 10,
       "required_review": "Add one rights-cleared unrelated subjective-access transition and one same-trigger boundary where ordinary relation coverage must remain primary."
+    },
+    {
+      "candidate_count": 1,
+      "candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001"
+      ],
+      "close_condition": "Close only when unrelated support and a same-trigger contrary case are directly auditioned, Shot/timecode bound, and separate audible state from unproved subjective ownership.",
+      "gap_id": "GAP-AUDIO-STATE-WITHIN-HELD-PICTURE",
+      "priority": 11,
+      "required_review": "Add one unrelated same-trigger case where an auditioned information-state change occurs inside a necessary held picture, plus one case where a picture change is required at the same trigger."
+    },
+    {
+      "candidate_count": 1,
+      "candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002"
+      ],
+      "close_condition": "Close only when shared event ownership, perceptual tolerance, unrelated support, and a same-trigger non-alignment boundary are directly auditioned and independently timed.",
+      "gap_id": "GAP-AUDIO-PICTURE-BOUNDARY-ALIGNMENT",
+      "priority": 12,
+      "required_review": "Add one unrelated event requiring picture and auditioned audio-state alignment, plus one same-trigger case where comprehension requires different picture and audio timing."
+    },
+    {
+      "candidate_count": 1,
+      "candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003"
+      ],
+      "close_condition": "Close only when the visual-first trigger and measured offset are directly established in unrelated support and an audio-first or simultaneous same-trigger boundary.",
+      "gap_id": "GAP-PICTURE-FIRST-AUDIO-STATE-OFFSET",
+      "priority": 13,
+      "required_review": "Add one unrelated scene that must register a new picture field before an auditioned audio-information change, plus one same-trigger case requiring simultaneous or audio-first disclosure."
+    },
+    {
+      "candidate_count": 1,
+      "candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+      ],
+      "close_condition": "Close only when unrelated support and a same-trigger simpler-audio boundary prove that a recurring audio-state schedule changes a concrete continuity or edit decision.",
+      "gap_id": "GAP-RECURRING-AUDIO-STATE-VISUAL-LEDGER",
+      "priority": 14,
+      "required_review": "Add one unrelated multi-state sequence requiring an independently auditioned audio schedule and visual continuity ledger, plus one same-trigger case where one stable audio state is clearer."
     }
   ],
   "evidence_reviews": [
@@ -31983,7 +32091,316 @@
       ]
     },
     {
-      "audio_review_status": "SIGNAL_MEASURED_NOT_AUDITIONED",
+      "audio_method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+      "audio_observations": [
+        {
+          "audit_fields": ["ambience", "audio_information_change"],
+          "clip_offset_end_seconds": 10.0,
+          "clip_offset_start_seconds": 0.0,
+          "description": "The selected interval begins in a muffled-sounding state.",
+          "end": {"frame": null, "pts": null, "seconds": 571.352458, "time_base": null, "timecode": "00:09:31.352458"},
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001",
+          "precision": "APPROXIMATE_HUMAN_AUDITION",
+          "precision_seconds": 1.0,
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002"
+          ],
+          "start": {"frame": null, "pts": null, "seconds": 561.352458, "time_base": null, "timecode": "00:09:21.352458"},
+          "status": "AUDIO_OBSERVED",
+          "unknowns": ["Exact endpoints inside the declared one-second precision, physical source, subjective ownership, dramatic causality, and edit intent remain unknown."]
+        },
+        {
+          "audit_fields": ["audio_information_change"],
+          "clip_offset_end_seconds": 10.0,
+          "clip_offset_start_seconds": 10.0,
+          "description": "The overall noise becomes less prominent around this point.",
+          "end": {"frame": null, "pts": null, "seconds": 571.352458, "time_base": null, "timecode": "00:09:31.352458"},
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002",
+          "precision": "APPROXIMATE_HUMAN_AUDITION",
+          "precision_seconds": 1.0,
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002"
+          ],
+          "start": {"frame": null, "pts": null, "seconds": 571.352458, "time_base": null, "timecode": "00:09:31.352458"},
+          "status": "AUDIO_OBSERVED",
+          "unknowns": ["Exact onset inside the declared one-second precision, physical source, subjective ownership, dramatic causality, and edit intent remain unknown."]
+        },
+        {
+          "audit_fields": ["audio_information_change"],
+          "clip_offset_end_seconds": 52.0,
+          "clip_offset_start_seconds": 26.0,
+          "description": "Speech is audibly clearer from around 26 seconds until it returns to a muffled-sounding state around 52 seconds; no words or speaker identity are retained.",
+          "end": {"frame": null, "pts": null, "seconds": 613.352458, "time_base": null, "timecode": "00:10:13.352458"},
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003",
+          "precision": "APPROXIMATE_HUMAN_AUDITION",
+          "precision_seconds": 1.0,
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S003",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004"
+          ],
+          "start": {"frame": null, "pts": null, "seconds": 587.352458, "time_base": null, "timecode": "00:09:47.352458"},
+          "status": "AUDIO_OBSERVED",
+          "unknowns": ["Exact endpoints inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."]
+        },
+        {
+          "audit_fields": ["audio_information_change"],
+          "clip_offset_end_seconds": 52.0,
+          "clip_offset_start_seconds": 52.0,
+          "description": "The speech returns to a muffled-sounding state around this point.",
+          "end": {"frame": null, "pts": null, "seconds": 613.352458, "time_base": null, "timecode": "00:10:13.352458"},
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004",
+          "precision": "APPROXIMATE_HUMAN_AUDITION",
+          "precision_seconds": 1.0,
+          "source_refs": ["SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004"],
+          "start": {"frame": null, "pts": null, "seconds": 613.352458, "time_base": null, "timecode": "00:10:13.352458"},
+          "status": "AUDIO_OBSERVED",
+          "unknowns": ["Exact onset inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."]
+        },
+        {
+          "audit_fields": ["ambience", "audio_information_change"],
+          "clip_offset_end_seconds": 100.0,
+          "clip_offset_start_seconds": 80.0,
+          "description": "A sudden drum passage is audible and ends near the end of this reported interval.",
+          "end": {"frame": null, "pts": null, "seconds": 661.352458, "time_base": null, "timecode": "00:11:01.352458"},
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005",
+          "precision": "APPROXIMATE_HUMAN_AUDITION",
+          "precision_seconds": 1.0,
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S005"
+          ],
+          "start": {"frame": null, "pts": null, "seconds": 641.352458, "time_base": null, "timecode": "00:10:41.352458"},
+          "status": "AUDIO_OBSERVED",
+          "unknowns": ["Exact endpoints inside the declared one-second precision, production-layer ownership, subjective ownership, dramatic causality, and edit intent remain unknown."]
+        },
+        {
+          "audit_fields": ["ambience", "audio_information_change"],
+          "clip_offset_end_seconds": 117.0,
+          "clip_offset_start_seconds": 111.0,
+          "description": "Gull-like calls and broad outdoor ambience are audible during this reported interval.",
+          "end": {"frame": null, "pts": null, "seconds": 678.352458, "time_base": null, "timecode": "00:11:18.352458"},
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006",
+          "precision": "APPROXIMATE_HUMAN_AUDITION",
+          "precision_seconds": 1.0,
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S005",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S006",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S007"
+          ],
+          "start": {"frame": null, "pts": null, "seconds": 672.352458, "time_base": null, "timecode": "00:11:12.352458"},
+          "status": "AUDIO_OBSERVED",
+          "unknowns": ["Exact endpoints inside the declared one-second precision, physical location and source, subjective ownership, dramatic causality, and edit intent remain unknown."]
+        },
+        {
+          "audit_fields": ["silence_intervals", "ambience", "audio_information_change"],
+          "clip_offset_end_seconds": 160.0,
+          "clip_offset_start_seconds": 117.0,
+          "description": "The soundtrack becomes substantially quieter after the gull-like calls; absolute silence is not asserted.",
+          "end": {"frame": null, "pts": null, "seconds": 721.352458, "time_base": null, "timecode": "00:12:01.352458"},
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E007",
+          "precision": "APPROXIMATE_HUMAN_AUDITION",
+          "precision_seconds": 1.0,
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S006",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S007",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S008",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S009"
+          ],
+          "start": {"frame": null, "pts": null, "seconds": 678.352458, "time_base": null, "timecode": "00:11:18.352458"},
+          "status": "AUDIO_OBSERVED",
+          "unknowns": ["Exact endpoints inside the declared one-second precision, absolute silence, subjective ownership, dramatic causality, and edit intent remain unknown."]
+        },
+        {
+          "audit_fields": ["ambience", "audio_information_change"],
+          "clip_offset_end_seconds": 219.0,
+          "clip_offset_start_seconds": 160.0,
+          "description": "Intermittent short speech-like sounds are heavily muffled and difficult to understand before clearer speech begins.",
+          "end": {"frame": null, "pts": null, "seconds": 780.352458, "time_base": null, "timecode": "00:13:00.352458"},
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E008",
+          "precision": "APPROXIMATE_HUMAN_AUDITION",
+          "precision_seconds": 1.0,
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S009",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S010",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S011",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S012",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S013",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S014",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S015",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S016"
+          ],
+          "start": {"frame": null, "pts": null, "seconds": 721.352458, "time_base": null, "timecode": "00:12:01.352458"},
+          "status": "AUDIO_OBSERVED",
+          "unknowns": ["Exact speech intervals inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."]
+        },
+        {
+          "audit_fields": ["audio_information_change"],
+          "clip_offset_end_seconds": 219.0,
+          "clip_offset_start_seconds": 219.0,
+          "description": "Speech becomes audibly clearer around this point.",
+          "end": {"frame": null, "pts": null, "seconds": 780.352458, "time_base": null, "timecode": "00:13:00.352458"},
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009",
+          "precision": "APPROXIMATE_HUMAN_AUDITION",
+          "precision_seconds": 1.0,
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S015",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S016"
+          ],
+          "start": {"frame": null, "pts": null, "seconds": 780.352458, "time_base": null, "timecode": "00:13:00.352458"},
+          "status": "AUDIO_OBSERVED",
+          "unknowns": ["Exact onset inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."]
+        },
+        {
+          "audit_fields": ["audio_information_change"],
+          "clip_offset_end_seconds": 240.0,
+          "clip_offset_start_seconds": 240.0,
+          "description": "Speech becomes muffled-sounding again around this point.",
+          "end": {"frame": null, "pts": null, "seconds": 801.352458, "time_base": null, "timecode": "00:13:21.352458"},
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E010",
+          "precision": "APPROXIMATE_HUMAN_AUDITION",
+          "precision_seconds": 1.0,
+          "source_refs": ["SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S017"],
+          "start": {"frame": null, "pts": null, "seconds": 801.352458, "time_base": null, "timecode": "00:13:21.352458"},
+          "status": "AUDIO_OBSERVED",
+          "unknowns": ["Exact onset inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."]
+        },
+        {
+          "audit_fields": ["audio_information_change"],
+          "clip_offset_end_seconds": 258.0,
+          "clip_offset_start_seconds": 258.0,
+          "description": "Speech becomes audibly clearer around this point.",
+          "end": {"frame": null, "pts": null, "seconds": 819.352458, "time_base": null, "timecode": "00:13:39.352458"},
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E011",
+          "precision": "APPROXIMATE_HUMAN_AUDITION",
+          "precision_seconds": 1.0,
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S018",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S019"
+          ],
+          "start": {"frame": null, "pts": null, "seconds": 819.352458, "time_base": null, "timecode": "00:13:39.352458"},
+          "status": "AUDIO_OBSERVED",
+          "unknowns": ["Exact onset inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."]
+        },
+        {
+          "audit_fields": ["audio_information_change"],
+          "clip_offset_end_seconds": 272.0,
+          "clip_offset_start_seconds": 270.0,
+          "description": "A brief muffled-sounding interval is audible.",
+          "end": {"frame": null, "pts": null, "seconds": 833.352458, "time_base": null, "timecode": "00:13:53.352458"},
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E012",
+          "precision": "APPROXIMATE_HUMAN_AUDITION",
+          "precision_seconds": 1.0,
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S019",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S020"
+          ],
+          "start": {"frame": null, "pts": null, "seconds": 831.352458, "time_base": null, "timecode": "00:13:51.352458"},
+          "status": "AUDIO_OBSERVED",
+          "unknowns": ["Exact endpoints inside the declared one-second precision, speech content, subjective ownership, dramatic causality, and edit intent remain unknown."]
+        },
+        {
+          "audit_fields": ["ambience", "audio_information_change"],
+          "clip_offset_end_seconds": 286.0,
+          "clip_offset_start_seconds": 273.0,
+          "description": "Road-like environmental noise is prominent during this reported interval.",
+          "end": {"frame": null, "pts": null, "seconds": 847.352458, "time_base": null, "timecode": "00:14:07.352458"},
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013",
+          "precision": "APPROXIMATE_HUMAN_AUDITION",
+          "precision_seconds": 1.0,
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S020",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S022"
+          ],
+          "start": {"frame": null, "pts": null, "seconds": 834.352458, "time_base": null, "timecode": "00:13:54.352458"},
+          "status": "AUDIO_OBSERVED",
+          "unknowns": ["Exact endpoints inside the declared one-second precision, physical location and source, subjective ownership, dramatic causality, and edit intent remain unknown."]
+        },
+        {
+          "audit_fields": ["ambience", "audio_information_change"],
+          "clip_offset_end_seconds": 293.0,
+          "clip_offset_start_seconds": 286.0,
+          "description": "The ambience changes to an indoor-like state during this reported interval.",
+          "end": {"frame": null, "pts": null, "seconds": 854.352458, "time_base": null, "timecode": "00:14:14.352458"},
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E014",
+          "precision": "APPROXIMATE_HUMAN_AUDITION",
+          "precision_seconds": 1.0,
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S022"
+          ],
+          "start": {"frame": null, "pts": null, "seconds": 847.352458, "time_base": null, "timecode": "00:14:07.352458"},
+          "status": "AUDIO_OBSERVED",
+          "unknowns": ["Exact endpoints inside the declared one-second precision, physical location and source, subjective ownership, dramatic causality, and edit intent remain unknown."]
+        },
+        {
+          "audit_fields": ["ambience", "audio_information_change"],
+          "clip_offset_end_seconds": 340.0,
+          "clip_offset_start_seconds": 293.0,
+          "description": "The soundtrack returns to a muffled-sounding speech state before clearer speech resumes.",
+          "end": {"frame": null, "pts": null, "seconds": 901.352458, "time_base": null, "timecode": "00:15:01.352458"},
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E015",
+          "precision": "APPROXIMATE_HUMAN_AUDITION",
+          "precision_seconds": 1.0,
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S022",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S023",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S024"
+          ],
+          "start": {"frame": null, "pts": null, "seconds": 854.352458, "time_base": null, "timecode": "00:14:14.352458"},
+          "status": "AUDIO_OBSERVED",
+          "unknowns": ["Exact speech intervals inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."]
+        },
+        {
+          "audit_fields": ["ambience", "audio_information_change"],
+          "clip_offset_end_seconds": 391.182459,
+          "clip_offset_start_seconds": 340.0,
+          "description": "Speech becomes clear and continues as repeated short name-like utterances; the names and speakers are not retained.",
+          "end": {"frame": null, "pts": null, "seconds": 952.534917, "time_base": null, "timecode": "00:15:52.534917"},
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E016",
+          "precision": "APPROXIMATE_HUMAN_AUDITION",
+          "precision_seconds": 1.0,
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S023",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S024",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025"
+          ],
+          "start": {"frame": null, "pts": null, "seconds": 901.352458, "time_base": null, "timecode": "00:15:01.352458"},
+          "status": "AUDIO_OBSERVED",
+          "unknowns": ["Exact endpoints inside the declared one-second precision, speaker identity, exact wording, subjective ownership, dramatic causality, and edit intent remain unknown."]
+        }
+      ],
+      "audio_review_status": "DIRECT_AUDITION_COMPLETE",
+      "directly_auditioned_shot_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S003",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S005",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S006",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S007",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S008",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S009",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S010",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S011",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S012",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S013",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S014",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S015",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S016",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S017",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S018",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S019",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S020",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S022",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S023",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S024",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025"
+      ],
       "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
       "method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
       "moving_image_reviewed_shot_ids": [
@@ -32447,7 +32864,7 @@
         }
       ],
       "unknowns": [
-        "Direct human audition is not complete; waveform measurements and local ASR navigation do not establish sound source, subjective access, event causality or edit intent."
+        "Direct human audition establishes only the reported audible surface states; exact sound source, subjective access, event causality, edit intent and sub-second onset remain unknown."
       ]
     },
     {

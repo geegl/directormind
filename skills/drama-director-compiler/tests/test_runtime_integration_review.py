@@ -65,6 +65,7 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
         self.assertEqual(report["status"], "PASS", report["issues"])
         self.assertEqual(report["source_disposition_count"], 33)
         self.assertEqual(report["evidence_review_count"], 31)
+        self.assertEqual(report["directly_auditioned_evidence_count"], 1)
         self.assertEqual(report["candidate_disposition_count"], 124)
         self.assertEqual(report["candidate_final_disposition_count"], final_count)
         self.assertEqual(report["unresolved_candidate_count"], pending_count)
@@ -74,7 +75,10 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
         )
         self.assertEqual(final_count + pending_count, 124)
         self.assertEqual(report["positive_runtime_rule_count"], rule_count)
-        self.assertEqual(report["phase_status"], "IN_PROGRESS")
+        self.assertEqual(report["phase_status"], "PARTIAL_EVIDENCE_GAP")
+        self.assertEqual(report["pending_evidence_gap_count"], 69)
+        self.assertEqual(report["existing_material_review_required_count"], 0)
+        self.assertEqual(report["evidence_gap_count"], 14)
 
     def test_source_register_rows_cannot_be_swapped(self) -> None:
         review = copy.deepcopy(self.review)
@@ -246,7 +250,7 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
         existing = next(
             item
             for item in self.review["candidate_dispositions"]
-            if item["final_status"] == "EXISTING_MATERIAL_REVIEW_REQUIRED"
+            if item["final_status"] == "EVIDENCE_GAP_PENDING" and not item["audio_dependency"]
         )
         review = copy.deepcopy(self.review)
         target = next(
@@ -254,6 +258,7 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
             for item in review["candidate_dispositions"]
             if item["candidate_rule_id"] == existing["candidate_rule_id"]
         )
+        target["final_status"] = "EXISTING_MATERIAL_REVIEW_REQUIRED"
         target["evidence_gap_id"] = review["evidence_gaps"][0]["gap_id"]
         self.assertIn(
             "INTEGRATION-EXISTING-REVIEW-GAP",
@@ -262,9 +267,135 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
 
     def test_existing_material_review_debt_keeps_phase_in_progress(self) -> None:
         review = copy.deepcopy(self.review)
-        review["declared_phase_status"] = "PARTIAL_EVIDENCE_GAP"
+        target = next(
+            item
+            for item in review["candidate_dispositions"]
+            if item["final_status"] == "EVIDENCE_GAP_PENDING" and not item["audio_dependency"]
+        )
+        gap = next(item for item in review["evidence_gaps"] if item["gap_id"] == target["evidence_gap_id"])
+        gap["candidate_rule_ids"].remove(target["candidate_rule_id"])
+        gap["candidate_count"] -= 1
+        if gap["candidate_count"] == 0:
+            review["evidence_gaps"].remove(gap)
+        target["final_status"] = "EXISTING_MATERIAL_REVIEW_REQUIRED"
+        target["evidence_gap_id"] = None
         self.assertIn(
             "INTEGRATION-PHASE-STATUS-DRIFT",
+            issue_codes(self.validate_copy(review)),
+        )
+
+    def test_direct_audition_requires_bound_observations_and_complete_shot_set(self) -> None:
+        for mutation in ("no-observations", "missing-shot", "same-method"):
+            with self.subTest(mutation=mutation):
+                review = copy.deepcopy(self.review)
+                sound = next(
+                    item for item in review["evidence_reviews"]
+                    if item["evidence_id"] == "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+                )
+                if mutation == "no-observations":
+                    sound["audio_observations"] = []
+                elif mutation == "missing-shot":
+                    sound["directly_auditioned_shot_ids"].pop()
+                else:
+                    sound["audio_method_id"] = sound["method_id"]
+                self.assertIn(
+                    "INTEGRATION-AUDIO-OBSERVATION-REQUIRED",
+                    issue_codes(self.validate_copy(review)),
+                )
+
+    def test_direct_audition_method_must_bind_canonical_audio_evidence(self) -> None:
+        review = copy.deepcopy(self.review)
+        sound = next(
+            item for item in review["evidence_reviews"]
+            if item["evidence_id"] == "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+        )
+        sound["audio_method_id"] = "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-NOT-RECORDED"
+        self.assertIn(
+            "INTEGRATION-AUDIO-METHOD-BINDING",
+            issue_codes(self.validate_copy(review)),
+        )
+
+    def test_audio_observation_time_window_and_refs_are_exactly_bound(self) -> None:
+        sound = next(
+            item for item in self.review["evidence_reviews"]
+            if item["evidence_id"] == "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+        )
+        cross_cut = next(
+            item for item in sound["audio_observations"]
+            if item["clip_offset_start_seconds"] == 10.0
+            and item["clip_offset_end_seconds"] == 10.0
+        )
+        self.assertEqual(
+            [shot_id.rsplit("-", 1)[-1] for shot_id in cross_cut["source_refs"]],
+            ["S001", "S002"],
+        )
+        for mutation in ("wrong-ref", "timecode", "offset", "reversed"):
+            with self.subTest(mutation=mutation):
+                review = copy.deepcopy(self.review)
+                target = next(
+                    item for item in review["evidence_reviews"]
+                    if item["evidence_id"] == "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+                )["audio_observations"][1]
+                if mutation == "wrong-ref":
+                    target["source_refs"] = target["source_refs"][:1]
+                    expected = "INTEGRATION-AUDIO-OBSERVATION-SOURCE-REF"
+                elif mutation == "timecode":
+                    target["start"]["timecode"] = "00:09:35.000000"
+                    expected = "INTEGRATION-AUDIO-OBSERVATION-TIMECODE"
+                elif mutation == "offset":
+                    target["clip_offset_start_seconds"] += 2
+                    expected = "INTEGRATION-AUDIO-OBSERVATION-OFFSET"
+                else:
+                    target["start"]["seconds"] = target["end"]["seconds"] + 2
+                    target["start"]["timecode"] = "00:09:33.352458"
+                    target["clip_offset_start_seconds"] = 12.0
+                    expected = "INTEGRATION-AUDIO-OBSERVATION-RANGE"
+                self.assertIn(expected, issue_codes(self.validate_copy(review)))
+
+    def test_duplicate_audio_observation_id_fails(self) -> None:
+        review = copy.deepcopy(self.review)
+        sound = next(
+            item for item in review["evidence_reviews"]
+            if item["evidence_id"] == "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+        )
+        sound["audio_observations"][1]["observation_id"] = sound["audio_observations"][0]["observation_id"]
+        self.assertIn("INTEGRATION-AUDIO-OBSERVATION-ID", issue_codes(self.validate_copy(review)))
+
+    def test_audio_observations_cannot_be_carried_without_direct_audition(self) -> None:
+        review = copy.deepcopy(self.review)
+        sound = next(
+            item for item in review["evidence_reviews"]
+            if item["evidence_id"] == "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+        )
+        sound["audio_review_status"] = "SIGNAL_MEASURED_NOT_AUDITIONED"
+        self.assertIn(
+            "INTEGRATION-AUDIO-OBSERVATION-WITHOUT-AUDITION",
+            issue_codes(self.validate_copy(review)),
+        )
+
+    def test_audio_dependent_gap_requires_direct_audition_of_every_source_ref(self) -> None:
+        review = copy.deepcopy(self.review)
+        sound = next(
+            item for item in review["evidence_reviews"]
+            if item["evidence_id"] == "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+        )
+        sound["directly_auditioned_shot_ids"].pop()
+        self.assertIn("INTEGRATION-AUDIO-REVIEW", issue_codes(self.validate_copy(review)))
+
+    def test_completed_audio_review_cannot_remain_existing_material_debt(self) -> None:
+        review = copy.deepcopy(self.review)
+        target = next(
+            item for item in review["candidate_dispositions"]
+            if item["audio_dependency"]
+        )
+        gap = next(item for item in review["evidence_gaps"] if item["gap_id"] == target["evidence_gap_id"])
+        gap["candidate_rule_ids"].remove(target["candidate_rule_id"])
+        gap["candidate_count"] -= 1
+        review["evidence_gaps"].remove(gap)
+        target["final_status"] = "EXISTING_MATERIAL_REVIEW_REQUIRED"
+        target["evidence_gap_id"] = None
+        self.assertIn(
+            "INTEGRATION-EXISTING-REVIEW-AUDIO-COMPLETE",
             issue_codes(self.validate_copy(review)),
         )
 
@@ -273,6 +404,62 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
         positive = next(item for item in review["candidate_dispositions"] if item["final_status"] == "POSITIVE_RUNTIME_RULE")
         positive["audio_dependency"] = True
         self.assertIn("INTEGRATION-AUDIO-REVIEW", issue_codes(self.validate_copy(review)))
+
+    def test_direct_audition_observations_cover_declared_shots(self) -> None:
+        review = copy.deepcopy(self.review)
+        sound = next(
+            item for item in review["evidence_reviews"]
+            if item["evidence_id"] == "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+        )
+        sound["audio_observations"] = sound["audio_observations"][:1]
+        self.assertIn(
+            "INTEGRATION-AUDIO-OBSERVATION-COVERAGE",
+            issue_codes(self.validate_copy(review)),
+        )
+
+    def test_audio_candidate_cannot_keep_deleted_observation_binding(self) -> None:
+        review = copy.deepcopy(self.review)
+        sound = next(
+            item for item in review["evidence_reviews"]
+            if item["evidence_id"] == "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+        )
+        deleted_id = "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004"
+        sound["audio_observations"] = [
+            item for item in sound["audio_observations"]
+            if item["observation_id"] != deleted_id
+        ]
+        self.assertIn(
+            "INTEGRATION-CANDIDATE-AUDIO-OBSERVATION-BINDING",
+            issue_codes(self.validate_copy(review)),
+        )
+
+    def test_audio_candidate_rejects_same_shot_observation_substitution(self) -> None:
+        review = copy.deepcopy(self.review)
+        stagger = next(
+            item for item in review["candidate_dispositions"]
+            if item["candidate_rule_id"].endswith("STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003")
+        )
+        stagger["audio_observation_ids"] = [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001"
+        ]
+        self.assertIn(
+            "INTEGRATION-CANDIDATE-AUDIO-OBSERVATION-BINDING",
+            issue_codes(self.validate_copy(review)),
+        )
+
+    def test_audio_claim_rejects_same_shot_id_and_label_substitution(self) -> None:
+        review = copy.deepcopy(self.review)
+        stagger = next(
+            item for item in review["candidate_dispositions"]
+            if item["candidate_rule_id"].endswith("STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003")
+        )
+        replacement = "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001"
+        stagger["audio_observation_ids"] = [replacement]
+        stagger["audio_claims"][0]["observation_id"] = replacement
+        self.assertIn(
+            "INTEGRATION-CANDIDATE-AUDIO-OBSERVATION-BINDING",
+            issue_codes(self.validate_copy(review)),
+        )
 
     def test_rejected_candidate_cannot_claim_a_rule(self) -> None:
         review = copy.deepcopy(self.review)
