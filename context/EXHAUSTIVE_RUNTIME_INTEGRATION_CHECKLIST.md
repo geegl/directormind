@@ -19,7 +19,7 @@ Status values: `TODO`, `IN_PROGRESS`, `VERIFIED_DONE`, `PARTIAL_EVIDENCE_GAP`, `
 | X13 | VERIFIED_DONE | Generate original positive and boundary packages for every positive rule | 7 positive, 7 boundary and 15 additional no-match packages; all 29 remain `HUMAN_REVIEW_PENDING` |
 | X14 | VERIFIED_DONE | Update final validation and STATE from live recomputation | Exhaustive report is structurally `PASS` with product phase `PARTIAL_EVIDENCE_GAP`; false `COMPLETE` and unfinished-existing-review labeling are rejected |
 | X15 | VERIFIED_DONE | Run focused tests, complete units, repository runner and PR diff check | The independent missing, truncated, same-Shot substitution and stale-free-text audio attacks are rejected; 307/307 unit and CLI tests pass; the repository runner passes 25/25 checks and rebuilds the final report; working-tree whitespace check passes |
-| X16 | IN_PROGRESS | Push new PR, wait for final-head CI, and run a clean-checkout family-by-family independent audit | The previous PR head passed CI and 16-family review; the new audio-evidence head still requires push, CI and an independent clean-checkout review; do not merge main |
+| X16 | VERIFIED_DONE | Push new PR, wait for final-head CI, and run a clean-checkout family-by-family independent audit | PR #5 latest implementation head passed GitHub CI; the prior full 16-family review plus a new clean-checkout Sound/validator delta review found no must-fix, confirmed all counts and rule identities unchanged, and left the checkout clean; do not merge main |
 
 ## Current stop condition
 

@@ -15,11 +15,10 @@ Direct human audition of the complete Sound of Metal selection covers all 25
 Shots through 16 approximate observations. Candidate audio claims exactly bind
 their source descriptions, but unrelated support and boundaries remain missing.
 
-Root is the only repository writer. The prior 16-family clean-checkout audit and
-CI passed on the previous PR head. A new final-head CI run and an independent
-clean-checkout review of the Sound evidence and shared validators are required
-after this update is pushed. No source media changed or entered Git. `main`
-remains unchanged.
+Root is the only repository writer. The prior full 16-family audit and latest
+clean-checkout Sound/validator delta audit both found no must-fix; the latest
+implementation head also passed GitHub CI. No source media changed or entered
+Git. `main` remains unchanged.
 
 ## Current counts
 
@@ -94,5 +93,5 @@ listed in the canonical review; the four Sound candidates specifically need
 unrelated directly auditioned support and same-trigger contrary cases. Five
 families still lack a final runtime effect, so `COMPLETE` remains prohibited.
 
-Next: finish local regression, push, wait for final-head CI and run a new clean-
-checkout independent review. Do not merge `main` or call the goal complete.
+Next: keep PR #5 open and await user direction. Do not merge `main` or call the
+goal complete while the 69 fixed-corpus evidence gaps remain.

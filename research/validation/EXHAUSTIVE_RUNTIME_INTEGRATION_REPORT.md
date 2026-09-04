@@ -130,10 +130,12 @@ immutable legacy ledger remains unchanged.
 - The independent missing, truncated, same-Shot substitution and stale-free-text
   audio attacks are rejected; 307/307 unit and CLI tests, all 25 repository
   checks and the working-tree whitespace check pass.
-- Final-head GitHub CI and a new clean-checkout review remain required before
-  this head can receive the final independent PASS.
-- The previous PR head passed CI and an independent 16-family review; those
-  results are retained as historical evidence but do not sign the new head.
+- The latest implementation head passed GitHub CI. A new clean-checkout delta
+  review replayed the audio attacks, reran 40 directed and 307 full tests plus
+  all 25 repository checks, confirmed the seven rule identities and all live
+  counts unchanged, and reported `NO_MUST_FIX_FINDINGS`.
+- The prior full 16-family semantic review remains the family-wide evidence;
+  the final delta review did not re-open media or repeat that entire review.
 - All creative packages remain `HUMAN_REVIEW_PENDING`.
 - No generation, publication, deployment, source-media deletion or main-branch
   merge is authorized or performed.
