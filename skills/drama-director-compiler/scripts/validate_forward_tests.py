@@ -60,6 +60,7 @@ REQUIRED_COVERAGE_TAGS = {
 MUTUALLY_EXCLUSIVE_ROUTING_SIGNALS = {
     frozenset({"counterpart_relation_required", "counterpart_relation_not_required"}),
     frozenset({"continuous_present_time", "elliptical_time_change"}),
+    frozenset({"continuous_multi_zone_route", "route_not_continuous_multi_zone"}),
 }
 ROUTING_SIGNAL_FACT_TYPES = {
     "relation_already_registered": "relation_state",
@@ -108,6 +109,8 @@ REQUIRED_CASE_IDS = {
     "ORIGINAL-OBJECT-SECONDARY-HANDLING",
     "ORIGINAL-INITIAL-GEOMETRY-BEFORE-PROXIMITY",
     "ORIGINAL-GEOMETRY-ALREADY-REGISTERED",
+    "ORIGINAL-MULTI-ZONE-WAYPOINT-ROUTE",
+    "ORIGINAL-SINGLE-THRESHOLD-APPROACH",
     "ORIGINAL-NO-APPLICABLE-RULE",
 }
 FORBIDDEN_STATUS_RE = re.compile(r"\b(PRODUCTION_READY|WINNER|CREATIVE_SUCCESS)\b", re.IGNORECASE)

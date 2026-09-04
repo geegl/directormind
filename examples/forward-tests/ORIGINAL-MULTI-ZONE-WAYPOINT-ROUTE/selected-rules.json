@@ -21,11 +21,10 @@
     "DR-PERFORMANCE-OWNER-HOLD",
     "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
     "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
-    "DR-STABLE-AXIS-STATE-LED-HOLDS",
-    "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+    "DR-STABLE-AXIS-STATE-LED-HOLDS"
   ],
   "human_review_status": "HUMAN_REVIEW_PENDING",
-  "ir_handoff": "CONTINUE_WITH_SELECTED_RULES",
+  "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
   "rejected_rules": [
     {
       "blocking_fact_ids": [],
@@ -141,22 +140,7 @@
   },
   "scene_problem": "SUSPENSE_INFORMATION_ASYMMETRY",
   "schema_version": "director-routing-result/0.1",
-  "selected_rules": [
-    {
-      "matched_fact_ids": [
-        "FACT-01",
-        "FACT-02",
-        "FACT-03"
-      ],
-      "rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
-      "selection_reason_codes": [
-        "PRIMARY_PROBLEM_MATCH",
-        "REQUIRED_FACTS_LOCKED",
-        "RUNTIME_AUTHORIZED",
-        "TRIGGER_MATCH"
-      ]
-    }
-  ],
-  "selection_count": 1,
-  "status": "SELECTED"
+  "selected_rules": [],
+  "selection_count": 0,
+  "status": "NO_APPLICABLE_RULE"
 }

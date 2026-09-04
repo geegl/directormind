@@ -132,6 +132,7 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
             "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
             "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
             "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY",
+            "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
         }
         self.assertTrue(withdrawn_rule_ids.isdisjoint(specs))
         self.assertTrue(
@@ -176,6 +177,69 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
             if item["source_candidate_rule_id"] == chernobyl_id
         )
         self.assertEqual(set(support["source_refs"]), expected_refs)
+
+        gaps = {item["gap_id"]: item for item in self.review["evidence_gaps"]}
+        waypoint_gap = gaps["GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY"]
+        self.assertEqual(waypoint_gap["candidate_count"], 19)
+        self.assertTrue(
+            all(
+                dispositions[candidate_id]["final_status"] == "EVIDENCE_GAP_PENDING"
+                and dispositions[candidate_id]["target_rule_id"] is None
+                and dispositions[candidate_id]["runtime_effect_key"] is None
+                for candidate_id in waypoint_gap["candidate_rule_ids"]
+            )
+        )
+
+        spatial_gap = gaps["GAP-SPATIAL-CANDIDATE-RULE-BINDING"]
+        self.assertEqual(spatial_gap["candidate_count"], 11)
+        self.assertTrue(
+            all(
+                dispositions[candidate_id]["final_status"] == "EVIDENCE_GAP_PENDING"
+                for candidate_id in spatial_gap["candidate_rule_ids"]
+            )
+        )
+        spatial_rule = "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+        spatial_boundaries = [
+            item
+            for item in dispositions.values()
+            if item["final_status"] == "BOUNDARY_OR_COUNTEREXAMPLE"
+            and item["target_rule_id"] == spatial_rule
+        ]
+        self.assertEqual(
+            [item["candidate_rule_id"] for item in spatial_boundaries],
+            [
+                "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-"
+                "TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE"
+            ],
+        )
+        tsn_support_id = (
+            "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-"
+            "TSN-C01-REGISTER-PAIR-GEOMETRY-THEN-RELY-ON-STABLE-SINGLES"
+        )
+        self.assertEqual(dispositions[tsn_support_id]["final_status"], "SUPPORTING_EVIDENCE")
+        self.assertEqual(
+            dispositions[tsn_support_id]["source_refs"],
+            [
+                "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S088",
+                "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S089",
+                "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S090",
+            ],
+        )
+
+        td_fallback_id = (
+            "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-"
+            "TD-S01E04-C04-FUNCTIONAL-SEGMENTATION-FALLBACK-FOR-LONG-ROUTE"
+        )
+        td_fallback = dispositions[td_fallback_id]
+        self.assertEqual(td_fallback["final_status"], "REJECTED_WITH_REASON")
+        self.assertEqual(td_fallback["rejection_reason_code"], "UNSAFE_OR_UNSUPPORTED_EXECUTION")
+        self.assertIsNone(td_fallback["merged_into_candidate_id"])
+        mobile_lineage = next(
+            rule["evidence_lineage"]["candidate_rule_ids"]
+            for rule in self.grammar["rules"]
+            if rule["rule_id"] == "DR-MOBILE-ATTENTION-HANDOFF"
+        )
+        self.assertNotIn(td_fallback_id, mobile_lineage)
 
     def test_each_rule_has_a_real_positive_and_blocking_boundary_package(self) -> None:
         cases = {item["test_case_id"]: item for item in self.forward_index["cases"]}
@@ -270,11 +334,11 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
         )
         self.assertEqual(
             sum(item["runtime_status"] == "PARTICIPATING" for item in family_results),
-            12,
+            11,
         )
         self.assertEqual(
             sum(item["runtime_status"] == "IN_PROGRESS" for item in family_results),
-            4,
+            5,
         )
 
     def test_checked_in_report_is_the_live_deterministic_report(self) -> None:

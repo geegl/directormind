@@ -521,18 +521,12 @@
           "level": "warning",
           "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
           "path": "$.validation_warnings[1]"
-        },
-        {
-          "code": "EVIDENCE-DECLARED-WARNING",
-          "level": "warning",
-          "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
-          "path": "$.validation_warnings[2]"
         }
       ],
       "passed": true,
       "path": "research/evidence/sicario/SICARIO_BORDER_CHECKPOINT_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 96,
-      "warning_count": 3
+      "warning_count": 2
     },
     {
       "candidate_rule_count": 4,
@@ -913,7 +907,7 @@
   "total_scenes": 31,
   "total_shots": 2343,
   "validator_version": "scene-evidence-validator/0.1",
-  "warning_count": 88,
+  "warning_count": 87,
   "warnings": [
     {
       "code": "EVIDENCE-DECLARED-WARNING",
@@ -1271,13 +1265,6 @@
       "level": "warning",
       "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
       "path": "$.validation_warnings[1]"
-    },
-    {
-      "code": "EVIDENCE-DECLARED-WARNING",
-      "evidence_id": "SICARIO-2015-BORDER-CHECKPOINT-001",
-      "level": "warning",
-      "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
-      "path": "$.validation_warnings[2]"
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",

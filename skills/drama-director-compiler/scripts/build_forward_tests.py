@@ -700,7 +700,7 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "approach becomes arrival",
             "subtext": "none asserted",
         },
-        "signals": ["continuous_multi_zone_route", "waypoint_orientation_required", "route_not_continuous_multi_zone"],
+        "signals": ["route_not_continuous_multi_zone"],
         "subject_tags": ["delivery"],
         "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
         "changed_director_dimensions": [],

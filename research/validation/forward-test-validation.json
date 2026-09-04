@@ -84,9 +84,9 @@
     {
       "human_review_status": "HUMAN_REVIEW_PENDING",
       "ir_warning_count": 4,
-      "routing_status": "SELECTED",
+      "routing_status": "NO_APPLICABLE_RULE",
       "scene_problem": "SUSPENSE_INFORMATION_ASYMMETRY",
-      "selection_count": 1,
+      "selection_count": 0,
       "status": "PASS",
       "test_case_id": "ORIGINAL-MULTI-ZONE-WAYPOINT-ROUTE"
     },
@@ -262,20 +262,20 @@
       "test_case_id": "ORIGINAL-THRESHOLD-UNCHANGED"
     }
   ],
-  "completed_boundary_cases": 8,
-  "completed_positive_cases": 8,
+  "completed_boundary_cases": 7,
+  "completed_positive_cases": 7,
   "error_count": 0,
   "human_review_pending_count": 29,
   "issues": [],
   "missing_family_count": 0,
   "missing_rule_count": 0,
-  "no_applicable_rule_count": 21,
+  "no_applicable_rule_count": 22,
   "package_count": 29,
-  "promotion_ready_family_count": 8,
-  "required_positive_boundary_pairs": 8,
+  "promotion_ready_family_count": 7,
+  "required_positive_boundary_pairs": 7,
   "required_scene_problem_count": 6,
   "schema_version": "forward-test-repository-validation/0.1",
-  "selected_rule_count": 8,
+  "selected_rule_count": 7,
   "status": "PASS",
   "structural_pass_count": 29,
   "warning_count": 119

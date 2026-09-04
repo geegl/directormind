@@ -171,6 +171,10 @@ class ForwardTestContractTests(unittest.TestCase):
                 ("counterpart_relation_required", "counterpart_relation_not_required"),
             ),
             ("ORIGINAL-PROXIMITY-ELLIPSIS", ("continuous_present_time", "elliptical_time_change")),
+            (
+                "ORIGINAL-SINGLE-THRESHOLD-APPROACH",
+                ("continuous_multi_zone_route", "route_not_continuous_multi_zone"),
+            ),
         )
         for case_id, contradictory_signals in cases:
             with self.subTest(case_id=case_id):

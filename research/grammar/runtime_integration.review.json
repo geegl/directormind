@@ -141,27 +141,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SINGLE-THRESHOLD-APPROACH",
-      "boundary_signal_ids": [
-        "route_not_continuous_multi_zone"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C04-DELAY-REJOIN-WITH-EMPTY-GEOMETRY-TRACE-AND-CONTACT-RECEIPT",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S029: visible_action remains INFERRED after the fresh frame check: empty-space hold becomes an entry/orientation movement",
         "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S034: blocking remains INFERRED after the fresh frame check: P-B lowers/turns, places a hand near the mark, moves toward P-A; P-A becomes visible and the two bodies make sustained contact",
         "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S029 00:52:17.708-00:52:36.125: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=long static interior master of doorway/piano zone; camera_motion=fixed frame; support UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S034 00:53:03.458-00:53:48.208: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=long close-to-two-person mobile unit beginning on P-B; camera_motion=sustained follow/reframing from single face to wall/hand to paired bodies; exact camera route/support UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -171,7 +168,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+      "runtime_effect_key": null,
       "source_refs": [
         "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S029",
         "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S030",
@@ -180,7 +177,7 @@
         "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S033",
         "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S034"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -521,27 +518,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
-      "boundary_signal_ids": [
-        "counterpart_absent_at_changed_endpoint"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
       "evidence_id": "BEAR-S01E07-REVIEW-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "BEAR-S01E07-REVIEW-001-S001: visible_action remains INFERRED after the fresh frame check: Prep and reading become rapid redirection, clustered confrontation, individual withdrawals, Sydney's visible departure, Carmy's crouch, and an empty-workspace ending",
         "BEAR-S01E07-REVIEW-001-S001: blocking remains INFERRED after the fresh frame check: Multiple workers cross between cook line, pass, front counter, and rear corridor; entries, exits, body wipes, and work gestures motivate camera handoffs",
         "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "BEAR-S01E07-REVIEW-001-S001 00:02:22.768-00:19:31.379: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=Variable: hand/detail, close, medium, two-shot, clustered group, corridor wide, and empty-workspace view; camera_motion=Continuous translation, pans, follow moves, reversals, close approaches, pull-backs, and reframing; no visible cut. Burned text, if present, was ignored as picture evidence."
       ],
@@ -549,11 +543,11 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-BEAR-S01E07-REVIEW-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+      "runtime_effect_key": null,
       "source_refs": [
         "BEAR-S01E07-REVIEW-001-S001"
       ],
-      "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -1473,27 +1467,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
-      "boundary_signal_ids": [
-        "counterpart_absent_at_changed_endpoint"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-ANCHOR-EXPLANATION-WITH-VISUALIZED-PROCESS-001",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
       "evidence_id": "CHERNOBYL-S01E05-HEARING-RECON-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "CHERNOBYL-S01E05-HEARING-RECON-001-S001: visible_action remains INFERRED after the fresh frame check: lectern adult changes head and hand positions while crowd remains mostly seated",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S169: blocking remains INFERRED after the fresh frame check: lectern, raised desk, boards and crowd share frame; exact marks, roles and cross-cut identity UNKNOWN",
         "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "CHERNOBYL-S01E05-HEARING-RECON-001-S001 00:38:51.840-00:38:55.560: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=very wide; exact lens/focal length UNKNOWN; camera_motion=frame edges remain broadly stable; exact support, stabilization and micro-movement UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S169 00:49:52.320-00:49:56.680: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=very wide; exact lens/focal length UNKNOWN; camera_motion=locked-looking room map; exact support, stabilization and micro-movement UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -1503,7 +1494,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-CHERNOBYL-S01E05-HEARING-RECON-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+      "runtime_effect_key": null,
       "source_refs": [
         "CHERNOBYL-S01E05-HEARING-RECON-001-S001",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S002",
@@ -1596,7 +1587,7 @@
         "CHERNOBYL-S01E05-HEARING-RECON-001-S168",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S169"
       ],
-      "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -1858,27 +1849,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
-      "boundary_signal_ids": [
-        "counterpart_absent_at_changed_endpoint"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
       "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001: visible_action remains INFERRED after the fresh frame check: vehicle motion and outside optic flow continue; a bright burning vehicle-like object crosses/blocks the road; people and two-wheeled vehicles move near the car; dark/red spots and star-like cracks become visible on panes; the front-right red-haired adult becomes reclined with dark red material at neck/clothing; other occupants make large reach/contact movements; a blue/yellow marked vehicle approaches; vehicle stops or nearly stops; external uniform-like adults appear; a side door opens; a dark-haired adult-like figure is continuously visible during the door/exterior interval and moves back toward/through the door area; the vehicle then departs; the view settles on roadway and two horizontal dark-clothed forms before the cut. Whether this is the earlier rear-right occupant leaving and returning is INFERRED and requires locked-script confirmation",
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001: blocking remains INFERRED after the fresh frame check: adults begin in stable front-left/front-right/rear-left/rear-center/rear-right zones; they turn, lean and reach, and arms/hands enter or contact other body regions where visible while exterior bodies/vehicles move across windshield and side apertures; during the later door interval, a dark-haired appearance handle remains visible outside and moves back toward/through the side-door area. Grouping that handle with the earlier rear-right occupant is INFERRED; exact roles, contact function and identity through long occlusion UNKNOWN",
         "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001 00:26:14.233333-00:30:22.000000: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=continuously changing medium/close/wide mobile coverage inside a compact vehicle, through its apertures, at an open door, and finally along the road; no single fixed shot size; exact lens/focal length UNKNOWN; camera_motion=camera repeatedly rotates/translates relative to cabin pillars and occupants, looks through front/side/rear apertures, passes the open door threshold, follows exterior movement, and ends facing roadway; direction/speed/distance, support system, vehicle rig, stabilization, hidden transition and single-take production method UNKNOWN. Burned text, if present, was ignored as picture evidence."
       ],
@@ -1886,32 +1874,32 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+      "runtime_effect_key": null,
       "source_refs": [
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
       ],
-      "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CARRY-SURFACE-BODY-STATE-THROUGH-VEHICLE-REVERSAL-003",
-      "decision_axes": [
-        "COVERAGE"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
       "family_id": "CONTINUITY-LEDGER-AND-VERSIONING",
-      "final_status": "SUPPORTING_EVIDENCE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001: visible_action remains INFERRED after the fresh frame check: vehicle motion and outside optic flow continue; a bright burning vehicle-like object crosses/blocks the road; people and two-wheeled vehicles move near the car; dark/red spots and star-like cracks become visible on panes; the front-right red-haired adult becomes reclined with dark red material at neck/clothing; other occupants make large reach/contact movements; a blue/yellow marked vehicle approaches; vehicle stops or nearly stops; external uniform-like adults appear; a side door opens; a dark-haired adult-like figure is continuously visible during the door/exterior interval and moves back toward/through the door area; the vehicle then departs; the view settles on roadway and two horizontal dark-clothed forms before the cut. Whether this is the earlier rear-right occupant leaving and returning is INFERRED and requires locked-script confirmation",
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001: blocking remains INFERRED after the fresh frame check: adults begin in stable front-left/front-right/rear-left/rear-center/rear-right zones; they turn, lean and reach, and arms/hands enter or contact other body regions where visible while exterior bodies/vehicles move across windshield and side apertures; during the later door interval, a dark-haired appearance handle remains visible outside and moves back toward/through the side-door area. Grouping that handle with the earlier rear-right occupant is INFERRED; exact roles, contact function and identity through long occlusion UNKNOWN",
         "Fresh picture review shows a complex route expressed through successive readable zones/thresholds and orientation anchors, independently supporting waypoint registration without relying on dialogue."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh picture review shows a complex route expressed through successive readable zones/thresholds and orientation anchors, independently supporting waypoint registration without relying on dialogue.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001 00:26:14.233333-00:30:22.000000: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=continuously changing medium/close/wide mobile coverage inside a compact vehicle, through its apertures, at an open door, and finally along the road; no single fixed shot size; exact lens/focal length UNKNOWN; camera_motion=camera repeatedly rotates/translates relative to cabin pillars and occupants, looks through front/side/rear apertures, passes the open door threshold, follows exterior movement, and ends facing roadway; direction/speed/distance, support system, vehicle rig, stabilization, hidden transition and single-take production method UNKNOWN. Burned text, if present, was ignored as picture evidence."
       ],
@@ -1919,32 +1907,32 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
       ],
-      "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+      "runtime_effect_key": null,
       "source_refs": [
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-DOOR-THRESHOLD-EXIT-RETURN-DEPARTURE-004",
-      "decision_axes": [
-        "COVERAGE"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "SUPPORTING_EVIDENCE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001: visible_action remains INFERRED after the fresh frame check: vehicle motion and outside optic flow continue; a bright burning vehicle-like object crosses/blocks the road; people and two-wheeled vehicles move near the car; dark/red spots and star-like cracks become visible on panes; the front-right red-haired adult becomes reclined with dark red material at neck/clothing; other occupants make large reach/contact movements; a blue/yellow marked vehicle approaches; vehicle stops or nearly stops; external uniform-like adults appear; a side door opens; a dark-haired adult-like figure is continuously visible during the door/exterior interval and moves back toward/through the door area; the vehicle then departs; the view settles on roadway and two horizontal dark-clothed forms before the cut. Whether this is the earlier rear-right occupant leaving and returning is INFERRED and requires locked-script confirmation",
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001: blocking remains INFERRED after the fresh frame check: adults begin in stable front-left/front-right/rear-left/rear-center/rear-right zones; they turn, lean and reach, and arms/hands enter or contact other body regions where visible while exterior bodies/vehicles move across windshield and side apertures; during the later door interval, a dark-haired appearance handle remains visible outside and moves back toward/through the side-door area. Grouping that handle with the earlier rear-right occupant is INFERRED; exact roles, contact function and identity through long occlusion UNKNOWN",
         "Fresh picture review shows a complex route expressed through successive readable zones/thresholds and orientation anchors, independently supporting waypoint registration without relying on dialogue."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh picture review shows a complex route expressed through successive readable zones/thresholds and orientation anchors, independently supporting waypoint registration without relying on dialogue.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001 00:26:14.233333-00:30:22.000000: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=continuously changing medium/close/wide mobile coverage inside a compact vehicle, through its apertures, at an open door, and finally along the road; no single fixed shot size; exact lens/focal length UNKNOWN; camera_motion=camera repeatedly rotates/translates relative to cabin pillars and occupants, looks through front/side/rear apertures, passes the open door threshold, follows exterior movement, and ends facing roadway; direction/speed/distance, support system, vehicle rig, stabilization, hidden transition and single-take production method UNKNOWN. Burned text, if present, was ignored as picture evidence."
       ],
@@ -1952,35 +1940,32 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
       ],
-      "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+      "runtime_effect_key": null,
       "source_refs": [
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SINGLE-THRESHOLD-APPROACH",
-      "boundary_signal_ids": [
-        "route_not_continuous_multi_zone"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C01-INVARIANT-SPACE-MULTICHANNEL-DELTA",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
       "family_id": "CONTINUITY-LEDGER-AND-VERSIONING",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026: visible_action remains INFERRED after the fresh frame check: Unfolded newspaper rises as a vertical screen; glassware and table setting remain",
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S024: blocking remains INFERRED after the fresh frame check: Outgoing A overlaps incoming B; B resolves centered and upright with little torso displacement",
         "The repeated space deliberately represents non-contiguous elapsed-time states. Cumulative real-time route state must not be carried across those ellipses, making this a concrete non-application boundary."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The repeated space deliberately represents non-contiguous elapsed-time states. Cumulative real-time route state must not be carried across those ellipses, making this a concrete non-application boundary.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026 00:53:50.000-00:53:55.500: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=MCU single Person B after transition; camera_motion=fast horizontal image smear plus visible outgoing/incoming overlap for approximately 1.458s, then image stabilizes; production method UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S024 00:53:43.458-00:53:46.167: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=MCU single Person B after transition; camera_motion=fast horizontal image smear plus visible outgoing/incoming overlap for approximately 1.708s, then image stabilizes; production method UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -1990,7 +1975,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+      "runtime_effect_key": null,
       "source_refs": [
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026",
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027",
@@ -2000,7 +1985,7 @@
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S020",
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S024"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -2117,27 +2102,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
-      "boundary_signal_ids": [
-        "counterpart_absent_at_changed_endpoint"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C01",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
       "evidence_id": "DM-ANDOR-S01E10-SEL-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "DM-ANDOR-S01E10-SEL-001-S001: visible_action remains INFERRED after the fresh frame check: the nearer person crosses/turns within the console field",
         "DM-ANDOR-S01E10-SEL-001-S030: blocking remains INFERRED after the fresh frame check: registered opposing zones reappear; exact metric distance, roles and off-frame positions UNKNOWN",
         "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "DM-ANDOR-S01E10-SEL-001-S001 00:24:12.292-00:24:28.042: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium-wide control-room registration; camera_motion=from early/mid/late full-picture review: frame changes from a broad console view toward the nearer moving body; exact support/path UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "DM-ANDOR-S01E10-SEL-001-S030 00:25:40.792-00:25:43.500: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=wide control-room light-return view; camera_motion=from early/mid/late full-picture review: wide composition persists through brightness increase; exact support UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -2147,7 +2129,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-DM-ANDOR-S01E10-SEL-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+      "runtime_effect_key": null,
       "source_refs": [
         "DM-ANDOR-S01E10-SEL-001-S001",
         "DM-ANDOR-S01E10-SEL-001-S002",
@@ -2180,7 +2162,7 @@
         "DM-ANDOR-S01E10-SEL-001-S029",
         "DM-ANDOR-S01E10-SEL-001-S030"
       ],
-      "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -2241,21 +2223,21 @@
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C03",
-      "decision_axes": [
-        "COVERAGE"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "DM-ANDOR-S01E10-SEL-001",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "SUPPORTING_EVIDENCE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "DM-ANDOR-S01E10-SEL-001-S076: visible_action remains INFERRED after the fresh frame check: several people begin shifting toward the corridor center",
         "DM-ANDOR-S01E10-SEL-001-S100: blocking remains INFERRED after the fresh frame check: figures traverse vertically and laterally through repeating frames; exact metric distance, roles and off-frame positions UNKNOWN",
         "Fresh picture review shows a complex route expressed through successive readable zones/thresholds and orientation anchors, independently supporting waypoint registration without relying on dialogue."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh picture review shows a complex route expressed through successive readable zones/thresholds and orientation anchors, independently supporting waypoint registration without relying on dialogue.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "DM-ANDOR-S01E10-SEL-001-S076 00:28:24.417-00:28:26.958: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=wide corridor group registration; camera_motion=from early/mid/late full-picture review: wide corridor field remains legible; exact support UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "DM-ANDOR-S01E10-SEL-001-S100 00:29:57.417-00:30:00.208: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=high red-lit vertical passage; camera_motion=from early/mid/late full-picture review: high frame remains canted with distributed movement; exact support UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -2265,7 +2247,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-DM-ANDOR-S01E10-SEL-001"
       ],
-      "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+      "runtime_effect_key": null,
       "source_refs": [
         "DM-ANDOR-S01E10-SEL-001-S076",
         "DM-ANDOR-S01E10-SEL-001-S077",
@@ -2293,31 +2275,28 @@
         "DM-ANDOR-S01E10-SEL-001-S099",
         "DM-ANDOR-S01E10-SEL-001-S100"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SINGLE-THRESHOLD-APPROACH",
-      "boundary_signal_ids": [
-        "route_not_continuous_multi_zone"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C04",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "DM-ANDOR-S01E10-SEL-001",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "DM-ANDOR-S01E10-SEL-001-S104: visible_action remains INFERRED after the fresh frame check: many bodies advance toward the threshold",
         "DM-ANDOR-S01E10-SEL-001-S121: blocking remains INFERRED after the fresh frame check: facility dominates center; small forms surround at large distance; exact metric distance, roles and off-frame positions UNKNOWN",
         "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "DM-ANDOR-S01E10-SEL-001-S104 00:30:13.708-00:30:15.917: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=wide rear threshold approach; camera_motion=from early/mid/late full-picture review: wide rear view follows/contains approach; exact support UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "DM-ANDOR-S01E10-SEL-001-S121 00:30:50.458-00:30:57.000: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=extreme-high full facility view; camera_motion=from early/mid/late full-picture review: top-down frame remains broadly stable with slight drift/rotation; exact support/altitude UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -2327,7 +2306,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-DM-ANDOR-S01E10-SEL-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+      "runtime_effect_key": null,
       "source_refs": [
         "DM-ANDOR-S01E10-SEL-001-S104",
         "DM-ANDOR-S01E10-SEL-001-S105",
@@ -2348,7 +2327,7 @@
         "DM-ANDOR-S01E10-SEL-001-S120",
         "DM-ANDOR-S01E10-SEL-001-S121"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -2509,27 +2488,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SINGLE-THRESHOLD-APPROACH",
-      "boundary_signal_ids": [
-        "route_not_continuous_multi_zone"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C03",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "DM-BODYGUARD-S01E01-SEL-001",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "DM-BODYGUARD-S01E01-SEL-001-S095: visible_action remains INFERRED after the fresh frame check: heads, hands and upper bodies reorient while the two-track relation remains visible",
         "DM-BODYGUARD-S01E01-SEL-001-S171: visible_action remains INFERRED after the fresh frame check: P-A-like/P-B-like relation loosens slightly while arms/hands remain visible",
         "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "DM-BODYGUARD-S01E01-SEL-001-S093 00:14:28.250-00:14:32.292: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=wide doorway/aisle registration. Burned text, if present, was ignored as picture evidence.",
         "DM-BODYGUARD-S01E01-SEL-001-S171 00:18:06.625-00:18:09.292: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; gross figure/object positions and cut endpoints were visually rechecked. Burned text, if present, was ignored as picture evidence.",
@@ -2539,7 +2515,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-DM-BODYGUARD-S01E01-SEL-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+      "runtime_effect_key": null,
       "source_refs": [
         "DM-BODYGUARD-S01E01-SEL-001-S093",
         "DM-BODYGUARD-S01E01-SEL-001-S094",
@@ -2621,7 +2597,7 @@
         "DM-BODYGUARD-S01E01-SEL-001-S170",
         "DM-BODYGUARD-S01E01-SEL-001-S171"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -2730,27 +2706,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
-      "boundary_signal_ids": [
-        "counterpart_absent_at_changed_endpoint"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C02",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
       "evidence_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001: visible_action remains INFERRED after the fresh frame check: gradual reveal → hands near a still red-clad human form → departures and arrivals → repeated group reconfiguration → broad illumination pulses → upper-body contact where visible → group faces the central container → gray-haired figure walks through corridor/doorway → environment and apparent age mix change → two young-presenting figures become readable as a foreground adult moves laterally",
         "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001: blocking remains INFERRED after the fresh frame check: multiple adult-presenting figures enter, exit, sit, stand, cross foreground and reform clusters around chair rows, a seating alcove and the coffin-like anchor; one gray-haired male-presenting figure is followed through a corridor; later adult-presenting and young-presenting figures become readable in the darker stair hall",
         "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001 00:01:19.625-00:16:32.000: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=continuously changing from object/body detail and medium shared frames through wide ensemble, following medium and new-space wide/medium configurations; no single fixed size; camera_motion=prolonged continuous reframe with lateral arcs, forward/backward travel, pans/turns, body-follow and passes through doors/partial occlusion; motion direction and speed vary; exact stabilization, lens changes, hidden joins and production take structure UNKNOWN. Burned text, if present, was ignored as picture evidence."
       ],
@@ -2758,35 +2731,32 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+      "runtime_effect_key": null,
       "source_refs": [
         "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
       ],
-      "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SINGLE-THRESHOLD-APPROACH",
-      "boundary_signal_ids": [
-        "route_not_continuous_multi_zone"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C03",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001: visible_action remains INFERRED after the fresh frame check: gradual reveal → hands near a still red-clad human form → departures and arrivals → repeated group reconfiguration → broad illumination pulses → upper-body contact where visible → group faces the central container → gray-haired figure walks through corridor/doorway → environment and apparent age mix change → two young-presenting figures become readable as a foreground adult moves laterally",
         "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001: blocking remains INFERRED after the fresh frame check: multiple adult-presenting figures enter, exit, sit, stand, cross foreground and reform clusters around chair rows, a seating alcove and the coffin-like anchor; one gray-haired male-presenting figure is followed through a corridor; later adult-presenting and young-presenting figures become readable in the darker stair hall",
         "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001 00:01:19.625-00:16:32.000: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=continuously changing from object/body detail and medium shared frames through wide ensemble, following medium and new-space wide/medium configurations; no single fixed size; camera_motion=prolonged continuous reframe with lateral arcs, forward/backward travel, pans/turns, body-follow and passes through doors/partial occlusion; motion direction and speed vary; exact stabilization, lens changes, hidden joins and production take structure UNKNOWN. Burned text, if present, was ignored as picture evidence."
       ],
@@ -2794,11 +2764,11 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+      "runtime_effect_key": null,
       "source_refs": [
         "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -3092,27 +3062,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SINGLE-THRESHOLD-APPROACH",
-      "boundary_signal_ids": [
-        "route_not_continuous_multi_zone"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-PRELOAD-ENSEMBLE-THEN-REVEAL-ENTRY-001",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S001: visible_action remains INFERRED after the fresh frame check: the central figure changes mouth/head position; surrounding bodies make small posture changes",
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S013: blocking remains INFERRED after the fresh frame check: entrant leans over the cane and advances toward camera on the aisle",
         "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S001 00:38:14.167-00:38:20.375: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium-wide ensemble view; camera_motion=sampled architecture/frame edges remain broadly stable while bodies change; exact support and micro-movement UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S013 00:39:00.250-00:39:07.167: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium moving entrant single; camera_motion=composition travels with the cane-using entrant and broadly maintains body scale; exact camera path/support and stabilization UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -3122,7 +3089,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+      "runtime_effect_key": null,
       "source_refs": [
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S001",
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S002",
@@ -3138,31 +3105,28 @@
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S012",
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S013"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SINGLE-THRESHOLD-APPROACH",
-      "boundary_signal_ids": [
-        "route_not_continuous_multi_zone"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-PUNCTUATE-LONG-AXIS-TRAVEL-002",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S007: visible_action remains INFERRED after the fresh frame check: the entrant progresses forward with a cane; armored figures maintain nearby positions",
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S030: blocking remains INFERRED after the fresh frame check: entrant occupies center with cane; crowd falls outside the immediate frame",
         "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S007 00:38:42.250-00:38:48.833: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=rear medium-wide moving aisle view; camera_motion=composition travels with the cane-using entrant and broadly maintains body scale; exact camera path/support and stabilization UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S030 00:40:20.792-00:40:23.708: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=rear wide elevated metal-seat-step approach; camera_motion=sampled architecture/frame edges remain broadly stable while bodies change; exact support and micro-movement UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -3172,7 +3136,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+      "runtime_effect_key": null,
       "source_refs": [
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S007",
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S008",
@@ -3199,7 +3163,7 @@
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S029",
         "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S030"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -3263,27 +3227,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
-      "boundary_signal_ids": [
-        "counterpart_absent_at_changed_endpoint"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C01-REGISTER-ENSEMBLE-GEOMETRY-BEFORE-DISTRIBUTED-CHANGE",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
       "evidence_id": "KNIVES-OUT-2019-WILL-READING-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "KNIVES-OUT-2019-WILL-READING-001-S006: visible_action remains INFERRED after the fresh frame check: The group holds dispersed seated and standing positions around P-A.",
         "KNIVES-OUT-2019-WILL-READING-001-S090: blocking remains INFERRED after the fresh frame check: foreground and doorway/background people retain two visible depth layers around Z-DOORWAY; off-frame path/intent UNKNOWN",
         "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "KNIVES-OUT-2019-WILL-READING-001-S006 01:07:19.267-01:07:24.367: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=interior WS/master. Burned text, if present, was ignored as picture evidence.",
         "KNIVES-OUT-2019-WILL-READING-001-S090 01:11:30.367-01:11:37.400: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=MS/doorway relation view. Burned text, if present, was ignored as picture evidence.",
@@ -3293,7 +3254,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-KNIVES-OUT-2019-WILL-READING-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+      "runtime_effect_key": null,
       "source_refs": [
         "KNIVES-OUT-2019-WILL-READING-001-S006",
         "KNIVES-OUT-2019-WILL-READING-001-S007",
@@ -3381,7 +3342,7 @@
         "KNIVES-OUT-2019-WILL-READING-001-S089",
         "KNIVES-OUT-2019-WILL-READING-001-S090"
       ],
-      "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -3536,21 +3497,21 @@
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C04-SPATIAL-SPILLOVER-CARRIES-AFTERMATH-PAST-ROOM-BOUNDARY",
-      "decision_axes": [
-        "COVERAGE"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "KNIVES-OUT-2019-WILL-READING-001",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "SUPPORTING_EVIDENCE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "KNIVES-OUT-2019-WILL-READING-001-S078: visible_action remains INFERRED after the fresh frame check: P-D changes mouth, gaze, and one raised hand.",
         "KNIVES-OUT-2019-WILL-READING-001-S108: blocking remains INFERRED after the fresh frame check: the named person is isolated in Z-DRIVEWAY; off-frame positions and intention UNKNOWN",
         "Fresh picture review shows a complex route expressed through successive readable zones/thresholds and orientation anchors, independently supporting waypoint registration without relying on dialogue."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh picture review shows a complex route expressed through successive readable zones/thresholds and orientation anchors, independently supporting waypoint registration without relying on dialogue.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "KNIVES-OUT-2019-WILL-READING-001-S078 01:10:50.633-01:10:57.800: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=MCU/subject-scale view. Burned text, if present, was ignored as picture evidence.",
         "KNIVES-OUT-2019-WILL-READING-001-S108 01:12:42.600-01:12:44.567: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=MCU/subject-scale view. Burned text, if present, was ignored as picture evidence.",
@@ -3560,7 +3521,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-KNIVES-OUT-2019-WILL-READING-001"
       ],
-      "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+      "runtime_effect_key": null,
       "source_refs": [
         "KNIVES-OUT-2019-WILL-READING-001-S078",
         "KNIVES-OUT-2019-WILL-READING-001-S079",
@@ -3594,7 +3555,7 @@
         "KNIVES-OUT-2019-WILL-READING-001-S107",
         "KNIVES-OUT-2019-WILL-READING-001-S108"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -4192,27 +4153,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
-      "boundary_signal_ids": [
-        "counterpart_absent_at_changed_endpoint"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C02-EXTRA-BODY-ANCHOR-IN-CONTAINED-ALTERNATION",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
       "evidence_id": "MRR-S04E07-ACT-FOUR-VISUAL-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S087: visible_action remains INFERRED after the fresh frame check: P-C moves the green folder into the shared frame and leans toward P-A; P-A turns gaze/head",
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S058: blocking remains INFERRED after the fresh frame check: two bodies exchange standing/seated/aisle occupancy in the room-wide frame; roles and causal relation UNKNOWN",
         "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S087 00:37:52.687-00:37:57.066: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium two-person/depth view on seated P-A as P-C enters close with the green folder; camera_motion=delivered framing stays broadly stable in reviewed full-picture samples; support, focal length, micro-motion and exact path UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S058 00:36:42.158-00:36:44.202: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=room-wide or multi-body medium-wide relation view; camera_motion=delivered room frame stays broadly stable in reviewed full-picture samples unless otherwise stated; support, lens and micro-motion UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -4222,7 +4180,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-MRR-S04E07-ACT-FOUR-VISUAL-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+      "runtime_effect_key": null,
       "source_refs": [
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S087",
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S088",
@@ -4256,7 +4214,7 @@
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S052",
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S058"
       ],
-      "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -4531,23 +4489,21 @@
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS",
-      "decision_axes": [
-        "COVERAGE",
-        "BLOCKING",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "SICARIO-2015-BORDER-CHECKPOINT-001",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "POSITIVE_RUNTIME_RULE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "SICARIO-2015-BORDER-CHECKPOINT-001-S001: visible_action remains INFERRED after the fresh frame check: Dense city blocks replace the prior car interior at F47593; no individual vehicle is resolved.",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S013: blocking remains INFERRED after the fresh frame check: vehicles remain constrained in parallel queues",
         "Fresh picture review shows a complex route expressed through successive readable zones/thresholds and orientation anchors, independently supporting waypoint registration without relying on dialogue."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh picture review shows a complex route expressed through successive readable zones/thresholds and orientation anchors, independently supporting waypoint registration without relying on dialogue.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "SICARIO-2015-BORDER-CHECKPOINT-001-S001 00:33:03.042-00:33:08.417: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=EWS; camera_motion=slow image drift; aircraft/drone/crane/support UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S013 00:33:45.917-00:34:01.417: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=EWS; camera_motion=slow top-down drift; support UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -4557,15 +4513,23 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-SICARIO-2015-BORDER-CHECKPOINT-001"
       ],
-      "runtime_effect_key": "RULE:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+      "runtime_effect_key": null,
       "source_refs": [
         "SICARIO-2015-BORDER-CHECKPOINT-001-S001",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S002",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S003",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S004",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S005",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S006",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S007",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S008",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S009",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S010",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S011",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S012",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -4645,21 +4609,21 @@
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C03-READINESS-TO-DEPLOYMENT-STATE-LEDGER",
-      "decision_axes": [
-        "COVERAGE"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "SICARIO-2015-BORDER-CHECKPOINT-001",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "SUPPORTING_EVIDENCE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "SICARIO-2015-BORDER-CHECKPOINT-001-S034: visible_action remains INFERRED after the fresh frame check: Low view along the stopped lanes shows grouped dark vehicles and adjacent cars forming a narrow corridor.",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S063: blocking remains INFERRED after the fresh frame check: open doors and vehicle edges partly occlude and frame the red-shirted/bald men and the outside long-gun holders",
         "Fresh picture review shows a complex route expressed through successive readable zones/thresholds and orientation anchors, independently supporting waypoint registration without relying on dialogue."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh picture review shows a complex route expressed through successive readable zones/thresholds and orientation anchors, independently supporting waypoint registration without relying on dialogue.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "SICARIO-2015-BORDER-CHECKPOINT-001-S034 00:35:31.917-00:35:39.250: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=WS; camera_motion=slight lateral/forward drift; support UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S063 00:36:48.250-00:36:49.833: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=WS/MWS; camera_motion=mostly held or short actor-following reframe; support UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -4669,7 +4633,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-SICARIO-2015-BORDER-CHECKPOINT-001"
       ],
-      "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+      "runtime_effect_key": null,
       "source_refs": [
         "SICARIO-2015-BORDER-CHECKPOINT-001-S034",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S035",
@@ -4702,7 +4666,7 @@
         "SICARIO-2015-BORDER-CHECKPOINT-001-S062",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S063"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -5085,27 +5049,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SINGLE-THRESHOLD-APPROACH",
-      "boundary_signal_ids": [
-        "route_not_continuous_multi_zone"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C04",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "SUCCESSION-S01E06-BOARD-VOTE-001",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "SUCCESSION-S01E06-BOARD-VOTE-001-S075: visible_action remains INFERRED after the fresh frame check: O: CEO/senior issues command in close frame",
         "SUCCESSION-S01E06-BOARD-VOTE-001-S088: blocking remains INFERRED after the fresh frame check: O: losing-side member remains in a close frame and looks down",
         "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "SUCCESSION-S01E06-BOARD-VOTE-001-S075 00:51:11.042-00:51:17.333: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=O: CU/MCS. Burned text, if present, was ignored as picture evidence.",
         "SUCCESSION-S01E06-BOARD-VOTE-001-S088 00:52:22.125-00:52:33.042: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=O: CU/MCS. Burned text, if present, was ignored as picture evidence.",
@@ -5115,7 +5076,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-SUCCESSION-S01E06-BOARD-VOTE-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+      "runtime_effect_key": null,
       "source_refs": [
         "SUCCESSION-S01E06-BOARD-VOTE-001-S075",
         "SUCCESSION-S01E06-BOARD-VOTE-001-S084",
@@ -5124,31 +5085,28 @@
         "SUCCESSION-S01E06-BOARD-VOTE-001-S087",
         "SUCCESSION-S01E06-BOARD-VOTE-001-S088"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
-      "boundary_signal_ids": [
-        "counterpart_absent_at_changed_endpoint"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C01-REGISTER-PUBLIC-OBJECT-CONTEST-GEOMETRY",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
       "evidence_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-S001: visible_action remains INFERRED after the fresh frame check: P-G raises and extends one arm while the seated people hold their positions; purpose and causal meaning UNKNOWN",
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-S017: blocking remains INFERRED after the fresh frame check: No person is visible; board and embedded object state are presented",
         "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-S001 00:19:24.288-00:19:25.915: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium-wide or medium group view. Burned text, if present, was ignored as picture evidence.",
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-S017 00:19:54.110-00:19:54.568: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=circular-board object close-up; camera_motion=board remains primary in delivered frame; support/lens and any micro-movement UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -5158,7 +5116,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-TED-LASSO-S01E08-DARTS-REVERSAL-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+      "runtime_effect_key": null,
       "source_refs": [
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-S001",
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-S002",
@@ -5243,31 +5201,28 @@
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-S112",
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-S017"
       ],
-      "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
-      "boundary_signal_ids": [
-        "counterpart_absent_at_changed_endpoint"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C02-RETURN-THROUGH-PRIMARY-ANCHOR-AFTER-DISTINCT-LOCATION-BLOCK",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
       "evidence_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-S061: visible_action remains INFERRED after the fresh frame check: The pair move together through the exterior while other people cross nearby; purpose and causal meaning UNKNOWN",
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-S092: blocking remains INFERRED after the fresh frame check: Several people face toward the board/central lane",
         "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-S061 00:21:57.691-00:22:01.445: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=exterior wide or medium-wide view. Burned text, if present, was ignored as picture evidence.",
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-S092 00:23:23.569-00:23:24.695: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium-wide or medium group view. Burned text, if present, was ignored as picture evidence.",
@@ -5277,7 +5232,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-TED-LASSO-S01E08-DARTS-REVERSAL-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+      "runtime_effect_key": null,
       "source_refs": [
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-S061",
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-S062",
@@ -5333,7 +5288,7 @@
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-S091",
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-S092"
       ],
-      "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -5587,27 +5542,22 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
-      "boundary_signal_ids": [
-        "counterpart_absent_at_changed_endpoint"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C01-REGISTER-PAIR-GEOMETRY-THEN-RELY-ON-STABLE-SINGLES",
       "decision_axes": [
-        "COVERAGE",
-        "EDIT"
+        "COVERAGE"
       ],
       "evidence_gap_id": null,
       "evidence_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "SUPPORTING_EVIDENCE",
       "inferences": [
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S002: visible_action remains INFERRED after the fresh frame check: P-B-like dark-jacket/light-haired adult appearance remains seated while mouth, head, gaze and occasional hand positions change",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091: blocking remains INFERRED after the fresh frame check: the adult begins at the established table-right seat, turns, rises and moves toward frame-right; whether the body fully clears the room beyond the frame is UNKNOWN",
-        "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
+        "S088 and S089 preserve stable opposing positions; S090 returns to the shared relation field as one participant rises and leaves. Exact identity and dialogue meaning remain outside the picture claim."
       ],
       "material_unknowns": [],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger.",
+      "notes": "Stable opposing singles are followed by a shared frame that makes the first departure readable, supporting a relation reset at the material spatial change.",
       "observations": [
         "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S002 00:00:02.419-00:00:07.591: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=recurrent medium/medium-close single; camera_motion=frame edges appear stable at sampled early/middle/late points; exact support, hidden micro-movement and joins UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091 00:03:57.821-00:04:03.618: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium single on P-A-like adult; camera_motion=sampled frame edges remain broadly stable while the body rises/moves across the frame; exact support, hidden micro-movement and joins UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -5617,99 +5567,11 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+      "runtime_effect_key": "SUPPORT:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
       "source_refs": [
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S002",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S003",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S004",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S005",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S006",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S007",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S008",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S009",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S010",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S011",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S012",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S013",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S014",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S015",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S016",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S017",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S018",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S019",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S020",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S021",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S022",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S023",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S024",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S025",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S026",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S027",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S028",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S029",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S030",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S031",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S032",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S033",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S034",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S035",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S036",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S037",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S038",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S039",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S040",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S041",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S042",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S043",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S044",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S045",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S046",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S047",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S048",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S049",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S050",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S051",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S052",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S053",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S054",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S055",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S056",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S057",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S058",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S059",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S060",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S061",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S062",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S063",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S064",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S065",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S066",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S067",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S068",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S069",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S070",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S071",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S072",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S073",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S074",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S075",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S076",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S077",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S078",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S079",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S080",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S081",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S082",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S083",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S084",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S085",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S086",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S087",
         "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S088",
         "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S089",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S001",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S090",
-        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091"
+        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S090"
       ],
       "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
     },
@@ -5903,27 +5765,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SINGLE-THRESHOLD-APPROACH",
-      "boundary_signal_ids": [
-        "route_not_continuous_multi_zone"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C01",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "TLOU-BEDROOM-LOCAL-001",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "TLOU-BEDROOM-LOCAL-001-S001: visible_action remains INFERRED after the fresh frame check: one dark-clad figure walks across the pale foreground toward the lit building",
         "TLOU-BEDROOM-LOCAL-001-S004: blocking remains INFERRED after the fresh frame check: P-A enters through the green door and moves to a standing position between door/desk and bed",
         "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "TLOU-BEDROOM-LOCAL-001-S001 00:39:48.667-00:39:57.750: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=exterior wide establishing view; camera_motion=delivered early/mid/late framing is broadly stable while the stated subject/object movement occurs; camera support, focal length, micro-motion and exact path UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "TLOU-BEDROOM-LOCAL-001-S004 00:40:13.708-00:40:21.167: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=bedroom wide entry view; camera_motion=delivered early/mid/late framing is broadly stable while the stated subject/object movement occurs; camera support, focal length, micro-motion and exact path UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -5933,14 +5792,14 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-TLOU-BEDROOM-LOCAL-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+      "runtime_effect_key": null,
       "source_refs": [
         "TLOU-BEDROOM-LOCAL-001-S001",
         "TLOU-BEDROOM-LOCAL-001-S002",
         "TLOU-BEDROOM-LOCAL-001-S003",
         "TLOU-BEDROOM-LOCAL-001-S004"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -6021,27 +5880,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SINGLE-THRESHOLD-APPROACH",
-      "boundary_signal_ids": [
-        "route_not_continuous_multi_zone"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C04",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "TLOU-BEDROOM-LOCAL-001",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "TLOU-BEDROOM-LOCAL-001-S020: visible_action remains INFERRED after the fresh frame check: P-A changes mouth, gaze, brow and head position while remaining standing; speech and intention UNKNOWN",
         "TLOU-BEDROOM-LOCAL-001-S027: blocking remains INFERRED after the fresh frame check: P-B remains standing in the window-side zone; identity/location of the soft foreground edge and P-A's final position are UNKNOWN",
         "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "TLOU-BEDROOM-LOCAL-001-S020 00:41:40.167-00:41:43.375: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium-close or close single on P-A with a soft dark foreground edge of UNKNOWN owner; camera_motion=delivered early/mid/late framing is broadly stable while the stated subject/object movement occurs; camera support, focal length, micro-motion and exact path UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "TLOU-BEDROOM-LOCAL-001-S027 00:42:25.125-00:42:29.833: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium-close or close single on P-B; camera_motion=delivered early/mid/late framing is broadly stable while the stated subject/object movement occurs; camera support, focal length, micro-motion and exact path UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -6051,7 +5907,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-TLOU-BEDROOM-LOCAL-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+      "runtime_effect_key": null,
       "source_refs": [
         "TLOU-BEDROOM-LOCAL-001-S020",
         "TLOU-BEDROOM-LOCAL-001-S021",
@@ -6062,28 +5918,28 @@
         "TLOU-BEDROOM-LOCAL-001-S026",
         "TLOU-BEDROOM-LOCAL-001-S027"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C01-WAYPOINT-REGISTERED-MOBILE-GEOGRAPHY",
-      "decision_axes": [
-        "COVERAGE"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "SUPPORTING_EVIDENCE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001: visible_action remains INFERRED after the fresh frame check: people walk, run, turn, reach and cross thresholds; hands hold short/long dark gun-shaped objects in several intervals; 2D body-region adjacency/overlap occurs; a phone-like object appears near a face; two body-like figures later remain adjacent/overlapping while moving through exterior zones; the final movement reaches a vehicle doorway. Exact physical contact existence/depth/force/function, object identity, purpose and custody across occlusion are UNKNOWN",
         "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001: blocking remains INFERRED after the fresh frame check: a recurring dark-jacket appearance moves from an exterior wide through several thresholds and room/yard/fence/vehicle zones; other bodies cluster, separate, crouch, lie, rise, show 2D body-region adjacency/overlap or move; grouping the recurring appearance across long occlusion is INFERRED and exact identity/roles UNKNOWN",
         "One uninterrupted moving-image interval crosses multiple visually distinct zones. Stable landmarks, direction vectors and threshold views repeatedly restore route legibility; this changes Blocking and Coverage."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "One uninterrupted moving-image interval crosses multiple visually distinct zones. Stable landmarks, direction vectors and threshold views repeatedly restore route legibility; this changes Blocking and Coverage.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001 00:49:06.000-00:55:00.500: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=one uninterrupted-looking mobile unit changes continuously among exterior wide, room-relation, body-medium/close, threshold, yard/fence and vehicle-adjacent scales; there is no fixed shot size; exact focal length UNKNOWN; camera_motion=continuous-looking translation, following, retreating, lateral movement, pan and rotation connect exterior, interior, threshold, yard/fence and vehicle-adjacent views; support system, path metrics, stabilization, hidden joins and production method UNKNOWN. Burned text, if present, was ignored as picture evidence."
       ],
@@ -6091,32 +5947,32 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001"
       ],
-      "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+      "runtime_effect_key": null,
       "source_refs": [
         "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C02-THRESHOLD-AS-STATE-CHECKPOINT",
-      "decision_axes": [
-        "COVERAGE"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "SUPPORTING_EVIDENCE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001: visible_action remains INFERRED after the fresh frame check: people walk, run, turn, reach and cross thresholds; hands hold short/long dark gun-shaped objects in several intervals; 2D body-region adjacency/overlap occurs; a phone-like object appears near a face; two body-like figures later remain adjacent/overlapping while moving through exterior zones; the final movement reaches a vehicle doorway. Exact physical contact existence/depth/force/function, object identity, purpose and custody across occlusion are UNKNOWN",
         "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001: blocking remains INFERRED after the fresh frame check: a recurring dark-jacket appearance moves from an exterior wide through several thresholds and room/yard/fence/vehicle zones; other bodies cluster, separate, crouch, lie, rise, show 2D body-region adjacency/overlap or move; grouping the recurring appearance across long occlusion is INFERRED and exact identity/roles UNKNOWN",
         "Its reviewed images and proposed direction are the threshold/checkpoint facet of the same continuous multi-zone route; no independently selectable runtime effect remains after the waypoint rule is expressed."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Its reviewed images and proposed direction are the threshold/checkpoint facet of the same continuous multi-zone route; no independently selectable runtime effect remains after the waypoint rule is expressed.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001 00:49:06.000-00:55:00.500: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=one uninterrupted-looking mobile unit changes continuously among exterior wide, room-relation, body-medium/close, threshold, yard/fence and vehicle-adjacent scales; there is no fixed shot size; exact focal length UNKNOWN; camera_motion=continuous-looking translation, following, retreating, lateral movement, pan and rotation connect exterior, interior, threshold, yard/fence and vehicle-adjacent views; support system, path metrics, stabilization, hidden joins and production method UNKNOWN. Burned text, if present, was ignored as picture evidence."
       ],
@@ -6124,11 +5980,11 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001"
       ],
-      "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+      "runtime_effect_key": null,
       "source_refs": [
         "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -6166,27 +6022,25 @@
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C04-FUNCTIONAL-SEGMENTATION-FALLBACK-FOR-LONG-ROUTE",
-      "decision_axes": [
-        "COVERAGE"
-      ],
+      "decision_axes": [],
       "evidence_gap_id": null,
       "evidence_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001",
       "family_id": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
-      "final_status": "MERGED_DUPLICATE",
+      "final_status": "REJECTED_WITH_REASON",
       "inferences": [
         "This candidate repeats the same unobserved project-original fallback concept as BEAR-C04 rather than adding a distinct source-observed mechanism."
       ],
       "material_unknowns": [],
-      "merged_into_candidate_id": "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION",
-      "notes": "It is duplicate pipeline fallback advice, not a second source-observed directing rule.",
+      "merged_into_candidate_id": null,
+      "notes": "As written it repeats the same unsupported project-original segmentation fallback class as BEAR-C04; it is not a source-observed directing mechanism and must not merge into the positive mobile-attention rule.",
       "observations": [
         "S001 delivers a continuous-looking long mobile route; it does not deliver the proposed short segmented threshold/occlusion package."
       ],
-      "rejection_reason_code": null,
+      "rejection_reason_code": "UNSAFE_OR_UNSUPPORTED_EXECUTION",
       "review_ids": [
         "EXHAUSTIVE-PICTURE-TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001"
       ],
-      "runtime_effect_key": "MERGE:DR-MOBILE-ATTENTION-HANDOFF",
+      "runtime_effect_key": "REJECTION_GUARD:TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C04-FUNCTIONAL-SEGMENTATION-FALLBACK-FOR-LONG-ROUTE",
       "source_refs": [
         "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
       ],
@@ -6194,27 +6048,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SINGLE-THRESHOLD-APPROACH",
-      "boundary_signal_ids": [
-        "route_not_continuous_multi_zone"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C01-APPROACH-TO-CONTAINER-STATE-HANDOFF",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S001: visible_action remains INFERRED after the fresh frame check: P-A walks in and stops opposite P-B; P-B turns head and torso toward P-A; dialogue, purpose and causal meaning UNKNOWN",
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S010: blocking remains INFERRED after the fresh frame check: P-A opens/enters the adjacent front seat and settles; P-B remains seated throughout; off-frame intention UNKNOWN",
         "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The fixed corpus contains no unrelated same-trigger case where a continuous three-or-more-zone route still preserves every required waypoint and action chain without waypoint coverage."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The picture shows a short approach, single aperture/threshold, terminal edge, or semantic status change rather than a real-time route across three or more distinct zones. Multi-waypoint treatment would add coverage without solving additional geography, so the rule must not fire.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S001 00:05:20.875-00:05:28.667: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=exterior medium-wide two-person relation shot. Burned text, if present, was ignored as picture evidence.",
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S010 00:06:20.875-00:06:32.958: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=rear-seat medium two-person cabin relation shot. Burned text, if present, was ignored as picture evidence.",
@@ -6224,7 +6075,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+      "runtime_effect_key": null,
       "source_refs": [
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S001",
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S002",
@@ -6237,31 +6088,28 @@
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S009",
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S010"
       ],
-      "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
-      "boundary_signal_ids": [
-        "counterpart_absent_at_changed_endpoint"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C02-PARTIAL-COMPANION-ANCHOR-IN-CONTAINED-TWO-HANDER",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
       "evidence_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S010: visible_action remains INFERRED after the fresh frame check: P-A opens/enters the adjacent front seat and settles; P-B remains seated throughout; dialogue, purpose and causal meaning UNKNOWN",
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S077: blocking remains INFERRED after the fresh frame check: P-A turns head/gaze from forward/up toward P-B while seated; off-frame intention UNKNOWN",
         "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S010 00:06:20.875-00:06:32.958: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=rear-seat medium two-person cabin relation shot. Burned text, if present, was ignored as picture evidence.",
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S077 00:11:44.250-00:11:50.250: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=vehicle-interior close-up on P-A. Burned text, if present, was ignored as picture evidence.",
@@ -6271,7 +6119,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+      "runtime_effect_key": null,
       "source_refs": [
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S010",
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S011",
@@ -6333,31 +6181,28 @@
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S076",
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S077"
       ],
-      "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
-      "boundary_signal_ids": [
-        "counterpart_absent_at_changed_endpoint"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C03-RE-REGISTER-CONTAINED-GEOMETRY-AFTER-PARALLEL-INSERT",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
       "evidence_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S041: visible_action remains INFERRED after the fresh frame check: Dark-clothed adult opens rear compartment and lifts yellow hard case outward; dialogue, purpose and causal meaning UNKNOWN",
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S050: blocking remains INFERRED after the fresh frame check: Both occupy prior front-seat sides; P-B turns toward P-A while P-A later lowers gaze; off-frame intention UNKNOWN",
         "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
       "observations": [
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S041 00:08:56.625-00:09:01.792: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=close object/hand view at marked vehicle. Burned text, if present, was ignored as picture evidence.",
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S050 00:09:27.375-00:09:44.750: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=vehicle-interior medium two-person relation shot. Burned text, if present, was ignored as picture evidence.",
@@ -6367,7 +6212,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+      "runtime_effect_key": null,
       "source_refs": [
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S041",
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S042",
@@ -6408,7 +6253,7 @@
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S040",
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S050"
       ],
-      "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -6691,6 +6536,54 @@
   "declared_phase_status": "IN_PROGRESS",
   "evidence_gaps": [
     {
+      "candidate_count": 19,
+      "candidate_rule_ids": [
+        "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C04-DELAY-REJOIN-WITH-EMPTY-GEOMETRY-TRACE-AND-CONTACT-RECEIPT",
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CARRY-SURFACE-BODY-STATE-THROUGH-VEHICLE-REVERSAL-003",
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-DOOR-THRESHOLD-EXIT-RETURN-DEPARTURE-004",
+        "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C01-INVARIANT-SPACE-MULTICHANNEL-DELTA",
+        "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C03",
+        "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C04",
+        "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C03",
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C03",
+        "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-PRELOAD-ENSEMBLE-THEN-REVEAL-ENTRY-001",
+        "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-PUNCTUATE-LONG-AXIS-TRAVEL-002",
+        "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C04-SPATIAL-SPILLOVER-CARRIES-AFTERMATH-PAST-ROOM-BOUNDARY",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C03-READINESS-TO-DEPLOYMENT-STATE-LEDGER",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C04",
+        "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C01",
+        "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C04",
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C01-WAYPOINT-REGISTERED-MOBILE-GEOGRAPHY",
+        "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C02-THRESHOLD-AS-STATE-CHECKPOINT",
+        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C01-APPROACH-TO-CONTAINER-STATE-HANDOFF"
+      ],
+      "close_condition": "Close only when exact Shot/timecode review proves the full shared trigger, an unrelated same-trigger contrary directing choice, and opposite routing results.",
+      "gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+      "priority": 1,
+      "required_review": "Add an unrelated continuous real-time route across at least three necessary zones whose waypoints and action chain remain completely readable in one field, making extra waypoint coverage the wrong choice."
+    },
+    {
+      "candidate_count": 11,
+      "candidate_rule_ids": [
+        "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-ANCHOR-EXPLANATION-WITH-VISUALIZED-PROCESS-001",
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001",
+        "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C01",
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C02",
+        "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C01-REGISTER-ENSEMBLE-GEOMETRY-BEFORE-DISTRIBUTED-CHANGE",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C02-EXTRA-BODY-ANCHOR-IN-CONTAINED-ALTERNATION",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C01-REGISTER-PUBLIC-OBJECT-CONTEST-GEOMETRY",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C02-RETURN-THROUGH-PRIMARY-ANCHOR-AFTER-DISTINCT-LOCATION-BLOCK",
+        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C02-PARTIAL-COMPANION-ANCHOR-IN-CONTAINED-TWO-HANDER",
+        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C03-RE-REGISTER-CONTAINED-GEOMETRY-AFTER-PARALLEL-INSERT"
+      ],
+      "close_condition": "Close only after each candidate has a picture-supported relation to a material spatial change and an exact reset or alternative decision; otherwise bind it to another rule.",
+      "gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+      "priority": 2,
+      "required_review": "Reclassify the eleven mixed ensemble, recurring-zone and parallel-return candidates using exact Shot/timecode evidence instead of the disproved counterpart-absent signal."
+    },
+    {
       "candidate_count": 12,
       "candidate_rule_ids": [
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C04-PARALLEL-PROP-BARRIER-CLOSURE",
@@ -6708,7 +6601,7 @@
       ],
       "close_condition": "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary.",
       "gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
-      "priority": 1,
+      "priority": 3,
       "required_review": "Add unrelated support for a portable-object handler or function change that governs a dependent next action, plus a same-trigger case where one continuous person-object view already makes the state readable without a dedicated checkpoint."
     },
     {
@@ -6725,7 +6618,7 @@
       ],
       "close_condition": "Close only after exact Shot/timecode review proves the shared comparison trigger, the alternative coverage, and why the comparative-field rule must not fire.",
       "gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
-      "priority": 2,
+      "priority": 4,
       "required_review": "Add one unrelated, rights-cleared scene with multiple simultaneously visible referents whose comparison truly governs the next action, but where a separate comparative field would be the wrong coverage choice."
     },
     {
@@ -6737,7 +6630,7 @@
       ],
       "close_condition": "Close only after exact Shot/timecode review proves the proximity trigger, already-readable geometry, and the alternative coverage decision in a different work.",
       "gap_id": "GAP-RELATION-GEOMETRY-SAME-TRIGGER-BOUNDARY",
-      "priority": 3,
+      "priority": 5,
       "required_review": "Add an unrelated proximity scene with the same relation-change trigger where prior geometry remains fully registered, so another initial spatial master would be redundant."
     },
     {
@@ -6747,7 +6640,7 @@
       ],
       "close_condition": "Close only when both cases have exact Shot/timecode evidence and distinguish one versioned object from unrelated items.",
       "gap_id": "GAP-VERSIONED-OBJECT-HANDOFF-COUNTERPART",
-      "priority": 4,
+      "priority": 6,
       "required_review": "Add one rights-cleared clip with a visually tagged source object transformed and handed across two people or zones, plus one same-surface independent-items boundary."
     },
     {
@@ -6757,7 +6650,7 @@
       ],
       "close_condition": "Close only when revised and unchanged repeats are separated by exact Shot/timecode evidence and change a concrete directing choice.",
       "gap_id": "GAP-REVISED-REPEAT-CONFIGURATION",
-      "priority": 5,
+      "priority": 7,
       "required_review": "Add one rights-cleared revised-operation clip with a visible plan/configuration change and phase marker, plus one unchanged-repeat boundary."
     },
     {
@@ -6770,7 +6663,7 @@
       ],
       "close_condition": "Close when the positive trigger and the do-not-intercut boundary are both exact Shot/timecode bound and produce opposite routing results.",
       "gap_id": "GAP-MULTI-THREAD-NATURAL-BOUNDARY",
-      "priority": 6,
+      "priority": 8,
       "required_review": "Add one rights-cleared same-trigger multi-thread scene whose simultaneous visible states are clearer in one continuous field than by intercutting."
     },
     {
@@ -6782,7 +6675,7 @@
       ],
       "close_condition": "Close only when the shared trigger, opposite scale order and changed Coverage/Edit decision are all Shot/timecode bound.",
       "gap_id": "GAP-SCALE-ORDER-SAME-TRIGGER",
-      "priority": 7,
+      "priority": 9,
       "required_review": "Add one rights-cleared same-trigger detail-to-container support and one same-trigger geometry-first boundary."
     },
     {
@@ -6794,7 +6687,7 @@
       ],
       "close_condition": "Close only after both unrelated support and boundary are exact Shot/timecode bound without relying on dialogue or unauditioned sound.",
       "gap_id": "GAP-SUBJECTIVE-ACCESS-CROSS-WORK",
-      "priority": 8,
+      "priority": 10,
       "required_review": "Add one rights-cleared unrelated subjective-access transition and one same-trigger boundary where ordinary relation coverage must remain primary."
     }
   ],
@@ -41029,139 +40922,6 @@
       ],
       "surface_copy_allowed": false,
       "trigger": "A project-original consequential action has a locked source, target-state change and visible result that must remain attributable across brief or occluded contact."
-    },
-    {
-      "ai_risk": {
-        "camera": {
-          "level": "HIGH",
-          "reasons": [
-            "The selected coverage must preserve the locked project-original geometry and readable state."
-          ]
-        },
-        "continuity": {
-          "level": "HIGH",
-          "reasons": [
-            "Project-original people, objects, zones and state endpoints can drift across generated shots."
-          ]
-        },
-        "performance": {
-          "level": "HIGH",
-          "reasons": [
-            "Visible state changes can flatten or occur out of the planned order."
-          ]
-        }
-      },
-      "applicable_when": [
-        "Origin, current waypoint and next vector must remain readable through a multi-zone move."
-      ],
-      "audio_dependency": false,
-      "blocking": "Lock zone IDs, threshold sides and entry/exit vectors for every project-original mover.",
-      "boundary_forward_test_id": "ORIGINAL-SINGLE-THRESHOLD-APPROACH",
-      "candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS",
-      "confidence": {
-        "execution": "MEDIUM",
-        "transfer": "MEDIUM",
-        "within_source": "HIGH"
-      },
-      "continuity": "Carry project-original zone, mover, vehicle/object and entry/exit state through the route ledger.",
-      "counterexample": {
-        "evidence_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
-        "notes": "A separated return or short rejoin is not a continuous three-zone route and must not invoke waypoint routing.",
-        "relation_id": "EXH-CTR-WAYPOINT-AQP",
-        "source_candidate_rule_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C04-DELAY-REJOIN-WITH-EMPTY-GEOMETRY-TRACE-AND-CONTACT-RECEIPT",
-        "source_refs": [
-          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S029",
-          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S030",
-          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S031",
-          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S032",
-          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S033",
-          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S034"
-        ],
-        "work_id": "A-QUIET-PLACE-2018"
-      },
-      "coverage": "Alternate only the route totals, threshold states and local action views required to preserve orientation.",
-      "designated_boundary_signal_id": "route_not_continuous_multi_zone",
-      "director_decision": "Register one project-original landmark and exit vector at each necessary waypoint, returning to an anchor only when orientation is at risk.",
-      "edit_logic": "Cut on waypoint or threshold state changes and re-establish the next vector before tightening.",
-      "failure_modes": [
-        "The chosen coverage hides a locked state that the next action requires.",
-        "The edit implies a source-specific identity, cause or event that the project did not lock."
-      ],
-      "fallback": {
-        "camera": "Use fixed project-original views at the minimum verified state checkpoints.",
-        "continuity": "Lock project-original IDs and before/after states; add a neutral reset before any ambiguous transition.",
-        "performance": "Split the action into one explicit project-original state change per shot.",
-        "project_original_only": true
-      },
-      "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "functional_roles": [
-        {
-          "appearance_id": "APPEARANCE-S001",
-          "functional_role": "spatial_mover",
-          "shot_id": "SICARIO-2015-BORDER-CHECKPOINT-001-S001",
-          "source_refs": [
-            "SICARIO-2015-BORDER-CHECKPOINT-001-S001"
-          ]
-        },
-        {
-          "appearance_id": "APPEARANCE-S013",
-          "functional_role": "relation_anchor",
-          "shot_id": "SICARIO-2015-BORDER-CHECKPOINT-001-S013",
-          "source_refs": [
-            "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
-          ]
-        }
-      ],
-      "name": "Register necessary waypoints through a continuous multi-zone route",
-      "not_applicable_when": [
-        "The move is a short one-threshold approach, an ellipsis or an intentionally hidden route."
-      ],
-      "pacing": "Let physical distance and locked state changes determine holds; do not copy source duration or density.",
-      "positive_forward_test_id": "ORIGINAL-MULTI-ZONE-WAYPOINT-ROUTE",
-      "required_story_facts": [
-        "The project locks a continuous present-time route through at least three zones.",
-        "Each required waypoint or destination vector affects comprehension of the next action."
-      ],
-      "routing": {
-        "not_applicable_if_any": [
-          "route_not_continuous_multi_zone"
-        ],
-        "required_fact_types": [
-          "route_continuity",
-          "zone_waypoints",
-          "destination_vector"
-        ],
-        "trigger_all_of": [
-          "continuous_multi_zone_route",
-          "waypoint_orientation_required"
-        ],
-        "trigger_any_of": []
-      },
-      "rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
-      "runtime_authorized": true,
-      "scene_problem": "SUSPENSE_INFORMATION_ASYMMETRY",
-      "selection_rank": 8,
-      "source_refs": [
-        "SICARIO-2015-BORDER-CHECKPOINT-001-S001",
-        "SICARIO-2015-BORDER-CHECKPOINT-001-S002",
-        "SICARIO-2015-BORDER-CHECKPOINT-001-S003",
-        "SICARIO-2015-BORDER-CHECKPOINT-001-S007",
-        "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
-      ],
-      "supporting_relations": [
-        {
-          "evidence_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001",
-          "notes": "An unrelated continuous moving interval repeatedly restores zone landmarks and route vectors.",
-          "relation_id": "EXH-REL-WAYPOINT-TD",
-          "source_candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C01-WAYPOINT-REGISTERED-MOBILE-GEOGRAPHY",
-          "source_refs": [
-            "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
-          ],
-          "work_id": "TRUE-DETECTIVE-S01E04"
-        }
-      ],
-      "surface_copy_allowed": false,
-      "trigger": "A project-original continuous route crosses at least three visually distinct zones and losing the next vector would obscure a required action or destination."
     },
     {
       "ai_risk": {

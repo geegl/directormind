@@ -6,16 +6,16 @@
     "IN_PROGRESS is mandatory while existing local material still requires direct review.",
     "PARTIAL_EVIDENCE_GAP is reserved for the state where only fixed-corpus evidence gaps remain."
   ],
-  "boundary_forward_case_count": 8,
+  "boundary_forward_case_count": 7,
   "candidate_disposition_count": 124,
   "candidate_final_status_counts": {
-    "BOUNDARY_OR_COUNTEREXAMPLE": 43,
-    "EVIDENCE_GAP_PENDING": 35,
+    "BOUNDARY_OR_COUNTEREXAMPLE": 20,
+    "EVIDENCE_GAP_PENDING": 65,
     "EXISTING_MATERIAL_REVIEW_REQUIRED": 4,
-    "MERGED_DUPLICATE": 2,
-    "POSITIVE_RUNTIME_RULE": 8,
-    "REJECTED_WITH_REASON": 2,
-    "SUPPORTING_EVIDENCE": 30
+    "MERGED_DUPLICATE": 1,
+    "POSITIVE_RUNTIME_RULE": 7,
+    "REJECTED_WITH_REASON": 3,
+    "SUPPORTING_EVIDENCE": 24
   },
   "canonical_scene_evidence_count": 31,
   "canonical_shot_edit_unit_count": 2343,
@@ -56,14 +56,12 @@
       "runtime_status": "PARTICIPATING"
     },
     {
-      "active_rule_ids": [
-        "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
-      ],
+      "active_rule_ids": [],
       "candidate_count": 6,
       "existing_material_review_required_count": 1,
       "family_id": "CONTINUITY-LEDGER-AND-VERSIONING",
-      "final_disposition_count": 3,
-      "pending_evidence_gap_count": 2,
+      "final_disposition_count": 1,
+      "pending_evidence_gap_count": 4,
       "runtime_status": "PARTICIPATING"
     },
     {
@@ -158,8 +156,8 @@
       "candidate_count": 18,
       "existing_material_review_required_count": 0,
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_disposition_count": 18,
-      "pending_evidence_gap_count": 0,
+      "final_disposition_count": 7,
+      "pending_evidence_gap_count": 11,
       "runtime_status": "PARTICIPATING"
     },
     {
@@ -183,83 +181,95 @@
       "runtime_status": "IN_PROGRESS"
     },
     {
-      "active_rule_ids": [
-        "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
-      ],
+      "active_rule_ids": [],
       "candidate_count": 17,
       "existing_material_review_required_count": 0,
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
-      "final_disposition_count": 17,
-      "pending_evidence_gap_count": 0,
-      "runtime_status": "PARTICIPATING"
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 17,
+      "runtime_status": "IN_PROGRESS"
     }
   ],
-  "final_disposition_count": 85,
+  "final_disposition_count": 55,
   "issues": [],
   "mechanism_family_count": 16,
-  "no_applicable_rule_case_count": 21,
-  "pending_evidence_gap_count": 35,
+  "no_applicable_rule_case_count": 22,
+  "pending_evidence_gap_count": 65,
   "phase_status": "IN_PROGRESS",
-  "positive_forward_case_count": 8,
+  "positive_forward_case_count": 7,
   "prioritized_evidence_gaps": [
+    {
+      "candidate_count": 19,
+      "close_condition": "Close only when exact Shot/timecode review proves the full shared trigger, an unrelated same-trigger contrary directing choice, and opposite routing results.",
+      "gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+      "priority": 1,
+      "required_review": "Add an unrelated continuous real-time route across at least three necessary zones whose waypoints and action chain remain completely readable in one field, making extra waypoint coverage the wrong choice."
+    },
+    {
+      "candidate_count": 11,
+      "close_condition": "Close only after each candidate has a picture-supported relation to a material spatial change and an exact reset or alternative decision; otherwise bind it to another rule.",
+      "gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+      "priority": 2,
+      "required_review": "Reclassify the eleven mixed ensemble, recurring-zone and parallel-return candidates using exact Shot/timecode evidence instead of the disproved counterpart-absent signal."
+    },
     {
       "candidate_count": 12,
       "close_condition": "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary.",
       "gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
-      "priority": 1,
+      "priority": 3,
       "required_review": "Add unrelated support for a portable-object handler or function change that governs a dependent next action, plus a same-trigger case where one continuous person-object view already makes the state readable without a dedicated checkpoint."
     },
     {
       "candidate_count": 8,
       "close_condition": "Close only after exact Shot/timecode review proves the shared comparison trigger, the alternative coverage, and why the comparative-field rule must not fire.",
       "gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
-      "priority": 2,
+      "priority": 4,
       "required_review": "Add one unrelated, rights-cleared scene with multiple simultaneously visible referents whose comparison truly governs the next action, but where a separate comparative field would be the wrong coverage choice."
     },
     {
       "candidate_count": 3,
       "close_condition": "Close only after exact Shot/timecode review proves the proximity trigger, already-readable geometry, and the alternative coverage decision in a different work.",
       "gap_id": "GAP-RELATION-GEOMETRY-SAME-TRIGGER-BOUNDARY",
-      "priority": 3,
+      "priority": 5,
       "required_review": "Add an unrelated proximity scene with the same relation-change trigger where prior geometry remains fully registered, so another initial spatial master would be redundant."
     },
     {
       "candidate_count": 1,
       "close_condition": "Close only when both cases have exact Shot/timecode evidence and distinguish one versioned object from unrelated items.",
       "gap_id": "GAP-VERSIONED-OBJECT-HANDOFF-COUNTERPART",
-      "priority": 4,
+      "priority": 6,
       "required_review": "Add one rights-cleared clip with a visually tagged source object transformed and handed across two people or zones, plus one same-surface independent-items boundary."
     },
     {
       "candidate_count": 1,
       "close_condition": "Close only when revised and unchanged repeats are separated by exact Shot/timecode evidence and change a concrete directing choice.",
       "gap_id": "GAP-REVISED-REPEAT-CONFIGURATION",
-      "priority": 5,
+      "priority": 7,
       "required_review": "Add one rights-cleared revised-operation clip with a visible plan/configuration change and phase marker, plus one unchanged-repeat boundary."
     },
     {
       "candidate_count": 4,
       "close_condition": "Close when the positive trigger and the do-not-intercut boundary are both exact Shot/timecode bound and produce opposite routing results.",
       "gap_id": "GAP-MULTI-THREAD-NATURAL-BOUNDARY",
-      "priority": 6,
+      "priority": 8,
       "required_review": "Add one rights-cleared same-trigger multi-thread scene whose simultaneous visible states are clearer in one continuous field than by intercutting."
     },
     {
       "candidate_count": 3,
       "close_condition": "Close only when the shared trigger, opposite scale order and changed Coverage/Edit decision are all Shot/timecode bound.",
       "gap_id": "GAP-SCALE-ORDER-SAME-TRIGGER",
-      "priority": 7,
+      "priority": 9,
       "required_review": "Add one rights-cleared same-trigger detail-to-container support and one same-trigger geometry-first boundary."
     },
     {
       "candidate_count": 3,
       "close_condition": "Close only after both unrelated support and boundary are exact Shot/timecode bound without relying on dialogue or unauditioned sound.",
       "gap_id": "GAP-SUBJECTIVE-ACCESS-CROSS-WORK",
-      "priority": 8,
+      "priority": 10,
       "required_review": "Add one rights-cleared unrelated subjective-access transition and one same-trigger boundary where ordinary relation coverage must remain primary."
     }
   ],
-  "runtime_rule_count": 8,
+  "runtime_rule_count": 7,
   "schema_version": "exhaustive-runtime-integration-validation/0.1",
   "source_disposition_count": 33,
   "status": "PASS"

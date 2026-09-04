@@ -21,8 +21,7 @@
     "DR-PERFORMANCE-OWNER-HOLD",
     "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
     "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
-    "DR-STABLE-AXIS-STATE-LED-HOLDS",
-    "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+    "DR-STABLE-AXIS-STATE-LED-HOLDS"
   ],
   "human_review_status": "HUMAN_REVIEW_PENDING",
   "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
@@ -131,22 +130,6 @@
         "TRIGGER_NOT_MET"
       ],
       "rule_id": "DR-STABLE-AXIS-STATE-LED-HOLDS"
-    },
-    {
-      "blocking_fact_ids": [],
-      "conflicting_rule_ids": [],
-      "matched_not_applicable_signal_ids": [],
-      "missing_fact_types": [
-        "destination_vector",
-        "route_continuity",
-        "zone_waypoints"
-      ],
-      "rejection_reason_codes": [
-        "REQUIRED_FACT_MISSING",
-        "SCENE_PROBLEM_MISMATCH",
-        "TRIGGER_NOT_MET"
-      ],
-      "rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
     }
   ],
   "rights_boundary": {

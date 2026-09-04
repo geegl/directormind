@@ -1,19 +1,19 @@
 {
   "candidate_disposition_count": 124,
-  "candidate_final_disposition_count": 85,
-  "candidate_runtime_effect_count": 85,
+  "candidate_final_disposition_count": 55,
+  "candidate_runtime_effect_count": 55,
   "error_count": 0,
-  "evidence_final_mapping_count": 28,
-  "evidence_gap_count": 8,
+  "evidence_final_mapping_count": 26,
+  "evidence_gap_count": 10,
   "evidence_review_count": 31,
   "existing_material_review_required_count": 4,
   "issues": [],
-  "pending_evidence_gap_count": 35,
+  "pending_evidence_gap_count": 65,
   "phase_status": "IN_PROGRESS",
-  "positive_runtime_rule_count": 8,
-  "runtime_active_family_count": 12,
+  "positive_runtime_rule_count": 7,
+  "runtime_active_family_count": 11,
   "schema_version": "runtime-integration-validation/0.1",
   "source_disposition_count": 33,
   "status": "PASS",
-  "unresolved_candidate_count": 39
+  "unresolved_candidate_count": 69
 }

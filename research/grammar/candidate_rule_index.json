@@ -702,29 +702,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "route_not_continuous_multi_zone"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+        "runtime_effect_key": null,
         "source_refs": [
           "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S029",
           "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S030",
@@ -733,7 +731,7 @@
           "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S033",
           "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S034"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "ACTION_CAUSALITY",
@@ -2534,33 +2532,31 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "counterpart_absent_at_changed_endpoint"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-BEAR-S01E07-REVIEW-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+        "runtime_effect_key": null,
         "source_refs": [
           "BEAR-S01E07-REVIEW-001-S001"
         ],
-        "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "LEGACY_SCENE_PROBLEM",
@@ -6093,29 +6089,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "counterpart_absent_at_changed_endpoint"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-CHERNOBYL-S01E05-HEARING-RECON-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+        "runtime_effect_key": null,
         "source_refs": [
           "CHERNOBYL-S01E05-HEARING-RECON-001-S001",
           "CHERNOBYL-S01E05-HEARING-RECON-001-S002",
@@ -6208,7 +6202,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S168",
           "CHERNOBYL-S01E05-HEARING-RECON-001-S169"
         ],
-        "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "PROCEDURAL_COLLAPSE",
@@ -7368,33 +7362,31 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "counterpart_absent_at_changed_endpoint"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+        "runtime_effect_key": null,
         "source_refs": [
           "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
         ],
-        "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "ACTION_CAUSALITY",
@@ -7539,12 +7531,12 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
@@ -7552,18 +7544,18 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "SUPPORTING_EVIDENCE",
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
         ],
-        "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+        "runtime_effect_key": null,
         "source_refs": [
           "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "ACTION_CAUSALITY",
@@ -7708,12 +7700,12 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
@@ -7721,18 +7713,18 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "SUPPORTING_EVIDENCE",
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
         ],
-        "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+        "runtime_effect_key": null,
         "source_refs": [
           "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "ACTION_CAUSALITY",
@@ -7877,29 +7869,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "route_not_continuous_multi_zone"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+        "runtime_effect_key": null,
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026",
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027",
@@ -7909,7 +7899,7 @@
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S020",
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S024"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "MONTAGE_TIME_COMPRESSION",
@@ -8609,29 +8599,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "counterpart_absent_at_changed_endpoint"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-DM-ANDOR-S01E10-SEL-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+        "runtime_effect_key": null,
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S001",
           "DM-ANDOR-S01E10-SEL-001-S002",
@@ -8664,7 +8652,7 @@
           "DM-ANDOR-S01E10-SEL-001-S029",
           "DM-ANDOR-S01E10-SEL-001-S030"
         ],
-        "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "GROUP_POWER_CHANGE",
@@ -9053,12 +9041,12 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
@@ -9066,14 +9054,14 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "SUPPORTING_EVIDENCE",
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-DM-ANDOR-S01E10-SEL-001"
         ],
-        "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+        "runtime_effect_key": null,
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S076",
           "DM-ANDOR-S01E10-SEL-001-S077",
@@ -9101,7 +9089,7 @@
           "DM-ANDOR-S01E10-SEL-001-S099",
           "DM-ANDOR-S01E10-SEL-001-S100"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "GROUP_POWER_CHANGE",
@@ -9270,29 +9258,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "route_not_continuous_multi_zone"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-DM-ANDOR-S01E10-SEL-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+        "runtime_effect_key": null,
         "source_refs": [
           "DM-ANDOR-S01E10-SEL-001-S104",
           "DM-ANDOR-S01E10-SEL-001-S105",
@@ -9313,7 +9299,7 @@
           "DM-ANDOR-S01E10-SEL-001-S120",
           "DM-ANDOR-S01E10-SEL-001-S121"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "GROUP_POWER_CHANGE",
@@ -9995,29 +9981,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "route_not_continuous_multi_zone"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-DM-BODYGUARD-S01E01-SEL-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+        "runtime_effect_key": null,
         "source_refs": [
           "DM-BODYGUARD-S01E01-SEL-001-S093",
           "DM-BODYGUARD-S01E01-SEL-001-S094",
@@ -10099,7 +10083,7 @@
           "DM-BODYGUARD-S01E01-SEL-001-S170",
           "DM-BODYGUARD-S01E01-SEL-001-S171"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "SUSPENSE_INFORMATION_ASYMMETRY",
@@ -10738,33 +10722,31 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "counterpart_absent_at_changed_endpoint"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+        "runtime_effect_key": null,
         "source_refs": [
           "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
         ],
-        "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "ENSEMBLE_REACTION_CHAIN",
@@ -10909,33 +10891,31 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "route_not_continuous_multi_zone"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+        "runtime_effect_key": null,
         "source_refs": [
           "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "ENSEMBLE_REACTION_CHAIN",
@@ -12278,29 +12258,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "route_not_continuous_multi_zone"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+        "runtime_effect_key": null,
         "source_refs": [
           "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S001",
           "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S002",
@@ -12316,7 +12294,7 @@
           "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S012",
           "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S013"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "GROUP_POWER_CHANGE",
@@ -12473,29 +12451,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "route_not_continuous_multi_zone"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+        "runtime_effect_key": null,
         "source_refs": [
           "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S007",
           "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S008",
@@ -12522,7 +12498,7 @@
           "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S029",
           "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-S030"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "GROUP_POWER_CHANGE",
@@ -12909,29 +12885,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "counterpart_absent_at_changed_endpoint"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-KNIVES-OUT-2019-WILL-READING-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+        "runtime_effect_key": null,
         "source_refs": [
           "KNIVES-OUT-2019-WILL-READING-001-S006",
           "KNIVES-OUT-2019-WILL-READING-001-S007",
@@ -13019,7 +12993,7 @@
           "KNIVES-OUT-2019-WILL-READING-001-S089",
           "KNIVES-OUT-2019-WILL-READING-001-S090"
         ],
-        "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "PUBLIC_REVELATION",
@@ -13738,12 +13712,12 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
@@ -13751,14 +13725,14 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "SUPPORTING_EVIDENCE",
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-KNIVES-OUT-2019-WILL-READING-001"
         ],
-        "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+        "runtime_effect_key": null,
         "source_refs": [
           "KNIVES-OUT-2019-WILL-READING-001-S078",
           "KNIVES-OUT-2019-WILL-READING-001-S079",
@@ -13792,7 +13766,7 @@
           "KNIVES-OUT-2019-WILL-READING-001-S107",
           "KNIVES-OUT-2019-WILL-READING-001-S108"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "PUBLIC_REVELATION",
@@ -16774,29 +16748,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "counterpart_absent_at_changed_endpoint"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-MRR-S04E07-ACT-FOUR-VISUAL-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+        "runtime_effect_key": null,
         "source_refs": [
           "MRR-S04E07-ACT-FOUR-VISUAL-001-S087",
           "MRR-S04E07-ACT-FOUR-VISUAL-001-S088",
@@ -16830,7 +16802,7 @@
           "MRR-S04E07-ACT-FOUR-VISUAL-001-S052",
           "MRR-S04E07-ACT-FOUR-VISUAL-001-S058"
         ],
-        "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "LEGACY_SCENE_PROBLEM",
@@ -18264,62 +18236,35 @@
     },
     {
       "applicability_evidence": {
-        "notes": "The canonical analytical interval has picture-observed endpoints whose verified or explicitly internal status is recorded in Scene Evidence.",
-        "source_refs": [
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S001",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S096"
-        ],
-        "status": "VERIFIED"
+        "notes": "No natural-scene non-applicability boundary is authorized before human review.",
+        "source_refs": [],
+        "status": "UNKNOWN"
       },
       "candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS",
       "canonical_rule_family": "THRESHOLD-AND-ROUTE-CONTINUITY",
       "confidence": {
-        "execution": "MEDIUM",
-        "transfer": "MEDIUM",
-        "within_source": "HIGH"
+        "execution": "UNKNOWN",
+        "transfer": "UNKNOWN",
+        "within_source": "UNKNOWN"
       },
       "counterexamples": [
         {
-          "counterexample_id": "EXH-CTR-WAYPOINT-AQP",
-          "evidence_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
-          "notes": "A separated return or short rejoin is not a continuous three-zone route and must not invoke waypoint routing.",
+          "counterexample_id": null,
+          "evidence_id": null,
+          "notes": "`NOBODY-2021-BUS-001` is a different-trigger boundary: its known single-vehicle longitudinal axis does not need repeated macro-road mapping. Same-trigger contrary evidence remains `UNKNOWN/pending`.",
           "relation": "NARROWS",
-          "review_id": "EXH-CTR-WAYPOINT-AQP-REVIEW",
-          "review_ref": "research/validation/relation-reviews/EXH-CTR-WAYPOINT-AQP.json",
-          "review_status": "ROOT_VIDEO_VERIFIED",
-          "same_trigger_status": "VERIFIED_SAME_TRIGGER",
-          "source_candidate_rule_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C04-DELAY-REJOIN-WITH-EMPTY-GEOMETRY-TRACE-AND-CONTACT-RECEIPT",
-          "source_refs": [
-            "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S029",
-            "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S030",
-            "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S031",
-            "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S032",
-            "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S033",
-            "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S034"
-          ],
-          "status": "VERIFIED",
-          "work_id": "A-QUIET-PLACE-2018"
+          "review_id": null,
+          "review_ref": null,
+          "review_status": "NOT_REVIEWED",
+          "same_trigger_status": "DIFFERENT_TRIGGER",
+          "source_candidate_rule_id": null,
+          "source_refs": [],
+          "status": "BOUNDARY_ONLY",
+          "work_id": null
         }
       ],
       "family_assignment_status": "ROOT_REVIEWED_TEXTUAL_CLUSTER",
-      "functional_roles": [
-        {
-          "appearance_id": "APPEARANCE-S001",
-          "functional_role": "spatial_mover",
-          "source_refs": [
-            "SICARIO-2015-BORDER-CHECKPOINT-001-S001"
-          ],
-          "status": "INFERRED"
-        },
-        {
-          "appearance_id": "APPEARANCE-S013",
-          "functional_role": "relation_anchor",
-          "source_refs": [
-            "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
-          ],
-          "status": "INFERRED"
-        }
-      ],
+      "functional_roles": [],
       "legacy_lineage": {
         "ai_risk": "`VERY HIGH`: dense vehicles, road topology, reflections, scale changes, and background identity drift",
         "applicability": "Convoy, escort, evacuation, toll, parking, or traffic scenes where access topology drives danger",
@@ -18340,59 +18285,55 @@
       "operational_contract": {
         "ai_risk": {
           "camera": {
-            "level": "HIGH",
+            "level": "UNKNOWN",
             "reasons": [
-              "The selected coverage must preserve the locked project-original geometry and readable state."
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
             ]
           },
           "continuity": {
-            "level": "HIGH",
+            "level": "UNKNOWN",
             "reasons": [
-              "Project-original people, objects, zones and state endpoints can drift across generated shots."
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
             ]
           },
           "performance": {
-            "level": "HIGH",
+            "level": "UNKNOWN",
             "reasons": [
-              "Visible state changes can flatten or occur out of the planned order."
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
             ]
           }
         },
         "applicable_when": [
-          "Origin, current waypoint and next vector must remain readable through a multi-zone move."
+          "No applicability condition is authorized before human review."
         ],
-        "audio_dependency": false,
+        "audio_dependency": true,
         "audio_logic": {
-          "claim_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE-AUDIO",
-          "notes": "audio_dependency=false; semantic source audio remains unknown and is outside this rule.",
+          "claim_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS-AUDIO",
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
           "source_refs": [],
           "status": "UNKNOWN",
-          "value": "This visual rule has no audio instruction or audio-dependent trigger."
+          "value": "Pending human review; audio remains unknown and no audio instruction is authorized."
         },
-        "blocking": "Lock zone IDs, threshold sides and entry/exit vectors for every project-original mover.",
-        "continuity": "Carry project-original zone, mover, vehicle/object and entry/exit state through the route ledger.",
-        "coverage": "Alternate only the route totals, threshold states and local action views required to preserve orientation.",
-        "director_decision": "Register one project-original landmark and exit vector at each necessary waypoint, returning to an anchor only when orientation is at risk.",
-        "edit_logic": "Cut on waypoint or threshold state changes and re-establish the next vector before tightening.",
+        "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+        "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+        "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+        "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+        "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
         "failure_modes": [
-          "The chosen coverage hides a locked state that the next action requires.",
-          "The edit implies a source-specific identity, cause or event that the project did not lock."
+          "Applying this migrated lineage row as an operational rule before human review."
         ],
         "fallback": {
-          "camera": "Use fixed project-original views at the minimum verified state checkpoints.",
-          "continuity": "Lock project-original IDs and before/after states; add a neutral reset before any ambiguous transition.",
-          "performance": "Split the action into one explicit project-original state change per shot.",
+          "camera": null,
+          "continuity": null,
+          "performance": null,
           "project_original_only": true
         },
         "not_applicable_when": [
-          "The move is a short one-threshold approach, an ellipsis or an intentionally hidden route."
+          "No non-applicability boundary is authorized before human review."
         ],
-        "pacing": "Let physical distance and locked state changes determine holds; do not copy source duration or density.",
-        "required_story_facts": [
-          "The project locks a continuous present-time route through at least three zones.",
-          "Each required waypoint or destination vector affects comprehension of the next action."
-        ],
-        "trigger": "A project-original continuous route crosses at least three visually distinct zones and losing the next vector would obscure a required action or destination."
+        "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+        "required_story_facts": [],
+        "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration."
       },
       "promotion": {
         "human_director_review": {
@@ -18400,65 +18341,58 @@
           "source_ref": null,
           "status": "NOT_APPROVED"
         },
-        "original_forward_test_count": 2,
-        "original_forward_tests": [
-          {
-            "source_ref": "examples/forward-tests/ORIGINAL-MULTI-ZONE-WAYPOINT-ROUTE",
-            "status": "PASS",
-            "test_case_id": "ORIGINAL-MULTI-ZONE-WAYPOINT-ROUTE"
-          },
-          {
-            "source_ref": "examples/forward-tests/ORIGINAL-SINGLE-THRESHOLD-APPROACH",
-            "status": "PASS",
-            "test_case_id": "ORIGINAL-SINGLE-THRESHOLD-APPROACH"
-          }
-        ],
+        "original_forward_test_count": 0,
+        "original_forward_tests": [],
         "reasons": [
-          "Fresh picture review verifies the source mechanism, unrelated support, and a same-trigger boundary case.",
-          "Two project-original packages verify positive selection and non-applicability routing while creative review remains pending."
+          "Canonical scene problem remains UNKNOWN.",
+          "No evidence-backed functional role is available.",
+          "Within-source, transfer and execution confidence remain UNKNOWN.",
+          "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "CROSS_WORK_SUPPORTED",
-        "unknown_dependency_present": false,
-        "verified_same_trigger_counterexample_count": 1,
-        "verified_support_work_count": 2
+        "status": "EVIDENCE_GAP_PENDING",
+        "unknown_dependency_present": true,
+        "verified_same_trigger_counterexample_count": 0,
+        "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
-        "runtime_authorized": true,
+        "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "POSITIVE_RUNTIME_RULE",
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-SICARIO-2015-BORDER-CHECKPOINT-001"
         ],
-        "runtime_effect_key": "RULE:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+        "runtime_effect_key": null,
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S001",
           "SICARIO-2015-BORDER-CHECKPOINT-001-S002",
           "SICARIO-2015-BORDER-CHECKPOINT-001-S003",
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S004",
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S005",
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S006",
           "SICARIO-2015-BORDER-CHECKPOINT-001-S007",
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S008",
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S009",
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S010",
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S011",
+          "SICARIO-2015-BORDER-CHECKPOINT-001-S012",
           "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
-        "lineage_label": "LEGACY_SCENE_PROBLEM",
-        "primary": "SUSPENSE_INFORMATION_ASYMMETRY",
+        "lineage_label": "SUSPENSE_INFORMATION_ASYMMETRY",
+        "primary": "LEGACY_SCENE_PROBLEM",
         "secondary": [],
-        "source_refs": [
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S001",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S002",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S003",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S007",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
-        ],
-        "status": "INFERRED"
+        "source_refs": [],
+        "status": "UNKNOWN"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -18481,34 +18415,16 @@
         "source_candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS",
         "source_method_ids": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-METHOD-LEGACY-PICTURE-REVIEW",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-METHOD-STRUCTURAL-CONVERSION",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
+          "SICARIO-2015-BORDER-CHECKPOINT-001-METHOD-STRUCTURAL-CONVERSION"
         ],
         "work_id": "SICARIO-2015"
       },
-      "supporting_relations": [
-        {
-          "evidence_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001",
-          "notes": "An unrelated continuous moving interval repeatedly restores zone landmarks and route vectors.",
-          "relation": "SUPPORTS",
-          "relation_id": "EXH-REL-WAYPOINT-TD",
-          "review_id": "EXH-REL-WAYPOINT-TD-REVIEW",
-          "review_ref": "research/validation/relation-reviews/EXH-REL-WAYPOINT-TD.json",
-          "review_status": "ROOT_VIDEO_VERIFIED",
-          "same_trigger_status": "VERIFIED_SAME_TRIGGER",
-          "source_candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C01-WAYPOINT-REGISTERED-MOBILE-GEOGRAPHY",
-          "source_refs": [
-            "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
-          ],
-          "status": "VERIFIED",
-          "work_id": "TRUE-DETECTIVE-S01E04"
-        }
-      ],
+      "supporting_relations": [],
       "unknown_dependencies": {
-        "audio": false,
-        "functional_roles": false,
-        "natural_scene_boundary": false,
-        "scene_problem": false
+        "audio": true,
+        "functional_roles": true,
+        "natural_scene_boundary": true,
+        "scene_problem": true
       }
     },
     {
@@ -18690,17 +18606,11 @@
         "target_rule_id": "DR-PERFORMANCE-OWNER-HOLD"
       },
       "scene_problem": {
-        "lineage_label": "LEGACY_SCENE_PROBLEM",
-        "primary": "SUSPENSE_INFORMATION_ASYMMETRY",
+        "lineage_label": "SUSPENSE_INFORMATION_ASYMMETRY",
+        "primary": "LEGACY_SCENE_PROBLEM",
         "secondary": [],
-        "source_refs": [
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S001",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S002",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S003",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S007",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
-        ],
-        "status": "INFERRED"
+        "source_refs": [],
+        "status": "UNKNOWN"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -18755,7 +18665,7 @@
         "audio": true,
         "functional_roles": true,
         "natural_scene_boundary": true,
-        "scene_problem": false
+        "scene_problem": true
       }
     },
     {
@@ -18873,12 +18783,12 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
@@ -18886,14 +18796,14 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "SUPPORTING_EVIDENCE",
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-SICARIO-2015-BORDER-CHECKPOINT-001"
         ],
-        "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+        "runtime_effect_key": null,
         "source_refs": [
           "SICARIO-2015-BORDER-CHECKPOINT-001-S034",
           "SICARIO-2015-BORDER-CHECKPOINT-001-S035",
@@ -18926,20 +18836,14 @@
           "SICARIO-2015-BORDER-CHECKPOINT-001-S062",
           "SICARIO-2015-BORDER-CHECKPOINT-001-S063"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
-        "lineage_label": "LEGACY_SCENE_PROBLEM",
-        "primary": "SUSPENSE_INFORMATION_ASYMMETRY",
+        "lineage_label": "SUSPENSE_INFORMATION_ASYMMETRY",
+        "primary": "LEGACY_SCENE_PROBLEM",
         "secondary": [],
-        "source_refs": [
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S001",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S002",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S003",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S007",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
-        ],
-        "status": "INFERRED"
+        "source_refs": [],
+        "status": "UNKNOWN"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -18988,7 +18892,7 @@
         "audio": true,
         "functional_roles": true,
         "natural_scene_boundary": true,
-        "scene_problem": false
+        "scene_problem": true
       }
     },
     {
@@ -19165,17 +19069,11 @@
         "target_rule_id": "DR-AFTERMATH-BY-NEXT-ACTION"
       },
       "scene_problem": {
-        "lineage_label": "LEGACY_SCENE_PROBLEM",
-        "primary": "SUSPENSE_INFORMATION_ASYMMETRY",
+        "lineage_label": "SUSPENSE_INFORMATION_ASYMMETRY",
+        "primary": "LEGACY_SCENE_PROBLEM",
         "secondary": [],
-        "source_refs": [
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S001",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S002",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S003",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S007",
-          "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
-        ],
-        "status": "INFERRED"
+        "source_refs": [],
+        "status": "UNKNOWN"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -19227,7 +19125,7 @@
         "audio": true,
         "functional_roles": true,
         "natural_scene_boundary": true,
-        "scene_problem": false
+        "scene_problem": true
       }
     },
     {
@@ -20678,29 +20576,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "route_not_continuous_multi_zone"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-SUCCESSION-S01E06-BOARD-VOTE-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+        "runtime_effect_key": null,
         "source_refs": [
           "SUCCESSION-S01E06-BOARD-VOTE-001-S075",
           "SUCCESSION-S01E06-BOARD-VOTE-001-S084",
@@ -20709,7 +20605,7 @@
           "SUCCESSION-S01E06-BOARD-VOTE-001-S087",
           "SUCCESSION-S01E06-BOARD-VOTE-001-S088"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "GROUP_POWER_CHANGE",
@@ -20859,29 +20755,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "counterpart_absent_at_changed_endpoint"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-TED-LASSO-S01E08-DARTS-REVERSAL-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+        "runtime_effect_key": null,
         "source_refs": [
           "TED-LASSO-S01E08-DARTS-REVERSAL-001-S001",
           "TED-LASSO-S01E08-DARTS-REVERSAL-001-S002",
@@ -20966,7 +20860,7 @@
           "TED-LASSO-S01E08-DARTS-REVERSAL-001-S112",
           "TED-LASSO-S01E08-DARTS-REVERSAL-001-S017"
         ],
-        "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "LEGACY_SCENE_PROBLEM",
@@ -21198,29 +21092,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "counterpart_absent_at_changed_endpoint"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-TED-LASSO-S01E08-DARTS-REVERSAL-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+        "runtime_effect_key": null,
         "source_refs": [
           "TED-LASSO-S01E08-DARTS-REVERSAL-001-S061",
           "TED-LASSO-S01E08-DARTS-REVERSAL-001-S062",
@@ -21276,7 +21168,7 @@
           "TED-LASSO-S01E08-DARTS-REVERSAL-001-S091",
           "TED-LASSO-S01E08-DARTS-REVERSAL-001-S092"
         ],
-        "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "LEGACY_SCENE_PROBLEM",
@@ -22722,116 +22614,26 @@
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "SUPPORTS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "counterpart_absent_at_changed_endpoint"
-        ],
+        "boundary_signal_ids": [],
         "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "final_status": "SUPPORTING_EVIDENCE",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+        "runtime_effect_key": "SUPPORT:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
         "source_refs": [
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S002",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S003",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S004",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S005",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S006",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S007",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S008",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S009",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S010",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S011",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S012",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S013",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S014",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S015",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S016",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S017",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S018",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S019",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S020",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S021",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S022",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S023",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S024",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S025",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S026",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S027",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S028",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S029",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S030",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S031",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S032",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S033",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S034",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S035",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S036",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S037",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S038",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S039",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S040",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S041",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S042",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S043",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S044",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S045",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S046",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S047",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S048",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S049",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S050",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S051",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S052",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S053",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S054",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S055",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S056",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S057",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S058",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S059",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S060",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S061",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S062",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S063",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S064",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S065",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S066",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S067",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S068",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S069",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S070",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S071",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S072",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S073",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S074",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S075",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S076",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S077",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S078",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S079",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S080",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S081",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S082",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S083",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S084",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S085",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S086",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S087",
           "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S088",
           "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S089",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S001",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S090",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091"
+          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S090"
         ],
         "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
       },
@@ -23757,36 +23559,34 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "route_not_continuous_multi_zone"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-TLOU-BEDROOM-LOCAL-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+        "runtime_effect_key": null,
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S001",
           "TLOU-BEDROOM-LOCAL-001-S002",
           "TLOU-BEDROOM-LOCAL-001-S003",
           "TLOU-BEDROOM-LOCAL-001-S004"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "RELATIONSHIP_FRACTURE",
@@ -24295,29 +24095,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "route_not_continuous_multi_zone"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-TLOU-BEDROOM-LOCAL-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+        "runtime_effect_key": null,
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S020",
           "TLOU-BEDROOM-LOCAL-001-S021",
@@ -24328,7 +24126,7 @@
           "TLOU-BEDROOM-LOCAL-001-S026",
           "TLOU-BEDROOM-LOCAL-001-S027"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "RELATIONSHIP_FRACTURE",
@@ -24480,12 +24278,12 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
@@ -24493,18 +24291,18 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "SUPPORTING_EVIDENCE",
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001"
         ],
-        "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+        "runtime_effect_key": null,
         "source_refs": [
           "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "ACTION_CAUSALITY",
@@ -24649,12 +24447,12 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
@@ -24662,18 +24460,18 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "SUPPORTING_EVIDENCE",
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001"
         ],
-        "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+        "runtime_effect_key": null,
         "source_refs": [
           "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "ACTION_CAUSALITY",
@@ -24987,12 +24785,12 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "REJECTED",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "DUPLICATE",
+      "relation_to_family": "CONTRADICTS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
@@ -25001,13 +24799,13 @@
       "runtime_integration": {
         "boundary_signal_ids": [],
         "evidence_gap_id": null,
-        "final_status": "MERGED_DUPLICATE",
-        "merged_into_candidate_id": "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION",
-        "rejection_reason_code": null,
+        "final_status": "REJECTED_WITH_REASON",
+        "merged_into_candidate_id": null,
+        "rejection_reason_code": "UNSAFE_OR_UNSUPPORTED_EXECUTION",
         "review_ids": [
           "EXHAUSTIVE-PICTURE-TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001"
         ],
-        "runtime_effect_key": "MERGE:DR-MOBILE-ATTENTION-HANDOFF",
+        "runtime_effect_key": "REJECTION_GUARD:TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C04-FUNCTIONAL-SEGMENTATION-FALLBACK-FOR-LONG-ROUTE",
         "source_refs": [
           "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-S001"
         ],
@@ -25156,29 +24954,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "route_not_continuous_multi_zone"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+        "runtime_effect_key": null,
         "source_refs": [
           "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S001",
           "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S002",
@@ -25191,7 +24987,7 @@
           "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S009",
           "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S010"
         ],
-        "target_rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "SUSPENSE_INFORMATION_ASYMMETRY",
@@ -25345,29 +25141,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "counterpart_absent_at_changed_endpoint"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+        "runtime_effect_key": null,
         "source_refs": [
           "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S010",
           "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S011",
@@ -25429,7 +25223,7 @@
           "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S076",
           "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S077"
         ],
-        "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "SUSPENSE_INFORMATION_ASYMMETRY",
@@ -25632,29 +25426,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "counterpart_absent_at_changed_endpoint"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+        "runtime_effect_key": null,
         "source_refs": [
           "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S041",
           "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S042",
@@ -25695,7 +25487,7 @@
           "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S040",
           "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S050"
         ],
-        "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "SUSPENSE_INFORMATION_ASYMMETRY",

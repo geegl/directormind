@@ -40,8 +40,6 @@
     "project_original": true
   },
   "routing_signals": [
-    "continuous_multi_zone_route",
-    "waypoint_orientation_required",
     "route_not_continuous_multi_zone"
   ],
   "scene_problem": {

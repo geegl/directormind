@@ -3,17 +3,11 @@
   "evidence_id": "SICARIO-2015-BORDER-CHECKPOINT-001",
   "work_id": "SICARIO-2015",
   "scene_problem": {
-    "primary": "SUSPENSE_INFORMATION_ASYMMETRY",
+    "primary": "LEGACY_SCENE_PROBLEM",
     "secondary": [],
-    "status": "INFERRED",
-    "source_refs": [
-      "SICARIO-2015-BORDER-CHECKPOINT-001-S001",
-      "SICARIO-2015-BORDER-CHECKPOINT-001-S002",
-      "SICARIO-2015-BORDER-CHECKPOINT-001-S003",
-      "SICARIO-2015-BORDER-CHECKPOINT-001-S007",
-      "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
-    ],
-    "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown."
+    "status": "UNKNOWN",
+    "source_refs": [],
+    "notes": "The legacy primary label SUSPENSE_INFORMATION_ASYMMETRY is retained only as non-operational lineage and was not proved by structural conversion."
   },
   "scene_unit_type": "CONTIGUOUS_EDITORIAL_SEQUENCE",
   "boundary_status": "NATURAL_START_END_VERIFIED",
@@ -263,18 +257,7 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [
-        {
-          "appearance_id": "APPEARANCE-S001",
-          "functional_role": "spatial_mover",
-          "status": "INFERRED",
-          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
-          "appearance_track_id": null,
-          "source_refs": [
-            "SICARIO-2015-BORDER-CHECKPOINT-001-S001"
-          ]
-        }
-      ],
+      "abstract_role_labels": [],
       "blocking": {
         "claim_id": "S001-BLOCK",
         "status": "INFERRED",
@@ -3106,18 +3089,7 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [
-        {
-          "appearance_id": "APPEARANCE-S013",
-          "functional_role": "relation_anchor",
-          "status": "INFERRED",
-          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
-          "appearance_track_id": null,
-          "source_refs": [
-            "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
-          ]
-        }
-      ],
+      "abstract_role_labels": [],
       "blocking": {
         "claim_id": "S013-BLOCK",
         "status": "INFERRED",
@@ -23134,7 +23106,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "audio_dependency": false,
+      "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -23175,8 +23147,7 @@
       "counterexample_ids": [],
       "source_method_ids": [
         "SICARIO-2015-BORDER-CHECKPOINT-001-METHOD-LEGACY-PICTURE-REVIEW",
-        "SICARIO-2015-BORDER-CHECKPOINT-001-METHOD-STRUCTURAL-CONVERSION",
-        "SICARIO-2015-BORDER-CHECKPOINT-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
+        "SICARIO-2015-BORDER-CHECKPOINT-001-METHOD-STRUCTURAL-CONVERSION"
       ],
       "evidence_scene_ids": [
         "SICARIO-2015-BORDER-CHECKPOINT-001"
@@ -23582,6 +23553,7 @@
       "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "scope": "AUDIO",
       "blocks_rule_ids": [
+        "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS",
         "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C02-MULTI-WINDOW-DISTRIBUTED-THREAT-PUZZLE",
         "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C03-READINESS-TO-DEPLOYMENT-STATE-LEDGER",
         "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C04-RESULT-AND-EXIT-VERIFICATION-BEFORE-RESUME"
@@ -23617,7 +23589,6 @@
   "validation_status": "HUMAN_REVIEW_PENDING",
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
-    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-    "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
+    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
   ]
 }

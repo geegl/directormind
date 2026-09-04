@@ -8,7 +8,7 @@ canonical Scene Evidence records, 2,343 Shot/edit units, 124 candidates and 16
 mechanism families.
 
 Fresh moving-image review covers 1,840 unique candidate-dependent Shot refs.
-Eighty-five candidates now have one of the five allowed final outcomes; 35
+Fifty-five candidates now have one of the five allowed final outcomes; 65
 have genuine fixed-corpus evidence gaps, and four candidates still require
 direct audition of existing local material.
 
@@ -16,22 +16,22 @@ direct audition of existing local material.
 
 | Outcome | Count |
 |---|---:|
-| `POSITIVE_RUNTIME_RULE` | 8 |
-| `SUPPORTING_EVIDENCE` | 30 |
-| `BOUNDARY_OR_COUNTEREXAMPLE` | 43 |
-| `MERGED_DUPLICATE` | 2 |
-| `REJECTED_WITH_REASON` | 2 |
-| `EVIDENCE_GAP_PENDING` | 35 |
+| `POSITIVE_RUNTIME_RULE` | 7 |
+| `SUPPORTING_EVIDENCE` | 24 |
+| `BOUNDARY_OR_COUNTEREXAMPLE` | 20 |
+| `MERGED_DUPLICATE` | 1 |
+| `REJECTED_WITH_REASON` | 3 |
+| `EVIDENCE_GAP_PENDING` | 65 |
 | `EXISTING_MATERIAL_REVIEW_REQUIRED` | 4 |
 
-The eight runtime rules span eight source families and create final runtime
-effects for 12 of 16 families. Each rule has exact fresh-reviewed Shot lineage,
+The seven runtime rules span seven source families and create final runtime
+effects for 11 of 16 families. Each rule has exact fresh-reviewed Shot lineage,
 unrelated-work support, a real reviewed boundary, and a project-original
-fallback. Eight positive packages select one target rule each and change at
-least one of Coverage, Blocking, Reaction, Pacing or Edit. Eight paired
+fallback. Seven positive packages select one target rule each and change at
+least one of Coverage, Blocking, Reaction, Pacing or Edit. Seven paired
 boundary packages reject their target rules.
 
-The validation runner also injects every distinct signal compiled from all 43
+The validation runner also injects every distinct signal compiled from all 20
 reviewed boundary dispositions into the corresponding positive scene. Each
 signal independently produces `NOT_APPLICABLE_MATCH`; the proof therefore does
 not depend on one convenient synthetic boundary package.
@@ -58,27 +58,39 @@ aftermath boundary with the reviewed immediate-next-action case, and the
 Chernobyl aftermath support was rebound to the actual peak-through-return Shot
 range. No rule was kept merely to preserve the earlier count.
 
+A second independent review found that the waypoint rule also lacked a real
+same-trigger boundary. It was withdrawn and all 19 related candidates returned
+to one precise evidence gap. The spatial family was narrowed from a bulk
+classification to one actual support (`TSN-2010-C01`, Shots S088-S090), one
+actual boundary (`TSN-2010-C04`, Shots S090-S091), and eleven evidence gaps.
+The Ted Lasso mobile-view fallback was reclassified as an evidence-backed
+rejection instead of a duplicate of the authorized mobile-attention rule.
+
 ## Prioritized fixed-corpus gaps
 
 If the four existing-audio reviews are completed without resolving the
-remaining 35 candidates, the honest next phase is `PARTIAL_EVIDENCE_GAP`. The
-eight precise supplementation requests are:
+remaining 65 candidates, the honest next phase is `PARTIAL_EVIDENCE_GAP`. The
+ten precise supplementation requests are:
 
-1. Same-trigger support and a no-extra-checkpoint boundary for object custody
+1. A continuous real-time route across at least three necessary zones where
+   one field keeps every waypoint and the action chain readable — 19 candidates.
+2. Exact reclassification evidence for mixed ensemble, recurring-zone and
+   parallel-return spatial candidates — 11 candidates.
+3. Same-trigger support and a no-extra-checkpoint boundary for object custody
    and function changes — 12 candidates.
-2. A same-trigger comparison scene where a separate comparative field is the
+4. A same-trigger comparison scene where a separate comparative field is the
    wrong coverage choice — 8 candidates.
-3. An unrelated proximity scene whose geometry is already readable, making a
+5. An unrelated proximity scene whose geometry is already readable, making a
    new initial master redundant — 3 candidates.
-4. One versioned-object transformation and handoff plus an independent-items
+6. One versioned-object transformation and handoff plus an independent-items
    boundary — 1 candidate.
-5. One revised-operation repeat plus an unchanged-repeat boundary — 1
+7. One revised-operation repeat plus an unchanged-repeat boundary — 1
    candidate.
-6. One same-trigger multi-thread scene where a continuous field is clearer
+8. One same-trigger multi-thread scene where a continuous field is clearer
    than intercutting — 4 candidates.
-7. Same-trigger opposite scale-order evidence separating detail-first from
+9. Same-trigger opposite scale-order evidence separating detail-first from
    geometry-first coverage — 3 candidates.
-8. Unrelated subjective-access support plus a same-trigger ordinary-relation
+10. Unrelated subjective-access support plus a same-trigger ordinary-relation
    boundary — 3 candidates.
 
 Exact candidate IDs, required reviews and closure conditions are in
@@ -97,10 +109,10 @@ immutable legacy ledger remains unchanged.
 
 - Structural `PASS` proves deterministic data binding and routing behavior,
   not product completion, creative quality or audience effect.
-- The post-audit corrected tree passes 294 unit and CLI tests and all 25
-  repository checks, including deterministic final-report regeneration.
+- The second-review repair passes 53 focused regressions, 294 unit and CLI
+  tests, all 25 repository checks and the full PR diff whitespace check.
 - Final-head CI and a fresh clean-checkout review still require external
-  evidence after the correction commit is pushed.
+  evidence after the repair is pushed.
 - All creative packages remain `HUMAN_REVIEW_PENDING`.
 - No generation, publication, deployment, source-media deletion or main-branch
   merge is authorized or performed.
