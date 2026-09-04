@@ -69,7 +69,7 @@ ROUTING_SIGNAL_FACT_TYPES = {
     "counterpart_relation_required": "counterpart_relation",
     "counterpart_relation_not_required": "counterpart_relation",
     "counterpart_relation_context_locked": "counterpart_relation",
-    "counterpart_absent_at_changed_endpoint": "counterpart_endpoint_state",
+    "counterpart_absent_at_changed_endpoint": "counterpart_relation",
     "relation_distance_change": "distance_change",
     "continuous_present_time": "continuous_time_change",
     "shared_endpoint_required": "relation_endpoint",
@@ -104,6 +104,10 @@ REQUIRED_CASE_IDS = {
     "ORIGINAL-COMPARISON-NOT-REQUIRED",
     "ORIGINAL-THRESHOLD-STATE-CHANGE",
     "ORIGINAL-THRESHOLD-UNCHANGED",
+    "ORIGINAL-OBJECT-CUSTODY-CHECKPOINTS",
+    "ORIGINAL-OBJECT-SECONDARY-HANDLING",
+    "ORIGINAL-INITIAL-GEOMETRY-BEFORE-PROXIMITY",
+    "ORIGINAL-GEOMETRY-ALREADY-REGISTERED",
     "ORIGINAL-NO-APPLICABLE-RULE",
 }
 FORBIDDEN_STATUS_RE = re.compile(r"\b(PRODUCTION_READY|WINNER|CREATIVE_SUCCESS)\b", re.IGNORECASE)

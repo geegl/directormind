@@ -82,6 +82,7 @@
         "routing_signals": [
           "material_spatial_change",
           "counterpart_relation_context_locked",
+          "counterpart_absent_at_changed_endpoint",
           "counterpart_relation_not_required"
         ],
         "scene_problem": {
@@ -113,12 +114,9 @@
         "conflict_trace": [],
         "eligible_rule_ids": [
           "DR-AFTERMATH-BY-NEXT-ACTION",
-          "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
           "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
           "DR-MOBILE-ATTENTION-HANDOFF",
-          "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
           "DR-PERFORMANCE-OWNER-HOLD",
-          "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY",
           "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
           "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
           "DR-STABLE-AXIS-STATE-LED-HOLDS",
@@ -141,21 +139,6 @@
               "TRIGGER_NOT_MET"
             ],
             "rule_id": "DR-AFTERMATH-BY-NEXT-ACTION"
-          },
-          {
-            "blocking_fact_ids": [],
-            "conflicting_rule_ids": [],
-            "matched_not_applicable_signal_ids": [],
-            "missing_fact_types": [
-              "referent_set",
-              "relation_constraint"
-            ],
-            "rejection_reason_codes": [
-              "REQUIRED_FACT_MISSING",
-              "SCENE_PROBLEM_MISMATCH",
-              "TRIGGER_NOT_MET"
-            ],
-            "rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
           },
           {
             "blocking_fact_ids": [],
@@ -194,22 +177,6 @@
             "conflicting_rule_ids": [],
             "matched_not_applicable_signal_ids": [],
             "missing_fact_types": [
-              "dependent_next_action",
-              "object_identity",
-              "object_state_change"
-            ],
-            "rejection_reason_codes": [
-              "REQUIRED_FACT_MISSING",
-              "SCENE_PROBLEM_MISMATCH",
-              "TRIGGER_NOT_MET"
-            ],
-            "rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
-          },
-          {
-            "blocking_fact_ids": [],
-            "conflicting_rule_ids": [],
-            "matched_not_applicable_signal_ids": [],
-            "missing_fact_types": [
               "performance_progression"
             ],
             "rejection_reason_codes": [
@@ -222,23 +189,8 @@
           {
             "blocking_fact_ids": [],
             "conflicting_rule_ids": [],
-            "matched_not_applicable_signal_ids": [],
-            "missing_fact_types": [
-              "distance_change",
-              "path_anchor",
-              "relation_start_zones"
-            ],
-            "rejection_reason_codes": [
-              "REQUIRED_FACT_MISSING",
-              "SCENE_PROBLEM_MISMATCH",
-              "TRIGGER_NOT_MET"
-            ],
-            "rule_id": "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY"
-          },
-          {
-            "blocking_fact_ids": [],
-            "conflicting_rule_ids": [],
             "matched_not_applicable_signal_ids": [
+              "counterpart_absent_at_changed_endpoint",
               "counterpart_relation_not_required"
             ],
             "missing_fact_types": [],

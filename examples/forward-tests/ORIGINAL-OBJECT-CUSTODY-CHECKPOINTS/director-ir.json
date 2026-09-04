@@ -31,7 +31,7 @@
         "subtext": "none asserted",
         "tactic_change": "possession becomes verified installation"
       },
-      "duration_seconds": 18,
+      "duration_seconds": 15,
       "location": "plain project-original calibration room",
       "narrative_goal": "make one required object handoff govern the next procedure",
       "pov": {
@@ -112,19 +112,16 @@
         "conflict_trace": [],
         "eligible_rule_ids": [
           "DR-AFTERMATH-BY-NEXT-ACTION",
-          "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
           "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
           "DR-MOBILE-ATTENTION-HANDOFF",
-          "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
           "DR-PERFORMANCE-OWNER-HOLD",
-          "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY",
           "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
           "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
           "DR-STABLE-AXIS-STATE-LED-HOLDS",
           "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
         ],
         "human_review_status": "HUMAN_REVIEW_PENDING",
-        "ir_handoff": "CONTINUE_WITH_SELECTED_RULES",
+        "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
         "rejected_rules": [
           {
             "blocking_fact_ids": [],
@@ -140,20 +137,6 @@
               "TRIGGER_NOT_MET"
             ],
             "rule_id": "DR-AFTERMATH-BY-NEXT-ACTION"
-          },
-          {
-            "blocking_fact_ids": [],
-            "conflicting_rule_ids": [],
-            "matched_not_applicable_signal_ids": [],
-            "missing_fact_types": [
-              "referent_set",
-              "relation_constraint"
-            ],
-            "rejection_reason_codes": [
-              "REQUIRED_FACT_MISSING",
-              "TRIGGER_NOT_MET"
-            ],
-            "rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
           },
           {
             "blocking_fact_ids": [],
@@ -200,22 +183,6 @@
               "TRIGGER_NOT_MET"
             ],
             "rule_id": "DR-PERFORMANCE-OWNER-HOLD"
-          },
-          {
-            "blocking_fact_ids": [],
-            "conflicting_rule_ids": [],
-            "matched_not_applicable_signal_ids": [],
-            "missing_fact_types": [
-              "distance_change",
-              "path_anchor",
-              "relation_start_zones"
-            ],
-            "rejection_reason_codes": [
-              "REQUIRED_FACT_MISSING",
-              "SCENE_PROBLEM_MISMATCH",
-              "TRIGGER_NOT_MET"
-            ],
-            "rule_id": "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY"
           },
           {
             "blocking_fact_ids": [],
@@ -286,24 +253,9 @@
         },
         "scene_problem": "PROCEDURAL_COMPETENCE",
         "schema_version": "director-routing-result/0.1",
-        "selected_rules": [
-          {
-            "matched_fact_ids": [
-              "FACT-01",
-              "FACT-02",
-              "FACT-03"
-            ],
-            "rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
-            "selection_reason_codes": [
-              "PRIMARY_PROBLEM_MATCH",
-              "REQUIRED_FACTS_LOCKED",
-              "RUNTIME_AUTHORIZED",
-              "TRIGGER_MATCH"
-            ]
-          }
-        ],
-        "selection_count": 1,
-        "status": "SELECTED"
+        "selected_rules": [],
+        "selection_count": 0,
+        "status": "NO_APPLICABLE_RULE"
       },
       "scene_id": "EP01-SC01",
       "shots": [
@@ -432,7 +384,7 @@
             "source_refs": [],
             "status": "PROJECT_ORIGINAL_ONLY"
           },
-          "blocking": "Keep the sensor and both hands readable until Technician B owns the receiving side.",
+          "blocking": "The transfer remains visible until Technician B has the sensor alone on the receiving side.",
           "camera_angle": "eye level",
           "camera_end": "stable view after the listed beat",
           "camera_motion": {
@@ -448,7 +400,7 @@
             "trigger": "FACT-02"
           },
           "camera_start": "stable view before the listed beat",
-          "confidence": "MEDIUM",
+          "confidence": "UNKNOWN",
           "constraints": {
             "changes_here": [
               "FACT-02"
@@ -463,12 +415,10 @@
           "continuity_in": "state before FACT-02",
           "continuity_out": "state after FACT-02",
           "dialogue": [],
-          "duration_seconds": 8,
-          "edit_in": "enter before the transfer begins",
-          "edit_out": "cut only after the new holder and state read",
-          "evidence_rule_ids": [
-            "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
-          ],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
           "evidence_status": "HYPOTHESIS",
           "execution_plan": {
             "base_generation": {
@@ -493,7 +443,7 @@
           },
           "fallback": null,
           "focus_strategy": "keep the locked action readable",
-          "framing": "shared handoff field containing both handlers, the object, and the marked line",
+          "framing": "readable neutral frame",
           "narrative_goal": "Technician A transfers the calibrated sensor across a marked handoff line to Technician B.",
           "order": 2,
           "performance_beats": [
@@ -510,7 +460,7 @@
             "status": "NOT_REQUIRED"
           },
           "shot_id": "EP01-SC01-SH02",
-          "shot_type": "project-original custody checkpoint",
+          "shot_type": "project-original coverage",
           "source_refs": [
             "locked-script.md#FACT-02"
           ],
@@ -669,7 +619,7 @@
   },
   "source_script": "examples/forward-tests/ORIGINAL-OBJECT-CUSTODY-CHECKPOINTS/locked-script.md",
   "status": "HUMAN_REVIEW_PENDING",
-  "target_duration_seconds": 18,
+  "target_duration_seconds": 15,
   "unresolved": [
     "Human creative review has not been performed."
   ],

@@ -265,18 +265,7 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [
-        {
-          "appearance_id": "APPEARANCE-S001",
-          "functional_role": "relation_anchor",
-          "status": "INFERRED",
-          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
-          "appearance_track_id": null,
-          "source_refs": [
-            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001"
-          ]
-        }
-      ],
+      "abstract_role_labels": [],
       "blocking": {
         "claim_id": "S001-BLOCK",
         "status": "INFERRED",
@@ -748,18 +737,7 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [
-        {
-          "appearance_id": "APPEARANCE-S003",
-          "functional_role": "relation_anchor",
-          "status": "INFERRED",
-          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
-          "appearance_track_id": null,
-          "source_refs": [
-            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S003"
-          ]
-        }
-      ],
+      "abstract_role_labels": [],
       "blocking": {
         "claim_id": "S003-BLOCK",
         "status": "INFERRED",
@@ -10163,7 +10141,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "audio_dependency": false,
+      "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -10204,8 +10182,7 @@
       "counterexample_ids": [],
       "source_method_ids": [
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-LEGACY-PICTURE-REVIEW",
-        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-STRUCTURAL-CONVERSION",
-        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-STRUCTURAL-CONVERSION"
       ],
       "evidence_scene_ids": [
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001"
@@ -10559,6 +10536,7 @@
       "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "scope": "AUDIO",
       "blocks_rule_ids": [
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C01-REGISTER-ROOM-AXIS-BEFORE-PROXIMITY",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C03-KEEP-HAND-SOURCE-HEAD-RELATION-AND-WITHDRAWAL-READABLE",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C04-DECOMPRESS-THROUGH-SINGLES-AND-ROOM-RESET"
       ]

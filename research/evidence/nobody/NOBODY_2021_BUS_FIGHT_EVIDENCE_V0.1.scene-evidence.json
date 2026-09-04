@@ -13801,18 +13801,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [
-        {
-          "appearance_id": "APPEARANCE-S059",
-          "functional_role": "action_source",
-          "status": "INFERRED",
-          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
-          "appearance_track_id": null,
-          "source_refs": [
-            "NOBODY-2021-BUS-001-S059"
-          ]
-        }
-      ],
+      "abstract_role_labels": [],
       "blocking": {
         "claim_id": "S059-BLOCK",
         "status": "INFERRED",
@@ -29188,18 +29177,7 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [
-        {
-          "appearance_id": "APPEARANCE-S125",
-          "functional_role": "result_receiver",
-          "status": "INFERRED",
-          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
-          "appearance_track_id": null,
-          "source_refs": [
-            "NOBODY-2021-BUS-001-S125"
-          ]
-        }
-      ],
+      "abstract_role_labels": [],
       "blocking": {
         "claim_id": "S125-BLOCK",
         "status": "INFERRED",
@@ -30420,7 +30398,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "audio_dependency": false,
+      "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -30461,8 +30439,7 @@
       "counterexample_ids": [],
       "source_method_ids": [
         "NOBODY-2021-BUS-001-METHOD-LEGACY-PICTURE-REVIEW",
-        "NOBODY-2021-BUS-001-METHOD-STRUCTURAL-CONVERSION",
-        "NOBODY-2021-BUS-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
+        "NOBODY-2021-BUS-001-METHOD-STRUCTURAL-CONVERSION"
       ],
       "evidence_scene_ids": [
         "NOBODY-2021-BUS-001"
@@ -30724,6 +30701,7 @@
       "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "scope": "AUDIO",
       "blocks_rule_ids": [
+        "NOBODY-2021-BUS-001-NOBODY-C02-OBJECT-CONTROL-LEDGER",
         "NOBODY-2021-BUS-001-NOBODY-C03-SPATIAL-RESET-AFTER-BURST",
         "NOBODY-2021-BUS-001-NOBODY-C04-RECOVERY-AND-CARE-ARE-STATE"
       ]

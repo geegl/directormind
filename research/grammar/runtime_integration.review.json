@@ -184,27 +184,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-COMPARISON-NOT-REQUIRED",
-      "boundary_signal_ids": [
-        "comparative_field_not_required"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C01-ASSESSMENT-RECEIVER-TO-NEW-ROOM-ACTION",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
       "family_id": "PROCEDURAL-HANDOFF-AND-WORKFLOW",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001: visible_action remains INFERRED after the fresh frame check: wall graphic yields to a worker's approach, reach and stop at the seated group",
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009: blocking remains INFERRED after the fresh frame check: people enter/converge behind table carrying boxes, then tip boxes toward tabletop",
         "The reviewed workflow is a handoff, distributed-work onset, single task loop, or pacing buffer; it does not require two or more referents to be compared before one relation guides the next action. The comparative-field rule must not fire."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only after exact Shot/timecode review proves the shared comparison trigger, the alternative coverage, and why the comparative-field rule must not fire."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The reviewed workflow is a handoff, distributed-work onset, single task loop, or pacing buffer; it does not require two or more referents to be compared before one relation guides the next action. The comparative-field rule must not fire.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001 01:20:01.130-01:20:09.638: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=starts with a full-frame wall display and opens to WS/MWS ROOM-A ensemble; camera_motion=continuous downward/backward widening; the display shrinks as people and consoles enter; dolly/zoom/support method UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009 01:20:40.169-01:20:44.173: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=low table-level WS ensemble; camera_motion=framing remains stable; action supplies motion; support method UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -214,7 +211,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:comparative_field_not_required",
+      "runtime_effect_key": null,
       "source_refs": [
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002",
@@ -226,28 +223,26 @@
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008",
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
       ],
-      "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C02-SOURCED-MATERIAL-FIELD-BEFORE-SELECTION",
-      "decision_axes": [
-        "COVERAGE",
-        "BLOCKING",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "final_status": "MERGED_DUPLICATE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "A second runtime rule would duplicate the positive rule without an independent trigger or director effect."
       ],
-      "material_unknowns": [],
-      "merged_into_candidate_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
-      "notes": "Finalized from the exhaustive local picture review. Semantic audio, identities, and source-specific surfaces remain outside the runtime claim.",
+      "material_unknowns": [
+        "Close only after exact Shot/timecode review proves the shared comparison trigger, the alternative coverage, and why the comparative-field rule must not fire."
+      ],
+      "merged_into_candidate_id": null,
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "The reviewed material-field setup and later relation belong to the same comparison-before-selection mechanism."
       ],
@@ -255,7 +250,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
       ],
-      "runtime_effect_key": "MERGE:DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+      "runtime_effect_key": null,
       "source_refs": [
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009",
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
@@ -269,21 +264,19 @@
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
-      "decision_axes": [
-        "COVERAGE",
-        "BLOCKING",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "final_status": "POSITIVE_RUNTIME_RULE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "The shared comparison relation should be established before isolated downstream handling; no completed selection is claimed."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only after exact Shot/timecode review proves the shared comparison trigger, the alternative coverage, and why the comparative-field rule must not fire."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Finalized from the exhaustive local picture review. Semantic audio, identities, and source-specific surfaces remain outside the runtime claim.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "S010 establishes multiple visible materials; S011 holds two differently shaped objects together so their visual relation can be read."
       ],
@@ -291,18 +284,18 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
       ],
-      "runtime_effect_key": "RULE:DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+      "runtime_effect_key": null,
       "source_refs": [
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
       ],
-      "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-COMPARISON-NOT-REQUIRED",
+      "boundary_forward_test_id": "ORIGINAL-AFTERMATH-NEXT-ACTION-IMMEDIATE",
       "boundary_signal_ids": [
-        "comparative_field_not_required"
+        "immediate_next_action_supersedes_aftermath"
       ],
       "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C04-DEMONSTRATION-TO-DISTRIBUTED-WORK",
       "decision_axes": [
@@ -316,11 +309,11 @@
       "inferences": [
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011: visible_action remains INFERRED after the fresh frame check: LAB-A's mouth/brows/gaze change; he holds the two differently shaped objects at face/chest height while flanking workers watch",
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012: blocking remains INFERRED after the fresh frame check: at least five sets of hands reach in from multiple sides and begin separating, lifting and repositioning objects",
-        "The reviewed workflow is a handoff, distributed-work onset, single task loop, or pacing buffer; it does not require two or more referents to be compared before one relation guides the next action. The comparative-field rule must not fire."
+        "The reviewed visual result passes directly into distributed hands-on work, so the next action already owns Coverage and Edit; a separate aftermath hold would interrupt the active task."
       ],
       "material_unknowns": [],
       "merged_into_candidate_id": null,
-      "notes": "The reviewed workflow is a handoff, distributed-work onset, single task loop, or pacing buffer; it does not require two or more referents to be compared before one relation guides the next action. The comparative-field rule must not fire.",
+      "notes": "A completed shared presentation passes immediately into distributed hands-on work, leaving no separate aftermath interval to allocate.",
       "observations": [
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011 01:20:46.175-01:21:01.482: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=low/near-table MWS-to-MS ensemble centered on LAB-A; camera_motion=camera remains effectively fixed; foreground crossings create reveal/occlusion; exact support UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012 01:21:01.482-01:21:07.321: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=top-down wide view over the worktable; camera_motion=camera appears fixed overhead; hands and materials generate motion. Burned text, if present, was ignored as picture evidence."
@@ -329,12 +322,12 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:comparative_field_not_required",
+      "runtime_effect_key": "BOUNDARY:DR-AFTERMATH-BY-NEXT-ACTION:immediate_next_action_supersedes_aftermath",
       "source_refs": [
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011",
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
       ],
-      "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+      "target_rule_id": "DR-AFTERMATH-BY-NEXT-ACTION"
     },
     {
       "audio_dependency": false,
@@ -624,27 +617,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-COMPARISON-NOT-REQUIRED",
-      "boundary_signal_ids": [
-        "comparative_field_not_required"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C01-COMPETENCE-CLOSED-LOOP",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001",
       "family_id": "PROCEDURAL-HANDOFF-AND-WORKFLOW",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "BEAR-S02E07-TASK-CLOSED-LOOP-001-S001: visible_action remains INFERRED after the fresh frame check: P-A looks down and then toward the nearby table direction",
         "BEAR-S02E07-TASK-CLOSED-LOOP-001-S114: blocking remains INFERRED after the fresh frame check: one face or partial body is isolated; exact off-screen body positions and floor marks are UNKNOWN.",
         "The reviewed workflow is a handoff, distributed-work onset, single task loop, or pacing buffer; it does not require two or more referents to be compared before one relation guides the next action. The comparative-field rule must not fire."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only after exact Shot/timecode review proves the shared comparison trigger, the alternative coverage, and why the comparative-field rule must not fire."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The reviewed workflow is a handoff, distributed-work onset, single task loop, or pacing buffer; it does not require two or more referents to be compared before one relation guides the next action. The comparative-field rule must not fire.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "BEAR-S02E07-TASK-CLOSED-LOOP-001-S001 00:18:27.917-00:18:29.583: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=CU; camera_motion=minor head-following reframe; support UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "BEAR-S02E07-TASK-CLOSED-LOOP-001-S114 00:22:11.792-00:22:14.333: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=ECU; camera_motion=locked or near-static close framing with minor body-follow reframe; exact support UNKNOWN.. Burned text, if present, was ignored as picture evidence.",
@@ -654,7 +644,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-BEAR-S02E07-TASK-CLOSED-LOOP-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:comparative_field_not_required",
+      "runtime_effect_key": null,
       "source_refs": [
         "BEAR-S02E07-TASK-CLOSED-LOOP-001-S001",
         "BEAR-S02E07-TASK-CLOSED-LOOP-001-S002",
@@ -771,7 +761,7 @@
         "BEAR-S02E07-TASK-CLOSED-LOOP-001-S113",
         "BEAR-S02E07-TASK-CLOSED-LOOP-001-S114"
       ],
-      "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -1192,25 +1182,22 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-COMPARISON-NOT-REQUIRED",
-      "boundary_signal_ids": [
-        "comparative_field_not_required"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C02-SEPARATE-OBJECT-STATE-FROM-CAUSAL-CLAIM",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "A single-item state check should not trigger comparative-field coverage when no comparison drives selection."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only after exact Shot/timecode review proves the shared comparison trigger, the alternative coverage, and why the comparative-field rule must not fire."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Finalized from the exhaustive local picture review. Semantic audio, identities, and source-specific surfaces remain outside the runtime claim.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "Reviewed Shots make one item state readable without requiring a simultaneous comparative field."
       ],
@@ -1218,14 +1205,33 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:comparative_field_not_required",
+      "runtime_effect_key": null,
       "source_refs": [
         "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S062",
-        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S081",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S063",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S064",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S065",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S076",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S077",
         "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S082",
-        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S087"
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S083",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S084",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S085",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S086",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S087",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S088",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S089",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S090",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S091",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S092",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S093",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S094",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S095",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S096",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S078",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S081"
       ],
-      "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -1307,21 +1313,19 @@
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C01-REGISTER-ROOM-AXIS-BEFORE-PROXIMITY",
-      "decision_axes": [
-        "COVERAGE",
-        "BLOCKING",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-RELATION-GEOMETRY-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
       "family_id": "PROXIMITY-AND-RELATION-GEOMETRY",
-      "final_status": "POSITIVE_RUNTIME_RULE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "When a later distance change must be legible, the sequence first makes side ownership, path, and room anchors readable."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only after exact Shot/timecode review proves the proximity trigger, already-readable geometry, and the alternative coverage decision in a different work."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "It changes initial coverage order, blocking registration, and when tight/shared views become available.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "S001-S013 show entry, both bodies on opposing room sides, intervening floor/furniture, and wide relation views before the later close shared and single coverage."
       ],
@@ -1329,16 +1333,23 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001"
       ],
-      "runtime_effect_key": "RULE:DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY",
+      "runtime_effect_key": null,
       "source_refs": [
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S002",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S003",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S004",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S005",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S006",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S007",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S008",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S009",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S010",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S011",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S012",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S013"
       ],
-      "target_rule_id": "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -1696,13 +1707,13 @@
       "family_id": "AFTERMATH-AND-TERMINAL-STATE",
       "final_status": "SUPPORTING_EVIDENCE",
       "inferences": [
-        "After a large physical peak, the next-action state can require a stable accountability container instead of additional impact imagery."
+        "The edit redirects the post-peak tail toward a stable formal-room container; accountability, causality and narrative timing remain inferred rather than picture-proved."
       ],
       "material_unknowns": [],
       "merged_into_candidate_id": null,
       "notes": "It changes the post-peak location, coverage triangle, pacing, and scene-tail map.",
       "observations": [
-        "S189-S205 hard-return from large external/plant imagery to a formal room, rebuild coverage through individuals/groups and a raised-desk relation, and finish on a whole-room view."
+        "S170-S186 visibly cover large external or plant-scale states; S187-S188 return to process-room people; S189-S205 establish and develop the formal hearing-room field."
       ],
       "rejection_reason_code": null,
       "review_ids": [
@@ -1710,6 +1721,25 @@
       ],
       "runtime_effect_key": "SUPPORT:DR-AFTERMATH-BY-NEXT-ACTION",
       "source_refs": [
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S170",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S171",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S172",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S173",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S174",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S175",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S176",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S177",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S178",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S179",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S180",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S181",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S182",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S183",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S184",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S185",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S186",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S187",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S188",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S189",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S190",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S191",
@@ -1793,8 +1823,10 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": null,
-      "boundary_signal_ids": [],
+      "boundary_forward_test_id": "ORIGINAL-ACTION-CONTINUOUS-CHAIN",
+      "boundary_signal_ids": [
+        "continuous_view_preserves_action_chain"
+      ],
       "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-APERTURE-EVENT-BEFORE-GROSS-BODY-RESPONSE-002",
       "decision_axes": [
         "COVERAGE"
@@ -1802,7 +1834,7 @@
       "evidence_gap_id": null,
       "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
       "family_id": "ACTION-CAUSAL-CHAIN",
-      "final_status": "SUPPORTING_EVIDENCE",
+      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
       "inferences": [
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001: visible_action remains INFERRED after the fresh frame check: vehicle motion and outside optic flow continue; a bright burning vehicle-like object crosses/blocks the road; people and two-wheeled vehicles move near the car; dark/red spots and star-like cracks become visible on panes; the front-right red-haired adult becomes reclined with dark red material at neck/clothing; other occupants make large reach/contact movements; a blue/yellow marked vehicle approaches; vehicle stops or nearly stops; external uniform-like adults appear; a side door opens; a dark-haired adult-like figure is continuously visible during the door/exterior interval and moves back toward/through the door area; the vehicle then departs; the view settles on roadway and two horizontal dark-clothed forms before the cut. Whether this is the earlier rear-right occupant leaving and returning is INFERRED and requires locked-script confirmation",
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001: blocking remains INFERRED after the fresh frame check: adults begin in stable front-left/front-right/rear-left/rear-center/rear-right zones; they turn, lean and reach, and arms/hands enter or contact other body regions where visible while exterior bodies/vehicles move across windshield and side apertures; during the later door interval, a dark-haired appearance handle remains visible outside and moves back toward/through the side-door area. Grouping that handle with the earlier rear-right occupant is INFERRED; exact roles, contact function and identity through long occlusion UNKNOWN",
@@ -1810,7 +1842,7 @@
       ],
       "material_unknowns": [],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames independently show a before/action/result chain in which a script-locked physical event must remain readable despite brief or occluded contact. This supports the same coverage/edit requirement without transferring source-specific people, props, locations or event order.",
+      "notes": "The same locked source-to-result chain stays continuously readable in one moving field, so extra checkpoint cuts would fragment rather than clarify it.",
       "observations": [
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001 00:26:14.233333-00:30:22.000000: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=continuously changing medium/close/wide mobile coverage inside a compact vehicle, through its apertures, at an open door, and finally along the road; no single fixed shot size; exact lens/focal length UNKNOWN; camera_motion=camera repeatedly rotates/translates relative to cabin pillars and occupants, looks through front/side/rear apertures, passes the open door threshold, follows exterior movement, and ends facing roadway; direction/speed/distance, support system, vehicle rig, stabilization, hidden transition and single-take production method UNKNOWN. Burned text, if present, was ignored as picture evidence."
       ],
@@ -1818,7 +1850,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
       ],
-      "runtime_effect_key": "SUPPORT:DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+      "runtime_effect_key": "BOUNDARY:DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN:continuous_view_preserves_action_chain",
       "source_refs": [
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
       ],
@@ -2050,27 +2082,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-OBJECT-SECONDARY-HANDLING",
-      "boundary_signal_ids": [
-        "object_state_not_required"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C04-PARALLEL-PROP-BARRIER-CLOSURE",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
       "evidence_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026: visible_action remains INFERRED after the fresh frame check: Unfolded newspaper rises as a vertical screen; glassware and table setting remain",
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027: blocking remains INFERRED after the fresh frame check: A starts seated behind newspaper at screen-left setup; visible axial widening reveals A and B at opposite ends of a long table, each holding a separate unfolded newspaper; dolly/zoom/support UNKNOWN",
         "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026 00:53:50.000-00:53:55.500: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=MCU single Person B after transition; camera_motion=fast horizontal image smear plus visible outgoing/incoming overlap for approximately 1.458s, then image stabilizes; production method UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027 00:53:55.500-00:54:13.750: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=MCU single Person A developing to deep WS two-shot then overlapping next scene; camera_motion=image briefly stable, then pronounced axial widening to a deep wide; dolly/zoom/support UNKNOWN; outer-overlap production method UNKNOWN. Burned text, if present, was ignored as picture evidence."
@@ -2079,12 +2108,12 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+      "runtime_effect_key": null,
       "source_refs": [
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026",
         "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027"
       ],
-      "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -2323,27 +2352,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-OBJECT-SECONDARY-HANDLING",
-      "boundary_signal_ids": [
-        "object_state_not_required"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C01",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
       "evidence_id": "DM-BODYGUARD-S01E01-SEL-001",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "DM-BODYGUARD-S01E01-SEL-001-S001: visible_action remains INFERRED after the fresh frame check: frame begins on wall/sign plane and shifts to P-A-like upper body beside a soft foreground edge",
         "DM-BODYGUARD-S01E01-SEL-001-S031: visible_action remains INFERRED after the fresh frame check: heads, hands and upper bodies reorient while the two-track relation remains visible",
         "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "DM-BODYGUARD-S01E01-SEL-001-S001 00:08:46.458-00:08:48.375: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium reframe from wall/sign plane to P-A-like single. Burned text, if present, was ignored as picture evidence.",
         "DM-BODYGUARD-S01E01-SEL-001-S031 00:10:20.000-00:10:25.458: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; gross figure/object positions and cut endpoints were visually rechecked. Burned text, if present, was ignored as picture evidence.",
@@ -2353,7 +2379,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-DM-BODYGUARD-S01E01-SEL-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+      "runtime_effect_key": null,
       "source_refs": [
         "DM-BODYGUARD-S01E01-SEL-001-S001",
         "DM-BODYGUARD-S01E01-SEL-001-S002",
@@ -2387,7 +2413,7 @@
         "DM-BODYGUARD-S01E01-SEL-001-S030",
         "DM-BODYGUARD-S01E01-SEL-001-S031"
       ],
-      "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -2602,21 +2628,21 @@
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C04",
-      "decision_axes": [
-        "COVERAGE"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
       "evidence_id": "DM-BODYGUARD-S01E01-SEL-001",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "final_status": "SUPPORTING_EVIDENCE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "DM-BODYGUARD-S01E01-SEL-001-S172: visible_action remains INFERRED after the fresh frame check: a continuous exterior lateral route moves along the rail-carriage door/windows, revealing helmeted figures and interior person-like forms",
         "DM-BODYGUARD-S01E01-SEL-001-S211: visible_action remains INFERRED after the fresh frame check: P-A-like close outside is repeatedly occluded by passing dark foreground bodies and turns toward frame right before the selected-out cut",
         "Fresh frames independently show a handled object/document state reconnected to a visible handler across cuts or movement. Script facts remain responsible for object meaning; the picture supports only the state-and-handler checkpoint."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames independently show a handled object/document state reconnected to a visible handler across cuts or movement. Script facts remain responsible for object meaning; the picture supports only the state-and-handler checkpoint.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "DM-BODYGUARD-S01E01-SEL-001-S172 00:18:09.292-00:18:17.167: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=exterior wide lateral route. Burned text, if present, was ignored as picture evidence.",
         "DM-BODYGUARD-S01E01-SEL-001-S211 00:21:23.333-00:21:34.167: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=exterior close P-A-like hold. Burned text, if present, was ignored as picture evidence.",
@@ -2626,7 +2652,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-DM-BODYGUARD-S01E01-SEL-001"
       ],
-      "runtime_effect_key": "SUPPORT:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
+      "runtime_effect_key": null,
       "source_refs": [
         "DM-BODYGUARD-S01E01-SEL-001-S172",
         "DM-BODYGUARD-S01E01-SEL-001-S173",
@@ -2669,7 +2695,7 @@
         "DM-BODYGUARD-S01E01-SEL-001-S210",
         "DM-BODYGUARD-S01E01-SEL-001-S211"
       ],
-      "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -2888,27 +2914,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-OBJECT-SECONDARY-HANDLING",
-      "boundary_signal_ids": [
-        "object_state_not_required"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-GETOUT-C02-TREAT-RECURRING-HANDLED-OBJECT-AS-STATE-CUE-NOT-CAUSAL-PROOF",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
       "evidence_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S026: visible_action remains INFERRED after the fresh frame check: spoon changes position inside the cup",
         "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S057: blocking remains INFERRED after the fresh frame check: hand remains supported; off-frame state UNKNOWN",
         "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S026 00:32:49.792-00:32:51.750: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=insert close-up. Burned text, if present, was ignored as picture evidence.",
         "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S057 00:35:19.417-00:35:20.167: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=warm hand/armrest detail. Burned text, if present, was ignored as picture evidence.",
@@ -2918,7 +2941,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+      "runtime_effect_key": null,
       "source_refs": [
         "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S026",
         "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S037",
@@ -2929,7 +2952,7 @@
         "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S054",
         "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S057"
       ],
-      "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -3729,27 +3752,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-OBJECT-SECONDARY-HANDLING",
-      "boundary_signal_ids": [
-        "object_state_not_required"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C01",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
       "evidence_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S004: visible_action remains INFERRED after the fresh frame check: large component moves upward and across the figure's body",
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S038: blocking remains INFERRED after the fresh frame check: figure remains adjacent to the apparatus with arms raised/moving",
         "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S004 00:24:51.281-00:24:56.495: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=exterior medium or wide figure/equipment view; camera_motion=framing follows or holds the visible figure/equipment action; exact camera path, support and stabilization UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S038 00:26:23.165-00:26:23.916: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=wide transparent-walled room/apparatus view; camera_motion=broad room/apparatus geometry remains readable while the figure moves; exact support, path and stabilization UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -3759,7 +3779,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+      "runtime_effect_key": null,
       "source_refs": [
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S004",
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S005",
@@ -3797,7 +3817,7 @@
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S037",
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S038"
       ],
-      "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -3838,27 +3858,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-OBJECT-SECONDARY-HANDLING",
-      "boundary_signal_ids": [
-        "object_state_not_required"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C03",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
       "evidence_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S041: visible_action remains INFERRED after the fresh frame check: torso, head and hands change over the shot",
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S045: blocking remains INFERRED after the fresh frame check: figure holds the same-looking zone while one hand rises near face/torso",
         "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S041 00:26:26.752-00:26:36.345: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium or medium-close interior single; camera_motion=delivered framing remains broadly stable while face, head, hands or torso change; exact support and micro-motion UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S045 00:27:00.619-00:27:06.333: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium or medium-close interior single; camera_motion=delivered framing remains broadly stable while face, head, hands or torso change; exact support and micro-motion UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -3868,7 +3885,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+      "runtime_effect_key": null,
       "source_refs": [
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S041",
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S042",
@@ -3876,7 +3893,7 @@
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S044",
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S045"
       ],
-      "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -3928,25 +3945,22 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-GEOMETRY-ALREADY-REGISTERED",
-      "boundary_signal_ids": [
-        "relation_geometry_already_registered"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-CONTRACT-EXPAND-DISTANCE-WITH-MINIMAL-ACTION-003",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-RELATION-GEOMETRY-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
       "family_id": "PROXIMITY-AND-RELATION-GEOMETRY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "A complete walk-away and visible return materially change relation distance and justify renewed relation geometry."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only after exact Shot/timecode review proves the proximity trigger, already-readable geometry, and the alternative coverage decision in a different work."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "It changes blocking-path visibility, absence duration, and re-registration coverage.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "The cited second-appearance run begins with shared booth geography and singles, shows one person get up and walk out of the shared field, holds an environmental/empty interval, then makes the return/foreground approach visible before resuming relation coverage."
       ],
@@ -3954,7 +3968,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY:relation_geometry_already_registered",
+      "runtime_effect_key": null,
       "source_refs": [
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S040",
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S041",
@@ -3992,31 +4006,28 @@
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S074",
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S075"
       ],
-      "target_rule_id": "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-OBJECT-SECONDARY-HANDLING",
-      "boundary_signal_ids": [
-        "object_state_not_required"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-OBJECT-INSERT-THEN-FACE-RETURN-004",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
       "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S047: visible_action remains INFERRED after the fresh frame check: Dark-shirt handle in close over-shoulder coverage; hands/utensil and face change slightly.",
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S050: blocking remains INFERRED after the fresh frame check: one dominant figure changes head, torso, hand or position within a readable booth/counter/work zone; cross-cut identity is INFERRED.",
         "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S047 01:29:55.348292-01:30:03.731667: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=close/medium single-side coverage; exact lens/focal length UNKNOWN; camera_motion=composition is comparatively stable or locally recomposes with subject/object movement; exact locked/pan/handheld/support method UNKNOWN.. Burned text, if present, was ignored as picture evidence.",
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S050 01:30:17.412000-01:30:27.630542: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=close/medium single-side coverage; exact lens/focal length UNKNOWN; camera_motion=composition is comparatively stable or locally recomposes with subject/object movement; exact locked/pan/handheld/support method UNKNOWN.. Burned text, if present, was ignored as picture evidence.",
@@ -4026,38 +4037,35 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+      "runtime_effect_key": null,
       "source_refs": [
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S047",
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S048",
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S049",
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S050"
       ],
-      "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-COMPARISON-NOT-REQUIRED",
-      "boundary_signal_ids": [
-        "comparative_field_not_required"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-SCRIPT-VERIFIED-TASK-BUFFER-002",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
       "family_id": "PROCEDURAL-HANDOFF-AND-WORKFLOW",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S020: visible_action remains INFERRED after the fresh frame check: A dim, tight view of a torso/head-like silhouette and counter edge; gross movement is visible but identity and exact task are UNKNOWN.",
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S044: blocking remains INFERRED after the fresh frame check: booth, aisle and counter zones remain readable while foreground/background adult-like forms change position; roles and relationship UNKNOWN.",
         "The reviewed workflow is a handoff, distributed-work onset, single task loop, or pacing buffer; it does not require two or more referents to be compared before one relation guides the next action. The comparative-field rule must not fire."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only after exact Shot/timecode review proves the shared comparison trigger, the alternative coverage, and why the comparative-field rule must not fire."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The reviewed workflow is a handoff, distributed-work onset, single task loop, or pacing buffer; it does not require two or more referents to be compared before one relation guides the next action. The comparative-field rule must not fire.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S020 01:26:17.046875-01:26:22.677500: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=insert/tight close coverage; exact lens/focal length UNKNOWN; camera_motion=composition is comparatively stable or locally recomposes with subject/object movement; exact locked/pan/handheld/support method UNKNOWN.. Burned text, if present, was ignored as picture evidence.",
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S044 01:29:37.955917-01:29:46.297583: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=wide-to-medium environmental coverage; exact lens/focal length UNKNOWN; camera_motion=environmental framing remains broad with minor/variable recomposition; locked-vs-supported method UNKNOWN.. Burned text, if present, was ignored as picture evidence.",
@@ -4067,7 +4075,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:comparative_field_not_required",
+      "runtime_effect_key": null,
       "source_refs": [
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S020",
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S021",
@@ -4094,26 +4102,26 @@
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S043",
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S044"
       ],
-      "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-SEPARATED-ZONES-BEFORE-SHARED-DISTANCE-001",
-      "decision_axes": [
-        "COVERAGE"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-RELATION-GEOMETRY-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
       "family_id": "PROXIMITY-AND-RELATION-GEOMETRY",
-      "final_status": "SUPPORTING_EVIDENCE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "The path from separated positions to shared distance is easier to read after threshold and zone registration."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only after exact Shot/timecode review proves the proximity trigger, already-readable geometry, and the alternative coverage decision in a different work."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "It changes entry coverage, zone mapping, approach blocking, and first shared-frame timing.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "S001-S019 establish arrival/entry, separated zones and individual views before the first readable near shared standing field."
       ],
@@ -4121,7 +4129,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001"
       ],
-      "runtime_effect_key": "SUPPORT:DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY",
+      "runtime_effect_key": null,
       "source_refs": [
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S001",
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S002",
@@ -4143,7 +4151,7 @@
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S018",
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S019"
       ],
-      "target_rule_id": "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -4255,21 +4263,21 @@
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C03-DOCUMENT-STATE-NEEDS-HANDLER-CONTINUITY",
-      "decision_axes": [
-        "COVERAGE"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
       "evidence_id": "MRR-S04E07-ACT-FOUR-VISUAL-001",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "final_status": "SUPPORTING_EVIDENCE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S046: visible_action remains INFERRED after the fresh frame check: P-C crosses from the central/window side to the camera-left side surface, bends and handles an item/area partly below readable scale",
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S090: blocking remains INFERRED after the fresh frame check: P-C moves away from P-A's immediate chair edge while keeping the folder; destination and intent UNKNOWN",
         "Fresh frames independently show a handled object/document state reconnected to a visible handler across cuts or movement. Script facts remain responsible for object meaning; the picture supports only the state-and-handler checkpoint."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames independently show a handled object/document state reconnected to a visible handler across cuts or movement. Script facts remain responsible for object meaning; the picture supports only the state-and-handler checkpoint.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S046 00:35:59.115-00:36:07.582: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=room-wide or multi-body medium-wide relation view; camera_motion=delivered room frame stays broadly stable in reviewed full-picture samples unless otherwise stated; support, lens and micro-motion UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S090 00:38:02.655-00:38:06.576: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium shared view developing into a P-C/object view; camera_motion=delivered framing stays broadly stable in reviewed full-picture samples; support, focal length, micro-motion and exact path UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -4279,7 +4287,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-MRR-S04E07-ACT-FOUR-VISUAL-001"
       ],
-      "runtime_effect_key": "SUPPORT:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
+      "runtime_effect_key": null,
       "source_refs": [
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S046",
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S060",
@@ -4291,7 +4299,7 @@
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S089",
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S090"
       ],
-      "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -4378,23 +4386,21 @@
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C02-OBJECT-CONTROL-LEDGER",
-      "decision_axes": [
-        "COVERAGE",
-        "BLOCKING",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
       "evidence_id": "NOBODY-2021-BUS-001",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "final_status": "POSITIVE_RUNTIME_RULE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "NOBODY-2021-BUS-001-S059: visible_action remains INFERRED after the fresh frame check: 刃具被拾起，持有者面部显现",
         "NOBODY-2021-BUS-001-S042: blocking remains INFERRED after the fresh frame check: 本镜主要维持当前区域；举起并展示短枪状物后直视车内",
         "Fresh frames repeatedly plant a portable object, reconnect it to a visible handler/location after occlusion, and show the first visible consequence of a state or use change. The directing delta is checkpoint coverage at required transfers, not generic prop continuity."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames repeatedly plant a portable object, reconnect it to a visible handler/location after occlusion, and show the first visible consequence of a state or use change. The directing delta is checkpoint coverage at required transfers, not generic prop continuity.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "NOBODY-2021-BUS-001-S059 00:28:25.633-00:28:27.200: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=低位INS上摇至MCU. Burned text, if present, was ignored as picture evidence.",
         "NOBODY-2021-BUS-001-S042 00:27:44.100-00:27:52.600: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=外景MS至MCU; camera_motion=轻推. Burned text, if present, was ignored as picture evidence.",
@@ -4404,17 +4410,28 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-NOBODY-2021-BUS-001"
       ],
-      "runtime_effect_key": "RULE:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
+      "runtime_effect_key": null,
       "source_refs": [
         "NOBODY-2021-BUS-001-S059",
         "NOBODY-2021-BUS-001-S060",
         "NOBODY-2021-BUS-001-S111",
+        "NOBODY-2021-BUS-001-S112",
+        "NOBODY-2021-BUS-001-S113",
+        "NOBODY-2021-BUS-001-S114",
+        "NOBODY-2021-BUS-001-S115",
+        "NOBODY-2021-BUS-001-S116",
+        "NOBODY-2021-BUS-001-S117",
         "NOBODY-2021-BUS-001-S121",
         "NOBODY-2021-BUS-001-S122",
+        "NOBODY-2021-BUS-001-S123",
         "NOBODY-2021-BUS-001-S124",
-        "NOBODY-2021-BUS-001-S125"
+        "NOBODY-2021-BUS-001-S125",
+        "NOBODY-2021-BUS-001-S126",
+        "NOBODY-2021-BUS-001-S127",
+        "NOBODY-2021-BUS-001-S016",
+        "NOBODY-2021-BUS-001-S042"
       ],
-      "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -5495,27 +5512,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-OBJECT-SECONDARY-HANDLING",
-      "boundary_signal_ids": [
-        "object_state_not_required"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C03-USE-WORK-OBJECT-UPDATES-AS-PUNCTUATION-NOT-SEMANTIC-PROOF",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
       "evidence_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S019: visible_action remains INFERRED after the fresh frame check: P-A mouth/hand/head states continue and attention shifts toward the hanging pink garment",
         "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S025: blocking remains INFERRED after the fresh frame check: four people share one plane/zone while P-D/P-F/P-C handle garments/strips and P-A remains separately readable",
         "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S019 00:20:44.250-00:20:48.958: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=P-A/P-F/P-C medium shared garment frame; camera_motion=slight following/reframing accompanies lateral subject/garment change; support/path UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S025 00:21:07.833-00:21:10.500: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=four-person garment-group MWS; camera_motion=no evident camera displacement. Burned text, if present, was ignored as picture evidence.",
@@ -5525,7 +5539,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+      "runtime_effect_key": null,
       "source_refs": [
         "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S019",
         "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S020",
@@ -5533,7 +5547,7 @@
         "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S023",
         "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S025"
       ],
-      "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -5819,27 +5833,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-OBJECT-SECONDARY-HANDLING",
-      "boundary_signal_ids": [
-        "object_state_not_required"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C03-KEEP-SECONDARY-PROP-ACTIONS-INSIDE-PERSON-SINGLES",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
       "evidence_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S017: visible_action remains INFERRED after the fresh frame check: P-A-like gray-hoodie/dark-haired adult appearance raises/holds a clear vessel near the mouth and changes its position while remaining seated",
         "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091: blocking remains INFERRED after the fresh frame check: the adult begins at the established table-right seat, turns, rises and moves toward frame-right; whether the body fully clears the room beyond the frame is UNKNOWN",
         "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S017 00:00:46.296-00:00:47.881: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=recurrent medium/medium-close single; camera_motion=frame edges appear stable at sampled early/middle/late points; exact support, hidden micro-movement and joins UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091 00:03:57.821-00:04:03.618: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium single on P-A-like adult; camera_motion=sampled frame edges remain broadly stable while the body rises/moves across the frame; exact support, hidden micro-movement and joins UNKNOWN. Burned text, if present, was ignored as picture evidence."
@@ -5848,12 +5859,12 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+      "runtime_effect_key": null,
       "source_refs": [
         "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S017",
         "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091"
       ],
-      "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -5933,27 +5944,24 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": "ORIGINAL-OBJECT-SECONDARY-HANDLING",
-      "boundary_signal_ids": [
-        "object_state_not_required"
-      ],
+      "boundary_forward_test_id": null,
+      "boundary_signal_ids": [],
       "candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C02",
-      "decision_axes": [
-        "COVERAGE",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
       "evidence_id": "TLOU-BEDROOM-LOCAL-001",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "TLOU-BEDROOM-LOCAL-001-S005: visible_action remains INFERRED after the fresh frame check: both hold their zones; P-B keeps the open book while head/hand positions shift slightly",
         "TLOU-BEDROOM-LOCAL-001-S014: blocking remains INFERRED after the fresh frame check: P-A holds the door/desk side and faces toward off-frame P-B; exact eyeline target and spoken turn UNKNOWN",
         "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "The reviewed pictures contain props, inserts or material activity, but no complete script-required custody/function change that needs an independent checkpoint. The object rule must not fire from adjacency, recurring appearance, separately owned props, unreadable content or secondary hand business alone.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "TLOU-BEDROOM-LOCAL-001-S005 00:40:21.167-00:40:24.250: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium-wide shared over-P-A view; camera_motion=delivered early/mid/late framing is broadly stable while the stated subject/object movement occurs; camera support, focal length, micro-motion and exact path UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "TLOU-BEDROOM-LOCAL-001-S014 00:41:06.125-00:41:10.125: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium single on standing P-A; camera_motion=delivered early/mid/late framing is broadly stable while the stated subject/object movement occurs; camera support, focal length, micro-motion and exact path UNKNOWN. Burned text, if present, was ignored as picture evidence.",
@@ -5963,7 +5971,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-TLOU-BEDROOM-LOCAL-001"
       ],
-      "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+      "runtime_effect_key": null,
       "source_refs": [
         "TLOU-BEDROOM-LOCAL-001-S005",
         "TLOU-BEDROOM-LOCAL-001-S006",
@@ -5976,7 +5984,7 @@
         "TLOU-BEDROOM-LOCAL-001-S013",
         "TLOU-BEDROOM-LOCAL-001-S014"
       ],
-      "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -6445,21 +6453,19 @@
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C01-REGISTER-RECORD-TO-LIVE-SPACE",
-      "decision_axes": [
-        "COVERAGE",
-        "BLOCKING",
-        "EDIT"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "WIRE-S01E04-OLD-CASES-001",
       "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "final_status": "SUPPORTING_EVIDENCE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "The source supports establishing the comparison or reference field before isolating the selected relation."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only after exact Shot/timecode review proves the shared comparison trigger, the alternative coverage, and why the comparative-field rule must not fire."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Finalized from the exhaustive local picture review. Semantic audio, identities, and source-specific surfaces remain outside the runtime claim.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "S007 establishes a visible record field; S038 continuously carries one record to a live spatial anchor without relying on the mismatched S040 legacy description."
       ],
@@ -6467,33 +6473,53 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-WIRE-S01E04-OLD-CASES-001"
       ],
-      "runtime_effect_key": "SUPPORT:DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+      "runtime_effect_key": null,
       "source_refs": [
         "WIRE-S01E04-OLD-CASES-001-S007",
-        "WIRE-S01E04-OLD-CASES-001-S038"
+        "WIRE-S01E04-OLD-CASES-001-S008",
+        "WIRE-S01E04-OLD-CASES-001-S009",
+        "WIRE-S01E04-OLD-CASES-001-S010",
+        "WIRE-S01E04-OLD-CASES-001-S011",
+        "WIRE-S01E04-OLD-CASES-001-S012",
+        "WIRE-S01E04-OLD-CASES-001-S013",
+        "WIRE-S01E04-OLD-CASES-001-S014",
+        "WIRE-S01E04-OLD-CASES-001-S015",
+        "WIRE-S01E04-OLD-CASES-001-S016",
+        "WIRE-S01E04-OLD-CASES-001-S017",
+        "WIRE-S01E04-OLD-CASES-001-S018",
+        "WIRE-S01E04-OLD-CASES-001-S019",
+        "WIRE-S01E04-OLD-CASES-001-S020",
+        "WIRE-S01E04-OLD-CASES-001-S021",
+        "WIRE-S01E04-OLD-CASES-001-S022",
+        "WIRE-S01E04-OLD-CASES-001-S024",
+        "WIRE-S01E04-OLD-CASES-001-S025",
+        "WIRE-S01E04-OLD-CASES-001-S037",
+        "WIRE-S01E04-OLD-CASES-001-S038",
+        "WIRE-S01E04-OLD-CASES-001-S039",
+        "WIRE-S01E04-OLD-CASES-001-S040"
       ],
-      "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C02-EMBODY-HYPOTHESIS-THEN-TEST-TRACE",
-      "decision_axes": [
-        "COVERAGE"
-      ],
-      "evidence_gap_id": null,
+      "decision_axes": [],
+      "evidence_gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
       "evidence_id": "WIRE-S01E04-OLD-CASES-001",
       "family_id": "PROCEDURAL-HANDOFF-AND-WORKFLOW",
-      "final_status": "SUPPORTING_EVIDENCE",
+      "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
         "WIRE-S01E04-OLD-CASES-001-S023: visible_action remains INFERRED after the fresh frame check: McNulty低头后拉出黄色卷尺，尺带向下展开",
         "WIRE-S01E04-OLD-CASES-001-S060: blocking remains INFERRED after the fresh frame check: McNulty展示工具/碎片，Bunk回应并移动靠近；两人交替占据前景",
         "Fresh frames show several spatial/material referents made visible together before one physical relation is followed to a test point. This independently supports comparative-field-first coverage without relying on dialogue."
       ],
-      "material_unknowns": [],
+      "material_unknowns": [
+        "Close only after exact Shot/timecode review proves the shared comparison trigger, the alternative coverage, and why the comparative-field rule must not fire."
+      ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh frames show several spatial/material referents made visible together before one physical relation is followed to a test point. This independently supports comparative-field-first coverage without relying on dialogue.",
+      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the complete same-trigger support and boundary chain required for runtime authorization.",
       "observations": [
         "WIRE-S01E04-OLD-CASES-001-S023 00:46:59.583-00:47:05.000: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=McNulty中近景转卷尺近景; camera_motion=连续下倾并轻微跟随. Burned text, if present, was ignored as picture evidence.",
         "WIRE-S01E04-OLD-CASES-001-S060 00:49:24.417-00:49:31.667: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=McNulty/Bunk交替构图的中近景; camera_motion=连续横移/重构. Burned text, if present, was ignored as picture evidence.",
@@ -6503,7 +6529,7 @@
       "review_ids": [
         "EXHAUSTIVE-PICTURE-WIRE-S01E04-OLD-CASES-001"
       ],
-      "runtime_effect_key": "SUPPORT:DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+      "runtime_effect_key": null,
       "source_refs": [
         "WIRE-S01E04-OLD-CASES-001-S023",
         "WIRE-S01E04-OLD-CASES-001-S024",
@@ -6537,7 +6563,7 @@
         "WIRE-S01E04-OLD-CASES-001-S059",
         "WIRE-S01E04-OLD-CASES-001-S060"
       ],
-      "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+      "target_rule_id": null
     },
     {
       "audio_dependency": false,
@@ -6665,13 +6691,63 @@
   "declared_phase_status": "IN_PROGRESS",
   "evidence_gaps": [
     {
+      "candidate_count": 12,
+      "candidate_rule_ids": [
+        "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C04-PARALLEL-PROP-BARRIER-CLOSURE",
+        "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C01",
+        "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C04",
+        "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-GETOUT-C02-TREAT-RECURRING-HANDLED-OBJECT-AS-STATE-CUE-NOT-CAUSAL-PROOF",
+        "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C01",
+        "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C03",
+        "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-OBJECT-INSERT-THEN-FACE-RETURN-004",
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C03-DOCUMENT-STATE-NEEDS-HANDLER-CONTINUITY",
+        "NOBODY-2021-BUS-001-NOBODY-C02-OBJECT-CONTROL-LEDGER",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C03-USE-WORK-OBJECT-UPDATES-AS-PUNCTUATION-NOT-SEMANTIC-PROOF",
+        "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C03-KEEP-SECONDARY-PROP-ACTIONS-INSIDE-PERSON-SINGLES",
+        "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C02"
+      ],
+      "close_condition": "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary.",
+      "gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
+      "priority": 1,
+      "required_review": "Add unrelated support for a portable-object handler or function change that governs a dependent next action, plus a same-trigger case where one continuous person-object view already makes the state readable without a dedicated checkpoint."
+    },
+    {
+      "candidate_count": 8,
+      "candidate_rule_ids": [
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C01-ASSESSMENT-RECEIVER-TO-NEW-ROOM-ACTION",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C02-SOURCED-MATERIAL-FIELD-BEFORE-SELECTION",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
+        "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C01-COMPETENCE-CLOSED-LOOP",
+        "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C02-SEPARATE-OBJECT-STATE-FROM-CAUSAL-CLAIM",
+        "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-SCRIPT-VERIFIED-TASK-BUFFER-002",
+        "WIRE-S01E04-OLD-CASES-001-WIRE-C01-REGISTER-RECORD-TO-LIVE-SPACE",
+        "WIRE-S01E04-OLD-CASES-001-WIRE-C02-EMBODY-HYPOTHESIS-THEN-TEST-TRACE"
+      ],
+      "close_condition": "Close only after exact Shot/timecode review proves the shared comparison trigger, the alternative coverage, and why the comparative-field rule must not fire.",
+      "gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
+      "priority": 2,
+      "required_review": "Add one unrelated, rights-cleared scene with multiple simultaneously visible referents whose comparison truly governs the next action, but where a separate comparative field would be the wrong coverage choice."
+    },
+    {
+      "candidate_count": 3,
+      "candidate_rule_ids": [
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C01-REGISTER-ROOM-AXIS-BEFORE-PROXIMITY",
+        "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-CONTRACT-EXPAND-DISTANCE-WITH-MINIMAL-ACTION-003",
+        "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-SEPARATED-ZONES-BEFORE-SHARED-DISTANCE-001"
+      ],
+      "close_condition": "Close only after exact Shot/timecode review proves the proximity trigger, already-readable geometry, and the alternative coverage decision in a different work.",
+      "gap_id": "GAP-RELATION-GEOMETRY-SAME-TRIGGER-BOUNDARY",
+      "priority": 3,
+      "required_review": "Add an unrelated proximity scene with the same relation-change trigger where prior geometry remains fully registered, so another initial spatial master would be redundant."
+    },
+    {
       "candidate_count": 1,
       "candidate_rule_ids": [
         "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C02-VERSIONED-OBJECT-HANDOFF"
       ],
       "close_condition": "Close only when both cases have exact Shot/timecode evidence and distinguish one versioned object from unrelated items.",
       "gap_id": "GAP-VERSIONED-OBJECT-HANDOFF-COUNTERPART",
-      "priority": 1,
+      "priority": 4,
       "required_review": "Add one rights-cleared clip with a visually tagged source object transformed and handed across two people or zones, plus one same-surface independent-items boundary."
     },
     {
@@ -6681,7 +6757,7 @@
       ],
       "close_condition": "Close only when revised and unchanged repeats are separated by exact Shot/timecode evidence and change a concrete directing choice.",
       "gap_id": "GAP-REVISED-REPEAT-CONFIGURATION",
-      "priority": 2,
+      "priority": 5,
       "required_review": "Add one rights-cleared revised-operation clip with a visible plan/configuration change and phase marker, plus one unchanged-repeat boundary."
     },
     {
@@ -6694,7 +6770,7 @@
       ],
       "close_condition": "Close when the positive trigger and the do-not-intercut boundary are both exact Shot/timecode bound and produce opposite routing results.",
       "gap_id": "GAP-MULTI-THREAD-NATURAL-BOUNDARY",
-      "priority": 3,
+      "priority": 6,
       "required_review": "Add one rights-cleared same-trigger multi-thread scene whose simultaneous visible states are clearer in one continuous field than by intercutting."
     },
     {
@@ -6706,7 +6782,7 @@
       ],
       "close_condition": "Close only when the shared trigger, opposite scale order and changed Coverage/Edit decision are all Shot/timecode bound.",
       "gap_id": "GAP-SCALE-ORDER-SAME-TRIGGER",
-      "priority": 4,
+      "priority": 7,
       "required_review": "Add one rights-cleared same-trigger detail-to-container support and one same-trigger geometry-first boundary."
     },
     {
@@ -6718,7 +6794,7 @@
       ],
       "close_condition": "Close only after both unrelated support and boundary are exact Shot/timecode bound without relying on dialogue or unauditioned sound.",
       "gap_id": "GAP-SUBJECTIVE-ACCESS-CROSS-WORK",
-      "priority": 5,
+      "priority": 8,
       "required_review": "Add one rights-cleared unrelated subjective-access transition and one same-trigger boundary where ordinary relation coverage must remain primary."
     }
   ],
@@ -40449,6 +40525,7 @@
         "work_id": "THE-DEVIL-WEARS-PRADA-2006"
       },
       "coverage": "Use one owner-dominant tight single or tight over-the-shoulder view for the uninterrupted visible progression, then add a receiver or relation check only after its endpoint.",
+      "designated_boundary_signal_id": "simultaneous_required_action",
       "director_decision": "Give the performance owner a sustained owner-dominant tight view and postpone routine receiver coverage until the owner interval completes.",
       "edit_logic": "Enter when the principal visible progression begins and cut away only after it reaches its locked endpoint.",
       "failure_modes": [
@@ -40574,6 +40651,7 @@
         "work_id": "THE-SOCIAL-NETWORK-2010"
       },
       "coverage": "Use a shared transition or relation-reset frame that contains the mover, counterpart, and changed endpoint.",
+      "designated_boundary_signal_id": "counterpart_absent_at_changed_endpoint",
       "director_decision": "Show the spatial change or its endpoint in shared or continuously reframed relation coverage before returning to isolated coverage.",
       "edit_logic": "Place the return to isolated coverage after the relation endpoint is visible, not during the unregistered spatial change.",
       "failure_modes": [
@@ -40704,6 +40782,7 @@
         "work_id": "CITIZEN-KANE-1941"
       },
       "coverage": "Begin with readable two-person geometry, carry the approach or level change in shared coverage, then hold the endpoint.",
+      "designated_boundary_signal_id": "distance_change_across_ellipsis",
       "director_decision": "Register the initial zones, show the change in shared or continuous relation coverage, and hold the shared endpoint before isolating faces.",
       "edit_logic": "Avoid cutting over the critical relation transition; cut after the endpoint reads or use one continuous shared shot.",
       "failure_modes": [
@@ -40797,133 +40876,6 @@
     {
       "ai_risk": {
         "camera": {
-          "level": "MEDIUM",
-          "reasons": [
-            "Scale can drift between the field and selected detail."
-          ]
-        },
-        "continuity": {
-          "level": "HIGH",
-          "reasons": [
-            "Referents can change count, shape, or orientation across cuts."
-          ]
-        },
-        "performance": {
-          "level": "LOW",
-          "reasons": [
-            "Performance requirements are limited to clear handling."
-          ]
-        }
-      },
-      "applicable_when": [
-        "The audience must compare visible referents before an isolated relation or handling detail becomes readable."
-      ],
-      "audio_dependency": false,
-      "blocking": "Keep the visible referents simultaneously readable long enough to establish their relation; do not copy source props.",
-      "boundary_forward_test_id": "ORIGINAL-COMPARISON-NOT-REQUIRED",
-      "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
-      "confidence": {
-        "execution": "MEDIUM",
-        "transfer": "MEDIUM",
-        "within_source": "HIGH"
-      },
-      "continuity": "Preserve referent count, relative scale, orientation, and the relation used by the next action.",
-      "counterexample": {
-        "evidence_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
-        "notes": "A single item state is readable without a simultaneous comparative field; forcing a comparison would add unsupported alternatives.",
-        "relation_id": "EXHAUSTIVE-CTR-COMPARISON-BCS",
-        "source_candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C02-SEPARATE-OBJECT-STATE-FROM-CAUSAL-CLAIM",
-        "source_refs": [
-          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S062",
-          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S081",
-          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S082",
-          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S087"
-        ],
-        "work_id": "BETTER-CALL-SAUL-S03E05"
-      },
-      "coverage": "Use a field view containing all relevant referents, then move to the relation or handling detail without claiming an unseen selection.",
-      "director_decision": "Establish the full comparison field and common visual relation before isolating the relation used by the next action.",
-      "edit_logic": "Cut from the established comparison field to the relevant relation, not from an unexplained isolated insert.",
-      "failure_modes": [
-        "An isolated item appears before the comparison condition is readable.",
-        "Generated alternatives drift or become indistinguishable."
-      ],
-      "fallback": {
-        "camera": "Use a locked project-original overhead comparison plate.",
-        "continuity": "Label project-original referent positions in the IR and preserve them across Shots.",
-        "performance": "Use one simple point-and-place action after the field is established.",
-        "project_original_only": true
-      },
-      "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "functional_roles": [
-        {
-          "appearance_id": "COMPARISON-FIELD",
-          "functional_role": "comparison_field",
-          "shot_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
-          "source_refs": [
-            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
-          ]
-        },
-        {
-          "appearance_id": "COMPARISON-RELATION",
-          "functional_role": "comparison_relation",
-          "shot_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011",
-          "source_refs": [
-            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
-          ]
-        }
-      ],
-      "name": "Register the comparative field before isolating the relevant relation",
-      "not_applicable_when": [
-        "Only one item state matters and no comparative field is required."
-      ],
-      "pacing": "Hold the comparison field until the relation reads, then move into the next project-original action.",
-      "positive_forward_test_id": "ORIGINAL-REFERENT-COMPARISON",
-      "required_story_facts": [
-        "At least two project-original referents are simultaneously visible.",
-        "Their visible relation must be understood before the next action or detail."
-      ],
-      "routing": {
-        "not_applicable_if_any": [
-          "comparative_field_not_required"
-        ],
-        "required_fact_types": [
-          "referent_set",
-          "relation_constraint"
-        ],
-        "trigger_all_of": [
-          "multiple_visible_referents",
-          "comparative_relation_required"
-        ],
-        "trigger_any_of": []
-      },
-      "rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
-      "runtime_authorized": true,
-      "scene_problem": "PROCEDURAL_COMPETENCE",
-      "selection_rank": 5,
-      "source_refs": [
-        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
-        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
-      ],
-      "supporting_relations": [
-        {
-          "evidence_id": "WIRE-S01E04-OLD-CASES-001",
-          "notes": "A visible record field precedes a moving relation between one record and a live spatial anchor; no record meaning or final selection is claimed.",
-          "relation_id": "EXHAUSTIVE-REL-COMPARISON-WIRE",
-          "source_candidate_rule_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C01-REGISTER-RECORD-TO-LIVE-SPACE",
-          "source_refs": [
-            "WIRE-S01E04-OLD-CASES-001-S007",
-            "WIRE-S01E04-OLD-CASES-001-S038"
-          ],
-          "work_id": "THE-WIRE-S01E04"
-        }
-      ],
-      "surface_copy_allowed": false,
-      "trigger": "Two or more project-original referents must be read together before one visible relation can guide the next action."
-    },
-    {
-      "ai_risk": {
-        "camera": {
           "level": "HIGH",
           "reasons": [
             "The selected coverage must preserve the locked project-original geometry and readable state."
@@ -40956,22 +40908,17 @@
       },
       "continuity": "Carry project-original actor, target, object and result state IDs across every required checkpoint.",
       "counterexample": {
-        "evidence_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
-        "notes": "Adjacent body and environment states do not prove causality; without a locked relation this rule must not fire.",
-        "relation_id": "EXH-CTR-ACTION-AQP",
-        "source_candidate_rule_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C03-CUT-TO-VISIBLE-ENVIRONMENT-EVENT-AT-BODY-STATE-PEAK",
+        "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
+        "notes": "The same causal readability problem is already solved inside one continuous moving view; adding checkpoint cuts is therefore not applicable.",
+        "relation_id": "EXH-CTR-ACTION-CHILDREN",
+        "source_candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-APERTURE-EVENT-BEFORE-GROSS-BODY-RESPONSE-002",
         "source_refs": [
-          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S024",
-          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S025",
-          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S026",
-          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S027",
-          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S028",
-          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S019",
-          "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S021"
+          "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
         ],
-        "work_id": "A-QUIET-PLACE-2018"
+        "work_id": "CHILDREN-OF-MEN-2006"
       },
       "coverage": "Use a readable source/preparation state, the minimum transition view and a held result or response; combine functions when one view is sufficient.",
+      "designated_boundary_signal_id": "continuous_view_preserves_action_chain",
       "director_decision": "Allocate only the source, transition, result and required reaction states needed to keep the causal chain readable.",
       "edit_logic": "Cut only where the source, state change or result would otherwise become ambiguous.",
       "failure_modes": [
@@ -41046,187 +40993,42 @@
       ],
       "supporting_relations": [
         {
-          "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
-          "notes": "An unrelated work independently preserves a visible external event before the gross body response.",
-          "relation_id": "EXH-REL-ACTION-CHILDREN",
-          "source_candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-APERTURE-EVENT-BEFORE-GROSS-BODY-RESPONSE-002",
+          "evidence_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001",
+          "notes": "An unrelated work independently separates a visible performer action, target state and result across coverage without transferring source-specific surfaces.",
+          "relation_id": "EXH-REL-ACTION-TED",
+          "source_candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C03-SEPARATE-PERFORMER-ACTION-TARGET-STATE-AND-RESULT-CLAIM",
           "source_refs": [
-            "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S016",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S017",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S035",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S036",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S037",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S038",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S055",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S056",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S057",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S058",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S059",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S060",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S091",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S092",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S093",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S109",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S110",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S111",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S112",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S113",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S114",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S115",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S108",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S122",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S128"
           ],
-          "work_id": "CHILDREN-OF-MEN-2006"
+          "work_id": "TED-LASSO-S01E08"
         }
       ],
       "surface_copy_allowed": false,
       "trigger": "A project-original consequential action has a locked source, target-state change and visible result that must remain attributable across brief or occluded contact."
-    },
-    {
-      "ai_risk": {
-        "camera": {
-          "level": "MEDIUM",
-          "reasons": [
-            "The selected coverage must preserve the locked project-original geometry and readable state."
-          ]
-        },
-        "continuity": {
-          "level": "HIGH",
-          "reasons": [
-            "Project-original people, objects, zones and state endpoints can drift across generated shots."
-          ]
-        },
-        "performance": {
-          "level": "MEDIUM",
-          "reasons": [
-            "Visible state changes can flatten or occur out of the planned order."
-          ]
-        }
-      },
-      "applicable_when": [
-        "The object crosses a cut, occlusion, handler or functional state before a dependent action."
-      ],
-      "audio_dependency": false,
-      "blocking": "Route each project-original handler through a visible transfer or state checkpoint without copying source props or events.",
-      "boundary_forward_test_id": "ORIGINAL-OBJECT-SECONDARY-HANDLING",
-      "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C02-OBJECT-CONTROL-LEDGER",
-      "confidence": {
-        "execution": "MEDIUM",
-        "transfer": "MEDIUM",
-        "within_source": "HIGH"
-      },
-      "continuity": "Version project-original object, holder, handedness, location and function at the required checkpoints only.",
-      "counterexample": {
-        "evidence_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
-        "notes": "Secondary prop handling does not justify a custody ledger when no next action depends on it.",
-        "relation_id": "EXH-CTR-OBJECT-TSN",
-        "source_candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C03-KEEP-SECONDARY-PROP-ACTIONS-INSIDE-PERSON-SINGLES",
-        "source_refs": [
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S017",
-          "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091"
-        ],
-        "work_id": "THE-SOCIAL-NETWORK-2010"
-      },
-      "coverage": "Use object-in-person or shared frames at required changes; avoid standalone inserts when the state is already readable.",
-      "director_decision": "Plant the object once and show only the handler-plus-object checkpoints and first visible consequence required by the next action.",
-      "edit_logic": "Cut at a locked transfer, function change or first consequence, not at decorative object motion.",
-      "failure_modes": [
-        "The chosen coverage hides a locked state that the next action requires.",
-        "The edit implies a source-specific identity, cause or event that the project did not lock."
-      ],
-      "fallback": {
-        "camera": "Use fixed project-original views at the minimum verified state checkpoints.",
-        "continuity": "Lock project-original IDs and before/after states; add a neutral reset before any ambiguous transition.",
-        "performance": "Split the action into one explicit project-original state change per shot.",
-        "project_original_only": true
-      },
-      "family_id": "OBJECT-STATE-AND-CUSTODY",
-      "functional_roles": [
-        {
-          "appearance_id": "APPEARANCE-S059",
-          "functional_role": "action_source",
-          "shot_id": "NOBODY-2021-BUS-001-S059",
-          "source_refs": [
-            "NOBODY-2021-BUS-001-S059"
-          ]
-        },
-        {
-          "appearance_id": "APPEARANCE-S125",
-          "functional_role": "result_receiver",
-          "shot_id": "NOBODY-2021-BUS-001-S125",
-          "source_refs": [
-            "NOBODY-2021-BUS-001-S125"
-          ]
-        }
-      ],
-      "name": "Show required object custody and state checkpoints",
-      "not_applicable_when": [
-        "The object is secondary hand business and its custody has no effect on the next action."
-      ],
-      "pacing": "Hold each required checkpoint until ownership and state read, then move immediately to the dependent action.",
-      "positive_forward_test_id": "ORIGINAL-OBJECT-CUSTODY-CHECKPOINTS",
-      "required_story_facts": [
-        "The project locks the object's identity and required state change.",
-        "A later action depends on its current handler, location or function."
-      ],
-      "routing": {
-        "not_applicable_if_any": [
-          "object_state_not_required"
-        ],
-        "required_fact_types": [
-          "object_identity",
-          "object_state_change",
-          "dependent_next_action"
-        ],
-        "trigger_all_of": [
-          "portable_object_state_change",
-          "next_action_depends_on_object_state"
-        ],
-        "trigger_any_of": []
-      },
-      "rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
-      "runtime_authorized": true,
-      "scene_problem": "PROCEDURAL_COMPETENCE",
-      "selection_rank": 7,
-      "source_refs": [
-        "NOBODY-2021-BUS-001-S059",
-        "NOBODY-2021-BUS-001-S060",
-        "NOBODY-2021-BUS-001-S111",
-        "NOBODY-2021-BUS-001-S121",
-        "NOBODY-2021-BUS-001-S122",
-        "NOBODY-2021-BUS-001-S124",
-        "NOBODY-2021-BUS-001-S125"
-      ],
-      "supporting_relations": [
-        {
-          "evidence_id": "DM-BODYGUARD-S01E01-SEL-001",
-          "notes": "An unrelated work preserves a required object/state handoff before the dependent visible action.",
-          "relation_id": "EXH-REL-OBJECT-BODYGUARD",
-          "source_candidate_rule_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C04",
-          "source_refs": [
-            "DM-BODYGUARD-S01E01-SEL-001-S172",
-            "DM-BODYGUARD-S01E01-SEL-001-S173",
-            "DM-BODYGUARD-S01E01-SEL-001-S174",
-            "DM-BODYGUARD-S01E01-SEL-001-S175",
-            "DM-BODYGUARD-S01E01-SEL-001-S176",
-            "DM-BODYGUARD-S01E01-SEL-001-S177",
-            "DM-BODYGUARD-S01E01-SEL-001-S178",
-            "DM-BODYGUARD-S01E01-SEL-001-S179",
-            "DM-BODYGUARD-S01E01-SEL-001-S180",
-            "DM-BODYGUARD-S01E01-SEL-001-S181",
-            "DM-BODYGUARD-S01E01-SEL-001-S182",
-            "DM-BODYGUARD-S01E01-SEL-001-S183",
-            "DM-BODYGUARD-S01E01-SEL-001-S184",
-            "DM-BODYGUARD-S01E01-SEL-001-S185",
-            "DM-BODYGUARD-S01E01-SEL-001-S186",
-            "DM-BODYGUARD-S01E01-SEL-001-S187",
-            "DM-BODYGUARD-S01E01-SEL-001-S188",
-            "DM-BODYGUARD-S01E01-SEL-001-S189",
-            "DM-BODYGUARD-S01E01-SEL-001-S190",
-            "DM-BODYGUARD-S01E01-SEL-001-S191",
-            "DM-BODYGUARD-S01E01-SEL-001-S192",
-            "DM-BODYGUARD-S01E01-SEL-001-S193",
-            "DM-BODYGUARD-S01E01-SEL-001-S194",
-            "DM-BODYGUARD-S01E01-SEL-001-S195",
-            "DM-BODYGUARD-S01E01-SEL-001-S196",
-            "DM-BODYGUARD-S01E01-SEL-001-S197",
-            "DM-BODYGUARD-S01E01-SEL-001-S198",
-            "DM-BODYGUARD-S01E01-SEL-001-S199",
-            "DM-BODYGUARD-S01E01-SEL-001-S200",
-            "DM-BODYGUARD-S01E01-SEL-001-S201",
-            "DM-BODYGUARD-S01E01-SEL-001-S202",
-            "DM-BODYGUARD-S01E01-SEL-001-S203",
-            "DM-BODYGUARD-S01E01-SEL-001-S204",
-            "DM-BODYGUARD-S01E01-SEL-001-S205",
-            "DM-BODYGUARD-S01E01-SEL-001-S206",
-            "DM-BODYGUARD-S01E01-SEL-001-S207",
-            "DM-BODYGUARD-S01E01-SEL-001-S208",
-            "DM-BODYGUARD-S01E01-SEL-001-S209",
-            "DM-BODYGUARD-S01E01-SEL-001-S210",
-            "DM-BODYGUARD-S01E01-SEL-001-S211"
-          ],
-          "work_id": "BODYGUARD-S01E01"
-        }
-      ],
-      "surface_copy_allowed": false,
-      "trigger": "A project-original portable object changes handler, location or locked function across an occlusion or cut, and the next action depends on the new state."
     },
     {
       "ai_risk": {
@@ -41278,6 +41080,7 @@
         "work_id": "A-QUIET-PLACE-2018"
       },
       "coverage": "Alternate only the route totals, threshold states and local action views required to preserve orientation.",
+      "designated_boundary_signal_id": "route_not_continuous_multi_zone",
       "director_decision": "Register one project-original landmark and exit vector at each necessary waypoint, returning to an anchor only when orientation is at risk.",
       "edit_logic": "Cut on waypoint or threshold state changes and re-establish the next vector before tightening.",
       "failure_modes": [
@@ -41409,6 +41212,7 @@
         "work_id": "THE-WIRE-S01E04"
       },
       "coverage": "Use a mobile master with deliberate medium or close re-anchors at each changed priority.",
+      "designated_boundary_signal_id": "required_detail_not_mobile_readable",
       "director_decision": "Hold until the current state reads, then let visible movement or geometry hand attention to the next owner without unnecessary cutting.",
       "edit_logic": "Preserve the mobile field through legible handoffs, but cut to a required small detail or inaccessible endpoint.",
       "failure_modes": [
@@ -41482,186 +41286,6 @@
     {
       "ai_risk": {
         "camera": {
-          "level": "HIGH",
-          "reasons": [
-            "The selected coverage must preserve the locked project-original geometry and readable state."
-          ]
-        },
-        "continuity": {
-          "level": "HIGH",
-          "reasons": [
-            "Project-original people, objects, zones and state endpoints can drift across generated shots."
-          ]
-        },
-        "performance": {
-          "level": "MEDIUM",
-          "reasons": [
-            "Visible state changes can flatten or occur out of the planned order."
-          ]
-        }
-      },
-      "applicable_when": [
-        "Tight coverage would otherwise hide where the two project-original participants started or how the distance changed."
-      ],
-      "audio_dependency": false,
-      "blocking": "Lock project-original side IDs, path and intervening anchor so the approach or withdrawal cannot teleport.",
-      "boundary_forward_test_id": "ORIGINAL-GEOMETRY-ALREADY-REGISTERED",
-      "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C01-REGISTER-ROOM-AXIS-BEFORE-PROXIMITY",
-      "confidence": {
-        "execution": "MEDIUM",
-        "transfer": "MEDIUM",
-        "within_source": "HIGH"
-      },
-      "continuity": "Carry project-original person sides, eyeline axis, furniture anchors and distance state.",
-      "counterexample": {
-        "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
-        "notes": "When the same relation geometry is already registered, later distance changes can rely on that anchor without repeating the initial setup.",
-        "relation_id": "EXH-CTR-GEOMETRY-MOONLIGHT",
-        "source_candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-CONTRACT-EXPAND-DISTANCE-WITH-MINIMAL-ACTION-003",
-        "source_refs": [
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S040",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S041",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S042",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S043",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S044",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S045",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S046",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S047",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S049",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S050",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S051",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S052",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S053",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S054",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S055",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S056",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S057",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S058",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S059",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S060",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S061",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S062",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S063",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S064",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S065",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S066",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S067",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S068",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S069",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S070",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S071",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S072",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S073",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S074",
-          "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S075"
-        ],
-        "work_id": "MOONLIGHT-2016"
-      },
-      "coverage": "Begin with the minimum entry/room and unobstructed pair views that establish the later distance change.",
-      "director_decision": "Establish both room sides, intervening path and one relation reset before relying on tight or shared endpoint coverage.",
-      "edit_logic": "Cut tighter only after start zones and the required path are established; reset at a material distance change.",
-      "failure_modes": [
-        "The chosen coverage hides a locked state that the next action requires.",
-        "The edit implies a source-specific identity, cause or event that the project did not lock."
-      ],
-      "fallback": {
-        "camera": "Use fixed project-original views at the minimum verified state checkpoints.",
-        "continuity": "Lock project-original IDs and before/after states; add a neutral reset before any ambiguous transition.",
-        "performance": "Split the action into one explicit project-original state change per shot.",
-        "project_original_only": true
-      },
-      "family_id": "PROXIMITY-AND-RELATION-GEOMETRY",
-      "functional_roles": [
-        {
-          "appearance_id": "APPEARANCE-S001",
-          "functional_role": "relation_anchor",
-          "shot_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
-          "source_refs": [
-            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001"
-          ]
-        },
-        {
-          "appearance_id": "APPEARANCE-S003",
-          "functional_role": "relation_anchor",
-          "shot_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S003",
-          "source_refs": [
-            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S003"
-          ]
-        }
-      ],
-      "name": "Register relation geometry before a meaningful proximity change",
-      "not_applicable_when": [
-        "The shared geometry and relevant axis are already clearly registered for the same interval."
-      ],
-      "pacing": "Let setup views last only until the relation geometry reads, then move to state-led tight coverage.",
-      "positive_forward_test_id": "ORIGINAL-INITIAL-GEOMETRY-BEFORE-PROXIMITY",
-      "required_story_facts": [
-        "The project locks both start zones and the later distance change.",
-        "The path or room axis is necessary to read the changed relation."
-      ],
-      "routing": {
-        "not_applicable_if_any": [
-          "relation_geometry_already_registered"
-        ],
-        "required_fact_types": [
-          "relation_start_zones",
-          "distance_change",
-          "path_anchor"
-        ],
-        "trigger_all_of": [
-          "distance_change_requires_initial_geometry",
-          "relation_path_must_read"
-        ],
-        "trigger_any_of": []
-      },
-      "rule_id": "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY",
-      "runtime_authorized": true,
-      "scene_problem": "ROMANTIC_PROXIMITY",
-      "selection_rank": 10,
-      "source_refs": [
-        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
-        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S002",
-        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S003",
-        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S004",
-        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S012",
-        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S013"
-      ],
-      "supporting_relations": [
-        {
-          "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
-          "notes": "An unrelated work independently establishes separated zones and approach before a near shared relation.",
-          "relation_id": "EXH-REL-GEOMETRY-MOONLIGHT",
-          "source_candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-SEPARATED-ZONES-BEFORE-SHARED-DISTANCE-001",
-          "source_refs": [
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S001",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S002",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S003",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S004",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S005",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S006",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S007",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S008",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S009",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S010",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S011",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S012",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S013",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S014",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S015",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S016",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S017",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S018",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S019"
-          ],
-          "work_id": "MOONLIGHT-2016"
-        }
-      ],
-      "surface_copy_allowed": false,
-      "trigger": "A project-original two-person scene begins at room distance and a later path or proximity change must be spatially legible."
-    },
-    {
-      "ai_risk": {
-        "camera": {
           "level": "MEDIUM",
           "reasons": [
             "The selected coverage must preserve the locked project-original geometry and readable state."
@@ -41711,6 +41335,7 @@
         "work_id": "BROOKLYN-NINE-NINE-S05E14"
       },
       "coverage": "Use a limited two-side vocabulary with conditional relation resets rather than line-by-line angle churn.",
+      "designated_boundary_signal_id": "single_performance_progression",
       "director_decision": "Reuse stable opposing project-original anchors and vary hold length by visible state, adding a relation reset only at a material geometry or body-level change.",
       "edit_logic": "Alternate only when the next visible state owns the scene; reset when geometry, body level or shared action materially changes.",
       "failure_modes": [
@@ -41917,18 +41542,18 @@
       },
       "continuity": "Carry project-original result, occupancy and departure state through the aftermath tail.",
       "counterexample": {
-        "evidence_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
-        "notes": "A required shared task still in progress supersedes a separate aftermath allocation and must remain visible.",
-        "relation_id": "EXH-CTR-AFTERMATH-DWP",
-        "source_candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C04-END-ON-TERMINAL-OWNER-WHILE-BACKGROUND-TASK-CONTINUES",
+        "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
+        "notes": "The visible result is immediately superseded by a required distributed next action, so separate aftermath coverage would obscure the active task.",
+        "relation_id": "EXH-CTR-AFTERMATH-AP13",
+        "source_candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C04-DEMONSTRATION-TO-DISTRIBUTED-WORK",
         "source_refs": [
-          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S024",
-          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S025",
-          "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S026"
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011",
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
         ],
-        "work_id": "THE-DEVIL-WEARS-PRADA-2006"
+        "work_id": "APOLLO-13-1995"
       },
       "coverage": "Prioritize result, next-action owners and terminal environment state rather than giving every visible person an equal reaction close-up.",
+      "designated_boundary_signal_id": "immediate_next_action_supersedes_aftermath",
       "director_decision": "Show the result once, then allocate receiver, departure and changed-environment coverage according to each locked next action.",
       "edit_logic": "Cut from the verified result to the next-action owner, then end on the final changed state that governs the following scene.",
       "failure_modes": [
@@ -42008,10 +41633,29 @@
         },
         {
           "evidence_id": "CHERNOBYL-S01E05-HEARING-RECON-001",
-          "notes": "Another work redirects post-peak coverage to the stable accountability container needed by the next action.",
+          "notes": "Visible large-scale states, an intervening process-room return and the formal-room re-establishment form one reviewed edit chain; the post-peak directing function remains an inference bound to those pictures.",
           "relation_id": "EXH-REL-AFTERMATH-CHERNOBYL",
           "source_candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-RETURN-TO-FORMAL-ROOM-AFTER-PEAK-004",
           "source_refs": [
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S170",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S171",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S172",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S173",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S174",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S175",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S176",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S177",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S178",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S179",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S180",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S181",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S182",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S183",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S184",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S185",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S186",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S187",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S188",
             "CHERNOBYL-S01E05-HEARING-RECON-001-S189",
             "CHERNOBYL-S01E05-HEARING-RECON-001-S190",
             "CHERNOBYL-S01E05-HEARING-RECON-001-S191",

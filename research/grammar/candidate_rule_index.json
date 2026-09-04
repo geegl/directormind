@@ -883,29 +883,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "comparative_field_not_required"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:comparative_field_not_required",
+        "runtime_effect_key": null,
         "source_refs": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S002",
@@ -917,17 +915,14 @@
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S008",
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009"
         ],
-        "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+        "target_rule_id": null
       },
       "scene_problem": {
-        "lineage_label": "LEGACY_SCENE_PROBLEM",
-        "primary": "PROCEDURAL_COMPETENCE",
+        "lineage_label": "PROCEDURAL_COMPETENCE",
+        "primary": "LEGACY_SCENE_PROBLEM",
         "secondary": [],
-        "source_refs": [
-          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
-          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
-        ],
-        "status": "INFERRED"
+        "source_refs": [],
+        "status": "UNKNOWN"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -955,7 +950,7 @@
         "audio": true,
         "functional_roles": true,
         "natural_scene_boundary": true,
-        "scene_problem": false
+        "scene_problem": true
       }
     },
     {
@@ -1073,12 +1068,12 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "DUPLICATE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
@@ -1086,14 +1081,14 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "MERGED_DUPLICATE",
-        "merged_into_candidate_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
+        "evidence_gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
+        "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
         ],
-        "runtime_effect_key": "MERGE:DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+        "runtime_effect_key": null,
         "source_refs": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S009",
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
@@ -1103,14 +1098,11 @@
         "target_rule_id": null
       },
       "scene_problem": {
-        "lineage_label": "LEGACY_SCENE_PROBLEM",
-        "primary": "PROCEDURAL_COMPETENCE",
+        "lineage_label": "PROCEDURAL_COMPETENCE",
+        "primary": "LEGACY_SCENE_PROBLEM",
         "secondary": [],
-        "source_refs": [
-          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
-          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
-        ],
-        "status": "INFERRED"
+        "source_refs": [],
+        "status": "UNKNOWN"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -1133,65 +1125,40 @@
         "audio": true,
         "functional_roles": true,
         "natural_scene_boundary": true,
-        "scene_problem": false
+        "scene_problem": true
       }
     },
     {
       "applicability_evidence": {
-        "notes": "The canonical analytical interval has picture-observed endpoints whose verified or explicitly internal status is recorded in Scene Evidence.",
-        "source_refs": [
-          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S001",
-          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
-        ],
-        "status": "VERIFIED"
+        "notes": "No natural-scene non-applicability boundary is authorized before human review.",
+        "source_refs": [],
+        "status": "UNKNOWN"
       },
       "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
       "canonical_rule_family": "OBJECT-STATE-AND-CUSTODY",
       "confidence": {
-        "execution": "MEDIUM",
-        "transfer": "MEDIUM",
-        "within_source": "HIGH"
+        "execution": "UNKNOWN",
+        "transfer": "UNKNOWN",
+        "within_source": "UNKNOWN"
       },
       "counterexamples": [
         {
-          "counterexample_id": "EXHAUSTIVE-CTR-COMPARISON-BCS",
-          "evidence_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
-          "notes": "A single item state is readable without a simultaneous comparative field; forcing a comparison would add unsupported alternatives.",
-          "relation": "NARROWS",
-          "review_id": "EXHAUSTIVE-CTR-COMPARISON-BCS-REVIEW",
-          "review_ref": "research/validation/relation-reviews/EXHAUSTIVE-CTR-COMPARISON-BCS.json",
-          "review_status": "ROOT_VIDEO_VERIFIED",
-          "same_trigger_status": "VERIFIED_SAME_TRIGGER",
-          "source_candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C02-SEPARATE-OBJECT-STATE-FROM-CAUSAL-CLAIM",
-          "source_refs": [
-            "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S062",
-            "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S081",
-            "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S082",
-            "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S087"
-          ],
-          "status": "VERIFIED",
-          "work_id": "BETTER-CALL-SAUL-S03E05"
+          "counterexample_id": null,
+          "evidence_id": null,
+          "notes": "WIRE-S01E04-OLD-CASES-001 is a different-scale boundary source: tiny records/traces sometimes need owner/detail/endpoint inserts rather than one shared comparison. Same-trigger contrary evidence is UNKNOWN/pending.",
+          "relation": "UNKNOWN",
+          "review_id": null,
+          "review_ref": null,
+          "review_status": "NOT_REVIEWED",
+          "same_trigger_status": "UNKNOWN",
+          "source_candidate_rule_id": null,
+          "source_refs": [],
+          "status": "UNKNOWN",
+          "work_id": null
         }
       ],
       "family_assignment_status": "ROOT_REVIEWED_TEXTUAL_CLUSTER",
-      "functional_roles": [
-        {
-          "appearance_id": "COMPARISON-FIELD",
-          "functional_role": "comparison_field",
-          "source_refs": [
-            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
-          ],
-          "status": "INFERRED"
-        },
-        {
-          "appearance_id": "COMPARISON-RELATION",
-          "functional_role": "comparison_relation",
-          "source_refs": [
-            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
-          ],
-          "status": "INFERRED"
-        }
-      ],
+      "functional_roles": [],
       "legacy_lineage": {
         "ai_risk": "HIGH: two precise prop topologies, hand contacts, face/eyeline continuity, foreground occlusion, and table state",
         "applicability": "Repair, training, engineering, demonstration, or planning where shape/orientation relation is visually legible at medium scale",
@@ -1212,59 +1179,55 @@
       "operational_contract": {
         "ai_risk": {
           "camera": {
-            "level": "MEDIUM",
+            "level": "UNKNOWN",
             "reasons": [
-              "Scale can drift between the field and selected detail."
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
             ]
           },
           "continuity": {
-            "level": "HIGH",
+            "level": "UNKNOWN",
             "reasons": [
-              "Referents can change count, shape, or orientation across cuts."
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
             ]
           },
           "performance": {
-            "level": "LOW",
+            "level": "UNKNOWN",
             "reasons": [
-              "Performance requirements are limited to clear handling."
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
             ]
           }
         },
         "applicable_when": [
-          "The audience must compare visible referents before an isolated relation or handling detail becomes readable."
+          "No applicability condition is authorized before human review."
         ],
-        "audio_dependency": false,
+        "audio_dependency": true,
         "audio_logic": {
-          "claim_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION-AUDIO",
-          "notes": "audio_dependency=false; semantic source audio remains unknown and is outside this rule.",
+          "claim_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION-AUDIO",
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
           "source_refs": [],
           "status": "UNKNOWN",
-          "value": "This visual rule has no audio instruction or audio-dependent trigger."
+          "value": "Pending human review; audio remains unknown and no audio instruction is authorized."
         },
-        "blocking": "Keep the visible referents simultaneously readable long enough to establish their relation; do not copy source props.",
-        "continuity": "Preserve referent count, relative scale, orientation, and the relation used by the next action.",
-        "coverage": "Use a field view containing all relevant referents, then move to the relation or handling detail without claiming an unseen selection.",
-        "director_decision": "Establish the full comparison field and common visual relation before isolating the relation used by the next action.",
-        "edit_logic": "Cut from the established comparison field to the relevant relation, not from an unexplained isolated insert.",
+        "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+        "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+        "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+        "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+        "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
         "failure_modes": [
-          "An isolated item appears before the comparison condition is readable.",
-          "Generated alternatives drift or become indistinguishable."
+          "Applying this migrated lineage row as an operational rule before human review."
         ],
         "fallback": {
-          "camera": "Use a locked project-original overhead comparison plate.",
-          "continuity": "Label project-original referent positions in the IR and preserve them across Shots.",
-          "performance": "Use one simple point-and-place action after the field is established.",
+          "camera": null,
+          "continuity": null,
+          "performance": null,
           "project_original_only": true
         },
         "not_applicable_when": [
-          "Only one item state matters and no comparative field is required."
+          "No non-applicability boundary is authorized before human review."
         ],
-        "pacing": "Hold the comparison field until the relation reads, then move into the next project-original action.",
-        "required_story_facts": [
-          "At least two project-original referents are simultaneously visible.",
-          "Their visible relation must be understood before the next action or detail."
-        ],
-        "trigger": "Two or more project-original referents must be read together before one visible relation can guide the next action."
+        "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+        "required_story_facts": [],
+        "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration."
       },
       "promotion": {
         "human_director_review": {
@@ -1272,59 +1235,47 @@
           "source_ref": null,
           "status": "NOT_APPROVED"
         },
-        "original_forward_test_count": 2,
-        "original_forward_tests": [
-          {
-            "source_ref": "examples/forward-tests/ORIGINAL-REFERENT-COMPARISON",
-            "status": "PASS",
-            "test_case_id": "ORIGINAL-REFERENT-COMPARISON"
-          },
-          {
-            "source_ref": "examples/forward-tests/ORIGINAL-COMPARISON-NOT-REQUIRED",
-            "status": "PASS",
-            "test_case_id": "ORIGINAL-COMPARISON-NOT-REQUIRED"
-          }
-        ],
+        "original_forward_test_count": 0,
+        "original_forward_tests": [],
         "reasons": [
-          "Fresh picture review verifies the source mechanism, unrelated support, and a same-trigger boundary case.",
-          "Two project-original packages verify positive selection and non-applicability routing while creative review remains pending."
+          "Canonical scene problem remains UNKNOWN.",
+          "No evidence-backed functional role is available.",
+          "Within-source, transfer and execution confidence remain UNKNOWN.",
+          "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "CROSS_WORK_SUPPORTED",
-        "unknown_dependency_present": false,
-        "verified_same_trigger_counterexample_count": 1,
-        "verified_support_work_count": 2
+        "status": "EVIDENCE_GAP_PENDING",
+        "unknown_dependency_present": true,
+        "verified_same_trigger_counterexample_count": 0,
+        "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
-        "runtime_authorized": true,
+        "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "POSITIVE_RUNTIME_RULE",
+        "evidence_gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
         ],
-        "runtime_effect_key": "RULE:DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+        "runtime_effect_key": null,
         "source_refs": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
         ],
-        "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+        "target_rule_id": null
       },
       "scene_problem": {
-        "lineage_label": "LEGACY_SCENE_PROBLEM",
-        "primary": "PROCEDURAL_COMPETENCE",
+        "lineage_label": "PROCEDURAL_COMPETENCE",
+        "primary": "LEGACY_SCENE_PROBLEM",
         "secondary": [],
-        "source_refs": [
-          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
-          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
-        ],
-        "status": "INFERRED"
+        "source_refs": [],
+        "status": "UNKNOWN"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -1336,35 +1287,16 @@
         "source_candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
         "source_method_ids": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-LEGACY-PICTURE-REVIEW",
-          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-STRUCTURAL-CONVERSION",
-          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
+          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-STRUCTURAL-CONVERSION"
         ],
         "work_id": "APOLLO-13-1995"
       },
-      "supporting_relations": [
-        {
-          "evidence_id": "WIRE-S01E04-OLD-CASES-001",
-          "notes": "A visible record field precedes a moving relation between one record and a live spatial anchor; no record meaning or final selection is claimed.",
-          "relation": "SUPPORTS",
-          "relation_id": "EXHAUSTIVE-REL-COMPARISON-WIRE",
-          "review_id": "EXHAUSTIVE-REL-COMPARISON-WIRE-REVIEW",
-          "review_ref": "research/validation/relation-reviews/EXHAUSTIVE-REL-COMPARISON-WIRE.json",
-          "review_status": "ROOT_VIDEO_VERIFIED",
-          "same_trigger_status": "VERIFIED_SAME_TRIGGER",
-          "source_candidate_rule_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C01-REGISTER-RECORD-TO-LIVE-SPACE",
-          "source_refs": [
-            "WIRE-S01E04-OLD-CASES-001-S007",
-            "WIRE-S01E04-OLD-CASES-001-S038"
-          ],
-          "status": "VERIFIED",
-          "work_id": "THE-WIRE-S01E04"
-        }
-      ],
+      "supporting_relations": [],
       "unknown_dependencies": {
-        "audio": false,
-        "functional_roles": false,
-        "natural_scene_boundary": false,
-        "scene_problem": false
+        "audio": true,
+        "functional_roles": true,
+        "natural_scene_boundary": true,
+        "scene_problem": true
       }
     },
     {
@@ -1495,7 +1427,7 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [
-          "comparative_field_not_required"
+          "immediate_next_action_supersedes_aftermath"
         ],
         "evidence_gap_id": null,
         "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
@@ -1504,22 +1436,19 @@
         "review_ids": [
           "EXHAUSTIVE-PICTURE-APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:comparative_field_not_required",
+        "runtime_effect_key": "BOUNDARY:DR-AFTERMATH-BY-NEXT-ACTION:immediate_next_action_supersedes_aftermath",
         "source_refs": [
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011",
           "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
         ],
-        "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+        "target_rule_id": "DR-AFTERMATH-BY-NEXT-ACTION"
       },
       "scene_problem": {
-        "lineage_label": "LEGACY_SCENE_PROBLEM",
-        "primary": "PROCEDURAL_COMPETENCE",
+        "lineage_label": "PROCEDURAL_COMPETENCE",
+        "primary": "LEGACY_SCENE_PROBLEM",
         "secondary": [],
-        "source_refs": [
-          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
-          "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
-        ],
-        "status": "INFERRED"
+        "source_refs": [],
+        "status": "UNKNOWN"
       },
       "schema_version": "candidate-director-rule/0.1",
       "source": {
@@ -1540,7 +1469,7 @@
         "audio": true,
         "functional_roles": true,
         "natural_scene_boundary": true,
-        "scene_problem": false
+        "scene_problem": true
       }
     },
     {
@@ -3120,29 +3049,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "comparative_field_not_required"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-BEAR-S02E07-TASK-CLOSED-LOOP-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:comparative_field_not_required",
+        "runtime_effect_key": null,
         "source_refs": [
           "BEAR-S02E07-TASK-CLOSED-LOOP-001-S001",
           "BEAR-S02E07-TASK-CLOSED-LOOP-001-S002",
@@ -3259,7 +3186,7 @@
           "BEAR-S02E07-TASK-CLOSED-LOOP-001-S113",
           "BEAR-S02E07-TASK-CLOSED-LOOP-001-S114"
         ],
-        "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "PROCEDURAL_COMPETENCE",
@@ -4743,36 +4670,53 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "comparative_field_not_required"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:comparative_field_not_required",
+        "runtime_effect_key": null,
         "source_refs": [
           "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S062",
-          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S081",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S063",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S064",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S065",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S076",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S077",
           "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S082",
-          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S087"
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S083",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S084",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S085",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S086",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S087",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S088",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S089",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S090",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S091",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S092",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S093",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S094",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S095",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S096",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S078",
+          "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-S081"
         ],
-        "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "PUBLIC_REVELATION",
@@ -5180,91 +5124,35 @@
     },
     {
       "applicability_evidence": {
-        "notes": "The canonical analytical interval has picture-observed endpoints whose verified or explicitly internal status is recorded in Scene Evidence.",
-        "source_refs": [
-          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
-          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S041"
-        ],
-        "status": "VERIFIED"
+        "notes": "No natural-scene non-applicability boundary is authorized before human review.",
+        "source_refs": [],
+        "status": "UNKNOWN"
       },
       "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C01-REGISTER-ROOM-AXIS-BEFORE-PROXIMITY",
       "canonical_rule_family": "PROXIMITY-AND-RELATION-GEOMETRY",
       "confidence": {
-        "execution": "MEDIUM",
-        "transfer": "MEDIUM",
-        "within_source": "HIGH"
+        "execution": "UNKNOWN",
+        "transfer": "UNKNOWN",
+        "within_source": "UNKNOWN"
       },
       "counterexamples": [
         {
-          "counterexample_id": "EXH-CTR-GEOMETRY-MOONLIGHT",
-          "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
-          "notes": "When the same relation geometry is already registered, later distance changes can rely on that anchor without repeating the initial setup.",
+          "counterexample_id": null,
+          "evidence_id": null,
+          "notes": "COUNTEREXAMPLE UNKNOWN; different-trigger boundary: TSN-C01-REGISTER-PAIR-GEOMETRY-THEN-RELY-ON-STABLE-SINGLES in THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001 uses a seated table axis and terminal occupancy changes rather than a mid-scene proximity compression. Same-trigger contrary evidence remains pending.",
           "relation": "NARROWS",
-          "review_id": "EXH-CTR-GEOMETRY-MOONLIGHT-REVIEW",
-          "review_ref": "research/validation/relation-reviews/EXH-CTR-GEOMETRY-MOONLIGHT.json",
-          "review_status": "ROOT_VIDEO_VERIFIED",
-          "same_trigger_status": "VERIFIED_SAME_TRIGGER",
-          "source_candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-CONTRACT-EXPAND-DISTANCE-WITH-MINIMAL-ACTION-003",
-          "source_refs": [
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S040",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S041",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S042",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S043",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S044",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S045",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S046",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S047",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S049",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S050",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S051",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S052",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S053",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S054",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S055",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S056",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S057",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S058",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S059",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S060",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S061",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S062",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S063",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S064",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S065",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S066",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S067",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S068",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S069",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S070",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S071",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S072",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S073",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S074",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S075"
-          ],
-          "status": "VERIFIED",
-          "work_id": "MOONLIGHT-2016"
+          "review_id": null,
+          "review_ref": null,
+          "review_status": "NOT_REVIEWED",
+          "same_trigger_status": "DIFFERENT_TRIGGER",
+          "source_candidate_rule_id": null,
+          "source_refs": [],
+          "status": "BOUNDARY_ONLY",
+          "work_id": null
         }
       ],
       "family_assignment_status": "ROOT_REVIEWED_TEXTUAL_CLUSTER",
-      "functional_roles": [
-        {
-          "appearance_id": "APPEARANCE-S001",
-          "functional_role": "relation_anchor",
-          "source_refs": [
-            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001"
-          ],
-          "status": "INFERRED"
-        },
-        {
-          "appearance_id": "APPEARANCE-S003",
-          "functional_role": "relation_anchor",
-          "source_refs": [
-            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S003"
-          ],
-          "status": "INFERRED"
-        }
-      ],
+      "functional_roles": [],
       "legacy_lineage": {
         "ai_risk": "camera=HIGH: deep furnished-room registration, doorway scale and later full-body relation changes; performance=HIGH: two-person entry, turns and later distance change; continuity=CRITICAL: two visual-track identities, foreground overlap, low light, topology and window/door sides",
         "applicability": "Contained two-person confrontations, confessions or negotiations where later approach/withdrawal must be spatially legible",
@@ -5285,59 +5173,55 @@
       "operational_contract": {
         "ai_risk": {
           "camera": {
-            "level": "HIGH",
+            "level": "UNKNOWN",
             "reasons": [
-              "The selected coverage must preserve the locked project-original geometry and readable state."
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
             ]
           },
           "continuity": {
-            "level": "HIGH",
+            "level": "UNKNOWN",
             "reasons": [
-              "Project-original people, objects, zones and state endpoints can drift across generated shots."
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
             ]
           },
           "performance": {
-            "level": "MEDIUM",
+            "level": "UNKNOWN",
             "reasons": [
-              "Visible state changes can flatten or occur out of the planned order."
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
             ]
           }
         },
         "applicable_when": [
-          "Tight coverage would otherwise hide where the two project-original participants started or how the distance changed."
+          "No applicability condition is authorized before human review."
         ],
-        "audio_dependency": false,
+        "audio_dependency": true,
         "audio_logic": {
-          "claim_id": "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY-AUDIO",
-          "notes": "audio_dependency=false; semantic source audio remains unknown and is outside this rule.",
+          "claim_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C01-REGISTER-ROOM-AXIS-BEFORE-PROXIMITY-AUDIO",
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
           "source_refs": [],
           "status": "UNKNOWN",
-          "value": "This visual rule has no audio instruction or audio-dependent trigger."
+          "value": "Pending human review; audio remains unknown and no audio instruction is authorized."
         },
-        "blocking": "Lock project-original side IDs, path and intervening anchor so the approach or withdrawal cannot teleport.",
-        "continuity": "Carry project-original person sides, eyeline axis, furniture anchors and distance state.",
-        "coverage": "Begin with the minimum entry/room and unobstructed pair views that establish the later distance change.",
-        "director_decision": "Establish both room sides, intervening path and one relation reset before relying on tight or shared endpoint coverage.",
-        "edit_logic": "Cut tighter only after start zones and the required path are established; reset at a material distance change.",
+        "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+        "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+        "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+        "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+        "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
         "failure_modes": [
-          "The chosen coverage hides a locked state that the next action requires.",
-          "The edit implies a source-specific identity, cause or event that the project did not lock."
+          "Applying this migrated lineage row as an operational rule before human review."
         ],
         "fallback": {
-          "camera": "Use fixed project-original views at the minimum verified state checkpoints.",
-          "continuity": "Lock project-original IDs and before/after states; add a neutral reset before any ambiguous transition.",
-          "performance": "Split the action into one explicit project-original state change per shot.",
+          "camera": null,
+          "continuity": null,
+          "performance": null,
           "project_original_only": true
         },
         "not_applicable_when": [
-          "The shared geometry and relevant axis are already clearly registered for the same interval."
+          "No non-applicability boundary is authorized before human review."
         ],
-        "pacing": "Let setup views last only until the relation geometry reads, then move to state-led tight coverage.",
-        "required_story_facts": [
-          "The project locks both start zones and the later distance change.",
-          "The path or room axis is necessary to read the changed relation."
-        ],
-        "trigger": "A project-original two-person scene begins at room distance and a later path or proximity change must be spatially legible."
+        "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+        "required_story_facts": [],
+        "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration."
       },
       "promotion": {
         "human_director_review": {
@@ -5345,53 +5229,51 @@
           "source_ref": null,
           "status": "NOT_APPROVED"
         },
-        "original_forward_test_count": 2,
-        "original_forward_tests": [
-          {
-            "source_ref": "examples/forward-tests/ORIGINAL-INITIAL-GEOMETRY-BEFORE-PROXIMITY",
-            "status": "PASS",
-            "test_case_id": "ORIGINAL-INITIAL-GEOMETRY-BEFORE-PROXIMITY"
-          },
-          {
-            "source_ref": "examples/forward-tests/ORIGINAL-GEOMETRY-ALREADY-REGISTERED",
-            "status": "PASS",
-            "test_case_id": "ORIGINAL-GEOMETRY-ALREADY-REGISTERED"
-          }
-        ],
+        "original_forward_test_count": 0,
+        "original_forward_tests": [],
         "reasons": [
-          "Fresh picture review verifies the source mechanism, unrelated support, and a same-trigger boundary case.",
-          "Two project-original packages verify positive selection and non-applicability routing while creative review remains pending."
+          "Canonical scene problem remains UNKNOWN.",
+          "No evidence-backed functional role is available.",
+          "Within-source, transfer and execution confidence remain UNKNOWN.",
+          "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "CROSS_WORK_SUPPORTED",
-        "unknown_dependency_present": false,
-        "verified_same_trigger_counterexample_count": 1,
-        "verified_support_work_count": 2
+        "status": "EVIDENCE_GAP_PENDING",
+        "unknown_dependency_present": true,
+        "verified_same_trigger_counterexample_count": 0,
+        "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
-        "runtime_authorized": true,
+        "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "POSITIVE_RUNTIME_RULE",
+        "evidence_gap_id": "GAP-RELATION-GEOMETRY-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001"
         ],
-        "runtime_effect_key": "RULE:DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY",
+        "runtime_effect_key": null,
         "source_refs": [
           "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
           "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S002",
           "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S003",
           "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S004",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S005",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S006",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S007",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S008",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S009",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S010",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S011",
           "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S012",
           "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S013"
         ],
-        "target_rule_id": "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "LEGACY_SCENE_PROBLEM",
@@ -5399,11 +5281,12 @@
         "secondary": [],
         "source_refs": [
           "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
-          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S002",
-          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S003",
-          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S004",
           "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S012",
-          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S013"
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S013",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S017",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S026"
         ],
         "status": "INFERRED"
       },
@@ -5428,51 +5311,15 @@
         "source_candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C01-REGISTER-ROOM-AXIS-BEFORE-PROXIMITY",
         "source_method_ids": [
           "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-LEGACY-PICTURE-REVIEW",
-          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-STRUCTURAL-CONVERSION",
-          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
+          "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-STRUCTURAL-CONVERSION"
         ],
         "work_id": "BRIDGERTON-S02E05"
       },
-      "supporting_relations": [
-        {
-          "evidence_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
-          "notes": "An unrelated work independently establishes separated zones and approach before a near shared relation.",
-          "relation": "SUPPORTS",
-          "relation_id": "EXH-REL-GEOMETRY-MOONLIGHT",
-          "review_id": "EXH-REL-GEOMETRY-MOONLIGHT-REVIEW",
-          "review_ref": "research/validation/relation-reviews/EXH-REL-GEOMETRY-MOONLIGHT.json",
-          "review_status": "ROOT_VIDEO_VERIFIED",
-          "same_trigger_status": "VERIFIED_SAME_TRIGGER",
-          "source_candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-SEPARATED-ZONES-BEFORE-SHARED-DISTANCE-001",
-          "source_refs": [
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S001",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S002",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S003",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S004",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S005",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S006",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S007",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S008",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S009",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S010",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S011",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S012",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S013",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S014",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S015",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S016",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S017",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S018",
-            "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S019"
-          ],
-          "status": "VERIFIED",
-          "work_id": "MOONLIGHT-2016"
-        }
-      ],
+      "supporting_relations": [],
       "unknown_dependencies": {
-        "audio": false,
-        "functional_roles": false,
-        "natural_scene_boundary": false,
+        "audio": true,
+        "functional_roles": true,
+        "natural_scene_boundary": true,
         "scene_problem": false
       }
     },
@@ -6904,6 +6751,25 @@
         ],
         "runtime_effect_key": "SUPPORT:DR-AFTERMATH-BY-NEXT-ACTION",
         "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S170",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S171",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S172",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S173",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S174",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S175",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S176",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S177",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S178",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S179",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S180",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S181",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S182",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S183",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S184",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S185",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S186",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S187",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S188",
           "CHERNOBYL-S01E05-HEARING-RECON-001-S189",
           "CHERNOBYL-S01E05-HEARING-RECON-001-S190",
           "CHERNOBYL-S01E05-HEARING-RECON-001-S191",
@@ -6951,7 +6817,26 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S202",
           "CHERNOBYL-S01E05-HEARING-RECON-001-S203",
           "CHERNOBYL-S01E05-HEARING-RECON-001-S204",
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S205"
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S205",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S170",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S171",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S172",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S173",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S174",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S175",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S176",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S177",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S178",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S179",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S180",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S181",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S182",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S183",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S184",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S185",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S186",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S187",
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S188"
         ],
         "source_candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-RETURN-TO-FORMAL-ROOM-AFTER-PEAK-004",
         "source_method_ids": [
@@ -7317,22 +7202,24 @@
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "COUNTEREXAMPLE",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [],
+        "boundary_signal_ids": [
+          "continuous_view_preserves_action_chain"
+        ],
         "evidence_gap_id": null,
-        "final_status": "SUPPORTING_EVIDENCE",
+        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
         ],
-        "runtime_effect_key": "SUPPORT:DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+        "runtime_effect_key": "BOUNDARY:DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN:continuous_view_preserves_action_chain",
         "source_refs": [
           "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
         ],
@@ -8551,34 +8438,32 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "object_state_not_required"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+        "runtime_effect_key": null,
         "source_refs": [
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S026",
           "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-S027"
         ],
-        "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "MONTAGE_TIME_COMPRESSION",
@@ -9590,29 +9475,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "object_state_not_required"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-DM-BODYGUARD-S01E01-SEL-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+        "runtime_effect_key": null,
         "source_refs": [
           "DM-BODYGUARD-S01E01-SEL-001-S001",
           "DM-BODYGUARD-S01E01-SEL-001-S002",
@@ -9646,7 +9529,7 @@
           "DM-BODYGUARD-S01E01-SEL-001-S030",
           "DM-BODYGUARD-S01E01-SEL-001-S031"
         ],
-        "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "SUSPENSE_INFORMATION_ASYMMETRY",
@@ -10439,12 +10322,12 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
@@ -10452,14 +10335,14 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "SUPPORTING_EVIDENCE",
+        "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-DM-BODYGUARD-S01E01-SEL-001"
         ],
-        "runtime_effect_key": "SUPPORT:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
+        "runtime_effect_key": null,
         "source_refs": [
           "DM-BODYGUARD-S01E01-SEL-001-S172",
           "DM-BODYGUARD-S01E01-SEL-001-S173",
@@ -10502,7 +10385,7 @@
           "DM-BODYGUARD-S01E01-SEL-001-S210",
           "DM-BODYGUARD-S01E01-SEL-001-S211"
         ],
-        "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "SUSPENSE_INFORMATION_ASYMMETRY",
@@ -11627,29 +11510,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "object_state_not_required"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+        "runtime_effect_key": null,
         "source_refs": [
           "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S026",
           "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S037",
@@ -11660,7 +11541,7 @@
           "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S054",
           "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-S057"
         ],
-        "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "SUBJECTIVE_COERCION",
@@ -15093,29 +14974,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "object_state_not_required"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+        "runtime_effect_key": null,
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S004",
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S005",
@@ -15153,7 +15032,7 @@
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S037",
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S038"
         ],
-        "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "PROCEDURAL_COLLAPSE",
@@ -15505,29 +15384,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "object_state_not_required"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+        "runtime_effect_key": null,
         "source_refs": [
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S041",
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S042",
@@ -15535,7 +15412,7 @@
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S044",
           "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-S045"
         ],
-        "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "PROCEDURAL_COLLAPSE",
@@ -15879,29 +15756,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "relation_geometry_already_registered"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-RELATION-GEOMETRY-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY:relation_geometry_already_registered",
+        "runtime_effect_key": null,
         "source_refs": [
           "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S040",
           "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S041",
@@ -15939,7 +15814,7 @@
           "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S074",
           "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S075"
         ],
-        "target_rule_id": "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "RELATIONSHIP_FRACTURE",
@@ -16118,36 +15993,34 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "object_state_not_required"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+        "runtime_effect_key": null,
         "source_refs": [
           "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S047",
           "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S048",
           "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S049",
           "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S050"
         ],
-        "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "RELATIONSHIP_FRACTURE",
@@ -16295,29 +16168,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "comparative_field_not_required"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:comparative_field_not_required",
+        "runtime_effect_key": null,
         "source_refs": [
           "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S020",
           "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S021",
@@ -16344,7 +16215,7 @@
           "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S043",
           "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S044"
         ],
-        "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "RELATIONSHIP_FRACTURE",
@@ -16512,12 +16383,12 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
@@ -16525,14 +16396,14 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "SUPPORTING_EVIDENCE",
+        "evidence_gap_id": "GAP-RELATION-GEOMETRY-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001"
         ],
-        "runtime_effect_key": "SUPPORT:DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY",
+        "runtime_effect_key": null,
         "source_refs": [
           "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S001",
           "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S002",
@@ -16554,7 +16425,7 @@
           "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S018",
           "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-S019"
         ],
-        "target_rule_id": "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "RELATIONSHIP_FRACTURE",
@@ -17139,12 +17010,12 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
@@ -17152,14 +17023,14 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "SUPPORTING_EVIDENCE",
+        "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-MRR-S04E07-ACT-FOUR-VISUAL-001"
         ],
-        "runtime_effect_key": "SUPPORT:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
+        "runtime_effect_key": null,
         "source_refs": [
           "MRR-S04E07-ACT-FOUR-VISUAL-001-S046",
           "MRR-S04E07-ACT-FOUR-VISUAL-001-S060",
@@ -17171,7 +17042,7 @@
           "MRR-S04E07-ACT-FOUR-VISUAL-001-S089",
           "MRR-S04E07-ACT-FOUR-VISUAL-001-S090"
         ],
-        "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "LEGACY_SCENE_PROBLEM",
@@ -17478,26 +17349,20 @@
       },
       "counterexamples": [
         {
-          "counterexample_id": "EXH-CTR-ACTION-AQP",
-          "evidence_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
-          "notes": "Adjacent body and environment states do not prove causality; without a locked relation this rule must not fire.",
+          "counterexample_id": "EXH-CTR-ACTION-CHILDREN",
+          "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
+          "notes": "The same causal readability problem is already solved inside one continuous moving view; adding checkpoint cuts is therefore not applicable.",
           "relation": "NARROWS",
-          "review_id": "EXH-CTR-ACTION-AQP-REVIEW",
-          "review_ref": "research/validation/relation-reviews/EXH-CTR-ACTION-AQP.json",
+          "review_id": "EXH-CTR-ACTION-CHILDREN-REVIEW",
+          "review_ref": "research/validation/relation-reviews/EXH-CTR-ACTION-CHILDREN.json",
           "review_status": "ROOT_VIDEO_VERIFIED",
           "same_trigger_status": "VERIFIED_SAME_TRIGGER",
-          "source_candidate_rule_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C03-CUT-TO-VISIBLE-ENVIRONMENT-EVENT-AT-BODY-STATE-PEAK",
+          "source_candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-APERTURE-EVENT-BEFORE-GROSS-BODY-RESPONSE-002",
           "source_refs": [
-            "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S024",
-            "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S025",
-            "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S026",
-            "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S027",
-            "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S028",
-            "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S019",
-            "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-S021"
+            "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
           ],
           "status": "VERIFIED",
-          "work_id": "A-QUIET-PLACE-2018"
+          "work_id": "CHILDREN-OF-MEN-2006"
         }
       ],
       "family_assignment_status": "ROOT_REVIEWED_TEXTUAL_CLUSTER",
@@ -17718,20 +17583,44 @@
       },
       "supporting_relations": [
         {
-          "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
-          "notes": "An unrelated work independently preserves a visible external event before the gross body response.",
+          "evidence_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001",
+          "notes": "An unrelated work independently separates a visible performer action, target state and result across coverage without transferring source-specific surfaces.",
           "relation": "SUPPORTS",
-          "relation_id": "EXH-REL-ACTION-CHILDREN",
-          "review_id": "EXH-REL-ACTION-CHILDREN-REVIEW",
-          "review_ref": "research/validation/relation-reviews/EXH-REL-ACTION-CHILDREN.json",
+          "relation_id": "EXH-REL-ACTION-TED",
+          "review_id": "EXH-REL-ACTION-TED-REVIEW",
+          "review_ref": "research/validation/relation-reviews/EXH-REL-ACTION-TED.json",
           "review_status": "ROOT_VIDEO_VERIFIED",
           "same_trigger_status": "VERIFIED_SAME_TRIGGER",
-          "source_candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-APERTURE-EVENT-BEFORE-GROSS-BODY-RESPONSE-002",
+          "source_candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C03-SEPARATE-PERFORMER-ACTION-TARGET-STATE-AND-RESULT-CLAIM",
           "source_refs": [
-            "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S016",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S017",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S035",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S036",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S037",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S038",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S055",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S056",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S057",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S058",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S059",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S060",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S091",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S092",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S093",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S109",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S110",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S111",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S112",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S113",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S114",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S115",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S108",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S122",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S128"
           ],
           "status": "VERIFIED",
-          "work_id": "CHILDREN-OF-MEN-2006"
+          "work_id": "TED-LASSO-S01E08"
         }
       ],
       "unknown_dependencies": {
@@ -17743,58 +17632,35 @@
     },
     {
       "applicability_evidence": {
-        "notes": "The canonical analytical interval has picture-observed endpoints whose verified or explicitly internal status is recorded in Scene Evidence.",
-        "source_refs": [
-          "NOBODY-2021-BUS-001-S001",
-          "NOBODY-2021-BUS-001-S128"
-        ],
-        "status": "VERIFIED"
+        "notes": "No natural-scene non-applicability boundary is authorized before human review.",
+        "source_refs": [],
+        "status": "UNKNOWN"
       },
       "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C02-OBJECT-CONTROL-LEDGER",
       "canonical_rule_family": "OBJECT-STATE-AND-CUSTODY",
       "confidence": {
-        "execution": "MEDIUM",
-        "transfer": "MEDIUM",
-        "within_source": "HIGH"
+        "execution": "UNKNOWN",
+        "transfer": "UNKNOWN",
+        "within_source": "UNKNOWN"
       },
       "counterexamples": [
         {
-          "counterexample_id": "EXH-CTR-OBJECT-TSN",
-          "evidence_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
-          "notes": "Secondary prop handling does not justify a custody ledger when no next action depends on it.",
-          "relation": "NARROWS",
-          "review_id": "EXH-CTR-OBJECT-TSN-REVIEW",
-          "review_ref": "research/validation/relation-reviews/EXH-CTR-OBJECT-TSN.json",
-          "review_status": "ROOT_VIDEO_VERIFIED",
-          "same_trigger_status": "VERIFIED_SAME_TRIGGER",
-          "source_candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C03-KEEP-SECONDARY-PROP-ACTIONS-INSIDE-PERSON-SINGLES",
-          "source_refs": [
-            "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S017",
-            "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091"
-          ],
-          "status": "VERIFIED",
-          "work_id": "THE-SOCIAL-NETWORK-2010"
+          "counterexample_id": null,
+          "evidence_id": null,
+          "notes": "Internal boundary example: the blue seats remain recurring geography rather than a portable causal ledger; treating every fixture as a tracked prop would add noise. Independent contrary-source counterexample: UNKNOWN/pending",
+          "relation": "UNKNOWN",
+          "review_id": null,
+          "review_ref": null,
+          "review_status": "NOT_REVIEWED",
+          "same_trigger_status": "UNKNOWN",
+          "source_candidate_rule_id": null,
+          "source_refs": [],
+          "status": "UNKNOWN",
+          "work_id": null
         }
       ],
       "family_assignment_status": "ROOT_REVIEWED_TEXTUAL_CLUSTER",
-      "functional_roles": [
-        {
-          "appearance_id": "APPEARANCE-S059",
-          "functional_role": "action_source",
-          "source_refs": [
-            "NOBODY-2021-BUS-001-S059"
-          ],
-          "status": "INFERRED"
-        },
-        {
-          "appearance_id": "APPEARANCE-S125",
-          "functional_role": "result_receiver",
-          "source_refs": [
-            "NOBODY-2021-BUS-001-S125"
-          ],
-          "status": "INFERRED"
-        }
-      ],
+      "functional_roles": [],
       "legacy_lineage": {
         "ai_risk": "HIGH: prop morphology, handedness, state, location, and causal-use drift",
         "applicability": "Weapons, keys, evidence, medical tools, phones, or planted objects that cross multiple shots",
@@ -17815,59 +17681,55 @@
       "operational_contract": {
         "ai_risk": {
           "camera": {
-            "level": "MEDIUM",
+            "level": "UNKNOWN",
             "reasons": [
-              "The selected coverage must preserve the locked project-original geometry and readable state."
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
             ]
           },
           "continuity": {
-            "level": "HIGH",
+            "level": "UNKNOWN",
             "reasons": [
-              "Project-original people, objects, zones and state endpoints can drift across generated shots."
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
             ]
           },
           "performance": {
-            "level": "MEDIUM",
+            "level": "UNKNOWN",
             "reasons": [
-              "Visible state changes can flatten or occur out of the planned order."
+              "Pending human review; the legacy risk field is lineage only and was not operationally promoted."
             ]
           }
         },
         "applicable_when": [
-          "The object crosses a cut, occlusion, handler or functional state before a dependent action."
+          "No applicability condition is authorized before human review."
         ],
-        "audio_dependency": false,
+        "audio_dependency": true,
         "audio_logic": {
-          "claim_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS-AUDIO",
-          "notes": "audio_dependency=false; semantic source audio remains unknown and is outside this rule.",
+          "claim_id": "NOBODY-2021-BUS-001-NOBODY-C02-OBJECT-CONTROL-LEDGER-AUDIO",
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
           "source_refs": [],
           "status": "UNKNOWN",
-          "value": "This visual rule has no audio instruction or audio-dependent trigger."
+          "value": "Pending human review; audio remains unknown and no audio instruction is authorized."
         },
-        "blocking": "Route each project-original handler through a visible transfer or state checkpoint without copying source props or events.",
-        "continuity": "Version project-original object, holder, handedness, location and function at the required checkpoints only.",
-        "coverage": "Use object-in-person or shared frames at required changes; avoid standalone inserts when the state is already readable.",
-        "director_decision": "Plant the object once and show only the handler-plus-object checkpoints and first visible consequence required by the next action.",
-        "edit_logic": "Cut at a locked transfer, function change or first consequence, not at decorative object motion.",
+        "blocking": "PENDING_HUMAN_REVIEW: no operational blocking plan is authorized.",
+        "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
+        "coverage": "PENDING_HUMAN_REVIEW: no operational coverage plan is authorized.",
+        "director_decision": "NOT_AUTHORIZED: no directing decision may be applied until a human reviews the legacy lineage against current evidence.",
+        "edit_logic": "PENDING_HUMAN_REVIEW: no operational edit logic is authorized.",
         "failure_modes": [
-          "The chosen coverage hides a locked state that the next action requires.",
-          "The edit implies a source-specific identity, cause or event that the project did not lock."
+          "Applying this migrated lineage row as an operational rule before human review."
         ],
         "fallback": {
-          "camera": "Use fixed project-original views at the minimum verified state checkpoints.",
-          "continuity": "Lock project-original IDs and before/after states; add a neutral reset before any ambiguous transition.",
-          "performance": "Split the action into one explicit project-original state change per shot.",
+          "camera": null,
+          "continuity": null,
+          "performance": null,
           "project_original_only": true
         },
         "not_applicable_when": [
-          "The object is secondary hand business and its custody has no effect on the next action."
+          "No non-applicability boundary is authorized before human review."
         ],
-        "pacing": "Hold each required checkpoint until ownership and state read, then move immediately to the dependent action.",
-        "required_story_facts": [
-          "The project locks the object's identity and required state change.",
-          "A later action depends on its current handler, location or function."
-        ],
-        "trigger": "A project-original portable object changes handler, location or locked function across an occlusion or cut, and the next action depends on the new state."
+        "pacing": "PENDING_HUMAN_REVIEW: no operational pacing instruction is authorized.",
+        "required_story_facts": [],
+        "trigger": "PENDING_HUMAN_REVIEW: no operational trigger is authorized by this legacy migration."
       },
       "promotion": {
         "human_director_review": {
@@ -17875,67 +17737,69 @@
           "source_ref": null,
           "status": "NOT_APPROVED"
         },
-        "original_forward_test_count": 2,
-        "original_forward_tests": [
-          {
-            "source_ref": "examples/forward-tests/ORIGINAL-OBJECT-CUSTODY-CHECKPOINTS",
-            "status": "PASS",
-            "test_case_id": "ORIGINAL-OBJECT-CUSTODY-CHECKPOINTS"
-          },
-          {
-            "source_ref": "examples/forward-tests/ORIGINAL-OBJECT-SECONDARY-HANDLING",
-            "status": "PASS",
-            "test_case_id": "ORIGINAL-OBJECT-SECONDARY-HANDLING"
-          }
-        ],
+        "original_forward_test_count": 0,
+        "original_forward_tests": [],
         "reasons": [
-          "Fresh picture review verifies the source mechanism, unrelated support, and a same-trigger boundary case.",
-          "Two project-original packages verify positive selection and non-applicability routing while creative review remains pending."
+          "Canonical scene problem remains UNKNOWN.",
+          "No evidence-backed functional role is available.",
+          "Within-source, transfer and execution confidence remain UNKNOWN.",
+          "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "CROSS_WORK_SUPPORTED",
-        "unknown_dependency_present": false,
-        "verified_same_trigger_counterexample_count": 1,
-        "verified_support_work_count": 2
+        "status": "EVIDENCE_GAP_PENDING",
+        "unknown_dependency_present": true,
+        "verified_same_trigger_counterexample_count": 0,
+        "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
-        "runtime_authorized": true,
+        "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "POSITIVE_RUNTIME_RULE",
+        "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-NOBODY-2021-BUS-001"
         ],
-        "runtime_effect_key": "RULE:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
+        "runtime_effect_key": null,
         "source_refs": [
           "NOBODY-2021-BUS-001-S059",
           "NOBODY-2021-BUS-001-S060",
           "NOBODY-2021-BUS-001-S111",
+          "NOBODY-2021-BUS-001-S112",
+          "NOBODY-2021-BUS-001-S113",
+          "NOBODY-2021-BUS-001-S114",
+          "NOBODY-2021-BUS-001-S115",
+          "NOBODY-2021-BUS-001-S116",
+          "NOBODY-2021-BUS-001-S117",
           "NOBODY-2021-BUS-001-S121",
           "NOBODY-2021-BUS-001-S122",
+          "NOBODY-2021-BUS-001-S123",
           "NOBODY-2021-BUS-001-S124",
-          "NOBODY-2021-BUS-001-S125"
+          "NOBODY-2021-BUS-001-S125",
+          "NOBODY-2021-BUS-001-S126",
+          "NOBODY-2021-BUS-001-S127",
+          "NOBODY-2021-BUS-001-S016",
+          "NOBODY-2021-BUS-001-S042"
         ],
-        "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "LEGACY_SCENE_PROBLEM",
-        "primary": "PROCEDURAL_COMPETENCE",
+        "primary": "ACTION_CAUSALITY",
         "secondary": [],
         "source_refs": [
-          "NOBODY-2021-BUS-001-S059",
-          "NOBODY-2021-BUS-001-S060",
           "NOBODY-2021-BUS-001-S111",
-          "NOBODY-2021-BUS-001-S121",
-          "NOBODY-2021-BUS-001-S122",
-          "NOBODY-2021-BUS-001-S124",
-          "NOBODY-2021-BUS-001-S125"
+          "NOBODY-2021-BUS-001-S112",
+          "NOBODY-2021-BUS-001-S113",
+          "NOBODY-2021-BUS-001-S114",
+          "NOBODY-2021-BUS-001-S115",
+          "NOBODY-2021-BUS-001-S116",
+          "NOBODY-2021-BUS-001-S117"
         ],
         "status": "INFERRED"
       },
@@ -17965,72 +17829,15 @@
         "source_candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C02-OBJECT-CONTROL-LEDGER",
         "source_method_ids": [
           "NOBODY-2021-BUS-001-METHOD-LEGACY-PICTURE-REVIEW",
-          "NOBODY-2021-BUS-001-METHOD-STRUCTURAL-CONVERSION",
-          "NOBODY-2021-BUS-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
+          "NOBODY-2021-BUS-001-METHOD-STRUCTURAL-CONVERSION"
         ],
         "work_id": "NOBODY-2021"
       },
-      "supporting_relations": [
-        {
-          "evidence_id": "DM-BODYGUARD-S01E01-SEL-001",
-          "notes": "An unrelated work preserves a required object/state handoff before the dependent visible action.",
-          "relation": "SUPPORTS",
-          "relation_id": "EXH-REL-OBJECT-BODYGUARD",
-          "review_id": "EXH-REL-OBJECT-BODYGUARD-REVIEW",
-          "review_ref": "research/validation/relation-reviews/EXH-REL-OBJECT-BODYGUARD.json",
-          "review_status": "ROOT_VIDEO_VERIFIED",
-          "same_trigger_status": "VERIFIED_SAME_TRIGGER",
-          "source_candidate_rule_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C04",
-          "source_refs": [
-            "DM-BODYGUARD-S01E01-SEL-001-S172",
-            "DM-BODYGUARD-S01E01-SEL-001-S173",
-            "DM-BODYGUARD-S01E01-SEL-001-S174",
-            "DM-BODYGUARD-S01E01-SEL-001-S175",
-            "DM-BODYGUARD-S01E01-SEL-001-S176",
-            "DM-BODYGUARD-S01E01-SEL-001-S177",
-            "DM-BODYGUARD-S01E01-SEL-001-S178",
-            "DM-BODYGUARD-S01E01-SEL-001-S179",
-            "DM-BODYGUARD-S01E01-SEL-001-S180",
-            "DM-BODYGUARD-S01E01-SEL-001-S181",
-            "DM-BODYGUARD-S01E01-SEL-001-S182",
-            "DM-BODYGUARD-S01E01-SEL-001-S183",
-            "DM-BODYGUARD-S01E01-SEL-001-S184",
-            "DM-BODYGUARD-S01E01-SEL-001-S185",
-            "DM-BODYGUARD-S01E01-SEL-001-S186",
-            "DM-BODYGUARD-S01E01-SEL-001-S187",
-            "DM-BODYGUARD-S01E01-SEL-001-S188",
-            "DM-BODYGUARD-S01E01-SEL-001-S189",
-            "DM-BODYGUARD-S01E01-SEL-001-S190",
-            "DM-BODYGUARD-S01E01-SEL-001-S191",
-            "DM-BODYGUARD-S01E01-SEL-001-S192",
-            "DM-BODYGUARD-S01E01-SEL-001-S193",
-            "DM-BODYGUARD-S01E01-SEL-001-S194",
-            "DM-BODYGUARD-S01E01-SEL-001-S195",
-            "DM-BODYGUARD-S01E01-SEL-001-S196",
-            "DM-BODYGUARD-S01E01-SEL-001-S197",
-            "DM-BODYGUARD-S01E01-SEL-001-S198",
-            "DM-BODYGUARD-S01E01-SEL-001-S199",
-            "DM-BODYGUARD-S01E01-SEL-001-S200",
-            "DM-BODYGUARD-S01E01-SEL-001-S201",
-            "DM-BODYGUARD-S01E01-SEL-001-S202",
-            "DM-BODYGUARD-S01E01-SEL-001-S203",
-            "DM-BODYGUARD-S01E01-SEL-001-S204",
-            "DM-BODYGUARD-S01E01-SEL-001-S205",
-            "DM-BODYGUARD-S01E01-SEL-001-S206",
-            "DM-BODYGUARD-S01E01-SEL-001-S207",
-            "DM-BODYGUARD-S01E01-SEL-001-S208",
-            "DM-BODYGUARD-S01E01-SEL-001-S209",
-            "DM-BODYGUARD-S01E01-SEL-001-S210",
-            "DM-BODYGUARD-S01E01-SEL-001-S211"
-          ],
-          "status": "VERIFIED",
-          "work_id": "BODYGUARD-S01E01"
-        }
-      ],
+      "supporting_relations": [],
       "unknown_dependencies": {
-        "audio": false,
-        "functional_roles": false,
-        "natural_scene_boundary": false,
+        "audio": true,
+        "functional_roles": true,
+        "natural_scene_boundary": true,
         "scene_problem": false
       }
     },
@@ -21798,22 +21605,21 @@
       },
       "counterexamples": [
         {
-          "counterexample_id": "EXH-CTR-AFTERMATH-DWP",
-          "evidence_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
-          "notes": "A required shared task still in progress supersedes a separate aftermath allocation and must remain visible.",
+          "counterexample_id": "EXH-CTR-AFTERMATH-AP13",
+          "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
+          "notes": "The visible result is immediately superseded by a required distributed next action, so separate aftermath coverage would obscure the active task.",
           "relation": "NARROWS",
-          "review_id": "EXH-CTR-AFTERMATH-DWP-REVIEW",
-          "review_ref": "research/validation/relation-reviews/EXH-CTR-AFTERMATH-DWP.json",
+          "review_id": "EXH-CTR-AFTERMATH-AP13-REVIEW",
+          "review_ref": "research/validation/relation-reviews/EXH-CTR-AFTERMATH-AP13.json",
           "review_status": "ROOT_VIDEO_VERIFIED",
           "same_trigger_status": "VERIFIED_SAME_TRIGGER",
-          "source_candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C04-END-ON-TERMINAL-OWNER-WHILE-BACKGROUND-TASK-CONTINUES",
+          "source_candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C04-DEMONSTRATION-TO-DISTRIBUTED-WORK",
           "source_refs": [
-            "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S024",
-            "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S025",
-            "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S026"
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011",
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S012"
           ],
           "status": "VERIFIED",
-          "work_id": "THE-DEVIL-WEARS-PRADA-2006"
+          "work_id": "APOLLO-13-1995"
         }
       ],
       "family_assignment_status": "ROOT_REVIEWED_TEXTUAL_CLUSTER",
@@ -22027,7 +21833,7 @@
         },
         {
           "evidence_id": "CHERNOBYL-S01E05-HEARING-RECON-001",
-          "notes": "Another work redirects post-peak coverage to the stable accountability container needed by the next action.",
+          "notes": "Visible large-scale states, an intervening process-room return and the formal-room re-establishment form one reviewed edit chain; the post-peak directing function remains an inference bound to those pictures.",
           "relation": "SUPPORTS",
           "relation_id": "EXH-REL-AFTERMATH-CHERNOBYL",
           "review_id": "EXH-REL-AFTERMATH-CHERNOBYL-REVIEW",
@@ -22036,6 +21842,25 @@
           "same_trigger_status": "VERIFIED_SAME_TRIGGER",
           "source_candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-RETURN-TO-FORMAL-ROOM-AFTER-PEAK-004",
           "source_refs": [
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S170",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S171",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S172",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S173",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S174",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S175",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S176",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S177",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S178",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S179",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S180",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S181",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S182",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S183",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S184",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S185",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S186",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S187",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S188",
             "CHERNOBYL-S01E05-HEARING-RECON-001-S189",
             "CHERNOBYL-S01E05-HEARING-RECON-001-S190",
             "CHERNOBYL-S01E05-HEARING-RECON-001-S191",
@@ -22540,29 +22365,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "object_state_not_required"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+        "runtime_effect_key": null,
         "source_refs": [
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S019",
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S020",
@@ -22570,7 +22393,7 @@
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S023",
           "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S025"
         ],
-        "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "DIALOGUE_POWER_TRANSFER",
@@ -23588,34 +23411,32 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "object_state_not_required"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+        "runtime_effect_key": null,
         "source_refs": [
           "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S017",
           "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-S091"
         ],
-        "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "RELATIONSHIP_FRACTURE",
@@ -24113,29 +23934,27 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "COUNTEREXAMPLE",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
         "surface_copy_allowed": false
       },
       "runtime_integration": {
-        "boundary_signal_ids": [
-          "object_state_not_required"
-        ],
-        "evidence_gap_id": null,
-        "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "boundary_signal_ids": [],
+        "evidence_gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-TLOU-BEDROOM-LOCAL-001"
         ],
-        "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+        "runtime_effect_key": null,
         "source_refs": [
           "TLOU-BEDROOM-LOCAL-001-S005",
           "TLOU-BEDROOM-LOCAL-001-S006",
@@ -24148,7 +23967,7 @@
           "TLOU-BEDROOM-LOCAL-001-S013",
           "TLOU-BEDROOM-LOCAL-001-S014"
         ],
-        "target_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "RELATIONSHIP_FRACTURE",
@@ -26241,12 +26060,12 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
@@ -26254,19 +26073,39 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "SUPPORTING_EVIDENCE",
+        "evidence_gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-WIRE-S01E04-OLD-CASES-001"
         ],
-        "runtime_effect_key": "SUPPORT:DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+        "runtime_effect_key": null,
         "source_refs": [
           "WIRE-S01E04-OLD-CASES-001-S007",
-          "WIRE-S01E04-OLD-CASES-001-S038"
+          "WIRE-S01E04-OLD-CASES-001-S008",
+          "WIRE-S01E04-OLD-CASES-001-S009",
+          "WIRE-S01E04-OLD-CASES-001-S010",
+          "WIRE-S01E04-OLD-CASES-001-S011",
+          "WIRE-S01E04-OLD-CASES-001-S012",
+          "WIRE-S01E04-OLD-CASES-001-S013",
+          "WIRE-S01E04-OLD-CASES-001-S014",
+          "WIRE-S01E04-OLD-CASES-001-S015",
+          "WIRE-S01E04-OLD-CASES-001-S016",
+          "WIRE-S01E04-OLD-CASES-001-S017",
+          "WIRE-S01E04-OLD-CASES-001-S018",
+          "WIRE-S01E04-OLD-CASES-001-S019",
+          "WIRE-S01E04-OLD-CASES-001-S020",
+          "WIRE-S01E04-OLD-CASES-001-S021",
+          "WIRE-S01E04-OLD-CASES-001-S022",
+          "WIRE-S01E04-OLD-CASES-001-S024",
+          "WIRE-S01E04-OLD-CASES-001-S025",
+          "WIRE-S01E04-OLD-CASES-001-S037",
+          "WIRE-S01E04-OLD-CASES-001-S038",
+          "WIRE-S01E04-OLD-CASES-001-S039",
+          "WIRE-S01E04-OLD-CASES-001-S040"
         ],
-        "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "PROCEDURAL_COMPETENCE",
@@ -26432,12 +26271,12 @@
           "Within-source, transfer and execution confidence remain UNKNOWN.",
           "No unrelated same-trigger verified counterexample is registered."
         ],
-        "status": "SINGLE_WORK_CANDIDATE",
+        "status": "EVIDENCE_GAP_PENDING",
         "unknown_dependency_present": true,
         "verified_same_trigger_counterexample_count": 0,
         "verified_support_work_count": 1
       },
-      "relation_to_family": "SUPPORTS",
+      "relation_to_family": "NARROWS",
       "rights_boundary": {
         "evidence_lineage_only": true,
         "runtime_authorized": false,
@@ -26445,14 +26284,14 @@
       },
       "runtime_integration": {
         "boundary_signal_ids": [],
-        "evidence_gap_id": null,
-        "final_status": "SUPPORTING_EVIDENCE",
+        "evidence_gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
+        "final_status": "EVIDENCE_GAP_PENDING",
         "merged_into_candidate_id": null,
         "rejection_reason_code": null,
         "review_ids": [
           "EXHAUSTIVE-PICTURE-WIRE-S01E04-OLD-CASES-001"
         ],
-        "runtime_effect_key": "SUPPORT:DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+        "runtime_effect_key": null,
         "source_refs": [
           "WIRE-S01E04-OLD-CASES-001-S023",
           "WIRE-S01E04-OLD-CASES-001-S024",
@@ -26486,7 +26325,7 @@
           "WIRE-S01E04-OLD-CASES-001-S059",
           "WIRE-S01E04-OLD-CASES-001-S060"
         ],
-        "target_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+        "target_rule_id": null
       },
       "scene_problem": {
         "lineage_label": "PROCEDURAL_COMPETENCE",

@@ -172,7 +172,7 @@
         "director_decision", "coverage", "blocking", "pacing", "edit_logic",
         "continuity", "ai_risk", "failure_modes", "fallback", "confidence",
         "supporting_relations", "counterexample", "positive_forward_test_id",
-        "boundary_forward_test_id", "selection_rank", "audio_dependency",
+        "boundary_forward_test_id", "designated_boundary_signal_id", "selection_rank", "audio_dependency",
         "runtime_authorized", "surface_copy_allowed"
       ],
       "properties": {
@@ -216,6 +216,7 @@
         "counterexample": {"$ref": "#/$defs/runtimeRelation"},
         "positive_forward_test_id": {"type": "string", "minLength": 1},
         "boundary_forward_test_id": {"type": "string", "minLength": 1},
+        "designated_boundary_signal_id": {"type": "string", "minLength": 1},
         "selection_rank": {"type": "integer", "minimum": 1},
         "audio_dependency": {"type": "boolean", "const": false},
         "runtime_authorized": {"type": "boolean", "const": true},

@@ -1,9 +1,9 @@
 {
-  "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
-  "canonical_rule_family": "OBJECT-STATE-AND-CUSTODY",
-  "rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+  "candidate_rule_id": null,
+  "canonical_rule_family": null,
+  "rule_id": null,
   "schema_version": "forward-test-result/0.1",
   "status": "HUMAN_REVIEW_PENDING",
   "test_case_id": "ORIGINAL-REFERENT-COMPARISON",
-  "test_mode": "POSITIVE"
+  "test_mode": "NO_MATCH_PROBE"
 }

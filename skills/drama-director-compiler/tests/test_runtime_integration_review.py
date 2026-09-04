@@ -126,10 +126,19 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
         source_review["moving_image_reviewed_shot_ids"] = []
         self.assertIn("INTEGRATION-FINAL-MOVING-REVIEW", issue_codes(self.validate_copy(review)))
 
-    def test_final_disposition_cannot_swap_to_an_unbound_reviewed_shot(self) -> None:
+    def test_final_disposition_cannot_swap_away_from_functional_role_refs(self) -> None:
         review = copy.deepcopy(self.review)
-        final = next(item for item in review["candidate_dispositions"] if item["final_status"] == "POSITIVE_RUNTIME_RULE")
-        source_review = next(item for item in review["evidence_reviews"] if item["review_id"] == final["review_ids"][0])
+        reviews = {item["review_id"]: item for item in review["evidence_reviews"]}
+        final = next(
+            item
+            for item in review["candidate_dispositions"]
+            if item["final_status"] == "POSITIVE_RUNTIME_RULE"
+            and any(
+                shot["shot_id"] not in item["source_refs"]
+                for shot in reviews[item["review_ids"][0]]["reviewed_shots"]
+            )
+        )
+        source_review = reviews[final["review_ids"][0]]
         replacement = next(
             item["shot_id"]
             for item in source_review["reviewed_shots"]
@@ -138,12 +147,22 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
         final["source_refs"] = [replacement]
         spec = next(item for item in review["runtime_rule_specs"] if item["candidate_rule_id"] == final["candidate_rule_id"])
         spec["source_refs"] = [replacement]
-        self.assertIn("INTEGRATION-CANDIDATE-CLAIM-REF", issue_codes(self.validate_copy(review)))
+        self.assertIn("INTEGRATION-FUNCTIONAL-ROLE-REF", issue_codes(self.validate_copy(review)))
 
     def test_supplemental_context_cannot_replace_canonical_candidate_lineage(self) -> None:
         review = copy.deepcopy(self.review)
-        final = next(item for item in review["candidate_dispositions"] if item["final_status"] == "POSITIVE_RUNTIME_RULE")
-        source_review = next(item for item in review["evidence_reviews"] if item["review_id"] == final["review_ids"][0])
+        reviews = {item["review_id"]: item for item in review["evidence_reviews"]}
+        final = next(
+            item
+            for item in review["candidate_dispositions"]
+            if item["final_status"] == "POSITIVE_RUNTIME_RULE"
+            and any(
+                shot_id
+                not in self.candidate_by_id[item["candidate_rule_id"]]["source"]["evidence_shot_ids"]
+                for shot_id in reviews[item["review_ids"][0]]["moving_image_reviewed_shot_ids"]
+            )
+        )
+        source_review = reviews[final["review_ids"][0]]
         canonical_refs = set(self.candidate_by_id[final["candidate_rule_id"]]["source"]["evidence_shot_ids"])
         replacement = next(
             shot_id
@@ -324,6 +343,15 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
         counterexample["work_id"] = "FOREIGN-WORK"
         self.assertIn(
             "INTEGRATION-COUNTEREXAMPLE-RELATION-BINDING",
+            issue_codes(self.validate_copy(review)),
+        )
+
+    def test_designated_counterexample_signal_must_match_evidence_and_forward_package(self) -> None:
+        review = copy.deepcopy(self.review)
+        spec = review["runtime_rule_specs"][0]
+        spec["designated_boundary_signal_id"] = "UNREVIEWED-BOUNDARY"
+        self.assertIn(
+            "INTEGRATION-DESIGNATED-BOUNDARY-SIGNAL",
             issue_codes(self.validate_copy(review)),
         )
 

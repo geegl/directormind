@@ -3,14 +3,11 @@
   "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
   "work_id": "APOLLO-13-1995",
   "scene_problem": {
-    "primary": "PROCEDURAL_COMPETENCE",
+    "primary": "LEGACY_SCENE_PROBLEM",
     "secondary": [],
-    "status": "INFERRED",
-    "source_refs": [
-      "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010",
-      "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
-    ],
-    "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown."
+    "status": "UNKNOWN",
+    "source_refs": [],
+    "notes": "The legacy primary label PROCEDURAL_COMPETENCE is retained only as non-operational lineage and was not proved by structural conversion."
   },
   "scene_unit_type": "CONTIGUOUS_EDITORIAL_SEQUENCE",
   "boundary_status": "BOTH_INTERNAL_SELECTED",
@@ -2384,18 +2381,7 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [
-        {
-          "appearance_id": "COMPARISON-FIELD",
-          "functional_role": "comparison_field",
-          "status": "INFERRED",
-          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
-          "appearance_track_id": null,
-          "source_refs": [
-            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S010"
-          ]
-        }
-      ],
+      "abstract_role_labels": [],
       "blocking": {
         "claim_id": "S010-BLOCK",
         "status": "INFERRED",
@@ -2631,18 +2617,7 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [
-        {
-          "appearance_id": "COMPARISON-RELATION",
-          "functional_role": "comparison_relation",
-          "status": "INFERRED",
-          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
-          "appearance_track_id": null,
-          "source_refs": [
-            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-S011"
-          ]
-        }
-      ],
+      "abstract_role_labels": [],
       "blocking": {
         "claim_id": "S011-BLOCK",
         "status": "INFERRED",
@@ -3418,7 +3393,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "audio_dependency": false,
+      "audio_dependency": true,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -3459,8 +3434,7 @@
       "counterexample_ids": [],
       "source_method_ids": [
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-LEGACY-PICTURE-REVIEW",
-        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-STRUCTURAL-CONVERSION",
-        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-METHOD-STRUCTURAL-CONVERSION"
       ],
       "evidence_scene_ids": [
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001"
@@ -3578,6 +3552,7 @@
       "blocks_rule_ids": [
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C01-ASSESSMENT-RECEIVER-TO-NEW-ROOM-ACTION",
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C02-SOURCED-MATERIAL-FIELD-BEFORE-SELECTION",
+        "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C03-SIMULTANEOUS-SHAPE-RELATION",
         "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C04-DEMONSTRATION-TO-DISTRIBUTED-WORK"
       ]
     },
@@ -3612,7 +3587,6 @@
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
     "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-    "8 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
-    "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
+    "8 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review."
   ]
 }

@@ -44,5 +44,5 @@
   "selection_count": 0,
   "structural_status": "PASS",
   "test_case_id": "ORIGINAL-GEOMETRY-ALREADY-REGISTERED",
-  "test_mode": "BOUNDARY_OR_NON_APPLICABLE"
+  "test_mode": "NO_MATCH_PROBE"
 }

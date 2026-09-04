@@ -1,9 +1,9 @@
 {
-  "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C01-REGISTER-ROOM-AXIS-BEFORE-PROXIMITY",
-  "canonical_rule_family": "PROXIMITY-AND-RELATION-GEOMETRY",
-  "rule_id": "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY",
+  "candidate_rule_id": null,
+  "canonical_rule_family": null,
+  "rule_id": null,
   "schema_version": "forward-test-result/0.1",
   "status": "HUMAN_REVIEW_PENDING",
   "test_case_id": "ORIGINAL-INITIAL-GEOMETRY-BEFORE-PROXIMITY",
-  "test_mode": "POSITIVE"
+  "test_mode": "NO_MATCH_PROBE"
 }

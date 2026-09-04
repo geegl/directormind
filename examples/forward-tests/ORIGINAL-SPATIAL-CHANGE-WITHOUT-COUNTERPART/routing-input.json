@@ -42,6 +42,7 @@
   "routing_signals": [
     "material_spatial_change",
     "counterpart_relation_context_locked",
+    "counterpart_absent_at_changed_endpoint",
     "counterpart_relation_not_required"
   ],
   "scene_problem": {

@@ -1097,6 +1097,29 @@ def _apply_integration_review(evidence: dict[str, Any]) -> None:
         }
     )
 
+    # The exhaustive review may expand a legacy candidate's Shot lineage after
+    # reopening additional intervals from the same canonical scene. Preserve
+    # that fresh, scene-local authority in the generated canonical candidate so
+    # downstream builders never rely on a stale legacy subset.
+    disposition_by_candidate = {
+        item["candidate_rule_id"]: item
+        for item in review_data.get("candidate_dispositions", [])
+        if item.get("evidence_id") == evidence["evidence_id"]
+    }
+    reviewed_set = set(reviewed_shot_ids)
+    for rule in evidence["candidate_rules"]:
+        disposition = disposition_by_candidate.get(rule["candidate_rule_id"])
+        if disposition is None:
+            continue
+        disposition_refs = disposition.get("source_refs", [])
+        if not set(disposition_refs).issubset(reviewed_set):
+            raise ValueError(
+                f"runtime disposition cites unreviewed Shot IDs for {rule['candidate_rule_id']}"
+            )
+        rule["evidence_shot_ids"] = list(
+            dict.fromkeys([*rule["evidence_shot_ids"], *disposition_refs])
+        )
+
     specs = [
         item
         for item in review_data.get("runtime_rule_specs", [])

@@ -300,49 +300,32 @@
     {
       "boundary_for_family_ids": [],
       "boundary_for_rule_ids": [],
-      "changed_director_dimensions": [
-        "COVERAGE",
-        "BLOCKING",
-        "PACING",
-        "EDIT"
-      ],
+      "changed_director_dimensions": [],
       "coverage_tags": [
         "PROCEDURE_SUCCESS_AND_FAILURE"
       ],
       "expected_rejected_rule_id": null,
       "expected_rejection_reason_codes": [],
-      "expected_routing_status": "SELECTED",
-      "expected_selected_rule_ids": [
-        "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
-      ],
-      "expected_selection_count": 1,
+      "expected_routing_status": "NO_APPLICABLE_RULE",
+      "expected_selected_rule_ids": [],
+      "expected_selection_count": 0,
       "human_review_status": "HUMAN_REVIEW_PENDING",
       "package_path": "examples/forward-tests/ORIGINAL-REFERENT-COMPARISON",
-      "positive_for_family_ids": [
-        "OBJECT-STATE-AND-CUSTODY"
-      ],
-      "positive_for_rule_ids": [
-        "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
-      ],
+      "positive_for_family_ids": [],
+      "positive_for_rule_ids": [],
       "scene_problem": "PROCEDURAL_COMPETENCE",
       "test_case_id": "ORIGINAL-REFERENT-COMPARISON",
-      "test_mode": "POSITIVE"
+      "test_mode": "NO_MATCH_PROBE"
     },
     {
-      "boundary_for_family_ids": [
-        "OBJECT-STATE-AND-CUSTODY"
-      ],
-      "boundary_for_rule_ids": [
-        "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
-      ],
+      "boundary_for_family_ids": [],
+      "boundary_for_rule_ids": [],
       "changed_director_dimensions": [],
       "coverage_tags": [
         "PROCEDURE_SUCCESS_AND_FAILURE"
       ],
-      "expected_rejected_rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
-      "expected_rejection_reason_codes": [
-        "NOT_APPLICABLE_MATCH"
-      ],
+      "expected_rejected_rule_id": null,
+      "expected_rejection_reason_codes": [],
       "expected_routing_status": "NO_APPLICABLE_RULE",
       "expected_selected_rule_ids": [],
       "expected_selection_count": 0,
@@ -352,7 +335,7 @@
       "positive_for_rule_ids": [],
       "scene_problem": "PROCEDURAL_COMPETENCE",
       "test_case_id": "ORIGINAL-COMPARISON-NOT-REQUIRED",
-      "test_mode": "BOUNDARY_OR_NON_APPLICABLE"
+      "test_mode": "NO_MATCH_PROBE"
     },
     {
       "boundary_for_family_ids": [],
@@ -397,48 +380,32 @@
     {
       "boundary_for_family_ids": [],
       "boundary_for_rule_ids": [],
-      "changed_director_dimensions": [
-        "COVERAGE",
-        "BLOCKING",
-        "EDIT"
-      ],
+      "changed_director_dimensions": [],
       "coverage_tags": [
         "PROCEDURE_SUCCESS_AND_FAILURE"
       ],
       "expected_rejected_rule_id": null,
       "expected_rejection_reason_codes": [],
-      "expected_routing_status": "SELECTED",
-      "expected_selected_rule_ids": [
-        "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
-      ],
-      "expected_selection_count": 1,
+      "expected_routing_status": "NO_APPLICABLE_RULE",
+      "expected_selected_rule_ids": [],
+      "expected_selection_count": 0,
       "human_review_status": "HUMAN_REVIEW_PENDING",
       "package_path": "examples/forward-tests/ORIGINAL-OBJECT-CUSTODY-CHECKPOINTS",
-      "positive_for_family_ids": [
-        "OBJECT-STATE-AND-CUSTODY"
-      ],
-      "positive_for_rule_ids": [
-        "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
-      ],
+      "positive_for_family_ids": [],
+      "positive_for_rule_ids": [],
       "scene_problem": "PROCEDURAL_COMPETENCE",
       "test_case_id": "ORIGINAL-OBJECT-CUSTODY-CHECKPOINTS",
-      "test_mode": "POSITIVE"
+      "test_mode": "NO_MATCH_PROBE"
     },
     {
-      "boundary_for_family_ids": [
-        "OBJECT-STATE-AND-CUSTODY"
-      ],
-      "boundary_for_rule_ids": [
-        "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
-      ],
+      "boundary_for_family_ids": [],
+      "boundary_for_rule_ids": [],
       "changed_director_dimensions": [],
       "coverage_tags": [
         "PROCEDURE_SUCCESS_AND_FAILURE"
       ],
-      "expected_rejected_rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
-      "expected_rejection_reason_codes": [
-        "NOT_APPLICABLE_MATCH"
-      ],
+      "expected_rejected_rule_id": null,
+      "expected_rejection_reason_codes": [],
       "expected_routing_status": "NO_APPLICABLE_RULE",
       "expected_selected_rule_ids": [],
       "expected_selection_count": 0,
@@ -448,7 +415,7 @@
       "positive_for_rule_ids": [],
       "scene_problem": "PROCEDURAL_COMPETENCE",
       "test_case_id": "ORIGINAL-OBJECT-SECONDARY-HANDLING",
-      "test_mode": "BOUNDARY_OR_NON_APPLICABLE"
+      "test_mode": "NO_MATCH_PROBE"
     },
     {
       "boundary_for_family_ids": [],
@@ -558,48 +525,32 @@
     {
       "boundary_for_family_ids": [],
       "boundary_for_rule_ids": [],
-      "changed_director_dimensions": [
-        "COVERAGE",
-        "BLOCKING",
-        "EDIT"
-      ],
+      "changed_director_dimensions": [],
       "coverage_tags": [
         "NON_CONTACT_RELATION_TENSION"
       ],
       "expected_rejected_rule_id": null,
       "expected_rejection_reason_codes": [],
-      "expected_routing_status": "SELECTED",
-      "expected_selected_rule_ids": [
-        "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY"
-      ],
-      "expected_selection_count": 1,
+      "expected_routing_status": "NO_APPLICABLE_RULE",
+      "expected_selected_rule_ids": [],
+      "expected_selection_count": 0,
       "human_review_status": "HUMAN_REVIEW_PENDING",
       "package_path": "examples/forward-tests/ORIGINAL-INITIAL-GEOMETRY-BEFORE-PROXIMITY",
-      "positive_for_family_ids": [
-        "PROXIMITY-AND-RELATION-GEOMETRY"
-      ],
-      "positive_for_rule_ids": [
-        "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY"
-      ],
+      "positive_for_family_ids": [],
+      "positive_for_rule_ids": [],
       "scene_problem": "ROMANTIC_PROXIMITY",
       "test_case_id": "ORIGINAL-INITIAL-GEOMETRY-BEFORE-PROXIMITY",
-      "test_mode": "POSITIVE"
+      "test_mode": "NO_MATCH_PROBE"
     },
     {
-      "boundary_for_family_ids": [
-        "PROXIMITY-AND-RELATION-GEOMETRY"
-      ],
-      "boundary_for_rule_ids": [
-        "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY"
-      ],
+      "boundary_for_family_ids": [],
+      "boundary_for_rule_ids": [],
       "changed_director_dimensions": [],
       "coverage_tags": [
         "NON_CONTACT_RELATION_TENSION"
       ],
-      "expected_rejected_rule_id": "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY",
-      "expected_rejection_reason_codes": [
-        "NOT_APPLICABLE_MATCH"
-      ],
+      "expected_rejected_rule_id": null,
+      "expected_rejection_reason_codes": [],
       "expected_routing_status": "NO_APPLICABLE_RULE",
       "expected_selected_rule_ids": [],
       "expected_selection_count": 0,
@@ -609,7 +560,7 @@
       "positive_for_rule_ids": [],
       "scene_problem": "ROMANTIC_PROXIMITY",
       "test_case_id": "ORIGINAL-GEOMETRY-ALREADY-REGISTERED",
-      "test_mode": "BOUNDARY_OR_NON_APPLICABLE"
+      "test_mode": "NO_MATCH_PROBE"
     },
     {
       "boundary_for_family_ids": [],
@@ -743,24 +694,23 @@
       "test_mode": "NO_MATCH_PROBE"
     }
   ],
-  "completed_boundary_cases": 11,
-  "completed_positive_cases": 11,
+  "completed_boundary_cases": 8,
+  "completed_positive_cases": 8,
   "grammar_path": "research/grammar/director_grammar_v0.2.json",
   "missing_family_ids": [],
   "missing_rule_ids": [],
-  "promotion_ready_family_count": 9,
+  "promotion_ready_family_count": 8,
   "promotion_ready_family_ids": [
     "ACTION-CAUSAL-CHAIN",
     "AFTERMATH-AND-TERMINAL-STATE",
     "AXIS-AND-COVERAGE-GRAMMAR",
     "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
-    "OBJECT-STATE-AND-CUSTODY",
     "PROXIMITY-AND-RELATION-GEOMETRY",
     "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
     "SPATIAL-REGISTRATION-AND-RESET",
     "THRESHOLD-AND-ROUTE-CONTINUITY"
   ],
-  "required_positive_boundary_pairs": 11,
+  "required_positive_boundary_pairs": 8,
   "required_scene_problem_coverage": [
     "TWO_PARTY_POWER_TRANSFER",
     "MULTI_PARTICIPANT_PUBLIC_REVELATION",

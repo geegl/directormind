@@ -30,13 +30,13 @@
       "path": "EP01-SC01-SH03"
     }
   ],
-  "positive_selection_claimed": true,
+  "positive_selection_claimed": false,
   "publication_authorized": false,
   "routing_error_count": 0,
-  "routing_status": "SELECTED",
+  "routing_status": "NO_APPLICABLE_RULE",
   "schema_version": "forward-test-validation/0.1",
-  "selection_count": 1,
+  "selection_count": 0,
   "structural_status": "PASS",
   "test_case_id": "ORIGINAL-OBJECT-CUSTODY-CHECKPOINTS",
-  "test_mode": "POSITIVE"
+  "test_mode": "NO_MATCH_PROBE"
 }

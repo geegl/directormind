@@ -83,18 +83,12 @@
           "level": "warning",
           "message": "8 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
           "path": "$.validation_warnings[2]"
-        },
-        {
-          "code": "EVIDENCE-DECLARED-WARNING",
-          "level": "warning",
-          "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
-          "path": "$.validation_warnings[3]"
         }
       ],
       "passed": true,
       "path": "research/evidence/apollo-13/APOLLO_13_CONSTRAINED_MATERIAL_HANDOFF_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 12,
-      "warning_count": 4
+      "warning_count": 3
     },
     {
       "candidate_rule_count": 4,
@@ -919,7 +913,7 @@
   "total_scenes": 31,
   "total_shots": 2343,
   "validator_version": "scene-evidence-validator/0.1",
-  "warning_count": 89,
+  "warning_count": 88,
   "warnings": [
     {
       "code": "EVIDENCE-DECLARED-WARNING",
@@ -976,13 +970,6 @@
       "level": "warning",
       "message": "8 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
       "path": "$.validation_warnings[2]"
-    },
-    {
-      "code": "EVIDENCE-DECLARED-WARNING",
-      "evidence_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
-      "level": "warning",
-      "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
-      "path": "$.validation_warnings[3]"
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",

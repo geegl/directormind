@@ -122,6 +122,61 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
                 self.assertEqual(set(lineage["candidate_rule_ids"]), expected_candidates)
                 self.assertEqual(set(lineage["evidence_shot_ids"]), expected_shots)
 
+    def test_independent_audit_replacements_are_bound_and_false_rules_stay_withdrawn(self) -> None:
+        specs = {item["rule_id"]: item for item in self.review["runtime_rule_specs"]}
+        dispositions = {
+            item["candidate_rule_id"]: item
+            for item in self.review["candidate_dispositions"]
+        }
+        withdrawn_rule_ids = {
+            "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+            "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
+            "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY",
+        }
+        self.assertTrue(withdrawn_rule_ids.isdisjoint(specs))
+        self.assertTrue(
+            withdrawn_rule_ids.isdisjoint(
+                {item["rule_id"] for item in self.grammar["rules"]}
+            )
+        )
+
+        action = specs["DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN"]
+        self.assertEqual(
+            action["counterexample"]["source_candidate_rule_id"],
+            "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-APERTURE-EVENT-BEFORE-GROSS-BODY-RESPONSE-002",
+        )
+        self.assertEqual(
+            action["designated_boundary_signal_id"],
+            "continuous_view_preserves_action_chain",
+        )
+
+        aftermath = specs["DR-AFTERMATH-BY-NEXT-ACTION"]
+        self.assertEqual(
+            aftermath["counterexample"]["source_candidate_rule_id"],
+            "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C04-DEMONSTRATION-TO-DISTRIBUTED-WORK",
+        )
+        self.assertEqual(
+            aftermath["designated_boundary_signal_id"],
+            "immediate_next_action_supersedes_aftermath",
+        )
+
+        chernobyl_id = (
+            "CHERNOBYL-S01E05-HEARING-RECON-001-"
+            "CHERNOBYL-CAND-RETURN-TO-FORMAL-ROOM-AFTER-PEAK-004"
+        )
+        chernobyl = dispositions[chernobyl_id]
+        expected_refs = {
+            f"CHERNOBYL-S01E05-HEARING-RECON-001-S{index:03d}"
+            for index in range(170, 206)
+        }
+        self.assertEqual(set(chernobyl["source_refs"]), expected_refs)
+        support = next(
+            item
+            for item in aftermath["supporting_relations"]
+            if item["source_candidate_rule_id"] == chernobyl_id
+        )
+        self.assertEqual(set(support["source_refs"]), expected_refs)
+
     def test_each_rule_has_a_real_positive_and_blocking_boundary_package(self) -> None:
         cases = {item["test_case_id"]: item for item in self.forward_index["cases"]}
         for spec in self.review["runtime_rule_specs"]:
@@ -215,11 +270,11 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
         )
         self.assertEqual(
             sum(item["runtime_status"] == "PARTICIPATING" for item in family_results),
-            13,
+            12,
         )
         self.assertEqual(
             sum(item["runtime_status"] == "IN_PROGRESS" for item in family_results),
-            3,
+            4,
         )
 
     def test_checked_in_report_is_the_live_deterministic_report(self) -> None:

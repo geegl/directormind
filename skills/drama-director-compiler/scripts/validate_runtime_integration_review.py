@@ -20,6 +20,7 @@ EVIDENCE_ROOT = REPOSITORY_ROOT / "research" / "evidence"
 SOURCE_REGISTER_PATH = REPOSITORY_ROOT / "research" / "validation" / "CLOSED_CORPUS_33_STATUS.md"
 REPORT_PATH = REPOSITORY_ROOT / "research" / "validation" / "runtime-integration-validation.json"
 FORWARD_INDEX_PATH = REPOSITORY_ROOT / "examples" / "forward-tests" / "index.json"
+FORWARD_ROOT = REPOSITORY_ROOT / "examples" / "forward-tests"
 
 sys.path.insert(0, str(SCRIPT_DIR))
 from build_candidate_rule_index import classify_family  # noqa: E402
@@ -486,6 +487,13 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
                 f"runtime_rule_specs[{rule_index}].boundary_forward_test_id",
                 "Boundary forward test must exist, target this rule, and expect its guarded rejection.",
             )
+        designated_boundary_signal = spec.get("designated_boundary_signal_id")
+        try:
+            boundary_input = read_json(
+                FORWARD_ROOT / str(spec.get("boundary_forward_test_id")) / "routing-input.json"
+            )
+        except (OSError, ValueError, json.JSONDecodeError):
+            boundary_input = {}
         target_boundaries = [
             item
             for item in dispositions
@@ -571,6 +579,18 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
                 "INTEGRATION-COUNTEREXAMPLE-RELATION-BINDING",
                 f"runtime_rule_specs[{rule_index}].counterexample",
                 "Runtime counterexample candidate, work, evidence and Shots must exactly bind the reviewed boundary disposition.",
+            )
+        if (
+            counter_disposition is None
+            or designated_boundary_signal not in counter_disposition.get("boundary_signal_ids", [])
+            or designated_boundary_signal not in spec.get("routing", {}).get("not_applicable_if_any", [])
+            or designated_boundary_signal not in boundary_input.get("routing_signals", [])
+        ):
+            add_issue(
+                issues,
+                "INTEGRATION-DESIGNATED-BOUNDARY-SIGNAL",
+                f"runtime_rule_specs[{rule_index}].designated_boundary_signal_id",
+                "The designated evidence counterexample, runtime guard and paired boundary package must use the same reviewed signal.",
             )
         unrelated_support = any(
             candidate_by_id.get(item.get("candidate_rule_id"), ({}, {}, ""))[0].get("work_id")

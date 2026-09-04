@@ -50,6 +50,7 @@
     "relation_distance_change",
     "time_structure_locked",
     "shared_endpoint_required",
+    "distance_change_across_ellipsis",
     "elliptical_time_change"
   ],
   "scene_problem": {
