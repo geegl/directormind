@@ -127,9 +127,9 @@ immutable legacy ledger remains unchanged.
 
 - Structural `PASS` proves deterministic data binding and routing behavior,
   not product completion, creative quality or audience effect.
-- The independent missing, truncated and same-Shot substitution audio attacks
-  are rejected; 306/306 unit and CLI tests, all 25 repository checks and the
-  working-tree whitespace check pass.
+- The independent missing, truncated, same-Shot substitution and stale-free-text
+  audio attacks are rejected; 307/307 unit and CLI tests, all 25 repository
+  checks and the working-tree whitespace check pass.
 - Final-head GitHub CI and a new clean-checkout review remain required before
   this head can receive the final independent PASS.
 - The previous PR head passed CI and an independent 16-family review; those

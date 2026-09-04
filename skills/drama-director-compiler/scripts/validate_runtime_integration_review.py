@@ -521,6 +521,20 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
                 ]
                 if len(matches) != 1 or claim.get("claim") != matches[0].get("description"):
                     invalid_claim_observation_ids.append(observation_id)
+            candidate_free_text = "\n".join(
+                [
+                    *[text for text in item.get("observations", []) if isinstance(text, str)],
+                    *[text for text in item.get("inferences", []) if isinstance(text, str)],
+                    item.get("notes", "") if isinstance(item.get("notes"), str) else "",
+                ]
+            ).casefold()
+            free_text_audio_claims = [
+                observation.get("description")
+                for review_id in candidate_review_ids
+                for observation in audio_observations_by_review.get(review_id, {}).values()
+                if isinstance(observation.get("description"), str)
+                and observation.get("description").casefold() in candidate_free_text
+            ]
             if (
                 not selected_observation_ids
                 or unresolved_observation_ids
@@ -528,13 +542,14 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
                 or not audio_claims
                 or not _unique(claim_observation_ids)
                 or invalid_claim_observation_ids
+                or free_text_audio_claims
                 or set(selected_observation_ids) != set(claim_observation_ids)
             ):
                 add_issue(
                     issues,
                     "INTEGRATION-CANDIDATE-AUDIO-OBSERVATION-BINDING",
                     f"{path}.audio_observation_ids",
-                    "An audio-dependent final or corpus-gap disposition must bind each audio claim exactly to the same-review observation description it uses.",
+                    "An audio-dependent final or corpus-gap disposition must bind each audio claim exactly to its same-review observation; audition facts must not be copied into free text.",
                 )
         elif item.get("audio_observation_ids") or item.get("audio_claims"):
             add_issue(

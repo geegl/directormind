@@ -18,7 +18,7 @@ Status values: `TODO`, `IN_PROGRESS`, `VERIFIED_DONE`, `PARTIAL_EVIDENCE_GAP`, `
 | X12 | VERIFIED_DONE | Bind Grammar, routing result, changed dimensions and Director IR | Selected rule IDs exactly match Director IR Shot evidence IDs; each positive package changes Coverage, Blocking, Reaction, Pacing or Edit |
 | X13 | VERIFIED_DONE | Generate original positive and boundary packages for every positive rule | 7 positive, 7 boundary and 15 additional no-match packages; all 29 remain `HUMAN_REVIEW_PENDING` |
 | X14 | VERIFIED_DONE | Update final validation and STATE from live recomputation | Exhaustive report is structurally `PASS` with product phase `PARTIAL_EVIDENCE_GAP`; false `COMPLETE` and unfinished-existing-review labeling are rejected |
-| X15 | VERIFIED_DONE | Run focused tests, complete units, repository runner and PR diff check | The independent missing, truncated and same-Shot substitution audio attacks are rejected; 306/306 unit and CLI tests pass; the repository runner passes 25/25 checks and rebuilds the final report; working-tree whitespace check passes |
+| X15 | VERIFIED_DONE | Run focused tests, complete units, repository runner and PR diff check | The independent missing, truncated, same-Shot substitution and stale-free-text audio attacks are rejected; 307/307 unit and CLI tests pass; the repository runner passes 25/25 checks and rebuilds the final report; working-tree whitespace check passes |
 | X16 | IN_PROGRESS | Push new PR, wait for final-head CI, and run a clean-checkout family-by-family independent audit | The previous PR head passed CI and 16-family review; the new audio-evidence head still requires push, CI and an independent clean-checkout review; do not merge main |
 
 ## Current stop condition

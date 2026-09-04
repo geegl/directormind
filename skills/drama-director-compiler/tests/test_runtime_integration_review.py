@@ -461,6 +461,33 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
             issue_codes(self.validate_copy(review)),
         )
 
+    def test_audio_claim_cannot_leave_an_old_observation_in_free_text(self) -> None:
+        review = copy.deepcopy(self.review)
+        sound = next(
+            item for item in review["evidence_reviews"]
+            if item["evidence_id"] == "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+        )
+        observations = {
+            item["observation_id"]: item for item in sound["audio_observations"]
+        }
+        stagger = next(
+            item for item in review["candidate_dispositions"]
+            if item["candidate_rule_id"].endswith("STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003")
+        )
+        replacement = "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001"
+        stagger["audio_observation_ids"] = [replacement]
+        stagger["audio_claims"] = [{
+            "observation_id": replacement,
+            "claim": observations[replacement]["description"],
+        }]
+        stagger["notes"] += " " + observations[
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002"
+        ]["description"]
+        self.assertIn(
+            "INTEGRATION-CANDIDATE-AUDIO-OBSERVATION-BINDING",
+            issue_codes(self.validate_copy(review)),
+        )
+
     def test_rejected_candidate_cannot_claim_a_rule(self) -> None:
         review = copy.deepcopy(self.review)
         rejected = next((item for item in review["candidate_dispositions"] if item["final_status"] == "REJECTED_WITH_REASON"), None)
