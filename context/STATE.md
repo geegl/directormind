@@ -16,9 +16,9 @@ require direct human audition of exact intervals already present locally.
 Because review of existing material is unfinished, the product phase is not
 `PARTIAL_EVIDENCE_GAP` yet and must not be called complete.
 
-Root is the only repository writer. Read-only agents reviewed local picture
-material and the sound-evidence boundary but did not sign a final audit. No
-source media was added, deleted, moved, or committed. `main` remains unchanged.
+Root is the only repository writer. Three read-only agents completed the final
+16-family clean-checkout audit with no must-fix findings, and final-head CI
+passed. No source media changed or entered Git. `main` remains unchanged.
 
 ## Current counts
 
@@ -95,5 +95,5 @@ ownership, causality or edit intent by reading waveforms or transcripts. After
 that review, the phase can become `PARTIAL_EVIDENCE_GAP` if the 65 fixed-corpus
 gaps remain; all 16 families and 124 candidates still prevent `COMPLETE`.
 
-Run final checks, push PR #5, wait for CI, then obtain a clean-checkout
-all-family read-only audit. Do not merge `main`.
+Next: directly audition the four exact Sound of Metal intervals. Do not merge
+`main` or call the product goal complete.

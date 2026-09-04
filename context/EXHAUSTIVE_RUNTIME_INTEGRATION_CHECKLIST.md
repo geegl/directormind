@@ -19,7 +19,7 @@ Status values: `TODO`, `IN_PROGRESS`, `VERIFIED_DONE`, `PARTIAL_EVIDENCE_GAP`, `
 | X13 | VERIFIED_DONE | Generate original positive and boundary packages for every positive rule | 7 positive, 7 boundary and 15 additional no-match packages; all 29 remain `HUMAN_REVIEW_PENDING` |
 | X14 | VERIFIED_DONE | Update final validation and STATE from live recomputation | Exhaustive report is structurally `PASS` with product phase `IN_PROGRESS`; false `COMPLETE` and false evidence-gap labeling are rejected |
 | X15 | VERIFIED_DONE | Run focused tests, complete units, repository runner and PR diff check | 53 focused regressions pass; 294/294 unit and CLI tests pass; the repository runner passes 25/25 checks and rebuilds the final report; PR diff whitespace check passes |
-| X16 | IN_PROGRESS | Push new PR, wait for final-head CI, and run a clean-checkout family-by-family independent audit | Implementers cannot sign the final independent result; do not merge main |
+| X16 | VERIFIED_DONE | Push new PR, wait for final-head CI, and run a clean-checkout family-by-family independent audit | PR #5 final-head CI passes; three read-only reviewers covered all 16 families from a clean checkout and reported no must-fix findings; do not merge main |
 
 ## Current stop condition
 

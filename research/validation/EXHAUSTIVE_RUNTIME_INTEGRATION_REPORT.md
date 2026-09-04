@@ -111,13 +111,13 @@ immutable legacy ledger remains unchanged.
   not product completion, creative quality or audience effect.
 - The second-review repair passes 53 focused regressions, 294 unit and CLI
   tests, all 25 repository checks and the full PR diff whitespace check.
-- Final-head CI and a fresh clean-checkout review still require external
-  evidence after the repair is pushed.
+- Final-head GitHub CI passes. Three read-only reviewers covered all 16
+  families from a clean checkout and reported no must-fix findings.
 - All creative packages remain `HUMAN_REVIEW_PENDING`.
 - No generation, publication, deployment, source-media deletion or main-branch
   merge is authorized or performed.
-- Final-head CI and a clean-checkout family-by-family independent audit remain
-  required after the last implementation commit.
+- The independent result validates the declared `IN_PROGRESS` state; it does
+  not close the four direct-audio reviews or the 65 fixed-corpus evidence gaps.
 
 ## Rollback
 
