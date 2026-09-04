@@ -1,0 +1,57 @@
+{
+  "case_id": "ORIGINAL-SINGLE-OWNER-NO-ALTERNATION",
+  "dramatic_structure": {
+    "goal": "preserve one uninterrupted visible recount",
+    "objectives": [
+      "reach the verified decision endpoint"
+    ],
+    "obstacle": "the recount must remain continuously readable",
+    "stakes": "an early cut could hide a missed mark",
+    "subtext": "none asserted",
+    "tactic_change": "shared review becomes one-owner verification"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "stable_axis",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "Both reviewers remain on their established desk sides."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "visible_state_progression",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "Reviewer A alone recounts three marks and reaches the locked decision endpoint."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "performance_progression",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "Reviewer A alone owns the uninterrupted visible recount; Reviewer B has no simultaneous required action before it ends."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "stationary_pair_state_progression",
+    "stable_two_side_axis",
+    "single_performance_progression"
+  ],
+  "scene_problem": {
+    "primary": "DIALOGUE_POWER_TRANSFER",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "permit_review"
+  ],
+  "unknown_fact_types": []
+}

@@ -127,17 +127,17 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
         integration = json.loads(
             (REPO_ROOT / "research" / "grammar" / "runtime_integration.review.json").read_text(encoding="utf-8")
         )
-        positive_problems = {
-            next(
+        positive_problems: dict[str, str] = {}
+        for spec in integration["runtime_rule_specs"]:
+            evidence_id = next(
                 evidence["evidence_id"]
                 for evidence in converted
                 if any(
                     rule["candidate_rule_id"] == spec["candidate_rule_id"]
                     for rule in evidence["candidate_rules"]
                 )
-            ): spec["scene_problem"]
-            for spec in integration["runtime_rule_specs"]
-        }
+            )
+            positive_problems.setdefault(evidence_id, spec["scene_problem"])
         wave1_text_anchor_ids = {
             "MRR-S04E07-ACT-FOUR-VISUAL-001",
             "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",

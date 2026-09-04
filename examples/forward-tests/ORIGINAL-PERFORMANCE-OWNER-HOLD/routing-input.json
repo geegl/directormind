@@ -40,7 +40,6 @@
     "project_original": true
   },
   "routing_signals": [
-    "relation_already_registered",
     "single_performance_progression"
   ],
   "scene_problem": {

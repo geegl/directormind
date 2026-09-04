@@ -1,10 +1,9 @@
 {
   "candidate_required_story_facts": [
-    "The participant relation has already been visibly established.",
     "One project-original performance progression must remain continuously readable.",
     "No simultaneous action, object, safety, or receiver state is locked for the owner interval."
   ],
-  "candidate_trigger": "After the relation is registered, one uninterrupted visible performance progression is the principal locked fact and no concurrent action state must remain visible.",
+  "candidate_trigger": "One uninterrupted visible performance progression is the principal locked fact and no concurrent action, object, safety, or receiver state must remain visible.",
   "promotion_source_candidate_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C04-PROGRESSIVE-RELATION-REMOVAL-TO-HELD-SINGLES",
   "review_id": "DR-PERFORMANCE-OWNER-HOLD-ROUTING-REVIEW",
   "routing": {
@@ -14,14 +13,12 @@
       "simultaneous_required_action"
     ],
     "required_fact_types": [
-      "relation_state",
       "performance_progression"
     ],
     "scene_problems": [
       "INTERROGATION"
     ],
     "trigger_all_of": [
-      "relation_already_registered",
       "single_performance_progression"
     ],
     "trigger_any_of": []

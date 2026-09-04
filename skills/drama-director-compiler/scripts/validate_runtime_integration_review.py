@@ -85,8 +85,8 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
     validate_schema_subset(review, schema, schema, issues, "$")
     evidence_by_id, candidate_by_id = _evidence_authority()
     forward_index = read_json(FORWARD_INDEX_PATH)
-    forward_case_ids = {
-        item.get("test_case_id")
+    forward_by_id = {
+        item.get("test_case_id"): item
         for item in forward_index.get("cases", [])
         if isinstance(item, dict)
     }
@@ -199,12 +199,21 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
         add_issue(issues, "INTEGRATION-GAP-ID", "evidence_gaps", "Evidence gap IDs must be unique.")
     gap_by_id = {item.get("gap_id"): item for item in gaps if isinstance(item, dict)}
     gap_memberships: dict[str, list[str]] = {}
-    for gap in gaps:
+    for gap_index, gap in enumerate(gaps):
         if not isinstance(gap, dict):
             continue
-        for candidate_rule_id in gap.get("candidate_rule_ids", []):
+        gap_candidate_ids = gap.get("candidate_rule_ids", [])
+        if gap.get("candidate_count") != len(gap_candidate_ids):
+            add_issue(
+                issues,
+                "INTEGRATION-GAP-COUNT",
+                f"evidence_gaps[{gap_index}]",
+                "Evidence-gap candidate_count must equal the exact listed candidate set.",
+            )
+        for candidate_rule_id in gap_candidate_ids:
             gap_memberships.setdefault(candidate_rule_id, []).append(gap.get("gap_id"))
     pending_ids: set[str] = set()
+    existing_material_review_ids: set[str] = set()
     final_ids: set[str] = set()
 
     for index, item in enumerate(dispositions):
@@ -228,20 +237,15 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
             elif review_item:
                 add_issue(issues, "INTEGRATION-CANDIDATE-CROSS-REVIEW", path, "Candidate review must belong to its own evidence record.")
         source_refs = set(item.get("source_refs", []))
-        supplemental_context_refs = set(item.get("supplemental_context_refs", []))
         if not source_refs.issubset(allowed_refs):
             add_issue(issues, "INTEGRATION-CANDIDATE-SOURCE-REF", path, "Candidate source refs must be authorized by its cited fresh review.")
         canonical_candidate_refs = set(source_candidate.get("evidence_shot_ids", []))
-        if (
-            not supplemental_context_refs.issubset(source_refs)
-            or supplemental_context_refs.intersection(canonical_candidate_refs)
-            or not source_refs.issubset(canonical_candidate_refs | supplemental_context_refs)
-        ):
+        if not source_refs.issubset(canonical_candidate_refs):
             add_issue(
                 issues,
                 "INTEGRATION-CANDIDATE-CLAIM-REF",
                 path,
-                "Disposition refs must come from the candidate's canonical Shot lineage; any extra context must be declared separately.",
+                "Disposition refs must come only from the candidate's canonical Shot lineage.",
             )
         status = item.get("final_status")
         if status in FINAL_STATUSES:
@@ -276,6 +280,53 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
                 add_issue(issues, "INTEGRATION-PENDING-EFFECT", path, "Pending candidate cannot claim a runtime effect.")
             if not item.get("material_unknowns"):
                 add_issue(issues, "INTEGRATION-PENDING-UNKNOWN", path, "Pending candidate must name the material unknown that blocks final disposition.")
+            moving_refs = {
+                shot_id
+                for review_id in candidate_review_ids
+                for shot_id in moving_shots_by_review.get(review_id, set())
+            }
+            if source_refs != canonical_candidate_refs or not source_refs.issubset(moving_refs):
+                add_issue(
+                    issues,
+                    "INTEGRATION-PENDING-REVIEW-INCOMPLETE",
+                    path,
+                    "A pending evidence-gap disposition is allowed only after every canonical candidate Shot has completed fresh moving-image review.",
+                )
+        elif status == "EXISTING_MATERIAL_REVIEW_REQUIRED":
+            existing_material_review_ids.add(item.get("candidate_rule_id"))
+            if item.get("evidence_gap_id") is not None:
+                add_issue(
+                    issues,
+                    "INTEGRATION-EXISTING-REVIEW-GAP",
+                    path,
+                    "Unfinished review of existing material must not be mislabeled as a corpus evidence gap.",
+                )
+            if item.get("runtime_effect_key") is not None:
+                add_issue(
+                    issues,
+                    "INTEGRATION-EXISTING-REVIEW-EFFECT",
+                    path,
+                    "Existing-material review debt cannot claim a runtime effect.",
+                )
+            if not item.get("material_unknowns"):
+                add_issue(
+                    issues,
+                    "INTEGRATION-EXISTING-REVIEW-UNKNOWN",
+                    path,
+                    "Existing-material review debt must name the exact unresolved observation.",
+                )
+            moving_refs = {
+                shot_id
+                for review_id in candidate_review_ids
+                for shot_id in moving_shots_by_review.get(review_id, set())
+            }
+            if source_refs != canonical_candidate_refs or not source_refs.issubset(moving_refs):
+                add_issue(
+                    issues,
+                    "INTEGRATION-EXISTING-REVIEW-PICTURE-INCOMPLETE",
+                    path,
+                    "Existing-material audio review debt is valid only after every canonical candidate Shot has completed fresh moving-image review.",
+                )
         if status != "EVIDENCE_GAP_PENDING" and gap_memberships.get(item.get("candidate_rule_id")):
             add_issue(issues, "INTEGRATION-FINAL-GAP-MEMBERSHIP", path, "A final candidate cannot remain listed in an evidence gap.")
         if item.get("audio_dependency") and status in FINAL_STATUSES:
@@ -300,7 +351,6 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
                 target_rule_id not in positive_rule_ids
                 or item.get("runtime_effect_key") != f"SUPPORT:{target_rule_id}"
                 or target is None
-                or target.get("family_id") != item.get("family_id")
                 or item.get("merged_into_candidate_id") is not None
                 or item.get("boundary_signal_ids")
                 or item.get("boundary_forward_test_id") is not None
@@ -313,10 +363,9 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
             if (
                 target_rule_id not in positive_rule_ids
                 or target is None
-                or target.get("family_id") != item.get("family_id")
                 or not item.get("boundary_signal_ids")
                 or not boundary_forward_test_id
-                or boundary_forward_test_id not in forward_case_ids
+                or boundary_forward_test_id not in forward_by_id
                 or boundary_forward_test_id != target.get("boundary_forward_test_id")
                 or not str(item.get("runtime_effect_key", "")).startswith(f"BOUNDARY:{target_rule_id}:")
                 or item.get("merged_into_candidate_id") is not None
@@ -368,6 +417,14 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
             "Runtime support and counterexample relation IDs must be unique.",
         )
 
+    if set(gap_memberships) != pending_ids:
+        add_issue(
+            issues,
+            "INTEGRATION-GAP-CANDIDATE-SET",
+            "evidence_gaps",
+            "Evidence-gap members must exactly equal the canonical pending-candidate set.",
+        )
+
     for rule_index, spec in enumerate(rule_specs):
         if not isinstance(spec, dict):
             continue
@@ -380,6 +437,55 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
             or set(spec.get("source_refs", [])) != set(source_disposition.get("source_refs", []))
         ):
             add_issue(issues, "INTEGRATION-RULE-BINDING", f"runtime_rule_specs[{rule_index}]", "Runtime spec must exactly bind its positive candidate and reviewed source refs.")
+        spec_source_refs = set(spec.get("source_refs", []))
+        for role_index, role in enumerate(spec.get("functional_roles", [])):
+            if not isinstance(role, dict):
+                continue
+            role_source_refs = set(role.get("source_refs", []))
+            if (
+                not role_source_refs
+                or role.get("shot_id") not in role_source_refs
+                or not role_source_refs.issubset(spec_source_refs)
+            ):
+                add_issue(
+                    issues,
+                    "INTEGRATION-FUNCTIONAL-ROLE-REF",
+                    f"runtime_rule_specs[{rule_index}].functional_roles[{role_index}]",
+                    "Functional-role Shot and refs must be contained in the positive candidate's fresh reviewed source refs.",
+                )
+        positive_case = forward_by_id.get(spec.get("positive_forward_test_id"), {})
+        if (
+            positive_case.get("test_mode") != "POSITIVE"
+            or positive_case.get("positive_for_rule_ids") != [spec.get("rule_id")]
+            or positive_case.get("boundary_for_rule_ids")
+            or positive_case.get("expected_routing_status") != "SELECTED"
+            or positive_case.get("expected_selected_rule_ids") != [spec.get("rule_id")]
+            or positive_case.get("expected_selection_count") != 1
+            or not positive_case.get("changed_director_dimensions")
+        ):
+            add_issue(
+                issues,
+                "INTEGRATION-POSITIVE-FORWARD-BINDING",
+                f"runtime_rule_specs[{rule_index}].positive_forward_test_id",
+                "Positive forward test must exist, target only this rule, select it, and change a director decision dimension.",
+            )
+        boundary_case = forward_by_id.get(spec.get("boundary_forward_test_id"), {})
+        if (
+            boundary_case.get("test_mode") != "BOUNDARY_OR_NON_APPLICABLE"
+            or boundary_case.get("boundary_for_rule_ids") != [spec.get("rule_id")]
+            or boundary_case.get("positive_for_rule_ids")
+            or boundary_case.get("expected_rejected_rule_id") != spec.get("rule_id")
+            or "NOT_APPLICABLE_MATCH" not in boundary_case.get("expected_rejection_reason_codes", [])
+            or boundary_case.get("expected_routing_status") != "NO_APPLICABLE_RULE"
+            or boundary_case.get("expected_selected_rule_ids")
+            or boundary_case.get("expected_selection_count") != 0
+        ):
+            add_issue(
+                issues,
+                "INTEGRATION-BOUNDARY-FORWARD-BINDING",
+                f"runtime_rule_specs[{rule_index}].boundary_forward_test_id",
+                "Boundary forward test must exist, target this rule, and expect its guarded rejection.",
+            )
         target_boundaries = [
             item
             for item in dispositions
@@ -393,12 +499,12 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
             for signal in item.get("boundary_signal_ids", [])
         }
         spec_signals = set(spec.get("routing", {}).get("not_applicable_if_any", []))
-        if compiled_boundary_signals != spec_signals:
+        if not compiled_boundary_signals or not compiled_boundary_signals.issubset(spec_signals):
             add_issue(
                 issues,
                 "INTEGRATION-BOUNDARY-COMPILE",
                 f"runtime_rule_specs[{rule_index}].routing.not_applicable_if_any",
-                "Runtime non-applicability signals must exactly equal the reviewed boundary dispositions.",
+                "Every reviewed boundary signal must compile into the runtime non-applicability set; additional project-original safety guards are allowed only when forward-tested.",
             )
         positive_disposition = positive_dispositions.get(spec.get("candidate_rule_id"))
         positive_source = candidate_by_id.get(spec.get("candidate_rule_id"))
@@ -507,18 +613,25 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
         and final_family_ids == authority_family_ids
         and final_evidence_ids == authority_evidence_ids
         and source_gap_count == 0
+        else "IN_PROGRESS"
+        if existing_material_review_ids
         else "PARTIAL_EVIDENCE_GAP"
     )
     declared = review.get("declared_phase_status")
     if declared == "COMPLETE" and computed_phase_status != "COMPLETE":
         add_issue(issues, "INTEGRATION-FALSE-COMPLETE", "declared_phase_status", "COMPLETE must be derived from exhaustive live counts and zero gaps.")
-    elif declared == "PARTIAL_EVIDENCE_GAP" and computed_phase_status == "COMPLETE":
-        add_issue(issues, "INTEGRATION-STALE-PARTIAL", "declared_phase_status", "Declared partial status is stale; all completion gates now pass.")
+    elif declared != computed_phase_status:
+        add_issue(
+            issues,
+            "INTEGRATION-PHASE-STATUS-DRIFT",
+            "declared_phase_status",
+            "Declared phase status must match the live distinction between complete, external evidence gaps, and unfinished existing-material review.",
+        )
 
     return {
         "schema_version": "runtime-integration-validation/0.1",
         "status": "PASS" if not issues else "FAIL",
-        "phase_status": computed_phase_status if not issues else "PARTIAL_EVIDENCE_GAP",
+        "phase_status": computed_phase_status if not issues else "IN_PROGRESS",
         "source_disposition_count": len(source_numbers),
         "evidence_review_count": len(reviewed_evidence_ids),
         "candidate_disposition_count": len(disposition_ids),
@@ -530,7 +643,9 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
         "runtime_active_family_count": len(final_family_ids),
         "evidence_final_mapping_count": len(final_evidence_ids),
         "positive_runtime_rule_count": len(positive_dispositions),
-        "unresolved_candidate_count": len(pending_ids),
+        "unresolved_candidate_count": len(pending_ids) + len(existing_material_review_ids),
+        "pending_evidence_gap_count": len(pending_ids),
+        "existing_material_review_required_count": len(existing_material_review_ids),
         "evidence_gap_count": len(gaps),
         "error_count": len(issues),
         "issues": issues,

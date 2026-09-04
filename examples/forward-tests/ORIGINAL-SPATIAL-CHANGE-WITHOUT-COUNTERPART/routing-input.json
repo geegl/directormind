@@ -16,7 +16,7 @@
       "fact_type": "counterpart_relation",
       "source_ref": "locked-script.md#FACT-01",
       "status": "LOCKED",
-      "value": "Maker A and Maker B begin from an established shared bench relation before Maker A leaves."
+      "value": "Maker A leaves the room before Maker B moves from the shared bench."
     },
     {
       "fact_id": "FACT-02",
@@ -31,13 +31,6 @@
       "source_ref": "locked-script.md#FACT-03",
       "status": "LOCKED",
       "value": "The wall grid and empty shared bench make the solo destination unambiguous."
-    },
-    {
-      "fact_id": "FACT-04",
-      "fact_type": "counterpart_endpoint_state",
-      "source_ref": "locked-script.md#FACT-04",
-      "status": "LOCKED",
-      "value": "Maker A is absent from the changed endpoint, so no new two-person relation must be established."
     }
   ],
   "priority_constraints": [],
@@ -49,7 +42,7 @@
   "routing_signals": [
     "material_spatial_change",
     "counterpart_relation_context_locked",
-    "counterpart_absent_at_changed_endpoint"
+    "counterpart_relation_not_required"
   ],
   "scene_problem": {
     "primary": "RELATIONSHIP_FRACTURE",

@@ -4,17 +4,21 @@ Updated: 2026-09-04
 
 ## Current phase
 
-Exhaustive Runtime Integration is `PARTIAL_EVIDENCE_GAP` on
-`codex/exhaustive-runtime-integration`. The fixed corpus is fully inventoried,
-but the task is not complete: 17 of 124 candidates have evidence-backed final
-dispositions and 107 still require the exact reviews listed in the canonical
-gap register. Four runtime rules are active across four mechanism families.
+Exhaustive Runtime Integration is `IN_PROGRESS` on
+`codex/exhaustive-runtime-integration` and PR #5. The fixed corpus remains 33
+registered sources, 31 canonical Scene Evidence records, 2,343 Shot/edit
+units, 124 candidates and 16 mechanism families.
 
-Root is the only repository writer. Read-only reviewers replayed selected local
-video intervals and did not sign the final audit. No source media was added,
-deleted, moved, or committed. `main` remains unchanged. All 283 tests and 25
-local repository checks pass. A new PR, hosted CI, and the final clean-checkout
-independent audit are still pending.
+Fresh moving-image review now covers all 1,840 unique candidate-dependent Shot
+refs. Of the 124 candidates, 108 have evidence-backed final outcomes, 12 have
+genuine fixed-corpus evidence gaps, and four Sound of Metal candidates still
+require direct human audition of exact intervals already present locally.
+Because review of existing material is unfinished, the product phase is not
+`PARTIAL_EVIDENCE_GAP` yet and must not be called complete.
+
+Root is the only repository writer. Read-only agents reviewed local picture
+material and the sound-evidence boundary but did not sign a final audit. No
+source media was added, deleted, moved, or committed. `main` remains unchanged.
 
 ## Current counts
 
@@ -26,45 +30,41 @@ independent audit are still pending.
 | Candidate identities | 124 |
 | Mechanism families | 16 |
 | Evidence records reviewed | 31 |
-| Moving-image reviewed Shot refs | 53 |
-| Final candidate dispositions | 17 |
-| Candidates pending evidence | 107 |
-| Precise evidence gaps | 17 |
-| Evidence units with a final decision mapping | 12 |
-| Runtime-active families | 4 |
-| Runtime-authorized rules | 4 |
-| Positive forward packages | 4 |
-| Boundary forward packages | 4 |
-| Total forward packages | 17 |
+| Moving-image reviewed Shot refs | 1,840 |
+| Final candidate dispositions | 108 |
+| Candidates pending evidence | 12 |
+| Candidates awaiting direct review of existing material | 4 |
+| Precise evidence gaps | 5 |
+| Evidence units with a final decision mapping | 30 |
+| Runtime-participating families | 13 |
+| Runtime-authorized rules | 11 |
+| Positive forward packages | 11 |
+| Boundary forward packages | 11 |
+| Total forward packages | 29 |
 | Directly auditioned semantic-audio scenes | 0 |
 
-Final dispositions currently comprise four positive rules, seven supporting
-candidates, five boundary/counterexample candidates, one merged duplicate and
-zero evidence-backed rejections. `EVIDENCE_GAP_PENDING` is an interim state,
-not one of the five required final outcomes.
+Final dispositions comprise 11 positive rules, 36 supporting candidates, 56
+boundary/counterexample candidates, three merged duplicates and two
+evidence-backed rejections. `EVIDENCE_GAP_PENDING` and
+`EXISTING_MATERIAL_REVIEW_REQUIRED` are interim states, not final outcomes.
 
 ## Active runtime rules
 
-| Rule | Family | Director decision changed |
-|---|---|---|
-| `DR-PERFORMANCE-OWNER-HOLD` | Screen ownership and performance hold | Coverage, blocking, reaction timing and edit |
-| `DR-RELATION-RESET-AFTER-SPATIAL-CHANGE` | Spatial registration and reset | Coverage, blocking and edit |
-| `DR-SHARED-FRAME-FOR-RELATION-ENDPOINT` | Proximity and relation geometry | Coverage, blocking, pacing and edit |
-| `DR-COMPARATIVE-FIELD-BEFORE-RELATION` | Object state and custody | Coverage, blocking and edit |
+The 11 rules cover performance ownership, spatial reset, relation endpoints,
+comparative fields, causal action, object custody, waypoint routes, mobile
+attention, initial relation geometry, stable-axis state holds and aftermath.
+Each has exact fresh-reviewed lineage, unrelated-work support, a real boundary,
+a project-original fallback and paired forward tests. All creative packages
+remain `HUMAN_REVIEW_PENDING` and authorize neither generation nor publication.
 
-Each active rule has exact moving-image-reviewed Shot lineage, unrelated-work
-support, a real reviewed boundary, a project-original fallback, and original
-positive plus boundary routing packages. All creative outputs remain
-`HUMAN_REVIEW_PENDING`; none authorizes generation or publication.
+## Important evidence boundaries
 
-## Important evidence correction
-
-Renewed multi-frame review disproved the legacy description of
-`WIRE-S01E04-OLD-CASES-001-S040`. The canonical converter now records a person
-at the window in medium framing and leaves the object's identity, relation to
-earlier records, camera motion, cut motivation and narrative meaning unknown.
-That Shot is not part of the comparison rule's runtime lineage. The immutable
-legacy Markdown remains unchanged.
+Renewed review corrected `WIRE-S01E04-OLD-CASES-001-S040` to the visible
+person-at-window observation while leaving identity and story meaning unknown.
+Signal measurements and speech recognition remain navigation aids, not direct
+audition. The 12 external-gap candidates are grouped into five precise requests:
+versioned object handoff, revised repeat, multi-thread natural boundary,
+same-trigger scale order, and cross-work subjective access.
 
 ## Authoritative sources
 
@@ -75,9 +75,9 @@ legacy Markdown remains unchanged.
 | Per-scene facts | `research/evidence/**/*.scene-evidence.json` | ACTIVE — 31 records |
 | Candidate lineage and grouping | `research/grammar/candidate_rule_index.json` | GENERATED — 124 candidates, 16 families |
 | Cross-work support and boundaries | `research/grammar/cross_work_support_matrix.json` | GENERATED |
-| Runtime directing rules | `research/grammar/director_grammar_v0.2.json` | GENERATED — 4 rules |
-| Original routing packages | `examples/forward-tests/index.json` | GENERATED — 17 packages |
-| Machine validation summary | `research/validation/exhaustive-runtime-integration-validation.json` | PASS / PARTIAL_EVIDENCE_GAP |
+| Runtime directing rules | `research/grammar/director_grammar_v0.2.json` | GENERATED — 11 rules |
+| Original routing packages | `examples/forward-tests/index.json` | GENERATED — 29 packages |
+| Machine validation summary | `research/validation/exhaustive-runtime-integration-validation.json` | PASS / IN_PROGRESS |
 | Human-readable phase report | `research/validation/EXHAUSTIVE_RUNTIME_INTEGRATION_REPORT.md` | ACTIVE |
 
 Generated `*.scene-evidence.generated.md` files are review views, not separate
@@ -86,14 +86,14 @@ provenance. Material catalogs do not authorize rules.
 
 ## Remaining boundary
 
-The existing corpus has not yet supplied enough reviewed evidence to assign
-the remaining 107 candidates one of the five final outcomes or to give all 16
-families a final runtime role. The 17 prioritized gaps name the exact intervals
-and closure conditions needed. Sound-dependent candidates remain open until
-the existing audio is directly auditioned.
+Four exact Sound of Metal candidate intervals need direct human audition of the
+existing local audio. The model environment cannot establish audible state,
+ownership, causality or edit intent by reading waveforms or transcripts. After
+that review, the phase can become `PARTIAL_EVIDENCE_GAP` if the 12 fixed-corpus
+gaps remain; all 16 families and 124 candidates still prevent `COMPLETE`.
 
 ## Next single action
 
-Commit and recheck the complete branch diff, then push the new branch, open a
-new PR, wait for its final-head CI, and obtain a clean-checkout read-only audit
-across all 16 families. Do not merge `main`.
+Commit and push the verified local tree to PR #5, wait for final-head CI, then
+obtain a clean-checkout read-only audit across all 16 families. Local evidence
+is 292/292 unit and CLI tests plus 25/25 repository checks. Do not merge `main`.

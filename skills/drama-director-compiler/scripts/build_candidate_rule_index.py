@@ -399,6 +399,9 @@ def assert_runtime_review_lineage(
         }
         if not source_refs or not set(source_refs).issubset(moving_refs):
             raise ValueError(f"runtime relation lacks moving-image review: {candidate_rule_id}")
+        canonical_refs = set(candidate.get("source", {}).get("evidence_shot_ids", []))
+        if not set(source_refs).issubset(canonical_refs):
+            raise ValueError(f"runtime relation leaves canonical candidate lineage: {candidate_rule_id}")
         if relation is not None:
             source = candidate["source"]
             if (
@@ -415,6 +418,20 @@ def assert_runtime_review_lineage(
             "POSITIVE_RUNTIME_RULE",
             rule_id,
         )
+        moving_refs = {
+            shot_id
+            for review_id in dispositions[spec["candidate_rule_id"]].get("review_ids", [])
+            for shot_id in reviews.get(review_id, {}).get("moving_image_reviewed_shot_ids", [])
+        }
+        for role in spec.get("functional_roles", []):
+            role_refs = set(role.get("source_refs", []))
+            if (
+                not role_refs
+                or role.get("shot_id") not in role_refs
+                or not role_refs.issubset(set(spec["source_refs"]))
+                or not role_refs.issubset(moving_refs)
+            ):
+                raise ValueError(f"runtime functional role lacks fresh source binding: {rule_id}")
         support_ids = {
             item["candidate_rule_id"]
             for item in review.get("candidate_dispositions", [])
@@ -539,10 +556,10 @@ def _promoted_candidate_record(
             "family_assignment_status": "ROOT_REVIEWED_TEXTUAL_CLUSTER",
             "relation_to_family": "SUPPORTS",
             "scene_problem": {
-                "primary": evidence["scene_problem"]["primary"],
-                "secondary": evidence["scene_problem"]["secondary"],
-                "status": evidence["scene_problem"]["status"],
-                "source_refs": evidence["scene_problem"]["source_refs"],
+                "primary": promotion["scene_problem"],
+                "secondary": [],
+                "status": "INFERRED",
+                "source_refs": promotion["source_refs"],
                 "lineage_label": _lineage_problem(evidence["scene_problem"]),
             },
             "functional_roles": roles,
@@ -651,6 +668,7 @@ def build_index(sources: Iterable[Path] | None = None) -> dict[str, Any]:
             "source": {
                 "work_id": evidence["work_id"],
                 "evidence_id": evidence["evidence_id"],
+                "evidence_shot_ids": rule["evidence_shot_ids"],
             }
         }
         for evidence, rule, _family_id, _assignment_status in assignments
@@ -689,6 +707,8 @@ def build_index(sources: Iterable[Path] | None = None) -> dict[str, Any]:
             record["promotion"]["status"] = "REJECTED"
         elif final_status == "EVIDENCE_GAP_PENDING":
             record["promotion"]["status"] = "EVIDENCE_GAP_PENDING"
+        elif final_status == "EXISTING_MATERIAL_REVIEW_REQUIRED":
+            record["promotion"]["status"] = "EXISTING_MATERIAL_REVIEW_REQUIRED"
         elif final_status != "POSITIVE_RUNTIME_RULE":
             record["promotion"]["status"] = "SINGLE_WORK_CANDIDATE"
         record["relation_to_family"] = {

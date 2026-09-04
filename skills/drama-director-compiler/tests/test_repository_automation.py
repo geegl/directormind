@@ -143,12 +143,32 @@ class RepositoryAutomationTests(unittest.TestCase):
             item["final_status"] == "EVIDENCE_GAP_PENDING"
             for item in review["candidate_dispositions"]
         )
+        existing_review_count = sum(
+            item["final_status"] == "EXISTING_MATERIAL_REVIEW_REQUIRED"
+            for item in review["candidate_dispositions"]
+        )
         self.assertEqual(runtime_report["positive_runtime_rule_count"], rule_count)
-        self.assertEqual(runtime_report["unresolved_candidate_count"], pending_count)
+        self.assertEqual(runtime_report["pending_evidence_gap_count"], pending_count)
+        self.assertEqual(
+            runtime_report["existing_material_review_required_count"],
+            existing_review_count,
+        )
+        self.assertEqual(
+            runtime_report["unresolved_candidate_count"],
+            pending_count + existing_review_count,
+        )
         self.assertEqual(final_report["counts"]["runtime_rules"], rule_count)
         self.assertEqual(final_report["counts"]["pending_evidence_gap_candidates"], pending_count)
+        self.assertEqual(
+            final_report["counts"]["existing_material_review_required_candidates"],
+            existing_review_count,
+        )
         self.assertIn(f"| Runtime-authorized rules | {rule_count} |", state)
         self.assertIn(f"| Candidates pending evidence | {pending_count} |", state)
+        self.assertIn(
+            f"| Candidates awaiting direct review of existing material | {existing_review_count} |",
+            state,
+        )
 
     def test_final_report_rejects_false_exhaustive_completion(self) -> None:
         real_load_report = final_validation._load_report

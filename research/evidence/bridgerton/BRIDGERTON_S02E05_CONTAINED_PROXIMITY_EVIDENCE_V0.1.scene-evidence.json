@@ -265,7 +265,18 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [],
+      "abstract_role_labels": [
+        {
+          "appearance_id": "APPEARANCE-S001",
+          "functional_role": "relation_anchor",
+          "status": "INFERRED",
+          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+          "appearance_track_id": null,
+          "source_refs": [
+            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001"
+          ]
+        }
+      ],
       "blocking": {
         "claim_id": "S001-BLOCK",
         "status": "INFERRED",
@@ -737,7 +748,18 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [],
+      "abstract_role_labels": [
+        {
+          "appearance_id": "APPEARANCE-S003",
+          "functional_role": "relation_anchor",
+          "status": "INFERRED",
+          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+          "appearance_track_id": null,
+          "source_refs": [
+            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S003"
+          ]
+        }
+      ],
       "blocking": {
         "claim_id": "S003-BLOCK",
         "status": "INFERRED",
@@ -10052,10 +10074,18 @@
       "tool_version_status": "VERSION_UNKNOWN",
       "source_refs": [
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S002",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S003",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S004",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S005",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S006",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S007",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S008",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S009",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S010",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S011",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S012",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S013",
-        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S014",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S017",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
@@ -10063,8 +10093,17 @@
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S028",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S029",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S030",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S031",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S032",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S033",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S034",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S035",
-        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S039"
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S036",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S037",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S038",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S039",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S040",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S041"
       ],
       "unknowns": [
         "Exact identity, dialogue, sound, intention, and production method remain unknown."
@@ -10124,7 +10163,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "audio_dependency": true,
+      "audio_dependency": false,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -10165,7 +10204,8 @@
       "counterexample_ids": [],
       "source_method_ids": [
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-LEGACY-PICTURE-REVIEW",
-        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-STRUCTURAL-CONVERSION"
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-STRUCTURAL-CONVERSION",
+        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
       ],
       "evidence_scene_ids": [
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001"
@@ -10519,7 +10559,6 @@
       "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "scope": "AUDIO",
       "blocks_rule_ids": [
-        "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C01-REGISTER-ROOM-AXIS-BEFORE-PROXIMITY",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C03-KEEP-HAND-SOURCE-HEAD-RELATION-AND-WITHDRAWAL-READABLE",
         "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C04-DECOMPRESS-THROUGH-SINGLES-AND-ROOM-RESET"
       ]

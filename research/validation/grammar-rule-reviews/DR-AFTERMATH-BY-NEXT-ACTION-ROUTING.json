@@ -1,0 +1,31 @@
+{
+  "candidate_required_story_facts": [
+    "The result is visibly locked before reaction or departure coverage begins.",
+    "The project identifies which next actions or terminal states matter."
+  ],
+  "candidate_trigger": "A project-original consequential result leaves several visible people or environment states, but only selected next actions govern the scene tail.",
+  "promotion_source_candidate_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C04-DISTRIBUTE-POST-RESULT-BODY-STATES-BY-NEXT-ACTION",
+  "review_id": "DR-AFTERMATH-BY-NEXT-ACTION-ROUTING-REVIEW",
+  "routing": {
+    "audit_subject_tags": [],
+    "conflicts_with": [],
+    "not_applicable_if_any": [
+      "immediate_next_action_supersedes_aftermath"
+    ],
+    "required_fact_types": [
+      "visible_result",
+      "next_action_states"
+    ],
+    "scene_problems": [
+      "PUBLIC_REVELATION"
+    ],
+    "trigger_all_of": [
+      "consequential_result_with_multiple_next_states",
+      "next_action_prioritization_required"
+    ],
+    "trigger_any_of": []
+  },
+  "rule_id": "DR-AFTERMATH-BY-NEXT-ACTION",
+  "schema_version": "director-grammar-routing-review/0.1",
+  "status": "ROOT_VIDEO_VERIFIED"
+}

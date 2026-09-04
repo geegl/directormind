@@ -1,0 +1,32 @@
+{
+  "candidate_required_story_facts": [
+    "The project locks a continuous present-time route through at least three zones.",
+    "Each required waypoint or destination vector affects comprehension of the next action."
+  ],
+  "candidate_trigger": "A project-original continuous route crosses at least three visually distinct zones and losing the next vector would obscure a required action or destination.",
+  "promotion_source_candidate_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS",
+  "review_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE-ROUTING-REVIEW",
+  "routing": {
+    "audit_subject_tags": [],
+    "conflicts_with": [],
+    "not_applicable_if_any": [
+      "route_not_continuous_multi_zone"
+    ],
+    "required_fact_types": [
+      "route_continuity",
+      "zone_waypoints",
+      "destination_vector"
+    ],
+    "scene_problems": [
+      "SUSPENSE_INFORMATION_ASYMMETRY"
+    ],
+    "trigger_all_of": [
+      "continuous_multi_zone_route",
+      "waypoint_orientation_required"
+    ],
+    "trigger_any_of": []
+  },
+  "rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+  "schema_version": "director-grammar-routing-review/0.1",
+  "status": "ROOT_VIDEO_VERIFIED"
+}

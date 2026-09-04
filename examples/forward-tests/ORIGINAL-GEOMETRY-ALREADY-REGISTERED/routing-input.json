@@ -1,0 +1,64 @@
+{
+  "case_id": "ORIGINAL-GEOMETRY-ALREADY-REGISTERED",
+  "dramatic_structure": {
+    "goal": "continue a relation change inside already known geometry",
+    "objectives": [
+      "resume the archive review"
+    ],
+    "obstacle": "the distance changes slightly",
+    "stakes": "the existing axis must remain stable",
+    "subtext": "none asserted",
+    "tactic_change": "shared review shifts position"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "relation_start_zones",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "The same uninterrupted interval has already established both archivists and the full table."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "distance_change",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "Archivist B shifts one position along the already visible table edge."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "path_anchor",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "The existing table and doorway anchors remain unchanged and readable."
+    },
+    {
+      "fact_id": "FACT-04",
+      "fact_type": "relationship_context",
+      "source_ref": "locked-script.md#FACT-04",
+      "status": "LOCKED",
+      "value": "The archivists' established personal bond remains the reason the small distance change matters."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "distance_change_requires_initial_geometry",
+    "relation_path_must_read",
+    "relation_geometry_already_registered"
+  ],
+  "scene_problem": {
+    "primary": "ROMANTIC_PROXIMITY",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "relationship_tension"
+  ],
+  "unknown_fact_types": []
+}

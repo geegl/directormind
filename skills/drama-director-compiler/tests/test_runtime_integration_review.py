@@ -14,9 +14,11 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 SKILL_ROOT = REPO_ROOT / "skills" / "drama-director-compiler"
 SCRIPT_ROOT = SKILL_ROOT / "scripts"
 REVIEW_PATH = REPO_ROOT / "research" / "grammar" / "runtime_integration.review.json"
+CANDIDATE_INDEX_PATH = REPO_ROOT / "research" / "grammar" / "candidate_rule_index.json"
 SCHEMA_PATH = SKILL_ROOT / "references" / "runtime-integration-review.schema.json"
 
 sys.path.insert(0, str(SCRIPT_ROOT))
+from build_candidate_rule_index import assert_runtime_review_lineage  # noqa: E402
 from validate_runtime_integration_review import validate  # noqa: E402
 
 
@@ -32,6 +34,10 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.review = read_json(REVIEW_PATH)
+        cls.candidate_by_id = {
+            item["candidate_rule_id"]: item
+            for item in read_json(CANDIDATE_INDEX_PATH)["candidates"]
+        }
         cls.schema = read_json(SCHEMA_PATH)
 
     def validate_copy(self, review: dict | None = None) -> dict:
@@ -39,12 +45,20 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
 
     def test_repository_authority_has_exact_closed_corpus_sets(self) -> None:
         report = self.validate_copy()
+        pending_statuses = {
+            "EVIDENCE_GAP_PENDING",
+            "EXISTING_MATERIAL_REVIEW_REQUIRED",
+        }
         final_count = sum(
-            item["final_status"] != "EVIDENCE_GAP_PENDING"
+            item["final_status"] not in pending_statuses
             for item in self.review["candidate_dispositions"]
         )
         pending_count = sum(
-            item["final_status"] == "EVIDENCE_GAP_PENDING"
+            item["final_status"] in pending_statuses
+            for item in self.review["candidate_dispositions"]
+        )
+        existing_review_count = sum(
+            item["final_status"] == "EXISTING_MATERIAL_REVIEW_REQUIRED"
             for item in self.review["candidate_dispositions"]
         )
         rule_count = len(self.review["runtime_rule_specs"])
@@ -54,9 +68,13 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
         self.assertEqual(report["candidate_disposition_count"], 124)
         self.assertEqual(report["candidate_final_disposition_count"], final_count)
         self.assertEqual(report["unresolved_candidate_count"], pending_count)
+        self.assertEqual(
+            report["existing_material_review_required_count"],
+            existing_review_count,
+        )
         self.assertEqual(final_count + pending_count, 124)
         self.assertEqual(report["positive_runtime_rule_count"], rule_count)
-        self.assertEqual(report["phase_status"], "PARTIAL_EVIDENCE_GAP")
+        self.assertEqual(report["phase_status"], "IN_PROGRESS")
 
     def test_source_register_rows_cannot_be_swapped(self) -> None:
         review = copy.deepcopy(self.review)
@@ -122,6 +140,49 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
         spec["source_refs"] = [replacement]
         self.assertIn("INTEGRATION-CANDIDATE-CLAIM-REF", issue_codes(self.validate_copy(review)))
 
+    def test_supplemental_context_cannot_replace_canonical_candidate_lineage(self) -> None:
+        review = copy.deepcopy(self.review)
+        final = next(item for item in review["candidate_dispositions"] if item["final_status"] == "POSITIVE_RUNTIME_RULE")
+        source_review = next(item for item in review["evidence_reviews"] if item["review_id"] == final["review_ids"][0])
+        canonical_refs = set(self.candidate_by_id[final["candidate_rule_id"]]["source"]["evidence_shot_ids"])
+        replacement = next(
+            shot_id
+            for shot_id in source_review["moving_image_reviewed_shot_ids"]
+            if shot_id not in canonical_refs
+        )
+        final["source_refs"] = [replacement]
+        final["supplemental_context_refs"] = [replacement]
+        spec = next(item for item in review["runtime_rule_specs"] if item["candidate_rule_id"] == final["candidate_rule_id"])
+        spec["source_refs"] = [replacement]
+        for role in spec["functional_roles"]:
+            role["shot_id"] = replacement
+            role["source_refs"] = [replacement]
+        self.assertIn("INTEGRATION-CANDIDATE-CLAIM-REF", issue_codes(self.validate_copy(review)))
+        with self.assertRaisesRegex(ValueError, "canonical candidate lineage"):
+            assert_runtime_review_lineage(review, self.candidate_by_id)
+
+    def test_functional_roles_require_fresh_promotion_source_refs(self) -> None:
+        review = copy.deepcopy(self.review)
+        spec = review["runtime_rule_specs"][0]
+        source_disposition = next(
+            item for item in review["candidate_dispositions"]
+            if item["candidate_rule_id"] == spec["candidate_rule_id"]
+        )
+        source_review = next(
+            item for item in review["evidence_reviews"]
+            if item["review_id"] == source_disposition["review_ids"][0]
+        )
+        outside_promotion = next(
+            item["shot_id"]
+            for item in source_review["reviewed_shots"]
+            if item["shot_id"] not in spec["source_refs"]
+        )
+        spec["functional_roles"][0]["shot_id"] = outside_promotion
+        spec["functional_roles"][0]["source_refs"] = [outside_promotion]
+        self.assertIn("INTEGRATION-FUNCTIONAL-ROLE-REF", issue_codes(self.validate_copy(review)))
+        with self.assertRaisesRegex(ValueError, "functional role lacks fresh source binding"):
+            assert_runtime_review_lineage(review, self.candidate_by_id)
+
     def test_pending_candidate_must_have_a_precise_gap(self) -> None:
         review = copy.deepcopy(self.review)
         pending = next(item for item in review["candidate_dispositions"] if item["final_status"] == "EVIDENCE_GAP_PENDING")
@@ -141,6 +202,52 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
         target_gap = next(item for item in review["evidence_gaps"] if item["gap_id"] == other_gap["gap_id"])
         target_gap["candidate_rule_ids"].append(pending["candidate_rule_id"])
         self.assertIn("INTEGRATION-PENDING-GAP", issue_codes(self.validate_copy(review)))
+
+    def test_evidence_gap_cannot_include_a_foreign_candidate(self) -> None:
+        review = copy.deepcopy(self.review)
+        review["evidence_gaps"][0]["candidate_rule_ids"].append("FOREIGN-CANDIDATE-NOT-IN-CORPUS")
+        self.assertIn("INTEGRATION-GAP-CANDIDATE-SET", issue_codes(self.validate_copy(review)))
+
+    def test_evidence_gap_declared_count_must_match_members(self) -> None:
+        review = copy.deepcopy(self.review)
+        review["evidence_gaps"][0]["candidate_count"] += 1
+        self.assertIn("INTEGRATION-GAP-COUNT", issue_codes(self.validate_copy(review)))
+
+    def test_pending_gap_requires_complete_candidate_shot_review(self) -> None:
+        review = copy.deepcopy(self.review)
+        pending = next(item for item in review["candidate_dispositions"] if item["final_status"] == "EVIDENCE_GAP_PENDING")
+        removed = pending["source_refs"].pop()
+        source_review = next(item for item in review["evidence_reviews"] if item["review_id"] == pending["review_ids"][0])
+        source_review["moving_image_reviewed_shot_ids"] = [
+            shot_id for shot_id in source_review["moving_image_reviewed_shot_ids"] if shot_id != removed
+        ]
+        self.assertIn("INTEGRATION-PENDING-REVIEW-INCOMPLETE", issue_codes(self.validate_copy(review)))
+
+    def test_existing_material_review_debt_is_not_an_evidence_gap(self) -> None:
+        existing = next(
+            item
+            for item in self.review["candidate_dispositions"]
+            if item["final_status"] == "EXISTING_MATERIAL_REVIEW_REQUIRED"
+        )
+        review = copy.deepcopy(self.review)
+        target = next(
+            item
+            for item in review["candidate_dispositions"]
+            if item["candidate_rule_id"] == existing["candidate_rule_id"]
+        )
+        target["evidence_gap_id"] = review["evidence_gaps"][0]["gap_id"]
+        self.assertIn(
+            "INTEGRATION-EXISTING-REVIEW-GAP",
+            issue_codes(self.validate_copy(review)),
+        )
+
+    def test_existing_material_review_debt_keeps_phase_in_progress(self) -> None:
+        review = copy.deepcopy(self.review)
+        review["declared_phase_status"] = "PARTIAL_EVIDENCE_GAP"
+        self.assertIn(
+            "INTEGRATION-PHASE-STATUS-DRIFT",
+            issue_codes(self.validate_copy(review)),
+        )
 
     def test_audio_dependency_needs_direct_audition(self) -> None:
         review = copy.deepcopy(self.review)
@@ -172,6 +279,35 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
         boundary = next(item for item in review["candidate_dispositions"] if item["final_status"] == "BOUNDARY_OR_COUNTEREXAMPLE")
         boundary["boundary_forward_test_id"] = "DOES-NOT-EXIST"
         self.assertIn("INTEGRATION-BOUNDARY-EFFECT", issue_codes(self.validate_copy(review)))
+
+    def test_positive_forward_test_must_exist_and_be_bound_to_the_rule(self) -> None:
+        for mutation in ("missing", "boundary-case"):
+            with self.subTest(mutation=mutation):
+                review = copy.deepcopy(self.review)
+                spec = review["runtime_rule_specs"][0]
+                spec["positive_forward_test_id"] = (
+                    "DOES-NOT-EXIST"
+                    if mutation == "missing"
+                    else spec["boundary_forward_test_id"]
+                )
+                self.assertIn(
+                    "INTEGRATION-POSITIVE-FORWARD-BINDING",
+                    issue_codes(self.validate_copy(review)),
+                )
+
+    def test_positive_case_cannot_masquerade_as_boundary(self) -> None:
+        review = copy.deepcopy(self.review)
+        spec = review["runtime_rule_specs"][0]
+        spec["boundary_forward_test_id"] = spec["positive_forward_test_id"]
+        for disposition in review["candidate_dispositions"]:
+            if (
+                disposition["final_status"] == "BOUNDARY_OR_COUNTEREXAMPLE"
+                and disposition["target_rule_id"] == spec["rule_id"]
+            ):
+                disposition["boundary_forward_test_id"] = spec["boundary_forward_test_id"]
+        codes = issue_codes(self.validate_copy(review))
+        self.assertNotIn("INTEGRATION-BOUNDARY-EFFECT", codes)
+        self.assertIn("INTEGRATION-BOUNDARY-FORWARD-BINDING", codes)
 
     def test_runtime_support_relation_must_exactly_bind_final_disposition(self) -> None:
         review = copy.deepcopy(self.review)

@@ -1,0 +1,15 @@
+{
+  "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C01-ACTION-CAUSAL-CHAIN",
+  "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
+  "record_id": "EXH-REL-ACTION-CHILDREN",
+  "relation": "SUPPORTS",
+  "review_id": "EXH-REL-ACTION-CHILDREN-REVIEW",
+  "same_trigger_status": "VERIFIED_SAME_TRIGGER",
+  "schema_version": "candidate-relation-review/0.1",
+  "source_candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-APERTURE-EVENT-BEFORE-GROSS-BODY-RESPONSE-002",
+  "source_refs": [
+    "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
+  ],
+  "status": "ROOT_VIDEO_VERIFIED",
+  "work_id": "CHILDREN-OF-MEN-2006"
+}

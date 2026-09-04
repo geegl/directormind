@@ -26,11 +26,17 @@
 
 ```json
 {
-  "notes": "The legacy primary label SUSPENSE_INFORMATION_ASYMMETRY is retained only as non-operational lineage and was not proved by structural conversion.",
-  "primary": "LEGACY_SCENE_PROBLEM",
+  "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown.",
+  "primary": "SUSPENSE_INFORMATION_ASYMMETRY",
   "secondary": [],
-  "source_refs": [],
-  "status": "UNKNOWN"
+  "source_refs": [
+    "SICARIO-2015-BORDER-CHECKPOINT-001-S001",
+    "SICARIO-2015-BORDER-CHECKPOINT-001-S002",
+    "SICARIO-2015-BORDER-CHECKPOINT-001-S003",
+    "SICARIO-2015-BORDER-CHECKPOINT-001-S007",
+    "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
+  ],
+  "status": "INFERRED"
 }
 ```
 
@@ -169,7 +175,6 @@
 [
   {
     "blocks_rule_ids": [
-      "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS",
       "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C02-MULTI-WINDOW-DISTRIBUTED-THREAT-PUZZLE",
       "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C03-READINESS-TO-DEPLOYMENT-STATE-LEDGER",
       "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C04-RESULT-AND-EXIT-VERIFICATION-BEFORE-RESUME"
@@ -212,7 +217,8 @@
 ```json
 [
   "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
-  "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+  "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+  "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
 ]
 ```
 
@@ -422,11 +428,17 @@
   "picture_evidence_status": "PICTURE_OBSERVED",
   "production_take_status": "PRODUCTION_METHOD_UNKNOWN",
   "scene_problem": {
-    "notes": "The legacy primary label SUSPENSE_INFORMATION_ASYMMETRY is retained only as non-operational lineage and was not proved by structural conversion.",
-    "primary": "LEGACY_SCENE_PROBLEM",
+    "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown.",
+    "primary": "SUSPENSE_INFORMATION_ASYMMETRY",
     "secondary": [],
-    "source_refs": [],
-    "status": "UNKNOWN"
+    "source_refs": [
+      "SICARIO-2015-BORDER-CHECKPOINT-001-S001",
+      "SICARIO-2015-BORDER-CHECKPOINT-001-S002",
+      "SICARIO-2015-BORDER-CHECKPOINT-001-S003",
+      "SICARIO-2015-BORDER-CHECKPOINT-001-S007",
+      "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
+    ],
+    "status": "INFERRED"
   },
   "scene_unit_type": "CONTIGUOUS_EDITORIAL_SEQUENCE",
   "schema_version": "scene-evidence/0.1",
@@ -7857,7 +7869,6 @@
   "unknowns": [
     {
       "blocks_rule_ids": [
-        "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS",
         "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C02-MULTI-WINDOW-DISTRIBUTED-THREAT-PUZZLE",
         "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C03-READINESS-TO-DEPLOYMENT-STATE-LEDGER",
         "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C04-RESULT-AND-EXIT-VERIFICATION-BEFORE-RESUME"
@@ -7881,7 +7892,8 @@
   "validation_status": "HUMAN_REVIEW_PENDING",
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
-    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+    "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
   ],
   "work_id": "SICARIO-2015"
 }

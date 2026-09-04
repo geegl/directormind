@@ -420,7 +420,8 @@
             "GENERAL_DEFAULT",
             "REJECTED",
             "BLOCKED_BY_UNKNOWN",
-            "EVIDENCE_GAP_PENDING"
+            "EVIDENCE_GAP_PENDING",
+            "EXISTING_MATERIAL_REVIEW_REQUIRED"
           ]
         },
         "reasons": {
@@ -462,7 +463,8 @@
             "BOUNDARY_OR_COUNTEREXAMPLE",
             "MERGED_DUPLICATE",
             "REJECTED_WITH_REASON",
-            "EVIDENCE_GAP_PENDING"
+            "EVIDENCE_GAP_PENDING",
+            "EXISTING_MATERIAL_REVIEW_REQUIRED"
           ]
         },
         "runtime_effect_key": {"type": ["string", "null"]},

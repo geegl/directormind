@@ -1,0 +1,9 @@
+{
+  "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C02-OBJECT-CONTROL-LEDGER",
+  "canonical_rule_family": "OBJECT-STATE-AND-CUSTODY",
+  "rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
+  "schema_version": "forward-test-result/0.1",
+  "status": "HUMAN_REVIEW_PENDING",
+  "test_case_id": "ORIGINAL-OBJECT-CUSTODY-CHECKPOINTS",
+  "test_mode": "POSITIVE"
+}

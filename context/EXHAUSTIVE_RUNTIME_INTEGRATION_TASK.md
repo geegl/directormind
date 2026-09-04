@@ -14,7 +14,12 @@ The work does not end at a target number of positive rules. Every candidate must
 - `MERGED_DUPLICATE`
 - `REJECTED_WITH_REASON`
 
-`BLOCKED_BY_UNKNOWN` is never a final outcome. An unresolved material unknown is recorded as an evidence gap and makes the phase `PARTIAL_EVIDENCE_GAP`.
+`BLOCKED_BY_UNKNOWN` is never a final outcome. A genuine fixed-corpus
+insufficiency is recorded as `EVIDENCE_GAP_PENDING` and eventually makes the
+phase `PARTIAL_EVIDENCE_GAP`. Review work that is still possible against
+existing local material is separately recorded as
+`EXISTING_MATERIAL_REVIEW_REQUIRED` and keeps the phase `IN_PROGRESS`; it must
+not be mislabeled as an external evidence gap.
 
 ## Runtime meaning
 
@@ -50,7 +55,11 @@ The work does not end at a target number of positive rules. Every candidate must
 - Candidate Index, Support Matrix, Runtime Grammar, Router result, and Director IR remain exactly bound to the canonical review.
 - Full tests, repository checks, diff checks, hosted CI, and a fresh family-by-family independent review pass.
 
-If any material unknown cannot be closed from the existing corpus, the only honest phase result is `PARTIAL_EVIDENCE_GAP`, accompanied by a prioritized, precise supplementation list. It must not be described as complete.
+If existing material still requires direct review, the only honest phase result
+is `IN_PROGRESS`. Once all existing material has been reviewed, any remaining
+fixed-corpus insufficiency makes the phase `PARTIAL_EVIDENCE_GAP`, accompanied
+by a prioritized, precise supplementation list. Neither state may be described
+as complete.
 
 ## Current implementation authority
 

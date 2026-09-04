@@ -34,7 +34,7 @@
         "subtext": "the lead acts only after every response is visible",
         "tactic_change": "warning becomes coordinated clearance and then restraint"
       },
-      "duration_seconds": 15,
+      "duration_seconds": 18,
       "location": "empty rehearsal hall",
       "narrative_goal": "preserve one visible cause and the distinct responses of a group",
       "pov": {
@@ -57,24 +57,24 @@
         "locked_facts": [
           {
             "fact_id": "FACT-01",
-            "fact_type": "action_source",
+            "fact_type": "cause_effect_chain",
             "source_ref": "locked-script.md#FACT-01",
             "status": "LOCKED",
-            "value": "A loose wheel stop is visibly displaced before an unpowered equipment rack begins rolling."
+            "value": "A loose wheel stop lets an unpowered equipment rack begin rolling."
           },
           {
             "fact_id": "FACT-02",
-            "fact_type": "target_state",
+            "fact_type": "one_to_many_response",
             "source_ref": "locked-script.md#FACT-02",
             "status": "LOCKED",
-            "value": "The rack changes from stationary to rolling while three marked lanes remain visible."
+            "value": "The floor lead signals three crew members to clear three marked lanes."
           },
           {
             "fact_id": "FACT-03",
-            "fact_type": "visible_result",
+            "fact_type": "safe_resolution",
             "source_ref": "locked-script.md#FACT-03",
             "status": "LOCKED",
-            "value": "After the lanes clear, a floor chock stops the rack and the stopped state remains readable."
+            "value": "The floor lead pushes a floor chock into the rack path after all three lanes are clear."
           }
         ],
         "priority_constraints": [],
@@ -116,14 +116,36 @@
         "case_id": "ORIGINAL-ACTION-CAUSALITY",
         "conflict_trace": [],
         "eligible_rule_ids": [
+          "DR-AFTERMATH-BY-NEXT-ACTION",
           "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+          "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+          "DR-MOBILE-ATTENTION-HANDOFF",
+          "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
           "DR-PERFORMANCE-OWNER-HOLD",
+          "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY",
           "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
-          "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+          "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+          "DR-STABLE-AXIS-STATE-LED-HOLDS",
+          "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
         ],
         "human_review_status": "HUMAN_REVIEW_PENDING",
-        "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+        "ir_handoff": "CONTINUE_WITH_SELECTED_RULES",
         "rejected_rules": [
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "next_action_states",
+              "visible_result"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-AFTERMATH-BY-NEXT-ACTION"
+          },
           {
             "blocking_fact_ids": [],
             "conflicting_rule_ids": [],
@@ -144,8 +166,39 @@
             "conflicting_rule_ids": [],
             "matched_not_applicable_signal_ids": [],
             "missing_fact_types": [
-              "performance_progression",
-              "relation_state"
+              "connected_geography",
+              "current_attention_state",
+              "next_attention_owner"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-MOBILE-ATTENTION-HANDOFF"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "dependent_next_action",
+              "object_identity",
+              "object_state_change"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "performance_progression"
             ],
             "rejection_reason_codes": [
               "REQUIRED_FACT_MISSING",
@@ -153,6 +206,22 @@
               "TRIGGER_NOT_MET"
             ],
             "rule_id": "DR-PERFORMANCE-OWNER-HOLD"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "distance_change",
+              "path_anchor",
+              "relation_start_zones"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY"
           },
           {
             "blocking_fact_ids": [],
@@ -184,6 +253,37 @@
               "TRIGGER_NOT_MET"
             ],
             "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "stable_axis",
+              "visible_state_progression"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-STABLE-AXIS-STATE-LED-HOLDS"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "destination_vector",
+              "route_continuity",
+              "zone_waypoints"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
           }
         ],
         "rights_boundary": {
@@ -192,9 +292,24 @@
         },
         "scene_problem": "ACTION_CAUSALITY",
         "schema_version": "director-routing-result/0.1",
-        "selected_rules": [],
-        "selection_count": 0,
-        "status": "NO_APPLICABLE_RULE"
+        "selected_rules": [
+          {
+            "matched_fact_ids": [
+              "FACT-01",
+              "FACT-02",
+              "FACT-03"
+            ],
+            "rule_id": "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+            "selection_reason_codes": [
+              "PRIMARY_PROBLEM_MATCH",
+              "REQUIRED_FACTS_LOCKED",
+              "RUNTIME_AUTHORIZED",
+              "TRIGGER_MATCH"
+            ]
+          }
+        ],
+        "selection_count": 1,
+        "status": "SELECTED"
       },
       "scene_id": "EP01-SC01",
       "shots": [
@@ -240,7 +355,7 @@
               "FACT-01"
             ],
             "must_hold": [
-              "A loose wheel stop is visibly displaced before an unpowered equipment rack begins rolling."
+              "A loose wheel stop lets an unpowered equipment rack begin rolling."
             ],
             "must_not_appear": [
               "research-work surface elements"
@@ -278,7 +393,7 @@
           "fallback": null,
           "focus_strategy": "keep the locked action readable",
           "framing": "readable neutral frame",
-          "narrative_goal": "A loose wheel stop is visibly displaced before an unpowered equipment rack begins rolling.",
+          "narrative_goal": "A loose wheel stop lets an unpowered equipment rack begin rolling.",
           "order": 1,
           "performance_beats": [
             "The loose stop tips away and the unpowered rack begins moving across the empty hall."
@@ -349,7 +464,7 @@
               "FACT-02"
             ],
             "must_hold": [
-              "The rack changes from stationary to rolling while three marked lanes remain visible."
+              "The floor lead signals three crew members to clear three marked lanes."
             ],
             "must_not_appear": [
               "research-work surface elements"
@@ -387,7 +502,7 @@
           "fallback": null,
           "focus_strategy": "keep the locked action readable",
           "framing": "readable neutral frame",
-          "narrative_goal": "The rack changes from stationary to rolling while three marked lanes remain visible.",
+          "narrative_goal": "The floor lead signals three crew members to clear three marked lanes.",
           "order": 2,
           "performance_beats": [
             "The floor lead points once; three crew members move into separate marked safe zones."
@@ -430,7 +545,7 @@
             "source_refs": [],
             "status": "PROJECT_ORIGINAL_ONLY"
           },
-          "blocking": "After all three zones are visibly occupied, the floor lead places the chock and the rack stops.",
+          "blocking": "Keep the stopped rack and cleared lanes visible before assigning the final response beat.",
           "camera_angle": "eye level",
           "camera_end": "stable view after the listed beat",
           "camera_motion": {
@@ -446,13 +561,13 @@
             "trigger": "FACT-03"
           },
           "camera_start": "stable view before the listed beat",
-          "confidence": "UNKNOWN",
+          "confidence": "MEDIUM",
           "constraints": {
             "changes_here": [
               "FACT-03"
             ],
             "must_hold": [
-              "After the lanes clear, a floor chock stops the rack and the stopped state remains readable."
+              "The floor lead pushes a floor chock into the rack path after all three lanes are clear."
             ],
             "must_not_appear": [
               "research-work surface elements"
@@ -461,10 +576,12 @@
           "continuity_in": "state before FACT-03",
           "continuity_out": "state after FACT-03",
           "dialogue": [],
-          "duration_seconds": 5,
-          "edit_in": "cut on the prior locked state",
-          "edit_out": "cut after the new locked state is readable",
-          "evidence_rule_ids": [],
+          "duration_seconds": 8,
+          "edit_in": "enter on the locked target-state change",
+          "edit_out": "cut only after the stopped result is readable",
+          "evidence_rule_ids": [
+            "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN"
+          ],
           "evidence_status": "HYPOTHESIS",
           "execution_plan": {
             "base_generation": {
@@ -489,8 +606,8 @@
           },
           "fallback": null,
           "focus_strategy": "keep the locked action readable",
-          "framing": "readable neutral frame",
-          "narrative_goal": "After the lanes clear, a floor chock stops the rack and the stopped state remains readable.",
+          "framing": "shared frame holding the stopped result before the response allocation",
+          "narrative_goal": "The floor lead pushes a floor chock into the rack path after all three lanes are clear.",
           "order": 3,
           "performance_beats": [
             "After all three zones are visibly occupied, the floor lead places the chock and the rack stops."
@@ -506,7 +623,7 @@
             "status": "NOT_REQUIRED"
           },
           "shot_id": "EP01-SC01-SH03",
-          "shot_type": "project-original coverage",
+          "shot_type": "project-original result-and-response hold",
           "source_refs": [
             "locked-script.md#FACT-03"
           ],
@@ -530,7 +647,7 @@
       "covered_by": [
         "EP01-SC01-SH01"
       ],
-      "description": "A loose wheel stop is visibly displaced before an unpowered equipment rack begins rolling.",
+      "description": "A loose wheel stop lets an unpowered equipment rack begin rolling.",
       "notes": "Structural coverage only; human creative review remains pending.",
       "source_ref": "locked-script.md#FACT-01",
       "status": "covered"
@@ -539,7 +656,7 @@
       "covered_by": [
         "EP01-SC01-SH02"
       ],
-      "description": "The rack changes from stationary to rolling while three marked lanes remain visible.",
+      "description": "The floor lead signals three crew members to clear three marked lanes.",
       "notes": "Structural coverage only; human creative review remains pending.",
       "source_ref": "locked-script.md#FACT-02",
       "status": "covered"
@@ -548,7 +665,7 @@
       "covered_by": [
         "EP01-SC01-SH03"
       ],
-      "description": "After the lanes clear, a floor chock stops the rack and the stopped state remains readable.",
+      "description": "The floor lead pushes a floor chock into the rack path after all three lanes are clear.",
       "notes": "Structural coverage only; human creative review remains pending.",
       "source_ref": "locked-script.md#FACT-03",
       "status": "covered"
@@ -564,7 +681,7 @@
   },
   "source_script": "examples/forward-tests/ORIGINAL-ACTION-CAUSALITY/locked-script.md",
   "status": "HUMAN_REVIEW_PENDING",
-  "target_duration_seconds": 15,
+  "target_duration_seconds": 18,
   "unresolved": [
     "Human creative review has not been performed."
   ],

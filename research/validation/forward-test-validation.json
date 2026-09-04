@@ -3,9 +3,9 @@
     {
       "human_review_status": "HUMAN_REVIEW_PENDING",
       "ir_warning_count": 4,
-      "routing_status": "NO_APPLICABLE_RULE",
+      "routing_status": "SELECTED",
       "scene_problem": "ACTION_CAUSALITY",
-      "selection_count": 0,
+      "selection_count": 1,
       "status": "PASS",
       "test_case_id": "ORIGINAL-ACTION-CAUSALITY"
     },
@@ -21,11 +21,74 @@
     {
       "human_review_status": "HUMAN_REVIEW_PENDING",
       "ir_warning_count": 4,
+      "routing_status": "SELECTED",
+      "scene_problem": "PUBLIC_REVELATION",
+      "selection_count": 1,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-AFTERMATH-BY-NEXT-ACTION"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "PUBLIC_REVELATION",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-AFTERMATH-NEXT-ACTION-IMMEDIATE"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
       "routing_status": "NO_APPLICABLE_RULE",
       "scene_problem": "PROCEDURAL_COMPETENCE",
       "selection_count": 0,
       "status": "PASS",
       "test_case_id": "ORIGINAL-COMPARISON-NOT-REQUIRED"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 5,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "ROMANTIC_PROXIMITY",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-GEOMETRY-ALREADY-REGISTERED"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 5,
+      "routing_status": "SELECTED",
+      "scene_problem": "ROMANTIC_PROXIMITY",
+      "selection_count": 1,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-INITIAL-GEOMETRY-BEFORE-PROXIMITY"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "SELECTED",
+      "scene_problem": "PROCEDURAL_COLLAPSE",
+      "selection_count": 1,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-MOBILE-ATTENTION-HANDOFF"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "PROCEDURAL_COLLAPSE",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-MOBILE-DETAIL-REQUIRED"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "SELECTED",
+      "scene_problem": "SUSPENSE_INFORMATION_ASYMMETRY",
+      "selection_count": 1,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-MULTI-ZONE-WAYPOINT-ROUTE"
     },
     {
       "human_review_status": "HUMAN_REVIEW_PENDING",
@@ -35,6 +98,24 @@
       "selection_count": 0,
       "status": "PASS",
       "test_case_id": "ORIGINAL-NO-APPLICABLE-RULE"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "SELECTED",
+      "scene_problem": "PROCEDURAL_COMPETENCE",
+      "selection_count": 1,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-OBJECT-CUSTODY-CHECKPOINTS"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "PROCEDURAL_COMPETENCE",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-OBJECT-SECONDARY-HANDLING"
     },
     {
       "human_review_status": "HUMAN_REVIEW_PENDING",
@@ -121,6 +202,24 @@
       "human_review_status": "HUMAN_REVIEW_PENDING",
       "ir_warning_count": 4,
       "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "DIALOGUE_POWER_TRANSFER",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-SINGLE-OWNER-NO-ALTERNATION"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
+      "scene_problem": "SUSPENSE_INFORMATION_ASYMMETRY",
+      "selection_count": 0,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-SINGLE-THRESHOLD-APPROACH"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "NO_APPLICABLE_RULE",
       "scene_problem": "SOUND_LED_CAUSALITY",
       "selection_count": 0,
       "status": "PASS",
@@ -128,12 +227,21 @@
     },
     {
       "human_review_status": "HUMAN_REVIEW_PENDING",
-      "ir_warning_count": 5,
+      "ir_warning_count": 4,
       "routing_status": "NO_APPLICABLE_RULE",
       "scene_problem": "RELATIONSHIP_FRACTURE",
       "selection_count": 0,
       "status": "PASS",
       "test_case_id": "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART"
+    },
+    {
+      "human_review_status": "HUMAN_REVIEW_PENDING",
+      "ir_warning_count": 4,
+      "routing_status": "SELECTED",
+      "scene_problem": "DIALOGUE_POWER_TRANSFER",
+      "selection_count": 1,
+      "status": "PASS",
+      "test_case_id": "ORIGINAL-STABLE-AXIS-STATE-HOLDS"
     },
     {
       "human_review_status": "HUMAN_REVIEW_PENDING",
@@ -154,21 +262,21 @@
       "test_case_id": "ORIGINAL-THRESHOLD-UNCHANGED"
     }
   ],
-  "completed_boundary_cases": 4,
-  "completed_positive_cases": 4,
+  "completed_boundary_cases": 11,
+  "completed_positive_cases": 11,
   "error_count": 0,
-  "human_review_pending_count": 17,
+  "human_review_pending_count": 29,
   "issues": [],
   "missing_family_count": 0,
   "missing_rule_count": 0,
-  "no_applicable_rule_count": 13,
-  "package_count": 17,
-  "promotion_ready_family_count": 4,
-  "required_positive_boundary_pairs": 4,
+  "no_applicable_rule_count": 18,
+  "package_count": 29,
+  "promotion_ready_family_count": 9,
+  "required_positive_boundary_pairs": 11,
   "required_scene_problem_count": 6,
   "schema_version": "forward-test-repository-validation/0.1",
-  "selected_rule_count": 4,
+  "selected_rule_count": 11,
   "status": "PASS",
-  "structural_pass_count": 17,
-  "warning_count": 70
+  "structural_pass_count": 29,
+  "warning_count": 119
 }

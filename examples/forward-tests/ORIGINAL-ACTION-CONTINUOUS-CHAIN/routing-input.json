@@ -13,21 +13,21 @@
   "locked_facts": [
     {
       "fact_id": "FACT-01",
-      "fact_type": "action_source",
+      "fact_type": "cause_effect_chain",
       "source_ref": "locked-script.md#FACT-01",
       "status": "LOCKED",
       "value": "A loose wheel stop is visibly displaced beside a rolling cart."
     },
     {
       "fact_id": "FACT-02",
-      "fact_type": "target_state",
+      "fact_type": "one_to_many_response",
       "source_ref": "locked-script.md#FACT-02",
       "status": "LOCKED",
       "value": "The cart crosses one clear lane while both crew members remain visible."
     },
     {
       "fact_id": "FACT-03",
-      "fact_type": "visible_result",
+      "fact_type": "safe_resolution",
       "source_ref": "locked-script.md#FACT-03",
       "status": "LOCKED",
       "value": "The lead places a chock and the cart stops inside the same continuous view."

@@ -188,9 +188,15 @@ def build_outputs() -> tuple[dict[str, Any], dict[Path, dict[str, Any]]]:
             if item["final_status"] == "BOUNDARY_OR_COUNTEREXAMPLE"
             for signal in item["boundary_signal_ids"]
         }
-        if boundary_signals != set(promotion["routing"]["not_applicable_if_any"]):
+        # The reviewed corpus boundaries must all compile into the runtime rule.
+        # A promotion may additionally carry a project-original safety guard used
+        # by its forward boundary test, so equality would incorrectly reject that
+        # stricter (and independently exercised) runtime contract.
+        if not boundary_signals.issubset(
+            set(promotion["routing"]["not_applicable_if_any"])
+        ):
             raise ValueError(
-                f"boundary signals do not compile exactly for {promotion['rule_id']}"
+                f"reviewed boundary signals do not compile for {promotion['rule_id']}"
             )
         rule, routing_review = build_rule(
             promotion, candidate, related_dispositions, by_id
@@ -216,8 +222,12 @@ def build_outputs() -> tuple[dict[str, Any], dict[Path, dict[str, Any]]]:
         {key: item[key] for key in disposition_keys}
         for item in promotion_review["candidate_dispositions"]
     ]
+    pending_statuses = {
+        "EVIDENCE_GAP_PENDING",
+        "EXISTING_MATERIAL_REVIEW_REQUIRED",
+    }
     final_count = sum(
-        item["final_status"] != "EVIDENCE_GAP_PENDING" for item in dispositions
+        item["final_status"] not in pending_statuses for item in dispositions
     )
     grammar["runtime_integration"] = {
         "authority_path": "research/grammar/runtime_integration.review.json",

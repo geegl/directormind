@@ -26,11 +26,19 @@
 
 ```json
 {
-  "notes": "The legacy primary label ACTION_CAUSALITY is retained only as non-operational lineage and was not proved by structural conversion.",
-  "primary": "LEGACY_SCENE_PROBLEM",
+  "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown.",
+  "primary": "ACTION_CAUSALITY",
   "secondary": [],
-  "source_refs": [],
-  "status": "UNKNOWN"
+  "source_refs": [
+    "NOBODY-2021-BUS-001-S111",
+    "NOBODY-2021-BUS-001-S112",
+    "NOBODY-2021-BUS-001-S113",
+    "NOBODY-2021-BUS-001-S114",
+    "NOBODY-2021-BUS-001-S115",
+    "NOBODY-2021-BUS-001-S116",
+    "NOBODY-2021-BUS-001-S117"
+  ],
+  "status": "INFERRED"
 }
 ```
 
@@ -201,8 +209,6 @@
 [
   {
     "blocks_rule_ids": [
-      "NOBODY-2021-BUS-001-NOBODY-C01-ACTION-CAUSAL-CHAIN",
-      "NOBODY-2021-BUS-001-NOBODY-C02-OBJECT-CONTROL-LEDGER",
       "NOBODY-2021-BUS-001-NOBODY-C03-SPATIAL-RESET-AFTER-BURST",
       "NOBODY-2021-BUS-001-NOBODY-C04-RECOVERY-AND-CARE-ARE-STATE"
     ],
@@ -245,7 +251,8 @@
 [
   "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
   "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-  "80 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review."
+  "80 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+  "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
 ]
 ```
 
@@ -441,11 +448,19 @@
   "picture_evidence_status": "PICTURE_OBSERVED",
   "production_take_status": "PRODUCTION_METHOD_UNKNOWN",
   "scene_problem": {
-    "notes": "The legacy primary label ACTION_CAUSALITY is retained only as non-operational lineage and was not proved by structural conversion.",
-    "primary": "LEGACY_SCENE_PROBLEM",
+    "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown.",
+    "primary": "ACTION_CAUSALITY",
     "secondary": [],
-    "source_refs": [],
-    "status": "UNKNOWN"
+    "source_refs": [
+      "NOBODY-2021-BUS-001-S111",
+      "NOBODY-2021-BUS-001-S112",
+      "NOBODY-2021-BUS-001-S113",
+      "NOBODY-2021-BUS-001-S114",
+      "NOBODY-2021-BUS-001-S115",
+      "NOBODY-2021-BUS-001-S116",
+      "NOBODY-2021-BUS-001-S117"
+    ],
+    "status": "INFERRED"
   },
   "scene_unit_type": "NATURAL_CONTINUOUS_SCENE",
   "schema_version": "scene-evidence/0.1",
@@ -10314,8 +10329,6 @@
   "unknowns": [
     {
       "blocks_rule_ids": [
-        "NOBODY-2021-BUS-001-NOBODY-C01-ACTION-CAUSAL-CHAIN",
-        "NOBODY-2021-BUS-001-NOBODY-C02-OBJECT-CONTROL-LEDGER",
         "NOBODY-2021-BUS-001-NOBODY-C03-SPATIAL-RESET-AFTER-BURST",
         "NOBODY-2021-BUS-001-NOBODY-C04-RECOVERY-AND-CARE-ARE-STATE"
       ],
@@ -10339,7 +10352,8 @@
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
     "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-    "80 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review."
+    "80 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+    "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
   ],
   "work_id": "NOBODY-2021"
 }

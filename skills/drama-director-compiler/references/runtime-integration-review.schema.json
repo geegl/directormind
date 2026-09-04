@@ -119,8 +119,7 @@
         "evidence_id": {"type": "string", "minLength": 1},
         "review_ids": {"$ref": "#/$defs/nonEmptyStringArray"},
         "source_refs": {"$ref": "#/$defs/stringArray"},
-        "supplemental_context_refs": {"$ref": "#/$defs/stringArray"},
-        "final_status": {"enum": ["POSITIVE_RUNTIME_RULE", "SUPPORTING_EVIDENCE", "BOUNDARY_OR_COUNTEREXAMPLE", "MERGED_DUPLICATE", "REJECTED_WITH_REASON", "EVIDENCE_GAP_PENDING"]},
+        "final_status": {"enum": ["POSITIVE_RUNTIME_RULE", "SUPPORTING_EVIDENCE", "BOUNDARY_OR_COUNTEREXAMPLE", "MERGED_DUPLICATE", "REJECTED_WITH_REASON", "EVIDENCE_GAP_PENDING", "EXISTING_MATERIAL_REVIEW_REQUIRED"]},
         "runtime_effect_key": {"anyOf": [{"type": "string", "minLength": 1}, {"type": "null"}]},
         "decision_axes": {"type": "array", "uniqueItems": true, "items": {"enum": ["COVERAGE", "BLOCKING", "REACTION", "PACING", "EDIT"]}},
         "observations": {"$ref": "#/$defs/nonEmptyStringArray"},
@@ -152,6 +151,17 @@
         "notes": {"type": "string", "minLength": 1}
       }
     },
+    "functionalRole": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["appearance_id", "functional_role", "shot_id", "source_refs"],
+      "properties": {
+        "appearance_id": {"type": "string", "minLength": 1},
+        "functional_role": {"type": "string", "minLength": 1},
+        "shot_id": {"type": "string", "minLength": 1},
+        "source_refs": {"$ref": "#/$defs/nonEmptyStringArray"}
+      }
+    },
     "runtimeRuleSpec": {
       "type": "object",
       "additionalProperties": false,
@@ -172,7 +182,7 @@
         "family_id": {"type": "string", "minLength": 1},
         "scene_problem": {"type": "string", "minLength": 1},
         "source_refs": {"$ref": "#/$defs/nonEmptyStringArray"},
-        "functional_roles": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+        "functional_roles": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/functionalRole"}},
         "trigger": {"type": "string", "minLength": 1},
         "routing": {
           "type": "object",
@@ -215,10 +225,11 @@
     "evidenceGap": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["gap_id", "priority", "candidate_rule_ids", "required_review", "close_condition"],
+      "required": ["gap_id", "priority", "candidate_count", "candidate_rule_ids", "required_review", "close_condition"],
       "properties": {
         "gap_id": {"type": "string", "minLength": 1},
         "priority": {"type": "integer", "minimum": 1},
+        "candidate_count": {"type": "integer", "minimum": 1},
         "candidate_rule_ids": {"$ref": "#/$defs/nonEmptyStringArray"},
         "required_review": {"type": "string", "minLength": 1},
         "close_condition": {"type": "string", "minLength": 1}

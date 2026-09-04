@@ -67,19 +67,19 @@ ROUTING_SIGNAL_FACT_TYPES = {
     "simultaneous_required_action": "simultaneous_state",
     "material_spatial_change": "spatial_change",
     "counterpart_relation_required": "counterpart_relation",
-    "counterpart_relation_not_required": "counterpart_absent",
+    "counterpart_relation_not_required": "counterpart_relation",
     "counterpart_relation_context_locked": "counterpart_relation",
     "counterpart_absent_at_changed_endpoint": "counterpart_endpoint_state",
     "relation_distance_change": "distance_change",
     "continuous_present_time": "continuous_time_change",
     "shared_endpoint_required": "relation_endpoint",
-    "elliptical_time_change": "time_ellipsis",
+    "elliptical_time_change": "time_structure",
     "time_structure_locked": "time_structure",
     "distance_change_across_ellipsis": "time_structure",
-    "visible_action_source": "action_source",
-    "target_state_change": "target_state",
-    "result_readable": "visible_result",
-    "continuous_view_preserves_action_chain": "visible_result",
+    "visible_action_source": "cause_effect_chain",
+    "target_state_change": "one_to_many_response",
+    "result_readable": "safe_resolution",
+    "continuous_view_preserves_action_chain": "safe_resolution",
     "multiple_visible_referents": "referent_set",
     "comparative_relation_required": "relation_constraint",
     "comparative_field_not_required": "single_item_state",
@@ -290,11 +290,13 @@ def validate_package(
             None
             if not entry.get("positive_for_rule_ids") and not entry.get("boundary_for_rule_ids")
             else next(
-                candidate.get("candidate_rule_id")
-                for candidate in candidate_index.get("candidates", [])
-                if candidate.get("canonical_rule_family")
-                in set(entry.get("positive_for_family_ids", []) + entry.get("boundary_for_family_ids", []))
-                and candidate.get("promotion", {}).get("status") == "CROSS_WORK_SUPPORTED"
+                rule.get("promotion_source_candidate_id")
+                for rule in grammar.get("rules", [])
+                if rule.get("rule_id")
+                == (
+                    entry.get("positive_for_rule_ids")
+                    or entry.get("boundary_for_rule_ids")
+                )[0]
             )
         ),
         "canonical_rule_family": (
@@ -550,7 +552,13 @@ def validate_repository(
         issue(issues, "FORWARD-INDEX-STATUS", "status", "Index status does not match the live eligible family set.")
     entries = index.get("cases", []) if isinstance(index.get("cases"), list) else []
     case_ids = [entry.get("test_case_id") for entry in entries if isinstance(entry, dict)]
-    if len(case_ids) != len(set(case_ids)) or set(case_ids) != REQUIRED_CASE_IDS:
+    required_rule_cases = {
+        case_id
+        for rule in grammar.get("rules", [])
+        for case_id in rule.get("evidence_lineage", {}).get("forward_test_ids", [])
+    }
+    required_case_ids = REQUIRED_CASE_IDS | required_rule_cases
+    if len(case_ids) != len(set(case_ids)) or set(case_ids) != required_case_ids:
         issue(issues, "FORWARD-CASE-SET", "cases", "The required unique original cases are not present.")
     tags = {tag for entry in entries if isinstance(entry, dict) for tag in entry.get("coverage_tags", [])}
     if tags != REQUIRED_COVERAGE_TAGS or set(index.get("required_scene_problem_coverage", [])) != REQUIRED_COVERAGE_TAGS:

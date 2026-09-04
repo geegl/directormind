@@ -1,0 +1,15 @@
+{
+  "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C04-DISTRIBUTE-POST-RESULT-BODY-STATES-BY-NEXT-ACTION",
+  "evidence_id": "BEAR-S01E07-REVIEW-001",
+  "record_id": "EXH-REL-AFTERMATH-BEAR",
+  "relation": "SUPPORTS",
+  "review_id": "EXH-REL-AFTERMATH-BEAR-REVIEW",
+  "same_trigger_status": "VERIFIED_SAME_TRIGGER",
+  "schema_version": "candidate-relation-review/0.1",
+  "source_candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C03-SUBTRACTIVE-AFTERMATH",
+  "source_refs": [
+    "BEAR-S01E07-REVIEW-001-S001"
+  ],
+  "status": "ROOT_VIDEO_VERIFIED",
+  "work_id": "THE-BEAR-S01E07"
+}

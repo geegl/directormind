@@ -1,0 +1,32 @@
+{
+  "candidate_required_story_facts": [
+    "Current and next attention owners are project-original and visibly locatable.",
+    "The route between their zones is continuous and readable."
+  ],
+  "candidate_trigger": "Several project-original priorities occupy connected geography and the next attention owner becomes visible or path-anchored before the current state is left.",
+  "promotion_source_candidate_id": "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION",
+  "review_id": "DR-MOBILE-ATTENTION-HANDOFF-ROUTING-REVIEW",
+  "routing": {
+    "audit_subject_tags": [],
+    "conflicts_with": [],
+    "not_applicable_if_any": [
+      "required_detail_not_mobile_readable"
+    ],
+    "required_fact_types": [
+      "current_attention_state",
+      "next_attention_owner",
+      "connected_geography"
+    ],
+    "scene_problems": [
+      "PROCEDURAL_COLLAPSE"
+    ],
+    "trigger_all_of": [
+      "connected_zone_attention_handoff",
+      "next_attention_owner_visible"
+    ],
+    "trigger_any_of": []
+  },
+  "rule_id": "DR-MOBILE-ATTENTION-HANDOFF",
+  "schema_version": "director-grammar-routing-review/0.1",
+  "status": "ROOT_VIDEO_VERIFIED"
+}

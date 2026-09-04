@@ -1106,16 +1106,20 @@ def _apply_integration_review(evidence: dict[str, Any]) -> None:
             for rule in evidence["candidate_rules"]
         )
     ]
-    if len(specs) > 1:
-        raise ValueError(f"multiple positive runtime specs use {evidence['evidence_id']}")
     if not specs:
         return
+    for spec in specs:
+        unreviewed_refs = sorted(set(spec["source_refs"]) - set(reviewed_shot_ids))
+        if unreviewed_refs:
+            raise ValueError(
+                f"runtime rule spec cites unreviewed Shot IDs for {evidence['evidence_id']}: {unreviewed_refs}"
+            )
+    # A scene evidence record has one primary scene problem even when separate
+    # candidate mechanisms from the same interval promote into different
+    # runtime problems. Preserve the first deterministic promotion as the
+    # scene-level label; each promoted candidate keeps its own stricter problem
+    # and source refs in the runtime-integration authority.
     spec = specs[0]
-    unreviewed_refs = sorted(set(spec["source_refs"]) - set(reviewed_shot_ids))
-    if unreviewed_refs:
-        raise ValueError(
-            f"runtime rule spec cites unreviewed Shot IDs for {evidence['evidence_id']}: {unreviewed_refs}"
-        )
     evidence["scene_problem"] = {
         "primary": spec["scene_problem"],
         "secondary": [],
@@ -1131,28 +1135,29 @@ def _apply_integration_review(evidence: dict[str, Any]) -> None:
         for shot in evidence["shots"]
         for role in shot.get("abstract_role_labels", [])
     }
-    for role in spec["functional_roles"]:
-        shot = shots_by_id.get(role["shot_id"])
-        if shot is None:
-            raise ValueError(f"runtime integration role cites unknown Shot ID: {role['shot_id']}")
-        key = (role["appearance_id"], role["functional_role"], tuple(role["source_refs"]))
-        if key in existing_roles:
-            continue
-        shot["abstract_role_labels"].append(
-            {
-                "appearance_id": role["appearance_id"],
-                "functional_role": role["functional_role"],
-                "status": "INFERRED",
-                "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
-                "appearance_track_id": None,
-                "source_refs": role["source_refs"],
-            }
-        )
-        existing_roles.add(key)
+    for promoted_spec in specs:
+        for role in promoted_spec["functional_roles"]:
+            shot = shots_by_id.get(role["shot_id"])
+            if shot is None:
+                raise ValueError(f"runtime integration role cites unknown Shot ID: {role['shot_id']}")
+            key = (role["appearance_id"], role["functional_role"], tuple(role["source_refs"]))
+            if key in existing_roles:
+                continue
+            shot["abstract_role_labels"].append(
+                {
+                    "appearance_id": role["appearance_id"],
+                    "functional_role": role["functional_role"],
+                    "status": "INFERRED",
+                    "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+                    "appearance_track_id": None,
+                    "source_refs": role["source_refs"],
+                }
+            )
+            existing_roles.add(key)
 
-    positive_id = spec["candidate_rule_id"]
+    positive_ids = {promoted_spec["candidate_rule_id"] for promoted_spec in specs}
     for rule in evidence["candidate_rules"]:
-        if rule["candidate_rule_id"] != positive_id:
+        if rule["candidate_rule_id"] not in positive_ids:
             continue
         rule["audio_dependency"] = False
         if review["method_id"] not in rule["source_method_ids"]:
@@ -1160,7 +1165,7 @@ def _apply_integration_review(evidence: dict[str, Any]) -> None:
     for unknown in evidence["unknowns"]:
         if unknown["unknown_id"] == "UNKNOWN-AUDIO":
             unknown["blocks_rule_ids"] = [
-                rule_id for rule_id in unknown["blocks_rule_ids"] if rule_id != positive_id
+                rule_id for rule_id in unknown["blocks_rule_ids"] if rule_id not in positive_ids
             ]
     evidence["validation_warnings"].append(
         "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."

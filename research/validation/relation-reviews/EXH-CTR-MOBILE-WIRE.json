@@ -1,0 +1,19 @@
+{
+  "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION",
+  "evidence_id": "WIRE-S01E04-OLD-CASES-001",
+  "record_id": "EXH-CTR-MOBILE-WIRE",
+  "relation": "NARROWS",
+  "review_id": "EXH-CTR-MOBILE-WIRE-REVIEW",
+  "same_trigger_status": "VERIFIED_SAME_TRIGGER",
+  "schema_version": "candidate-relation-review/0.1",
+  "source_candidate_rule_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C04-LONG-TAKE-WHEN-CONTINUITY-IS-THE-PROOF",
+  "source_refs": [
+    "WIRE-S01E04-OLD-CASES-001-S061",
+    "WIRE-S01E04-OLD-CASES-001-S062",
+    "WIRE-S01E04-OLD-CASES-001-S063",
+    "WIRE-S01E04-OLD-CASES-001-S064",
+    "WIRE-S01E04-OLD-CASES-001-S001"
+  ],
+  "status": "ROOT_VIDEO_VERIFIED",
+  "work_id": "THE-WIRE-S01E04"
+}

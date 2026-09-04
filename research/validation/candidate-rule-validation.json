@@ -9,11 +9,13 @@
   "family_count": 16,
   "issues": [],
   "promotion_status_counts": {
-    "CROSS_WORK_SUPPORTED": 4,
-    "EVIDENCE_GAP_PENDING": 107,
-    "SINGLE_WORK_CANDIDATE": 13
+    "CROSS_WORK_SUPPORTED": 11,
+    "EVIDENCE_GAP_PENDING": 12,
+    "EXISTING_MATERIAL_REVIEW_REQUIRED": 4,
+    "REJECTED": 2,
+    "SINGLE_WORK_CANDIDATE": 95
   },
-  "runtime_authorized_count": 4,
+  "runtime_authorized_count": 11,
   "schema_version": "candidate-rule-validation/0.1",
   "status": "PASS"
 }

@@ -1,0 +1,32 @@
+{
+  "candidate_required_story_facts": [
+    "The project locks the object's identity and required state change.",
+    "A later action depends on its current handler, location or function."
+  ],
+  "candidate_trigger": "A project-original portable object changes handler, location or locked function across an occlusion or cut, and the next action depends on the new state.",
+  "promotion_source_candidate_id": "NOBODY-2021-BUS-001-NOBODY-C02-OBJECT-CONTROL-LEDGER",
+  "review_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS-ROUTING-REVIEW",
+  "routing": {
+    "audit_subject_tags": [],
+    "conflicts_with": [],
+    "not_applicable_if_any": [
+      "object_state_not_required"
+    ],
+    "required_fact_types": [
+      "object_identity",
+      "object_state_change",
+      "dependent_next_action"
+    ],
+    "scene_problems": [
+      "PROCEDURAL_COMPETENCE"
+    ],
+    "trigger_all_of": [
+      "portable_object_state_change",
+      "next_action_depends_on_object_state"
+    ],
+    "trigger_any_of": []
+  },
+  "rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
+  "schema_version": "director-grammar-routing-review/0.1",
+  "status": "ROOT_VIDEO_VERIFIED"
+}

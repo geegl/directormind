@@ -97,7 +97,7 @@
         "candidate_rule_id": {"type": "string", "minLength": 1},
         "family_id": {"type": "string", "minLength": 1},
         "evidence_id": {"type": "string", "minLength": 1},
-        "final_status": {"enum": ["POSITIVE_RUNTIME_RULE", "SUPPORTING_EVIDENCE", "BOUNDARY_OR_COUNTEREXAMPLE", "MERGED_DUPLICATE", "REJECTED_WITH_REASON", "EVIDENCE_GAP_PENDING"]},
+        "final_status": {"enum": ["POSITIVE_RUNTIME_RULE", "SUPPORTING_EVIDENCE", "BOUNDARY_OR_COUNTEREXAMPLE", "MERGED_DUPLICATE", "REJECTED_WITH_REASON", "EVIDENCE_GAP_PENDING", "EXISTING_MATERIAL_REVIEW_REQUIRED"]},
         "runtime_effect_key": {"type": ["string", "null"]},
         "review_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
         "source_refs": {"$ref": "#/$defs/stringArray"},
@@ -114,7 +114,7 @@
       "required": ["authority_path", "phase_status", "source_count", "evidence_count", "candidate_count", "final_candidate_count", "dispositions"],
       "properties": {
         "authority_path": {"const": "research/grammar/runtime_integration.review.json"},
-        "phase_status": {"enum": ["PARTIAL_EVIDENCE_GAP", "COMPLETE"]},
+        "phase_status": {"enum": ["IN_PROGRESS", "PARTIAL_EVIDENCE_GAP", "COMPLETE"]},
         "source_count": {"const": 33},
         "evidence_count": {"const": 31},
         "candidate_count": {"const": 124},

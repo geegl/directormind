@@ -497,12 +497,18 @@
           "level": "warning",
           "message": "80 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
           "path": "$.validation_warnings[2]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
+          "path": "$.validation_warnings[3]"
         }
       ],
       "passed": true,
       "path": "research/evidence/nobody/NOBODY_2021_BUS_FIGHT_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 128,
-      "warning_count": 3
+      "warning_count": 4
     },
     {
       "candidate_rule_count": 4,
@@ -521,12 +527,18 @@
           "level": "warning",
           "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
           "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
+          "path": "$.validation_warnings[2]"
         }
       ],
       "passed": true,
       "path": "research/evidence/sicario/SICARIO_BORDER_CHECKPOINT_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 96,
-      "warning_count": 2
+      "warning_count": 3
     },
     {
       "candidate_rule_count": 4,
@@ -599,12 +611,18 @@
           "level": "warning",
           "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
           "path": "$.validation_warnings[1]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
+          "path": "$.validation_warnings[2]"
         }
       ],
       "passed": true,
       "path": "research/evidence/ted-lasso/TED_LASSO_S01E08_DARTS_REVERSAL_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 147,
-      "warning_count": 2
+      "warning_count": 3
     },
     {
       "candidate_rule_count": 4,
@@ -629,12 +647,18 @@
           "level": "warning",
           "message": "1 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
           "path": "$.validation_warnings[2]"
+        },
+        {
+          "code": "EVIDENCE-DECLARED-WARNING",
+          "level": "warning",
+          "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
+          "path": "$.validation_warnings[3]"
         }
       ],
       "passed": true,
       "path": "research/evidence/the-bear/THE_BEAR_S01E07_REVIEW_EVIDENCE_V0.1.scene-evidence.json",
       "shot_count": 1,
-      "warning_count": 3
+      "warning_count": 4
     },
     {
       "candidate_rule_count": 4,
@@ -895,7 +919,7 @@
   "total_scenes": 31,
   "total_shots": 2343,
   "validator_version": "scene-evidence-validator/0.1",
-  "warning_count": 85,
+  "warning_count": 89,
   "warnings": [
     {
       "code": "EVIDENCE-DECLARED-WARNING",
@@ -1242,6 +1266,13 @@
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "NOBODY-2021-BUS-001",
+      "level": "warning",
+      "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
+      "path": "$.validation_warnings[3]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
       "evidence_id": "SICARIO-2015-BORDER-CHECKPOINT-001",
       "level": "warning",
       "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
@@ -1253,6 +1284,13 @@
       "level": "warning",
       "message": "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
       "path": "$.validation_warnings[1]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "SICARIO-2015-BORDER-CHECKPOINT-001",
+      "level": "warning",
+      "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
+      "path": "$.validation_warnings[2]"
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",
@@ -1305,6 +1343,13 @@
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001",
+      "level": "warning",
+      "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
+      "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
       "evidence_id": "BEAR-S01E07-REVIEW-001",
       "level": "warning",
       "message": "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
@@ -1323,6 +1368,13 @@
       "level": "warning",
       "message": "1 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
       "path": "$.validation_warnings[2]"
+    },
+    {
+      "code": "EVIDENCE-DECLARED-WARNING",
+      "evidence_id": "BEAR-S01E07-REVIEW-001",
+      "level": "warning",
+      "message": "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown.",
+      "path": "$.validation_warnings[3]"
     },
     {
       "code": "EVIDENCE-DECLARED-WARNING",

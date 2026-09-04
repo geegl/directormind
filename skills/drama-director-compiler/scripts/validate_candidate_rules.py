@@ -33,6 +33,7 @@ PROMOTION_STATES = {
     "REJECTED",
     "BLOCKED_BY_UNKNOWN",
     "EVIDENCE_GAP_PENDING",
+    "EXISTING_MATERIAL_REVIEW_REQUIRED",
 }
 RELATIONS = {"SUPPORTS", "NARROWS", "CONTRADICTS", "COUNTEREXAMPLE", "DUPLICATE"}
 CANDIDATE_KEYS = {
@@ -318,8 +319,6 @@ def _verified_relations(
             and relation.get("work_id") == target_evidence["work_id"]
             and relation.get("evidence_id") == target_evidence["evidence_id"]
             and target_evidence["work_id"] != source_work
-            and target_normalized.get("canonical_rule_family")
-            == candidate.get("canonical_rule_family")
             and _verified_review_ref(
                 candidate.get("candidate_rule_id"),
                 relation,
@@ -365,8 +364,6 @@ def _verified_relations(
             and counterexample.get("work_id") == target_evidence["work_id"]
             and counterexample.get("evidence_id") == target_evidence["evidence_id"]
             and target_evidence["work_id"] != source_work
-            and target_normalized.get("canonical_rule_family")
-            == candidate.get("canonical_rule_family")
             and _verified_review_ref(
                 candidate.get("candidate_rule_id"),
                 counterexample,
@@ -587,7 +584,7 @@ def _validate_promotion(
             path,
             "Promotion UNKNOWN flag must match the candidate's actual dependencies.",
         )
-    pending_states = {"BLOCKED_BY_UNKNOWN", "EVIDENCE_GAP_PENDING"}
+    pending_states = {"BLOCKED_BY_UNKNOWN", "EVIDENCE_GAP_PENDING", "EXISTING_MATERIAL_REVIEW_REQUIRED"}
     if unknown and status not in pending_states and not nonpositive_final:
         _issue(issues, "PROMOTION-UNKNOWN-LEAK", path, "UNKNOWN-dependent positive candidate must remain pending.")
     if status not in pending_states and not nonpositive_final:

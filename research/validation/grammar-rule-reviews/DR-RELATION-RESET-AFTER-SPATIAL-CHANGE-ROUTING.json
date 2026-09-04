@@ -10,7 +10,8 @@
     "audit_subject_tags": [],
     "conflicts_with": [],
     "not_applicable_if_any": [
-      "counterpart_absent_at_changed_endpoint"
+      "counterpart_absent_at_changed_endpoint",
+      "counterpart_relation_not_required"
     ],
     "required_fact_types": [
       "spatial_change",

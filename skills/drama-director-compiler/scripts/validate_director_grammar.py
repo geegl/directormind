@@ -279,7 +279,11 @@ def validate_grammar(
                 "evidence_count": len(active_promotion_review.get("evidence_reviews", [])),
                 "candidate_count": len(expected_dispositions),
                 "final_candidate_count": sum(
-                    item.get("final_status") != "EVIDENCE_GAP_PENDING"
+                    item.get("final_status")
+                    not in {
+                        "EVIDENCE_GAP_PENDING",
+                        "EXISTING_MATERIAL_REVIEW_REQUIRED",
+                    }
                     for item in expected_dispositions
                 ),
                 "dispositions": expected_dispositions,

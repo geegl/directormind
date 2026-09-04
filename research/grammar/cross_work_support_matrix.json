@@ -3,165 +3,172 @@
   "candidate_index_path": "research/grammar/candidate_rule_index.json",
   "families": [
     {
-      "blocked_reasons": [
-        "No member has passed all evidence, boundary, confidence, and forward-test gates."
-      ],
+      "blocked_reasons": [],
       "description": "Keep source, preparation, contact or event, result and carried consequence readable.",
       "family_id": "ACTION-CAUSAL-CHAIN",
       "grouped_work_count": 4,
       "member_count": 4,
-      "promotion_eligibility": "PARTIAL_EVIDENCE_GAP",
+      "promotion_eligibility": "CROSS_WORK_SUPPORTED",
       "relation_counts": {
-        "NARROWS": 4
+        "SUPPORTS": 4
       },
       "relations": [
         {
           "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-APERTURE-EVENT-BEFORE-GROSS-BODY-RESPONSE-002",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "CHILDREN-OF-MEN-2006"
         },
         {
           "candidate_rule_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-MAKE-ASSISTANCE-AND-OBJECT-STATES-COMPLETE-003",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "HOUSE-OF-THE-DRAGON-S01E08"
         },
         {
           "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C01-ACTION-CAUSAL-CHAIN",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
-          "unknown_dependency_present": true,
+          "promotion_status": "CROSS_WORK_SUPPORTED",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "RULE:DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+          "runtime_final_status": "POSITIVE_RUNTIME_RULE",
+          "scene_problem_status": "INFERRED",
+          "unknown_dependency_present": false,
           "work_id": "NOBODY-2021"
         },
         {
           "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C03-SEPARATE-PERFORMER-ACTION-TARGET-STATE-AND-RESULT-CLAIM",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "TED-LASSO-S01E08"
         }
       ],
-      "verified_support_relation_ids": [],
-      "verified_unrelated_same_trigger_counterexample_ids": []
+      "verified_support_relation_ids": [
+        "EXH-REL-ACTION-CHILDREN"
+      ],
+      "verified_unrelated_same_trigger_counterexample_ids": [
+        "EXH-CTR-ACTION-AQP"
+      ]
     },
     {
-      "blocked_reasons": [
-        "No member has passed all evidence, boundary, confidence, and forward-test gates."
-      ],
+      "blocked_reasons": [],
       "description": "Hold or restore the visible terminal state after a consequential change.",
       "family_id": "AFTERMATH-AND-TERMINAL-STATE",
       "grouped_work_count": 5,
       "member_count": 5,
-      "promotion_eligibility": "PARTIAL_EVIDENCE_GAP",
+      "promotion_eligibility": "CROSS_WORK_SUPPORTED",
       "relation_counts": {
-        "NARROWS": 5
+        "SUPPORTS": 5
       },
       "relations": [
         {
           "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C03-SUBTRACTIVE-AFTERMATH",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-AFTERMATH-BY-NEXT-ACTION",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "THE-BEAR-S01E07"
         },
         {
           "candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-RETURN-TO-FORMAL-ROOM-AFTER-PEAK-004",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-AFTERMATH-BY-NEXT-ACTION",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "CHERNOBYL-S01E05"
         },
         {
           "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C04-RECOVERY-AND-CARE-ARE-STATE",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-AFTERMATH-BY-NEXT-ACTION",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "NOBODY-2021"
         },
         {
           "candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C04-RESULT-AND-EXIT-VERIFICATION-BEFORE-RESUME",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-AFTERMATH-BY-NEXT-ACTION",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "SICARIO-2015"
         },
         {
           "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C04-DISTRIBUTE-POST-RESULT-BODY-STATES-BY-NEXT-ACTION",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
-          "unknown_dependency_present": true,
+          "promotion_status": "CROSS_WORK_SUPPORTED",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "RULE:DR-AFTERMATH-BY-NEXT-ACTION",
+          "runtime_final_status": "POSITIVE_RUNTIME_RULE",
+          "scene_problem_status": "INFERRED",
+          "unknown_dependency_present": false,
           "work_id": "TED-LASSO-S01E08"
         }
       ],
-      "verified_support_relation_ids": [],
-      "verified_unrelated_same_trigger_counterexample_ids": []
+      "verified_support_relation_ids": [
+        "EXH-REL-AFTERMATH-BEAR",
+        "EXH-REL-AFTERMATH-CHERNOBYL"
+      ],
+      "verified_unrelated_same_trigger_counterexample_ids": [
+        "EXH-CTR-AFTERMATH-DWP"
+      ]
     },
     {
-      "blocked_reasons": [
-        "No member has passed all evidence, boundary, confidence, and forward-test gates."
-      ],
+      "blocked_reasons": [],
       "description": "Use a stable axis and limited coverage grammar until a relation change requires reset.",
       "family_id": "AXIS-AND-COVERAGE-GRAMMAR",
       "grouped_work_count": 2,
       "member_count": 2,
-      "promotion_eligibility": "PARTIAL_EVIDENCE_GAP",
+      "promotion_eligibility": "CROSS_WORK_SUPPORTED",
       "relation_counts": {
-        "NARROWS": 2
+        "SUPPORTS": 2
       },
       "relations": [
         {
           "candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C02-STABLE-SEAT-ANCHORS-CARRY-DENSE-ALTERNATION",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "CROSS_WORK_SUPPORTED",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "RULE:DR-STABLE-AXIS-STATE-LED-HOLDS",
+          "runtime_final_status": "POSITIVE_RUNTIME_RULE",
           "scene_problem_status": "INFERRED",
-          "unknown_dependency_present": true,
+          "unknown_dependency_present": false,
           "work_id": "MARRIAGE-STORY-2019"
         },
         {
           "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C02-VARY-HOLD-LENGTH-WITHIN-FIXED-ANGLE-GRAMMAR",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-STABLE-AXIS-STATE-LED-HOLDS",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-SOCIAL-NETWORK-2010"
         }
       ],
-      "verified_support_relation_ids": [],
-      "verified_unrelated_same_trigger_counterexample_ids": []
+      "verified_support_relation_ids": [
+        "EXH-REL-AXIS-TSN"
+      ],
+      "verified_unrelated_same_trigger_counterexample_ids": [
+        "EXH-CTR-AXIS-B99"
+      ]
     },
     {
       "blocked_reasons": [
@@ -173,7 +180,10 @@
       "member_count": 6,
       "promotion_eligibility": "PARTIAL_EVIDENCE_GAP",
       "relation_counts": {
-        "NARROWS": 6
+        "CONTRADICTS": 1,
+        "COUNTEREXAMPLE": 1,
+        "NARROWS": 3,
+        "SUPPORTS": 1
       },
       "relations": [
         {
@@ -188,30 +198,30 @@
         },
         {
           "candidate_rule_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C04-TASK-LEDGER-OVER-CAMERA-CONTINUITY",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "REJECTED",
+          "relation": "CONTRADICTS",
+          "runtime_effect_key": "REJECTION_GUARD:BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C04-TASK-LEDGER-OVER-CAMERA-CONTINUITY",
+          "runtime_final_status": "REJECTED_WITH_REASON",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-BEAR-S02E07"
         },
         {
           "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CARRY-SURFACE-BODY-STATE-THROUGH-VEHICLE-REVERSAL-003",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "CHILDREN-OF-MEN-2006"
         },
         {
           "candidate_rule_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C01-INVARIANT-SPACE-MULTICHANNEL-DELTA",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "CITIZEN-KANE-1941"
@@ -228,10 +238,10 @@
         },
         {
           "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
           "relation": "NARROWS",
           "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "runtime_final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "SOUND-OF-METAL"
@@ -241,91 +251,96 @@
       "verified_unrelated_same_trigger_counterexample_ids": []
     },
     {
-      "blocked_reasons": [
-        "No member has passed all evidence, boundary, confidence, and forward-test gates."
-      ],
+      "blocked_reasons": [],
       "description": "Preserve orientation and state through sustained movement, occlusion or a continuous-looking route.",
       "family_id": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
       "grouped_work_count": 5,
       "member_count": 7,
-      "promotion_eligibility": "PARTIAL_EVIDENCE_GAP",
+      "promotion_eligibility": "CROSS_WORK_SUPPORTED",
       "relation_counts": {
-        "NARROWS": 7
+        "CONTRADICTS": 1,
+        "COUNTEREXAMPLE": 1,
+        "DUPLICATE": 1,
+        "SUPPORTS": 4
       },
       "relations": [
         {
           "candidate_rule_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-MOBILE-ZONE-CAP-004",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-MOBILE-ATTENTION-HANDOFF",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "BROOKLYN-NINE-NINE-S05E14"
         },
         {
           "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
-          "unknown_dependency_present": true,
+          "promotion_status": "CROSS_WORK_SUPPORTED",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "RULE:DR-MOBILE-ATTENTION-HANDOFF",
+          "runtime_final_status": "POSITIVE_RUNTIME_RULE",
+          "scene_problem_status": "INFERRED",
+          "unknown_dependency_present": false,
           "work_id": "THE-BEAR-S01E07"
         },
         {
           "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C04-FUNCTIONAL-LONG-TAKE-FALLBACK",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
+          "promotion_status": "REJECTED",
+          "relation": "CONTRADICTS",
+          "runtime_effect_key": "REJECTION_GUARD:BEAR-S01E07-REVIEW-001-BEAR-C04-FUNCTIONAL-LONG-TAKE-FALLBACK",
+          "runtime_final_status": "REJECTED_WITH_REASON",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "THE-BEAR-S01E07"
         },
         {
           "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C01",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-MOBILE-ATTENTION-HANDOFF",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "HILL-HOUSE-S01E06"
         },
         {
           "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C03-REACQUIRE-VISUAL-TRACK-AFTER-OCCLUSION",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-MOBILE-ATTENTION-HANDOFF",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "TRUE-DETECTIVE-S01E04"
         },
         {
           "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C04-FUNCTIONAL-SEGMENTATION-FALLBACK-FOR-LONG-ROUTE",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "DUPLICATE",
+          "runtime_effect_key": "MERGE:DR-MOBILE-ATTENTION-HANDOFF",
+          "runtime_final_status": "MERGED_DUPLICATE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "TRUE-DETECTIVE-S01E04"
         },
         {
           "candidate_rule_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C04-LONG-TAKE-WHEN-CONTINUITY-IS-THE-PROOF",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-MOBILE-ATTENTION-HANDOFF:required_detail_not_mobile_readable",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-WIRE-S01E04"
         }
       ],
-      "verified_support_relation_ids": [],
-      "verified_unrelated_same_trigger_counterexample_ids": []
+      "verified_support_relation_ids": [
+        "EXH-REL-MOBILE-HH"
+      ],
+      "verified_unrelated_same_trigger_counterexample_ids": [
+        "EXH-CTR-MOBILE-WIRE"
+      ]
     },
     {
       "blocked_reasons": [
@@ -392,10 +407,9 @@
       "member_count": 16,
       "promotion_eligibility": "CROSS_WORK_SUPPORTED",
       "relation_counts": {
-        "COUNTEREXAMPLE": 1,
+        "COUNTEREXAMPLE": 10,
         "DUPLICATE": 1,
-        "NARROWS": 12,
-        "SUPPORTS": 2
+        "SUPPORTS": 5
       },
       "relations": [
         {
@@ -422,7 +436,7 @@
           "candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C02-SEPARATE-OBJECT-STATE-FROM-CAUSAL-CLAIM",
           "promotion_status": "SINGLE_WORK_CANDIDATE",
           "relation": "COUNTEREXAMPLE",
-          "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:single-item-state",
+          "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:comparative_field_not_required",
           "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -430,120 +444,120 @@
         },
         {
           "candidate_rule_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C04-PARALLEL-PROP-BARRIER-CLOSURE",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "CITIZEN-KANE-1941"
         },
         {
           "candidate_rule_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C01",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "BODYGUARD-S01E01"
         },
         {
           "candidate_rule_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C04",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "BODYGUARD-S01E01"
         },
         {
           "candidate_rule_id": "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-GETOUT-C02-TREAT-RECURRING-HANDLED-OBJECT-AS-STATE-CUE-NOT-CAUSAL-PROOF",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "GET-OUT-2017"
         },
         {
           "candidate_rule_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C01",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-MARTIAN-2015"
         },
         {
           "candidate_rule_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C03",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-MARTIAN-2015"
         },
         {
           "candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-OBJECT-INSERT-THEN-FACE-RETURN-004",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "MOONLIGHT-2016"
         },
         {
           "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C03-DOCUMENT-STATE-NEEDS-HANDLER-CONTINUITY",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "MR-ROBOT-S04E07"
         },
         {
           "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C02-OBJECT-CONTROL-LEDGER",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
-          "unknown_dependency_present": true,
+          "promotion_status": "CROSS_WORK_SUPPORTED",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "RULE:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
+          "runtime_final_status": "POSITIVE_RUNTIME_RULE",
+          "scene_problem_status": "INFERRED",
+          "unknown_dependency_present": false,
           "work_id": "NOBODY-2021"
         },
         {
           "candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C03-USE-WORK-OBJECT-UPDATES-AS-PUNCTUATION-NOT-SEMANTIC-PROOF",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-DEVIL-WEARS-PRADA-2006"
         },
         {
           "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C03-KEEP-SECONDARY-PROP-ACTIONS-INSIDE-PERSON-SINGLES",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-SOCIAL-NETWORK-2010"
         },
         {
           "candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C02",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-OBJECT-CUSTODY-STATE-CHECKPOINTS:object_state_not_required",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-LAST-OF-US-S01E06"
@@ -560,9 +574,11 @@
         }
       ],
       "verified_support_relation_ids": [
+        "EXH-REL-OBJECT-BODYGUARD",
         "EXHAUSTIVE-REL-COMPARISON-WIRE"
       ],
       "verified_unrelated_same_trigger_counterexample_ids": [
+        "EXH-CTR-OBJECT-TSN",
         "EXHAUSTIVE-CTR-COMPARISON-BCS"
       ]
     },
@@ -576,55 +592,56 @@
       "member_count": 5,
       "promotion_eligibility": "PARTIAL_EVIDENCE_GAP",
       "relation_counts": {
-        "NARROWS": 5
+        "COUNTEREXAMPLE": 4,
+        "SUPPORTS": 1
       },
       "relations": [
         {
           "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C01-ASSESSMENT-RECEIVER-TO-NEW-ROOM-ACTION",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:comparative_field_not_required",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "APOLLO-13-1995"
         },
         {
           "candidate_rule_id": "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C04-DEMONSTRATION-TO-DISTRIBUTED-WORK",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:comparative_field_not_required",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "APOLLO-13-1995"
         },
         {
           "candidate_rule_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C01-COMPETENCE-CLOSED-LOOP",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:comparative_field_not_required",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-BEAR-S02E07"
         },
         {
           "candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-SCRIPT-VERIFIED-TASK-BUFFER-002",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-COMPARATIVE-FIELD-BEFORE-RELATION:comparative_field_not_required",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "MOONLIGHT-2016"
         },
         {
           "candidate_rule_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C02-EMBODY-HYPOTHESIS-THEN-TEST-TRACE",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-WIRE-S01E04"
@@ -641,19 +658,18 @@
       "member_count": 8,
       "promotion_eligibility": "CROSS_WORK_SUPPORTED",
       "relation_counts": {
-        "COUNTEREXAMPLE": 1,
-        "NARROWS": 4,
-        "SUPPORTS": 3
+        "COUNTEREXAMPLE": 2,
+        "SUPPORTS": 6
       },
       "relations": [
         {
           "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C01-REGISTER-ROOM-AXIS-BEFORE-PROXIMITY",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "CROSS_WORK_SUPPORTED",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "RULE:DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY",
+          "runtime_final_status": "POSITIVE_RUNTIME_RULE",
           "scene_problem_status": "INFERRED",
-          "unknown_dependency_present": true,
+          "unknown_dependency_present": false,
           "work_id": "BRIDGERTON-S02E05"
         },
         {
@@ -678,10 +694,10 @@
         },
         {
           "candidate_rule_id": "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-BRG-S02E05-C04-DECOMPRESS-THROUGH-SINGLES-AND-ROOM-RESET",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "BRIDGERTON-S02E05"
@@ -690,7 +706,7 @@
           "candidate_rule_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C03-WITHDRAW-SHARED-FRAME-DELAY-DISTANCE-REVEAL",
           "promotion_status": "SINGLE_WORK_CANDIDATE",
           "relation": "COUNTEREXAMPLE",
-          "runtime_effect_key": "BOUNDARY:DR-SHARED-FRAME-FOR-RELATION-ENDPOINT:wave1-reviewed-boundary",
+          "runtime_effect_key": "BOUNDARY:DR-SHARED-FRAME-FOR-RELATION-ENDPOINT:distance_change_across_ellipsis",
           "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -708,29 +724,31 @@
         },
         {
           "candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-CONTRACT-EXPAND-DISTANCE-WITH-MINIMAL-ACTION-003",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY:relation_geometry_already_registered",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "MOONLIGHT-2016"
         },
         {
           "candidate_rule_id": "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-SEPARATED-ZONES-BEFORE-SHARED-DISTANCE-001",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "MOONLIGHT-2016"
         }
       ],
       "verified_support_relation_ids": [
+        "EXH-REL-GEOMETRY-MOONLIGHT",
         "WAVE1-REL-PROXIMITY-MS"
       ],
       "verified_unrelated_same_trigger_counterexample_ids": [
+        "EXH-CTR-GEOMETRY-MOONLIGHT",
         "WAVE1-CTR-PROXIMITY-CK"
       ]
     },
@@ -744,125 +762,126 @@
       "member_count": 12,
       "promotion_eligibility": "PARTIAL_EVIDENCE_GAP",
       "relation_counts": {
-        "NARROWS": 12
+        "COUNTEREXAMPLE": 9,
+        "SUPPORTS": 3
       },
       "relations": [
         {
           "candidate_rule_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-DELAYED-OBSERVER-003",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-PERFORMANCE-OWNER-HOLD",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "BROOKLYN-NINE-NINE-S05E14"
         },
         {
           "candidate_rule_id": "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C03-DUAL-RESULT-RECEIPT",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous_required_action",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-BEAR-S02E07"
         },
         {
           "candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C01-REGISTER-PUBLIC-PROOF-GEOMETRY",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous_required_action",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "BETTER-CALL-SAUL-S03E05"
         },
         {
           "candidate_rule_id": "BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001-BCS-S03E05-C04-HIERARCHICAL-RECEIPT-AFTER-SINGLE-OWNER-TURN",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-PERFORMANCE-OWNER-HOLD",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "BETTER-CALL-SAUL-S03E05"
         },
         {
           "candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-READOUT-RECEIVER-GROUP-CASCADE-002",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous_required_action",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "CHERNOBYL-S01E05"
         },
         {
           "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C04",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous_required_action",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "HILL-HOUSE-S01E06"
         },
         {
           "candidate_rule_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-SEATED-ANCHOR-THEN-SELECTIVE-RECEIPT-004",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-PERFORMANCE-OWNER-HOLD",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "HOUSE-OF-THE-DRAGON-S01E08"
         },
         {
           "candidate_rule_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C02-DISTRIBUTE-SCREEN-OWNERSHIP-WHEN-BODIES-DIVERGE",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous_required_action",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "KNIVES-OUT-2019"
         },
         {
           "candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C02-MULTI-WINDOW-DISTRIBUTED-THREAT-PUZZLE",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous_required_action",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "SICARIO-2015"
         },
         {
           "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C01",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous_required_action",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "SUCCESSION-S01E06"
         },
         {
           "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C03",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous_required_action",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "SUCCESSION-S01E06"
         },
         {
           "candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C01-REGISTER-TRIGGER-OBJECT-BEFORE-ATTENTION-CASCADE",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous_required_action",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-DEVIL-WEARS-PRADA-2006"
@@ -936,27 +955,26 @@
       "member_count": 7,
       "promotion_eligibility": "CROSS_WORK_SUPPORTED",
       "relation_counts": {
-        "COUNTEREXAMPLE": 2,
-        "NARROWS": 2,
-        "SUPPORTS": 3
+        "COUNTEREXAMPLE": 3,
+        "SUPPORTS": 4
       },
       "relations": [
         {
           "candidate_rule_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-MICRO-BRACKET-HOLD-002",
           "promotion_status": "SINGLE_WORK_CANDIDATE",
-          "relation": "SUPPORTS",
-          "runtime_effect_key": "SUPPORT:DR-PERFORMANCE-OWNER-HOLD",
-          "runtime_final_status": "SUPPORTING_EVIDENCE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-STABLE-AXIS-STATE-LED-HOLDS:single_performance_progression",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "BROOKLYN-NINE-NINE-S05E14"
         },
         {
           "candidate_rule_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-PRIDE-LADDER-001",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-PERFORMANCE-OWNER-HOLD",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "BROOKLYN-NINE-NINE-S05E14"
@@ -985,7 +1003,7 @@
           "candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C02-SUSTAIN-CORRECTOR-IN-SHARED-WORK-FRAME-WITH-SELECTIVE-RECEIVER-CHECKS",
           "promotion_status": "SINGLE_WORK_CANDIDATE",
           "relation": "COUNTEREXAMPLE",
-          "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:wave1-reviewed-boundary",
+          "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous_required_action",
           "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -995,7 +1013,7 @@
           "candidate_rule_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-DWP-C04-END-ON-TERMINAL-OWNER-WHILE-BACKGROUND-TASK-CONTINUES",
           "promotion_status": "SINGLE_WORK_CANDIDATE",
           "relation": "COUNTEREXAMPLE",
-          "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous-work",
+          "runtime_effect_key": "BOUNDARY:DR-AFTERMATH-BY-NEXT-ACTION:immediate_next_action_supersedes_aftermath",
           "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1003,10 +1021,10 @@
         },
         {
           "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C04-HOLD-VISIBLE-BODY-OR-HAND-OBJECT-STATE",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-PERFORMANCE-OWNER-HOLD",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "UNBELIEVABLE-S01E02"
@@ -1027,87 +1045,87 @@
       "member_count": 18,
       "promotion_eligibility": "CROSS_WORK_SUPPORTED",
       "relation_counts": {
-        "COUNTEREXAMPLE": 1,
-        "NARROWS": 14,
-        "SUPPORTS": 3
+        "COUNTEREXAMPLE": 13,
+        "DUPLICATE": 1,
+        "SUPPORTS": 4
       },
       "relations": [
         {
           "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "THE-BEAR-S01E07"
         },
         {
           "candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-ANCHOR-EXPLANATION-WITH-VISUALIZED-PROCESS-001",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "CHERNOBYL-S01E05"
         },
         {
           "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "CHILDREN-OF-MEN-2006"
         },
         {
           "candidate_rule_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C01",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "ANDOR-S01E10"
         },
         {
           "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C02",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "HILL-HOUSE-S01E06"
         },
         {
           "candidate_rule_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C01-REGISTER-ENSEMBLE-GEOMETRY-BEFORE-DISTRIBUTED-CHANGE",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "KNIVES-OUT-2019"
         },
         {
           "candidate_rule_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C03-SEATED-TO-STANDING-DENSITY-LEDGER",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "KNIVES-OUT-2019"
         },
         {
           "candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C01-SPATIAL-ROUTE-BEFORE-ANCHORED-SEATING",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "DUPLICATE",
+          "runtime_effect_key": "MERGE:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+          "runtime_final_status": "MERGED_DUPLICATE",
           "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "MARRIAGE-STORY-2019"
@@ -1124,10 +1142,10 @@
         },
         {
           "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C02-EXTRA-BODY-ANCHOR-IN-CONTAINED-ALTERNATION",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "MR-ROBOT-S04E07"
@@ -1138,36 +1156,36 @@
           "relation": "SUPPORTS",
           "runtime_effect_key": "SUPPORT:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
           "runtime_final_status": "SUPPORTING_EVIDENCE",
-          "scene_problem_status": "UNKNOWN",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "NOBODY-2021"
         },
         {
           "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C01-REGISTER-PUBLIC-OBJECT-CONTEST-GEOMETRY",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "TED-LASSO-S01E08"
         },
         {
           "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C02-RETURN-THROUGH-PRIMARY-ANCHOR-AFTER-DISTINCT-LOCATION-BLOCK",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "TED-LASSO-S01E08"
         },
         {
           "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C01-REGISTER-PAIR-GEOMETRY-THEN-RELY-ON-STABLE-SINGLES",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-SOCIAL-NETWORK-2010"
@@ -1176,7 +1194,7 @@
           "candidate_rule_id": "THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001-TSN-C04-SHARED-FIRST-DEPARTURE-THEN-ISOLATE-SECOND-OCCUPANCY-CHANGE",
           "promotion_status": "SINGLE_WORK_CANDIDATE",
           "relation": "COUNTEREXAMPLE",
-          "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:wave1-reviewed-boundary",
+          "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
           "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
@@ -1194,20 +1212,20 @@
         },
         {
           "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C02-PARTIAL-COMPANION-ANCHOR-IN-CONTAINED-TWO-HANDER",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "UNBELIEVABLE-S01E02"
         },
         {
           "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C03-RE-REGISTER-CONTAINED-GEOMETRY-AFTER-PARALLEL-INSERT",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE:counterpart_absent_at_changed_endpoint",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "UNBELIEVABLE-S01E02"
@@ -1230,65 +1248,67 @@
       "member_count": 6,
       "promotion_eligibility": "PARTIAL_EVIDENCE_GAP",
       "relation_counts": {
-        "NARROWS": 6
+        "COUNTEREXAMPLE": 3,
+        "NARROWS": 2,
+        "SUPPORTS": 1
       },
       "relations": [
         {
           "candidate_rule_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C03-CUT-TO-VISIBLE-ENVIRONMENT-EVENT-AT-BODY-STATE-PEAK",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN:action_causality_not_locked",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "A-QUIET-PLACE-2018"
         },
         {
           "candidate_rule_id": "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C02-REPEATED-BRIDGE-AS-ELLIPSIS-PUNCTUATION",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN:action_causality_not_locked",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "CITIZEN-KANE-1941"
         },
         {
           "candidate_rule_id": "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C02",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-MARTIAN-2015"
         },
         {
           "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
           "relation": "NARROWS",
           "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "runtime_final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "SOUND-OF-METAL"
         },
         {
           "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
           "relation": "NARROWS",
           "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "runtime_final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "SOUND-OF-METAL"
         },
         {
           "candidate_rule_id": "WIRE-S01E04-OLD-CASES-001-WIRE-C03-CUT-ON-EPISTEMIC-STATE-CHANGE",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN:action_causality_not_locked",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-WIRE-S01E04"
@@ -1332,10 +1352,10 @@
         },
         {
           "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
           "relation": "NARROWS",
           "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "runtime_final_status": "EXISTING_MATERIAL_REVIEW_REQUIRED",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "SOUND-OF-METAL"
@@ -1345,191 +1365,194 @@
       "verified_unrelated_same_trigger_counterexample_ids": []
     },
     {
-      "blocked_reasons": [
-        "No member has passed all evidence, boundary, confidence, and forward-test gates."
-      ],
+      "blocked_reasons": [],
       "description": "Carry people, direction and state through routes, apertures and thresholds.",
       "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
       "grouped_work_count": 12,
       "member_count": 17,
-      "promotion_eligibility": "PARTIAL_EVIDENCE_GAP",
+      "promotion_eligibility": "CROSS_WORK_SUPPORTED",
       "relation_counts": {
-        "NARROWS": 17
+        "COUNTEREXAMPLE": 10,
+        "SUPPORTS": 7
       },
       "relations": [
         {
           "candidate_rule_id": "A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001-AQP-C04-DELAY-REJOIN-WITH-EMPTY-GEOMETRY-TRACE-AND-CONTACT-RECEIPT",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "A-QUIET-PLACE-2018"
         },
         {
           "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-DOOR-THRESHOLD-EXIT-RETURN-DEPARTURE-004",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "CHILDREN-OF-MEN-2006"
         },
         {
           "candidate_rule_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C03",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "ANDOR-S01E10"
         },
         {
           "candidate_rule_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C04",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "ANDOR-S01E10"
         },
         {
           "candidate_rule_id": "DM-BODYGUARD-S01E01-SEL-001-BODYGUARD-W5-C03",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "BODYGUARD-S01E01"
         },
         {
           "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C03",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "HILL-HOUSE-S01E06"
         },
         {
           "candidate_rule_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-PRELOAD-ENSEMBLE-THEN-REVEAL-ENTRY-001",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "HOUSE-OF-THE-DRAGON-S01E08"
         },
         {
           "candidate_rule_id": "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-PUNCTUATE-LONG-AXIS-TRAVEL-002",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "HOUSE-OF-THE-DRAGON-S01E08"
         },
         {
           "candidate_rule_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C04-SPATIAL-SPILLOVER-CARRIES-AFTERMATH-PAST-ROOM-BOUNDARY",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "KNIVES-OUT-2019"
         },
         {
           "candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
-          "unknown_dependency_present": true,
+          "promotion_status": "CROSS_WORK_SUPPORTED",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "RULE:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+          "runtime_final_status": "POSITIVE_RUNTIME_RULE",
+          "scene_problem_status": "INFERRED",
+          "unknown_dependency_present": false,
           "work_id": "SICARIO-2015"
         },
         {
           "candidate_rule_id": "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C03-READINESS-TO-DEPLOYMENT-STATE-LEDGER",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
+          "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "SICARIO-2015"
         },
         {
           "candidate_rule_id": "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C04",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "SUCCESSION-S01E06"
         },
         {
           "candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C01",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-LAST-OF-US-S01E06"
         },
         {
           "candidate_rule_id": "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C04",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "THE-LAST-OF-US-S01E06"
         },
         {
           "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C01-WAYPOINT-REGISTERED-MOBILE-GEOGRAPHY",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "TRUE-DETECTIVE-S01E04"
         },
         {
           "candidate_rule_id": "TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001-TD-S01E04-C02-THRESHOLD-AS-STATE-CHECKPOINT",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "TRUE-DETECTIVE-S01E04"
         },
         {
           "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C01-APPROACH-TO-CONTAINER-STATE-HANDOFF",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE:route_not_continuous_multi_zone",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "UNBELIEVABLE-S01E02"
         }
       ],
-      "verified_support_relation_ids": [],
-      "verified_unrelated_same_trigger_counterexample_ids": []
+      "verified_support_relation_ids": [
+        "EXH-REL-WAYPOINT-TD"
+      ],
+      "verified_unrelated_same_trigger_counterexample_ids": [
+        "EXH-CTR-WAYPOINT-AQP"
+      ]
     }
   ],
   "family_count": 16,

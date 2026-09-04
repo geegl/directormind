@@ -1,0 +1,31 @@
+{
+  "candidate_required_story_facts": [
+    "The project locks a stable two-person axis and recurring side anchors.",
+    "Visible state progression, not line count, determines the required holds."
+  ],
+  "candidate_trigger": "A stationary project-original pair is carried mainly by visible face, gaze, hand or posture changes while its two-side axis remains stable.",
+  "promotion_source_candidate_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C02-STABLE-SEAT-ANCHORS-CARRY-DENSE-ALTERNATION",
+  "review_id": "DR-STABLE-AXIS-STATE-LED-HOLDS-ROUTING-REVIEW",
+  "routing": {
+    "audit_subject_tags": [],
+    "conflicts_with": [],
+    "not_applicable_if_any": [
+      "single_performance_progression"
+    ],
+    "required_fact_types": [
+      "stable_axis",
+      "visible_state_progression"
+    ],
+    "scene_problems": [
+      "DIALOGUE_POWER_TRANSFER"
+    ],
+    "trigger_all_of": [
+      "stationary_pair_state_progression",
+      "stable_two_side_axis"
+    ],
+    "trigger_any_of": []
+  },
+  "rule_id": "DR-STABLE-AXIS-STATE-LED-HOLDS",
+  "schema_version": "director-grammar-routing-review/0.1",
+  "status": "ROOT_VIDEO_VERIFIED"
+}

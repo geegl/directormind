@@ -151,7 +151,9 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
         (
             "RUNTIME_INTEGRATION_AUTHORITY_NOT_PASSING",
             integration["status"] == "PASS"
-            and integration["phase_status"] == "PARTIAL_EVIDENCE_GAP",
+            and integration["phase_status"]
+            in {"IN_PROGRESS", "PARTIAL_EVIDENCE_GAP", "COMPLETE"}
+            and integration["phase_status"] == exhaustive["phase_status"],
         ),
         ("CANDIDATE_VALIDATION_NOT_PASSING", candidate["status"] == "PASS"),
         ("GRAMMAR_VALIDATION_NOT_PASSING", grammar["status"] == "PASS"),
@@ -160,7 +162,7 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
         (
             "EXHAUSTIVE_INTEGRATION_REPORT_NOT_PASSING",
             exhaustive["status"] == "PASS"
-            and exhaustive["phase_status"] == "PARTIAL_EVIDENCE_GAP",
+            and exhaustive["phase_status"] == integration["phase_status"],
         ),
         ("REPOSITORY_BOUNDARIES_NOT_PASSING", boundaries["status"] == "PASS"),
     )
@@ -187,7 +189,10 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
             "reviewed_evidence_units": integration["evidence_review_count"],
             "moving_image_reviewed_shots": moving_image_reviewed_shots,
             "final_candidate_dispositions": integration["candidate_final_disposition_count"],
-            "pending_evidence_gap_candidates": integration["unresolved_candidate_count"],
+            "pending_evidence_gap_candidates": integration["pending_evidence_gap_count"],
+            "existing_material_review_required_candidates": integration[
+                "existing_material_review_required_count"
+            ],
             "evidence_gaps": integration["evidence_gap_count"],
             "runtime_active_families": integration["runtime_active_family_count"],
             "evidence_final_mappings": integration["evidence_final_mapping_count"],
@@ -259,9 +264,10 @@ def build_report(live_evidence: Mapping[str, Any] | None = None) -> dict[str, An
             "media_deleted": _declared_not_performed(),
         },
         "unverified_boundaries": [
-            "ONE_HUNDRED_SEVEN_CANDIDATES_REMAIN_EVIDENCE_GAP_PENDING",
-            "TWELVE_OF_THIRTY_ONE_EVIDENCE_UNITS_HAVE_FINAL_DECISION_MAPPINGS",
-            "TWELVE_OF_SIXTEEN_FAMILIES_HAVE_NO_ACTIVE_RUNTIME_RULE",
+            "TWELVE_CANDIDATES_REMAIN_FIXED_CORPUS_EVIDENCE_GAPS",
+            "FOUR_CANDIDATES_REQUIRE_DIRECT_AUDITION_OF_EXISTING_MATERIAL",
+            "THIRTY_OF_THIRTY_ONE_EVIDENCE_UNITS_HAVE_FINAL_DECISION_MAPPINGS",
+            "THREE_OF_SIXTEEN_FAMILIES_ARE_NOT_YET_RUNTIME_PARTICIPATING",
             "SEMANTIC_AUDIO_REMAINS_UNAUDITIONED",
             "FORWARD_SELECTION_IS_STRUCTURAL_NOT_CREATIVE_APPROVAL",
             "CREATIVE_QUALITY_AND_AUDIENCE_EFFECT_NOT_PROVED",

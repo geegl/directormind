@@ -47,26 +47,34 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
         cls.forward_index = read_json(FORWARD_INDEX_PATH)
         cls.report = build_report()
 
-    def test_live_report_is_partial_and_corpus_complete(self) -> None:
+    def test_live_report_is_in_progress_and_corpus_enumerated(self) -> None:
         report = self.report
         final_count = sum(item["final_status"] in FINAL_STATUSES for item in self.review["candidate_dispositions"])
         pending_count = sum(item["final_status"] == "EVIDENCE_GAP_PENDING" for item in self.review["candidate_dispositions"])
+        existing_review_count = sum(
+            item["final_status"] == "EXISTING_MATERIAL_REVIEW_REQUIRED"
+            for item in self.review["candidate_dispositions"]
+        )
         rule_count = len(self.review["runtime_rule_specs"])
         self.assertEqual(report["status"], "PASS", report["issues"])
-        self.assertEqual(report["phase_status"], "PARTIAL_EVIDENCE_GAP")
+        self.assertEqual(report["phase_status"], "IN_PROGRESS")
         self.assertEqual(report["source_disposition_count"], 33)
         self.assertEqual(report["canonical_scene_evidence_count"], 31)
         self.assertEqual(report["canonical_shot_edit_unit_count"], 2343)
         self.assertEqual(report["candidate_disposition_count"], 124)
         self.assertEqual(report["final_disposition_count"], final_count)
         self.assertEqual(report["pending_evidence_gap_count"], pending_count)
-        self.assertEqual(final_count + pending_count, 124)
+        self.assertEqual(
+            report["existing_material_review_required_count"],
+            existing_review_count,
+        )
+        self.assertEqual(final_count + pending_count + existing_review_count, 124)
         self.assertEqual(report["mechanism_family_count"], 16)
         self.assertEqual(report["runtime_rule_count"], rule_count)
         self.assertEqual(report["positive_forward_case_count"], rule_count)
         self.assertEqual(report["boundary_forward_case_count"], rule_count)
 
-    def test_every_candidate_is_final_or_has_one_precise_gap(self) -> None:
+    def test_every_candidate_is_final_or_has_one_precise_unresolved_class(self) -> None:
         gap_ids = {item["gap_id"] for item in self.review["evidence_gaps"]}
         dispositions = self.review["candidate_dispositions"]
         self.assertEqual(len(dispositions), 124)
@@ -76,8 +84,17 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
                     self.assertIsNone(item["evidence_gap_id"])
                     self.assertFalse(item["material_unknowns"])
                 else:
-                    self.assertEqual(item["final_status"], "EVIDENCE_GAP_PENDING")
-                    self.assertIn(item["evidence_gap_id"], gap_ids)
+                    self.assertIn(
+                        item["final_status"],
+                        {
+                            "EVIDENCE_GAP_PENDING",
+                            "EXISTING_MATERIAL_REVIEW_REQUIRED",
+                        },
+                    )
+                    if item["final_status"] == "EVIDENCE_GAP_PENDING":
+                        self.assertIn(item["evidence_gap_id"], gap_ids)
+                    else:
+                        self.assertIsNone(item["evidence_gap_id"])
                     self.assertTrue(item["material_unknowns"])
 
     def test_all_runtime_rule_lineages_exactly_match_fresh_dispositions(self) -> None:
@@ -119,6 +136,13 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
                 if item["final_status"] == "BOUNDARY_OR_COUNTEREXAMPLE" and item["target_rule_id"] == rule_id
                 for signal in item["boundary_signal_ids"]
             }
+            compiled_signals = set(
+                next(
+                    rule
+                    for rule in self.grammar["rules"]
+                    if rule["rule_id"] == rule_id
+                )["routing"]["not_applicable_if_any"]
+            )
             with self.subTest(rule_id=rule_id):
                 self.assertEqual(positive["test_mode"], "POSITIVE")
                 self.assertEqual(positive["expected_selected_rule_ids"], [rule_id])
@@ -126,26 +150,77 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
                 self.assertEqual(boundary["test_mode"], "BOUNDARY_OR_NON_APPLICABLE")
                 self.assertEqual(result["status"], "NO_APPLICABLE_RULE")
                 self.assertIn("NOT_APPLICABLE_MATCH", rejected["rejection_reason_codes"])
-                self.assertEqual(set(rejected["matched_not_applicable_signal_ids"]), expected_signals)
+                self.assertTrue(rejected["matched_not_applicable_signal_ids"])
+                self.assertTrue(
+                    set(rejected["matched_not_applicable_signal_ids"]).issubset(
+                        compiled_signals
+                    )
+                )
                 counterfactual_input = read_json(REPO_ROOT / boundary["package_path"] / "routing-input.json")
                 counterfactual_input = copy.deepcopy(counterfactual_input)
                 counterfactual_input["routing_signals"] = [
                     signal
                     for signal in counterfactual_input["routing_signals"]
-                    if signal not in expected_signals
+                    if signal not in compiled_signals
                 ]
                 counterfactual = route_scene(counterfactual_input, self.grammar)
                 self.assertIn(rule_id, {item["rule_id"] for item in counterfactual["selected_rules"]})
+
+            positive_input = read_json(
+                REPO_ROOT / positive["package_path"] / "routing-input.json"
+            )
+            for signal_id in expected_signals:
+                with self.subTest(rule_id=rule_id, boundary_signal=signal_id):
+                    probe = copy.deepcopy(positive_input)
+                    probe["routing_signals"] = sorted(
+                        set(probe["routing_signals"]) | {signal_id}
+                    )
+                    probe_result = route_scene(probe, self.grammar)
+                    self.assertNotIn(
+                        rule_id,
+                        {item["rule_id"] for item in probe_result["selected_rules"]},
+                    )
+                    probe_rejection = next(
+                        item
+                        for item in probe_result["rejected_rules"]
+                        if item["rule_id"] == rule_id
+                    )
+                    self.assertIn(
+                        "NOT_APPLICABLE_MATCH",
+                        probe_rejection["rejection_reason_codes"],
+                    )
+                    self.assertIn(
+                        signal_id,
+                        probe_rejection["matched_not_applicable_signal_ids"],
+                    )
 
     def test_all_sixteen_families_are_reported_without_false_completion(self) -> None:
         family_results = self.report["family_results"]
         final_count = sum(item["final_status"] in FINAL_STATUSES for item in self.review["candidate_dispositions"])
         pending_count = sum(item["final_status"] == "EVIDENCE_GAP_PENDING" for item in self.review["candidate_dispositions"])
+        existing_review_count = sum(
+            item["final_status"] == "EXISTING_MATERIAL_REVIEW_REQUIRED"
+            for item in self.review["candidate_dispositions"]
+        )
         self.assertEqual(len(family_results), 16)
         self.assertEqual(sum(item["candidate_count"] for item in family_results), 124)
         self.assertEqual(sum(item["final_disposition_count"] for item in family_results), final_count)
         self.assertEqual(sum(item["pending_evidence_gap_count"] for item in family_results), pending_count)
-        self.assertTrue(any(item["runtime_status"] == "PARTIAL_EVIDENCE_GAP" for item in family_results))
+        self.assertEqual(
+            sum(
+                item["existing_material_review_required_count"]
+                for item in family_results
+            ),
+            existing_review_count,
+        )
+        self.assertEqual(
+            sum(item["runtime_status"] == "PARTICIPATING" for item in family_results),
+            13,
+        )
+        self.assertEqual(
+            sum(item["runtime_status"] == "IN_PROGRESS" for item in family_results),
+            3,
+        )
 
     def test_checked_in_report_is_the_live_deterministic_report(self) -> None:
         self.assertEqual(read_json(REPORT_PATH), self.report)

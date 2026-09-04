@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import sys
 from collections import Counter
@@ -32,6 +33,7 @@ from validate_forward_tests import validate_repository as validate_forward  # no
 from validate_runtime_integration_review import SCHEMA_PATH as REVIEW_SCHEMA_PATH  # noqa: E402
 from validate_runtime_integration_review import validate as validate_review  # noqa: E402
 from validate_scene_evidence import _same_file_target, _write_report_atomically  # noqa: E402
+from route_director_rules import route_scene  # noqa: E402
 
 
 FINAL_STATUSES = {
@@ -134,13 +136,60 @@ def build_report() -> dict[str, Any]:
             if item["final_status"] == "BOUNDARY_OR_COUNTEREXAMPLE"
             for signal in item["boundary_signal_ids"]
         }
+        matched_boundary_signals = set(
+            rejected.get("matched_not_applicable_signal_ids", [])
+        )
+        compiled_not_applicable_signals = set(
+            rule.get("routing", {}).get("not_applicable_if_any", [])
+        )
         if (
             boundary_case.get("test_mode") != "BOUNDARY_OR_NON_APPLICABLE"
             or result.get("status") != "NO_APPLICABLE_RULE"
             or "NOT_APPLICABLE_MATCH" not in rejected.get("rejection_reason_codes", [])
-            or set(rejected.get("matched_not_applicable_signal_ids", [])) != expected_boundary_signals
+            or not matched_boundary_signals
+            or not matched_boundary_signals.issubset(
+                compiled_not_applicable_signals
+            )
         ):
-            add_issue(issues, "EXHAUSTIVE-BOUNDARY-FORWARD", rule_id, "Boundary package must block the rule with the reviewed negative signals.")
+            add_issue(issues, "EXHAUSTIVE-BOUNDARY-FORWARD", rule_id, "Boundary package must block the rule with one or more reviewed negative signals.")
+
+        positive_input_path = (
+            REPOSITORY_ROOT
+            / positive_case.get("package_path", "")
+            / "routing-input.json"
+        )
+        positive_input = read_json(positive_input_path) if positive_input_path.is_file() else {}
+        for signal_id in sorted(expected_boundary_signals):
+            probe = copy.deepcopy(positive_input)
+            probe["case_id"] = f"BOUNDARY-PROBE-{rule_id}-{signal_id}"
+            probe["routing_signals"] = sorted(
+                set(probe.get("routing_signals", [])) | {signal_id}
+            )
+            probe_result = route_scene(probe, grammar)
+            probe_rejection = next(
+                (
+                    item
+                    for item in probe_result.get("rejected_rules", [])
+                    if item.get("rule_id") == rule_id
+                ),
+                {},
+            )
+            if (
+                any(
+                    item.get("rule_id") == rule_id
+                    for item in probe_result.get("selected_rules", [])
+                )
+                or "NOT_APPLICABLE_MATCH"
+                not in probe_rejection.get("rejection_reason_codes", [])
+                or signal_id
+                not in probe_rejection.get("matched_not_applicable_signal_ids", [])
+            ):
+                add_issue(
+                    issues,
+                    "EXHAUSTIVE-BOUNDARY-SIGNAL-PROBE",
+                    f"{rule_id}:{signal_id}",
+                    "Each reviewed boundary signal must independently block its target rule when applied to the positive original case.",
+                )
 
     rejected_ids = {
         item["candidate_rule_id"]
@@ -157,21 +206,34 @@ def build_report() -> dict[str, Any]:
     family_results = []
     for family_id in family_ids:
         rows = [item for item in dispositions if item["family_id"] == family_id]
-        active_rules = sorted(
-            item["target_rule_id"] for item in rows if item["final_status"] == "POSITIVE_RUNTIME_RULE"
-        )
+        participating_rows = [
+            item for item in rows if item["final_status"] in FINAL_STATUSES
+        ]
+        active_rules = sorted({
+            item["target_rule_id"]
+            for item in participating_rows
+            if item.get("target_rule_id")
+        })
         family_results.append({
             "family_id": family_id,
             "candidate_count": len(rows),
             "final_disposition_count": sum(item["final_status"] in FINAL_STATUSES for item in rows),
             "pending_evidence_gap_count": sum(item["final_status"] == "EVIDENCE_GAP_PENDING" for item in rows),
+            "existing_material_review_required_count": sum(
+                item["final_status"] == "EXISTING_MATERIAL_REVIEW_REQUIRED"
+                for item in rows
+            ),
             "active_rule_ids": active_rules,
-            "runtime_status": "ACTIVE" if active_rules else "PARTIAL_EVIDENCE_GAP",
+            "runtime_status": (
+                "PARTICIPATING"
+                if participating_rows
+                else "IN_PROGRESS"
+            ),
         })
 
     final_counts = Counter(item["final_status"] for item in dispositions)
     gaps = sorted(review["evidence_gaps"], key=lambda item: (item["priority"], item["gap_id"]))
-    phase_status = review_report.get("phase_status", "PARTIAL_EVIDENCE_GAP")
+    phase_status = review_report.get("phase_status", "IN_PROGRESS")
     evidence_units = [
         read_json(path)
         for path in sorted((REPOSITORY_ROOT / "research" / "evidence").rglob("*.scene-evidence.json"))
@@ -179,7 +241,7 @@ def build_report() -> dict[str, Any]:
     return {
         "schema_version": "exhaustive-runtime-integration-validation/0.1",
         "status": "PASS" if not issues else "FAIL",
-        "phase_status": phase_status if not issues else "PARTIAL_EVIDENCE_GAP",
+        "phase_status": phase_status if not issues else "IN_PROGRESS",
         "source_disposition_count": len(review["source_dispositions"]),
         "canonical_scene_evidence_count": len(review["evidence_reviews"]),
         "canonical_shot_edit_unit_count": sum(item["stats"]["shot_count"] for item in evidence_units),
@@ -187,6 +249,10 @@ def build_report() -> dict[str, Any]:
         "candidate_final_status_counts": dict(sorted(final_counts.items())),
         "final_disposition_count": sum(item["final_status"] in FINAL_STATUSES for item in dispositions),
         "pending_evidence_gap_count": sum(item["final_status"] == "EVIDENCE_GAP_PENDING" for item in dispositions),
+        "existing_material_review_required_count": sum(
+            item["final_status"] == "EXISTING_MATERIAL_REVIEW_REQUIRED"
+            for item in dispositions
+        ),
         "mechanism_family_count": len(family_ids),
         "runtime_rule_count": len(grammar["rules"]),
         "positive_forward_case_count": forward_report.get("completed_positive_cases", 0),
@@ -209,7 +275,8 @@ def build_report() -> dict[str, Any]:
             "A PASS report proves repository bindings and deterministic routing, not creative approval.",
             "All creative packages remain HUMAN_REVIEW_PENDING and do not authorize generation or publication.",
             "Semantic audio remains outside rules whose audio_dependency is false.",
-            "PARTIAL_EVIDENCE_GAP is mandatory while any candidate remains pending.",
+            "IN_PROGRESS is mandatory while existing local material still requires direct review.",
+            "PARTIAL_EVIDENCE_GAP is reserved for the state where only fixed-corpus evidence gaps remain.",
         ],
     }
 

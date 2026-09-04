@@ -26,11 +26,13 @@
 
 ```json
 {
-  "notes": "The legacy primary label PROCEDURAL_COLLAPSE is retained only as non-operational lineage and was not proved by structural conversion.",
-  "primary": "LEGACY_SCENE_PROBLEM",
+  "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown.",
+  "primary": "PROCEDURAL_COLLAPSE",
   "secondary": [],
-  "source_refs": [],
-  "status": "UNKNOWN"
+  "source_refs": [
+    "BEAR-S01E07-REVIEW-001-S001"
+  ],
+  "status": "INFERRED"
 }
 ```
 
@@ -74,7 +76,6 @@
 [
   {
     "blocks_rule_ids": [
-      "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION",
       "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES",
       "BEAR-S01E07-REVIEW-001-BEAR-C03-SUBTRACTIVE-AFTERMATH",
       "BEAR-S01E07-REVIEW-001-BEAR-C04-FUNCTIONAL-LONG-TAKE-FALLBACK"
@@ -117,7 +118,8 @@
 [
   "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
   "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-  "1 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review."
+  "1 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+  "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
 ]
 ```
 
@@ -218,11 +220,13 @@
   "picture_evidence_status": "PICTURE_OBSERVED",
   "production_take_status": "VISIBLE_CONTINUITY_ONLY",
   "scene_problem": {
-    "notes": "The legacy primary label PROCEDURAL_COLLAPSE is retained only as non-operational lineage and was not proved by structural conversion.",
-    "primary": "LEGACY_SCENE_PROBLEM",
+    "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown.",
+    "primary": "PROCEDURAL_COLLAPSE",
     "secondary": [],
-    "source_refs": [],
-    "status": "UNKNOWN"
+    "source_refs": [
+      "BEAR-S01E07-REVIEW-001-S001"
+    ],
+    "status": "INFERRED"
   },
   "scene_unit_type": "SINGLE_VISIBLE_TAKE",
   "schema_version": "scene-evidence/0.1",
@@ -338,7 +342,6 @@
   "unknowns": [
     {
       "blocks_rule_ids": [
-        "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION",
         "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES",
         "BEAR-S01E07-REVIEW-001-BEAR-C03-SUBTRACTIVE-AFTERMATH",
         "BEAR-S01E07-REVIEW-001-BEAR-C04-FUNCTIONAL-LONG-TAKE-FALLBACK"
@@ -363,7 +366,8 @@
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
     "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-    "1 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review."
+    "1 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+    "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
   ],
   "work_id": "THE-BEAR-S01E07"
 }

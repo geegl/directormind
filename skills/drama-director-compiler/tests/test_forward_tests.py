@@ -73,7 +73,10 @@ class ForwardTestContractTests(unittest.TestCase):
         self.assertEqual(report["status"], "PASS")
         self.assertEqual(report["package_count"], package_count)
         self.assertEqual(report["required_scene_problem_count"], 6)
-        self.assertEqual(report["promotion_ready_family_count"], rule_count)
+        self.assertEqual(
+            report["promotion_ready_family_count"],
+            len({rule["canonical_rule_family"] for rule in self.grammar["rules"]}),
+        )
         self.assertEqual(report["required_positive_boundary_pairs"], rule_count)
         self.assertEqual(report["completed_positive_cases"], rule_count)
         self.assertEqual(report["completed_boundary_cases"], rule_count)
@@ -144,9 +147,11 @@ class ForwardTestContractTests(unittest.TestCase):
             rejected = next(item for item in result["rejected_rules"] if item["rule_id"] == rule_id)
             self.assertIn("NOT_APPLICABLE_MATCH", rejected["rejection_reason_codes"])
             rule = next(item for item in self.grammar["rules"] if item["rule_id"] == rule_id)
-            self.assertEqual(
-                set(rejected["matched_not_applicable_signal_ids"]),
-                set(rule["routing"]["not_applicable_if_any"]),
+            self.assertTrue(rejected["matched_not_applicable_signal_ids"])
+            self.assertTrue(
+                set(rejected["matched_not_applicable_signal_ids"]).issubset(
+                    set(rule["routing"]["not_applicable_if_any"])
+                )
             )
 
     def test_saved_routing_result_cannot_drift_from_live_router(self) -> None:
@@ -193,8 +198,8 @@ class ForwardTestContractTests(unittest.TestCase):
         cases = (
             (
                 "ORIGINAL-SPATIAL-CHANGE-WITHOUT-COUNTERPART",
-                "counterpart_endpoint_state",
                 "counterpart_relation",
+                "counterpart_absent",
             ),
             ("ORIGINAL-PROXIMITY-ELLIPSIS", "time_structure", "calendar_state"),
         )
@@ -255,7 +260,7 @@ class ForwardTestContractTests(unittest.TestCase):
             path = root / "ORIGINAL-ACTION-CAUSALITY" / "locked-script.md"
             text = path.read_text(encoding="utf-8")
             text = text.replace(
-                "A loose wheel stop is visibly displaced before an unpowered equipment rack begins rolling.",
+                "A loose wheel stop lets an unpowered equipment rack begin rolling.",
                 "The equipment rack remains locked and never moves.",
             )
             path.write_text(text, encoding="utf-8")

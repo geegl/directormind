@@ -1,0 +1,56 @@
+{
+  "case_id": "ORIGINAL-AFTERMATH-BY-NEXT-ACTION",
+  "dramatic_structure": {
+    "goal": "allocate a verified result tail by the next required actions",
+    "objectives": [
+      "record, close, and release the pump room"
+    ],
+    "obstacle": "three possible reactions do not have equal operational value",
+    "stakes": "the room cannot release before the final safe state",
+    "subtext": "none asserted",
+    "tactic_change": "shared result becomes ordered closure"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "visible_result",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "A clear project-original test vessel reaches the marked safe level in view of all three participants."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "next_action_states",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "Checker A records the level, Checker B closes the inlet, and the operator remains with the stable vessel."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "terminal_environment_state",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "The final frame must show the stable vessel and closed inlet before the room is released."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "consequential_result_with_multiple_next_states",
+    "next_action_prioritization_required"
+  ],
+  "scene_problem": {
+    "primary": "PUBLIC_REVELATION",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "pump_test"
+  ],
+  "unknown_fact_types": []
+}

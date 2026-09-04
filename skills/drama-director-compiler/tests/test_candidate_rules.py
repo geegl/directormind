@@ -87,6 +87,7 @@ class CandidateRuleContractTests(unittest.TestCase):
                 "REJECTED",
                 "BLOCKED_BY_UNKNOWN",
                 "EVIDENCE_GAP_PENDING",
+                "EXISTING_MATERIAL_REVIEW_REQUIRED",
             },
         )
 

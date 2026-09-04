@@ -1,0 +1,56 @@
+{
+  "case_id": "ORIGINAL-OBJECT-CUSTODY-CHECKPOINTS",
+  "dramatic_structure": {
+    "goal": "make one required object handoff govern the next procedure",
+    "objectives": [
+      "transfer and install the calibrated sensor"
+    ],
+    "obstacle": "the next step cannot begin before custody is confirmed",
+    "stakes": "the calibration record would be invalid if the wrong unit enters the cradle",
+    "subtext": "none asserted",
+    "tactic_change": "possession becomes verified installation"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "object_identity",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "One project-original blue sensor is the only calibrated unit in the room."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "object_state_change",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "Technician A transfers the calibrated sensor across a marked handoff line to Technician B."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "dependent_next_action",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "Technician B may place the sensor in the test cradle only after the new custody state is visible."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "portable_object_state_change",
+    "next_action_depends_on_object_state"
+  ],
+  "scene_problem": {
+    "primary": "PROCEDURAL_COMPETENCE",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "safe_handoff"
+  ],
+  "unknown_fact_types": []
+}

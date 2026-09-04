@@ -11,7 +11,8 @@
     "audit_subject_tags": [],
     "conflicts_with": [],
     "not_applicable_if_any": [
-      "distance_change_across_ellipsis"
+      "distance_change_across_ellipsis",
+      "elliptical_time_change"
     ],
     "required_fact_types": [
       "distance_change",

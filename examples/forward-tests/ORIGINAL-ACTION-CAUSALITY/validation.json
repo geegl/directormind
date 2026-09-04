@@ -30,13 +30,13 @@
       "path": "EP01-SC01-SH03"
     }
   ],
-  "positive_selection_claimed": false,
+  "positive_selection_claimed": true,
   "publication_authorized": false,
   "routing_error_count": 0,
-  "routing_status": "NO_APPLICABLE_RULE",
+  "routing_status": "SELECTED",
   "schema_version": "forward-test-validation/0.1",
-  "selection_count": 0,
+  "selection_count": 1,
   "structural_status": "PASS",
   "test_case_id": "ORIGINAL-ACTION-CAUSALITY",
-  "test_mode": "NO_MATCH_PROBE"
+  "test_mode": "POSITIVE"
 }

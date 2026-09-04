@@ -1,0 +1,790 @@
+{
+  "aspect_ratio": "16:9",
+  "dialogue_must_be_verbatim": true,
+  "director_grammar_path": "research/grammar/director_grammar_v0.2.json",
+  "duration_tolerance_seconds": 0,
+  "episode_id": "EP01",
+  "execution_medium": "AI_PHOTOREAL_HUMAN",
+  "generation_authorized": false,
+  "project_id": "FORWARD-TEST-ORIGINAL-GEOMETRY-ALREADY-REGISTERED",
+  "publication_authorized": false,
+  "scenes": [
+    {
+      "allowed_characters": [
+        "ARCHIVIST_A",
+        "ARCHIVIST_B"
+      ],
+      "audience_information": {
+        "locked_fact_ids": [
+          "FACT-01",
+          "FACT-02",
+          "FACT-03",
+          "FACT-04"
+        ]
+      },
+      "dramatic_engine": {
+        "goal": "continue a relation change inside already known geometry",
+        "objectives": [
+          "resume the archive review"
+        ],
+        "obstacle": "the distance changes slightly",
+        "stakes": "the existing axis must remain stable",
+        "subtext": "none asserted",
+        "tactic_change": "shared review shifts position"
+      },
+      "duration_seconds": 20,
+      "location": "project-original archive workroom",
+      "narrative_goal": "continue a relation change inside already known geometry",
+      "pov": {
+        "character": "ENSEMBLE_NEUTRAL",
+        "identification_level": "STRUCTURAL_TEST_ONLY"
+      },
+      "routing_input": {
+        "case_id": "ORIGINAL-GEOMETRY-ALREADY-REGISTERED",
+        "dramatic_structure": {
+          "goal": "continue a relation change inside already known geometry",
+          "objectives": [
+            "resume the archive review"
+          ],
+          "obstacle": "the distance changes slightly",
+          "stakes": "the existing axis must remain stable",
+          "subtext": "none asserted",
+          "tactic_change": "shared review shifts position"
+        },
+        "locked_facts": [
+          {
+            "fact_id": "FACT-01",
+            "fact_type": "relation_start_zones",
+            "source_ref": "locked-script.md#FACT-01",
+            "status": "LOCKED",
+            "value": "The same uninterrupted interval has already established both archivists and the full table."
+          },
+          {
+            "fact_id": "FACT-02",
+            "fact_type": "distance_change",
+            "source_ref": "locked-script.md#FACT-02",
+            "status": "LOCKED",
+            "value": "Archivist B shifts one position along the already visible table edge."
+          },
+          {
+            "fact_id": "FACT-03",
+            "fact_type": "path_anchor",
+            "source_ref": "locked-script.md#FACT-03",
+            "status": "LOCKED",
+            "value": "The existing table and doorway anchors remain unchanged and readable."
+          },
+          {
+            "fact_id": "FACT-04",
+            "fact_type": "relationship_context",
+            "source_ref": "locked-script.md#FACT-04",
+            "status": "LOCKED",
+            "value": "The archivists' established personal bond remains the reason the small distance change matters."
+          }
+        ],
+        "priority_constraints": [],
+        "rights_boundary": {
+          "contains_private_script": false,
+          "contains_reference_surface": false,
+          "project_original": true
+        },
+        "routing_signals": [
+          "distance_change_requires_initial_geometry",
+          "relation_path_must_read",
+          "relation_geometry_already_registered"
+        ],
+        "scene_problem": {
+          "primary": "ROMANTIC_PROXIMITY",
+          "secondary": [],
+          "status": "LOCKED"
+        },
+        "schema_version": "director-routing-input/0.1",
+        "subject_matter_tags": [
+          "relationship_tension"
+        ],
+        "unknown_fact_types": []
+      },
+      "routing_result": {
+        "applied_constraint_ids": [
+          "PC-DIALOGUE-TEXT-LOCK",
+          "PC-LOCKED-STORY-AUTHORITY",
+          "PC-MODEL-INDEPENDENT-IR",
+          "PC-ORIGINAL-ASSETS",
+          "PC-SOURCE-COVERAGE",
+          "SC-AUTHORIZATION-GATES",
+          "SC-HIGH-RISK-FALLBACK",
+          "SC-HUMAN-REVIEW",
+          "SC-NO-SUBJECT-SHORTCUT",
+          "SC-NO-SURFACE-COPY",
+          "SC-NO-UNKNOWN-PROMOTION"
+        ],
+        "case_id": "ORIGINAL-GEOMETRY-ALREADY-REGISTERED",
+        "conflict_trace": [],
+        "eligible_rule_ids": [
+          "DR-AFTERMATH-BY-NEXT-ACTION",
+          "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+          "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+          "DR-MOBILE-ATTENTION-HANDOFF",
+          "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
+          "DR-PERFORMANCE-OWNER-HOLD",
+          "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY",
+          "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+          "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+          "DR-STABLE-AXIS-STATE-LED-HOLDS",
+          "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+        ],
+        "human_review_status": "HUMAN_REVIEW_PENDING",
+        "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+        "rejected_rules": [
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "next_action_states",
+              "visible_result"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-AFTERMATH-BY-NEXT-ACTION"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "referent_set",
+              "relation_constraint"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "cause_effect_chain",
+              "one_to_many_response",
+              "safe_resolution"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "connected_geography",
+              "current_attention_state",
+              "next_attention_owner"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-MOBILE-ATTENTION-HANDOFF"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "dependent_next_action",
+              "object_identity",
+              "object_state_change"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "performance_progression"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-PERFORMANCE-OWNER-HOLD"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [
+              "relation_geometry_already_registered"
+            ],
+            "missing_fact_types": [],
+            "rejection_reason_codes": [
+              "NOT_APPLICABLE_MATCH"
+            ],
+            "rule_id": "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "counterpart_relation",
+              "spatial_change"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "relation_endpoint",
+              "time_structure"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "stable_axis",
+              "visible_state_progression"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-STABLE-AXIS-STATE-LED-HOLDS"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "destination_vector",
+              "route_continuity",
+              "zone_waypoints"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
+          }
+        ],
+        "rights_boundary": {
+          "subject_matter_used_for_selection": false,
+          "surface_copy_allowed": false
+        },
+        "scene_problem": "ROMANTIC_PROXIMITY",
+        "schema_version": "director-routing-result/0.1",
+        "selected_rules": [],
+        "selection_count": 0,
+        "status": "NO_APPLICABLE_RULE"
+      },
+      "scene_id": "EP01-SC01",
+      "shots": [
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "ARCHIVIST_A",
+            "ARCHIVIST_B"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "The established shared field already contains both sides and the table path.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-01"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-01"
+            ],
+            "must_hold": [
+              "The same uninterrupted interval has already established both archivists and the full table."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-01",
+          "continuity_out": "state after FACT-01",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "The same uninterrupted interval has already established both archivists and the full table.",
+          "order": 1,
+          "performance_beats": [
+            "The established shared field already contains both sides and the table path."
+          ],
+          "reference_plan": {
+            "exclude": [
+              "research stills",
+              "source-work surfaces"
+            ],
+            "inherit": [
+              "identity",
+              "geometry"
+            ],
+            "reference_id": "REF-GEOMETRY-ALREADY-REGISTERED-SH01",
+            "reference_type": "SHOT_GOLDEN",
+            "required": true,
+            "rights_status": "PROJECT_ORIGINAL",
+            "scope": "project-original identity and geometry only",
+            "status": "PLANNED"
+          },
+          "shot_id": "EP01-SC01-SH01",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-01"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        },
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "ARCHIVIST_A",
+            "ARCHIVIST_B"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "Archivist B makes one short move along that known path.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-02"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-02"
+            ],
+            "must_hold": [
+              "Archivist B shifts one position along the already visible table edge."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-02",
+          "continuity_out": "state after FACT-02",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "Archivist B shifts one position along the already visible table edge.",
+          "order": 2,
+          "performance_beats": [
+            "Archivist B makes one short move along that known path."
+          ],
+          "reference_plan": {
+            "exclude": [],
+            "inherit": [],
+            "reference_id": null,
+            "reference_type": "NONE",
+            "required": false,
+            "rights_status": "NOT_APPLICABLE",
+            "scope": "",
+            "status": "NOT_REQUIRED"
+          },
+          "shot_id": "EP01-SC01-SH02",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-02"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        },
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "ARCHIVIST_A",
+            "ARCHIVIST_B"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "The scene uses the existing anchor instead of repeating an initial room setup.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-03"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-03"
+            ],
+            "must_hold": [
+              "The existing table and doorway anchors remain unchanged and readable."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-03",
+          "continuity_out": "state after FACT-03",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "The existing table and doorway anchors remain unchanged and readable.",
+          "order": 3,
+          "performance_beats": [
+            "The scene uses the existing anchor instead of repeating an initial room setup."
+          ],
+          "reference_plan": {
+            "exclude": [],
+            "inherit": [],
+            "reference_id": null,
+            "reference_type": "NONE",
+            "required": false,
+            "rights_status": "NOT_APPLICABLE",
+            "scope": "",
+            "status": "NOT_REQUIRED"
+          },
+          "shot_id": "EP01-SC01-SH03",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-03"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        },
+        {
+          "ai_complexity": {
+            "camera": "LOW",
+            "continuity": "MEDIUM",
+            "performance": "LOW",
+            "reasons": [
+              "The test uses one readable state change per shot."
+            ]
+          },
+          "allowed_characters": [
+            "ARCHIVIST_A",
+            "ARCHIVIST_B"
+          ],
+          "audio": {
+            "instruction": null,
+            "source_refs": [],
+            "status": "PROJECT_ORIGINAL_ONLY"
+          },
+          "blocking": "The relationship beat continues inside the already registered project-original geometry.",
+          "camera_angle": "eye level",
+          "camera_end": "stable view after the listed beat",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "Preserve the locked state change without adding style claims."
+          },
+          "camera_path": {
+            "direction": "NONE",
+            "distance": "NONE",
+            "mode": "LOCKED",
+            "speed": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-04"
+          },
+          "camera_start": "stable view before the listed beat",
+          "confidence": "UNKNOWN",
+          "constraints": {
+            "changes_here": [
+              "FACT-04"
+            ],
+            "must_hold": [
+              "The archivists' established personal bond remains the reason the small distance change matters."
+            ],
+            "must_not_appear": [
+              "research-work surface elements"
+            ]
+          },
+          "continuity_in": "state before FACT-04",
+          "continuity_out": "state after FACT-04",
+          "dialogue": [],
+          "duration_seconds": 5,
+          "edit_in": "cut on the prior locked state",
+          "edit_out": "cut after the new locked state is readable",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "project-original participants",
+                "project-original location"
+              ]
+            },
+            "composite_layers": [],
+            "continuity_owners": {
+              "environment": "BASE_GENERATION",
+              "identity": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "surface": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "action": "",
+              "decision": "NONE"
+            },
+            "state_versions": []
+          },
+          "fallback": null,
+          "focus_strategy": "keep the locked action readable",
+          "framing": "readable neutral frame",
+          "narrative_goal": "The archivists' established personal bond remains the reason the small distance change matters.",
+          "order": 4,
+          "performance_beats": [
+            "The relationship beat continues inside the already registered project-original geometry."
+          ],
+          "reference_plan": {
+            "exclude": [],
+            "inherit": [],
+            "reference_id": null,
+            "reference_type": "NONE",
+            "required": false,
+            "rights_status": "NOT_APPLICABLE",
+            "scope": "",
+            "status": "NOT_REQUIRED"
+          },
+          "shot_id": "EP01-SC01-SH04",
+          "shot_type": "project-original coverage",
+          "source_refs": [
+            "locked-script.md#FACT-04"
+          ],
+          "visible_text": [],
+          "visual_style_module": "UNRESOLVED"
+        }
+      ],
+      "source_scene": "locked-script.md",
+      "spatial_plan": {
+        "close_positions": "the final locked beat positions",
+        "geometry": "simple project-original working area",
+        "primary_axis": "one stable readable axis"
+      },
+      "time_of_day": "UNSPECIFIED_AND_NOT_REQUIRED",
+      "title": "The Second Archive Pass"
+    }
+  ],
+  "schema_version": "director-ir/0.2",
+  "source_coverage": [
+    {
+      "covered_by": [
+        "EP01-SC01-SH01"
+      ],
+      "description": "The same uninterrupted interval has already established both archivists and the full table.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "covered"
+    },
+    {
+      "covered_by": [
+        "EP01-SC01-SH02"
+      ],
+      "description": "Archivist B shifts one position along the already visible table edge.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "covered"
+    },
+    {
+      "covered_by": [
+        "EP01-SC01-SH03"
+      ],
+      "description": "The existing table and doorway anchors remain unchanged and readable.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "covered"
+    },
+    {
+      "covered_by": [
+        "EP01-SC01-SH04"
+      ],
+      "description": "The archivists' established personal bond remains the reason the small distance change matters.",
+      "notes": "Structural coverage only; human creative review remains pending.",
+      "source_ref": "locked-script.md#FACT-04",
+      "status": "covered"
+    }
+  ],
+  "source_facts": {
+    "continuity_output": [
+      "Keep every project-original participant, prop and position consistent across this test scene."
+    ],
+    "cross_episode_state_in": [],
+    "cross_episode_state_out": [],
+    "source_unit_count": 4
+  },
+  "source_script": "examples/forward-tests/ORIGINAL-GEOMETRY-ALREADY-REGISTERED/locked-script.md",
+  "status": "HUMAN_REVIEW_PENDING",
+  "target_duration_seconds": 20,
+  "unresolved": [
+    "Human creative review has not been performed."
+  ],
+  "visual_style_pack_path": null
+}

@@ -17,7 +17,7 @@ Participants: PLANNER_A, PLANNER_B
 <a id="FACT-03"></a>
 - FACT-03: Only the final wide must establish their relationship-relevant terminal distance across the table.
 <a id="FACT-04"></a>
-- FACT-04: The distance change occurs across three dated checks; no continuous move between them belongs to the story facts.
+- FACT-04: No continuous move between the dated checks belongs to the story facts.
 
 ## Locked beats
 

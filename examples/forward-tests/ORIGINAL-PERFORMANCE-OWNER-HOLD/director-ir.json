@@ -80,7 +80,6 @@
           "project_original": true
         },
         "routing_signals": [
-          "relation_already_registered",
           "single_performance_progression"
         ],
         "scene_problem": {
@@ -111,14 +110,36 @@
         "case_id": "ORIGINAL-PERFORMANCE-OWNER-HOLD",
         "conflict_trace": [],
         "eligible_rule_ids": [
+          "DR-AFTERMATH-BY-NEXT-ACTION",
           "DR-COMPARATIVE-FIELD-BEFORE-RELATION",
+          "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+          "DR-MOBILE-ATTENTION-HANDOFF",
+          "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS",
           "DR-PERFORMANCE-OWNER-HOLD",
+          "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY",
           "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
-          "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+          "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+          "DR-STABLE-AXIS-STATE-LED-HOLDS",
+          "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
         ],
         "human_review_status": "HUMAN_REVIEW_PENDING",
         "ir_handoff": "CONTINUE_WITH_SELECTED_RULES",
         "rejected_rules": [
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "next_action_states",
+              "visible_result"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-AFTERMATH-BY-NEXT-ACTION"
+          },
           {
             "blocking_fact_ids": [],
             "conflicting_rule_ids": [],
@@ -133,6 +154,70 @@
               "TRIGGER_NOT_MET"
             ],
             "rule_id": "DR-COMPARATIVE-FIELD-BEFORE-RELATION"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "cause_effect_chain",
+              "one_to_many_response",
+              "safe_resolution"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "connected_geography",
+              "current_attention_state",
+              "next_attention_owner"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-MOBILE-ATTENTION-HANDOFF"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "dependent_next_action",
+              "object_identity",
+              "object_state_change"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-OBJECT-CUSTODY-STATE-CHECKPOINTS"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "distance_change",
+              "path_anchor",
+              "relation_start_zones"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-REGISTER-RELATION-GEOMETRY-BEFORE-PROXIMITY"
           },
           {
             "blocking_fact_ids": [],
@@ -164,6 +249,40 @@
               "TRIGGER_NOT_MET"
             ],
             "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [
+              "single_performance_progression"
+            ],
+            "missing_fact_types": [
+              "stable_axis",
+              "visible_state_progression"
+            ],
+            "rejection_reason_codes": [
+              "NOT_APPLICABLE_MATCH",
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-STABLE-AXIS-STATE-LED-HOLDS"
+          },
+          {
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": [],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "destination_vector",
+              "route_continuity",
+              "zone_waypoints"
+            ],
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "rule_id": "DR-WAYPOINT-REGISTERED-MULTI-ZONE-ROUTE"
           }
         ],
         "rights_boundary": {
@@ -175,7 +294,6 @@
         "selected_rules": [
           {
             "matched_fact_ids": [
-              "FACT-01",
               "FACT-02"
             ],
             "rule_id": "DR-PERFORMANCE-OWNER-HOLD",
@@ -378,7 +496,7 @@
           },
           "fallback": null,
           "focus_strategy": "keep the locked action readable",
-          "framing": "clean single holding the complete visible progression",
+          "framing": "owner-dominant tight view holding the complete visible progression",
           "narrative_goal": "The technician checks three blank log rows, stops at the missing entry, and places both hands flat before answering.",
           "order": 2,
           "performance_beats": [

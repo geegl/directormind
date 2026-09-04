@@ -3,11 +3,17 @@
   "evidence_id": "SICARIO-2015-BORDER-CHECKPOINT-001",
   "work_id": "SICARIO-2015",
   "scene_problem": {
-    "primary": "LEGACY_SCENE_PROBLEM",
+    "primary": "SUSPENSE_INFORMATION_ASYMMETRY",
     "secondary": [],
-    "status": "UNKNOWN",
-    "source_refs": [],
-    "notes": "The legacy primary label SUSPENSE_INFORMATION_ASYMMETRY is retained only as non-operational lineage and was not proved by structural conversion."
+    "status": "INFERRED",
+    "source_refs": [
+      "SICARIO-2015-BORDER-CHECKPOINT-001-S001",
+      "SICARIO-2015-BORDER-CHECKPOINT-001-S002",
+      "SICARIO-2015-BORDER-CHECKPOINT-001-S003",
+      "SICARIO-2015-BORDER-CHECKPOINT-001-S007",
+      "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
+    ],
+    "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown."
   },
   "scene_unit_type": "CONTIGUOUS_EDITORIAL_SEQUENCE",
   "boundary_status": "NATURAL_START_END_VERIFIED",
@@ -257,7 +263,18 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [],
+      "abstract_role_labels": [
+        {
+          "appearance_id": "APPEARANCE-S001",
+          "functional_role": "spatial_mover",
+          "status": "INFERRED",
+          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+          "appearance_track_id": null,
+          "source_refs": [
+            "SICARIO-2015-BORDER-CHECKPOINT-001-S001"
+          ]
+        }
+      ],
       "blocking": {
         "claim_id": "S001-BLOCK",
         "status": "INFERRED",
@@ -3089,7 +3106,18 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [],
+      "abstract_role_labels": [
+        {
+          "appearance_id": "APPEARANCE-S013",
+          "functional_role": "relation_anchor",
+          "status": "INFERRED",
+          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+          "appearance_track_id": null,
+          "source_refs": [
+            "SICARIO-2015-BORDER-CHECKPOINT-001-S013"
+          ]
+        }
+      ],
       "blocking": {
         "claim_id": "S013-BLOCK",
         "status": "INFERRED",
@@ -22952,15 +22980,100 @@
       "tool_version_status": "VERSION_UNKNOWN",
       "source_refs": [
         "SICARIO-2015-BORDER-CHECKPOINT-001-S001",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S002",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S003",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S004",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S005",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S006",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S007",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S008",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S009",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S010",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S011",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S012",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S013",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S014",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S015",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S016",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S017",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S018",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S019",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S020",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S021",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S022",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S023",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S024",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S025",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S026",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S027",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S028",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S029",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S030",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S031",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S032",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S033",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S034",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S035",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S036",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S037",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S038",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S039",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S040",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S041",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S042",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S043",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S044",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S045",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S046",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S047",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S048",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S049",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S050",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S051",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S052",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S053",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S054",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S055",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S056",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S057",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S058",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S059",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S060",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S061",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S062",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S063",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S064",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S065",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S066",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S067",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S068",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S069",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S070",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S071",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S072",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S073",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S074",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S075",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S076",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S077",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S078",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S079",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S080",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S081",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S082",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S083",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S084",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S085",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S086",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S087",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S088",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S089",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S090",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S091",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S092",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S093",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S094",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-S095",
         "SICARIO-2015-BORDER-CHECKPOINT-001-S096"
       ],
       "unknowns": [
@@ -23021,7 +23134,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "audio_dependency": true,
+      "audio_dependency": false,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -23062,7 +23175,8 @@
       "counterexample_ids": [],
       "source_method_ids": [
         "SICARIO-2015-BORDER-CHECKPOINT-001-METHOD-LEGACY-PICTURE-REVIEW",
-        "SICARIO-2015-BORDER-CHECKPOINT-001-METHOD-STRUCTURAL-CONVERSION"
+        "SICARIO-2015-BORDER-CHECKPOINT-001-METHOD-STRUCTURAL-CONVERSION",
+        "SICARIO-2015-BORDER-CHECKPOINT-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
       ],
       "evidence_scene_ids": [
         "SICARIO-2015-BORDER-CHECKPOINT-001"
@@ -23468,7 +23582,6 @@
       "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "scope": "AUDIO",
       "blocks_rule_ids": [
-        "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C01-MACRO-ROUTE-TO-CONSTRAINED-ACCESS",
         "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C02-MULTI-WINDOW-DISTRIBUTED-THREAT-PUZZLE",
         "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C03-READINESS-TO-DEPLOYMENT-STATE-LEDGER",
         "SICARIO-2015-BORDER-CHECKPOINT-001-SIC-C04-RESULT-AND-EXIT-VERIFICATION-BEFORE-RESUME"
@@ -23504,6 +23617,7 @@
   "validation_status": "HUMAN_REVIEW_PENDING",
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
-    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+    "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
   ]
 }
