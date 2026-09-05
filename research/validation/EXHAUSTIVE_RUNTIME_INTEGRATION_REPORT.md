@@ -48,10 +48,11 @@ Those 16 observations collectively cover all 25 auditioned Shots. Candidate
 audio claims are structured as an Observation ID plus an exact copy of that
 Observation's description. A separate four-row candidate authority now records
 the exact permitted Observation set, reason and directly auditioned Shot refs
-for each sound-dependent candidate. The validator requires the authority,
-candidate IDs and claims to agree exactly and rejects missing, added, swapped or
-same-Shot substitutions even when the attacker also copies the replacement
-Observation's correct description.
+for each sound-dependent candidate. Each Observation also independently names
+the candidates it may support. The validator requires both directions,
+candidate IDs and claims to agree exactly and rejects missing, added, swapped,
+same-Shot-substituted or coordinately deleted entries even when the attacker
+also copies or removes the corresponding claim.
 
 It does not prove speaker identity, sound-source ownership, subjective hearing,
 narrative causality, edit intent or the legacy millisecond offsets. The four
@@ -79,6 +80,12 @@ to performance-owner routing. Three candidates remain in two new external gaps,
 each with the missing evidence type, reason existing material cannot close it,
 and exact existing review refs. The Ted Lasso mobile-view fallback remains an
 evidence-backed rejection rather than a duplicate.
+
+The first clean-checkout reviewer of this remediation also found that the
+Chernobyl S169 note incorrectly called a chest-up speaker anchor a whole-room
+field. The note now records the narrower visible fact and explicitly withholds
+whole-room geography; the multi-Shot room/process alternation and the
+candidate's boundary status remain supported by the other cited Shots.
 
 ## Prioritized fixed-corpus gaps
 
@@ -134,8 +141,9 @@ immutable legacy ledger remains unchanged.
 - Structural `PASS` proves deterministic data binding and routing behavior,
   not product completion, creative quality or audience effect.
 - Directed tests reject ID-and-description synchronized same-Shot audio
-  substitution, candidate swaps, missing and added authorizations, false
-  external-gap labeling and phase-status drift. All 314 unit and CLI tests and
+  substitution, candidate swaps, single-sided and coordinated deletions,
+  missing and added authorizations, false external-gap labeling and phase-status
+  drift. All 314 unit and CLI tests and
   all 25 repository checks pass and rebuild the final report. Hosted CI and the
   independent clean-checkout review still remain pending at this report state.
 - The prior full 16-family and Sound reviews remain historical evidence, but

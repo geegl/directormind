@@ -138,6 +138,9 @@ class RepositoryAutomationTests(unittest.TestCase):
         )
         final_report = build_report(successful_live_evidence())
         state = (REPO_ROOT / "context" / "STATE.md").read_text(encoding="utf-8")
+        corpus_status = (
+            REPO_ROOT / "research" / "validation" / "CLOSED_CORPUS_33_STATUS.md"
+        ).read_text(encoding="utf-8")
         final_statuses = {
             "POSITIVE_RUNTIME_RULE",
             "SUPPORTING_EVIDENCE",
@@ -222,6 +225,16 @@ class RepositoryAutomationTests(unittest.TestCase):
         self.assertIn(
             f"| Runtime-participating families | {runtime_report['runtime_active_family_count']} |",
             state,
+        )
+        self.assertIn(
+            f"| Directly auditioned | {runtime_report['directly_auditioned_evidence_count']} |",
+            corpus_status,
+        )
+        self.assertIn(
+            "*Sound of Metal* | ACCEPTED_TARGET | `SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1` "
+            "/ CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 25 visible shots | "
+            "DIRECT_AUDITION_COMPLETE | NO | G7 |",
+            corpus_status,
         )
 
     def test_final_report_rejects_false_exhaustive_completion(self) -> None:

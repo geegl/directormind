@@ -77,7 +77,7 @@
       "required": [
         "observation_id", "status", "precision", "precision_seconds",
         "clip_offset_start_seconds", "clip_offset_end_seconds", "start", "end",
-        "description", "audit_fields", "source_refs", "unknowns"
+        "description", "audit_fields", "authorized_candidate_rule_ids", "source_refs", "unknowns"
       ],
       "properties": {
         "observation_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
@@ -95,6 +95,7 @@
           "uniqueItems": true,
           "items": {"enum": ["silence_intervals", "ambience", "object_sound", "audio_information_change"]}
         },
+        "authorized_candidate_rule_ids": {"$ref": "#/$defs/nonEmptyStringArray"},
         "source_refs": {"$ref": "#/$defs/nonEmptyStringArray"},
         "unknowns": {"$ref": "#/$defs/nonEmptyStringArray"}
       }

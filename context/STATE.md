@@ -45,10 +45,11 @@ Final dispositions comprise seven positive rules, 27 supports, 23 boundaries, th
 
 Renewed review corrected `WIRE-S01E04-OLD-CASES-001-S040` to a visible person at a window; identity and meaning remain unknown.
 Signal measurements and speech recognition are navigation aids. Direct audition proves only approximate surface states; source, ownership, subjectivity, causality, edit intent and subsecond alignment remain unknown.
-The validator rejects incomplete coverage, missing or changed claims, candidate swaps and synchronized same-Shot ID-and-description substitution.
+The validator rejects incomplete coverage, missing or changed claims, candidate swaps, synchronized same-Shot ID-and-description substitution and coordinated deletion by cross-checking candidate-to-Observation authority in both directions.
 
 Moving-image review closed eight spatial debts: two merges, three supports and three `simultaneous_required_action` boundaries.
 The remaining three cite two explicit external gaps; none is mislabeled as existing-material reclassification. The 61 gap candidates form fifteen structured requests.
+Independent source replay also narrowed Chernobyl S169 to a chest-up speaker anchor with a softly blurred seated background; it is not asserted as a whole-room field.
 
 ## Authoritative sources
 

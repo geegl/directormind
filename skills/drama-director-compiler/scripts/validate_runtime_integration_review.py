@@ -339,6 +339,31 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
                 for candidate in evidence.get("candidate_rules", [])
                 if isinstance(candidate, dict) and candidate.get("audio_dependency") is True
             }
+            observation_authority_by_candidate: dict[str, set[str]] = {}
+            for observation_index, observation in enumerate(audio_observations):
+                if not isinstance(observation, dict):
+                    continue
+                observation_path = f"{path}.audio_observations[{observation_index}]"
+                observation_id = observation.get("observation_id")
+                authorized_candidate_ids = observation.get("authorized_candidate_rule_ids", [])
+                if any(candidate_rule_id not in expected_binding_ids for candidate_rule_id in authorized_candidate_ids):
+                    add_issue(
+                        issues,
+                        "INTEGRATION-AUDIO-OBSERVATION-CANDIDATE-AUTHORITY",
+                        f"{observation_path}.authorized_candidate_rule_ids",
+                        "Each direct-audition Observation may authorize only an audio-dependent canonical candidate from this evidence record.",
+                    )
+                for candidate_rule_id in authorized_candidate_ids:
+                    observation_authority_by_candidate.setdefault(candidate_rule_id, set()).add(
+                        observation_id
+                    )
+            if set(observation_authority_by_candidate) != expected_binding_ids:
+                add_issue(
+                    issues,
+                    "INTEGRATION-AUDIO-OBSERVATION-CANDIDATE-AUTHORITY-SET",
+                    f"{path}.audio_observations",
+                    "Observation-level authority must cover every audio-dependent canonical candidate in this evidence record.",
+                )
             if not _unique(binding_ids) or set(binding_ids) != expected_binding_ids:
                 add_issue(
                     issues,
@@ -375,6 +400,13 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
                         "Audio candidate authority may bind only a canonical audio-dependent candidate.",
                     )
                 authorized_ids = binding.get("authorized_observation_ids", [])
+                if set(authorized_ids) != observation_authority_by_candidate.get(candidate_rule_id, set()):
+                    add_issue(
+                        issues,
+                        "INTEGRATION-AUDIO-CANDIDATE-AUTHORITY-REVERSE-BINDING",
+                        f"{binding_path}.authorized_observation_ids",
+                        "Candidate-to-Observation authority must exactly match the independent Observation-to-candidate authority recorded by direct audition.",
+                    )
                 authorized_observations = [
                     audio_observations_by_review.get(item.get("review_id"), {}).get(observation_id)
                     for observation_id in authorized_ids

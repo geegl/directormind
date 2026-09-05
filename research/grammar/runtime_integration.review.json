@@ -1486,7 +1486,7 @@
       "merged_into_candidate_id": null,
       "notes": "Existing local moving-image review closes this classification without an audio claim; identity, dialogue, causality and production method remain outside the asserted directing mechanism.",
       "observations": [
-        "PICTURE_OBSERVED across exact canonical bounds: S001 00:38:51.840-00:38:55.560 shows a whole-room field with board and crowd; S008 00:39:26.120-00:39:38.200 holds a person with the board; S015 00:40:44.480-00:40:51.840, S024 00:41:13.200-00:41:15.760 and S040 00:41:53.720-00:41:56.120 show separate process or display states; S081 00:43:56.040-00:44:02.000 returns to the person-and-board anchor; S131 00:47:34.160-00:47:35.360, S134 00:47:38.920-00:47:41.520, S149 00:49:03.120-00:49:08.520 and S165 00:49:33.280-00:49:44.040 carry further ensemble, lit, exterior and display states; S169 00:49:52.320-00:49:56.680 restores the whole-room field."
+        "PICTURE_OBSERVED across exact canonical bounds: S001 00:38:51.840-00:38:55.560 shows a whole-room field with board and crowd; S008 00:39:26.120-00:39:38.200 holds a person with the board; S015 00:40:44.480-00:40:51.840, S024 00:41:13.200-00:41:15.760 and S040 00:41:53.720-00:41:56.120 show separate process or display states; S081 00:43:56.040-00:44:02.000 returns to the person-and-board anchor; S131 00:47:34.160-00:47:35.360, S134 00:47:38.920-00:47:41.520, S149 00:49:03.120-00:49:08.520 and S165 00:49:33.280-00:49:44.040 carry further ensemble, lit, exterior and display states; S169 00:49:52.320-00:49:56.680 returns to a chest-up speaker anchor against a softly blurred seated background and does not restore whole-room geography."
       ],
       "rejection_reason_code": null,
       "review_ids": [
@@ -32111,6 +32111,9 @@
           "clip_offset_end_seconds": 10.0,
           "clip_offset_start_seconds": 0.0,
           "description": "The selected interval begins in a muffled-sounding state.",
+          "authorized_candidate_rule_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+          ],
           "end": {
             "frame": null,
             "pts": null,
@@ -32144,6 +32147,10 @@
           "clip_offset_end_seconds": 10.0,
           "clip_offset_start_seconds": 10.0,
           "description": "The overall noise becomes less prominent around this point.",
+          "authorized_candidate_rule_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003"
+          ],
           "end": {
             "frame": null,
             "pts": null,
@@ -32177,6 +32184,10 @@
           "clip_offset_end_seconds": 52.0,
           "clip_offset_start_seconds": 26.0,
           "description": "Speech is audibly clearer from around 26 seconds until it returns to a muffled-sounding state around 52 seconds; no words or speaker identity are retained.",
+          "authorized_candidate_rule_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+          ],
           "end": {
             "frame": null,
             "pts": null,
@@ -32211,6 +32222,11 @@
           "clip_offset_end_seconds": 52.0,
           "clip_offset_start_seconds": 52.0,
           "description": "The speech returns to a muffled-sounding state around this point.",
+          "authorized_candidate_rule_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+          ],
           "end": {
             "frame": null,
             "pts": null,
@@ -32244,6 +32260,10 @@
           "clip_offset_end_seconds": 100.0,
           "clip_offset_start_seconds": 80.0,
           "description": "A sudden drum passage is audible and ends near the end of this reported interval.",
+          "authorized_candidate_rule_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+          ],
           "end": {
             "frame": null,
             "pts": null,
@@ -32278,6 +32298,10 @@
           "clip_offset_end_seconds": 117.0,
           "clip_offset_start_seconds": 111.0,
           "description": "Gull-like calls and broad outdoor ambience are audible during this reported interval.",
+          "authorized_candidate_rule_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+          ],
           "end": {
             "frame": null,
             "pts": null,
@@ -32314,6 +32338,9 @@
           "clip_offset_end_seconds": 160.0,
           "clip_offset_start_seconds": 117.0,
           "description": "The soundtrack becomes substantially quieter after the gull-like calls; absolute silence is not asserted.",
+          "authorized_candidate_rule_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+          ],
           "end": {
             "frame": null,
             "pts": null,
@@ -32350,6 +32377,9 @@
           "clip_offset_end_seconds": 219.0,
           "clip_offset_start_seconds": 160.0,
           "description": "Intermittent short speech-like sounds are heavily muffled and difficult to understand before clearer speech begins.",
+          "authorized_candidate_rule_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+          ],
           "end": {
             "frame": null,
             "pts": null,
@@ -32389,6 +32419,10 @@
           "clip_offset_end_seconds": 219.0,
           "clip_offset_start_seconds": 219.0,
           "description": "Speech becomes audibly clearer around this point.",
+          "authorized_candidate_rule_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+          ],
           "end": {
             "frame": null,
             "pts": null,
@@ -32422,6 +32456,9 @@
           "clip_offset_end_seconds": 240.0,
           "clip_offset_start_seconds": 240.0,
           "description": "Speech becomes muffled-sounding again around this point.",
+          "authorized_candidate_rule_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+          ],
           "end": {
             "frame": null,
             "pts": null,
@@ -32454,6 +32491,9 @@
           "clip_offset_end_seconds": 258.0,
           "clip_offset_start_seconds": 258.0,
           "description": "Speech becomes audibly clearer around this point.",
+          "authorized_candidate_rule_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+          ],
           "end": {
             "frame": null,
             "pts": null,
@@ -32487,6 +32527,9 @@
           "clip_offset_end_seconds": 272.0,
           "clip_offset_start_seconds": 270.0,
           "description": "A brief muffled-sounding interval is audible.",
+          "authorized_candidate_rule_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+          ],
           "end": {
             "frame": null,
             "pts": null,
@@ -32521,6 +32564,10 @@
           "clip_offset_end_seconds": 286.0,
           "clip_offset_start_seconds": 273.0,
           "description": "Road-like environmental noise is prominent during this reported interval.",
+          "authorized_candidate_rule_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+          ],
           "end": {
             "frame": null,
             "pts": null,
@@ -32556,6 +32603,9 @@
           "clip_offset_end_seconds": 293.0,
           "clip_offset_start_seconds": 286.0,
           "description": "The ambience changes to an indoor-like state during this reported interval.",
+          "authorized_candidate_rule_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+          ],
           "end": {
             "frame": null,
             "pts": null,
@@ -32590,6 +32640,9 @@
           "clip_offset_end_seconds": 340.0,
           "clip_offset_start_seconds": 293.0,
           "description": "The soundtrack returns to a muffled-sounding speech state before clearer speech resumes.",
+          "authorized_candidate_rule_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+          ],
           "end": {
             "frame": null,
             "pts": null,
@@ -32625,6 +32678,9 @@
           "clip_offset_end_seconds": 391.182459,
           "clip_offset_start_seconds": 340.0,
           "description": "Speech becomes clear and continues as repeated short name-like utterances; the names and speakers are not retained.",
+          "authorized_candidate_rule_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+          ],
           "end": {
             "frame": null,
             "pts": null,

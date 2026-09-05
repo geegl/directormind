@@ -235,6 +235,14 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
             },
             reviewed_spatial_outcomes,
         )
+        chernobyl_spatial = dispositions[
+            "CHERNOBYL-S01E05-HEARING-RECON-001-"
+            "CHERNOBYL-CAND-ANCHOR-EXPLANATION-WITH-VISUALIZED-PROCESS-001"
+        ]
+        chernobyl_observation = " ".join(chernobyl_spatial["observations"])
+        self.assertIn("S169 00:49:52.320-00:49:56.680", chernobyl_observation)
+        self.assertIn("does not restore whole-room geography", chernobyl_observation)
+        self.assertNotIn("S169 00:49:52.320-00:49:56.680 restores", chernobyl_observation)
         public_gap = gaps["GAP-PUBLIC-OBJECT-CONTEST-GEOMETRY-CROSS-WORK"]
         return_gap = gaps["GAP-DISTINCT-LOCATION-RETURN-ANCHOR-BOUNDARY"]
         self.assertEqual(public_gap["candidate_count"], 1)

@@ -544,14 +544,15 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
             item for item in sound["audio_candidate_bindings"]
             if item["candidate_rule_id"] == recurring["candidate_rule_id"]
         )
-        removed = recurring["audio_observation_ids"].pop()
+        removed = recurring["audio_observation_ids"][0]
+        recurring["audio_observation_ids"].remove(removed)
         binding["authorized_observation_ids"].remove(removed)
         recurring["audio_claims"] = [
             claim for claim in recurring["audio_claims"]
             if claim["observation_id"] != removed
         ]
         self.assertIn(
-            "INTEGRATION-AUDIO-CANDIDATE-AUTHORITY-REF",
+            "INTEGRATION-AUDIO-CANDIDATE-AUTHORITY-REVERSE-BINDING",
             issue_codes(self.validate_copy(review)),
         )
 
@@ -588,6 +589,12 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
             item["candidate_rule_id"]: item["authorized_observation_ids"]
             for item in sound["audio_candidate_bindings"]
         }
+        reverse_bindings: dict[str, set[str]] = {}
+        for observation in sound["audio_observations"]:
+            for candidate_rule_id in observation["authorized_candidate_rule_ids"]:
+                reverse_bindings.setdefault(candidate_rule_id, set()).add(
+                    observation["observation_id"]
+                )
         sound_candidates = [
             item for item in self.review["candidate_dispositions"]
             if item["evidence_id"] == "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
@@ -597,6 +604,10 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
             with self.subTest(candidate_rule_id=item["candidate_rule_id"]):
                 self.assertEqual(
                     set(bindings[item["candidate_rule_id"]]),
+                    set(item["audio_observation_ids"]),
+                )
+                self.assertEqual(
+                    reverse_bindings[item["candidate_rule_id"]],
                     set(item["audio_observation_ids"]),
                 )
                 self.assertEqual(item["final_status"], "EVIDENCE_GAP_PENDING")
