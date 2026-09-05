@@ -13,7 +13,7 @@ Direct human audition covers all 25 Sound of Metal Shots through 16 approximate 
 An external canonical authority, independent of the mutable review rows, authorizes the exact Observation sets their claims may use; unrelated support and boundaries remain missing, so all four stay out of Runtime Grammar.
 
 Root is the only repository writer. P1 remediation reclassified eleven spatial candidates:
-eight now have final outcomes and three belong to two genuine external gaps. All 317 unit and CLI tests and all 25 repository checks pass locally; hosted CI and a new independent final-head review are still pending. No media or `main` changed.
+eight now have final outcomes and three belong to two genuine external gaps. All 317 unit and CLI tests, all 25 repository checks and hosted CI pass. A clean-checkout non-writing reviewer independently replayed both audio-authority attacks, verified the Chernobyl correction, audited the eleven spatial destinations and reported `NO_MUST_FIX_FINDINGS`. No media or `main` changed.
 
 ## Current counts
 
@@ -73,4 +73,4 @@ Generated `*.scene-evidence.generated.md` files are views, not fact sources. The
 All identified local review is recorded. The remaining 61 candidates require fifteen additions; the four Sound candidates need unrelated auditioned support and same-trigger contrary cases.
 Five families still lack a final runtime effect, so `COMPLETE` remains prohibited.
 
-Next: finish local/CI verification and an independent clean-checkout P1 review on PR #5. Do not merge `main` or call the product goal complete.
+Next: stop on PR #5 and wait for the user's decision. Do not merge `main` or call the product goal complete.

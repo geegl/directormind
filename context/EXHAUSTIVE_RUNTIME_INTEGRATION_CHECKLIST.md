@@ -19,7 +19,7 @@ Status values: `TODO`, `IN_PROGRESS`, `VERIFIED_DONE`, `PARTIAL_EVIDENCE_GAP`, `
 | X13 | VERIFIED_DONE | Generate original positive and boundary packages for every positive rule | 7 positive, 7 boundary and 15 additional no-match packages; all 29 remain `HUMAN_REVIEW_PENDING` |
 | X14 | VERIFIED_DONE | Update final validation and STATE from live recomputation | Exhaustive report is structurally `PASS` with product phase `PARTIAL_EVIDENCE_GAP`; false `COMPLETE`, unstructured external gaps and unfinished-existing-review labeling are rejected |
 | X15 | VERIFIED_DONE | Run focused tests, complete units, repository runner and PR diff check | The 73-test focused converter/Sound/exhaustive suite, 317/317 complete unit and CLI tests and all 25 repository checks pass; the runner rebuilt the final report and the complete committed `origin/main...HEAD` diff check returns zero |
-| X16 | IN_PROGRESS | Push PR #5, wait for final-head CI, and run a clean-checkout independent P1 review | A second clean reviewer reproduced full coordinated audio-authority mutation, the hidden cut inside Chernobyl S165, the incorrect S169 description and stale PR counts. The local repair is not independently passed until a new pushed head, hosted CI and a different non-writing reviewer verify it |
+| X16 | VERIFIED_DONE | Push PR #5, wait for final-head CI, and run a clean-checkout independent P1 review | The repaired head is pushed, hosted CI passes, and a different clean-checkout non-writing reviewer independently rejected both coordinated audio attacks, verified the Chernobyl frame boundary and description, audited all eleven spatial destinations, recomputed the live counts and reported `NO_MUST_FIX_FINDINGS` |
 
 ## Current stop condition
 

@@ -2,7 +2,7 @@
 
 Date: 2026-09-05
 
-Status: `REMEDIATION_PENDING_NEW_HEAD_REVIEW`
+Status: `INDEPENDENT_RE_REVIEW_PASSED`
 
 ## Superseded implementation-head verdict
 
@@ -29,7 +29,7 @@ not pass it. That reviewer independently found:
 |---|---|---|---|
 | P1 | The mutable review could still be rewritten together with the candidate. | Removing E001 from the recurring candidate, copied claim, forward binding, reverse binding and Observation body still returned `PASS`; rewriting the STAGGER row and both mutable directions from E002 to same-Shot E001 also returned `PASS`. | A separate canonical audio authority now fixes all sixteen Observations and the four candidate bindings. Review-only deletion, addition, exchange and synchronized ID/description rewrites must differ from that authority and fail. |
 | P1 | The canonical Chernobyl S165 interval hid a real cut, and the former S169 description was still wrong in canonical Scene Evidence. | Adjacent frames place the cut at `00:49:36.760`; the former S169 interval shows chest-up speaker coverage rather than a whole-room field. | The converter deterministically splits S165/S166, shifts later IDs through S206, corrects the resulting S170 speaker claims, and regenerates all dependent lineage and counts. |
-| P1 | PR #5 still advertised superseded counts and a prior pass. | The PR body retained old disposition counts and an obsolete approval claim. | PR text will be replaced only after the repaired head, CI and final independent verdict are available. |
+| P1 | PR #5 still advertised superseded counts and a prior pass. | The PR body retained old disposition counts and an obsolete approval claim. | The PR body now uses the live recomputed counts, records the new authority and Chernobyl correction, and no longer carries the obsolete approval claim. |
 
 The second reviewer separately confirmed the eleven spatial destinations as two
 merges, three supports, three boundaries and three pending candidates in two
@@ -54,13 +54,34 @@ genuine external gaps.
   candidate-dependent moving-image refs total 1,841.
 - Repository and source-media boundaries pass; no media or private script changed.
 
-## Required next verdict
+## Final independent clean-checkout verdict
 
-This document does not self-sign the repair. The current changes must be pushed,
-the hosted workflow must pass, and a different clean-checkout non-writing
-reviewer must replay the two audio attacks, verify the Chernobyl correction,
-audit the 11 spatial destinations and recompute the live reports. Until then,
-the result is not `NO_MUST_FIX_FINDINGS`.
+A different non-writing reviewer inspected the pushed PR head from a clean
+detached checkout and reported `NO_MUST_FIX_FINDINGS`: P0 none, P1 none and P2
+none. The reviewer independently established all of the following:
+
+- The canonical review passes, while coordinated deletion of recurring E001
+  across the candidate, copied claim, both mutable authority directions and
+  Observation body fails against the separate canonical authority.
+- Replacing STAGGER E002 with same-Shot E001 while synchronously rewriting its
+  copied description and both mutable authority directions also fails.
+- All 16 Observations, four candidate bindings, copied claims and forward and
+  reverse mappings agree exactly; all four Sound candidates remain
+  `EVIDENCE_GAP_PENDING` and outside Runtime Grammar.
+- Direct frame inspection places the Chernobyl cut between the final display
+  frame at `00:49:36.720` and the first speaker frame at `00:49:36.760`.
+  Canonical S165/S166 are adjacent at that boundary, and S170 contains only the
+  supported chest-up speaker and softly blurred seated-background description.
+- The original eleven spatial debts resolve to two merges, three supports,
+  three boundaries and three candidates in two structured external gaps, with
+  no existing-material-review row left open.
+- Independent recomputation returns 31 evidence records, 2,344 unique Shot/edit
+  units, 1,841 reviewed moving-image refs, 124 candidates, 63 final outcomes,
+  61 pending candidates, 15 gaps, 27 final evidence mappings, 11 participating
+  families and seven runtime rules.
+- The focused suite passes 73/73, the complete suite passes 317/317, the
+  repository runner passes 25/25, the complete branch diff check is clean, and
+  hosted CI succeeds.
 
 ## Unverified boundary
 
