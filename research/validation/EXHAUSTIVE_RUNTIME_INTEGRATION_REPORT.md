@@ -149,8 +149,9 @@ immutable legacy ledger remains unchanged.
   authorizations, false external-gap labeling and phase-status drift. The new
   Chernobyl regression locks the exact cut, adjacency, 206-shot total and narrow
   S166/S170 descriptions. The 73-test focused suite, all 317 unit and CLI tests
-  and all 25 repository checks pass and rebuild the final report. Hosted CI and
-  a new independent clean-checkout review remain pending at this report state.
+  and all 25 repository checks pass and rebuild the final report; the complete
+  committed `origin/main...HEAD` diff check also returns zero. Hosted CI and a
+  new independent clean-checkout review remain pending at this report state.
 - The prior full 16-family and Sound reviews remain historical evidence, but
   they do not sign off the current P1 remediation head.
 - All creative packages remain `HUMAN_REVIEW_PENDING`.

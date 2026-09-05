@@ -40,7 +40,7 @@ genuine external gaps.
 - Focused converter, Sound and exhaustive suites: 73/73 pass.
 - Complete unit and CLI suite: 317/317 pass.
 - Complete report-writing repository runner: 25/25 pass.
-- The committed branch-wide diff remains pending until the local repair is committed.
+- The complete committed `origin/main...HEAD` diff check returns zero.
 - Full coordinated deletion and same-Shot synchronized substitution are rejected
   by the separate canonical authority, not only by mutable reverse bindings.
 - All four legitimate Sound candidate bindings pass and remain
