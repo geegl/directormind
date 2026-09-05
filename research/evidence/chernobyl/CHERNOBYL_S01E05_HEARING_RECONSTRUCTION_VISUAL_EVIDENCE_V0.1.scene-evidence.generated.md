@@ -40,14 +40,14 @@
 {
   "duration_bins": {
     "1_to_lt_2": 40,
-    "2_to_lt_5": 108,
-    "5_to_lt_10": 31,
-    "gte_10": 15,
+    "2_to_lt_5": 109,
+    "5_to_lt_10": 32,
+    "gte_10": 14,
     "lt_1": 11
   },
-  "mean_duration": 4.107121951219512,
-  "median_duration": 2.8,
-  "shot_count": 205,
+  "mean_duration": 4.087184466019417,
+  "median_duration": 2.82,
+  "shot_count": 206,
   "total_duration": 841.96,
   "unit": "VISIBLE_SHOT"
 }
@@ -221,56 +221,57 @@
 | 162 | CHERNOBYL-S01E05-HEARING-RECON-001-S162 | {"frame":74270,"pts":38026240,"seconds":2970.8,"time_base":"1/12800","timecode":"00:49:30.800"} | {"frame":74290,"pts":38036480,"seconds":2971.6,"time_base":"1/12800","timecode":"00:49:31.600"} | 0.8 | {"claim_id":"S162-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S162"],"status":"PICTURE_OBSERVED","value":"medium group; exact lens/focal length UNKNOWN"} | {"claim_id":"S162-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S162"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S162-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S162"],"status":"PICTURE_OBSERVED","value":"stable layered group; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S162-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S162"],"status":"INFERRED","value":"bespectacled capped adult foreground with light-haired adult behind"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S162-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S162"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
 | 163 | CHERNOBYL-S01E05-HEARING-RECON-001-S163 | {"frame":74290,"pts":38036480,"seconds":2971.6,"time_base":"1/12800","timecode":"00:49:31.600"} | {"frame":74309,"pts":38046208,"seconds":2972.36,"time_base":"1/12800","timecode":"00:49:32.360"} | 0.76 | {"claim_id":"S163-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S163"],"status":"PICTURE_OBSERVED","value":"medium; exact lens/focal length UNKNOWN"} | {"claim_id":"S163-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S163"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S163-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S163"],"status":"PICTURE_OBSERVED","value":"stable medium; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S163-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S163"],"status":"INFERRED","value":"bespectacled mustached capped adult"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S163-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S163"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
 | 164 | CHERNOBYL-S01E05-HEARING-RECON-001-S164 | {"frame":74309,"pts":38046208,"seconds":2972.36,"time_base":"1/12800","timecode":"00:49:32.360"} | {"frame":74332,"pts":38057984,"seconds":2973.28,"time_base":"1/12800","timecode":"00:49:33.280"} | 0.92 | {"claim_id":"S164-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S164"],"status":"PICTURE_OBSERVED","value":"close; exact lens/focal length UNKNOWN"} | {"claim_id":"S164-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S164"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S164-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S164"],"status":"PICTURE_OBSERVED","value":"stable close; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S164-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S164"],"status":"INFERRED","value":"light-haired capped adult before green console lights"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S164-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S164"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 165 | CHERNOBYL-S01E05-HEARING-RECON-001-S165 | {"frame":74332,"pts":38057984,"seconds":2973.28,"time_base":"1/12800","timecode":"00:49:33.280"} | {"frame":74601,"pts":38195712,"seconds":2984.04,"time_base":"1/12800","timecode":"00:49:44.040"} | 10.76 | {"claim_id":"S165-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S165"],"status":"PICTURE_OBSERVED","value":"insert; exact lens/focal length UNKNOWN"} | {"claim_id":"S165-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S165"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S165-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S165"],"status":"PICTURE_OBSERVED","value":"fixed insert; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S165-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S165"],"status":"INFERRED","value":"orange mechanical-style display reading visible digits"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S165-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S165"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/LOW/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 166 | CHERNOBYL-S01E05-HEARING-RECON-001-S166 | {"frame":74601,"pts":38195712,"seconds":2984.04,"time_base":"1/12800","timecode":"00:49:44.040"} | {"frame":74673,"pts":38232576,"seconds":2986.92,"time_base":"1/12800","timecode":"00:49:46.920"} | 2.88 | {"claim_id":"S166-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S166"],"status":"PICTURE_OBSERVED","value":"medium; exact lens/focal length UNKNOWN"} | {"claim_id":"S166-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S166"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S166-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S166"],"status":"PICTURE_OBSERVED","value":"stable frontal; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S166-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S166"],"status":"INFERRED","value":"lectern adult centered before crowd"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S166-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S166"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 167 | CHERNOBYL-S01E05-HEARING-RECON-001-S167 | {"frame":74673,"pts":38232576,"seconds":2986.92,"time_base":"1/12800","timecode":"00:49:46.920"} | {"frame":74737,"pts":38265344,"seconds":2989.48,"time_base":"1/12800","timecode":"00:49:49.480"} | 2.56 | {"claim_id":"S167-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S167"],"status":"PICTURE_OBSERVED","value":"medium two-shot; exact lens/focal length UNKNOWN"} | {"claim_id":"S167-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S167"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S167-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S167"],"status":"PICTURE_OBSERVED","value":"stable two-shot; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S167-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S167"],"status":"INFERRED","value":"two seated men at table, one pale-haired and one dark-haired"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S167-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S167"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 168 | CHERNOBYL-S01E05-HEARING-RECON-001-S168 | {"frame":74737,"pts":38265344,"seconds":2989.48,"time_base":"1/12800","timecode":"00:49:49.480"} | {"frame":74808,"pts":38301696,"seconds":2992.32,"time_base":"1/12800","timecode":"00:49:52.320"} | 2.84 | {"claim_id":"S168-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S168"],"status":"PICTURE_OBSERVED","value":"medium group; exact lens/focal length UNKNOWN"} | {"claim_id":"S168-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S168"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S168-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S168"],"status":"PICTURE_OBSERVED","value":"stable group; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S168-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S168"],"status":"INFERRED","value":"gray-haired dark-suited adult and dark-haired gray-jacketed adult among seated row"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S168-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S168"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 169 | CHERNOBYL-S01E05-HEARING-RECON-001-S169 | {"frame":74808,"pts":38301696,"seconds":2992.32,"time_base":"1/12800","timecode":"00:49:52.320"} | {"frame":74917,"pts":38357504,"seconds":2996.68,"time_base":"1/12800","timecode":"00:49:56.680"} | 4.36 | {"claim_id":"S169-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S169"],"status":"PICTURE_OBSERVED","value":"very wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S169-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S169"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S169-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S169"],"status":"PICTURE_OBSERVED","value":"locked-looking room map; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S169-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S169"],"status":"INFERRED","value":"lectern, raised desk, boards and crowd share frame"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S169-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S169"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 170 | CHERNOBYL-S01E05-HEARING-RECON-001-S170 | {"frame":74917,"pts":38357504,"seconds":2996.68,"time_base":"1/12800","timecode":"00:49:56.680"} | {"frame":74960,"pts":38379520,"seconds":2998.4,"time_base":"1/12800","timecode":"00:49:58.400"} | 1.72 | {"claim_id":"S170-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S170"],"status":"PICTURE_OBSERVED","value":"very high wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S170-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S170"],"status":"PICTURE_OBSERVED","value":"visibly elevated/overhead relation; exact camera height, support and focal length UNKNOWN"} | {"claim_id":"S170-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S170"],"status":"PICTURE_OBSERVED","value":"fixed-looking overhead; production method UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S170-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S170"],"status":"INFERRED","value":"large circular floor/vessel surface develops a broad rising dark-and-bright mass"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S170-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S170"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | HIGH/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 171 | CHERNOBYL-S01E05-HEARING-RECON-001-S171 | {"frame":74960,"pts":38379520,"seconds":2998.4,"time_base":"1/12800","timecode":"00:49:58.400"} | {"frame":74965,"pts":38382080,"seconds":2998.6,"time_base":"1/12800","timecode":"00:49:58.600"} | 0.2 | {"claim_id":"S171-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S171"],"status":"PICTURE_OBSERVED","value":"close abstract; exact lens/focal length UNKNOWN"} | {"claim_id":"S171-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S171"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S171-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S171"],"status":"PICTURE_OBSERVED","value":"camera/support UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S171-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S171"],"status":"INFERRED","value":"bright turbulent dust/flame-like mass fills frame"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S171-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S171"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 172 | CHERNOBYL-S01E05-HEARING-RECON-001-S172 | {"frame":74965,"pts":38382080,"seconds":2998.6,"time_base":"1/12800","timecode":"00:49:58.600"} | {"frame":74974,"pts":38386688,"seconds":2998.96,"time_base":"1/12800","timecode":"00:49:58.960"} | 0.36 | {"claim_id":"S172-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S172"],"status":"PICTURE_OBSERVED","value":"wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S172-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S172"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S172-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S172"],"status":"PICTURE_OBSERVED","value":"stable room map; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S172-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S172"],"status":"INFERRED","value":"white-clad adults around desks and panel wall"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S172-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S172"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | HIGH/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 173 | CHERNOBYL-S01E05-HEARING-RECON-001-S173 | {"frame":74974,"pts":38386688,"seconds":2998.96,"time_base":"1/12800","timecode":"00:49:58.960"} | {"frame":74999,"pts":38399488,"seconds":2999.96,"time_base":"1/12800","timecode":"00:49:59.960"} | 1.0 | {"claim_id":"S173-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S173"],"status":"PICTURE_OBSERVED","value":"wide rear; exact lens/focal length UNKNOWN"} | {"claim_id":"S173-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S173"],"status":"PICTURE_OBSERVED","value":"rear-facing relation to the visible figure; exact camera height, support and focal length UNKNOWN"} | {"claim_id":"S173-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S173"],"status":"PICTURE_OBSERVED","value":"stable rear ensemble; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S173-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S173"],"status":"INFERRED","value":"three adults face broad circular/rectangular indicator arrays"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S173-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S173"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | HIGH/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 174 | CHERNOBYL-S01E05-HEARING-RECON-001-S174 | {"frame":74999,"pts":38399488,"seconds":2999.96,"time_base":"1/12800","timecode":"00:49:59.960"} | {"frame":75017,"pts":38408704,"seconds":3000.68,"time_base":"1/12800","timecode":"00:50:00.680"} | 0.72 | {"claim_id":"S174-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S174"],"status":"PICTURE_OBSERVED","value":"extreme close; exact lens/focal length UNKNOWN"} | {"claim_id":"S174-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S174"],"status":"PICTURE_OBSERVED","value":"visibly lower-than-subject or low relation; exact camera height, support and focal length UNKNOWN"} | {"claim_id":"S174-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S174"],"status":"PICTURE_OBSERVED","value":"stable tight framing; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S174-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S174"],"status":"INFERRED","value":"upper face and glasses of capped adult behind low foreground edge"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S174-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S174"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 175 | CHERNOBYL-S01E05-HEARING-RECON-001-S175 | {"frame":75017,"pts":38408704,"seconds":3000.68,"time_base":"1/12800","timecode":"00:50:00.680"} | {"frame":75035,"pts":38417920,"seconds":3001.4,"time_base":"1/12800","timecode":"00:50:01.400"} | 0.72 | {"claim_id":"S175-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S175"],"status":"PICTURE_OBSERVED","value":"extreme close; exact lens/focal length UNKNOWN"} | {"claim_id":"S175-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S175"],"status":"PICTURE_OBSERVED","value":"visibly lower-than-subject or low relation; exact camera height, support and focal length UNKNOWN"} | {"claim_id":"S175-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S175"],"status":"PICTURE_OBSERVED","value":"stable tight framing; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S175-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S175"],"status":"INFERRED","value":"upper face of light-haired capped adult behind low foreground edge"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S175-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S175"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 176 | CHERNOBYL-S01E05-HEARING-RECON-001-S176 | {"frame":75035,"pts":38417920,"seconds":3001.4,"time_base":"1/12800","timecode":"00:50:01.400"} | {"frame":75048,"pts":38424576,"seconds":3001.92,"time_base":"1/12800","timecode":"00:50:01.920"} | 0.52 | {"claim_id":"S176-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S176"],"status":"PICTURE_OBSERVED","value":"medium; exact lens/focal length UNKNOWN"} | {"claim_id":"S176-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S176"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S176-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S176"],"status":"PICTURE_OBSERVED","value":"stable medium; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S176-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S176"],"status":"INFERRED","value":"light-haired capped adult at console turns sharply over shoulder"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S176-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S176"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 177 | CHERNOBYL-S01E05-HEARING-RECON-001-S177 | {"frame":75048,"pts":38424576,"seconds":3001.92,"time_base":"1/12800","timecode":"00:50:01.920"} | {"frame":75098,"pts":38450176,"seconds":3003.92,"time_base":"1/12800","timecode":"00:50:03.920"} | 2.0 | {"claim_id":"S177-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S177"],"status":"PICTURE_OBSERVED","value":"close; exact lens/focal length UNKNOWN"} | {"claim_id":"S177-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S177"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S177-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S177"],"status":"PICTURE_OBSERVED","value":"stable close; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S177-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S177"],"status":"INFERRED","value":"mustached capped adult against dark background"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S177-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S177"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 178 | CHERNOBYL-S01E05-HEARING-RECON-001-S178 | {"frame":75098,"pts":38450176,"seconds":3003.92,"time_base":"1/12800","timecode":"00:50:03.920"} | {"frame":75229,"pts":38517248,"seconds":3009.16,"time_base":"1/12800","timecode":"00:50:09.160"} | 5.24 | {"claim_id":"S178-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S178"],"status":"PICTURE_OBSERVED","value":"close abstract; exact lens/focal length UNKNOWN"} | {"claim_id":"S178-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S178"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S178-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S178"],"status":"PICTURE_OBSERVED","value":"exact object and camera UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S178-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S178"],"status":"INFERRED","value":"dark ribbed/branching structures with orange light and smoke"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S178-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S178"],"status":"INFERRED","value":"enlarge visible physical instability and scale; exact event and cause UNKNOWN"} | HIGH/MEDIUM/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 179 | CHERNOBYL-S01E05-HEARING-RECON-001-S179 | {"frame":75229,"pts":38517248,"seconds":3009.16,"time_base":"1/12800","timecode":"00:50:09.160"} | {"frame":75315,"pts":38561280,"seconds":3012.6,"time_base":"1/12800","timecode":"00:50:12.600"} | 3.44 | {"claim_id":"S179-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S179"],"status":"PICTURE_OBSERVED","value":"wide low-light; exact lens/focal length UNKNOWN"} | {"claim_id":"S179-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S179"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S179-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S179"],"status":"PICTURE_OBSERVED","value":"stable-looking wide; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S179-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S179"],"status":"INFERRED","value":"orange fire-like region spreads across dark ground/structure"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S179-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S179"],"status":"INFERRED","value":"enlarge visible physical instability and scale; exact event and cause UNKNOWN"} | HIGH/MEDIUM/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 180 | CHERNOBYL-S01E05-HEARING-RECON-001-S180 | {"frame":75315,"pts":38561280,"seconds":3012.6,"time_base":"1/12800","timecode":"00:50:12.600"} | {"frame":75322,"pts":38564864,"seconds":3012.88,"time_base":"1/12800","timecode":"00:50:12.880"} | 0.28 | {"claim_id":"S180-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S180"],"status":"PICTURE_OBSERVED","value":"close moving; exact lens/focal length UNKNOWN"} | {"claim_id":"S180-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S180"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S180-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S180"],"status":"PICTURE_OBSERVED","value":"large motion; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S180-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S180"],"status":"INFERRED","value":"brief dark passage reveals orange flame and metal edges"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S180-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S180"],"status":"INFERRED","value":"enlarge visible physical instability and scale; exact event and cause UNKNOWN"} | HIGH/MEDIUM/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 181 | CHERNOBYL-S01E05-HEARING-RECON-001-S181 | {"frame":75322,"pts":38564864,"seconds":3012.88,"time_base":"1/12800","timecode":"00:50:12.880"} | {"frame":75347,"pts":38577664,"seconds":3013.88,"time_base":"1/12800","timecode":"00:50:13.880"} | 1.0 | {"claim_id":"S181-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S181"],"status":"PICTURE_OBSERVED","value":"close; exact lens/focal length UNKNOWN"} | {"claim_id":"S181-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S181"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S181-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S181"],"status":"PICTURE_OBSERVED","value":"camera/support and production method UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S181-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S181"],"status":"INFERRED","value":"flames, dark fragments and metal-like pieces fill frame"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S181-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S181"],"status":"INFERRED","value":"enlarge visible physical instability and scale; exact event and cause UNKNOWN"} | HIGH/MEDIUM/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 182 | CHERNOBYL-S01E05-HEARING-RECON-001-S182 | {"frame":75347,"pts":38577664,"seconds":3013.88,"time_base":"1/12800","timecode":"00:50:13.880"} | {"frame":75435,"pts":38622720,"seconds":3017.4,"time_base":"1/12800","timecode":"00:50:17.400"} | 3.52 | {"claim_id":"S182-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S182"],"status":"PICTURE_OBSERVED","value":"wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S182-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S182"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S182-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S182"],"status":"PICTURE_OBSERVED","value":"stable exterior framing; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S182-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S182"],"status":"INFERRED","value":"exterior industrial structure with large vertical flame/light column"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S182-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S182"],"status":"INFERRED","value":"enlarge visible physical instability and scale; exact event and cause UNKNOWN"} | HIGH/MEDIUM/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 183 | CHERNOBYL-S01E05-HEARING-RECON-001-S183 | {"frame":75435,"pts":38622720,"seconds":3017.4,"time_base":"1/12800","timecode":"00:50:17.400"} | {"frame":75534,"pts":38673408,"seconds":3021.36,"time_base":"1/12800","timecode":"00:50:21.360"} | 3.96 | {"claim_id":"S183-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S183"],"status":"PICTURE_OBSERVED","value":"medium-wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S183-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S183"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S183-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S183"],"status":"PICTURE_OBSERVED","value":"exact camera motion UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S183-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S183"],"status":"INFERRED","value":"dark human-shaped silhouette/figure near a bright expanding light/haze mass and dark airborne fragment-like forms"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S183-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S183"],"status":"INFERRED","value":"enlarge visible physical instability and scale; exact event and cause UNKNOWN"} | HIGH/MEDIUM/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 184 | CHERNOBYL-S01E05-HEARING-RECON-001-S184 | {"frame":75534,"pts":38673408,"seconds":3021.36,"time_base":"1/12800","timecode":"00:50:21.360"} | {"frame":75737,"pts":38777344,"seconds":3029.48,"time_base":"1/12800","timecode":"00:50:29.480"} | 8.12 | {"claim_id":"S184-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S184"],"status":"PICTURE_OBSERVED","value":"close low angle; exact lens/focal length UNKNOWN"} | {"claim_id":"S184-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S184"],"status":"PICTURE_OBSERVED","value":"visibly lower-than-subject or low relation; exact camera height, support and focal length UNKNOWN"} | {"claim_id":"S184-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S184"],"status":"PICTURE_OBSERVED","value":"camera/support UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S184-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S184"],"status":"INFERRED","value":"dark body-like/object form in foreground with dark airborne fragment-like forms and a bright light/haze mass behind"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S184-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S184"],"status":"INFERRED","value":"enlarge visible physical instability and scale; exact event and cause UNKNOWN"} | HIGH/MEDIUM/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 185 | CHERNOBYL-S01E05-HEARING-RECON-001-S185 | {"frame":75737,"pts":38777344,"seconds":3029.48,"time_base":"1/12800","timecode":"00:50:29.480"} | {"frame":75917,"pts":38869504,"seconds":3036.68,"time_base":"1/12800","timecode":"00:50:36.680"} | 7.2 | {"claim_id":"S185-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S185"],"status":"PICTURE_OBSERVED","value":"very wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S185-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S185"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S185-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S185"],"status":"PICTURE_OBSERVED","value":"locked-looking distant view; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S185-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S185"],"status":"INFERRED","value":"distant bright plume on dark horizon with small reflected light"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S185-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S185"],"status":"INFERRED","value":"enlarge visible physical instability and scale; exact event and cause UNKNOWN"} | HIGH/MEDIUM/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 186 | CHERNOBYL-S01E05-HEARING-RECON-001-S186 | {"frame":75917,"pts":38869504,"seconds":3036.68,"time_base":"1/12800","timecode":"00:50:36.680"} | {"frame":75966,"pts":38894592,"seconds":3038.64,"time_base":"1/12800","timecode":"00:50:38.640"} | 1.96 | {"claim_id":"S186-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S186"],"status":"PICTURE_OBSERVED","value":"wide low-visibility; exact lens/focal length UNKNOWN"} | {"claim_id":"S186-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S186"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S186-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S186"],"status":"PICTURE_OBSERVED","value":"stable room geometry partly obscured; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S186-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S186"],"status":"INFERRED","value":"white-clad adults and consoles partly obscured by dense haze"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S186-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S186"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | HIGH/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 187 | CHERNOBYL-S01E05-HEARING-RECON-001-S187 | {"frame":75966,"pts":38894592,"seconds":3038.64,"time_base":"1/12800","timecode":"00:50:38.640"} | {"frame":76110,"pts":38968320,"seconds":3044.4,"time_base":"1/12800","timecode":"00:50:44.400"} | 5.76 | {"claim_id":"S187-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S187"],"status":"PICTURE_OBSERVED","value":"medium low; exact lens/focal length UNKNOWN"} | {"claim_id":"S187-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S187"],"status":"PICTURE_OBSERVED","value":"visibly lower-than-subject or low relation; exact camera height, support and focal length UNKNOWN"} | {"claim_id":"S187-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S187"],"status":"PICTURE_OBSERVED","value":"stable low view; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S187-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S187"],"status":"INFERRED","value":"white-clad adult reaches both arms across console/desk while another figure stands behind"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S187-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S187"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 188 | CHERNOBYL-S01E05-HEARING-RECON-001-S188 | {"frame":76110,"pts":38968320,"seconds":3044.4,"time_base":"1/12800","timecode":"00:50:44.400"} | {"frame":76280,"pts":39055360,"seconds":3051.2,"time_base":"1/12800","timecode":"00:50:51.200"} | 6.8 | {"claim_id":"S188-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S188"],"status":"PICTURE_OBSERVED","value":"close; exact lens/focal length UNKNOWN"} | {"claim_id":"S188-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S188"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S188-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S188"],"status":"PICTURE_OBSERVED","value":"stable close; horizon tilt visible; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S188-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S188"],"status":"INFERRED","value":"bespectacled capped adult viewed at a tilted angle"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S188-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S188"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 189 | CHERNOBYL-S01E05-HEARING-RECON-001-S189 | {"frame":76280,"pts":39055360,"seconds":3051.2,"time_base":"1/12800","timecode":"00:50:51.200"} | {"frame":76546,"pts":39191552,"seconds":3061.84,"time_base":"1/12800","timecode":"00:51:01.840"} | 10.64 | {"claim_id":"S189-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S189"],"status":"PICTURE_OBSERVED","value":"medium group; exact lens/focal length UNKNOWN"} | {"claim_id":"S189-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S189"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S189-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S189"],"status":"PICTURE_OBSERVED","value":"stable group; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S189-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S189"],"status":"INFERRED","value":"seated men behind tabletop microphones"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S189-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S189"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 190 | CHERNOBYL-S01E05-HEARING-RECON-001-S190 | {"frame":76546,"pts":39191552,"seconds":3061.84,"time_base":"1/12800","timecode":"00:51:01.840"} | {"frame":76677,"pts":39258624,"seconds":3067.08,"time_base":"1/12800","timecode":"00:51:07.080"} | 5.24 | {"claim_id":"S190-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S190"],"status":"PICTURE_OBSERVED","value":"medium; exact lens/focal length UNKNOWN"} | {"claim_id":"S190-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S190"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S190-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S190"],"status":"PICTURE_OBSERVED","value":"stable frontal; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S190-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S190"],"status":"INFERRED","value":"lectern adult centered before crowd"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S190-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S190"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 191 | CHERNOBYL-S01E05-HEARING-RECON-001-S191 | {"frame":76677,"pts":39258624,"seconds":3067.08,"time_base":"1/12800","timecode":"00:51:07.080"} | {"frame":76736,"pts":39288832,"seconds":3069.44,"time_base":"1/12800","timecode":"00:51:09.440"} | 2.36 | {"claim_id":"S191-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S191"],"status":"PICTURE_OBSERVED","value":"close; exact lens/focal length UNKNOWN"} | {"claim_id":"S191-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S191"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S191-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S191"],"status":"PICTURE_OBSERVED","value":"stable close; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S191-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S191"],"status":"INFERRED","value":"older pale-haired man at raised desk"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S191-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S191"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 192 | CHERNOBYL-S01E05-HEARING-RECON-001-S192 | {"frame":76736,"pts":39288832,"seconds":3069.44,"time_base":"1/12800","timecode":"00:51:09.440"} | {"frame":76804,"pts":39323648,"seconds":3072.16,"time_base":"1/12800","timecode":"00:51:12.160"} | 2.72 | {"claim_id":"S192-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S192"],"status":"PICTURE_OBSERVED","value":"medium; exact lens/focal length UNKNOWN"} | {"claim_id":"S192-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S192"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S192-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S192"],"status":"PICTURE_OBSERVED","value":"stable frontal; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S192-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S192"],"status":"INFERRED","value":"lectern adult centered before crowd"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S192-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S192"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 193 | CHERNOBYL-S01E05-HEARING-RECON-001-S193 | {"frame":76804,"pts":39323648,"seconds":3072.16,"time_base":"1/12800","timecode":"00:51:12.160"} | {"frame":76845,"pts":39344640,"seconds":3073.8,"time_base":"1/12800","timecode":"00:51:13.800"} | 1.64 | {"claim_id":"S193-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S193"],"status":"PICTURE_OBSERVED","value":"medium two-shot; exact lens/focal length UNKNOWN"} | {"claim_id":"S193-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S193"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S193-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S193"],"status":"PICTURE_OBSERVED","value":"stable two-shot; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S193-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S193"],"status":"INFERRED","value":"two uniformed men seated at long desk"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S193-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S193"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 194 | CHERNOBYL-S01E05-HEARING-RECON-001-S194 | {"frame":76845,"pts":39344640,"seconds":3073.8,"time_base":"1/12800","timecode":"00:51:13.800"} | {"frame":76909,"pts":39377408,"seconds":3076.36,"time_base":"1/12800","timecode":"00:51:16.360"} | 2.56 | {"claim_id":"S194-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S194"],"status":"PICTURE_OBSERVED","value":"close; exact lens/focal length UNKNOWN"} | {"claim_id":"S194-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S194"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S194-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S194"],"status":"PICTURE_OBSERVED","value":"stable close; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S194-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S194"],"status":"INFERRED","value":"older pale-haired man at raised desk"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S194-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S194"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 195 | CHERNOBYL-S01E05-HEARING-RECON-001-S195 | {"frame":76909,"pts":39377408,"seconds":3076.36,"time_base":"1/12800","timecode":"00:51:16.360"} | {"frame":76973,"pts":39410176,"seconds":3078.92,"time_base":"1/12800","timecode":"00:51:18.920"} | 2.56 | {"claim_id":"S195-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S195"],"status":"PICTURE_OBSERVED","value":"medium; exact lens/focal length UNKNOWN"} | {"claim_id":"S195-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S195"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S195-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S195"],"status":"PICTURE_OBSERVED","value":"stable medium; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S195-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S195"],"status":"INFERRED","value":"lectern adult before crowd"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S195-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S195"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 196 | CHERNOBYL-S01E05-HEARING-RECON-001-S196 | {"frame":76973,"pts":39410176,"seconds":3078.92,"time_base":"1/12800","timecode":"00:51:18.920"} | {"frame":77082,"pts":39465984,"seconds":3083.28,"time_base":"1/12800","timecode":"00:51:23.280"} | 4.36 | {"claim_id":"S196-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S196"],"status":"PICTURE_OBSERVED","value":"medium; exact lens/focal length UNKNOWN"} | {"claim_id":"S196-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S196"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S196-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S196"],"status":"PICTURE_OBSERVED","value":"stable medium; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S196-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S196"],"status":"INFERRED","value":"gray-haired dark-suited seated adult against pale wall"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S196-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S196"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 197 | CHERNOBYL-S01E05-HEARING-RECON-001-S197 | {"frame":77082,"pts":39465984,"seconds":3083.28,"time_base":"1/12800","timecode":"00:51:23.280"} | {"frame":77294,"pts":39574528,"seconds":3091.76,"time_base":"1/12800","timecode":"00:51:31.760"} | 8.48 | {"claim_id":"S197-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S197"],"status":"PICTURE_OBSERVED","value":"close; exact lens/focal length UNKNOWN"} | {"claim_id":"S197-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S197"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S197-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S197"],"status":"PICTURE_OBSERVED","value":"stable close; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S197-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S197"],"status":"INFERRED","value":"bespectacled light-suited adult turns toward another suited figure entering edge"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S197-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S197"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 198 | CHERNOBYL-S01E05-HEARING-RECON-001-S198 | {"frame":77294,"pts":39574528,"seconds":3091.76,"time_base":"1/12800","timecode":"00:51:31.760"} | {"frame":77363,"pts":39609856,"seconds":3094.52,"time_base":"1/12800","timecode":"00:51:34.520"} | 2.76 | {"claim_id":"S198-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S198"],"status":"PICTURE_OBSERVED","value":"very wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S198-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S198"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S198-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S198"],"status":"PICTURE_OBSERVED","value":"locked-looking room map; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S198-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S198"],"status":"INFERRED","value":"lectern adult, boards, raised desk and crowd share frame"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S198-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S198"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 199 | CHERNOBYL-S01E05-HEARING-RECON-001-S199 | {"frame":77363,"pts":39609856,"seconds":3094.52,"time_base":"1/12800","timecode":"00:51:34.520"} | {"frame":77563,"pts":39712256,"seconds":3102.52,"time_base":"1/12800","timecode":"00:51:42.520"} | 8.0 | {"claim_id":"S199-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S199"],"status":"PICTURE_OBSERVED","value":"close; exact lens/focal length UNKNOWN"} | {"claim_id":"S199-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S199"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S199-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S199"],"status":"PICTURE_OBSERVED","value":"stable close; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S199-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S199"],"status":"INFERRED","value":"older pale-haired man at raised desk"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S199-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S199"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 200 | CHERNOBYL-S01E05-HEARING-RECON-001-S200 | {"frame":77563,"pts":39712256,"seconds":3102.52,"time_base":"1/12800","timecode":"00:51:42.520"} | {"frame":78406,"pts":40143872,"seconds":3136.24,"time_base":"1/12800","timecode":"00:52:16.240"} | 33.72 | {"claim_id":"S200-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S200"],"status":"PICTURE_OBSERVED","value":"medium-long; exact lens/focal length UNKNOWN"} | {"claim_id":"S200-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S200"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S200-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S200"],"status":"PICTURE_OBSERVED","value":"subject movement with modest reframing; exact support UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S200-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S200"],"status":"INFERRED","value":"lectern adult turns from front, moves beside board and is later seen from back toward raised desk"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S200-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S200"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 201 | CHERNOBYL-S01E05-HEARING-RECON-001-S201 | {"frame":78406,"pts":40143872,"seconds":3136.24,"time_base":"1/12800","timecode":"00:52:16.240"} | {"frame":78732,"pts":40310784,"seconds":3149.28,"time_base":"1/12800","timecode":"00:52:29.280"} | 13.04 | {"claim_id":"S201-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S201"],"status":"PICTURE_OBSERVED","value":"medium close; exact lens/focal length UNKNOWN"} | {"claim_id":"S201-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S201"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S201-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S201"],"status":"PICTURE_OBSERVED","value":"stable close; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S201-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S201"],"status":"INFERRED","value":"bespectacled light-suited adult in side/front profile before raised desk"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S201-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S201"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 202 | CHERNOBYL-S01E05-HEARING-RECON-001-S202 | {"frame":78732,"pts":40310784,"seconds":3149.28,"time_base":"1/12800","timecode":"00:52:29.280"} | {"frame":78831,"pts":40361472,"seconds":3153.24,"time_base":"1/12800","timecode":"00:52:33.240"} | 3.96 | {"claim_id":"S202-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S202"],"status":"PICTURE_OBSERVED","value":"medium group; exact lens/focal length UNKNOWN"} | {"claim_id":"S202-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S202"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S202-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S202"],"status":"PICTURE_OBSERVED","value":"stable row; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S202-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S202"],"status":"INFERRED","value":"seated row of civilians viewed from side"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S202-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S202"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 203 | CHERNOBYL-S01E05-HEARING-RECON-001-S203 | {"frame":78831,"pts":40361472,"seconds":3153.24,"time_base":"1/12800","timecode":"00:52:33.240"} | {"frame":78931,"pts":40412672,"seconds":3157.24,"time_base":"1/12800","timecode":"00:52:37.240"} | 4.0 | {"claim_id":"S203-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S203"],"status":"PICTURE_OBSERVED","value":"wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S203-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S203"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S203-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S203"],"status":"PICTURE_OBSERVED","value":"stable layered table view; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S203-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S203"],"status":"INFERRED","value":"long table with gray-haired man, dark-haired gray-jacketed adult and others"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S203-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S203"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 204 | CHERNOBYL-S01E05-HEARING-RECON-001-S204 | {"frame":78931,"pts":40412672,"seconds":3157.24,"time_base":"1/12800","timecode":"00:52:37.240"} | {"frame":79226,"pts":40563712,"seconds":3169.04,"time_base":"1/12800","timecode":"00:52:49.040"} | 11.8 | {"claim_id":"S204-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S204"],"status":"PICTURE_OBSERVED","value":"medium; exact lens/focal length UNKNOWN"} | {"claim_id":"S204-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S204"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S204-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S204"],"status":"PICTURE_OBSERVED","value":"stable axis; subject approach visible; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S204-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S204"],"status":"INFERRED","value":"bespectacled light-suited adult faces camera while back of another suited adult enters foreground"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S204-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S204"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 205 | CHERNOBYL-S01E05-HEARING-RECON-001-S205 | {"frame":79226,"pts":40563712,"seconds":3169.04,"time_base":"1/12800","timecode":"00:52:49.040"} | {"frame":79345,"pts":40624640,"seconds":3173.8,"time_base":"1/12800","timecode":"00:52:53.800"} | 4.76 | {"claim_id":"S205-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S205"],"status":"PICTURE_OBSERVED","value":"very wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S205-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S205"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S205-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S205"],"status":"PICTURE_OBSERVED","value":"locked-looking closing room map; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S205-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S205"],"status":"INFERRED","value":"entire room with crowd, long desks, boards, lectern and raised desk"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S205-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S205"],"status":"INFERRED","value":"close selected envelope on a restored whole-room map before the corridor scene begins"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 165 | CHERNOBYL-S01E05-HEARING-RECON-001-S165 | {"frame":74332,"pts":38057984,"seconds":2973.28,"time_base":"1/12800","timecode":"00:49:33.280"} | {"frame":74419,"pts":38102528,"seconds":2976.76,"time_base":"1/12800","timecode":"00:49:36.760"} | 3.48 | {"claim_id":"S165-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S165"],"status":"PICTURE_OBSERVED","value":"insert; exact lens/focal length UNKNOWN"} | {"claim_id":"S165-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S165"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S165-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S165"],"status":"PICTURE_OBSERVED","value":"fixed insert; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S165-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S165"],"status":"INFERRED","value":"orange mechanical-style display reading visible digits"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S165-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S165"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/LOW/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 166 | CHERNOBYL-S01E05-HEARING-RECON-001-S166 | {"frame":74419,"pts":38102528,"seconds":2976.76,"time_base":"1/12800","timecode":"00:49:36.760"} | {"frame":74601,"pts":38195712,"seconds":2984.04,"time_base":"1/12800","timecode":"00:49:44.040"} | 7.28 | {"claim_id":"S166-SIZE","notes":"Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S166"],"status":"PICTURE_OBSERVED","value":"Chest-up to medium-close speaker framing; exact lens and focal length remain unknown."} | {"claim_id":"S166-ANGLE","notes":"Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S166"],"status":"PICTURE_OBSERVED","value":"Front-facing to slightly oblique speaker view."} | {"claim_id":"S166-CAM-PATH","notes":"Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S166"],"status":"PICTURE_OBSERVED","value":"No large reframing is visible; the exact camera path remains unknown."} | [{"claim_id":"S166-ZONE","notes":"Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S166"],"status":"PICTURE_OBSERVED","value":"Foreground speaker with a softly blurred seated background; whole-room geography is not shown."}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S166-FUNCTION","notes":"Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S166"],"status":"INFERRED","value":"Return to a speaker anchor after a separate display view; dialogue meaning and causal relation remain unknown."} | MEDIUM/LOW/MEDIUM | ["Exact identity, role, dialogue, intention and reaction cause remain unknown.","Whole-room geography, exact lens, support, production method and sound remain unknown."] |
+| 167 | CHERNOBYL-S01E05-HEARING-RECON-001-S167 | {"frame":74601,"pts":38195712,"seconds":2984.04,"time_base":"1/12800","timecode":"00:49:44.040"} | {"frame":74673,"pts":38232576,"seconds":2986.92,"time_base":"1/12800","timecode":"00:49:46.920"} | 2.88 | {"claim_id":"S167-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S167"],"status":"PICTURE_OBSERVED","value":"medium; exact lens/focal length UNKNOWN"} | {"claim_id":"S167-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S167"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S167-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S167"],"status":"PICTURE_OBSERVED","value":"stable frontal; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S167-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S167"],"status":"INFERRED","value":"lectern adult centered before crowd"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S167-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S167"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 168 | CHERNOBYL-S01E05-HEARING-RECON-001-S168 | {"frame":74673,"pts":38232576,"seconds":2986.92,"time_base":"1/12800","timecode":"00:49:46.920"} | {"frame":74737,"pts":38265344,"seconds":2989.48,"time_base":"1/12800","timecode":"00:49:49.480"} | 2.56 | {"claim_id":"S168-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S168"],"status":"PICTURE_OBSERVED","value":"medium two-shot; exact lens/focal length UNKNOWN"} | {"claim_id":"S168-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S168"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S168-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S168"],"status":"PICTURE_OBSERVED","value":"stable two-shot; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S168-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S168"],"status":"INFERRED","value":"two seated men at table, one pale-haired and one dark-haired"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S168-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S168"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 169 | CHERNOBYL-S01E05-HEARING-RECON-001-S169 | {"frame":74737,"pts":38265344,"seconds":2989.48,"time_base":"1/12800","timecode":"00:49:49.480"} | {"frame":74808,"pts":38301696,"seconds":2992.32,"time_base":"1/12800","timecode":"00:49:52.320"} | 2.84 | {"claim_id":"S169-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S169"],"status":"PICTURE_OBSERVED","value":"medium group; exact lens/focal length UNKNOWN"} | {"claim_id":"S169-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S169"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S169-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S169"],"status":"PICTURE_OBSERVED","value":"stable group; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S169-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S169"],"status":"INFERRED","value":"gray-haired dark-suited adult and dark-haired gray-jacketed adult among seated row"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S169-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S169"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 170 | CHERNOBYL-S01E05-HEARING-RECON-001-S170 | {"frame":74808,"pts":38301696,"seconds":2992.32,"time_base":"1/12800","timecode":"00:49:52.320"} | {"frame":74917,"pts":38357504,"seconds":2996.68,"time_base":"1/12800","timecode":"00:49:56.680"} | 4.36 | {"claim_id":"S170-SIZE","notes":"Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S170"],"status":"PICTURE_OBSERVED","value":"Chest-up to medium-close speaker framing; exact lens and focal length remain unknown."} | {"claim_id":"S170-ANGLE","notes":"Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S170"],"status":"PICTURE_OBSERVED","value":"Front-facing to slightly oblique speaker view."} | {"claim_id":"S170-CAM-PATH","notes":"Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S170"],"status":"PICTURE_OBSERVED","value":"No large reframing is visible; the exact camera path remains unknown."} | [{"claim_id":"S170-ZONE","notes":"Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S170"],"status":"PICTURE_OBSERVED","value":"Foreground speaker with a softly blurred seated background; whole-room geography is not shown."}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S170-FUNCTION","notes":"Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S170"],"status":"INFERRED","value":"Return to a hearing-room speaker anchor; whole-room geography and dialogue meaning remain unproven."} | MEDIUM/HIGH/HIGH | ["Exact identity, role, dialogue, intention and reaction cause remain unknown.","Whole-room geography, exact lens, support, production method and sound remain unknown."] |
+| 171 | CHERNOBYL-S01E05-HEARING-RECON-001-S171 | {"frame":74917,"pts":38357504,"seconds":2996.68,"time_base":"1/12800","timecode":"00:49:56.680"} | {"frame":74960,"pts":38379520,"seconds":2998.4,"time_base":"1/12800","timecode":"00:49:58.400"} | 1.72 | {"claim_id":"S171-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S171"],"status":"PICTURE_OBSERVED","value":"very high wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S171-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S171"],"status":"PICTURE_OBSERVED","value":"visibly elevated/overhead relation; exact camera height, support and focal length UNKNOWN"} | {"claim_id":"S171-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S171"],"status":"PICTURE_OBSERVED","value":"fixed-looking overhead; production method UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S171-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S171"],"status":"INFERRED","value":"large circular floor/vessel surface develops a broad rising dark-and-bright mass"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S171-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S171"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | HIGH/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 172 | CHERNOBYL-S01E05-HEARING-RECON-001-S172 | {"frame":74960,"pts":38379520,"seconds":2998.4,"time_base":"1/12800","timecode":"00:49:58.400"} | {"frame":74965,"pts":38382080,"seconds":2998.6,"time_base":"1/12800","timecode":"00:49:58.600"} | 0.2 | {"claim_id":"S172-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S172"],"status":"PICTURE_OBSERVED","value":"close abstract; exact lens/focal length UNKNOWN"} | {"claim_id":"S172-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S172"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S172-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S172"],"status":"PICTURE_OBSERVED","value":"camera/support UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S172-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S172"],"status":"INFERRED","value":"bright turbulent dust/flame-like mass fills frame"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S172-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S172"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 173 | CHERNOBYL-S01E05-HEARING-RECON-001-S173 | {"frame":74965,"pts":38382080,"seconds":2998.6,"time_base":"1/12800","timecode":"00:49:58.600"} | {"frame":74974,"pts":38386688,"seconds":2998.96,"time_base":"1/12800","timecode":"00:49:58.960"} | 0.36 | {"claim_id":"S173-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S173"],"status":"PICTURE_OBSERVED","value":"wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S173-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S173"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S173-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S173"],"status":"PICTURE_OBSERVED","value":"stable room map; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S173-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S173"],"status":"INFERRED","value":"white-clad adults around desks and panel wall"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S173-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S173"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | HIGH/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 174 | CHERNOBYL-S01E05-HEARING-RECON-001-S174 | {"frame":74974,"pts":38386688,"seconds":2998.96,"time_base":"1/12800","timecode":"00:49:58.960"} | {"frame":74999,"pts":38399488,"seconds":2999.96,"time_base":"1/12800","timecode":"00:49:59.960"} | 1.0 | {"claim_id":"S174-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S174"],"status":"PICTURE_OBSERVED","value":"wide rear; exact lens/focal length UNKNOWN"} | {"claim_id":"S174-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S174"],"status":"PICTURE_OBSERVED","value":"rear-facing relation to the visible figure; exact camera height, support and focal length UNKNOWN"} | {"claim_id":"S174-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S174"],"status":"PICTURE_OBSERVED","value":"stable rear ensemble; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S174-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S174"],"status":"INFERRED","value":"three adults face broad circular/rectangular indicator arrays"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S174-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S174"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | HIGH/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 175 | CHERNOBYL-S01E05-HEARING-RECON-001-S175 | {"frame":74999,"pts":38399488,"seconds":2999.96,"time_base":"1/12800","timecode":"00:49:59.960"} | {"frame":75017,"pts":38408704,"seconds":3000.68,"time_base":"1/12800","timecode":"00:50:00.680"} | 0.72 | {"claim_id":"S175-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S175"],"status":"PICTURE_OBSERVED","value":"extreme close; exact lens/focal length UNKNOWN"} | {"claim_id":"S175-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S175"],"status":"PICTURE_OBSERVED","value":"visibly lower-than-subject or low relation; exact camera height, support and focal length UNKNOWN"} | {"claim_id":"S175-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S175"],"status":"PICTURE_OBSERVED","value":"stable tight framing; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S175-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S175"],"status":"INFERRED","value":"upper face and glasses of capped adult behind low foreground edge"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S175-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S175"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 176 | CHERNOBYL-S01E05-HEARING-RECON-001-S176 | {"frame":75017,"pts":38408704,"seconds":3000.68,"time_base":"1/12800","timecode":"00:50:00.680"} | {"frame":75035,"pts":38417920,"seconds":3001.4,"time_base":"1/12800","timecode":"00:50:01.400"} | 0.72 | {"claim_id":"S176-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S176"],"status":"PICTURE_OBSERVED","value":"extreme close; exact lens/focal length UNKNOWN"} | {"claim_id":"S176-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S176"],"status":"PICTURE_OBSERVED","value":"visibly lower-than-subject or low relation; exact camera height, support and focal length UNKNOWN"} | {"claim_id":"S176-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S176"],"status":"PICTURE_OBSERVED","value":"stable tight framing; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S176-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S176"],"status":"INFERRED","value":"upper face of light-haired capped adult behind low foreground edge"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S176-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S176"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 177 | CHERNOBYL-S01E05-HEARING-RECON-001-S177 | {"frame":75035,"pts":38417920,"seconds":3001.4,"time_base":"1/12800","timecode":"00:50:01.400"} | {"frame":75048,"pts":38424576,"seconds":3001.92,"time_base":"1/12800","timecode":"00:50:01.920"} | 0.52 | {"claim_id":"S177-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S177"],"status":"PICTURE_OBSERVED","value":"medium; exact lens/focal length UNKNOWN"} | {"claim_id":"S177-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S177"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S177-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S177"],"status":"PICTURE_OBSERVED","value":"stable medium; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S177-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S177"],"status":"INFERRED","value":"light-haired capped adult at console turns sharply over shoulder"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S177-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S177"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 178 | CHERNOBYL-S01E05-HEARING-RECON-001-S178 | {"frame":75048,"pts":38424576,"seconds":3001.92,"time_base":"1/12800","timecode":"00:50:01.920"} | {"frame":75098,"pts":38450176,"seconds":3003.92,"time_base":"1/12800","timecode":"00:50:03.920"} | 2.0 | {"claim_id":"S178-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S178"],"status":"PICTURE_OBSERVED","value":"close; exact lens/focal length UNKNOWN"} | {"claim_id":"S178-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S178"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S178-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S178"],"status":"PICTURE_OBSERVED","value":"stable close; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S178-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S178"],"status":"INFERRED","value":"mustached capped adult against dark background"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S178-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S178"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 179 | CHERNOBYL-S01E05-HEARING-RECON-001-S179 | {"frame":75098,"pts":38450176,"seconds":3003.92,"time_base":"1/12800","timecode":"00:50:03.920"} | {"frame":75229,"pts":38517248,"seconds":3009.16,"time_base":"1/12800","timecode":"00:50:09.160"} | 5.24 | {"claim_id":"S179-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S179"],"status":"PICTURE_OBSERVED","value":"close abstract; exact lens/focal length UNKNOWN"} | {"claim_id":"S179-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S179"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S179-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S179"],"status":"PICTURE_OBSERVED","value":"exact object and camera UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S179-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S179"],"status":"INFERRED","value":"dark ribbed/branching structures with orange light and smoke"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S179-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S179"],"status":"INFERRED","value":"enlarge visible physical instability and scale; exact event and cause UNKNOWN"} | HIGH/MEDIUM/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 180 | CHERNOBYL-S01E05-HEARING-RECON-001-S180 | {"frame":75229,"pts":38517248,"seconds":3009.16,"time_base":"1/12800","timecode":"00:50:09.160"} | {"frame":75315,"pts":38561280,"seconds":3012.6,"time_base":"1/12800","timecode":"00:50:12.600"} | 3.44 | {"claim_id":"S180-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S180"],"status":"PICTURE_OBSERVED","value":"wide low-light; exact lens/focal length UNKNOWN"} | {"claim_id":"S180-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S180"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S180-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S180"],"status":"PICTURE_OBSERVED","value":"stable-looking wide; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S180-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S180"],"status":"INFERRED","value":"orange fire-like region spreads across dark ground/structure"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S180-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S180"],"status":"INFERRED","value":"enlarge visible physical instability and scale; exact event and cause UNKNOWN"} | HIGH/MEDIUM/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 181 | CHERNOBYL-S01E05-HEARING-RECON-001-S181 | {"frame":75315,"pts":38561280,"seconds":3012.6,"time_base":"1/12800","timecode":"00:50:12.600"} | {"frame":75322,"pts":38564864,"seconds":3012.88,"time_base":"1/12800","timecode":"00:50:12.880"} | 0.28 | {"claim_id":"S181-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S181"],"status":"PICTURE_OBSERVED","value":"close moving; exact lens/focal length UNKNOWN"} | {"claim_id":"S181-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S181"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S181-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S181"],"status":"PICTURE_OBSERVED","value":"large motion; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S181-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S181"],"status":"INFERRED","value":"brief dark passage reveals orange flame and metal edges"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S181-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S181"],"status":"INFERRED","value":"enlarge visible physical instability and scale; exact event and cause UNKNOWN"} | HIGH/MEDIUM/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 182 | CHERNOBYL-S01E05-HEARING-RECON-001-S182 | {"frame":75322,"pts":38564864,"seconds":3012.88,"time_base":"1/12800","timecode":"00:50:12.880"} | {"frame":75347,"pts":38577664,"seconds":3013.88,"time_base":"1/12800","timecode":"00:50:13.880"} | 1.0 | {"claim_id":"S182-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S182"],"status":"PICTURE_OBSERVED","value":"close; exact lens/focal length UNKNOWN"} | {"claim_id":"S182-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S182"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S182-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S182"],"status":"PICTURE_OBSERVED","value":"camera/support and production method UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S182-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S182"],"status":"INFERRED","value":"flames, dark fragments and metal-like pieces fill frame"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S182-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S182"],"status":"INFERRED","value":"enlarge visible physical instability and scale; exact event and cause UNKNOWN"} | HIGH/MEDIUM/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 183 | CHERNOBYL-S01E05-HEARING-RECON-001-S183 | {"frame":75347,"pts":38577664,"seconds":3013.88,"time_base":"1/12800","timecode":"00:50:13.880"} | {"frame":75435,"pts":38622720,"seconds":3017.4,"time_base":"1/12800","timecode":"00:50:17.400"} | 3.52 | {"claim_id":"S183-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S183"],"status":"PICTURE_OBSERVED","value":"wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S183-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S183"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S183-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S183"],"status":"PICTURE_OBSERVED","value":"stable exterior framing; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S183-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S183"],"status":"INFERRED","value":"exterior industrial structure with large vertical flame/light column"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S183-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S183"],"status":"INFERRED","value":"enlarge visible physical instability and scale; exact event and cause UNKNOWN"} | HIGH/MEDIUM/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 184 | CHERNOBYL-S01E05-HEARING-RECON-001-S184 | {"frame":75435,"pts":38622720,"seconds":3017.4,"time_base":"1/12800","timecode":"00:50:17.400"} | {"frame":75534,"pts":38673408,"seconds":3021.36,"time_base":"1/12800","timecode":"00:50:21.360"} | 3.96 | {"claim_id":"S184-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S184"],"status":"PICTURE_OBSERVED","value":"medium-wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S184-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S184"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S184-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S184"],"status":"PICTURE_OBSERVED","value":"exact camera motion UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S184-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S184"],"status":"INFERRED","value":"dark human-shaped silhouette/figure near a bright expanding light/haze mass and dark airborne fragment-like forms"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S184-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S184"],"status":"INFERRED","value":"enlarge visible physical instability and scale; exact event and cause UNKNOWN"} | HIGH/MEDIUM/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 185 | CHERNOBYL-S01E05-HEARING-RECON-001-S185 | {"frame":75534,"pts":38673408,"seconds":3021.36,"time_base":"1/12800","timecode":"00:50:21.360"} | {"frame":75737,"pts":38777344,"seconds":3029.48,"time_base":"1/12800","timecode":"00:50:29.480"} | 8.12 | {"claim_id":"S185-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S185"],"status":"PICTURE_OBSERVED","value":"close low angle; exact lens/focal length UNKNOWN"} | {"claim_id":"S185-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S185"],"status":"PICTURE_OBSERVED","value":"visibly lower-than-subject or low relation; exact camera height, support and focal length UNKNOWN"} | {"claim_id":"S185-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S185"],"status":"PICTURE_OBSERVED","value":"camera/support UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S185-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S185"],"status":"INFERRED","value":"dark body-like/object form in foreground with dark airborne fragment-like forms and a bright light/haze mass behind"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S185-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S185"],"status":"INFERRED","value":"enlarge visible physical instability and scale; exact event and cause UNKNOWN"} | HIGH/MEDIUM/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 186 | CHERNOBYL-S01E05-HEARING-RECON-001-S186 | {"frame":75737,"pts":38777344,"seconds":3029.48,"time_base":"1/12800","timecode":"00:50:29.480"} | {"frame":75917,"pts":38869504,"seconds":3036.68,"time_base":"1/12800","timecode":"00:50:36.680"} | 7.2 | {"claim_id":"S186-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S186"],"status":"PICTURE_OBSERVED","value":"very wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S186-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S186"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S186-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S186"],"status":"PICTURE_OBSERVED","value":"locked-looking distant view; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S186-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S186"],"status":"INFERRED","value":"distant bright plume on dark horizon with small reflected light"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S186-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S186"],"status":"INFERRED","value":"enlarge visible physical instability and scale; exact event and cause UNKNOWN"} | HIGH/MEDIUM/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 187 | CHERNOBYL-S01E05-HEARING-RECON-001-S187 | {"frame":75917,"pts":38869504,"seconds":3036.68,"time_base":"1/12800","timecode":"00:50:36.680"} | {"frame":75966,"pts":38894592,"seconds":3038.64,"time_base":"1/12800","timecode":"00:50:38.640"} | 1.96 | {"claim_id":"S187-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S187"],"status":"PICTURE_OBSERVED","value":"wide low-visibility; exact lens/focal length UNKNOWN"} | {"claim_id":"S187-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S187"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S187-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S187"],"status":"PICTURE_OBSERVED","value":"stable room geometry partly obscured; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S187-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S187"],"status":"INFERRED","value":"white-clad adults and consoles partly obscured by dense haze"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S187-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S187"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | HIGH/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 188 | CHERNOBYL-S01E05-HEARING-RECON-001-S188 | {"frame":75966,"pts":38894592,"seconds":3038.64,"time_base":"1/12800","timecode":"00:50:38.640"} | {"frame":76110,"pts":38968320,"seconds":3044.4,"time_base":"1/12800","timecode":"00:50:44.400"} | 5.76 | {"claim_id":"S188-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S188"],"status":"PICTURE_OBSERVED","value":"medium low; exact lens/focal length UNKNOWN"} | {"claim_id":"S188-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S188"],"status":"PICTURE_OBSERVED","value":"visibly lower-than-subject or low relation; exact camera height, support and focal length UNKNOWN"} | {"claim_id":"S188-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S188"],"status":"PICTURE_OBSERVED","value":"stable low view; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S188-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S188"],"status":"INFERRED","value":"white-clad adult reaches both arms across console/desk while another figure stands behind"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S188-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S188"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 189 | CHERNOBYL-S01E05-HEARING-RECON-001-S189 | {"frame":76110,"pts":38968320,"seconds":3044.4,"time_base":"1/12800","timecode":"00:50:44.400"} | {"frame":76280,"pts":39055360,"seconds":3051.2,"time_base":"1/12800","timecode":"00:50:51.200"} | 6.8 | {"claim_id":"S189-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S189"],"status":"PICTURE_OBSERVED","value":"close; exact lens/focal length UNKNOWN"} | {"claim_id":"S189-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S189"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S189-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S189"],"status":"PICTURE_OBSERVED","value":"stable close; horizon tilt visible; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S189-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S189"],"status":"INFERRED","value":"bespectacled capped adult viewed at a tilted angle"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S189-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S189"],"status":"INFERRED","value":"make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 190 | CHERNOBYL-S01E05-HEARING-RECON-001-S190 | {"frame":76280,"pts":39055360,"seconds":3051.2,"time_base":"1/12800","timecode":"00:50:51.200"} | {"frame":76546,"pts":39191552,"seconds":3061.84,"time_base":"1/12800","timecode":"00:51:01.840"} | 10.64 | {"claim_id":"S190-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S190"],"status":"PICTURE_OBSERVED","value":"medium group; exact lens/focal length UNKNOWN"} | {"claim_id":"S190-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S190"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S190-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S190"],"status":"PICTURE_OBSERVED","value":"stable group; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S190-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S190"],"status":"INFERRED","value":"seated men behind tabletop microphones"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S190-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S190"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 191 | CHERNOBYL-S01E05-HEARING-RECON-001-S191 | {"frame":76546,"pts":39191552,"seconds":3061.84,"time_base":"1/12800","timecode":"00:51:01.840"} | {"frame":76677,"pts":39258624,"seconds":3067.08,"time_base":"1/12800","timecode":"00:51:07.080"} | 5.24 | {"claim_id":"S191-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S191"],"status":"PICTURE_OBSERVED","value":"medium; exact lens/focal length UNKNOWN"} | {"claim_id":"S191-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S191"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S191-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S191"],"status":"PICTURE_OBSERVED","value":"stable frontal; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S191-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S191"],"status":"INFERRED","value":"lectern adult centered before crowd"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S191-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S191"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 192 | CHERNOBYL-S01E05-HEARING-RECON-001-S192 | {"frame":76677,"pts":39258624,"seconds":3067.08,"time_base":"1/12800","timecode":"00:51:07.080"} | {"frame":76736,"pts":39288832,"seconds":3069.44,"time_base":"1/12800","timecode":"00:51:09.440"} | 2.36 | {"claim_id":"S192-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S192"],"status":"PICTURE_OBSERVED","value":"close; exact lens/focal length UNKNOWN"} | {"claim_id":"S192-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S192"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S192-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S192"],"status":"PICTURE_OBSERVED","value":"stable close; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S192-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S192"],"status":"INFERRED","value":"older pale-haired man at raised desk"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S192-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S192"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 193 | CHERNOBYL-S01E05-HEARING-RECON-001-S193 | {"frame":76736,"pts":39288832,"seconds":3069.44,"time_base":"1/12800","timecode":"00:51:09.440"} | {"frame":76804,"pts":39323648,"seconds":3072.16,"time_base":"1/12800","timecode":"00:51:12.160"} | 2.72 | {"claim_id":"S193-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S193"],"status":"PICTURE_OBSERVED","value":"medium; exact lens/focal length UNKNOWN"} | {"claim_id":"S193-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S193"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S193-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S193"],"status":"PICTURE_OBSERVED","value":"stable frontal; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S193-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S193"],"status":"INFERRED","value":"lectern adult centered before crowd"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S193-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S193"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 194 | CHERNOBYL-S01E05-HEARING-RECON-001-S194 | {"frame":76804,"pts":39323648,"seconds":3072.16,"time_base":"1/12800","timecode":"00:51:12.160"} | {"frame":76845,"pts":39344640,"seconds":3073.8,"time_base":"1/12800","timecode":"00:51:13.800"} | 1.64 | {"claim_id":"S194-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S194"],"status":"PICTURE_OBSERVED","value":"medium two-shot; exact lens/focal length UNKNOWN"} | {"claim_id":"S194-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S194"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S194-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S194"],"status":"PICTURE_OBSERVED","value":"stable two-shot; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S194-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S194"],"status":"INFERRED","value":"two uniformed men seated at long desk"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S194-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S194"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 195 | CHERNOBYL-S01E05-HEARING-RECON-001-S195 | {"frame":76845,"pts":39344640,"seconds":3073.8,"time_base":"1/12800","timecode":"00:51:13.800"} | {"frame":76909,"pts":39377408,"seconds":3076.36,"time_base":"1/12800","timecode":"00:51:16.360"} | 2.56 | {"claim_id":"S195-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S195"],"status":"PICTURE_OBSERVED","value":"close; exact lens/focal length UNKNOWN"} | {"claim_id":"S195-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S195"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S195-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S195"],"status":"PICTURE_OBSERVED","value":"stable close; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S195-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S195"],"status":"INFERRED","value":"older pale-haired man at raised desk"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S195-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S195"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 196 | CHERNOBYL-S01E05-HEARING-RECON-001-S196 | {"frame":76909,"pts":39377408,"seconds":3076.36,"time_base":"1/12800","timecode":"00:51:16.360"} | {"frame":76973,"pts":39410176,"seconds":3078.92,"time_base":"1/12800","timecode":"00:51:18.920"} | 2.56 | {"claim_id":"S196-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S196"],"status":"PICTURE_OBSERVED","value":"medium; exact lens/focal length UNKNOWN"} | {"claim_id":"S196-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S196"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S196-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S196"],"status":"PICTURE_OBSERVED","value":"stable medium; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S196-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S196"],"status":"INFERRED","value":"lectern adult before crowd"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S196-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S196"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 197 | CHERNOBYL-S01E05-HEARING-RECON-001-S197 | {"frame":76973,"pts":39410176,"seconds":3078.92,"time_base":"1/12800","timecode":"00:51:18.920"} | {"frame":77082,"pts":39465984,"seconds":3083.28,"time_base":"1/12800","timecode":"00:51:23.280"} | 4.36 | {"claim_id":"S197-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S197"],"status":"PICTURE_OBSERVED","value":"medium; exact lens/focal length UNKNOWN"} | {"claim_id":"S197-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S197"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S197-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S197"],"status":"PICTURE_OBSERVED","value":"stable medium; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S197-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S197"],"status":"INFERRED","value":"gray-haired dark-suited seated adult against pale wall"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S197-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S197"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 198 | CHERNOBYL-S01E05-HEARING-RECON-001-S198 | {"frame":77082,"pts":39465984,"seconds":3083.28,"time_base":"1/12800","timecode":"00:51:23.280"} | {"frame":77294,"pts":39574528,"seconds":3091.76,"time_base":"1/12800","timecode":"00:51:31.760"} | 8.48 | {"claim_id":"S198-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S198"],"status":"PICTURE_OBSERVED","value":"close; exact lens/focal length UNKNOWN"} | {"claim_id":"S198-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S198"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S198-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S198"],"status":"PICTURE_OBSERVED","value":"stable close; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S198-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S198"],"status":"INFERRED","value":"bespectacled light-suited adult turns toward another suited figure entering edge"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S198-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S198"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 199 | CHERNOBYL-S01E05-HEARING-RECON-001-S199 | {"frame":77294,"pts":39574528,"seconds":3091.76,"time_base":"1/12800","timecode":"00:51:31.760"} | {"frame":77363,"pts":39609856,"seconds":3094.52,"time_base":"1/12800","timecode":"00:51:34.520"} | 2.76 | {"claim_id":"S199-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S199"],"status":"PICTURE_OBSERVED","value":"very wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S199-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S199"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S199-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S199"],"status":"PICTURE_OBSERVED","value":"locked-looking room map; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S199-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S199"],"status":"INFERRED","value":"lectern adult, boards, raised desk and crowd share frame"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S199-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S199"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 200 | CHERNOBYL-S01E05-HEARING-RECON-001-S200 | {"frame":77363,"pts":39609856,"seconds":3094.52,"time_base":"1/12800","timecode":"00:51:34.520"} | {"frame":77563,"pts":39712256,"seconds":3102.52,"time_base":"1/12800","timecode":"00:51:42.520"} | 8.0 | {"claim_id":"S200-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S200"],"status":"PICTURE_OBSERVED","value":"close; exact lens/focal length UNKNOWN"} | {"claim_id":"S200-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S200"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S200-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S200"],"status":"PICTURE_OBSERVED","value":"stable close; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S200-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S200"],"status":"INFERRED","value":"older pale-haired man at raised desk"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S200-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S200"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 201 | CHERNOBYL-S01E05-HEARING-RECON-001-S201 | {"frame":77563,"pts":39712256,"seconds":3102.52,"time_base":"1/12800","timecode":"00:51:42.520"} | {"frame":78406,"pts":40143872,"seconds":3136.24,"time_base":"1/12800","timecode":"00:52:16.240"} | 33.72 | {"claim_id":"S201-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S201"],"status":"PICTURE_OBSERVED","value":"medium-long; exact lens/focal length UNKNOWN"} | {"claim_id":"S201-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S201"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S201-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S201"],"status":"PICTURE_OBSERVED","value":"subject movement with modest reframing; exact support UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S201-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S201"],"status":"INFERRED","value":"lectern adult turns from front, moves beside board and is later seen from back toward raised desk"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S201-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S201"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 202 | CHERNOBYL-S01E05-HEARING-RECON-001-S202 | {"frame":78406,"pts":40143872,"seconds":3136.24,"time_base":"1/12800","timecode":"00:52:16.240"} | {"frame":78732,"pts":40310784,"seconds":3149.28,"time_base":"1/12800","timecode":"00:52:29.280"} | 13.04 | {"claim_id":"S202-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S202"],"status":"PICTURE_OBSERVED","value":"medium close; exact lens/focal length UNKNOWN"} | {"claim_id":"S202-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S202"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S202-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S202"],"status":"PICTURE_OBSERVED","value":"stable close; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S202-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S202"],"status":"INFERRED","value":"bespectacled light-suited adult in side/front profile before raised desk"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S202-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S202"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 203 | CHERNOBYL-S01E05-HEARING-RECON-001-S203 | {"frame":78732,"pts":40310784,"seconds":3149.28,"time_base":"1/12800","timecode":"00:52:29.280"} | {"frame":78831,"pts":40361472,"seconds":3153.24,"time_base":"1/12800","timecode":"00:52:33.240"} | 3.96 | {"claim_id":"S203-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S203"],"status":"PICTURE_OBSERVED","value":"medium group; exact lens/focal length UNKNOWN"} | {"claim_id":"S203-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S203"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S203-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S203"],"status":"PICTURE_OBSERVED","value":"stable row; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S203-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S203"],"status":"INFERRED","value":"seated row of civilians viewed from side"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S203-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S203"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 204 | CHERNOBYL-S01E05-HEARING-RECON-001-S204 | {"frame":78831,"pts":40361472,"seconds":3153.24,"time_base":"1/12800","timecode":"00:52:33.240"} | {"frame":78931,"pts":40412672,"seconds":3157.24,"time_base":"1/12800","timecode":"00:52:37.240"} | 4.0 | {"claim_id":"S204-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S204"],"status":"PICTURE_OBSERVED","value":"wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S204-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S204"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S204-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S204"],"status":"PICTURE_OBSERVED","value":"stable layered table view; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S204-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S204"],"status":"INFERRED","value":"long table with gray-haired man, dark-haired gray-jacketed adult and others"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S204-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S204"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 205 | CHERNOBYL-S01E05-HEARING-RECON-001-S205 | {"frame":78931,"pts":40412672,"seconds":3157.24,"time_base":"1/12800","timecode":"00:52:37.240"} | {"frame":79226,"pts":40563712,"seconds":3169.04,"time_base":"1/12800","timecode":"00:52:49.040"} | 11.8 | {"claim_id":"S205-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S205"],"status":"PICTURE_OBSERVED","value":"medium; exact lens/focal length UNKNOWN"} | {"claim_id":"S205-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S205"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S205-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S205"],"status":"PICTURE_OBSERVED","value":"stable axis; subject approach visible; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S205-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S205"],"status":"INFERRED","value":"bespectacled light-suited adult faces camera while back of another suited adult enters foreground"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S205-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S205"],"status":"INFERRED","value":"preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"} | LOW/HIGH/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 206 | CHERNOBYL-S01E05-HEARING-RECON-001-S206 | {"frame":79226,"pts":40563712,"seconds":3169.04,"time_base":"1/12800","timecode":"00:52:49.040"} | {"frame":79345,"pts":40624640,"seconds":3173.8,"time_base":"1/12800","timecode":"00:52:53.800"} | 4.76 | {"claim_id":"S206-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S206"],"status":"PICTURE_OBSERVED","value":"very wide; exact lens/focal length UNKNOWN"} | {"claim_id":"S206-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S206"],"status":"PICTURE_OBSERVED","value":"approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"} | {"claim_id":"S206-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S206"],"status":"PICTURE_OBSERVED","value":"locked-looking closing room map; exact support, stabilization and micro-movement UNKNOWN"} | [{"claim_id":"S206-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S206"],"status":"INFERRED","value":"entire room with crowd, long desks, boards, lectern and raised desk"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S206-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["CHERNOBYL-S01E05-HEARING-RECON-001-S206"],"status":"INFERRED","value":"close selected envelope on a restored whole-room map before the corridor scene begins"} | MEDIUM/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
 
 ## Candidate-rule lineage
 
 | Candidate ID | Family | Status | Scene problem | Confidence W/T/E | Evidence status | Scene refs | Shot refs | Required facts | Counterexample |
 |---|---|---|---|---|---|---|---|---|---|
-| CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-ANCHOR-EXPLANATION-WITH-VISUALIZED-PROCESS-001 | UNCLUSTERED-CANDIDATE-029 | BLOCKED_BY_UNKNOWN | LEGACY_SCENE_PROBLEM | UNKNOWN/UNKNOWN/UNKNOWN | HYPOTHESIS | ["CHERNOBYL-S01E05-HEARING-RECON-001"] | ["CHERNOBYL-S01E05-HEARING-RECON-001-S001","CHERNOBYL-S01E05-HEARING-RECON-001-S002","CHERNOBYL-S01E05-HEARING-RECON-001-S003","CHERNOBYL-S01E05-HEARING-RECON-001-S004","CHERNOBYL-S01E05-HEARING-RECON-001-S005","CHERNOBYL-S01E05-HEARING-RECON-001-S006","CHERNOBYL-S01E05-HEARING-RECON-001-S007","CHERNOBYL-S01E05-HEARING-RECON-001-S008","CHERNOBYL-S01E05-HEARING-RECON-001-S009","CHERNOBYL-S01E05-HEARING-RECON-001-S010","CHERNOBYL-S01E05-HEARING-RECON-001-S011","CHERNOBYL-S01E05-HEARING-RECON-001-S012","CHERNOBYL-S01E05-HEARING-RECON-001-S013","CHERNOBYL-S01E05-HEARING-RECON-001-S014","CHERNOBYL-S01E05-HEARING-RECON-001-S015","CHERNOBYL-S01E05-HEARING-RECON-001-S016","CHERNOBYL-S01E05-HEARING-RECON-001-S017","CHERNOBYL-S01E05-HEARING-RECON-001-S018","CHERNOBYL-S01E05-HEARING-RECON-001-S019","CHERNOBYL-S01E05-HEARING-RECON-001-S020","CHERNOBYL-S01E05-HEARING-RECON-001-S021","CHERNOBYL-S01E05-HEARING-RECON-001-S022","CHERNOBYL-S01E05-HEARING-RECON-001-S023","CHERNOBYL-S01E05-HEARING-RECON-001-S024","CHERNOBYL-S01E05-HEARING-RECON-001-S025","CHERNOBYL-S01E05-HEARING-RECON-001-S026","CHERNOBYL-S01E05-HEARING-RECON-001-S027","CHERNOBYL-S01E05-HEARING-RECON-001-S028","CHERNOBYL-S01E05-HEARING-RECON-001-S029","CHERNOBYL-S01E05-HEARING-RECON-001-S030","CHERNOBYL-S01E05-HEARING-RECON-001-S031","CHERNOBYL-S01E05-HEARING-RECON-001-S032","CHERNOBYL-S01E05-HEARING-RECON-001-S033","CHERNOBYL-S01E05-HEARING-RECON-001-S034","CHERNOBYL-S01E05-HEARING-RECON-001-S035","CHERNOBYL-S01E05-HEARING-RECON-001-S036","CHERNOBYL-S01E05-HEARING-RECON-001-S037","CHERNOBYL-S01E05-HEARING-RECON-001-S038","CHERNOBYL-S01E05-HEARING-RECON-001-S039","CHERNOBYL-S01E05-HEARING-RECON-001-S040","CHERNOBYL-S01E05-HEARING-RECON-001-S041","CHERNOBYL-S01E05-HEARING-RECON-001-S042","CHERNOBYL-S01E05-HEARING-RECON-001-S043","CHERNOBYL-S01E05-HEARING-RECON-001-S044","CHERNOBYL-S01E05-HEARING-RECON-001-S045","CHERNOBYL-S01E05-HEARING-RECON-001-S046","CHERNOBYL-S01E05-HEARING-RECON-001-S047","CHERNOBYL-S01E05-HEARING-RECON-001-S048","CHERNOBYL-S01E05-HEARING-RECON-001-S081","CHERNOBYL-S01E05-HEARING-RECON-001-S082","CHERNOBYL-S01E05-HEARING-RECON-001-S083","CHERNOBYL-S01E05-HEARING-RECON-001-S084","CHERNOBYL-S01E05-HEARING-RECON-001-S085","CHERNOBYL-S01E05-HEARING-RECON-001-S086","CHERNOBYL-S01E05-HEARING-RECON-001-S087","CHERNOBYL-S01E05-HEARING-RECON-001-S088","CHERNOBYL-S01E05-HEARING-RECON-001-S089","CHERNOBYL-S01E05-HEARING-RECON-001-S090","CHERNOBYL-S01E05-HEARING-RECON-001-S091","CHERNOBYL-S01E05-HEARING-RECON-001-S092","CHERNOBYL-S01E05-HEARING-RECON-001-S093","CHERNOBYL-S01E05-HEARING-RECON-001-S094","CHERNOBYL-S01E05-HEARING-RECON-001-S095","CHERNOBYL-S01E05-HEARING-RECON-001-S096","CHERNOBYL-S01E05-HEARING-RECON-001-S097","CHERNOBYL-S01E05-HEARING-RECON-001-S131","CHERNOBYL-S01E05-HEARING-RECON-001-S132","CHERNOBYL-S01E05-HEARING-RECON-001-S133","CHERNOBYL-S01E05-HEARING-RECON-001-S134","CHERNOBYL-S01E05-HEARING-RECON-001-S149","CHERNOBYL-S01E05-HEARING-RECON-001-S150","CHERNOBYL-S01E05-HEARING-RECON-001-S151","CHERNOBYL-S01E05-HEARING-RECON-001-S152","CHERNOBYL-S01E05-HEARING-RECON-001-S153","CHERNOBYL-S01E05-HEARING-RECON-001-S154","CHERNOBYL-S01E05-HEARING-RECON-001-S155","CHERNOBYL-S01E05-HEARING-RECON-001-S156","CHERNOBYL-S01E05-HEARING-RECON-001-S157","CHERNOBYL-S01E05-HEARING-RECON-001-S158","CHERNOBYL-S01E05-HEARING-RECON-001-S159","CHERNOBYL-S01E05-HEARING-RECON-001-S160","CHERNOBYL-S01E05-HEARING-RECON-001-S161","CHERNOBYL-S01E05-HEARING-RECON-001-S162","CHERNOBYL-S01E05-HEARING-RECON-001-S163","CHERNOBYL-S01E05-HEARING-RECON-001-S164","CHERNOBYL-S01E05-HEARING-RECON-001-S165","CHERNOBYL-S01E05-HEARING-RECON-001-S166","CHERNOBYL-S01E05-HEARING-RECON-001-S167","CHERNOBYL-S01E05-HEARING-RECON-001-S168","CHERNOBYL-S01E05-HEARING-RECON-001-S169"] | — | {"ids":[],"status":"UNKNOWN"} |
-| CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-READOUT-RECEIVER-GROUP-CASCADE-002 | UNCLUSTERED-CANDIDATE-030 | BLOCKED_BY_UNKNOWN | LEGACY_SCENE_PROBLEM | UNKNOWN/UNKNOWN/UNKNOWN | HYPOTHESIS | ["CHERNOBYL-S01E05-HEARING-RECON-001"] | ["CHERNOBYL-S01E05-HEARING-RECON-001-S017","CHERNOBYL-S01E05-HEARING-RECON-001-S018","CHERNOBYL-S01E05-HEARING-RECON-001-S019","CHERNOBYL-S01E05-HEARING-RECON-001-S020","CHERNOBYL-S01E05-HEARING-RECON-001-S021","CHERNOBYL-S01E05-HEARING-RECON-001-S022","CHERNOBYL-S01E05-HEARING-RECON-001-S023","CHERNOBYL-S01E05-HEARING-RECON-001-S024","CHERNOBYL-S01E05-HEARING-RECON-001-S025","CHERNOBYL-S01E05-HEARING-RECON-001-S026","CHERNOBYL-S01E05-HEARING-RECON-001-S027","CHERNOBYL-S01E05-HEARING-RECON-001-S028","CHERNOBYL-S01E05-HEARING-RECON-001-S029","CHERNOBYL-S01E05-HEARING-RECON-001-S030","CHERNOBYL-S01E05-HEARING-RECON-001-S031","CHERNOBYL-S01E05-HEARING-RECON-001-S032","CHERNOBYL-S01E05-HEARING-RECON-001-S033","CHERNOBYL-S01E05-HEARING-RECON-001-S034","CHERNOBYL-S01E05-HEARING-RECON-001-S035","CHERNOBYL-S01E05-HEARING-RECON-001-S036","CHERNOBYL-S01E05-HEARING-RECON-001-S037","CHERNOBYL-S01E05-HEARING-RECON-001-S038","CHERNOBYL-S01E05-HEARING-RECON-001-S039","CHERNOBYL-S01E05-HEARING-RECON-001-S040","CHERNOBYL-S01E05-HEARING-RECON-001-S041","CHERNOBYL-S01E05-HEARING-RECON-001-S042","CHERNOBYL-S01E05-HEARING-RECON-001-S043","CHERNOBYL-S01E05-HEARING-RECON-001-S044","CHERNOBYL-S01E05-HEARING-RECON-001-S045","CHERNOBYL-S01E05-HEARING-RECON-001-S046","CHERNOBYL-S01E05-HEARING-RECON-001-S047","CHERNOBYL-S01E05-HEARING-RECON-001-S048","CHERNOBYL-S01E05-HEARING-RECON-001-S086","CHERNOBYL-S01E05-HEARING-RECON-001-S087","CHERNOBYL-S01E05-HEARING-RECON-001-S088","CHERNOBYL-S01E05-HEARING-RECON-001-S089","CHERNOBYL-S01E05-HEARING-RECON-001-S090","CHERNOBYL-S01E05-HEARING-RECON-001-S091","CHERNOBYL-S01E05-HEARING-RECON-001-S092","CHERNOBYL-S01E05-HEARING-RECON-001-S093","CHERNOBYL-S01E05-HEARING-RECON-001-S094","CHERNOBYL-S01E05-HEARING-RECON-001-S095","CHERNOBYL-S01E05-HEARING-RECON-001-S096","CHERNOBYL-S01E05-HEARING-RECON-001-S097","CHERNOBYL-S01E05-HEARING-RECON-001-S132","CHERNOBYL-S01E05-HEARING-RECON-001-S133","CHERNOBYL-S01E05-HEARING-RECON-001-S134","CHERNOBYL-S01E05-HEARING-RECON-001-S154","CHERNOBYL-S01E05-HEARING-RECON-001-S155","CHERNOBYL-S01E05-HEARING-RECON-001-S156","CHERNOBYL-S01E05-HEARING-RECON-001-S157","CHERNOBYL-S01E05-HEARING-RECON-001-S158","CHERNOBYL-S01E05-HEARING-RECON-001-S159","CHERNOBYL-S01E05-HEARING-RECON-001-S160","CHERNOBYL-S01E05-HEARING-RECON-001-S161","CHERNOBYL-S01E05-HEARING-RECON-001-S162","CHERNOBYL-S01E05-HEARING-RECON-001-S163","CHERNOBYL-S01E05-HEARING-RECON-001-S164","CHERNOBYL-S01E05-HEARING-RECON-001-S165"] | — | {"ids":[],"status":"UNKNOWN"} |
-| CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-SCALE-LADDER-BEFORE-PHYSICAL-PEAK-003 | UNCLUSTERED-CANDIDATE-031 | BLOCKED_BY_UNKNOWN | LEGACY_SCENE_PROBLEM | UNKNOWN/UNKNOWN/UNKNOWN | HYPOTHESIS | ["CHERNOBYL-S01E05-HEARING-RECON-001"] | ["CHERNOBYL-S01E05-HEARING-RECON-001-S158","CHERNOBYL-S01E05-HEARING-RECON-001-S159","CHERNOBYL-S01E05-HEARING-RECON-001-S160","CHERNOBYL-S01E05-HEARING-RECON-001-S161","CHERNOBYL-S01E05-HEARING-RECON-001-S162","CHERNOBYL-S01E05-HEARING-RECON-001-S163","CHERNOBYL-S01E05-HEARING-RECON-001-S164","CHERNOBYL-S01E05-HEARING-RECON-001-S165","CHERNOBYL-S01E05-HEARING-RECON-001-S166","CHERNOBYL-S01E05-HEARING-RECON-001-S167","CHERNOBYL-S01E05-HEARING-RECON-001-S168","CHERNOBYL-S01E05-HEARING-RECON-001-S169","CHERNOBYL-S01E05-HEARING-RECON-001-S170","CHERNOBYL-S01E05-HEARING-RECON-001-S171","CHERNOBYL-S01E05-HEARING-RECON-001-S172","CHERNOBYL-S01E05-HEARING-RECON-001-S173","CHERNOBYL-S01E05-HEARING-RECON-001-S174","CHERNOBYL-S01E05-HEARING-RECON-001-S175","CHERNOBYL-S01E05-HEARING-RECON-001-S176","CHERNOBYL-S01E05-HEARING-RECON-001-S177","CHERNOBYL-S01E05-HEARING-RECON-001-S178","CHERNOBYL-S01E05-HEARING-RECON-001-S179","CHERNOBYL-S01E05-HEARING-RECON-001-S180","CHERNOBYL-S01E05-HEARING-RECON-001-S181","CHERNOBYL-S01E05-HEARING-RECON-001-S182","CHERNOBYL-S01E05-HEARING-RECON-001-S183","CHERNOBYL-S01E05-HEARING-RECON-001-S184","CHERNOBYL-S01E05-HEARING-RECON-001-S185","CHERNOBYL-S01E05-HEARING-RECON-001-S186","CHERNOBYL-S01E05-HEARING-RECON-001-S187","CHERNOBYL-S01E05-HEARING-RECON-001-S188"] | — | {"ids":[],"status":"UNKNOWN"} |
-| CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-RETURN-TO-FORMAL-ROOM-AFTER-PEAK-004 | UNCLUSTERED-CANDIDATE-032 | BLOCKED_BY_UNKNOWN | LEGACY_SCENE_PROBLEM | UNKNOWN/UNKNOWN/UNKNOWN | HYPOTHESIS | ["CHERNOBYL-S01E05-HEARING-RECON-001"] | ["CHERNOBYL-S01E05-HEARING-RECON-001-S189","CHERNOBYL-S01E05-HEARING-RECON-001-S190","CHERNOBYL-S01E05-HEARING-RECON-001-S191","CHERNOBYL-S01E05-HEARING-RECON-001-S192","CHERNOBYL-S01E05-HEARING-RECON-001-S193","CHERNOBYL-S01E05-HEARING-RECON-001-S194","CHERNOBYL-S01E05-HEARING-RECON-001-S195","CHERNOBYL-S01E05-HEARING-RECON-001-S196","CHERNOBYL-S01E05-HEARING-RECON-001-S197","CHERNOBYL-S01E05-HEARING-RECON-001-S198","CHERNOBYL-S01E05-HEARING-RECON-001-S199","CHERNOBYL-S01E05-HEARING-RECON-001-S200","CHERNOBYL-S01E05-HEARING-RECON-001-S201","CHERNOBYL-S01E05-HEARING-RECON-001-S202","CHERNOBYL-S01E05-HEARING-RECON-001-S203","CHERNOBYL-S01E05-HEARING-RECON-001-S204","CHERNOBYL-S01E05-HEARING-RECON-001-S205","CHERNOBYL-S01E05-HEARING-RECON-001-S170","CHERNOBYL-S01E05-HEARING-RECON-001-S171","CHERNOBYL-S01E05-HEARING-RECON-001-S172","CHERNOBYL-S01E05-HEARING-RECON-001-S173","CHERNOBYL-S01E05-HEARING-RECON-001-S174","CHERNOBYL-S01E05-HEARING-RECON-001-S175","CHERNOBYL-S01E05-HEARING-RECON-001-S176","CHERNOBYL-S01E05-HEARING-RECON-001-S177","CHERNOBYL-S01E05-HEARING-RECON-001-S178","CHERNOBYL-S01E05-HEARING-RECON-001-S179","CHERNOBYL-S01E05-HEARING-RECON-001-S180","CHERNOBYL-S01E05-HEARING-RECON-001-S181","CHERNOBYL-S01E05-HEARING-RECON-001-S182","CHERNOBYL-S01E05-HEARING-RECON-001-S183","CHERNOBYL-S01E05-HEARING-RECON-001-S184","CHERNOBYL-S01E05-HEARING-RECON-001-S185","CHERNOBYL-S01E05-HEARING-RECON-001-S186","CHERNOBYL-S01E05-HEARING-RECON-001-S187","CHERNOBYL-S01E05-HEARING-RECON-001-S188"] | — | {"ids":[],"status":"UNKNOWN"} |
+| CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-ANCHOR-EXPLANATION-WITH-VISUALIZED-PROCESS-001 | UNCLUSTERED-CANDIDATE-029 | BLOCKED_BY_UNKNOWN | LEGACY_SCENE_PROBLEM | UNKNOWN/UNKNOWN/UNKNOWN | HYPOTHESIS | ["CHERNOBYL-S01E05-HEARING-RECON-001"] | ["CHERNOBYL-S01E05-HEARING-RECON-001-S001","CHERNOBYL-S01E05-HEARING-RECON-001-S002","CHERNOBYL-S01E05-HEARING-RECON-001-S003","CHERNOBYL-S01E05-HEARING-RECON-001-S004","CHERNOBYL-S01E05-HEARING-RECON-001-S005","CHERNOBYL-S01E05-HEARING-RECON-001-S006","CHERNOBYL-S01E05-HEARING-RECON-001-S007","CHERNOBYL-S01E05-HEARING-RECON-001-S008","CHERNOBYL-S01E05-HEARING-RECON-001-S009","CHERNOBYL-S01E05-HEARING-RECON-001-S010","CHERNOBYL-S01E05-HEARING-RECON-001-S011","CHERNOBYL-S01E05-HEARING-RECON-001-S012","CHERNOBYL-S01E05-HEARING-RECON-001-S013","CHERNOBYL-S01E05-HEARING-RECON-001-S014","CHERNOBYL-S01E05-HEARING-RECON-001-S015","CHERNOBYL-S01E05-HEARING-RECON-001-S016","CHERNOBYL-S01E05-HEARING-RECON-001-S017","CHERNOBYL-S01E05-HEARING-RECON-001-S018","CHERNOBYL-S01E05-HEARING-RECON-001-S019","CHERNOBYL-S01E05-HEARING-RECON-001-S020","CHERNOBYL-S01E05-HEARING-RECON-001-S021","CHERNOBYL-S01E05-HEARING-RECON-001-S022","CHERNOBYL-S01E05-HEARING-RECON-001-S023","CHERNOBYL-S01E05-HEARING-RECON-001-S024","CHERNOBYL-S01E05-HEARING-RECON-001-S025","CHERNOBYL-S01E05-HEARING-RECON-001-S026","CHERNOBYL-S01E05-HEARING-RECON-001-S027","CHERNOBYL-S01E05-HEARING-RECON-001-S028","CHERNOBYL-S01E05-HEARING-RECON-001-S029","CHERNOBYL-S01E05-HEARING-RECON-001-S030","CHERNOBYL-S01E05-HEARING-RECON-001-S031","CHERNOBYL-S01E05-HEARING-RECON-001-S032","CHERNOBYL-S01E05-HEARING-RECON-001-S033","CHERNOBYL-S01E05-HEARING-RECON-001-S034","CHERNOBYL-S01E05-HEARING-RECON-001-S035","CHERNOBYL-S01E05-HEARING-RECON-001-S036","CHERNOBYL-S01E05-HEARING-RECON-001-S037","CHERNOBYL-S01E05-HEARING-RECON-001-S038","CHERNOBYL-S01E05-HEARING-RECON-001-S039","CHERNOBYL-S01E05-HEARING-RECON-001-S040","CHERNOBYL-S01E05-HEARING-RECON-001-S041","CHERNOBYL-S01E05-HEARING-RECON-001-S042","CHERNOBYL-S01E05-HEARING-RECON-001-S043","CHERNOBYL-S01E05-HEARING-RECON-001-S044","CHERNOBYL-S01E05-HEARING-RECON-001-S045","CHERNOBYL-S01E05-HEARING-RECON-001-S046","CHERNOBYL-S01E05-HEARING-RECON-001-S047","CHERNOBYL-S01E05-HEARING-RECON-001-S048","CHERNOBYL-S01E05-HEARING-RECON-001-S081","CHERNOBYL-S01E05-HEARING-RECON-001-S082","CHERNOBYL-S01E05-HEARING-RECON-001-S083","CHERNOBYL-S01E05-HEARING-RECON-001-S084","CHERNOBYL-S01E05-HEARING-RECON-001-S085","CHERNOBYL-S01E05-HEARING-RECON-001-S086","CHERNOBYL-S01E05-HEARING-RECON-001-S087","CHERNOBYL-S01E05-HEARING-RECON-001-S088","CHERNOBYL-S01E05-HEARING-RECON-001-S089","CHERNOBYL-S01E05-HEARING-RECON-001-S090","CHERNOBYL-S01E05-HEARING-RECON-001-S091","CHERNOBYL-S01E05-HEARING-RECON-001-S092","CHERNOBYL-S01E05-HEARING-RECON-001-S093","CHERNOBYL-S01E05-HEARING-RECON-001-S094","CHERNOBYL-S01E05-HEARING-RECON-001-S095","CHERNOBYL-S01E05-HEARING-RECON-001-S096","CHERNOBYL-S01E05-HEARING-RECON-001-S097","CHERNOBYL-S01E05-HEARING-RECON-001-S131","CHERNOBYL-S01E05-HEARING-RECON-001-S132","CHERNOBYL-S01E05-HEARING-RECON-001-S133","CHERNOBYL-S01E05-HEARING-RECON-001-S134","CHERNOBYL-S01E05-HEARING-RECON-001-S149","CHERNOBYL-S01E05-HEARING-RECON-001-S150","CHERNOBYL-S01E05-HEARING-RECON-001-S151","CHERNOBYL-S01E05-HEARING-RECON-001-S152","CHERNOBYL-S01E05-HEARING-RECON-001-S153","CHERNOBYL-S01E05-HEARING-RECON-001-S154","CHERNOBYL-S01E05-HEARING-RECON-001-S155","CHERNOBYL-S01E05-HEARING-RECON-001-S156","CHERNOBYL-S01E05-HEARING-RECON-001-S157","CHERNOBYL-S01E05-HEARING-RECON-001-S158","CHERNOBYL-S01E05-HEARING-RECON-001-S159","CHERNOBYL-S01E05-HEARING-RECON-001-S160","CHERNOBYL-S01E05-HEARING-RECON-001-S161","CHERNOBYL-S01E05-HEARING-RECON-001-S162","CHERNOBYL-S01E05-HEARING-RECON-001-S163","CHERNOBYL-S01E05-HEARING-RECON-001-S164","CHERNOBYL-S01E05-HEARING-RECON-001-S165","CHERNOBYL-S01E05-HEARING-RECON-001-S166","CHERNOBYL-S01E05-HEARING-RECON-001-S167","CHERNOBYL-S01E05-HEARING-RECON-001-S168","CHERNOBYL-S01E05-HEARING-RECON-001-S169","CHERNOBYL-S01E05-HEARING-RECON-001-S170"] | — | {"ids":[],"status":"UNKNOWN"} |
+| CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-READOUT-RECEIVER-GROUP-CASCADE-002 | UNCLUSTERED-CANDIDATE-030 | BLOCKED_BY_UNKNOWN | LEGACY_SCENE_PROBLEM | UNKNOWN/UNKNOWN/UNKNOWN | HYPOTHESIS | ["CHERNOBYL-S01E05-HEARING-RECON-001"] | ["CHERNOBYL-S01E05-HEARING-RECON-001-S017","CHERNOBYL-S01E05-HEARING-RECON-001-S018","CHERNOBYL-S01E05-HEARING-RECON-001-S019","CHERNOBYL-S01E05-HEARING-RECON-001-S020","CHERNOBYL-S01E05-HEARING-RECON-001-S021","CHERNOBYL-S01E05-HEARING-RECON-001-S022","CHERNOBYL-S01E05-HEARING-RECON-001-S023","CHERNOBYL-S01E05-HEARING-RECON-001-S024","CHERNOBYL-S01E05-HEARING-RECON-001-S025","CHERNOBYL-S01E05-HEARING-RECON-001-S026","CHERNOBYL-S01E05-HEARING-RECON-001-S027","CHERNOBYL-S01E05-HEARING-RECON-001-S028","CHERNOBYL-S01E05-HEARING-RECON-001-S029","CHERNOBYL-S01E05-HEARING-RECON-001-S030","CHERNOBYL-S01E05-HEARING-RECON-001-S031","CHERNOBYL-S01E05-HEARING-RECON-001-S032","CHERNOBYL-S01E05-HEARING-RECON-001-S033","CHERNOBYL-S01E05-HEARING-RECON-001-S034","CHERNOBYL-S01E05-HEARING-RECON-001-S035","CHERNOBYL-S01E05-HEARING-RECON-001-S036","CHERNOBYL-S01E05-HEARING-RECON-001-S037","CHERNOBYL-S01E05-HEARING-RECON-001-S038","CHERNOBYL-S01E05-HEARING-RECON-001-S039","CHERNOBYL-S01E05-HEARING-RECON-001-S040","CHERNOBYL-S01E05-HEARING-RECON-001-S041","CHERNOBYL-S01E05-HEARING-RECON-001-S042","CHERNOBYL-S01E05-HEARING-RECON-001-S043","CHERNOBYL-S01E05-HEARING-RECON-001-S044","CHERNOBYL-S01E05-HEARING-RECON-001-S045","CHERNOBYL-S01E05-HEARING-RECON-001-S046","CHERNOBYL-S01E05-HEARING-RECON-001-S047","CHERNOBYL-S01E05-HEARING-RECON-001-S048","CHERNOBYL-S01E05-HEARING-RECON-001-S086","CHERNOBYL-S01E05-HEARING-RECON-001-S087","CHERNOBYL-S01E05-HEARING-RECON-001-S088","CHERNOBYL-S01E05-HEARING-RECON-001-S089","CHERNOBYL-S01E05-HEARING-RECON-001-S090","CHERNOBYL-S01E05-HEARING-RECON-001-S091","CHERNOBYL-S01E05-HEARING-RECON-001-S092","CHERNOBYL-S01E05-HEARING-RECON-001-S093","CHERNOBYL-S01E05-HEARING-RECON-001-S094","CHERNOBYL-S01E05-HEARING-RECON-001-S095","CHERNOBYL-S01E05-HEARING-RECON-001-S096","CHERNOBYL-S01E05-HEARING-RECON-001-S097","CHERNOBYL-S01E05-HEARING-RECON-001-S132","CHERNOBYL-S01E05-HEARING-RECON-001-S133","CHERNOBYL-S01E05-HEARING-RECON-001-S134","CHERNOBYL-S01E05-HEARING-RECON-001-S154","CHERNOBYL-S01E05-HEARING-RECON-001-S155","CHERNOBYL-S01E05-HEARING-RECON-001-S156","CHERNOBYL-S01E05-HEARING-RECON-001-S157","CHERNOBYL-S01E05-HEARING-RECON-001-S158","CHERNOBYL-S01E05-HEARING-RECON-001-S159","CHERNOBYL-S01E05-HEARING-RECON-001-S160","CHERNOBYL-S01E05-HEARING-RECON-001-S161","CHERNOBYL-S01E05-HEARING-RECON-001-S162","CHERNOBYL-S01E05-HEARING-RECON-001-S163","CHERNOBYL-S01E05-HEARING-RECON-001-S164","CHERNOBYL-S01E05-HEARING-RECON-001-S165","CHERNOBYL-S01E05-HEARING-RECON-001-S166"] | — | {"ids":[],"status":"UNKNOWN"} |
+| CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-SCALE-LADDER-BEFORE-PHYSICAL-PEAK-003 | UNCLUSTERED-CANDIDATE-031 | BLOCKED_BY_UNKNOWN | LEGACY_SCENE_PROBLEM | UNKNOWN/UNKNOWN/UNKNOWN | HYPOTHESIS | ["CHERNOBYL-S01E05-HEARING-RECON-001"] | ["CHERNOBYL-S01E05-HEARING-RECON-001-S158","CHERNOBYL-S01E05-HEARING-RECON-001-S159","CHERNOBYL-S01E05-HEARING-RECON-001-S160","CHERNOBYL-S01E05-HEARING-RECON-001-S161","CHERNOBYL-S01E05-HEARING-RECON-001-S162","CHERNOBYL-S01E05-HEARING-RECON-001-S163","CHERNOBYL-S01E05-HEARING-RECON-001-S164","CHERNOBYL-S01E05-HEARING-RECON-001-S165","CHERNOBYL-S01E05-HEARING-RECON-001-S166","CHERNOBYL-S01E05-HEARING-RECON-001-S167","CHERNOBYL-S01E05-HEARING-RECON-001-S168","CHERNOBYL-S01E05-HEARING-RECON-001-S169","CHERNOBYL-S01E05-HEARING-RECON-001-S170","CHERNOBYL-S01E05-HEARING-RECON-001-S171","CHERNOBYL-S01E05-HEARING-RECON-001-S172","CHERNOBYL-S01E05-HEARING-RECON-001-S173","CHERNOBYL-S01E05-HEARING-RECON-001-S174","CHERNOBYL-S01E05-HEARING-RECON-001-S175","CHERNOBYL-S01E05-HEARING-RECON-001-S176","CHERNOBYL-S01E05-HEARING-RECON-001-S177","CHERNOBYL-S01E05-HEARING-RECON-001-S178","CHERNOBYL-S01E05-HEARING-RECON-001-S179","CHERNOBYL-S01E05-HEARING-RECON-001-S180","CHERNOBYL-S01E05-HEARING-RECON-001-S181","CHERNOBYL-S01E05-HEARING-RECON-001-S182","CHERNOBYL-S01E05-HEARING-RECON-001-S183","CHERNOBYL-S01E05-HEARING-RECON-001-S184","CHERNOBYL-S01E05-HEARING-RECON-001-S185","CHERNOBYL-S01E05-HEARING-RECON-001-S186","CHERNOBYL-S01E05-HEARING-RECON-001-S187","CHERNOBYL-S01E05-HEARING-RECON-001-S188","CHERNOBYL-S01E05-HEARING-RECON-001-S189"] | — | {"ids":[],"status":"UNKNOWN"} |
+| CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-RETURN-TO-FORMAL-ROOM-AFTER-PEAK-004 | UNCLUSTERED-CANDIDATE-032 | BLOCKED_BY_UNKNOWN | LEGACY_SCENE_PROBLEM | UNKNOWN/UNKNOWN/UNKNOWN | HYPOTHESIS | ["CHERNOBYL-S01E05-HEARING-RECON-001"] | ["CHERNOBYL-S01E05-HEARING-RECON-001-S190","CHERNOBYL-S01E05-HEARING-RECON-001-S191","CHERNOBYL-S01E05-HEARING-RECON-001-S192","CHERNOBYL-S01E05-HEARING-RECON-001-S193","CHERNOBYL-S01E05-HEARING-RECON-001-S194","CHERNOBYL-S01E05-HEARING-RECON-001-S195","CHERNOBYL-S01E05-HEARING-RECON-001-S196","CHERNOBYL-S01E05-HEARING-RECON-001-S197","CHERNOBYL-S01E05-HEARING-RECON-001-S198","CHERNOBYL-S01E05-HEARING-RECON-001-S199","CHERNOBYL-S01E05-HEARING-RECON-001-S200","CHERNOBYL-S01E05-HEARING-RECON-001-S201","CHERNOBYL-S01E05-HEARING-RECON-001-S202","CHERNOBYL-S01E05-HEARING-RECON-001-S203","CHERNOBYL-S01E05-HEARING-RECON-001-S204","CHERNOBYL-S01E05-HEARING-RECON-001-S205","CHERNOBYL-S01E05-HEARING-RECON-001-S206","CHERNOBYL-S01E05-HEARING-RECON-001-S171","CHERNOBYL-S01E05-HEARING-RECON-001-S172","CHERNOBYL-S01E05-HEARING-RECON-001-S173","CHERNOBYL-S01E05-HEARING-RECON-001-S174","CHERNOBYL-S01E05-HEARING-RECON-001-S175","CHERNOBYL-S01E05-HEARING-RECON-001-S176","CHERNOBYL-S01E05-HEARING-RECON-001-S177","CHERNOBYL-S01E05-HEARING-RECON-001-S178","CHERNOBYL-S01E05-HEARING-RECON-001-S179","CHERNOBYL-S01E05-HEARING-RECON-001-S180","CHERNOBYL-S01E05-HEARING-RECON-001-S181","CHERNOBYL-S01E05-HEARING-RECON-001-S182","CHERNOBYL-S01E05-HEARING-RECON-001-S183","CHERNOBYL-S01E05-HEARING-RECON-001-S184","CHERNOBYL-S01E05-HEARING-RECON-001-S185","CHERNOBYL-S01E05-HEARING-RECON-001-S186","CHERNOBYL-S01E05-HEARING-RECON-001-S187","CHERNOBYL-S01E05-HEARING-RECON-001-S188","CHERNOBYL-S01E05-HEARING-RECON-001-S189"] | — | {"ids":[],"status":"UNKNOWN"} |
 
 ## UNKNOWN register
 
@@ -309,7 +310,7 @@
   "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
   "source_refs": [
     "CHERNOBYL-S01E05-HEARING-RECON-001-S001",
-    "CHERNOBYL-S01E05-HEARING-RECON-001-S205"
+    "CHERNOBYL-S01E05-HEARING-RECON-001-S206"
   ],
   "status": "PICTURE_OBSERVED",
   "value": "Visible endpoints delimit the selected analytical interval; this does not verify production-take status."
@@ -334,7 +335,7 @@
     "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
     "source_refs": [
       "CHERNOBYL-S01E05-HEARING-RECON-001-S001",
-      "CHERNOBYL-S01E05-HEARING-RECON-001-S205"
+      "CHERNOBYL-S01E05-HEARING-RECON-001-S206"
     ],
     "status": "PICTURE_OBSERVED",
     "value": "Visible endpoints delimit the selected analytical interval; this does not verify production-take status."
@@ -439,7 +440,8 @@
         "CHERNOBYL-S01E05-HEARING-RECON-001-S166",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S167",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S168",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S169"
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S169",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S170"
       ],
       "evidence_status": "HYPOTHESIS",
       "execution_confidence": "UNKNOWN",
@@ -516,7 +518,8 @@
         "CHERNOBYL-S01E05-HEARING-RECON-001-S162",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S163",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S164",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S165"
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S165",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S166"
       ],
       "evidence_status": "HYPOTHESIS",
       "execution_confidence": "UNKNOWN",
@@ -565,7 +568,8 @@
         "CHERNOBYL-S01E05-HEARING-RECON-001-S185",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S186",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S187",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S188"
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S188",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S189"
       ],
       "evidence_status": "HYPOTHESIS",
       "execution_confidence": "UNKNOWN",
@@ -584,7 +588,6 @@
         "CHERNOBYL-S01E05-HEARING-RECON-001"
       ],
       "evidence_shot_ids": [
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S189",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S190",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S191",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S192",
@@ -601,7 +604,7 @@
         "CHERNOBYL-S01E05-HEARING-RECON-001-S203",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S204",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S205",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S170",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S206",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S171",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S172",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S173",
@@ -619,7 +622,8 @@
         "CHERNOBYL-S01E05-HEARING-RECON-001-S185",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S186",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S187",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S188"
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S188",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S189"
       ],
       "evidence_status": "HYPOTHESIS",
       "execution_confidence": "UNKNOWN",
@@ -13292,13 +13296,13 @@
         "status": "PICTURE_OBSERVED",
         "value": "fixed insert; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 10.76,
+      "duration": 3.48,
       "end": {
-        "frame": 74601,
-        "pts": 38195712,
-        "seconds": 2984.04,
+        "frame": 74419,
+        "pts": 38102528,
+        "seconds": 2976.76,
         "time_base": "1/12800",
-        "timecode": "00:49:44.040"
+        "timecode": "00:49:36.760"
       },
       "narrative_function": {
         "claim_id": "S165-FUNCTION",
@@ -13353,77 +13357,77 @@
       "audio_status": "BLOCKED_DIRECT_AUDITION",
       "camera_angle": {
         "claim_id": "S166-ANGLE",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+        "notes": "Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.",
         "source_refs": [
           "CHERNOBYL-S01E05-HEARING-RECON-001-S166"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"
+        "value": "Front-facing to slightly oblique speaker view."
       },
       "camera_path": {
         "claim_id": "S166-CAM-PATH",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+        "notes": "Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.",
         "source_refs": [
           "CHERNOBYL-S01E05-HEARING-RECON-001-S166"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable frontal; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "No large reframing is visible; the exact camera path remains unknown."
       },
-      "duration": 2.88,
+      "duration": 7.28,
       "end": {
-        "frame": 74673,
-        "pts": 38232576,
-        "seconds": 2986.92,
-        "time_base": "1/12800",
-        "timecode": "00:49:46.920"
-      },
-      "narrative_function": {
-        "claim_id": "S166-FUNCTION",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
-        "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S166"
-        ],
-        "status": "INFERRED",
-        "value": "preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"
-      },
-      "order": 166,
-      "picture_status": "PICTURE_OBSERVED",
-      "risk_levels": {
-        "camera": "LOW",
-        "continuity": "MEDIUM",
-        "performance": "HIGH"
-      },
-      "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S166",
-      "shot_size": {
-        "claim_id": "S166-SIZE",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
-        "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S166"
-        ],
-        "status": "PICTURE_OBSERVED",
-        "value": "medium; exact lens/focal length UNKNOWN"
-      },
-      "spatial_zone": [
-        {
-          "claim_id": "S166-ZONE",
-          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
-          "source_refs": [
-            "CHERNOBYL-S01E05-HEARING-RECON-001-S166"
-          ],
-          "status": "INFERRED",
-          "value": "lectern adult centered before crowd"
-        }
-      ],
-      "start": {
         "frame": 74601,
         "pts": 38195712,
         "seconds": 2984.04,
         "time_base": "1/12800",
         "timecode": "00:49:44.040"
       },
+      "narrative_function": {
+        "claim_id": "S166-FUNCTION",
+        "notes": "Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.",
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S166"
+        ],
+        "status": "INFERRED",
+        "value": "Return to a speaker anchor after a separate display view; dialogue meaning and causal relation remain unknown."
+      },
+      "order": 166,
+      "picture_status": "PICTURE_OBSERVED",
+      "risk_levels": {
+        "camera": "MEDIUM",
+        "continuity": "MEDIUM",
+        "performance": "LOW"
+      },
+      "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S166",
+      "shot_size": {
+        "claim_id": "S166-SIZE",
+        "notes": "Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.",
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S166"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Chest-up to medium-close speaker framing; exact lens and focal length remain unknown."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S166-ZONE",
+          "notes": "Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.",
+          "source_refs": [
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S166"
+          ],
+          "status": "PICTURE_OBSERVED",
+          "value": "Foreground speaker with a softly blurred seated background; whole-room geography is not shown."
+        }
+      ],
+      "start": {
+        "frame": 74419,
+        "pts": 38102528,
+        "seconds": 2976.76,
+        "time_base": "1/12800",
+        "timecode": "00:49:36.760"
+      },
       "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
-        "Cross-cut identities remain unknown."
+        "Exact identity, role, dialogue, intention and reaction cause remain unknown.",
+        "Whole-room geography, exact lens, support, production method and sound remain unknown."
       ]
     },
     {
@@ -13444,15 +13448,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S167"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable two-shot; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable frontal; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 2.56,
+      "duration": 2.88,
       "end": {
-        "frame": 74737,
-        "pts": 38265344,
-        "seconds": 2989.48,
+        "frame": 74673,
+        "pts": 38232576,
+        "seconds": 2986.92,
         "time_base": "1/12800",
-        "timecode": "00:49:49.480"
+        "timecode": "00:49:46.920"
       },
       "narrative_function": {
         "claim_id": "S167-FUNCTION",
@@ -13466,8 +13470,8 @@
       "order": 167,
       "picture_status": "PICTURE_OBSERVED",
       "risk_levels": {
-        "camera": "MEDIUM",
-        "continuity": "HIGH",
+        "camera": "LOW",
+        "continuity": "MEDIUM",
         "performance": "HIGH"
       },
       "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S167",
@@ -13478,7 +13482,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S167"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "medium two-shot; exact lens/focal length UNKNOWN"
+        "value": "medium; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -13488,15 +13492,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S167"
           ],
           "status": "INFERRED",
-          "value": "two seated men at table, one pale-haired and one dark-haired"
+          "value": "lectern adult centered before crowd"
         }
       ],
       "start": {
-        "frame": 74673,
-        "pts": 38232576,
-        "seconds": 2986.92,
+        "frame": 74601,
+        "pts": 38195712,
+        "seconds": 2984.04,
         "time_base": "1/12800",
-        "timecode": "00:49:46.920"
+        "timecode": "00:49:44.040"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -13521,15 +13525,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S168"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable group; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable two-shot; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 2.84,
+      "duration": 2.56,
       "end": {
-        "frame": 74808,
-        "pts": 38301696,
-        "seconds": 2992.32,
+        "frame": 74737,
+        "pts": 38265344,
+        "seconds": 2989.48,
         "time_base": "1/12800",
-        "timecode": "00:49:52.320"
+        "timecode": "00:49:49.480"
       },
       "narrative_function": {
         "claim_id": "S168-FUNCTION",
@@ -13555,7 +13559,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S168"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "medium group; exact lens/focal length UNKNOWN"
+        "value": "medium two-shot; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -13565,15 +13569,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S168"
           ],
           "status": "INFERRED",
-          "value": "gray-haired dark-suited adult and dark-haired gray-jacketed adult among seated row"
+          "value": "two seated men at table, one pale-haired and one dark-haired"
         }
       ],
       "start": {
-        "frame": 74737,
-        "pts": 38265344,
-        "seconds": 2989.48,
+        "frame": 74673,
+        "pts": 38232576,
+        "seconds": 2986.92,
         "time_base": "1/12800",
-        "timecode": "00:49:49.480"
+        "timecode": "00:49:46.920"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -13598,15 +13602,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S169"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "locked-looking room map; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable group; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 4.36,
+      "duration": 2.84,
       "end": {
-        "frame": 74917,
-        "pts": 38357504,
-        "seconds": 2996.68,
+        "frame": 74808,
+        "pts": 38301696,
+        "seconds": 2992.32,
         "time_base": "1/12800",
-        "timecode": "00:49:56.680"
+        "timecode": "00:49:52.320"
       },
       "narrative_function": {
         "claim_id": "S169-FUNCTION",
@@ -13632,7 +13636,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S169"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "very wide; exact lens/focal length UNKNOWN"
+        "value": "medium group; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -13642,15 +13646,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S169"
           ],
           "status": "INFERRED",
-          "value": "lectern, raised desk, boards and crowd share frame"
+          "value": "gray-haired dark-suited adult and dark-haired gray-jacketed adult among seated row"
         }
       ],
       "start": {
-        "frame": 74808,
-        "pts": 38301696,
-        "seconds": 2992.32,
+        "frame": 74737,
+        "pts": 38265344,
+        "seconds": 2989.48,
         "time_base": "1/12800",
-        "timecode": "00:49:52.320"
+        "timecode": "00:49:49.480"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -13661,18 +13665,95 @@
       "audio_status": "BLOCKED_DIRECT_AUDITION",
       "camera_angle": {
         "claim_id": "S170-ANGLE",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+        "notes": "Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.",
         "source_refs": [
           "CHERNOBYL-S01E05-HEARING-RECON-001-S170"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Front-facing to slightly oblique speaker view."
+      },
+      "camera_path": {
+        "claim_id": "S170-CAM-PATH",
+        "notes": "Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.",
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S170"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "No large reframing is visible; the exact camera path remains unknown."
+      },
+      "duration": 4.36,
+      "end": {
+        "frame": 74917,
+        "pts": 38357504,
+        "seconds": 2996.68,
+        "time_base": "1/12800",
+        "timecode": "00:49:56.680"
+      },
+      "narrative_function": {
+        "claim_id": "S170-FUNCTION",
+        "notes": "Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.",
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S170"
+        ],
+        "status": "INFERRED",
+        "value": "Return to a hearing-room speaker anchor; whole-room geography and dialogue meaning remain unproven."
+      },
+      "order": 170,
+      "picture_status": "PICTURE_OBSERVED",
+      "risk_levels": {
+        "camera": "MEDIUM",
+        "continuity": "HIGH",
+        "performance": "HIGH"
+      },
+      "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S170",
+      "shot_size": {
+        "claim_id": "S170-SIZE",
+        "notes": "Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.",
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S170"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "Chest-up to medium-close speaker framing; exact lens and focal length remain unknown."
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S170-ZONE",
+          "notes": "Corrected after renewed frame-level review of the canonical interval; the legacy ledger is retained unchanged as provenance.",
+          "source_refs": [
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S170"
+          ],
+          "status": "PICTURE_OBSERVED",
+          "value": "Foreground speaker with a softly blurred seated background; whole-room geography is not shown."
+        }
+      ],
+      "start": {
+        "frame": 74808,
+        "pts": 38301696,
+        "seconds": 2992.32,
+        "time_base": "1/12800",
+        "timecode": "00:49:52.320"
+      },
+      "unknowns": [
+        "Exact identity, role, dialogue, intention and reaction cause remain unknown.",
+        "Whole-room geography, exact lens, support, production method and sound remain unknown."
+      ]
+    },
+    {
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "camera_angle": {
+        "claim_id": "S171-ANGLE",
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S171"
         ],
         "status": "PICTURE_OBSERVED",
         "value": "visibly elevated/overhead relation; exact camera height, support and focal length UNKNOWN"
       },
       "camera_path": {
-        "claim_id": "S170-CAM-PATH",
+        "claim_id": "S171-CAM-PATH",
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
         "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S170"
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S171"
         ],
         "status": "PICTURE_OBSERVED",
         "value": "fixed-looking overhead; production method UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"
@@ -13686,83 +13767,6 @@
         "timecode": "00:49:58.400"
       },
       "narrative_function": {
-        "claim_id": "S170-FUNCTION",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
-        "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S170"
-        ],
-        "status": "INFERRED",
-        "value": "make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"
-      },
-      "order": 170,
-      "picture_status": "PICTURE_OBSERVED",
-      "risk_levels": {
-        "camera": "HIGH",
-        "continuity": "HIGH",
-        "performance": "HIGH"
-      },
-      "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S170",
-      "shot_size": {
-        "claim_id": "S170-SIZE",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
-        "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S170"
-        ],
-        "status": "PICTURE_OBSERVED",
-        "value": "very high wide; exact lens/focal length UNKNOWN"
-      },
-      "spatial_zone": [
-        {
-          "claim_id": "S170-ZONE",
-          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
-          "source_refs": [
-            "CHERNOBYL-S01E05-HEARING-RECON-001-S170"
-          ],
-          "status": "INFERRED",
-          "value": "large circular floor/vessel surface develops a broad rising dark-and-bright mass"
-        }
-      ],
-      "start": {
-        "frame": 74917,
-        "pts": 38357504,
-        "seconds": 2996.68,
-        "time_base": "1/12800",
-        "timecode": "00:49:56.680"
-      },
-      "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
-        "Cross-cut identities remain unknown."
-      ]
-    },
-    {
-      "audio_status": "BLOCKED_DIRECT_AUDITION",
-      "camera_angle": {
-        "claim_id": "S171-ANGLE",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
-        "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S171"
-        ],
-        "status": "PICTURE_OBSERVED",
-        "value": "approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"
-      },
-      "camera_path": {
-        "claim_id": "S171-CAM-PATH",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
-        "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S171"
-        ],
-        "status": "PICTURE_OBSERVED",
-        "value": "camera/support UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"
-      },
-      "duration": 0.2,
-      "end": {
-        "frame": 74965,
-        "pts": 38382080,
-        "seconds": 2998.6,
-        "time_base": "1/12800",
-        "timecode": "00:49:58.600"
-      },
-      "narrative_function": {
         "claim_id": "S171-FUNCTION",
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
         "source_refs": [
@@ -13774,8 +13778,8 @@
       "order": 171,
       "picture_status": "PICTURE_OBSERVED",
       "risk_levels": {
-        "camera": "LOW",
-        "continuity": "MEDIUM",
+        "camera": "HIGH",
+        "continuity": "HIGH",
         "performance": "HIGH"
       },
       "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S171",
@@ -13786,7 +13790,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S171"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "close abstract; exact lens/focal length UNKNOWN"
+        "value": "very high wide; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -13796,15 +13800,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S171"
           ],
           "status": "INFERRED",
-          "value": "bright turbulent dust/flame-like mass fills frame"
+          "value": "large circular floor/vessel surface develops a broad rising dark-and-bright mass"
         }
       ],
       "start": {
-        "frame": 74960,
-        "pts": 38379520,
-        "seconds": 2998.4,
+        "frame": 74917,
+        "pts": 38357504,
+        "seconds": 2996.68,
         "time_base": "1/12800",
-        "timecode": "00:49:58.400"
+        "timecode": "00:49:56.680"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -13829,15 +13833,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S172"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable room map; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "camera/support UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 0.36,
+      "duration": 0.2,
       "end": {
-        "frame": 74974,
-        "pts": 38386688,
-        "seconds": 2998.96,
+        "frame": 74965,
+        "pts": 38382080,
+        "seconds": 2998.6,
         "time_base": "1/12800",
-        "timecode": "00:49:58.960"
+        "timecode": "00:49:58.600"
       },
       "narrative_function": {
         "claim_id": "S172-FUNCTION",
@@ -13851,8 +13855,8 @@
       "order": 172,
       "picture_status": "PICTURE_OBSERVED",
       "risk_levels": {
-        "camera": "HIGH",
-        "continuity": "HIGH",
+        "camera": "LOW",
+        "continuity": "MEDIUM",
         "performance": "HIGH"
       },
       "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S172",
@@ -13863,7 +13867,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S172"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "wide; exact lens/focal length UNKNOWN"
+        "value": "close abstract; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -13873,15 +13877,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S172"
           ],
           "status": "INFERRED",
-          "value": "white-clad adults around desks and panel wall"
+          "value": "bright turbulent dust/flame-like mass fills frame"
         }
       ],
       "start": {
-        "frame": 74965,
-        "pts": 38382080,
-        "seconds": 2998.6,
+        "frame": 74960,
+        "pts": 38379520,
+        "seconds": 2998.4,
         "time_base": "1/12800",
-        "timecode": "00:49:58.600"
+        "timecode": "00:49:58.400"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -13897,7 +13901,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S173"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "rear-facing relation to the visible figure; exact camera height, support and focal length UNKNOWN"
+        "value": "approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S173-CAM-PATH",
@@ -13906,15 +13910,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S173"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable rear ensemble; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable room map; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 1.0,
+      "duration": 0.36,
       "end": {
-        "frame": 74999,
-        "pts": 38399488,
-        "seconds": 2999.96,
+        "frame": 74974,
+        "pts": 38386688,
+        "seconds": 2998.96,
         "time_base": "1/12800",
-        "timecode": "00:49:59.960"
+        "timecode": "00:49:58.960"
       },
       "narrative_function": {
         "claim_id": "S173-FUNCTION",
@@ -13940,7 +13944,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S173"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "wide rear; exact lens/focal length UNKNOWN"
+        "value": "wide; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -13950,15 +13954,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S173"
           ],
           "status": "INFERRED",
-          "value": "three adults face broad circular/rectangular indicator arrays"
+          "value": "white-clad adults around desks and panel wall"
         }
       ],
       "start": {
-        "frame": 74974,
-        "pts": 38386688,
-        "seconds": 2998.96,
+        "frame": 74965,
+        "pts": 38382080,
+        "seconds": 2998.6,
         "time_base": "1/12800",
-        "timecode": "00:49:58.960"
+        "timecode": "00:49:58.600"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -13974,7 +13978,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S174"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "visibly lower-than-subject or low relation; exact camera height, support and focal length UNKNOWN"
+        "value": "rear-facing relation to the visible figure; exact camera height, support and focal length UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S174-CAM-PATH",
@@ -13983,15 +13987,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S174"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable tight framing; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable rear ensemble; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 0.72,
+      "duration": 1.0,
       "end": {
-        "frame": 75017,
-        "pts": 38408704,
-        "seconds": 3000.68,
+        "frame": 74999,
+        "pts": 38399488,
+        "seconds": 2999.96,
         "time_base": "1/12800",
-        "timecode": "00:50:00.680"
+        "timecode": "00:49:59.960"
       },
       "narrative_function": {
         "claim_id": "S174-FUNCTION",
@@ -14005,8 +14009,8 @@
       "order": 174,
       "picture_status": "PICTURE_OBSERVED",
       "risk_levels": {
-        "camera": "LOW",
-        "continuity": "MEDIUM",
+        "camera": "HIGH",
+        "continuity": "HIGH",
         "performance": "HIGH"
       },
       "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S174",
@@ -14017,7 +14021,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S174"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "extreme close; exact lens/focal length UNKNOWN"
+        "value": "wide rear; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -14027,15 +14031,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S174"
           ],
           "status": "INFERRED",
-          "value": "upper face and glasses of capped adult behind low foreground edge"
+          "value": "three adults face broad circular/rectangular indicator arrays"
         }
       ],
       "start": {
-        "frame": 74999,
-        "pts": 38399488,
-        "seconds": 2999.96,
+        "frame": 74974,
+        "pts": 38386688,
+        "seconds": 2998.96,
         "time_base": "1/12800",
-        "timecode": "00:49:59.960"
+        "timecode": "00:49:58.960"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -14064,11 +14068,11 @@
       },
       "duration": 0.72,
       "end": {
-        "frame": 75035,
-        "pts": 38417920,
-        "seconds": 3001.4,
+        "frame": 75017,
+        "pts": 38408704,
+        "seconds": 3000.68,
         "time_base": "1/12800",
-        "timecode": "00:50:01.400"
+        "timecode": "00:50:00.680"
       },
       "narrative_function": {
         "claim_id": "S175-FUNCTION",
@@ -14104,15 +14108,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S175"
           ],
           "status": "INFERRED",
-          "value": "upper face of light-haired capped adult behind low foreground edge"
+          "value": "upper face and glasses of capped adult behind low foreground edge"
         }
       ],
       "start": {
-        "frame": 75017,
-        "pts": 38408704,
-        "seconds": 3000.68,
+        "frame": 74999,
+        "pts": 38399488,
+        "seconds": 2999.96,
         "time_base": "1/12800",
-        "timecode": "00:50:00.680"
+        "timecode": "00:49:59.960"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -14128,7 +14132,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S176"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"
+        "value": "visibly lower-than-subject or low relation; exact camera height, support and focal length UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S176-CAM-PATH",
@@ -14137,15 +14141,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S176"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable medium; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable tight framing; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 0.52,
+      "duration": 0.72,
       "end": {
-        "frame": 75048,
-        "pts": 38424576,
-        "seconds": 3001.92,
+        "frame": 75035,
+        "pts": 38417920,
+        "seconds": 3001.4,
         "time_base": "1/12800",
-        "timecode": "00:50:01.920"
+        "timecode": "00:50:01.400"
       },
       "narrative_function": {
         "claim_id": "S176-FUNCTION",
@@ -14171,7 +14175,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S176"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "medium; exact lens/focal length UNKNOWN"
+        "value": "extreme close; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -14181,15 +14185,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S176"
           ],
           "status": "INFERRED",
-          "value": "light-haired capped adult at console turns sharply over shoulder"
+          "value": "upper face of light-haired capped adult behind low foreground edge"
         }
       ],
       "start": {
-        "frame": 75035,
-        "pts": 38417920,
-        "seconds": 3001.4,
+        "frame": 75017,
+        "pts": 38408704,
+        "seconds": 3000.68,
         "time_base": "1/12800",
-        "timecode": "00:50:01.400"
+        "timecode": "00:50:00.680"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -14214,15 +14218,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S177"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable close; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable medium; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 2.0,
+      "duration": 0.52,
       "end": {
-        "frame": 75098,
-        "pts": 38450176,
-        "seconds": 3003.92,
+        "frame": 75048,
+        "pts": 38424576,
+        "seconds": 3001.92,
         "time_base": "1/12800",
-        "timecode": "00:50:03.920"
+        "timecode": "00:50:01.920"
       },
       "narrative_function": {
         "claim_id": "S177-FUNCTION",
@@ -14248,7 +14252,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S177"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "close; exact lens/focal length UNKNOWN"
+        "value": "medium; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -14258,15 +14262,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S177"
           ],
           "status": "INFERRED",
-          "value": "mustached capped adult against dark background"
+          "value": "light-haired capped adult at console turns sharply over shoulder"
         }
       ],
       "start": {
-        "frame": 75048,
-        "pts": 38424576,
-        "seconds": 3001.92,
+        "frame": 75035,
+        "pts": 38417920,
+        "seconds": 3001.4,
         "time_base": "1/12800",
-        "timecode": "00:50:01.920"
+        "timecode": "00:50:01.400"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -14291,15 +14295,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S178"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "exact object and camera UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable close; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 5.24,
+      "duration": 2.0,
       "end": {
-        "frame": 75229,
-        "pts": 38517248,
-        "seconds": 3009.16,
+        "frame": 75098,
+        "pts": 38450176,
+        "seconds": 3003.92,
         "time_base": "1/12800",
-        "timecode": "00:50:09.160"
+        "timecode": "00:50:03.920"
       },
       "narrative_function": {
         "claim_id": "S178-FUNCTION",
@@ -14308,14 +14312,14 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S178"
         ],
         "status": "INFERRED",
-        "value": "enlarge visible physical instability and scale; exact event and cause UNKNOWN"
+        "value": "make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"
       },
       "order": 178,
       "picture_status": "PICTURE_OBSERVED",
       "risk_levels": {
-        "camera": "HIGH",
-        "continuity": "HIGH",
-        "performance": "MEDIUM"
+        "camera": "LOW",
+        "continuity": "MEDIUM",
+        "performance": "HIGH"
       },
       "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S178",
       "shot_size": {
@@ -14325,7 +14329,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S178"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "close abstract; exact lens/focal length UNKNOWN"
+        "value": "close; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -14335,15 +14339,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S178"
           ],
           "status": "INFERRED",
-          "value": "dark ribbed/branching structures with orange light and smoke"
+          "value": "mustached capped adult against dark background"
         }
       ],
       "start": {
-        "frame": 75098,
-        "pts": 38450176,
-        "seconds": 3003.92,
+        "frame": 75048,
+        "pts": 38424576,
+        "seconds": 3001.92,
         "time_base": "1/12800",
-        "timecode": "00:50:03.920"
+        "timecode": "00:50:01.920"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -14368,15 +14372,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S179"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable-looking wide; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "exact object and camera UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 3.44,
+      "duration": 5.24,
       "end": {
-        "frame": 75315,
-        "pts": 38561280,
-        "seconds": 3012.6,
+        "frame": 75229,
+        "pts": 38517248,
+        "seconds": 3009.16,
         "time_base": "1/12800",
-        "timecode": "00:50:12.600"
+        "timecode": "00:50:09.160"
       },
       "narrative_function": {
         "claim_id": "S179-FUNCTION",
@@ -14402,7 +14406,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S179"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "wide low-light; exact lens/focal length UNKNOWN"
+        "value": "close abstract; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -14412,15 +14416,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S179"
           ],
           "status": "INFERRED",
-          "value": "orange fire-like region spreads across dark ground/structure"
+          "value": "dark ribbed/branching structures with orange light and smoke"
         }
       ],
       "start": {
-        "frame": 75229,
-        "pts": 38517248,
-        "seconds": 3009.16,
+        "frame": 75098,
+        "pts": 38450176,
+        "seconds": 3003.92,
         "time_base": "1/12800",
-        "timecode": "00:50:09.160"
+        "timecode": "00:50:03.920"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -14445,15 +14449,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S180"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "large motion; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable-looking wide; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 0.28,
+      "duration": 3.44,
       "end": {
-        "frame": 75322,
-        "pts": 38564864,
-        "seconds": 3012.88,
+        "frame": 75315,
+        "pts": 38561280,
+        "seconds": 3012.6,
         "time_base": "1/12800",
-        "timecode": "00:50:12.880"
+        "timecode": "00:50:12.600"
       },
       "narrative_function": {
         "claim_id": "S180-FUNCTION",
@@ -14479,7 +14483,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S180"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "close moving; exact lens/focal length UNKNOWN"
+        "value": "wide low-light; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -14489,15 +14493,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S180"
           ],
           "status": "INFERRED",
-          "value": "brief dark passage reveals orange flame and metal edges"
+          "value": "orange fire-like region spreads across dark ground/structure"
         }
       ],
       "start": {
-        "frame": 75315,
-        "pts": 38561280,
-        "seconds": 3012.6,
+        "frame": 75229,
+        "pts": 38517248,
+        "seconds": 3009.16,
         "time_base": "1/12800",
-        "timecode": "00:50:12.600"
+        "timecode": "00:50:09.160"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -14522,15 +14526,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S181"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "camera/support and production method UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "large motion; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 1.0,
+      "duration": 0.28,
       "end": {
-        "frame": 75347,
-        "pts": 38577664,
-        "seconds": 3013.88,
+        "frame": 75322,
+        "pts": 38564864,
+        "seconds": 3012.88,
         "time_base": "1/12800",
-        "timecode": "00:50:13.880"
+        "timecode": "00:50:12.880"
       },
       "narrative_function": {
         "claim_id": "S181-FUNCTION",
@@ -14556,7 +14560,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S181"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "close; exact lens/focal length UNKNOWN"
+        "value": "close moving; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -14566,15 +14570,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S181"
           ],
           "status": "INFERRED",
-          "value": "flames, dark fragments and metal-like pieces fill frame"
+          "value": "brief dark passage reveals orange flame and metal edges"
         }
       ],
       "start": {
-        "frame": 75322,
-        "pts": 38564864,
-        "seconds": 3012.88,
+        "frame": 75315,
+        "pts": 38561280,
+        "seconds": 3012.6,
         "time_base": "1/12800",
-        "timecode": "00:50:12.880"
+        "timecode": "00:50:12.600"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -14599,15 +14603,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S182"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable exterior framing; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "camera/support and production method UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 3.52,
+      "duration": 1.0,
       "end": {
-        "frame": 75435,
-        "pts": 38622720,
-        "seconds": 3017.4,
+        "frame": 75347,
+        "pts": 38577664,
+        "seconds": 3013.88,
         "time_base": "1/12800",
-        "timecode": "00:50:17.400"
+        "timecode": "00:50:13.880"
       },
       "narrative_function": {
         "claim_id": "S182-FUNCTION",
@@ -14633,7 +14637,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S182"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "wide; exact lens/focal length UNKNOWN"
+        "value": "close; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -14643,15 +14647,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S182"
           ],
           "status": "INFERRED",
-          "value": "exterior industrial structure with large vertical flame/light column"
+          "value": "flames, dark fragments and metal-like pieces fill frame"
         }
       ],
       "start": {
-        "frame": 75347,
-        "pts": 38577664,
-        "seconds": 3013.88,
+        "frame": 75322,
+        "pts": 38564864,
+        "seconds": 3012.88,
         "time_base": "1/12800",
-        "timecode": "00:50:13.880"
+        "timecode": "00:50:12.880"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -14676,15 +14680,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S183"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "exact camera motion UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable exterior framing; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 3.96,
+      "duration": 3.52,
       "end": {
-        "frame": 75534,
-        "pts": 38673408,
-        "seconds": 3021.36,
+        "frame": 75435,
+        "pts": 38622720,
+        "seconds": 3017.4,
         "time_base": "1/12800",
-        "timecode": "00:50:21.360"
+        "timecode": "00:50:17.400"
       },
       "narrative_function": {
         "claim_id": "S183-FUNCTION",
@@ -14710,7 +14714,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S183"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "medium-wide; exact lens/focal length UNKNOWN"
+        "value": "wide; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -14720,15 +14724,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S183"
           ],
           "status": "INFERRED",
-          "value": "dark human-shaped silhouette/figure near a bright expanding light/haze mass and dark airborne fragment-like forms"
+          "value": "exterior industrial structure with large vertical flame/light column"
         }
       ],
       "start": {
-        "frame": 75435,
-        "pts": 38622720,
-        "seconds": 3017.4,
+        "frame": 75347,
+        "pts": 38577664,
+        "seconds": 3013.88,
         "time_base": "1/12800",
-        "timecode": "00:50:17.400"
+        "timecode": "00:50:13.880"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -14744,7 +14748,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S184"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "visibly lower-than-subject or low relation; exact camera height, support and focal length UNKNOWN"
+        "value": "approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S184-CAM-PATH",
@@ -14753,15 +14757,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S184"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "camera/support UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "exact camera motion UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 8.12,
+      "duration": 3.96,
       "end": {
-        "frame": 75737,
-        "pts": 38777344,
-        "seconds": 3029.48,
+        "frame": 75534,
+        "pts": 38673408,
+        "seconds": 3021.36,
         "time_base": "1/12800",
-        "timecode": "00:50:29.480"
+        "timecode": "00:50:21.360"
       },
       "narrative_function": {
         "claim_id": "S184-FUNCTION",
@@ -14787,7 +14791,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S184"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "close low angle; exact lens/focal length UNKNOWN"
+        "value": "medium-wide; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -14797,15 +14801,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S184"
           ],
           "status": "INFERRED",
-          "value": "dark body-like/object form in foreground with dark airborne fragment-like forms and a bright light/haze mass behind"
+          "value": "dark human-shaped silhouette/figure near a bright expanding light/haze mass and dark airborne fragment-like forms"
         }
       ],
       "start": {
-        "frame": 75534,
-        "pts": 38673408,
-        "seconds": 3021.36,
+        "frame": 75435,
+        "pts": 38622720,
+        "seconds": 3017.4,
         "time_base": "1/12800",
-        "timecode": "00:50:21.360"
+        "timecode": "00:50:17.400"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -14821,7 +14825,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S185"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"
+        "value": "visibly lower-than-subject or low relation; exact camera height, support and focal length UNKNOWN"
       },
       "camera_path": {
         "claim_id": "S185-CAM-PATH",
@@ -14830,15 +14834,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S185"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "locked-looking distant view; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "camera/support UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 7.2,
+      "duration": 8.12,
       "end": {
-        "frame": 75917,
-        "pts": 38869504,
-        "seconds": 3036.68,
+        "frame": 75737,
+        "pts": 38777344,
+        "seconds": 3029.48,
         "time_base": "1/12800",
-        "timecode": "00:50:36.680"
+        "timecode": "00:50:29.480"
       },
       "narrative_function": {
         "claim_id": "S185-FUNCTION",
@@ -14864,7 +14868,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S185"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "very wide; exact lens/focal length UNKNOWN"
+        "value": "close low angle; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -14874,15 +14878,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S185"
           ],
           "status": "INFERRED",
-          "value": "distant bright plume on dark horizon with small reflected light"
+          "value": "dark body-like/object form in foreground with dark airborne fragment-like forms and a bright light/haze mass behind"
         }
       ],
       "start": {
-        "frame": 75737,
-        "pts": 38777344,
-        "seconds": 3029.48,
+        "frame": 75534,
+        "pts": 38673408,
+        "seconds": 3021.36,
         "time_base": "1/12800",
-        "timecode": "00:50:29.480"
+        "timecode": "00:50:21.360"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -14907,6 +14911,83 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S186"
         ],
         "status": "PICTURE_OBSERVED",
+        "value": "locked-looking distant view; exact support, stabilization and micro-movement UNKNOWN"
+      },
+      "duration": 7.2,
+      "end": {
+        "frame": 75917,
+        "pts": 38869504,
+        "seconds": 3036.68,
+        "time_base": "1/12800",
+        "timecode": "00:50:36.680"
+      },
+      "narrative_function": {
+        "claim_id": "S186-FUNCTION",
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S186"
+        ],
+        "status": "INFERRED",
+        "value": "enlarge visible physical instability and scale; exact event and cause UNKNOWN"
+      },
+      "order": 186,
+      "picture_status": "PICTURE_OBSERVED",
+      "risk_levels": {
+        "camera": "HIGH",
+        "continuity": "HIGH",
+        "performance": "MEDIUM"
+      },
+      "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S186",
+      "shot_size": {
+        "claim_id": "S186-SIZE",
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S186"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "very wide; exact lens/focal length UNKNOWN"
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S186-ZONE",
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+          "source_refs": [
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S186"
+          ],
+          "status": "INFERRED",
+          "value": "distant bright plume on dark horizon with small reflected light"
+        }
+      ],
+      "start": {
+        "frame": 75737,
+        "pts": 38777344,
+        "seconds": 3029.48,
+        "time_base": "1/12800",
+        "timecode": "00:50:29.480"
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    },
+    {
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "camera_angle": {
+        "claim_id": "S187-ANGLE",
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S187"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"
+      },
+      "camera_path": {
+        "claim_id": "S187-CAM-PATH",
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S187"
+        ],
+        "status": "PICTURE_OBSERVED",
         "value": "stable room geometry partly obscured; exact support, stabilization and micro-movement UNKNOWN"
       },
       "duration": 1.96,
@@ -14918,37 +14999,37 @@
         "timecode": "00:50:38.640"
       },
       "narrative_function": {
-        "claim_id": "S186-FUNCTION",
+        "claim_id": "S187-FUNCTION",
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
         "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S186"
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S187"
         ],
         "status": "INFERRED",
         "value": "make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"
       },
-      "order": 186,
+      "order": 187,
       "picture_status": "PICTURE_OBSERVED",
       "risk_levels": {
         "camera": "HIGH",
         "continuity": "HIGH",
         "performance": "HIGH"
       },
-      "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S186",
+      "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S187",
       "shot_size": {
-        "claim_id": "S186-SIZE",
+        "claim_id": "S187-SIZE",
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
         "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S186"
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S187"
         ],
         "status": "PICTURE_OBSERVED",
         "value": "wide low-visibility; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
-          "claim_id": "S186-ZONE",
+          "claim_id": "S187-ZONE",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
           "source_refs": [
-            "CHERNOBYL-S01E05-HEARING-RECON-001-S186"
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S187"
           ],
           "status": "INFERRED",
           "value": "white-clad adults and consoles partly obscured by dense haze"
@@ -14969,19 +15050,19 @@
     {
       "audio_status": "BLOCKED_DIRECT_AUDITION",
       "camera_angle": {
-        "claim_id": "S187-ANGLE",
+        "claim_id": "S188-ANGLE",
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
         "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S187"
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S188"
         ],
         "status": "PICTURE_OBSERVED",
         "value": "visibly lower-than-subject or low relation; exact camera height, support and focal length UNKNOWN"
       },
       "camera_path": {
-        "claim_id": "S187-CAM-PATH",
+        "claim_id": "S188-CAM-PATH",
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
         "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S187"
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S188"
         ],
         "status": "PICTURE_OBSERVED",
         "value": "stable low view; exact support, stabilization and micro-movement UNKNOWN"
@@ -14993,83 +15074,6 @@
         "seconds": 3044.4,
         "time_base": "1/12800",
         "timecode": "00:50:44.400"
-      },
-      "narrative_function": {
-        "claim_id": "S187-FUNCTION",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
-        "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S187"
-        ],
-        "status": "INFERRED",
-        "value": "make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"
-      },
-      "order": 187,
-      "picture_status": "PICTURE_OBSERVED",
-      "risk_levels": {
-        "camera": "LOW",
-        "continuity": "MEDIUM",
-        "performance": "HIGH"
-      },
-      "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S187",
-      "shot_size": {
-        "claim_id": "S187-SIZE",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
-        "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S187"
-        ],
-        "status": "PICTURE_OBSERVED",
-        "value": "medium low; exact lens/focal length UNKNOWN"
-      },
-      "spatial_zone": [
-        {
-          "claim_id": "S187-ZONE",
-          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
-          "source_refs": [
-            "CHERNOBYL-S01E05-HEARING-RECON-001-S187"
-          ],
-          "status": "INFERRED",
-          "value": "white-clad adult reaches both arms across console/desk while another figure stands behind"
-        }
-      ],
-      "start": {
-        "frame": 75966,
-        "pts": 38894592,
-        "seconds": 3038.64,
-        "time_base": "1/12800",
-        "timecode": "00:50:38.640"
-      },
-      "unknowns": [
-        "Audio remains unknown and was not directly auditioned.",
-        "Cross-cut identities remain unknown."
-      ]
-    },
-    {
-      "audio_status": "BLOCKED_DIRECT_AUDITION",
-      "camera_angle": {
-        "claim_id": "S188-ANGLE",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
-        "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S188"
-        ],
-        "status": "PICTURE_OBSERVED",
-        "value": "approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"
-      },
-      "camera_path": {
-        "claim_id": "S188-CAM-PATH",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
-        "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S188"
-        ],
-        "status": "PICTURE_OBSERVED",
-        "value": "stable close; horizon tilt visible; exact support, stabilization and micro-movement UNKNOWN"
-      },
-      "duration": 6.8,
-      "end": {
-        "frame": 76280,
-        "pts": 39055360,
-        "seconds": 3051.2,
-        "time_base": "1/12800",
-        "timecode": "00:50:51.200"
       },
       "narrative_function": {
         "claim_id": "S188-FUNCTION",
@@ -15095,7 +15099,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S188"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "close; exact lens/focal length UNKNOWN"
+        "value": "medium low; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -15105,15 +15109,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S188"
           ],
           "status": "INFERRED",
-          "value": "bespectacled capped adult viewed at a tilted angle"
+          "value": "white-clad adult reaches both arms across console/desk while another figure stands behind"
         }
       ],
       "start": {
-        "frame": 76110,
-        "pts": 38968320,
-        "seconds": 3044.4,
+        "frame": 75966,
+        "pts": 38894592,
+        "seconds": 3038.64,
         "time_base": "1/12800",
-        "timecode": "00:50:44.400"
+        "timecode": "00:50:38.640"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -15138,15 +15142,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S189"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable group; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable close; horizon tilt visible; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 10.64,
+      "duration": 6.8,
       "end": {
-        "frame": 76546,
-        "pts": 39191552,
-        "seconds": 3061.84,
+        "frame": 76280,
+        "pts": 39055360,
+        "seconds": 3051.2,
         "time_base": "1/12800",
-        "timecode": "00:51:01.840"
+        "timecode": "00:50:51.200"
       },
       "narrative_function": {
         "claim_id": "S189-FUNCTION",
@@ -15155,13 +15159,13 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S189"
         ],
         "status": "INFERRED",
-        "value": "preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"
+        "value": "make an alternate-location process and changing visible states concrete; technical mechanism and temporal status UNKNOWN"
       },
       "order": 189,
       "picture_status": "PICTURE_OBSERVED",
       "risk_levels": {
-        "camera": "MEDIUM",
-        "continuity": "HIGH",
+        "camera": "LOW",
+        "continuity": "MEDIUM",
         "performance": "HIGH"
       },
       "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S189",
@@ -15172,7 +15176,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S189"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "medium group; exact lens/focal length UNKNOWN"
+        "value": "close; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -15182,15 +15186,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S189"
           ],
           "status": "INFERRED",
-          "value": "seated men behind tabletop microphones"
+          "value": "bespectacled capped adult viewed at a tilted angle"
         }
       ],
       "start": {
-        "frame": 76280,
-        "pts": 39055360,
-        "seconds": 3051.2,
+        "frame": 76110,
+        "pts": 38968320,
+        "seconds": 3044.4,
         "time_base": "1/12800",
-        "timecode": "00:50:51.200"
+        "timecode": "00:50:44.400"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -15215,15 +15219,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S190"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable frontal; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable group; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 5.24,
+      "duration": 10.64,
       "end": {
-        "frame": 76677,
-        "pts": 39258624,
-        "seconds": 3067.08,
+        "frame": 76546,
+        "pts": 39191552,
+        "seconds": 3061.84,
         "time_base": "1/12800",
-        "timecode": "00:51:07.080"
+        "timecode": "00:51:01.840"
       },
       "narrative_function": {
         "claim_id": "S190-FUNCTION",
@@ -15237,8 +15241,8 @@
       "order": 190,
       "picture_status": "PICTURE_OBSERVED",
       "risk_levels": {
-        "camera": "LOW",
-        "continuity": "MEDIUM",
+        "camera": "MEDIUM",
+        "continuity": "HIGH",
         "performance": "HIGH"
       },
       "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S190",
@@ -15249,7 +15253,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S190"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "medium; exact lens/focal length UNKNOWN"
+        "value": "medium group; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -15259,15 +15263,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S190"
           ],
           "status": "INFERRED",
-          "value": "lectern adult centered before crowd"
+          "value": "seated men behind tabletop microphones"
         }
       ],
       "start": {
-        "frame": 76546,
-        "pts": 39191552,
-        "seconds": 3061.84,
+        "frame": 76280,
+        "pts": 39055360,
+        "seconds": 3051.2,
         "time_base": "1/12800",
-        "timecode": "00:51:01.840"
+        "timecode": "00:50:51.200"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -15292,15 +15296,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S191"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable close; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable frontal; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 2.36,
+      "duration": 5.24,
       "end": {
-        "frame": 76736,
-        "pts": 39288832,
-        "seconds": 3069.44,
+        "frame": 76677,
+        "pts": 39258624,
+        "seconds": 3067.08,
         "time_base": "1/12800",
-        "timecode": "00:51:09.440"
+        "timecode": "00:51:07.080"
       },
       "narrative_function": {
         "claim_id": "S191-FUNCTION",
@@ -15326,7 +15330,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S191"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "close; exact lens/focal length UNKNOWN"
+        "value": "medium; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -15336,15 +15340,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S191"
           ],
           "status": "INFERRED",
-          "value": "older pale-haired man at raised desk"
+          "value": "lectern adult centered before crowd"
         }
       ],
       "start": {
-        "frame": 76677,
-        "pts": 39258624,
-        "seconds": 3067.08,
+        "frame": 76546,
+        "pts": 39191552,
+        "seconds": 3061.84,
         "time_base": "1/12800",
-        "timecode": "00:51:07.080"
+        "timecode": "00:51:01.840"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -15369,15 +15373,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S192"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable frontal; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable close; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 2.72,
+      "duration": 2.36,
       "end": {
-        "frame": 76804,
-        "pts": 39323648,
-        "seconds": 3072.16,
+        "frame": 76736,
+        "pts": 39288832,
+        "seconds": 3069.44,
         "time_base": "1/12800",
-        "timecode": "00:51:12.160"
+        "timecode": "00:51:09.440"
       },
       "narrative_function": {
         "claim_id": "S192-FUNCTION",
@@ -15403,7 +15407,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S192"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "medium; exact lens/focal length UNKNOWN"
+        "value": "close; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -15413,15 +15417,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S192"
           ],
           "status": "INFERRED",
-          "value": "lectern adult centered before crowd"
+          "value": "older pale-haired man at raised desk"
         }
       ],
       "start": {
-        "frame": 76736,
-        "pts": 39288832,
-        "seconds": 3069.44,
+        "frame": 76677,
+        "pts": 39258624,
+        "seconds": 3067.08,
         "time_base": "1/12800",
-        "timecode": "00:51:09.440"
+        "timecode": "00:51:07.080"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -15446,15 +15450,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S193"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable two-shot; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable frontal; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 1.64,
+      "duration": 2.72,
       "end": {
-        "frame": 76845,
-        "pts": 39344640,
-        "seconds": 3073.8,
+        "frame": 76804,
+        "pts": 39323648,
+        "seconds": 3072.16,
         "time_base": "1/12800",
-        "timecode": "00:51:13.800"
+        "timecode": "00:51:12.160"
       },
       "narrative_function": {
         "claim_id": "S193-FUNCTION",
@@ -15468,8 +15472,8 @@
       "order": 193,
       "picture_status": "PICTURE_OBSERVED",
       "risk_levels": {
-        "camera": "MEDIUM",
-        "continuity": "HIGH",
+        "camera": "LOW",
+        "continuity": "MEDIUM",
         "performance": "HIGH"
       },
       "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S193",
@@ -15480,7 +15484,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S193"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "medium two-shot; exact lens/focal length UNKNOWN"
+        "value": "medium; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -15490,15 +15494,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S193"
           ],
           "status": "INFERRED",
-          "value": "two uniformed men seated at long desk"
+          "value": "lectern adult centered before crowd"
         }
       ],
       "start": {
-        "frame": 76804,
-        "pts": 39323648,
-        "seconds": 3072.16,
+        "frame": 76736,
+        "pts": 39288832,
+        "seconds": 3069.44,
         "time_base": "1/12800",
-        "timecode": "00:51:12.160"
+        "timecode": "00:51:09.440"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -15523,15 +15527,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S194"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable close; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable two-shot; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 2.56,
+      "duration": 1.64,
       "end": {
-        "frame": 76909,
-        "pts": 39377408,
-        "seconds": 3076.36,
+        "frame": 76845,
+        "pts": 39344640,
+        "seconds": 3073.8,
         "time_base": "1/12800",
-        "timecode": "00:51:16.360"
+        "timecode": "00:51:13.800"
       },
       "narrative_function": {
         "claim_id": "S194-FUNCTION",
@@ -15545,8 +15549,8 @@
       "order": 194,
       "picture_status": "PICTURE_OBSERVED",
       "risk_levels": {
-        "camera": "LOW",
-        "continuity": "MEDIUM",
+        "camera": "MEDIUM",
+        "continuity": "HIGH",
         "performance": "HIGH"
       },
       "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S194",
@@ -15557,7 +15561,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S194"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "close; exact lens/focal length UNKNOWN"
+        "value": "medium two-shot; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -15567,15 +15571,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S194"
           ],
           "status": "INFERRED",
-          "value": "older pale-haired man at raised desk"
+          "value": "two uniformed men seated at long desk"
         }
       ],
       "start": {
-        "frame": 76845,
-        "pts": 39344640,
-        "seconds": 3073.8,
+        "frame": 76804,
+        "pts": 39323648,
+        "seconds": 3072.16,
         "time_base": "1/12800",
-        "timecode": "00:51:13.800"
+        "timecode": "00:51:12.160"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -15600,15 +15604,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S195"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable medium; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable close; exact support, stabilization and micro-movement UNKNOWN"
       },
       "duration": 2.56,
       "end": {
-        "frame": 76973,
-        "pts": 39410176,
-        "seconds": 3078.92,
+        "frame": 76909,
+        "pts": 39377408,
+        "seconds": 3076.36,
         "time_base": "1/12800",
-        "timecode": "00:51:18.920"
+        "timecode": "00:51:16.360"
       },
       "narrative_function": {
         "claim_id": "S195-FUNCTION",
@@ -15634,7 +15638,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S195"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "medium; exact lens/focal length UNKNOWN"
+        "value": "close; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -15644,15 +15648,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S195"
           ],
           "status": "INFERRED",
-          "value": "lectern adult before crowd"
+          "value": "older pale-haired man at raised desk"
         }
       ],
       "start": {
-        "frame": 76909,
-        "pts": 39377408,
-        "seconds": 3076.36,
+        "frame": 76845,
+        "pts": 39344640,
+        "seconds": 3073.8,
         "time_base": "1/12800",
-        "timecode": "00:51:16.360"
+        "timecode": "00:51:13.800"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -15679,13 +15683,13 @@
         "status": "PICTURE_OBSERVED",
         "value": "stable medium; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 4.36,
+      "duration": 2.56,
       "end": {
-        "frame": 77082,
-        "pts": 39465984,
-        "seconds": 3083.28,
+        "frame": 76973,
+        "pts": 39410176,
+        "seconds": 3078.92,
         "time_base": "1/12800",
-        "timecode": "00:51:23.280"
+        "timecode": "00:51:18.920"
       },
       "narrative_function": {
         "claim_id": "S196-FUNCTION",
@@ -15721,15 +15725,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S196"
           ],
           "status": "INFERRED",
-          "value": "gray-haired dark-suited seated adult against pale wall"
+          "value": "lectern adult before crowd"
         }
       ],
       "start": {
-        "frame": 76973,
-        "pts": 39410176,
-        "seconds": 3078.92,
+        "frame": 76909,
+        "pts": 39377408,
+        "seconds": 3076.36,
         "time_base": "1/12800",
-        "timecode": "00:51:18.920"
+        "timecode": "00:51:16.360"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -15754,15 +15758,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S197"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable close; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable medium; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 8.48,
+      "duration": 4.36,
       "end": {
-        "frame": 77294,
-        "pts": 39574528,
-        "seconds": 3091.76,
+        "frame": 77082,
+        "pts": 39465984,
+        "seconds": 3083.28,
         "time_base": "1/12800",
-        "timecode": "00:51:31.760"
+        "timecode": "00:51:23.280"
       },
       "narrative_function": {
         "claim_id": "S197-FUNCTION",
@@ -15788,7 +15792,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S197"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "close; exact lens/focal length UNKNOWN"
+        "value": "medium; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -15798,15 +15802,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S197"
           ],
           "status": "INFERRED",
-          "value": "bespectacled light-suited adult turns toward another suited figure entering edge"
+          "value": "gray-haired dark-suited seated adult against pale wall"
         }
       ],
       "start": {
-        "frame": 77082,
-        "pts": 39465984,
-        "seconds": 3083.28,
+        "frame": 76973,
+        "pts": 39410176,
+        "seconds": 3078.92,
         "time_base": "1/12800",
-        "timecode": "00:51:23.280"
+        "timecode": "00:51:18.920"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -15831,15 +15835,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S198"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "locked-looking room map; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable close; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 2.76,
+      "duration": 8.48,
       "end": {
-        "frame": 77363,
-        "pts": 39609856,
-        "seconds": 3094.52,
+        "frame": 77294,
+        "pts": 39574528,
+        "seconds": 3091.76,
         "time_base": "1/12800",
-        "timecode": "00:51:34.520"
+        "timecode": "00:51:31.760"
       },
       "narrative_function": {
         "claim_id": "S198-FUNCTION",
@@ -15853,8 +15857,8 @@
       "order": 198,
       "picture_status": "PICTURE_OBSERVED",
       "risk_levels": {
-        "camera": "MEDIUM",
-        "continuity": "HIGH",
+        "camera": "LOW",
+        "continuity": "MEDIUM",
         "performance": "HIGH"
       },
       "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S198",
@@ -15865,7 +15869,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S198"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "very wide; exact lens/focal length UNKNOWN"
+        "value": "close; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -15875,15 +15879,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S198"
           ],
           "status": "INFERRED",
-          "value": "lectern adult, boards, raised desk and crowd share frame"
+          "value": "bespectacled light-suited adult turns toward another suited figure entering edge"
         }
       ],
       "start": {
-        "frame": 77294,
-        "pts": 39574528,
-        "seconds": 3091.76,
+        "frame": 77082,
+        "pts": 39465984,
+        "seconds": 3083.28,
         "time_base": "1/12800",
-        "timecode": "00:51:31.760"
+        "timecode": "00:51:23.280"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -15908,15 +15912,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S199"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable close; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "locked-looking room map; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 8.0,
+      "duration": 2.76,
       "end": {
-        "frame": 77563,
-        "pts": 39712256,
-        "seconds": 3102.52,
+        "frame": 77363,
+        "pts": 39609856,
+        "seconds": 3094.52,
         "time_base": "1/12800",
-        "timecode": "00:51:42.520"
+        "timecode": "00:51:34.520"
       },
       "narrative_function": {
         "claim_id": "S199-FUNCTION",
@@ -15930,8 +15934,8 @@
       "order": 199,
       "picture_status": "PICTURE_OBSERVED",
       "risk_levels": {
-        "camera": "LOW",
-        "continuity": "MEDIUM",
+        "camera": "MEDIUM",
+        "continuity": "HIGH",
         "performance": "HIGH"
       },
       "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S199",
@@ -15942,7 +15946,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S199"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "close; exact lens/focal length UNKNOWN"
+        "value": "very wide; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -15952,15 +15956,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S199"
           ],
           "status": "INFERRED",
-          "value": "older pale-haired man at raised desk"
+          "value": "lectern adult, boards, raised desk and crowd share frame"
         }
       ],
       "start": {
-        "frame": 77363,
-        "pts": 39609856,
-        "seconds": 3094.52,
+        "frame": 77294,
+        "pts": 39574528,
+        "seconds": 3091.76,
         "time_base": "1/12800",
-        "timecode": "00:51:34.520"
+        "timecode": "00:51:31.760"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -15985,15 +15989,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S200"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "subject movement with modest reframing; exact support UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable close; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 33.72,
+      "duration": 8.0,
       "end": {
-        "frame": 78406,
-        "pts": 40143872,
-        "seconds": 3136.24,
+        "frame": 77563,
+        "pts": 39712256,
+        "seconds": 3102.52,
         "time_base": "1/12800",
-        "timecode": "00:52:16.240"
+        "timecode": "00:51:42.520"
       },
       "narrative_function": {
         "claim_id": "S200-FUNCTION",
@@ -16019,7 +16023,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S200"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "medium-long; exact lens/focal length UNKNOWN"
+        "value": "close; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -16029,15 +16033,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S200"
           ],
           "status": "INFERRED",
-          "value": "lectern adult turns from front, moves beside board and is later seen from back toward raised desk"
+          "value": "older pale-haired man at raised desk"
         }
       ],
       "start": {
-        "frame": 77563,
-        "pts": 39712256,
-        "seconds": 3102.52,
+        "frame": 77363,
+        "pts": 39609856,
+        "seconds": 3094.52,
         "time_base": "1/12800",
-        "timecode": "00:51:42.520"
+        "timecode": "00:51:34.520"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -16062,15 +16066,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S201"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable close; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "subject movement with modest reframing; exact support UNKNOWN; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 13.04,
+      "duration": 33.72,
       "end": {
-        "frame": 78732,
-        "pts": 40310784,
-        "seconds": 3149.28,
+        "frame": 78406,
+        "pts": 40143872,
+        "seconds": 3136.24,
         "time_base": "1/12800",
-        "timecode": "00:52:29.280"
+        "timecode": "00:52:16.240"
       },
       "narrative_function": {
         "claim_id": "S201-FUNCTION",
@@ -16096,7 +16100,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S201"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "medium close; exact lens/focal length UNKNOWN"
+        "value": "medium-long; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -16106,15 +16110,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S201"
           ],
           "status": "INFERRED",
-          "value": "bespectacled light-suited adult in side/front profile before raised desk"
+          "value": "lectern adult turns from front, moves beside board and is later seen from back toward raised desk"
         }
       ],
       "start": {
-        "frame": 78406,
-        "pts": 40143872,
-        "seconds": 3136.24,
+        "frame": 77563,
+        "pts": 39712256,
+        "seconds": 3102.52,
         "time_base": "1/12800",
-        "timecode": "00:52:16.240"
+        "timecode": "00:51:42.520"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -16139,15 +16143,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S202"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable row; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable close; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 3.96,
+      "duration": 13.04,
       "end": {
-        "frame": 78831,
-        "pts": 40361472,
-        "seconds": 3153.24,
+        "frame": 78732,
+        "pts": 40310784,
+        "seconds": 3149.28,
         "time_base": "1/12800",
-        "timecode": "00:52:33.240"
+        "timecode": "00:52:29.280"
       },
       "narrative_function": {
         "claim_id": "S202-FUNCTION",
@@ -16161,8 +16165,8 @@
       "order": 202,
       "picture_status": "PICTURE_OBSERVED",
       "risk_levels": {
-        "camera": "MEDIUM",
-        "continuity": "HIGH",
+        "camera": "LOW",
+        "continuity": "MEDIUM",
         "performance": "HIGH"
       },
       "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S202",
@@ -16173,7 +16177,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S202"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "medium group; exact lens/focal length UNKNOWN"
+        "value": "medium close; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -16183,15 +16187,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S202"
           ],
           "status": "INFERRED",
-          "value": "seated row of civilians viewed from side"
+          "value": "bespectacled light-suited adult in side/front profile before raised desk"
         }
       ],
       "start": {
-        "frame": 78732,
-        "pts": 40310784,
-        "seconds": 3149.28,
+        "frame": 78406,
+        "pts": 40143872,
+        "seconds": 3136.24,
         "time_base": "1/12800",
-        "timecode": "00:52:29.280"
+        "timecode": "00:52:16.240"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -16216,15 +16220,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S203"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable layered table view; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable row; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 4.0,
+      "duration": 3.96,
       "end": {
-        "frame": 78931,
-        "pts": 40412672,
-        "seconds": 3157.24,
+        "frame": 78831,
+        "pts": 40361472,
+        "seconds": 3153.24,
         "time_base": "1/12800",
-        "timecode": "00:52:37.240"
+        "timecode": "00:52:33.240"
       },
       "narrative_function": {
         "claim_id": "S203-FUNCTION",
@@ -16250,7 +16254,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S203"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "wide; exact lens/focal length UNKNOWN"
+        "value": "medium group; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -16260,15 +16264,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S203"
           ],
           "status": "INFERRED",
-          "value": "long table with gray-haired man, dark-haired gray-jacketed adult and others"
+          "value": "seated row of civilians viewed from side"
         }
       ],
       "start": {
-        "frame": 78831,
-        "pts": 40361472,
-        "seconds": 3153.24,
+        "frame": 78732,
+        "pts": 40310784,
+        "seconds": 3149.28,
         "time_base": "1/12800",
-        "timecode": "00:52:33.240"
+        "timecode": "00:52:29.280"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -16293,15 +16297,15 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S204"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "stable axis; subject approach visible; exact support, stabilization and micro-movement UNKNOWN"
+        "value": "stable layered table view; exact support, stabilization and micro-movement UNKNOWN"
       },
-      "duration": 11.8,
+      "duration": 4.0,
       "end": {
-        "frame": 79226,
-        "pts": 40563712,
-        "seconds": 3169.04,
+        "frame": 78931,
+        "pts": 40412672,
+        "seconds": 3157.24,
         "time_base": "1/12800",
-        "timecode": "00:52:49.040"
+        "timecode": "00:52:37.240"
       },
       "narrative_function": {
         "claim_id": "S204-FUNCTION",
@@ -16315,8 +16319,8 @@
       "order": 204,
       "picture_status": "PICTURE_OBSERVED",
       "risk_levels": {
-        "camera": "LOW",
-        "continuity": "MEDIUM",
+        "camera": "MEDIUM",
+        "continuity": "HIGH",
         "performance": "HIGH"
       },
       "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S204",
@@ -16327,7 +16331,7 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S204"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "medium; exact lens/focal length UNKNOWN"
+        "value": "wide; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
@@ -16337,15 +16341,15 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S204"
           ],
           "status": "INFERRED",
-          "value": "bespectacled light-suited adult faces camera while back of another suited adult enters foreground"
+          "value": "long table with gray-haired man, dark-haired gray-jacketed adult and others"
         }
       ],
       "start": {
-        "frame": 78931,
-        "pts": 40412672,
-        "seconds": 3157.24,
+        "frame": 78831,
+        "pts": 40361472,
+        "seconds": 3153.24,
         "time_base": "1/12800",
-        "timecode": "00:52:37.240"
+        "timecode": "00:52:33.240"
       },
       "unknowns": [
         "Audio remains unknown and was not directly auditioned.",
@@ -16370,6 +16374,83 @@
           "CHERNOBYL-S01E05-HEARING-RECON-001-S205"
         ],
         "status": "PICTURE_OBSERVED",
+        "value": "stable axis; subject approach visible; exact support, stabilization and micro-movement UNKNOWN"
+      },
+      "duration": 11.8,
+      "end": {
+        "frame": 79226,
+        "pts": 40563712,
+        "seconds": 3169.04,
+        "time_base": "1/12800",
+        "timecode": "00:52:49.040"
+      },
+      "narrative_function": {
+        "claim_id": "S205-FUNCTION",
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S205"
+        ],
+        "status": "INFERRED",
+        "value": "preserve the hearing-room anchor and distribute board/person/group coverage; explanation, accusation and responsibility semantics UNKNOWN"
+      },
+      "order": 205,
+      "picture_status": "PICTURE_OBSERVED",
+      "risk_levels": {
+        "camera": "LOW",
+        "continuity": "MEDIUM",
+        "performance": "HIGH"
+      },
+      "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S205",
+      "shot_size": {
+        "claim_id": "S205-SIZE",
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S205"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "medium; exact lens/focal length UNKNOWN"
+      },
+      "spatial_zone": [
+        {
+          "claim_id": "S205-ZONE",
+          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+          "source_refs": [
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S205"
+          ],
+          "status": "INFERRED",
+          "value": "bespectacled light-suited adult faces camera while back of another suited adult enters foreground"
+        }
+      ],
+      "start": {
+        "frame": 78931,
+        "pts": 40412672,
+        "seconds": 3157.24,
+        "time_base": "1/12800",
+        "timecode": "00:52:37.240"
+      },
+      "unknowns": [
+        "Audio remains unknown and was not directly auditioned.",
+        "Cross-cut identities remain unknown."
+      ]
+    },
+    {
+      "audio_status": "BLOCKED_DIRECT_AUDITION",
+      "camera_angle": {
+        "claim_id": "S206-ANGLE",
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S206"
+        ],
+        "status": "PICTURE_OBSERVED",
+        "value": "approximate eye/room-height relation from visible geometry; exact height, support, lens and focal length UNKNOWN"
+      },
+      "camera_path": {
+        "claim_id": "S206-CAM-PATH",
+        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+        "source_refs": [
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S206"
+        ],
+        "status": "PICTURE_OBSERVED",
         "value": "locked-looking closing room map; exact support, stabilization and micro-movement UNKNOWN"
       },
       "duration": 4.76,
@@ -16381,37 +16462,37 @@
         "timecode": "00:52:53.800"
       },
       "narrative_function": {
-        "claim_id": "S205-FUNCTION",
+        "claim_id": "S206-FUNCTION",
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
         "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S205"
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S206"
         ],
         "status": "INFERRED",
         "value": "close selected envelope on a restored whole-room map before the corridor scene begins"
       },
-      "order": 205,
+      "order": 206,
       "picture_status": "PICTURE_OBSERVED",
       "risk_levels": {
         "camera": "MEDIUM",
         "continuity": "HIGH",
         "performance": "HIGH"
       },
-      "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S205",
+      "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S206",
       "shot_size": {
-        "claim_id": "S205-SIZE",
+        "claim_id": "S206-SIZE",
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
         "source_refs": [
-          "CHERNOBYL-S01E05-HEARING-RECON-001-S205"
+          "CHERNOBYL-S01E05-HEARING-RECON-001-S206"
         ],
         "status": "PICTURE_OBSERVED",
         "value": "very wide; exact lens/focal length UNKNOWN"
       },
       "spatial_zone": [
         {
-          "claim_id": "S205-ZONE",
+          "claim_id": "S206-ZONE",
           "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
           "source_refs": [
-            "CHERNOBYL-S01E05-HEARING-RECON-001-S205"
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S206"
           ],
           "status": "INFERRED",
           "value": "entire room with crowd, long desks, boards, lectern and raised desk"
@@ -16448,14 +16529,14 @@
   "stats": {
     "duration_bins": {
       "1_to_lt_2": 40,
-      "2_to_lt_5": 108,
-      "5_to_lt_10": 31,
-      "gte_10": 15,
+      "2_to_lt_5": 109,
+      "5_to_lt_10": 32,
+      "gte_10": 14,
       "lt_1": 11
     },
-    "mean_duration": 4.107121951219512,
-    "median_duration": 2.8,
-    "shot_count": 205,
+    "mean_duration": 4.087184466019417,
+    "median_duration": 2.82,
+    "shot_count": 206,
     "total_duration": 841.96,
     "unit": "VISIBLE_SHOT"
   },

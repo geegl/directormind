@@ -16,6 +16,7 @@ SCRIPT_ROOT = SKILL_ROOT / "scripts"
 REVIEW_PATH = REPO_ROOT / "research" / "grammar" / "runtime_integration.review.json"
 CANDIDATE_INDEX_PATH = REPO_ROOT / "research" / "grammar" / "candidate_rule_index.json"
 SCHEMA_PATH = SKILL_ROOT / "references" / "runtime-integration-review.schema.json"
+AUDIO_AUTHORITY_PATH = REPO_ROOT / "research" / "grammar" / "runtime_integration_audio_authority.json"
 
 sys.path.insert(0, str(SCRIPT_ROOT))
 from build_candidate_rule_index import assert_runtime_review_lineage  # noqa: E402
@@ -39,6 +40,7 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
             for item in read_json(CANDIDATE_INDEX_PATH)["candidates"]
         }
         cls.schema = read_json(SCHEMA_PATH)
+        cls.audio_authority = read_json(AUDIO_AUTHORITY_PATH)
 
     def validate_copy(self, review: dict | None = None) -> dict:
         return validate(copy.deepcopy(review or self.review), copy.deepcopy(self.schema))
@@ -556,6 +558,76 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
             issue_codes(self.validate_copy(review)),
         )
 
+    def test_candidate_authority_claim_and_observation_cannot_be_deleted_together(self) -> None:
+        review = copy.deepcopy(self.review)
+        recurring = next(
+            item for item in review["candidate_dispositions"]
+            if item["candidate_rule_id"].endswith(
+                "PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+            )
+        )
+        sound = next(
+            item for item in review["evidence_reviews"]
+            if item["evidence_id"] == "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+        )
+        binding = next(
+            item for item in sound["audio_candidate_bindings"]
+            if item["candidate_rule_id"] == recurring["candidate_rule_id"]
+        )
+        removed = recurring["audio_observation_ids"][0]
+        recurring["audio_observation_ids"].remove(removed)
+        recurring["audio_claims"] = [
+            claim for claim in recurring["audio_claims"]
+            if claim["observation_id"] != removed
+        ]
+        binding["authorized_observation_ids"].remove(removed)
+        sound["audio_observations"] = [
+            observation for observation in sound["audio_observations"]
+            if observation["observation_id"] != removed
+        ]
+        self.assertIn(
+            "INTEGRATION-AUDIO-CANONICAL-AUTHORITY",
+            issue_codes(self.validate_copy(review)),
+        )
+
+    def test_same_shot_substitution_cannot_rewrite_both_review_authority_directions(self) -> None:
+        review = copy.deepcopy(self.review)
+        sound = next(
+            item for item in review["evidence_reviews"]
+            if item["evidence_id"] == "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+        )
+        observations = {
+            item["observation_id"]: item for item in sound["audio_observations"]
+        }
+        stagger = next(
+            item for item in review["candidate_dispositions"]
+            if item["candidate_rule_id"].endswith(
+                "STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003"
+            )
+        )
+        binding = next(
+            item for item in sound["audio_candidate_bindings"]
+            if item["candidate_rule_id"] == stagger["candidate_rule_id"]
+        )
+        original = stagger["audio_observation_ids"][0]
+        replacement = "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001"
+        stagger["audio_observation_ids"] = [replacement]
+        stagger["audio_claims"] = [{
+            "observation_id": replacement,
+            "claim": observations[replacement]["description"],
+        }]
+        binding["authorized_observation_ids"] = [replacement]
+        observations[original]["authorized_candidate_rule_ids"].remove(
+            stagger["candidate_rule_id"]
+        )
+        observations[replacement]["authorized_candidate_rule_ids"].append(
+            stagger["candidate_rule_id"]
+        )
+        self.assertIn(
+            "INTEGRATION-AUDIO-CANONICAL-AUTHORITY",
+            issue_codes(self.validate_copy(review)),
+        )
+
     def test_audio_candidate_cannot_add_an_unauthorized_observation(self) -> None:
         review = copy.deepcopy(self.review)
         sound = next(
@@ -600,6 +672,11 @@ class RuntimeIntegrationReviewTests(unittest.TestCase):
             if item["evidence_id"] == "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
         ]
         self.assertEqual(set(bindings), {item["candidate_rule_id"] for item in sound_candidates})
+        canonical_bindings = {
+            item["candidate_rule_id"]: item["authorized_observation_ids"]
+            for item in self.audio_authority["candidate_bindings"]
+        }
+        self.assertEqual(bindings, canonical_bindings)
         for item in sound_candidates:
             with self.subTest(candidate_rule_id=item["candidate_rule_id"]):
                 self.assertEqual(

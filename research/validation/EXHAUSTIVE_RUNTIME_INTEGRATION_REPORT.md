@@ -4,10 +4,10 @@ Status: `PARTIAL_EVIDENCE_GAP`
 
 The repository contracts pass for the evidence-backed work, but the product
 goal is not complete. The fixed corpus contains 33 registered sources, 31
-canonical Scene Evidence records, 2,343 Shot/edit units, 124 candidates and 16
+canonical Scene Evidence records, 2,344 Shot/edit units, 124 candidates and 16
 mechanism families.
 
-Fresh moving-image review covers 1,840 unique candidate-dependent Shot refs.
+Fresh moving-image review covers 1,841 unique candidate-dependent Shot refs.
 Sixty-three candidates now have one of the five allowed final outcomes; the
 remaining 61 have genuine external evidence gaps. No candidate remains
 waiting for direct review of identified existing material.
@@ -46,13 +46,15 @@ speech, quieter intervals, drums and changing outdoor/indoor ambience.
 
 Those 16 observations collectively cover all 25 auditioned Shots. Candidate
 audio claims are structured as an Observation ID plus an exact copy of that
-Observation's description. A separate four-row candidate authority now records
-the exact permitted Observation set, reason and directly auditioned Shot refs
-for each sound-dependent candidate. Each Observation also independently names
-the candidates it may support. The validator requires both directions,
-candidate IDs and claims to agree exactly and rejects missing, added, swapped,
-same-Shot-substituted or coordinately deleted entries even when the attacker
-also copies or removes the corresponding claim.
+Observation's description. The external canonical file
+`runtime_integration_audio_authority.json`, separate from mutable candidate
+dispositions and evidence-review rows, records the exact permitted Observation
+set, reason and directly auditioned Shot refs for each sound-dependent candidate.
+It also fixes all sixteen Observation descriptions, ranges, refs and authorized
+candidates. The validator requires the review and claims to match that authority
+exactly and rejects missing, added, swapped, same-Shot-substituted or
+coordinately deleted entries even when the attacker also rewrites the
+Observation description and both mutable authority directions.
 
 It does not prove speaker identity, sound-source ownership, subjective hearing,
 narrative causality, edit intent or the legacy millisecond offsets. The four
@@ -81,11 +83,13 @@ each with the missing evidence type, reason existing material cannot close it,
 and exact existing review refs. The Ted Lasso mobile-view fallback remains an
 evidence-backed rejection rather than a duplicate.
 
-The first clean-checkout reviewer of this remediation also found that the
-Chernobyl S169 note incorrectly called a chest-up speaker anchor a whole-room
-field. The note now records the narrower visible fact and explicitly withholds
-whole-room geography; the multi-Shot room/process alternation and the
-candidate's boundary status remain supported by the other cited Shots.
+A later clean-checkout reviewer found that the former Chernobyl S165 interval
+contained an unrecorded hard cut. Frame-level evidence places the cut at
+`00:49:36.760`: canonical S165 now ends there, S166 contains the following
+speaker view, and the former S166-S205 IDs shift to S167-S206. The old S169 is
+therefore now S170 and is described only as chest-up speaker coverage against a
+softly blurred seated background, explicitly withholding whole-room geography.
+The corpus and reviewed-ref counts are recomputed from this corrected evidence.
 
 ## Prioritized fixed-corpus gaps
 
@@ -141,11 +145,12 @@ immutable legacy ledger remains unchanged.
 - Structural `PASS` proves deterministic data binding and routing behavior,
   not product completion, creative quality or audience effect.
 - Directed tests reject ID-and-description synchronized same-Shot audio
-  substitution, candidate swaps, single-sided and coordinated deletions,
-  missing and added authorizations, false external-gap labeling and phase-status
-  drift. All 314 unit and CLI tests and
-  all 25 repository checks pass and rebuild the final report. Hosted CI and the
-  independent clean-checkout review still remain pending at this report state.
+  substitution, candidate swaps, full coordinated deletions, missing and added
+  authorizations, false external-gap labeling and phase-status drift. The new
+  Chernobyl regression locks the exact cut, adjacency, 206-shot total and narrow
+  S166/S170 descriptions. The 73-test focused suite, all 317 unit and CLI tests
+  and all 25 repository checks pass and rebuild the final report. Hosted CI and
+  a new independent clean-checkout review remain pending at this report state.
 - The prior full 16-family and Sound reviews remain historical evidence, but
   they do not sign off the current P1 remediation head.
 - All creative packages remain `HUMAN_REVIEW_PENDING`.

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "runtime-integration-audio-authority.schema.json",
+  "title": "DirectorMind direct-audition authority v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "authority_id", "evidence_id", "review_id",
+    "audio_method_id", "required_observations", "candidate_bindings"
+  ],
+  "properties": {
+    "schema_version": {"const": "runtime-integration-audio-authority/0.1"},
+    "authority_id": {"type": "string", "minLength": 1},
+    "evidence_id": {"type": "string", "minLength": 1},
+    "review_id": {"type": "string", "minLength": 1},
+    "audio_method_id": {"type": "string", "minLength": 1},
+    "required_observations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/observationAuthority"}
+    },
+    "candidate_bindings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/candidateBinding"}
+    }
+  },
+  "$defs": {
+    "nonEmptyStringArray": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "observationAuthority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "observation_id", "description", "start_seconds", "end_seconds",
+        "source_refs", "authorized_candidate_rule_ids"
+      ],
+      "properties": {
+        "observation_id": {"type": "string", "minLength": 1},
+        "description": {"type": "string", "minLength": 1},
+        "start_seconds": {"type": "number", "minimum": 0},
+        "end_seconds": {"type": "number", "minimum": 0},
+        "source_refs": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "authorized_candidate_rule_ids": {"$ref": "#/$defs/nonEmptyStringArray"}
+      }
+    },
+    "candidateBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_rule_id", "authorized_observation_ids", "binding_reason",
+        "source_refs"
+      ],
+      "properties": {
+        "candidate_rule_id": {"type": "string", "minLength": 1},
+        "authorized_observation_ids": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "binding_reason": {"type": "string", "minLength": 1},
+        "source_refs": {"$ref": "#/$defs/nonEmptyStringArray"}
+      }
+    }
+  }
+}

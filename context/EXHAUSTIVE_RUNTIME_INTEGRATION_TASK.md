@@ -2,7 +2,7 @@
 
 ## Goal
 
-Integrate every item in the closed local corpus into one auditable DirectorMind decision chain. The fixed corpus is 33 registered local sources, 31 canonical Scene Evidence records, 2,343 Shot/edit units, 124 candidate mechanisms, and 16 mechanism families.
+Integrate every item in the closed local corpus into one auditable DirectorMind decision chain. After the frame-level Chernobyl boundary correction, the fixed corpus is 33 registered local sources, 31 canonical Scene Evidence records, 2,344 Shot/edit units, 124 candidate mechanisms, and 16 mechanism families.
 
 The work does not end at a target number of positive rules. Every candidate must either become a positive runtime rule, support one, constrain one as a boundary/counterexample, merge into one as a duplicate, or be rejected for an evidence-backed reason that prevents future accidental promotion.
 

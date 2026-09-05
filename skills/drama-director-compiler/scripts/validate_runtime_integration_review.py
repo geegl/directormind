@@ -16,6 +16,8 @@ SKILL_ROOT = SCRIPT_DIR.parent
 REPOSITORY_ROOT = SKILL_ROOT.parents[1]
 REVIEW_PATH = REPOSITORY_ROOT / "research" / "grammar" / "runtime_integration.review.json"
 SCHEMA_PATH = SKILL_ROOT / "references" / "runtime-integration-review.schema.json"
+AUDIO_AUTHORITY_PATH = REPOSITORY_ROOT / "research" / "grammar" / "runtime_integration_audio_authority.json"
+AUDIO_AUTHORITY_SCHEMA_PATH = SKILL_ROOT / "references" / "runtime-integration-audio-authority.schema.json"
 EVIDENCE_ROOT = REPOSITORY_ROOT / "research" / "evidence"
 SOURCE_REGISTER_PATH = REPOSITORY_ROOT / "research" / "validation" / "CLOSED_CORPUS_33_STATUS.md"
 REPORT_PATH = REPOSITORY_ROOT / "research" / "validation" / "runtime-integration-validation.json"
@@ -82,9 +84,25 @@ def _registered_evidence_by_number() -> dict[int, str | None]:
     return rows
 
 
-def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
+def validate(
+    review: dict[str, Any],
+    schema: dict[str, Any],
+    audio_authority: dict[str, Any] | None = None,
+    audio_authority_schema: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     issues: list[dict[str, str]] = []
     validate_schema_subset(review, schema, schema, issues, "$")
+    if audio_authority is None:
+        audio_authority = read_json(AUDIO_AUTHORITY_PATH)
+    if audio_authority_schema is None:
+        audio_authority_schema = read_json(AUDIO_AUTHORITY_SCHEMA_PATH)
+    validate_schema_subset(
+        audio_authority,
+        audio_authority_schema,
+        audio_authority_schema,
+        issues,
+        "$audio_authority",
+    )
     evidence_by_id, candidate_by_id = _evidence_authority()
     forward_index = read_json(FORWARD_INDEX_PATH)
     forward_by_id = {
@@ -339,6 +357,48 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
                 for candidate in evidence.get("candidate_rules", [])
                 if isinstance(candidate, dict) and candidate.get("audio_dependency") is True
             }
+            authority_observations = {
+                authority_item.get("observation_id"): authority_item
+                for authority_item in audio_authority.get("required_observations", [])
+                if isinstance(authority_item, dict)
+            }
+            observed_authority = {
+                observation.get("observation_id"): {
+                    "observation_id": observation.get("observation_id"),
+                    "description": observation.get("description"),
+                    "start_seconds": observation.get("start", {}).get("seconds"),
+                    "end_seconds": observation.get("end", {}).get("seconds"),
+                    "source_refs": observation.get("source_refs", []),
+                    "authorized_candidate_rule_ids": observation.get(
+                        "authorized_candidate_rule_ids", []
+                    ),
+                }
+                for observation in audio_observations
+                if isinstance(observation, dict)
+            }
+            authority_bindings = {
+                authority_binding.get("candidate_rule_id"): authority_binding
+                for authority_binding in audio_authority.get("candidate_bindings", [])
+                if isinstance(authority_binding, dict)
+            }
+            review_bindings = {
+                binding.get("candidate_rule_id"): binding
+                for binding in audio_candidate_bindings
+                if isinstance(binding, dict)
+            }
+            if (
+                audio_authority.get("evidence_id") != item.get("evidence_id")
+                or audio_authority.get("review_id") != item.get("review_id")
+                or audio_authority.get("audio_method_id") != item.get("audio_method_id")
+                or observed_authority != authority_observations
+                or review_bindings != authority_bindings
+            ):
+                add_issue(
+                    issues,
+                    "INTEGRATION-AUDIO-CANONICAL-AUTHORITY",
+                    path,
+                    "Direct-audition observations and candidate bindings must exactly match the separate canonical audio authority.",
+                )
             observation_authority_by_candidate: dict[str, set[str]] = {}
             for observation_index, observation in enumerate(audio_observations):
                 if not isinstance(observation, dict):
@@ -1111,6 +1171,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     protected_paths = [
         args.review,
         args.schema,
+        AUDIO_AUTHORITY_PATH,
+        AUDIO_AUTHORITY_SCHEMA_PATH,
         FORWARD_INDEX_PATH,
         SOURCE_REGISTER_PATH,
         *sorted(EVIDENCE_ROOT.rglob("*.scene-evidence.json")),

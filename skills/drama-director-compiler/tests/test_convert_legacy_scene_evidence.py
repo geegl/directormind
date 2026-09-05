@@ -89,6 +89,18 @@ FROZEN_ORIGINAL_ORDINALS = {
     "UNBELIEVABLE_S01E02_CONTAINED_TWO_PERSON_SEQUENCE_EVIDENCE_V0.1": 117,
 }
 
+CHERNOBYL_SOURCE_STEM = (
+    "CHERNOBYL_S01E05_HEARING_RECONSTRUCTION_VISUAL_EVIDENCE_V0.1"
+)
+
+
+def legacy_aligned_shots(source: Path, evidence: dict) -> list[dict]:
+    """Align immutable legacy rows with canonical Shots after a reviewed split."""
+    shots = evidence["shots"]
+    if source.stem == CHERNOBYL_SOURCE_STEM:
+        return [*shots[:165], *shots[166:]]
+    return shots
+
 
 class LegacySceneEvidenceConverterTests(unittest.TestCase):
     @classmethod
@@ -312,10 +324,17 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
         for source in self.sources:
             shot_rows, _rule_rows = parse_tables(source.read_text(encoding="utf-8"))
             evidence = build_evidence(source)
-            for order, (legacy, converted) in enumerate(zip(shot_rows, evidence["shots"]), start=1):
-                self.assertEqual(converted["order"], order)
+            aligned_shots = legacy_aligned_shots(source, evidence)
+            for order, (legacy, converted) in enumerate(zip(shot_rows, aligned_shots), start=1):
+                is_chernobyl_split_source = source.stem == CHERNOBYL_SOURCE_STEM
+                expected_order = order + int(is_chernobyl_split_source and order >= 166)
+                is_corrected_display = is_chernobyl_split_source and order == 165
+                self.assertEqual(converted["order"], expected_order)
                 self.assertEqual(converted["start"]["timecode"], parse_timecode(legacy["start"])[0])
-                self.assertEqual(converted["end"]["timecode"], parse_timecode(legacy["end"])[0])
+                self.assertEqual(
+                    converted["end"]["timecode"],
+                    "00:49:36.760" if is_corrected_display else parse_timecode(legacy["end"])[0],
+                )
                 frame_match = re.search(r"\[\s*F(\d+)\s*,\s*F(\d+)\s*\)", legacy["evidence_timecode"], re.I)
                 bare_match = re.search(r"\bF(\d+)\s*(?:–|—|-|\.\.)\s*F(\d+)\b", legacy["evidence_timecode"], re.I)
                 if frame_match or bare_match:
@@ -332,7 +351,10 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
                     time_base = re.search(r"\btime_base\s+([1-9]\d*/[1-9]\d*)", legacy["evidence_timecode"], re.I)
                     self.assertIsNotNone(time_base)
                     self.assertEqual(converted["start"]["pts"], int(pts_match.group(1)))
-                    self.assertEqual(converted["end"]["pts"], int(pts_match.group(2)))
+                    self.assertEqual(
+                        converted["end"]["pts"],
+                        38102528 if is_corrected_display else int(pts_match.group(2)),
+                    )
                     self.assertEqual(converted["start"]["time_base"], time_base.group(1))
                     self.assertEqual(converted["end"]["time_base"], time_base.group(1))
                 else:
@@ -358,7 +380,7 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
             shot_rows, _rule_rows = parse_tables(source.read_text(encoding="utf-8"))
             evidence = build_evidence(source)
             source_missing_high_risk_fallbacks = 0
-            for legacy, shot in zip(shot_rows, evidence["shots"]):
+            for legacy, shot in zip(shot_rows, legacy_aligned_shots(source, evidence)):
                 fallback = extract_legacy_fallback(legacy["AI_complexity"])
                 risk = split_risk(legacy["AI_complexity"])
                 if fallback is not None:

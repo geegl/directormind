@@ -63,7 +63,7 @@ Deletion blockers used below:
 | 16 | First | *Brooklyn Nine-Nine* S05E03–04 combined source | RETAINED_EXTRA_SOURCE | NO_SCENE_EVIDENCE | S05E04 candidate range located; no complete shot evidence unit | NOT_DIRECTLY_AUDITIONED | NO | G2, G5 |
 | 17 | Post-16 | *Citizen Kane* (1941) | ACCEPTED_TARGET | `CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 27 edit-shot units | BLOCKED_DIRECT_AUDITION | NO | G2 |
 | 18 | Post-16 | *The Wire* S01E04 | ACCEPTED_TARGET | `WIRE-S01E04-OLD-CASES-001` / CURRENT_LOCAL_EVIDENCE | Complete visual envelope / 68 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |
-| 19 | Post-16 | *Chernobyl* S01E05 | ACCEPTED_TARGET | `CHERNOBYL-S01E05-HEARING-RECON-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 205 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |
+| 19 | Post-16 | *Chernobyl* S01E05 | ACCEPTED_TARGET | `CHERNOBYL-S01E05-HEARING-RECON-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 206 visible shots after frame-level split at `00:49:36.760` | BLOCKED_DIRECT_AUDITION | NO | G2 |
 | 20 | Post-16 | *Andor* S01E10 | ACCEPTED_TARGET | `DM-ANDOR-S01E10-SEL-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 121 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |
 | 21 | Post-16 | *Better Call Saul* S03E05 | ACCEPTED_TARGET | `BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 105 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |
 | 22 | Post-16 | *The Bear* S02E07 | ACCEPTED_TARGET | `BEAR-S02E07-TASK-CLOSED-LOOP-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 114 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |

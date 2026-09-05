@@ -18,6 +18,13 @@ REVIEW_PATH = REPO_ROOT / "research" / "grammar" / "runtime_integration.review.j
 GRAMMAR_PATH = REPO_ROOT / "research" / "grammar" / "director_grammar_v0.2.json"
 FORWARD_INDEX_PATH = REPO_ROOT / "examples" / "forward-tests" / "index.json"
 REPORT_PATH = REPO_ROOT / "research" / "validation" / "exhaustive-runtime-integration-validation.json"
+CHERNOBYL_EVIDENCE_PATH = (
+    REPO_ROOT
+    / "research"
+    / "evidence"
+    / "chernobyl"
+    / "CHERNOBYL_S01E05_HEARING_RECONSTRUCTION_VISUAL_EVIDENCE_V0.1.scene-evidence.json"
+)
 REVIEW_VALIDATOR = SCRIPT_ROOT / "validate_runtime_integration_review.py"
 REPORT_BUILDER = SCRIPT_ROOT / "build_exhaustive_runtime_integration_validation.py"
 
@@ -61,7 +68,7 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
         self.assertEqual(report["source_disposition_count"], 33)
         self.assertEqual(report["canonical_scene_evidence_count"], 31)
         self.assertEqual(report["directly_auditioned_audio_scene_count"], 1)
-        self.assertEqual(report["canonical_shot_edit_unit_count"], 2343)
+        self.assertEqual(report["canonical_shot_edit_unit_count"], 2344)
         self.assertEqual(report["candidate_disposition_count"], 124)
         self.assertEqual(report["final_disposition_count"], final_count)
         self.assertEqual(report["pending_evidence_gap_count"], pending_count)
@@ -192,7 +199,7 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
         chernobyl = dispositions[chernobyl_id]
         expected_refs = {
             f"CHERNOBYL-S01E05-HEARING-RECON-001-S{index:03d}"
-            for index in range(170, 206)
+            for index in range(171, 207)
         }
         self.assertEqual(set(chernobyl["source_refs"]), expected_refs)
         support = next(
@@ -240,9 +247,10 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
             "CHERNOBYL-CAND-ANCHOR-EXPLANATION-WITH-VISUALIZED-PROCESS-001"
         ]
         chernobyl_observation = " ".join(chernobyl_spatial["observations"])
-        self.assertIn("S169 00:49:52.320-00:49:56.680", chernobyl_observation)
-        self.assertIn("does not restore whole-room geography", chernobyl_observation)
-        self.assertNotIn("S169 00:49:52.320-00:49:56.680 restores", chernobyl_observation)
+        self.assertIn("S166 00:49:36.760-00:49:44.040", chernobyl_observation)
+        self.assertIn("S170 00:49:52.320-00:49:56.680", chernobyl_observation)
+        self.assertIn("do not restore whole-room geography", chernobyl_observation)
+        self.assertNotIn("S170 00:49:52.320-00:49:56.680 restores", chernobyl_observation)
         public_gap = gaps["GAP-PUBLIC-OBJECT-CONTEST-GEOMETRY-CROSS-WORK"]
         return_gap = gaps["GAP-DISTINCT-LOCATION-RETURN-ANCHOR-BOUNDARY"]
         self.assertEqual(public_gap["candidate_count"], 1)
@@ -269,6 +277,7 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
                 for gap_id, gap in gaps.items()
             )
         )
+
         spatial_rule = "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
         spatial_boundaries = [
             item
@@ -311,6 +320,30 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
             if rule["rule_id"] == "DR-MOBILE-ATTENTION-HANDOFF"
         )
         self.assertNotIn(td_fallback_id, mobile_lineage)
+
+    def test_chernobyl_hidden_cut_is_a_separate_canonical_shot(self) -> None:
+        evidence = read_json(CHERNOBYL_EVIDENCE_PATH)
+        shots = {item["shot_id"]: item for item in evidence["shots"]}
+        prefix = "CHERNOBYL-S01E05-HEARING-RECON-001-"
+        display = shots[f"{prefix}S165"]
+        first_speaker = shots[f"{prefix}S166"]
+        next_legacy_shot = shots[f"{prefix}S167"]
+        later_speaker = shots[f"{prefix}S170"]
+
+        self.assertEqual(len(evidence["shots"]), 206)
+        self.assertEqual(display["order"], 165)
+        self.assertEqual(first_speaker["order"], 166)
+        self.assertEqual(display["end"]["timecode"], "00:49:36.760")
+        self.assertEqual(display["end"], first_speaker["start"])
+        self.assertEqual(first_speaker["end"]["timecode"], "00:49:44.040")
+        self.assertEqual(first_speaker["end"], next_legacy_shot["start"])
+        self.assertIn("Chest-up", first_speaker["shot_size"]["value"])
+        self.assertIn("Chest-up", later_speaker["shot_size"]["value"])
+        self.assertNotIn("very wide", later_speaker["shot_size"]["value"].lower())
+        self.assertIn(
+            "whole-room geography is not shown",
+            later_speaker["spatial_zone"][0]["value"],
+        )
 
     def test_each_rule_has_a_real_positive_and_blocking_boundary_package(self) -> None:
         cases = {item["test_case_id"]: item for item in self.forward_index["cases"]}

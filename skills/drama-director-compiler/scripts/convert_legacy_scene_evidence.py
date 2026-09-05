@@ -802,9 +802,316 @@ def apply_verified_shot_corrections(shots: list[dict[str, Any]]) -> None:
     ]
 
 
+def apply_verified_chernobyl_shot_corrections(shots: list[dict[str, Any]]) -> None:
+    """Preserve a renewed frame-level correction to two Chernobyl intervals."""
+    by_id = {shot["shot_id"]: shot for shot in shots}
+    display_id = "CHERNOBYL-S01E05-HEARING-RECON-001-S165"
+    display = by_id.get(display_id)
+    speaker_anchor = by_id.get("CHERNOBYL-S01E05-HEARING-RECON-001-S169")
+    if display is None or speaker_anchor is None:
+        return
+
+    display_index = shots.index(display)
+    for downstream_shot in shots[display_index + 1 :]:
+        old_id = downstream_shot["shot_id"]
+        match = re.search(r"-S(\d{3})$", old_id)
+        if match is None:
+            raise ValueError(f"unexpected Chernobyl Shot ID: {old_id}")
+        old_number = int(match.group(1))
+        new_id = f"{old_id[:-3]}{old_number + 1:03d}"
+        old_claim_prefix = f"S{old_number:03d}-"
+        new_claim_prefix = f"S{old_number + 1:03d}-"
+        downstream_shot["shot_id"] = new_id
+        for field_value in downstream_shot.values():
+            claims = field_value if isinstance(field_value, list) else [field_value]
+            for candidate_claim in claims:
+                if not isinstance(candidate_claim, dict):
+                    continue
+                claim_id = candidate_claim.get("claim_id")
+                if isinstance(claim_id, str) and claim_id.startswith(old_claim_prefix):
+                    candidate_claim["claim_id"] = claim_id.replace(
+                        old_claim_prefix, new_claim_prefix, 1
+                    )
+                source_refs = candidate_claim.get("source_refs")
+                if isinstance(source_refs, list):
+                    candidate_claim["source_refs"] = [
+                        new_id if source_ref == old_id else source_ref
+                        for source_ref in source_refs
+                    ]
+
+    note = (
+        "Corrected after renewed frame-level review of the canonical interval; "
+        "the legacy ledger is retained unchanged as provenance."
+    )
+    cut = {
+        "timecode": "00:49:36.760",
+        "seconds": 2976.76,
+        "frame": 74419,
+        "pts": 38102528,
+        "time_base": "1/12800",
+    }
+    original_end = dict(display["end"])
+    display["end"] = dict(cut)
+    display["duration"] = 3.48
+    display["edit_out"] = claim(
+        "S165-EDIT-OUT",
+        "accepted visible hard cut at F74419 / 00:49:36.760 into a speaker view",
+        [display_id],
+        "PICTURE_OBSERVED",
+        note,
+    )
+
+    new_id = "CHERNOBYL-S01E05-HEARING-RECON-001-S166"
+
+    def new_claim(suffix: str, value: str, status: str) -> dict[str, Any]:
+        return claim(
+            f"S166-{suffix}",
+            value,
+            [new_id] if status != "UNKNOWN" else [],
+            status,
+            note,
+        )
+
+    split_speaker = {
+        "shot_id": new_id,
+        "order": display["order"] + 1,
+        "completeness": "COMPLETE_VISIBLE_SHOT",
+        "start": dict(cut),
+        "end": original_end,
+        "duration": 7.28,
+        "shot_size": new_claim(
+            "SIZE",
+            "Chest-up to medium-close speaker framing; exact lens and focal length remain unknown.",
+            "PICTURE_OBSERVED",
+        ),
+        "camera_height": new_claim(
+            "HEIGHT", "The exact camera height remains unknown.", "UNKNOWN"
+        ),
+        "camera_angle": new_claim(
+            "ANGLE", "Front-facing to slightly oblique speaker view.", "PICTURE_OBSERVED"
+        ),
+        "camera_motion": new_claim(
+            "MOTION",
+            "The speaker remains in stable-looking chest-up framing; exact support and micro-movement remain unknown.",
+            "PICTURE_OBSERVED",
+        ),
+        "camera_start": new_claim(
+            "CAM-START",
+            "A bespectacled light-suited adult appears chest-up against a softly blurred seated background.",
+            "PICTURE_OBSERVED",
+        ),
+        "camera_path": new_claim(
+            "CAM-PATH",
+            "No large reframing is visible; the exact camera path remains unknown.",
+            "PICTURE_OBSERVED",
+        ),
+        "camera_end": new_claim(
+            "CAM-END",
+            "The same chest-up speaker framing and softly blurred seated background remain visible.",
+            "PICTURE_OBSERVED",
+        ),
+        "focus_strategy": new_claim(
+            "FOCUS",
+            "The foreground speaker is more legible than the softly blurred seated background; exact focus method remains unknown.",
+            "PICTURE_OBSERVED",
+        ),
+        "spatial_zone": [
+            new_claim(
+                "ZONE",
+                "Foreground speaker with a softly blurred seated background; whole-room geography is not shown.",
+                "PICTURE_OBSERVED",
+            )
+        ],
+        "axis_and_screen_direction": new_claim(
+            "AXIS", "The exact axis and screen direction remain unknown.", "UNKNOWN"
+        ),
+        "abstract_role_labels": [],
+        "blocking": new_claim(
+            "BLOCK",
+            "One adult remains centered in chest-up framing while seated background figures remain soft.",
+            "PICTURE_OBSERVED",
+        ),
+        "visible_action": new_claim(
+            "ACTION",
+            "Small face and head changes are visible within the held speaker framing.",
+            "PICTURE_OBSERVED",
+        ),
+        "visible_state_in": new_claim(
+            "STATE-IN",
+            "A chest-up speaker is visible against a softly blurred seated background.",
+            "PICTURE_OBSERVED",
+        ),
+        "visible_state_out": new_claim(
+            "STATE-OUT",
+            "The chest-up speaker and softly blurred seated background remain visible.",
+            "PICTURE_OBSERVED",
+        ),
+        "event_or_reaction": new_claim(
+            "EVENT", "The exact event or reaction classification remains unknown.", "UNKNOWN"
+        ),
+        "performance_beat": new_claim(
+            "PERF", "The exact performance beat and spoken content remain unknown.", "UNKNOWN"
+        ),
+        "edit_in": new_claim(
+            "EDIT-IN",
+            "accepted visible hard cut at F74419 / 00:49:36.760 from a display insert",
+            "PICTURE_OBSERVED",
+        ),
+        "edit_out": new_claim(
+            "EDIT-OUT",
+            "accepted visible hard cut at F74601 / 00:49:44.040 into the next selected shot",
+            "PICTURE_OBSERVED",
+        ),
+        "cut_motivation": new_claim(
+            "CUT-MOTIVE", "The exact cut motivation remains unknown.", "UNKNOWN"
+        ),
+        "narrative_function": new_claim(
+            "FUNCTION",
+            "Return to a speaker anchor after a separate display view; dialogue meaning and causal relation remain unknown.",
+            "INFERRED",
+        ),
+        "picture_status": "PICTURE_OBSERVED",
+        "audio_status": "BLOCKED_DIRECT_AUDITION",
+        "text_anchor_status": "TEXT_ANCHOR_NOT_USED",
+        "AI_complexity": {
+            "camera": {"level": "MEDIUM", "reasons": ["Stable speaker framing and soft background require review."]},
+            "performance": {"level": "LOW", "reasons": ["Only small visible face and head changes are retained."]},
+            "continuity": {"level": "MEDIUM", "reasons": ["Screen position must remain consistent across the adjacent cut."]},
+        },
+        "fallback": {
+            "camera": "Project-original fallback: one fixed neutral chest-up speaker view with a soft non-specific background.",
+            "performance": "Project-original fallback: one slow head change only; omit dialogue-specific facial direction.",
+            "continuity": "Keep the original project's screen side and background brightness stable across the adjacent cut.",
+            "project_original_only": True,
+        },
+        "unknowns": [
+            "Exact identity, role, dialogue, intention and reaction cause remain unknown.",
+            "Whole-room geography, exact lens, support, production method and sound remain unknown.",
+        ],
+    }
+    shots.insert(display_index + 1, split_speaker)
+
+    anchor_id = speaker_anchor["shot_id"]
+
+    def corrected_anchor_claim(field: str, value: str, status: str) -> dict[str, Any]:
+        return claim(
+            speaker_anchor[field]["claim_id"],
+            value,
+            [anchor_id] if status != "UNKNOWN" else [],
+            status,
+            note,
+        )
+
+    speaker_anchor["shot_size"] = corrected_anchor_claim(
+        "shot_size",
+        "Chest-up to medium-close speaker framing; exact lens and focal length remain unknown.",
+        "PICTURE_OBSERVED",
+    )
+    speaker_anchor["camera_height"] = corrected_anchor_claim(
+        "camera_height", "The exact camera height remains unknown.", "UNKNOWN"
+    )
+    speaker_anchor["camera_angle"] = corrected_anchor_claim(
+        "camera_angle", "Front-facing to slightly oblique speaker view.", "PICTURE_OBSERVED"
+    )
+    speaker_anchor["camera_motion"] = corrected_anchor_claim(
+        "camera_motion",
+        "The speaker remains in stable-looking chest-up framing; exact support and micro-movement remain unknown.",
+        "PICTURE_OBSERVED",
+    )
+    speaker_anchor["camera_start"] = corrected_anchor_claim(
+        "camera_start",
+        "A chest-up speaker is visible against a softly blurred seated background.",
+        "PICTURE_OBSERVED",
+    )
+    speaker_anchor["camera_path"] = corrected_anchor_claim(
+        "camera_path", "No large reframing is visible; the exact camera path remains unknown.", "PICTURE_OBSERVED"
+    )
+    speaker_anchor["camera_end"] = corrected_anchor_claim(
+        "camera_end",
+        "The chest-up speaker and softly blurred seated background remain visible.",
+        "PICTURE_OBSERVED",
+    )
+    speaker_anchor["focus_strategy"] = corrected_anchor_claim(
+        "focus_strategy",
+        "The foreground speaker is more legible than the softly blurred seated background; exact focus method remains unknown.",
+        "PICTURE_OBSERVED",
+    )
+    speaker_anchor["spatial_zone"] = [
+        claim(
+            speaker_anchor["spatial_zone"][0]["claim_id"],
+            "Foreground speaker with a softly blurred seated background; whole-room geography is not shown.",
+            [anchor_id],
+            "PICTURE_OBSERVED",
+            note,
+        )
+    ]
+    speaker_anchor["axis_and_screen_direction"] = corrected_anchor_claim(
+        "axis_and_screen_direction", "The exact axis and screen direction remain unknown.", "UNKNOWN"
+    )
+    speaker_anchor["blocking"] = corrected_anchor_claim(
+        "blocking",
+        "One adult remains centered in chest-up framing while seated background figures remain soft.",
+        "PICTURE_OBSERVED",
+    )
+    speaker_anchor["visible_action"] = corrected_anchor_claim(
+        "visible_action", "Small face and head changes remain visible.", "PICTURE_OBSERVED"
+    )
+    speaker_anchor["visible_state_in"] = corrected_anchor_claim(
+        "visible_state_in",
+        "A chest-up speaker is visible against a softly blurred seated background.",
+        "PICTURE_OBSERVED",
+    )
+    speaker_anchor["visible_state_out"] = corrected_anchor_claim(
+        "visible_state_out",
+        "The chest-up speaker and softly blurred seated background remain visible.",
+        "PICTURE_OBSERVED",
+    )
+    speaker_anchor["event_or_reaction"] = corrected_anchor_claim(
+        "event_or_reaction", "The exact event or reaction classification remains unknown.", "UNKNOWN"
+    )
+    speaker_anchor["performance_beat"] = corrected_anchor_claim(
+        "performance_beat", "The exact performance beat and spoken content remain unknown.", "UNKNOWN"
+    )
+    speaker_anchor["cut_motivation"] = corrected_anchor_claim(
+        "cut_motivation", "The exact cut motivation remains unknown.", "UNKNOWN"
+    )
+    speaker_anchor["narrative_function"] = corrected_anchor_claim(
+        "narrative_function",
+        "Return to a hearing-room speaker anchor; whole-room geography and dialogue meaning remain unproven.",
+        "INFERRED",
+    )
+    speaker_anchor["unknowns"] = [
+        "Exact identity, role, dialogue, intention and reaction cause remain unknown.",
+        "Whole-room geography, exact lens, support, production method and sound remain unknown.",
+    ]
+
+    for order, shot in enumerate(shots, start=1):
+        shot["order"] = order
+
+
 def expand_shot_refs(value: str, shot_ids: Sequence[str]) -> list[str]:
     """Expand legacy ``S001-S004``/``S001..S004``/individual references."""
-    by_number = {index: shot_id for index, shot_id in enumerate(shot_ids, start=1)}
+    by_number: dict[int, list[str]] = {
+        int(match.group(1)): [shot_id]
+        for shot_id in shot_ids
+        if (match := re.search(r"-S(\d{3,4})$", shot_id))
+    }
+    if (
+        len(shot_ids) == 206
+        and shot_ids[0].startswith("CHERNOBYL-S01E05-HEARING-RECON-001-")
+        and shot_ids[164].endswith("-S165")
+        and shot_ids[165].endswith("-S166")
+    ):
+        by_number = {
+            number: (
+                [shot_ids[164], shot_ids[165]]
+                if number == 165
+                else [shot_ids[number]]
+                if number >= 166
+                else [shot_ids[number - 1]]
+            )
+            for number in range(1, 206)
+        }
     normalized = _clean_text(value).replace("..", "–").replace("→", "–")
     numbers: list[int] = []
     range_re = re.compile(r"S(\d{3,4})\s*(?:–|—|-|\bto\b)\s*(?:[A-Z0-9._-]+-)?S(\d{3,4})", re.I)
@@ -819,7 +1126,7 @@ def expand_shot_refs(value: str, shot_ids: Sequence[str]) -> list[str]:
         if any(start <= match.start() < end for start, end in occupied):
             continue
         numbers.append(int(match.group(1)))
-    result = [by_number[number] for number in numbers if number in by_number]
+    result = [shot_id for number in numbers for shot_id in by_number.get(number, [])]
     return list(dict.fromkeys(result))
 
 
@@ -1390,6 +1697,7 @@ def build_evidence(source: Path) -> dict[str, Any]:
     )
     shots = convert_shots(meta, shot_rows)
     apply_verified_shot_corrections(shots)
+    apply_verified_chernobyl_shot_corrections(shots)
     first_id = shots[0]["shot_id"]
     last_id = shots[-1]["shot_id"]
     scene_refs = [first_id] if first_id == last_id else [first_id, last_id]

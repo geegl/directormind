@@ -1486,7 +1486,7 @@
       "merged_into_candidate_id": null,
       "notes": "Existing local moving-image review closes this classification without an audio claim; identity, dialogue, causality and production method remain outside the asserted directing mechanism.",
       "observations": [
-        "PICTURE_OBSERVED across exact canonical bounds: S001 00:38:51.840-00:38:55.560 shows a whole-room field with board and crowd; S008 00:39:26.120-00:39:38.200 holds a person with the board; S015 00:40:44.480-00:40:51.840, S024 00:41:13.200-00:41:15.760 and S040 00:41:53.720-00:41:56.120 show separate process or display states; S081 00:43:56.040-00:44:02.000 returns to the person-and-board anchor; S131 00:47:34.160-00:47:35.360, S134 00:47:38.920-00:47:41.520, S149 00:49:03.120-00:49:08.520 and S165 00:49:33.280-00:49:44.040 carry further ensemble, lit, exterior and display states; S169 00:49:52.320-00:49:56.680 returns to a chest-up speaker anchor against a softly blurred seated background and does not restore whole-room geography."
+        "PICTURE_OBSERVED across exact canonical bounds: S001 00:38:51.840-00:38:55.560 shows a whole-room field with board and crowd; S008 00:39:26.120-00:39:38.200 holds a person with the board; S015 00:40:44.480-00:40:51.840, S024 00:41:13.200-00:41:15.760 and S040 00:41:53.720-00:41:56.120 show separate process or display states; S081 00:43:56.040-00:44:02.000 returns to the person-and-board anchor; S131 00:47:34.160-00:47:35.360, S134 00:47:38.920-00:47:41.520 and S149 00:49:03.120-00:49:08.520 carry further ensemble, lit and exterior states; S165 00:49:33.280-00:49:36.760 is a display view; S166 00:49:36.760-00:49:44.040 and S170 00:49:52.320-00:49:56.680 are chest-up speaker anchors against a softly blurred seated background and do not restore whole-room geography."
       ],
       "rejection_reason_code": null,
       "review_ids": [
@@ -1504,7 +1504,8 @@
         "CHERNOBYL-S01E05-HEARING-RECON-001-S134",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S149",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S165",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S169"
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S166",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S170"
       ],
       "target_rule_id": "DR-PERFORMANCE-OWNER-HOLD"
     },
@@ -1533,7 +1534,7 @@
       "notes": "Fresh frames require multiple receiver layers, a simultaneous object/system token, or shared social pressure to remain visible. A single isolated owner hold would hide required concurrent state, so the rule must not fire.",
       "observations": [
         "CHERNOBYL-S01E05-HEARING-RECON-001-S017 00:40:56.040-00:40:59.280: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=insert; exact lens/focal length UNKNOWN; camera_motion=stable panel geometry; exact support, stabilization and micro-movement UNKNOWN. Burned text, if present, was ignored as picture evidence.",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S165 00:49:33.280-00:49:44.040: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=insert; exact lens/focal length UNKNOWN; camera_motion=fixed insert; exact support, stabilization and micro-movement UNKNOWN. Burned text, if present, was ignored as picture evidence.",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S165 00:49:33.280-00:49:36.760: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=insert; exact lens/focal length UNKNOWN; camera_motion=fixed insert; exact support, stabilization and micro-movement UNKNOWN. Burned text, if present, was ignored as picture evidence.",
         "All 59 canonical candidate Shots were reopened as moving image at exact stored bounds."
       ],
       "rejection_reason_code": null,
@@ -1623,7 +1624,7 @@
       "merged_into_candidate_id": null,
       "notes": "It changes the post-peak location, coverage triangle, pacing, and scene-tail map.",
       "observations": [
-        "S170-S186 visibly cover large external or plant-scale states; S187-S188 return to process-room people; S189-S205 establish and develop the formal hearing-room field."
+        "S171-S187 visibly cover large external or plant-scale states; S188-S189 return to process-room people; S190-S206 establish and develop the formal hearing-room field."
       ],
       "rejection_reason_code": null,
       "review_ids": [
@@ -1631,7 +1632,6 @@
       ],
       "runtime_effect_key": "SUPPORT:DR-AFTERMATH-BY-NEXT-ACTION",
       "source_refs": [
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S170",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S171",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S172",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S173",
@@ -1666,7 +1666,8 @@
         "CHERNOBYL-S01E05-HEARING-RECON-001-S202",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S203",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S204",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S205"
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S205",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S206"
       ],
       "target_rule_id": "DR-AFTERMATH-BY-NEXT-ACTION"
     },
@@ -1689,7 +1690,7 @@
       "merged_into_candidate_id": null,
       "notes": "All existing canonical source Shots were reviewed; this candidate remains non-final because the fixed corpus lacks the listed comparison evidence.",
       "observations": [
-        "S158-S188 progress among control-room/process views, tighter people/system fragments, high/wide external plant change, and a small number of short impact/result images."
+        "S158-S189 progress among control-room/process views, tighter people/system fragments, high/wide external plant change, and a small number of short impact/result images."
       ],
       "rejection_reason_code": null,
       "review_ids": [
@@ -1727,7 +1728,8 @@
         "CHERNOBYL-S01E05-HEARING-RECON-001-S185",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S186",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S187",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S188"
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S188",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S189"
       ],
       "target_rule_id": null
     },
@@ -12714,10 +12716,11 @@
         "CHERNOBYL-S01E05-HEARING-RECON-001-S202",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S203",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S204",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S205"
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S205",
+        "CHERNOBYL-S01E05-HEARING-RECON-001-S206"
       ],
       "observations": [
-        "Fresh moving-image review reopened 126 candidate-linked Shot intervals from the registered local source at exact canonical bounds.",
+        "Fresh moving-image review reopened 127 candidate-linked Shot intervals from the registered local source at exact canonical bounds.",
         "The public ledger records only source-neutral picture observations and exact Shot references; local frames and source media remain outside the repository."
       ],
       "picture_review_status": "MOVING_IMAGE_REVIEW_COMPLETE",
@@ -14170,11 +14173,11 @@
         },
         {
           "end": {
-            "frame": 74601,
-            "pts": 38195712,
-            "seconds": 2984.04,
+            "frame": 74419,
+            "pts": 38102528,
+            "seconds": 2976.76,
             "time_base": "1/12800",
-            "timecode": "00:49:44.040"
+            "timecode": "00:49:36.760"
           },
           "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S165",
           "start": {
@@ -14187,13 +14190,30 @@
         },
         {
           "end": {
+            "frame": 74601,
+            "pts": 38195712,
+            "seconds": 2984.04,
+            "time_base": "1/12800",
+            "timecode": "00:49:44.040"
+          },
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S166",
+          "start": {
+            "frame": 74419,
+            "pts": 38102528,
+            "seconds": 2976.76,
+            "time_base": "1/12800",
+            "timecode": "00:49:36.760"
+          }
+        },
+        {
+          "end": {
             "frame": 74673,
             "pts": 38232576,
             "seconds": 2986.92,
             "time_base": "1/12800",
             "timecode": "00:49:46.920"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S166",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S167",
           "start": {
             "frame": 74601,
             "pts": 38195712,
@@ -14210,7 +14230,7 @@
             "time_base": "1/12800",
             "timecode": "00:49:49.480"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S167",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S168",
           "start": {
             "frame": 74673,
             "pts": 38232576,
@@ -14227,7 +14247,7 @@
             "time_base": "1/12800",
             "timecode": "00:49:52.320"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S168",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S169",
           "start": {
             "frame": 74737,
             "pts": 38265344,
@@ -14244,7 +14264,7 @@
             "time_base": "1/12800",
             "timecode": "00:49:56.680"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S169",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S170",
           "start": {
             "frame": 74808,
             "pts": 38301696,
@@ -14261,7 +14281,7 @@
             "time_base": "1/12800",
             "timecode": "00:49:58.400"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S170",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S171",
           "start": {
             "frame": 74917,
             "pts": 38357504,
@@ -14278,7 +14298,7 @@
             "time_base": "1/12800",
             "timecode": "00:49:58.600"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S171",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S172",
           "start": {
             "frame": 74960,
             "pts": 38379520,
@@ -14295,7 +14315,7 @@
             "time_base": "1/12800",
             "timecode": "00:49:58.960"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S172",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S173",
           "start": {
             "frame": 74965,
             "pts": 38382080,
@@ -14312,7 +14332,7 @@
             "time_base": "1/12800",
             "timecode": "00:49:59.960"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S173",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S174",
           "start": {
             "frame": 74974,
             "pts": 38386688,
@@ -14329,7 +14349,7 @@
             "time_base": "1/12800",
             "timecode": "00:50:00.680"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S174",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S175",
           "start": {
             "frame": 74999,
             "pts": 38399488,
@@ -14346,7 +14366,7 @@
             "time_base": "1/12800",
             "timecode": "00:50:01.400"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S175",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S176",
           "start": {
             "frame": 75017,
             "pts": 38408704,
@@ -14363,7 +14383,7 @@
             "time_base": "1/12800",
             "timecode": "00:50:01.920"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S176",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S177",
           "start": {
             "frame": 75035,
             "pts": 38417920,
@@ -14380,7 +14400,7 @@
             "time_base": "1/12800",
             "timecode": "00:50:03.920"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S177",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S178",
           "start": {
             "frame": 75048,
             "pts": 38424576,
@@ -14397,7 +14417,7 @@
             "time_base": "1/12800",
             "timecode": "00:50:09.160"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S178",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S179",
           "start": {
             "frame": 75098,
             "pts": 38450176,
@@ -14414,7 +14434,7 @@
             "time_base": "1/12800",
             "timecode": "00:50:12.600"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S179",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S180",
           "start": {
             "frame": 75229,
             "pts": 38517248,
@@ -14431,7 +14451,7 @@
             "time_base": "1/12800",
             "timecode": "00:50:12.880"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S180",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S181",
           "start": {
             "frame": 75315,
             "pts": 38561280,
@@ -14448,7 +14468,7 @@
             "time_base": "1/12800",
             "timecode": "00:50:13.880"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S181",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S182",
           "start": {
             "frame": 75322,
             "pts": 38564864,
@@ -14465,7 +14485,7 @@
             "time_base": "1/12800",
             "timecode": "00:50:17.400"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S182",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S183",
           "start": {
             "frame": 75347,
             "pts": 38577664,
@@ -14482,7 +14502,7 @@
             "time_base": "1/12800",
             "timecode": "00:50:21.360"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S183",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S184",
           "start": {
             "frame": 75435,
             "pts": 38622720,
@@ -14499,7 +14519,7 @@
             "time_base": "1/12800",
             "timecode": "00:50:29.480"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S184",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S185",
           "start": {
             "frame": 75534,
             "pts": 38673408,
@@ -14516,7 +14536,7 @@
             "time_base": "1/12800",
             "timecode": "00:50:36.680"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S185",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S186",
           "start": {
             "frame": 75737,
             "pts": 38777344,
@@ -14533,7 +14553,7 @@
             "time_base": "1/12800",
             "timecode": "00:50:38.640"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S186",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S187",
           "start": {
             "frame": 75917,
             "pts": 38869504,
@@ -14550,7 +14570,7 @@
             "time_base": "1/12800",
             "timecode": "00:50:44.400"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S187",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S188",
           "start": {
             "frame": 75966,
             "pts": 38894592,
@@ -14567,7 +14587,7 @@
             "time_base": "1/12800",
             "timecode": "00:50:51.200"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S188",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S189",
           "start": {
             "frame": 76110,
             "pts": 38968320,
@@ -14584,7 +14604,7 @@
             "time_base": "1/12800",
             "timecode": "00:51:01.840"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S189",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S190",
           "start": {
             "frame": 76280,
             "pts": 39055360,
@@ -14601,7 +14621,7 @@
             "time_base": "1/12800",
             "timecode": "00:51:07.080"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S190",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S191",
           "start": {
             "frame": 76546,
             "pts": 39191552,
@@ -14618,7 +14638,7 @@
             "time_base": "1/12800",
             "timecode": "00:51:09.440"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S191",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S192",
           "start": {
             "frame": 76677,
             "pts": 39258624,
@@ -14635,7 +14655,7 @@
             "time_base": "1/12800",
             "timecode": "00:51:12.160"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S192",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S193",
           "start": {
             "frame": 76736,
             "pts": 39288832,
@@ -14652,7 +14672,7 @@
             "time_base": "1/12800",
             "timecode": "00:51:13.800"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S193",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S194",
           "start": {
             "frame": 76804,
             "pts": 39323648,
@@ -14669,7 +14689,7 @@
             "time_base": "1/12800",
             "timecode": "00:51:16.360"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S194",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S195",
           "start": {
             "frame": 76845,
             "pts": 39344640,
@@ -14686,7 +14706,7 @@
             "time_base": "1/12800",
             "timecode": "00:51:18.920"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S195",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S196",
           "start": {
             "frame": 76909,
             "pts": 39377408,
@@ -14703,7 +14723,7 @@
             "time_base": "1/12800",
             "timecode": "00:51:23.280"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S196",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S197",
           "start": {
             "frame": 76973,
             "pts": 39410176,
@@ -14720,7 +14740,7 @@
             "time_base": "1/12800",
             "timecode": "00:51:31.760"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S197",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S198",
           "start": {
             "frame": 77082,
             "pts": 39465984,
@@ -14737,7 +14757,7 @@
             "time_base": "1/12800",
             "timecode": "00:51:34.520"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S198",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S199",
           "start": {
             "frame": 77294,
             "pts": 39574528,
@@ -14754,7 +14774,7 @@
             "time_base": "1/12800",
             "timecode": "00:51:42.520"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S199",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S200",
           "start": {
             "frame": 77363,
             "pts": 39609856,
@@ -14771,7 +14791,7 @@
             "time_base": "1/12800",
             "timecode": "00:52:16.240"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S200",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S201",
           "start": {
             "frame": 77563,
             "pts": 39712256,
@@ -14788,7 +14808,7 @@
             "time_base": "1/12800",
             "timecode": "00:52:29.280"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S201",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S202",
           "start": {
             "frame": 78406,
             "pts": 40143872,
@@ -14805,7 +14825,7 @@
             "time_base": "1/12800",
             "timecode": "00:52:33.240"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S202",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S203",
           "start": {
             "frame": 78732,
             "pts": 40310784,
@@ -14822,7 +14842,7 @@
             "time_base": "1/12800",
             "timecode": "00:52:37.240"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S203",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S204",
           "start": {
             "frame": 78831,
             "pts": 40361472,
@@ -14839,7 +14859,7 @@
             "time_base": "1/12800",
             "timecode": "00:52:49.040"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S204",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S205",
           "start": {
             "frame": 78931,
             "pts": 40412672,
@@ -14856,7 +14876,7 @@
             "time_base": "1/12800",
             "timecode": "00:52:53.800"
           },
-          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S205",
+          "shot_id": "CHERNOBYL-S01E05-HEARING-RECON-001-S206",
           "start": {
             "frame": 79226,
             "pts": 40563712,
@@ -42150,7 +42170,6 @@
           "relation_id": "EXH-REL-AFTERMATH-CHERNOBYL",
           "source_candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-RETURN-TO-FORMAL-ROOM-AFTER-PEAK-004",
           "source_refs": [
-            "CHERNOBYL-S01E05-HEARING-RECON-001-S170",
             "CHERNOBYL-S01E05-HEARING-RECON-001-S171",
             "CHERNOBYL-S01E05-HEARING-RECON-001-S172",
             "CHERNOBYL-S01E05-HEARING-RECON-001-S173",
@@ -42185,7 +42204,8 @@
             "CHERNOBYL-S01E05-HEARING-RECON-001-S202",
             "CHERNOBYL-S01E05-HEARING-RECON-001-S203",
             "CHERNOBYL-S01E05-HEARING-RECON-001-S204",
-            "CHERNOBYL-S01E05-HEARING-RECON-001-S205"
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S205",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-S206"
           ],
           "work_id": "CHERNOBYL-S01E05"
         }

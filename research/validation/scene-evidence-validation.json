@@ -237,7 +237,7 @@
       ],
       "passed": true,
       "path": "research/evidence/chernobyl/CHERNOBYL_S01E05_HEARING_RECONSTRUCTION_VISUAL_EVIDENCE_V0.1.scene-evidence.json",
-      "shot_count": 205,
+      "shot_count": 206,
       "warning_count": 2
     },
     {
@@ -911,7 +911,7 @@
   "structural_validation_is_not_creative_approval": true,
   "total_candidate_rule_count": 124,
   "total_scenes": 31,
-  "total_shots": 2343,
+  "total_shots": 2344,
   "validator_version": "scene-evidence-validator/0.1",
   "warning_count": 88,
   "warnings": [
