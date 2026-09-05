@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import sys
 from pathlib import Path
@@ -15,7 +16,7 @@ SKILL_ROOT = SCRIPT_DIR.parent
 REPOSITORY_ROOT = SKILL_ROOT.parents[1]
 FORWARD_ROOT = REPOSITORY_ROOT / "examples" / "forward-tests"
 GRAMMAR_PATH = REPOSITORY_ROOT / "research" / "grammar" / "director_grammar_v0.2.json"
-PROMOTION_REVIEW_PATH = REPOSITORY_ROOT / "research" / "grammar" / "runtime_rule_promotion_wave1.review.json"
+PROMOTION_REVIEW_PATH = REPOSITORY_ROOT / "research" / "grammar" / "runtime_integration.review.json"
 
 sys.path.insert(0, str(SCRIPT_DIR))
 from render_director_ir import render_coverage, render_shot_script  # noqa: E402
@@ -82,7 +83,7 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "invitation becomes departure",
             "subtext": "returning the untouched card is the answer",
         },
-        "signals": ["material_spatial_change", "counterpart_relation_required"],
+        "signals": ["material_spatial_change", "counterpart_relation_context_locked"],
         "subject_tags": ["partnership"],
         "test_mode": "POSITIVE",
         "changed_director_dimensions": ["COVERAGE", "BLOCKING", "EDIT"],
@@ -169,8 +170,19 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "warning becomes coordinated clearance and then restraint",
             "subtext": "the lead acts only after every response is visible",
         },
-        "signals": ["cause_effect_chain", "one_to_many_response"],
+        "signals": ["visible_action_source", "target_state_change", "result_readable"],
         "subject_tags": ["safe_physical_action"],
+        "test_mode": "POSITIVE",
+        "changed_director_dimensions": ["COVERAGE", "REACTION", "PACING", "EDIT"],
+        "affected_shot_index": 2,
+        "selected_shot_overrides": {
+            "duration_seconds": 8,
+            "shot_type": "project-original result-and-response hold",
+            "framing": "shared frame holding the stopped result before the response allocation",
+            "blocking": "Keep the stopped rack and cleared lanes visible before assigning the final response beat.",
+            "edit_in": "enter on the locked target-state change",
+            "edit_out": "cut only after the stopped result is readable",
+        },
     },
     {
         "case_id": "ORIGINAL-PROXIMITY-TENSION",
@@ -189,7 +201,7 @@ CASES: list[dict[str, Any]] = [
             ("FACT-03", "relation_endpoint", "The table remains between them and neither person touches the other."),
             (
                 "FACT-04",
-                "continuous_time_change",
+                "time_structure",
                 "The approach and stop occur in one continuous present-time interval without ellipsis.",
             ),
         ],
@@ -207,7 +219,7 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "parallel work becomes a shared pause",
             "subtext": "the maintained gap carries the tension",
         },
-        "signals": ["relation_distance_change", "continuous_present_time", "shared_endpoint_required"],
+        "signals": ["relation_distance_change", "time_structure_locked", "shared_endpoint_required"],
         "subject_tags": ["relationship_tension"],
         "test_mode": "POSITIVE",
         "changed_director_dimensions": ["COVERAGE", "BLOCKING", "PACING", "EDIT"],
@@ -282,7 +294,7 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "document checking becomes a direct answer",
             "subtext": "none asserted",
         },
-        "signals": ["relation_already_registered", "single_performance_progression"],
+        "signals": ["single_performance_progression"],
         "subject_tags": ["equipment_review"],
         "test_mode": "POSITIVE",
         "changed_director_dimensions": ["COVERAGE", "PACING", "EDIT"],
@@ -312,7 +324,7 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "verbal account becomes synchronized checking",
             "subtext": "none asserted",
         },
-        "signals": ["relation_already_registered", "single_performance_progression", "simultaneous_required_action"],
+        "signals": ["single_performance_progression", "simultaneous_required_action"],
         "subject_tags": ["equipment_review"],
         "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
         "changed_director_dimensions": [],
@@ -325,7 +337,7 @@ CASES: list[dict[str, Any]] = [
         "characters": ["MAKER_A", "MAKER_B"],
         "location": "plain assembly room",
         "facts": [
-            ("FACT-01", "counterpart_absent", "Maker A leaves the room before Maker B moves from the shared bench."),
+            ("FACT-01", "counterpart_relation", "Maker A leaves the room before Maker B moves from the shared bench."),
             ("FACT-02", "spatial_change", "After the exit, Maker B crosses alone to a second station visible against the same fixed wall grid."),
             ("FACT-03", "fixed_anchor", "The wall grid and empty shared bench make the solo destination unambiguous."),
         ],
@@ -342,7 +354,7 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "shared occupancy becomes solo work",
             "subtext": "none asserted",
         },
-        "signals": ["material_spatial_change", "counterpart_relation_not_required"],
+        "signals": ["material_spatial_change", "counterpart_relation_context_locked", "counterpart_absent_at_changed_endpoint", "counterpart_relation_not_required"],
         "subject_tags": ["partnership"],
         "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
         "changed_director_dimensions": [],
@@ -366,7 +378,7 @@ CASES: list[dict[str, Any]] = [
                 "relation_endpoint",
                 "Only the final wide must establish their relationship-relevant terminal distance across the table.",
             ),
-            ("FACT-04", "time_ellipsis", "No continuous move between the dated checks belongs to the story facts."),
+            ("FACT-04", "time_structure", "No continuous move between the dated checks belongs to the story facts."),
         ],
         "beats": [
             "The romantic partners begin the first dated planning check at the same table.",
@@ -382,8 +394,594 @@ CASES: list[dict[str, Any]] = [
             "tactic_change": "repeated task views become a final shared endpoint",
             "subtext": "none asserted",
         },
-        "signals": ["relation_distance_change", "shared_endpoint_required", "elliptical_time_change"],
+        "signals": ["relation_distance_change", "time_structure_locked", "shared_endpoint_required", "distance_change_across_ellipsis", "elliptical_time_change"],
         "subject_tags": ["relationship_tension"],
+        "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
+        "changed_director_dimensions": [],
+    },
+    {
+        "case_id": "ORIGINAL-ACTION-CONTINUOUS-CHAIN",
+        "title": "The Continuous Cart Stop",
+        "scene_problem": "ACTION_CAUSALITY",
+        "coverage_tags": ["ONE_TO_MANY_ACTION"],
+        "characters": ["FLOOR_LEAD", "CREW_1", "CREW_2"],
+        "location": "empty project-original loading room",
+        "facts": [
+            ("FACT-01", "cause_effect_chain", "A loose wheel stop is visibly displaced beside a rolling cart."),
+            ("FACT-02", "one_to_many_response", "The cart crosses one clear lane while both crew members remain visible."),
+            ("FACT-03", "safe_resolution", "The lead places a chock and the cart stops inside the same continuous view."),
+        ],
+        "beats": [
+            "One stable shared view establishes the stop, cart, lead, and two clear positions.",
+            "The stop moves, the cart rolls, and both crew members clear the lane without leaving the frame.",
+            "The lead places the chock and the stopped result remains readable in that same view.",
+        ],
+        "dramatic": {
+            "goal": "preserve an already readable continuous action chain",
+            "objectives": ["clear and stop the cart"],
+            "obstacle": "the cart is already moving",
+            "stakes": "the lane must be clear before the cart stops",
+            "tactic_change": "clearance becomes restraint",
+            "subtext": "none asserted",
+        },
+        "signals": ["visible_action_source", "target_state_change", "result_readable", "continuous_view_preserves_action_chain"],
+        "subject_tags": ["safe_physical_action"],
+        "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
+        "changed_director_dimensions": [],
+    },
+    {
+        "case_id": "ORIGINAL-REFERENT-COMPARISON",
+        "title": "The Three Couplers",
+        "scene_problem": "PROCEDURAL_COMPETENCE",
+        "coverage_tags": ["PROCEDURE_SUCCESS_AND_FAILURE"],
+        "characters": ["ASSEMBLER", "CHECKER"],
+        "location": "plain project-original assembly bench",
+        "facts": [
+            ("FACT-01", "referent_set", "Three project-original couplers remain visible on the same marked grid."),
+            ("FACT-02", "relation_constraint", "The openings must be read together against one fixed gauge before the next handling step."),
+            ("FACT-03", "comparison_result", "The assembler moves to one handling relation only after the shared comparison is readable."),
+        ],
+        "beats": [
+            "A locked field view establishes all three couplers beside one neutral gauge.",
+            "The checker aligns the gauge across the three openings without removing any option.",
+            "The assembler begins the next handling step only after the comparison relation is visible.",
+        ],
+        "dramatic": {
+            "goal": "make a physical comparison explain the next handling relation",
+            "objectives": ["establish the relevant coupler-to-gauge relation"],
+            "obstacle": "the options are similar until compared against the gauge",
+            "stakes": "the next assembly step requires the compatible part",
+            "tactic_change": "field comparison becomes one readable handling relation",
+            "subtext": "none asserted",
+        },
+        "signals": ["multiple_visible_referents", "comparative_relation_required"],
+        "subject_tags": ["assembly"],
+        "test_mode": "POSITIVE",
+        "changed_director_dimensions": ["COVERAGE", "BLOCKING", "PACING", "EDIT"],
+        "affected_shot_index": 1,
+        "selected_shot_overrides": {
+            "duration_seconds": 8,
+            "shot_type": "project-original comparative field",
+            "framing": "locked field containing every option and the common gauge",
+            "blocking": "Keep all three couplers in place while the gauge relation is made readable.",
+            "edit_in": "enter before comparison begins",
+            "edit_out": "cut to the handling relation only after the shared comparison reads",
+        },
+    },
+    {
+        "case_id": "ORIGINAL-COMPARISON-NOT-REQUIRED",
+        "title": "The Single Seal Check",
+        "scene_problem": "PROCEDURAL_COMPETENCE",
+        "coverage_tags": ["PROCEDURE_SUCCESS_AND_FAILURE"],
+        "characters": ["INSPECTOR"],
+        "location": "plain project-original inspection table",
+        "facts": [
+            ("FACT-01", "referent_set", "One sealed project-original container is the only item in the inspection area."),
+            ("FACT-02", "relation_constraint", "The task is to read that container's existing seal state, not to compare multiple referents."),
+            ("FACT-03", "single_item_state", "The inspector records the intact seal and leaves the container in place."),
+        ],
+        "beats": [
+            "A neutral frame establishes one container and no alternatives.",
+            "The inspector checks the existing seal in one readable detail.",
+            "The same frame confirms the unchanged single-item state.",
+        ],
+        "dramatic": {
+            "goal": "record one existing item state",
+            "objectives": ["verify the seal"],
+            "obstacle": "the small seal must remain readable",
+            "stakes": "the record must match the visible item",
+            "tactic_change": "overview becomes detail check",
+            "subtext": "none asserted",
+        },
+        "signals": ["multiple_visible_referents", "comparative_relation_required", "comparative_field_not_required"],
+        "subject_tags": ["inspection"],
+        "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
+        "changed_director_dimensions": [],
+    },
+    {
+        "case_id": "ORIGINAL-THRESHOLD-STATE-CHANGE",
+        "title": "The Clean-Zone Handoff",
+        "scene_problem": "ACTION_CAUSALITY",
+        "coverage_tags": ["ONE_TO_MANY_ACTION"],
+        "characters": ["TECHNICIAN_A", "TECHNICIAN_B"],
+        "location": "plain project-original clean-room threshold",
+        "facts": [
+            ("FACT-01", "threshold_state_change", "A sealed sample changes from corridor custody to clean-zone custody at the marked threshold."),
+            ("FACT-02", "route_endpoint", "Technician B must stop with the sealed sample at the inner verification mark."),
+            ("FACT-03", "after_state", "The inner indicator and Technician B's hold make the new custody and next vector visible."),
+        ],
+        "beats": [
+            "A shared frame establishes corridor custody, the marked threshold, and the inner verification mark.",
+            "The sealed sample crosses once between the two project-original technicians.",
+            "The inner indicator changes and Technician B stops at the verification mark.",
+        ],
+        "dramatic": {
+            "goal": "show a state-changing threshold handoff",
+            "objectives": ["transfer the sealed sample into the clean zone"],
+            "obstacle": "the handoff and landing mark must remain visible",
+            "stakes": "the next test cannot begin without confirmed clean-zone custody",
+            "tactic_change": "approach becomes verified transfer",
+            "subtext": "none asserted",
+        },
+        "signals": ["threshold_changes_locked_state", "before_after_route_required"],
+        "subject_tags": ["safe_handoff"],
+        "test_mode": "POSITIVE",
+        "changed_director_dimensions": ["COVERAGE", "BLOCKING", "PACING", "EDIT"],
+        "affected_shot_index": 1,
+        "selected_shot_overrides": {
+            "duration_seconds": 9,
+            "shot_type": "project-original threshold state checkpoint",
+            "framing": "shared frame containing before-state, threshold, and landing mark",
+            "blocking": "Keep both custody states, one crossing direction, and the inner landing mark readable.",
+            "edit_in": "enter before the handoff begins",
+            "edit_out": "cut after the new custody state and next vector read",
+        },
+    },
+    {
+        "case_id": "ORIGINAL-THRESHOLD-UNCHANGED",
+        "title": "The Ordinary Room Entry",
+        "scene_problem": "ACTION_CAUSALITY",
+        "coverage_tags": ["ONE_TO_MANY_ACTION"],
+        "characters": ["COURIER", "CLERK"],
+        "location": "plain project-original receiving room",
+        "facts": [
+            ("FACT-01", "threshold_state_change", "The courier keeps the same sealed box and access state before and after an ordinary doorway."),
+            ("FACT-02", "route_endpoint", "The occupied receiving desk is the only required destination fact."),
+            ("FACT-03", "unchanged_state", "No custody, safety, readiness, or permission state changes at the doorway."),
+        ],
+        "beats": [
+            "An exterior approach ends at the ordinary doorway.",
+            "A cut moves directly to the courier already facing the occupied receiving desk.",
+            "The unchanged sealed box remains visible at the destination.",
+        ],
+        "dramatic": {
+            "goal": "arrive at a known destination without over-covering an ordinary entry",
+            "objectives": ["reach the receiving desk"],
+            "obstacle": "none at the doorway",
+            "stakes": "the delivery beat begins inside",
+            "tactic_change": "approach becomes arrival",
+            "subtext": "none asserted",
+        },
+        "signals": ["threshold_changes_locked_state", "before_after_route_required", "threshold_state_unchanged"],
+        "subject_tags": ["delivery"],
+        "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
+        "changed_director_dimensions": [],
+    },
+    {
+        "case_id": "ORIGINAL-OBJECT-CUSTODY-CHECKPOINTS",
+        "title": "The Calibrated Sensor Handoff",
+        "scene_problem": "PROCEDURAL_COMPETENCE",
+        "coverage_tags": ["PROCEDURE_SUCCESS_AND_FAILURE"],
+        "characters": ["TECHNICIAN_A", "TECHNICIAN_B"],
+        "location": "plain project-original calibration room",
+        "facts": [
+            ("FACT-01", "object_identity", "One project-original blue sensor is the only calibrated unit in the room."),
+            ("FACT-02", "object_state_change", "Technician A transfers the calibrated sensor across a marked handoff line to Technician B."),
+            ("FACT-03", "dependent_next_action", "Technician B may place the sensor in the test cradle only after the new custody state is visible."),
+        ],
+        "beats": [
+            "A shared view plants the blue sensor with Technician A beside the marked handoff line.",
+            "The transfer remains visible until Technician B has the sensor alone on the receiving side.",
+            "Technician B places that same sensor in the test cradle after the custody checkpoint reads.",
+        ],
+        "dramatic": {
+            "goal": "make one required object handoff govern the next procedure",
+            "objectives": ["transfer and install the calibrated sensor"],
+            "obstacle": "the next step cannot begin before custody is confirmed",
+            "stakes": "the calibration record would be invalid if the wrong unit enters the cradle",
+            "tactic_change": "possession becomes verified installation",
+            "subtext": "none asserted",
+        },
+        "signals": ["portable_object_state_change", "next_action_depends_on_object_state"],
+        "subject_tags": ["safe_handoff"],
+        "test_mode": "POSITIVE",
+        "changed_director_dimensions": ["COVERAGE", "BLOCKING", "EDIT"],
+        "affected_shot_index": 1,
+        "selected_shot_overrides": {
+            "duration_seconds": 8,
+            "shot_type": "project-original custody checkpoint",
+            "framing": "shared handoff field containing both handlers, the object, and the marked line",
+            "blocking": "Keep the sensor and both hands readable until Technician B owns the receiving side.",
+            "edit_in": "enter before the transfer begins",
+            "edit_out": "cut only after the new holder and state read",
+        },
+    },
+    {
+        "case_id": "ORIGINAL-OBJECT-SECONDARY-HANDLING",
+        "title": "The Unchanged Pencil",
+        "scene_problem": "PROCEDURAL_COMPETENCE",
+        "coverage_tags": ["PROCEDURE_SUCCESS_AND_FAILURE"],
+        "characters": ["TECHNICIAN_A"],
+        "location": "plain project-original calibration desk",
+        "facts": [
+            ("FACT-01", "object_identity", "A pencil remains with Technician A throughout the written check."),
+            ("FACT-02", "object_state_change", "The pencil moves between two boxes but never changes owner, function, or required state."),
+            ("FACT-03", "dependent_next_action", "The next action depends only on the written reading, not on pencil custody."),
+        ],
+        "beats": [
+            "Technician A writes two readings in one stable desk view.",
+            "The pencil shifts between boxes as ordinary hand business.",
+            "The unchanged pencil remains inside the person view while the completed reading becomes primary.",
+        ],
+        "dramatic": {
+            "goal": "complete one written calibration check without over-covering secondary hand business",
+            "objectives": ["record the reading"],
+            "obstacle": "the written value must remain readable",
+            "stakes": "the record must match the instrument",
+            "tactic_change": "measurement becomes notation",
+            "subtext": "none asserted",
+        },
+        "signals": ["portable_object_state_change", "next_action_depends_on_object_state", "object_state_not_required"],
+        "subject_tags": ["inspection"],
+        "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
+        "changed_director_dimensions": [],
+    },
+    {
+        "case_id": "ORIGINAL-MULTI-ZONE-WAYPOINT-ROUTE",
+        "title": "The Three-Zone Filter Route",
+        "scene_problem": "SUSPENSE_INFORMATION_ASYMMETRY",
+        "coverage_tags": [],
+        "characters": ["COURIER", "RECEIVER"],
+        "location": "project-original service corridor, stair landing, and filter room",
+        "facts": [
+            ("FACT-01", "route_continuity", "The courier's trip from service corridor through stair landing to filter room occurs in continuous present time."),
+            ("FACT-02", "zone_waypoints", "A blue door and a yellow stair rail are the two project-original waypoints that keep the three zones distinct."),
+            ("FACT-03", "destination_vector", "The filter-room hatch is the required destination vector because the receiver waits beyond it."),
+        ],
+        "beats": [
+            "A route view establishes the courier, blue door, and direction toward the stair landing.",
+            "The courier crosses the yellow rail landing and the next hatch remains visibly ahead.",
+            "The hatch opens into the filter room and the receiver occupies the terminal zone.",
+        ],
+        "dramatic": {
+            "goal": "keep a three-zone delivery route readable",
+            "objectives": ["reach the waiting receiver"],
+            "obstacle": "each threshold hides the next room until crossed",
+            "stakes": "the handoff cannot happen in the wrong service zone",
+            "tactic_change": "route following becomes terminal handoff",
+            "subtext": "none asserted",
+        },
+        "signals": ["continuous_multi_zone_route", "waypoint_orientation_required"],
+        "subject_tags": ["safe_handoff"],
+        "test_mode": "POSITIVE",
+        "changed_director_dimensions": ["COVERAGE", "BLOCKING", "EDIT"],
+        "affected_shot_index": 1,
+        "selected_shot_overrides": {
+            "duration_seconds": 8,
+            "shot_type": "project-original waypoint route unit",
+            "framing": "route frame containing the current landmark and next exit vector",
+            "blocking": "Cross each threshold on one locked direction and expose the next waypoint before tightening.",
+            "edit_in": "enter before the landing threshold",
+            "edit_out": "cut after the next hatch vector reads",
+        },
+    },
+    {
+        "case_id": "ORIGINAL-SINGLE-THRESHOLD-APPROACH",
+        "title": "The One-Door Delivery",
+        "scene_problem": "SUSPENSE_INFORMATION_ASYMMETRY",
+        "coverage_tags": [],
+        "characters": ["COURIER", "RECEIVER"],
+        "location": "plain project-original receiving room",
+        "facts": [
+            ("FACT-01", "route_continuity", "The courier approaches one ordinary doorway from a known corridor."),
+            ("FACT-02", "zone_waypoints", "No intermediate waypoint or second route zone belongs to the story."),
+            ("FACT-03", "destination_vector", "The visible receiving desk is the only destination."),
+        ],
+        "beats": [
+            "One corridor view contains the courier, doorway, and visible desk beyond it.",
+            "The courier crosses the single doorway without a route change.",
+            "The receiver accepts the delivery at the already visible desk.",
+        ],
+        "dramatic": {
+            "goal": "complete one short known approach",
+            "objectives": ["reach the receiving desk"],
+            "obstacle": "none at the doorway",
+            "stakes": "the next beat begins at the desk",
+            "tactic_change": "approach becomes arrival",
+            "subtext": "none asserted",
+        },
+        "signals": ["route_not_continuous_multi_zone"],
+        "subject_tags": ["delivery"],
+        "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
+        "changed_director_dimensions": [],
+    },
+    {
+        "case_id": "ORIGINAL-MOBILE-ATTENTION-HANDOFF",
+        "title": "The Community Kitchen Relay",
+        "scene_problem": "PROCEDURAL_COLLAPSE",
+        "coverage_tags": [],
+        "characters": ["COOK", "RUNNER", "CHECKER"],
+        "location": "project-original community kitchen",
+        "facts": [
+            ("FACT-01", "current_attention_state", "The cook must finish sealing one tray before attention leaves the prep table."),
+            ("FACT-02", "next_attention_owner", "The runner becomes visible at the service opening before carrying the sealed tray onward."),
+            ("FACT-03", "connected_geography", "The prep table, service opening, and checker station share one continuous readable route."),
+        ],
+        "beats": [
+            "A mobile field holds the cook until the tray seal is visibly complete.",
+            "The runner enters at the service opening and the camera hands attention across the same connected route.",
+            "The runner reaches the checker while the prior prep zone remains spatially attributable.",
+        ],
+        "dramatic": {
+            "goal": "carry one changing priority through connected work zones",
+            "objectives": ["seal, carry, and check the tray"],
+            "obstacle": "attention cannot abandon a state before it becomes readable",
+            "stakes": "the handoff sequence would become ambiguous",
+            "tactic_change": "preparation becomes delivery and verification",
+            "subtext": "none asserted",
+        },
+        "signals": ["connected_zone_attention_handoff", "next_attention_owner_visible"],
+        "subject_tags": ["community_kitchen"],
+        "test_mode": "POSITIVE",
+        "changed_director_dimensions": ["COVERAGE", "BLOCKING", "PACING", "EDIT"],
+        "affected_shot_index": 1,
+        "selected_shot_overrides": {
+            "duration_seconds": 9,
+            "shot_type": "project-original mobile attention handoff",
+            "framing": "mobile field linking current and next attention owners",
+            "blocking": "Reveal the runner and path before leaving the completed tray state.",
+            "edit_in": "continue from the current owner state",
+            "edit_out": "cut only when the checker state is readable",
+        },
+    },
+    {
+        "case_id": "ORIGINAL-MOBILE-DETAIL-REQUIRED",
+        "title": "The Tiny Seal Code",
+        "scene_problem": "PROCEDURAL_COLLAPSE",
+        "coverage_tags": [],
+        "characters": ["COOK", "CHECKER"],
+        "location": "plain project-original community kitchen",
+        "facts": [
+            ("FACT-01", "current_attention_state", "The cook presents one sealed tray at the checker station."),
+            ("FACT-02", "next_attention_owner", "The checker must read a tiny three-character seal code before accepting it."),
+            ("FACT-03", "connected_geography", "Both people remain at one station, but the code is unreadable in the mobile field."),
+        ],
+        "beats": [
+            "A shared view establishes the tray and both participants at the checker station.",
+            "The mobile field cannot resolve the tiny required code.",
+            "A fixed project-original detail shows the code before the checker accepts the tray.",
+        ],
+        "dramatic": {
+            "goal": "verify one small required state",
+            "objectives": ["read and accept the seal code"],
+            "obstacle": "the code is too small for the moving field",
+            "stakes": "an unread code prevents acceptance",
+            "tactic_change": "shared inspection becomes required detail",
+            "subtext": "none asserted",
+        },
+        "signals": ["connected_zone_attention_handoff", "next_attention_owner_visible", "required_detail_not_mobile_readable"],
+        "subject_tags": ["inspection"],
+        "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
+        "changed_director_dimensions": [],
+    },
+    {
+        "case_id": "ORIGINAL-INITIAL-GEOMETRY-BEFORE-PROXIMITY",
+        "title": "Across the Archive Table",
+        "scene_problem": "ROMANTIC_PROXIMITY",
+        "coverage_tags": ["NON_CONTACT_RELATION_TENSION"],
+        "characters": ["ARCHIVIST_A", "ARCHIVIST_B"],
+        "location": "project-original archive workroom",
+        "facts": [
+            ("FACT-01", "relation_start_zones", "The archivists begin on opposite room sides with a long table between them."),
+            ("FACT-02", "distance_change", "Archivist B crosses the open floor and stops at the opposite end of the table."),
+            ("FACT-03", "path_anchor", "The doorway, table, and open crossing path must remain readable before the stop."),
+            ("FACT-04", "relationship_context", "The archivists' established personal bond makes the voluntary distance change the scene's primary relation event."),
+        ],
+        "beats": [
+            "A room view establishes both start zones, the doorway, and the full table.",
+            "The crossing path remains visible as Archivist B approaches the opposite end.",
+            "Only after the distance changes does tighter shared coverage become available.",
+            "The closer working distance now carries the established personal relation without copying a reference surface.",
+        ],
+        "dramatic": {
+            "goal": "make one non-contact distance change spatially legible",
+            "objectives": ["continue the archive review at the shared table"],
+            "obstacle": "the room distance changes before the work can resume",
+            "stakes": "the changed relation would read as a teleport without the path",
+            "tactic_change": "separated work becomes close shared review",
+            "subtext": "none asserted",
+        },
+        "signals": ["distance_change_requires_initial_geometry", "relation_path_must_read"],
+        "subject_tags": ["relationship_tension"],
+        "test_mode": "POSITIVE",
+        "changed_director_dimensions": ["COVERAGE", "BLOCKING", "EDIT"],
+        "affected_shot_index": 0,
+        "selected_shot_overrides": {
+            "duration_seconds": 8,
+            "shot_type": "project-original initial relation geometry",
+            "framing": "room relation frame containing both start zones and the required path",
+            "blocking": "Keep the doorway, both participants, table, and open path readable before tightening.",
+            "edit_in": "enter before the distance change",
+            "edit_out": "cut after start zones and path are registered",
+        },
+    },
+    {
+        "case_id": "ORIGINAL-GEOMETRY-ALREADY-REGISTERED",
+        "title": "The Second Archive Pass",
+        "scene_problem": "ROMANTIC_PROXIMITY",
+        "coverage_tags": ["NON_CONTACT_RELATION_TENSION"],
+        "characters": ["ARCHIVIST_A", "ARCHIVIST_B"],
+        "location": "project-original archive workroom",
+        "facts": [
+            ("FACT-01", "relation_start_zones", "The same uninterrupted interval has already established both archivists and the full table."),
+            ("FACT-02", "distance_change", "Archivist B shifts one position along the already visible table edge."),
+            ("FACT-03", "path_anchor", "The existing table and doorway anchors remain unchanged and readable."),
+            ("FACT-04", "relationship_context", "The archivists' established personal bond remains the reason the small distance change matters."),
+        ],
+        "beats": [
+            "The established shared field already contains both sides and the table path.",
+            "Archivist B makes one short move along that known path.",
+            "The scene uses the existing anchor instead of repeating an initial room setup.",
+            "The relationship beat continues inside the already registered project-original geometry.",
+        ],
+        "dramatic": {
+            "goal": "continue a relation change inside already known geometry",
+            "objectives": ["resume the archive review"],
+            "obstacle": "the distance changes slightly",
+            "stakes": "the existing axis must remain stable",
+            "tactic_change": "shared review shifts position",
+            "subtext": "none asserted",
+        },
+        "signals": ["distance_change_requires_initial_geometry", "relation_path_must_read", "relation_geometry_already_registered"],
+        "subject_tags": ["relationship_tension"],
+        "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
+        "changed_director_dimensions": [],
+    },
+    {
+        "case_id": "ORIGINAL-STABLE-AXIS-STATE-HOLDS",
+        "title": "The Two Permit Marks",
+        "scene_problem": "DIALOGUE_POWER_TRANSFER",
+        "coverage_tags": ["TWO_PARTY_POWER_TRANSFER"],
+        "characters": ["REVIEWER_A", "REVIEWER_B"],
+        "location": "plain project-original permit desk",
+        "facts": [
+            ("FACT-01", "stable_axis", "The seated reviewers remain on opposite sides of one marked desk axis."),
+            ("FACT-02", "visible_state_progression", "Reviewer A uncovers one permit mark; Reviewer B checks it, pauses, and adds a second mark."),
+            ("FACT-03", "decision_authority", "The second visible mark transfers authority to close the permit review."),
+        ],
+        "beats": [
+            "A neutral relation view establishes the fixed desk axis and both side anchors.",
+            "Opposing project-original singles hold through each visible mark-and-check progression rather than every line.",
+            "A short relation reset confirms the second mark and transferred authority.",
+        ],
+        "dramatic": {
+            "goal": "make a two-step visible authority transfer readable",
+            "objectives": ["close the permit review"],
+            "obstacle": "both visible checks must occur before closure",
+            "stakes": "the permit cannot close after only one mark",
+            "tactic_change": "inspection becomes authorization",
+            "subtext": "none asserted",
+        },
+        "signals": ["stationary_pair_state_progression", "stable_two_side_axis"],
+        "subject_tags": ["permit_review"],
+        "test_mode": "POSITIVE",
+        "changed_director_dimensions": ["COVERAGE", "PACING", "EDIT"],
+        "affected_shot_index": 1,
+        "selected_shot_overrides": {
+            "duration_seconds": 9,
+            "shot_type": "project-original stable-axis state hold",
+            "framing": "opposing fixed-side single holding the complete visible check",
+            "blocking": "Keep each reviewer on the locked desk side and hold through the visible state endpoint.",
+            "edit_in": "enter when the next visible state owner begins",
+            "edit_out": "cut at the completed mark or check, not at line count",
+        },
+    },
+    {
+        "case_id": "ORIGINAL-SINGLE-OWNER-NO-ALTERNATION",
+        "title": "The Silent Permit Recount",
+        "scene_problem": "DIALOGUE_POWER_TRANSFER",
+        "coverage_tags": ["TWO_PARTY_POWER_TRANSFER"],
+        "characters": ["REVIEWER_A", "REVIEWER_B"],
+        "location": "plain project-original permit desk",
+        "facts": [
+            ("FACT-01", "stable_axis", "Both reviewers remain on their established desk sides."),
+            ("FACT-02", "visible_state_progression", "Reviewer A alone recounts three marks and reaches the locked decision endpoint."),
+            ("FACT-03", "performance_progression", "Reviewer A alone owns the uninterrupted visible recount; Reviewer B has no simultaneous required action before it ends."),
+        ],
+        "beats": [
+            "A shared view recalls the stable desk relation.",
+            "One owner-dominant tight view holds Reviewer A through the full three-mark recount.",
+            "Reviewer B receives the result only after the locked endpoint.",
+        ],
+        "dramatic": {
+            "goal": "preserve one uninterrupted visible recount",
+            "objectives": ["reach the verified decision endpoint"],
+            "obstacle": "the recount must remain continuously readable",
+            "stakes": "an early cut could hide a missed mark",
+            "tactic_change": "shared review becomes one-owner verification",
+            "subtext": "none asserted",
+        },
+        "signals": ["stationary_pair_state_progression", "stable_two_side_axis", "single_performance_progression"],
+        "subject_tags": ["permit_review"],
+        "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
+        "changed_director_dimensions": [],
+    },
+    {
+        "case_id": "ORIGINAL-AFTERMATH-BY-NEXT-ACTION",
+        "title": "After the Water Test",
+        "scene_problem": "PUBLIC_REVELATION",
+        "coverage_tags": ["MULTI_PARTICIPANT_PUBLIC_REVELATION"],
+        "characters": ["OPERATOR", "CHECKER_A", "CHECKER_B"],
+        "location": "project-original community pump room",
+        "facts": [
+            ("FACT-01", "visible_result", "A clear project-original test vessel reaches the marked safe level in view of all three participants."),
+            ("FACT-02", "next_action_states", "Checker A records the level, Checker B closes the inlet, and the operator remains with the stable vessel."),
+            ("FACT-03", "terminal_environment_state", "The final frame must show the stable vessel and closed inlet before the room is released."),
+        ],
+        "beats": [
+            "One result view makes the safe level visible to the assembled group.",
+            "Coverage follows only the recording and inlet-closing actions that govern the next state.",
+            "The sequence ends on the stable vessel, closed inlet, and remaining operator.",
+        ],
+        "dramatic": {
+            "goal": "allocate a verified result tail by the next required actions",
+            "objectives": ["record, close, and release the pump room"],
+            "obstacle": "three possible reactions do not have equal operational value",
+            "stakes": "the room cannot release before the final safe state",
+            "tactic_change": "shared result becomes ordered closure",
+            "subtext": "none asserted",
+        },
+        "signals": ["consequential_result_with_multiple_next_states", "next_action_prioritization_required"],
+        "subject_tags": ["pump_test"],
+        "test_mode": "POSITIVE",
+        "changed_director_dimensions": ["COVERAGE", "REACTION", "PACING", "EDIT"],
+        "affected_shot_index": 1,
+        "selected_shot_overrides": {
+            "duration_seconds": 8,
+            "shot_type": "project-original next-action aftermath allocation",
+            "framing": "result-linked sequence of the two required next-action owners",
+            "blocking": "Move from the recorded level to the inlet close, then retain the stable terminal state.",
+            "edit_in": "enter after the shared result reads",
+            "edit_out": "cut only after the next required action completes",
+        },
+    },
+    {
+        "case_id": "ORIGINAL-AFTERMATH-NEXT-ACTION-IMMEDIATE",
+        "title": "The Live Pump Correction",
+        "scene_problem": "PUBLIC_REVELATION",
+        "coverage_tags": ["MULTI_PARTICIPANT_PUBLIC_REVELATION"],
+        "characters": ["OPERATOR", "CHECKER_A", "CHECKER_B"],
+        "location": "plain project-original community pump room",
+        "facts": [
+            ("FACT-01", "visible_result", "The visible level reaches a warning mark but the pump continues running."),
+            ("FACT-02", "next_action_states", "All three participants must keep the live gauge, valve, and shutdown sequence visible together."),
+            ("FACT-03", "terminal_environment_state", "No separate terminal aftermath exists until the immediate correction is complete."),
+        ],
+        "beats": [
+            "A shared field shows the warning mark, running pump, and all three active positions.",
+            "The operator and checkers complete the immediate shutdown without isolated reaction coverage.",
+            "Only after shutdown could a later aftermath interval begin.",
+        ],
+        "dramatic": {
+            "goal": "preserve an immediate live correction instead of treating it as aftermath",
+            "objectives": ["complete the shutdown"],
+            "obstacle": "all simultaneous safety states must remain visible",
+            "stakes": "the correction fails if one state is hidden",
+            "tactic_change": "warning becomes coordinated shutdown",
+            "subtext": "none asserted",
+        },
+        "signals": ["consequential_result_with_multiple_next_states", "next_action_prioritization_required", "immediate_next_action_supersedes_aftermath"],
+        "subject_tags": ["pump_test"],
         "test_mode": "BOUNDARY_OR_NON_APPLICABLE",
         "changed_director_dimensions": [],
     },
@@ -580,18 +1178,20 @@ def build_ir(
     shots = [shot_for(spec, index) for index in range(len(spec["facts"]))]
     selected_ids = [item["rule_id"] for item in routing_result["selected_rules"]]
     if selected_ids:
-        affected_index = {
+        default_affected_index = {
             "ORIGINAL-PERFORMANCE-OWNER-HOLD": 1,
             "ORIGINAL-RELATIONSHIP-FRACTURE": 2,
             "ORIGINAL-PROXIMITY-TENSION": 1,
-        }[spec["case_id"]]
+        }
+        affected_index = spec.get("affected_shot_index", default_affected_index.get(spec["case_id"], 0))
         affected = shots[affected_index]
         affected["evidence_rule_ids"] = selected_ids
         affected["confidence"] = "MEDIUM"
+        affected.update(spec.get("selected_shot_overrides", {}))
         if spec["case_id"] == "ORIGINAL-PERFORMANCE-OWNER-HOLD":
             affected["duration_seconds"] = 12
             affected["shot_type"] = "sustained project-original performance-owner single"
-            affected["framing"] = "clean single holding the complete visible progression"
+            affected["framing"] = "owner-dominant tight view holding the complete visible progression"
             affected["blocking"] = "Hold the technician alone through the check-stop-hands-flat progression; do not add a receiver cut before the hands settle."
             affected["edit_in"] = "cut from the established two-person relation into the owner single"
             affected["edit_out"] = "cut only after both hands reach the locked endpoint"
@@ -704,18 +1304,24 @@ def human_review_text(spec: dict[str, Any]) -> str:
 def expected_files() -> dict[Path, str]:
     grammar = read_json(GRAMMAR_PATH)
     promotion_review = read_json(PROMOTION_REVIEW_PATH)
+    promotions = promotion_review["runtime_rule_specs"]
     positive_promotions = {
-        item["positive_forward_test_id"]: item for item in promotion_review["promotions"]
+        item["positive_forward_test_id"]: item for item in promotions
     }
     boundary_promotions = {
-        item["boundary_forward_test_id"]: item for item in promotion_review["promotions"]
+        item["boundary_forward_test_id"]: item for item in promotions
     }
     outputs: dict[Path, str] = {}
     index_cases: list[dict[str, Any]] = []
     for spec in CASES:
+        spec = copy.deepcopy(spec)
         case_id = spec["case_id"]
         promotion = positive_promotions.get(case_id) or boundary_promotions.get(case_id)
         test_mode = spec.get("test_mode", "NO_MATCH_PROBE")
+        if promotion is None and test_mode in {"POSITIVE", "BOUNDARY_OR_NON_APPLICABLE"}:
+            test_mode = "NO_MATCH_PROBE"
+            spec["test_mode"] = test_mode
+            spec["changed_director_dimensions"] = []
         rule_id = promotion["rule_id"] if promotion else None
         candidate_rule_id = promotion["candidate_rule_id"] if promotion else None
         family_id = promotion["family_id"] if promotion else None
@@ -724,16 +1330,34 @@ def expected_files() -> dict[Path, str]:
         routing_result = route_scene(routing_input, grammar)
         selected_ids = [item["rule_id"] for item in routing_result["selected_rules"]]
         rejected_by_id = {
-            item["rule_id"]: item["rejection_reason_codes"]
+            item["rule_id"]: item
             for item in routing_result["rejected_rules"]
         }
         if test_mode == "POSITIVE" and selected_ids != [rule_id]:
             raise ValueError(f"positive case {case_id} did not select exactly {rule_id}: {selected_ids}")
         if test_mode == "BOUNDARY_OR_NON_APPLICABLE" and (
             routing_result["status"] != "NO_APPLICABLE_RULE"
-            or "NOT_APPLICABLE_MATCH" not in rejected_by_id.get(rule_id, [])
+            or "NOT_APPLICABLE_MATCH" not in rejected_by_id.get(rule_id, {}).get("rejection_reason_codes", [])
+            or not set(promotion["routing"]["not_applicable_if_any"]).intersection(
+                rejected_by_id.get(rule_id, {}).get("matched_not_applicable_signal_ids", [])
+            )
         ):
             raise ValueError(f"boundary case {case_id} did not reject {rule_id} at its declared boundary")
+        if test_mode == "BOUNDARY_OR_NON_APPLICABLE":
+            counterfactual_input = copy.deepcopy(routing_input)
+            blocked_signals = set(promotion["routing"]["not_applicable_if_any"])
+            counterfactual_input["routing_signals"] = [
+                signal
+                for signal in counterfactual_input.get("routing_signals", [])
+                if signal not in blocked_signals
+            ]
+            counterfactual = route_scene(counterfactual_input, grammar)
+            if rule_id not in {
+                item["rule_id"] for item in counterfactual.get("selected_rules", [])
+            }:
+                raise ValueError(
+                    f"boundary case {case_id} has a redundant negative guard for {rule_id}"
+                )
         if test_mode == "NO_MATCH_PROBE" and routing_result["status"] != "NO_APPLICABLE_RULE":
             raise ValueError(f"no-match case {case_id} unexpectedly selected a rule")
         ir = build_ir(spec, routing_input, routing_result)
@@ -778,7 +1402,7 @@ def expected_files() -> dict[Path, str]:
             "changed_director_dimensions": spec.get("changed_director_dimensions", []),
             "human_review_status": "HUMAN_REVIEW_PENDING",
         })
-    eligible_families = sorted({item["family_id"] for item in promotion_review["promotions"]})
+    eligible_families = sorted({item["family_id"] for item in promotions})
     index = {
         "schema_version": "forward-test-index/0.1",
         "status": "RULE_COVERAGE_COMPLETE",
@@ -787,9 +1411,9 @@ def expected_files() -> dict[Path, str]:
         "support_matrix_path": "research/grammar/cross_work_support_matrix.json",
         "promotion_ready_family_count": len(eligible_families),
         "promotion_ready_family_ids": eligible_families,
-        "required_positive_boundary_pairs": len(promotion_review["promotions"]),
-        "completed_positive_cases": len(promotion_review["promotions"]),
-        "completed_boundary_cases": len(promotion_review["promotions"]),
+        "required_positive_boundary_pairs": len(promotions),
+        "completed_positive_cases": len(promotions),
+        "completed_boundary_cases": len(promotions),
         "missing_family_ids": [],
         "missing_rule_ids": [],
         "required_scene_problem_coverage": [

@@ -6442,6 +6442,33 @@
       "unknowns": [
         "Dialogue meaning, emotional cause, cross-cut identity, lens metadata, and all semantic audio remain unknown."
       ]
+    },
+    {
+      "method_id": "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S001",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S002",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S003",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S004",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S005",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S006",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S016",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S019",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S020",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S022",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S023",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S024",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S025",
+        "THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001-S026"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],

@@ -1,0 +1,9 @@
+{
+  "candidate_rule_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C02-STABLE-SEAT-ANCHORS-CARRY-DENSE-ALTERNATION",
+  "canonical_rule_family": "AXIS-AND-COVERAGE-GRAMMAR",
+  "rule_id": "DR-STABLE-AXIS-STATE-LED-HOLDS",
+  "schema_version": "forward-test-result/0.1",
+  "status": "HUMAN_REVIEW_PENDING",
+  "test_case_id": "ORIGINAL-SINGLE-OWNER-NO-ALTERNATION",
+  "test_mode": "BOUNDARY_OR_NON_APPLICABLE"
+}

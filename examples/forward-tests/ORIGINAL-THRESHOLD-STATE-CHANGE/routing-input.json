@@ -1,0 +1,56 @@
+{
+  "case_id": "ORIGINAL-THRESHOLD-STATE-CHANGE",
+  "dramatic_structure": {
+    "goal": "show a state-changing threshold handoff",
+    "objectives": [
+      "transfer the sealed sample into the clean zone"
+    ],
+    "obstacle": "the handoff and landing mark must remain visible",
+    "stakes": "the next test cannot begin without confirmed clean-zone custody",
+    "subtext": "none asserted",
+    "tactic_change": "approach becomes verified transfer"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "threshold_state_change",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "A sealed sample changes from corridor custody to clean-zone custody at the marked threshold."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "route_endpoint",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "Technician B must stop with the sealed sample at the inner verification mark."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "after_state",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "The inner indicator and Technician B's hold make the new custody and next vector visible."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "threshold_changes_locked_state",
+    "before_after_route_required"
+  ],
+  "scene_problem": {
+    "primary": "ACTION_CAUSALITY",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "safe_handoff"
+  ],
+  "unknown_fact_types": []
+}

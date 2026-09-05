@@ -1,0 +1,55 @@
+{
+  "case_id": "ORIGINAL-SINGLE-THRESHOLD-APPROACH",
+  "dramatic_structure": {
+    "goal": "complete one short known approach",
+    "objectives": [
+      "reach the receiving desk"
+    ],
+    "obstacle": "none at the doorway",
+    "stakes": "the next beat begins at the desk",
+    "subtext": "none asserted",
+    "tactic_change": "approach becomes arrival"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "route_continuity",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "The courier approaches one ordinary doorway from a known corridor."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "zone_waypoints",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "No intermediate waypoint or second route zone belongs to the story."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "destination_vector",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "The visible receiving desk is the only destination."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "route_not_continuous_multi_zone"
+  ],
+  "scene_problem": {
+    "primary": "SUSPENSE_INFORMATION_ASYMMETRY",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "delivery"
+  ],
+  "unknown_fact_types": []
+}

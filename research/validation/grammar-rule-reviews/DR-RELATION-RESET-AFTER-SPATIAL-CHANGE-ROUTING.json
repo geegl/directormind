@@ -10,6 +10,7 @@
     "audit_subject_tags": [],
     "conflicts_with": [],
     "not_applicable_if_any": [
+      "counterpart_absent_at_changed_endpoint",
       "counterpart_relation_not_required"
     ],
     "required_fact_types": [
@@ -21,7 +22,7 @@
     ],
     "trigger_all_of": [
       "material_spatial_change",
-      "counterpart_relation_required"
+      "counterpart_relation_context_locked"
     ],
     "trigger_any_of": []
   },

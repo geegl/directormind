@@ -81,8 +81,8 @@ class PhaseOneStateContractTests(unittest.TestCase):
         status = (
             REPO_ROOT / "research" / "validation" / "CLOSED_CORPUS_33_STATUS.md"
         ).read_text(encoding="utf-8")
-        self.assertIn("31 canonical JSON units", state)
-        self.assertIn("124 candidates", state)
+        self.assertIn("| Canonical Scene Evidence JSON | 31 |", state)
+        self.assertIn("| Candidate identities | 124 |", state)
         self.assertIn("Authority boundary:", scene_map)
         self.assertIn("Succession", scene_map)
         self.assertIn("`SUCCESSION-S01E06-BOARD-VOTE-001` / CURRENT_LOCAL_EVIDENCE", status)

@@ -26,11 +26,17 @@
 
 ```json
 {
-  "notes": "The legacy primary label DIALOGUE_POWER_TRANSFER is retained only as non-operational lineage and was not proved by structural conversion.",
-  "primary": "LEGACY_SCENE_PROBLEM",
+  "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown.",
+  "primary": "PUBLIC_REVELATION",
   "secondary": [],
-  "source_refs": [],
-  "status": "UNKNOWN"
+  "source_refs": [
+    "TED-LASSO-S01E08-DARTS-REVERSAL-001-S128",
+    "TED-LASSO-S01E08-DARTS-REVERSAL-001-S129",
+    "TED-LASSO-S01E08-DARTS-REVERSAL-001-S133",
+    "TED-LASSO-S01E08-DARTS-REVERSAL-001-S140",
+    "TED-LASSO-S01E08-DARTS-REVERSAL-001-S147"
+  ],
+  "status": "INFERRED"
 }
 ```
 
@@ -222,8 +228,7 @@
     "blocks_rule_ids": [
       "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C01-REGISTER-PUBLIC-OBJECT-CONTEST-GEOMETRY",
       "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C02-RETURN-THROUGH-PRIMARY-ANCHOR-AFTER-DISTINCT-LOCATION-BLOCK",
-      "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C03-SEPARATE-PERFORMER-ACTION-TARGET-STATE-AND-RESULT-CLAIM",
-      "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C04-DISTRIBUTE-POST-RESULT-BODY-STATES-BY-NEXT-ACTION"
+      "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C03-SEPARATE-PERFORMER-ACTION-TARGET-STATE-AND-RESULT-CLAIM"
     ],
     "scope": "AUDIO",
     "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
@@ -263,7 +268,8 @@
 ```json
 [
   "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
-  "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+  "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+  "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
 ]
 ```
 
@@ -541,11 +547,17 @@
   "picture_evidence_status": "PICTURE_OBSERVED",
   "production_take_status": "PRODUCTION_METHOD_UNKNOWN",
   "scene_problem": {
-    "notes": "The legacy primary label DIALOGUE_POWER_TRANSFER is retained only as non-operational lineage and was not proved by structural conversion.",
-    "primary": "LEGACY_SCENE_PROBLEM",
+    "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown.",
+    "primary": "PUBLIC_REVELATION",
     "secondary": [],
-    "source_refs": [],
-    "status": "UNKNOWN"
+    "source_refs": [
+      "TED-LASSO-S01E08-DARTS-REVERSAL-001-S128",
+      "TED-LASSO-S01E08-DARTS-REVERSAL-001-S129",
+      "TED-LASSO-S01E08-DARTS-REVERSAL-001-S133",
+      "TED-LASSO-S01E08-DARTS-REVERSAL-001-S140",
+      "TED-LASSO-S01E08-DARTS-REVERSAL-001-S147"
+    ],
+    "status": "INFERRED"
   },
   "scene_unit_type": "PARALLEL_INTERCUT_SEQUENCE",
   "schema_version": "scene-evidence/0.1",
@@ -11653,8 +11665,7 @@
       "blocks_rule_ids": [
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C01-REGISTER-PUBLIC-OBJECT-CONTEST-GEOMETRY",
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C02-RETURN-THROUGH-PRIMARY-ANCHOR-AFTER-DISTINCT-LOCATION-BLOCK",
-        "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C03-SEPARATE-PERFORMER-ACTION-TARGET-STATE-AND-RESULT-CLAIM",
-        "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C04-DISTRIBUTE-POST-RESULT-BODY-STATES-BY-NEXT-ACTION"
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C03-SEPARATE-PERFORMER-ACTION-TARGET-STATE-AND-RESULT-CLAIM"
       ],
       "scope": "AUDIO",
       "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
@@ -11675,7 +11686,8 @@
   "validation_status": "HUMAN_REVIEW_PENDING",
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
-    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+    "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
   ],
   "work_id": "TED-LASSO-S01E08"
 }

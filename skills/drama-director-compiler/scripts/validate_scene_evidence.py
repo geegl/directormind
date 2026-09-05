@@ -1275,6 +1275,8 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
             )
         if status == "AUDIO_OBSERVED" and audio_status != "AUDIO_OBSERVED":
             add_issue(issues, "error", "AUXILIARY-AUDIO-STATUS-CONFLICT", f"{path}.status", "audio-observed auxiliary evidence requires direct audio observation")
+        if status == "SIGNAL_MEASURED" and audio_status != "AUDIO_OBSERVED":
+            add_issue(issues, "error", "AUXILIARY-SIGNAL-STATUS-CONFLICT", f"{path}.status", "post-audition signal measurement requires direct audio observation")
         if status == "SIGNAL_MEASURED_NOT_AUDITIONED" and audio_status != "SIGNAL_MEASURED_NOT_AUDITIONED":
             add_issue(issues, "error", "AUXILIARY-SIGNAL-STATUS-CONFLICT", f"{path}.status", "signal measurement requires matching scene audio status")
         method_id = item.get("method_id")
@@ -1304,7 +1306,7 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
                 f"{path}.method_id",
                 "text-anchor auxiliary evidence requires an active text-review method",
             )
-        if status == "SIGNAL_MEASURED_NOT_AUDITIONED":
+        if status in {"SIGNAL_MEASURED", "SIGNAL_MEASURED_NOT_AUDITIONED"}:
             method = method_by_id.get(method_id) if isinstance(method_id, str) else None
             if not isinstance(method, dict) or method.get("method_type") != "DECODED_SIGNAL_MEASUREMENT":
                 add_issue(
@@ -1321,6 +1323,38 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
                     "AUXILIARY-SIGNAL-METHOD-STATUS",
                     f"{path}.method_id",
                     "decoded-signal evidence can support validation only through an active reproducible or recorded method",
+                )
+        if item.get("kind") == "AUDIO_AUDIT_EVENT":
+            measurements = item.get("measurements") if isinstance(item.get("measurements"), dict) else {}
+            precision = measurements.get("precision_seconds")
+            start_seconds = item.get("start", {}).get("seconds") if isinstance(item.get("start"), dict) else None
+            end_seconds = item.get("end", {}).get("seconds") if isinstance(item.get("end"), dict) else None
+            numeric_values = (precision, start_seconds, end_seconds)
+            if all(isinstance(value, (int, float)) and not isinstance(value, bool) for value in numeric_values):
+                precision = float(precision)
+                start_seconds = float(start_seconds)
+                end_seconds = float(end_seconds)
+                expected_refs = {
+                    shot_id
+                    for shot_id, shot in shot_by_id.items()
+                    if float(shot["start"]["seconds"]) <= end_seconds + precision
+                    and float(shot["end"]["seconds"]) >= start_seconds - precision
+                }
+                if precision <= 0 or start_seconds > end_seconds or set(refs or []) != expected_refs:
+                    add_issue(
+                        issues,
+                        "error",
+                        "AUXILIARY-AUDIO-TIME-REF",
+                        path,
+                        "audio-audit event must use an ordered positive-precision window and cite exactly the intersecting Shots",
+                    )
+            else:
+                add_issue(
+                    issues,
+                    "error",
+                    "AUXILIARY-AUDIO-TIME-REF",
+                    path,
+                    "audio-audit event requires numeric start, end, and precision_seconds",
                 )
 
     tracks = evidence.get("continuity_tracks") if isinstance(evidence.get("continuity_tracks"), list) else []
@@ -1475,7 +1509,7 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
                 return {"AUDIO"} if resolved.intersection({"PICTURE", "AUDIO"}) else set()
             if status == "TEXT_ANCHOR" and method_id in active_text_method_ids:
                 return {"TEXT"} if "TEXT" in resolved else set()
-            if status == "SIGNAL_MEASURED_NOT_AUDITIONED" and method_id in active_signal_method_ids:
+            if status in {"SIGNAL_MEASURED", "SIGNAL_MEASURED_NOT_AUDITIONED"} and method_id in active_signal_method_ids:
                 return {"SIGNAL"}
             if status == "INFERRED":
                 return resolved.intersection({"PICTURE", "AUDIO", "TEXT"})
@@ -2085,7 +2119,8 @@ def validate_semantics(evidence: dict[str, Any], issues: list[dict[str, str]]) -
         counterexample_ids = rule.get("counterexample_ids") if isinstance(rule.get("counterexample_ids"), list) else []
         signal_dependent = any(
             auxiliary_id in auxiliary_by_id
-            and auxiliary_by_id[auxiliary_id].get("status") == "SIGNAL_MEASURED_NOT_AUDITIONED"
+            and auxiliary_by_id[auxiliary_id].get("status")
+            in {"SIGNAL_MEASURED", "SIGNAL_MEASURED_NOT_AUDITIONED"}
             for auxiliary_id in rule_auxiliary_ids
         )
         scene_problem_values = {

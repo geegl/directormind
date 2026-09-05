@@ -125,48 +125,131 @@ class RepositoryAutomationTests(unittest.TestCase):
         self.assertEqual(failed_report["checks"]["unit_suite"], "FAIL")
         self.assertIn("LIVE_CHECK_NOT_PASSED: unit and CLI suite", failed_report["errors"])
 
-    def test_final_report_recomputes_three_distinct_promoted_scene_problems(self) -> None:
+    def test_final_report_recomputes_current_runtime_rule_and_gap_counts(self) -> None:
         review = json.loads(
-            (REPO_ROOT / "research" / "grammar" / "runtime_rule_promotion_wave1.review.json").read_text(
+            (REPO_ROOT / "research" / "grammar" / "runtime_integration.review.json").read_text(
                 encoding="utf-8"
             )
         )
         runtime_report = json.loads(
-            (REPO_ROOT / "research" / "validation" / "runtime-rule-promotion-wave1-validation.json").read_text(
+            (REPO_ROOT / "research" / "validation" / "runtime-integration-validation.json").read_text(
                 encoding="utf-8"
             )
         )
-        final_report = json.loads(
-            (REPO_ROOT / "research" / "validation" / "FINAL_GENERALIZATION_VALIDATION.json").read_text(
-                encoding="utf-8"
-            )
-        )
+        final_report = build_report(successful_live_evidence())
         state = (REPO_ROOT / "context" / "STATE.md").read_text(encoding="utf-8")
-        recomputed = len({item["scene_problem"] for item in review["promotions"]})
-        self.assertEqual(recomputed, 3)
-        self.assertEqual(runtime_report["promoted_scene_problem_count"], recomputed)
-        self.assertEqual(final_report["counts"]["promoted_scene_problem_count"], recomputed)
-        self.assertIn("| Runtime-rule scene problems | 3 |", state)
+        corpus_status = (
+            REPO_ROOT / "research" / "validation" / "CLOSED_CORPUS_33_STATUS.md"
+        ).read_text(encoding="utf-8")
+        final_statuses = {
+            "POSITIVE_RUNTIME_RULE",
+            "SUPPORTING_EVIDENCE",
+            "BOUNDARY_OR_COUNTEREXAMPLE",
+            "MERGED_DUPLICATE",
+            "REJECTED_WITH_REASON",
+        }
+        rule_count = len(review["runtime_rule_specs"])
+        final_count = sum(
+            item["final_status"] in final_statuses
+            for item in review["candidate_dispositions"]
+        )
+        support_count = sum(
+            item["final_status"] == "SUPPORTING_EVIDENCE"
+            for item in review["candidate_dispositions"]
+        )
+        boundary_count = sum(
+            item["final_status"] == "BOUNDARY_OR_COUNTEREXAMPLE"
+            for item in review["candidate_dispositions"]
+        )
+        merged_count = sum(
+            item["final_status"] == "MERGED_DUPLICATE"
+            for item in review["candidate_dispositions"]
+        )
+        rejected_count = sum(
+            item["final_status"] == "REJECTED_WITH_REASON"
+            for item in review["candidate_dispositions"]
+        )
+        pending_count = sum(
+            item["final_status"] == "EVIDENCE_GAP_PENDING"
+            for item in review["candidate_dispositions"]
+        )
+        existing_review_count = sum(
+            item["final_status"] == "EXISTING_MATERIAL_REVIEW_REQUIRED"
+            for item in review["candidate_dispositions"]
+        )
+        self.assertEqual(runtime_report["positive_runtime_rule_count"], rule_count)
+        self.assertEqual(runtime_report["pending_evidence_gap_count"], pending_count)
+        self.assertEqual(
+            runtime_report["existing_material_review_required_count"],
+            existing_review_count,
+        )
+        self.assertEqual(
+            runtime_report["unresolved_candidate_count"],
+            pending_count + existing_review_count,
+        )
+        self.assertEqual(runtime_report["candidate_final_disposition_count"], final_count)
+        self.assertEqual(runtime_report["evidence_gap_count"], len(review["evidence_gaps"]))
+        self.assertEqual(final_report["counts"]["runtime_rules"], rule_count)
+        self.assertEqual(final_report["counts"]["final_candidate_dispositions"], final_count)
+        self.assertEqual(final_report["counts"]["pending_evidence_gap_candidates"], pending_count)
+        self.assertEqual(
+            final_report["counts"]["existing_material_review_required_candidates"],
+            existing_review_count,
+        )
+        self.assertEqual(final_report["counts"]["evidence_gaps"], len(review["evidence_gaps"]))
+        self.assertEqual(
+            final_report["counts"]["evidence_final_mappings"],
+            runtime_report["evidence_final_mapping_count"],
+        )
+        self.assertEqual(
+            final_report["counts"]["runtime_active_families"],
+            runtime_report["runtime_active_family_count"],
+        )
+        self.assertEqual(final_report["counts"]["supporting_evidence_candidates"], support_count)
+        self.assertEqual(final_report["counts"]["boundary_candidates"], boundary_count)
+        self.assertEqual(final_report["counts"]["merged_duplicate_candidates"], merged_count)
+        self.assertEqual(final_report["counts"]["rejected_candidates"], rejected_count)
+        self.assertIn(f"| Final candidate dispositions | {final_count} |", state)
+        self.assertIn(f"| Runtime-authorized rules | {rule_count} |", state)
+        self.assertIn(f"| Candidates pending evidence | {pending_count} |", state)
+        self.assertIn(
+            f"| Candidates awaiting direct review of existing material | {existing_review_count} |",
+            state,
+        )
+        self.assertIn(f"| Precise evidence gaps | {len(review['evidence_gaps'])} |", state)
+        self.assertIn(
+            f"| Evidence units with a final decision mapping | "
+            f"{runtime_report['evidence_final_mapping_count']} |",
+            state,
+        )
+        self.assertIn(
+            f"| Runtime-participating families | {runtime_report['runtime_active_family_count']} |",
+            state,
+        )
+        self.assertIn(
+            f"| Directly auditioned | {runtime_report['directly_auditioned_evidence_count']} |",
+            corpus_status,
+        )
+        self.assertIn(
+            "*Sound of Metal* | ACCEPTED_TARGET | `SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1` "
+            "/ CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 25 visible shots | "
+            "DIRECT_AUDITION_COMPLETE | NO | G7 |",
+            corpus_status,
+        )
 
-    def test_final_report_rejects_declared_complete_with_too_few_scene_problems(self) -> None:
+    def test_final_report_rejects_false_exhaustive_completion(self) -> None:
         real_load_report = final_validation._load_report
 
         def load_mutated_report(name: str) -> dict:
             report = copy.deepcopy(real_load_report(name))
-            if name == "runtime-rule-promotion-wave1-validation.json":
-                report.update(
-                    status="PASS",
-                    phase_status="COMPLETE",
-                    promoted_rule_count=3,
-                    promoted_family_count=3,
-                    promoted_scene_problem_count=2,
-                )
+            if name == "runtime-integration-validation.json":
+                report["phase_status"] = "COMPLETE"
             return report
 
         with patch.object(final_validation, "_load_report", side_effect=load_mutated_report):
             report = final_validation.build_report(successful_live_evidence())
         self.assertEqual(report["status"], "FAIL_LOCAL")
-        self.assertIn("PROMOTION_SCENE_PROBLEM_COUNT_INSUFFICIENT", report["errors"])
+        self.assertIn("RUNTIME_INTEGRATION_AUTHORITY_NOT_PASSING", report["errors"])
 
     def test_local_runner_covers_every_required_contract(self) -> None:
         configured_checks = checks(Path("/tmp/reports"))
@@ -177,6 +260,7 @@ class RepositoryAutomationTests(unittest.TestCase):
             "generated review determinism",
             "candidate index determinism",
             "runtime promotion review",
+            "exhaustive runtime integration authority",
             "Scene Evidence validation",
             "candidate promotion gates",
             "runtime Grammar build determinism",
@@ -184,6 +268,7 @@ class RepositoryAutomationTests(unittest.TestCase):
             "routing-case validation",
             "forward-test build determinism",
             "forward-test repository",
+            "exhaustive runtime integration report",
             "unit and CLI suite",
             "whitespace",
         ):

@@ -96,7 +96,7 @@
 | 37 | WIRE-S01E04-OLD-CASES-001-S037 | {"frame":null,"pts":null,"seconds":2874.875,"time_base":null,"timecode":"00:47:54.875"} | {"frame":null,"pts":null,"seconds":2876.667,"time_base":null,"timecode":"00:47:56.667"} | 1.792 | {"claim_id":"S037-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S037"],"status":"PICTURE_OBSERVED","value":"窗户与照片对照特写"} | {"claim_id":"S037-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S037"],"status":"PICTURE_OBSERVED","value":"窗边正向近机位"} | {"claim_id":"S037-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S037"],"status":"PICTURE_OBSERVED","value":"静止"} | [{"claim_id":"S037-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S037"],"status":"INFERRED","value":"再次用同轴对照确认窗面证据位置"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S037-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S037"],"status":"INFERRED","value":"再次配准记录图像与现实窗户"} | HIGH/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
 | 38 | WIRE-S01E04-OLD-CASES-001-S038 | {"frame":null,"pts":null,"seconds":2876.667,"time_base":null,"timecode":"00:47:56.667"} | {"frame":null,"pts":null,"seconds":2885.583,"time_base":null,"timecode":"00:48:05.583"} | 8.916 | {"claim_id":"S038-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S038"],"status":"PICTURE_OBSERVED","value":"Bunk中景连续转窗户/手部近景"} | {"claim_id":"S038-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S038"],"status":"PICTURE_OBSERVED","value":"厨房侧面平视"} | {"claim_id":"S038-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S038"],"status":"PICTURE_OBSERVED","value":"连续快速横摇后减速并靠近窗边"} | [{"claim_id":"S038-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S038"],"status":"INFERRED","value":"无切镜地把反应者、手势和证据终点连成一条路径"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S038-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S038"],"status":"INFERRED","value":"无切把Bunk的手势连到窗边证据"} | HIGH/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
 | 39 | WIRE-S01E04-OLD-CASES-001-S039 | {"frame":null,"pts":null,"seconds":2885.583,"time_base":null,"timecode":"00:48:05.583"} | {"frame":null,"pts":null,"seconds":2888.667,"time_base":null,"timecode":"00:48:08.667"} | 3.084 | {"claim_id":"S039-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S039"],"status":"PICTURE_OBSERVED","value":"手指/照片极近景"} | {"claim_id":"S039-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S039"],"status":"PICTURE_OBSERVED","value":"俯拍或斜俯纸面"} | {"claim_id":"S039-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S039"],"status":"PICTURE_OBSERVED","value":"轻微跟手"} | [{"claim_id":"S039-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S039"],"status":"INFERRED","value":"将窗边动作精确化为照片上的点"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S039-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S039"],"status":"INFERRED","value":"隔离照片上的指向位置"} | MEDIUM/MEDIUM/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
-| 40 | WIRE-S01E04-OLD-CASES-001-S040 | {"frame":null,"pts":null,"seconds":2888.667,"time_base":null,"timecode":"00:48:08.667"} | {"frame":null,"pts":null,"seconds":2892.333,"time_base":null,"timecode":"00:48:12.333"} | 3.666 | {"claim_id":"S040-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S040"],"status":"PICTURE_OBSERVED","value":"窗面圆形痕迹极近景"} | {"claim_id":"S040-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S040"],"status":"PICTURE_OBSERVED","value":"窗边侧向逆光"} | {"claim_id":"S040-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S040"],"status":"PICTURE_OBSERVED","value":"轻微靠近/重构"} | [{"claim_id":"S040-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S040"],"status":"INFERRED","value":"从照片落点切到现实窗面对应物"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S040-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S040"],"status":"INFERRED","value":"把照片位置转到现实窗面小痕迹"} | HIGH/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
+| 40 | WIRE-S01E04-OLD-CASES-001-S040 | {"frame":null,"pts":null,"seconds":2888.667,"time_base":null,"timecode":"00:48:08.667"} | {"frame":null,"pts":null,"seconds":2892.333,"time_base":null,"timecode":"00:48:12.333"} | 3.666 | {"claim_id":"S040-SIZE","notes":"Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance.","source_refs":["WIRE-S01E04-OLD-CASES-001-S040"],"status":"PICTURE_OBSERVED","value":"A person at the window is shown in medium framing."} | {"claim_id":"S040-ANGLE","notes":"Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance.","source_refs":["WIRE-S01E04-OLD-CASES-001-S040"],"status":"PICTURE_OBSERVED","value":"Side-on window-area framing."} | {"claim_id":"S040-CAM-PATH","notes":"Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance.","source_refs":[],"status":"UNKNOWN","value":"The exact camera path remains unknown."} | [{"claim_id":"S040-ZONE","notes":"Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance.","source_refs":["WIRE-S01E04-OLD-CASES-001-S040"],"status":"PICTURE_OBSERVED","value":"Window-side area."}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S040-FUNCTION","notes":"Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance.","source_refs":[],"status":"UNKNOWN","value":"The exact narrative function remains unknown."} | HIGH/HIGH/HIGH | ["Exact object identity and meaning remain unknown.","Any relation to earlier records or a window-surface result remains unknown.","Audio remains unknown and was not directly auditioned.","Cross-cut identities and causality remain unknown."] |
 | 41 | WIRE-S01E04-OLD-CASES-001-S041 | {"frame":null,"pts":null,"seconds":2892.333,"time_base":null,"timecode":"00:48:12.333"} | {"frame":null,"pts":null,"seconds":2896.25,"time_base":null,"timecode":"00:48:16.250"} | 3.917 | {"claim_id":"S041-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S041"],"status":"PICTURE_OBSERVED","value":"Bunk中近景"} | {"claim_id":"S041-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S041"],"status":"PICTURE_OBSERVED","value":"窗边侧面平视"} | {"claim_id":"S041-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S041"],"status":"PICTURE_OBSERVED","value":"轻微横向修正"} | [{"claim_id":"S041-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S041"],"status":"INFERRED","value":"把窗面痕迹纳入方向模拟"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S041-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S041"],"status":"INFERRED","value":"把枪形物纳入窗边方向测试"} | HIGH/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
 | 42 | WIRE-S01E04-OLD-CASES-001-S042 | {"frame":null,"pts":null,"seconds":2896.25,"time_base":null,"timecode":"00:48:16.250"} | {"frame":null,"pts":null,"seconds":2900.875,"time_base":null,"timecode":"00:48:20.875"} | 4.625 | {"claim_id":"S042-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S042"],"status":"PICTURE_OBSERVED","value":"McNulty躯干近景转双人中近景"} | {"claim_id":"S042-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S042"],"status":"PICTURE_OBSERVED","value":"近距离平视略低"} | {"claim_id":"S042-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S042"],"status":"PICTURE_OBSERVED","value":"连续上倾和侧移"} | [{"claim_id":"S042-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S042"],"status":"INFERRED","value":"连接身体动作与双人确认"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S042-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S042"],"status":"INFERRED","value":"把身体动作接回双人确认"} | HIGH/HIGH/HIGH | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
 | 43 | WIRE-S01E04-OLD-CASES-001-S043 | {"frame":null,"pts":null,"seconds":2900.875,"time_base":null,"timecode":"00:48:20.875"} | {"frame":null,"pts":null,"seconds":2903.542,"time_base":null,"timecode":"00:48:23.542"} | 2.667 | {"claim_id":"S043-SIZE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S043"],"status":"PICTURE_OBSERVED","value":"地面照片转墙脚/门边近景"} | {"claim_id":"S043-ANGLE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S043"],"status":"PICTURE_OBSERVED","value":"低位斜俯起幅"} | {"claim_id":"S043-CAM-PATH","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S043"],"status":"PICTURE_OBSERVED","value":"快速平移/倾斜"} | [{"claim_id":"S043-ZONE","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S043"],"status":"INFERRED","value":"以可见空间移动表现照片位置与墙脚之间的方向关系"}] | PICTURE_OBSERVED | BLOCKED_DIRECT_AUDITION | {"claim_id":"S043-FUNCTION","notes":"Migrated conservatively from the checked-in legacy evidence ledger.","source_refs":["WIRE-S01E04-OLD-CASES-001-S043"],"status":"INFERRED","value":"把注意从照片扫向墙脚/门边区域"} | MEDIUM/MEDIUM/MEDIUM | ["Audio remains unknown and was not directly auditioned.","Cross-cut identities remain unknown."] |
@@ -3404,21 +3404,19 @@
       "audio_status": "BLOCKED_DIRECT_AUDITION",
       "camera_angle": {
         "claim_id": "S040-ANGLE",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance.",
         "source_refs": [
           "WIRE-S01E04-OLD-CASES-001-S040"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "窗边侧向逆光"
+        "value": "Side-on window-area framing."
       },
       "camera_path": {
         "claim_id": "S040-CAM-PATH",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
-        "source_refs": [
-          "WIRE-S01E04-OLD-CASES-001-S040"
-        ],
-        "status": "PICTURE_OBSERVED",
-        "value": "轻微靠近/重构"
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance.",
+        "source_refs": [],
+        "status": "UNKNOWN",
+        "value": "The exact camera path remains unknown."
       },
       "duration": 3.666,
       "end": {
@@ -3430,12 +3428,10 @@
       },
       "narrative_function": {
         "claim_id": "S040-FUNCTION",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
-        "source_refs": [
-          "WIRE-S01E04-OLD-CASES-001-S040"
-        ],
-        "status": "INFERRED",
-        "value": "把照片位置转到现实窗面小痕迹"
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance.",
+        "source_refs": [],
+        "status": "UNKNOWN",
+        "value": "The exact narrative function remains unknown."
       },
       "order": 40,
       "picture_status": "PICTURE_OBSERVED",
@@ -3447,22 +3443,22 @@
       "shot_id": "WIRE-S01E04-OLD-CASES-001-S040",
       "shot_size": {
         "claim_id": "S040-SIZE",
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance.",
         "source_refs": [
           "WIRE-S01E04-OLD-CASES-001-S040"
         ],
         "status": "PICTURE_OBSERVED",
-        "value": "窗面圆形痕迹极近景"
+        "value": "A person at the window is shown in medium framing."
       },
       "spatial_zone": [
         {
           "claim_id": "S040-ZONE",
-          "notes": "Migrated conservatively from the checked-in legacy evidence ledger.",
+          "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance.",
           "source_refs": [
             "WIRE-S01E04-OLD-CASES-001-S040"
           ],
-          "status": "INFERRED",
-          "value": "从照片落点切到现实窗面对应物"
+          "status": "PICTURE_OBSERVED",
+          "value": "Window-side area."
         }
       ],
       "start": {
@@ -3473,8 +3469,10 @@
         "timecode": "00:48:08.667"
       },
       "unknowns": [
+        "Exact object identity and meaning remain unknown.",
+        "Any relation to earlier records or a window-surface result remains unknown.",
         "Audio remains unknown and was not directly auditioned.",
-        "Cross-cut identities remain unknown."
+        "Cross-cut identities and causality remain unknown."
       ]
     },
     {

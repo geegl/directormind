@@ -34,7 +34,7 @@
     },
     {
       "fact_id": "FACT-04",
-      "fact_type": "time_ellipsis",
+      "fact_type": "time_structure",
       "source_ref": "locked-script.md#FACT-04",
       "status": "LOCKED",
       "value": "No continuous move between the dated checks belongs to the story facts."
@@ -48,7 +48,9 @@
   },
   "routing_signals": [
     "relation_distance_change",
+    "time_structure_locked",
     "shared_endpoint_required",
+    "distance_change_across_ellipsis",
     "elliptical_time_change"
   ],
   "scene_problem": {

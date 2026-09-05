@@ -1,0 +1,9 @@
+{
+  "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION",
+  "canonical_rule_family": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+  "rule_id": "DR-MOBILE-ATTENTION-HANDOFF",
+  "schema_version": "forward-test-result/0.1",
+  "status": "HUMAN_REVIEW_PENDING",
+  "test_case_id": "ORIGINAL-MOBILE-ATTENTION-HANDOFF",
+  "test_mode": "POSITIVE"
+}

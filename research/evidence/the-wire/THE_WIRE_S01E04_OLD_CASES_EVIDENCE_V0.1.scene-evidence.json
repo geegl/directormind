@@ -9294,147 +9294,135 @@
       "shot_size": {
         "claim_id": "S040-SIZE",
         "status": "PICTURE_OBSERVED",
-        "value": "窗面圆形痕迹极近景",
+        "value": "A person at the window is shown in medium framing.",
         "source_refs": [
           "WIRE-S01E04-OLD-CASES-001-S040"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "camera_height": {
         "claim_id": "S040-HEIGHT",
-        "status": "INFERRED",
-        "value": "窗边侧向逆光",
-        "source_refs": [
-          "WIRE-S01E04-OLD-CASES-001-S040"
-        ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "status": "UNKNOWN",
+        "value": "The exact camera height remains unknown.",
+        "source_refs": [],
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "camera_angle": {
         "claim_id": "S040-ANGLE",
         "status": "PICTURE_OBSERVED",
-        "value": "窗边侧向逆光",
+        "value": "Side-on window-area framing.",
         "source_refs": [
           "WIRE-S01E04-OLD-CASES-001-S040"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "camera_motion": {
         "claim_id": "S040-MOTION",
-        "status": "PICTURE_OBSERVED",
-        "value": "轻微靠近/重构",
-        "source_refs": [
-          "WIRE-S01E04-OLD-CASES-001-S040"
-        ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "status": "UNKNOWN",
+        "value": "The exact camera motion remains unknown.",
+        "source_refs": [],
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "camera_start": {
         "claim_id": "S040-CAM-START",
-        "status": "INFERRED",
-        "value": "从照片落点切到现实窗面对应物",
+        "status": "PICTURE_OBSERVED",
+        "value": "A person is visible beside a window, holding or indicating an object.",
         "source_refs": [
           "WIRE-S01E04-OLD-CASES-001-S040"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger. Legacy light/color lineage retained for human review only: DAY-INT/窗光与中性室内外观；精确灯法UNKNOWN"
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "camera_path": {
         "claim_id": "S040-CAM-PATH",
-        "status": "PICTURE_OBSERVED",
-        "value": "轻微靠近/重构",
-        "source_refs": [
-          "WIRE-S01E04-OLD-CASES-001-S040"
-        ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "status": "UNKNOWN",
+        "value": "The exact camera path remains unknown.",
+        "source_refs": [],
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "camera_end": {
         "claim_id": "S040-CAM-END",
-        "status": "INFERRED",
-        "value": "从照片落点切到现实窗面对应物",
+        "status": "PICTURE_OBSERVED",
+        "value": "The person remains visible beside the window with the object.",
         "source_refs": [
           "WIRE-S01E04-OLD-CASES-001-S040"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "focus_strategy": {
         "claim_id": "S040-FOCUS",
         "status": "UNKNOWN",
-        "value": "The legacy field was not verified; its exact value remains unknown.",
+        "value": "The exact focus strategy remains unknown.",
         "source_refs": [],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "spatial_zone": [
         {
           "claim_id": "S040-ZONE",
-          "status": "INFERRED",
-          "value": "从照片落点切到现实窗面对应物",
+          "status": "PICTURE_OBSERVED",
+          "value": "Window-side area.",
           "source_refs": [
             "WIRE-S01E04-OLD-CASES-001-S040"
           ],
-          "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+          "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
         }
       ],
       "axis_and_screen_direction": {
         "claim_id": "S040-AXIS",
-        "status": "INFERRED",
-        "value": "从照片落点切到现实窗面对应物",
-        "source_refs": [
-          "WIRE-S01E04-OLD-CASES-001-S040"
-        ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "status": "UNKNOWN",
+        "value": "The exact axis and screen direction remain unknown.",
+        "source_refs": [],
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "abstract_role_labels": [],
       "blocking": {
         "claim_id": "S040-BLOCK",
-        "status": "INFERRED",
-        "value": "手指或小物靠近玻璃上的圆形破损/标记，窗外背景虚化",
+        "status": "PICTURE_OBSERVED",
+        "value": "A person occupies the window-side area while holding or indicating an object.",
         "source_refs": [
           "WIRE-S01E04-OLD-CASES-001-S040"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "visible_action": {
         "claim_id": "S040-ACTION",
-        "status": "INFERRED",
-        "value": "手指或小物靠近玻璃上的圆形破损/标记，窗外背景虚化",
+        "status": "PICTURE_OBSERVED",
+        "value": "The person holds or indicates an object near the window.",
         "source_refs": [
           "WIRE-S01E04-OLD-CASES-001-S040"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "visible_state_in": {
         "claim_id": "S040-STATE-IN",
-        "status": "INFERRED",
-        "value": "从照片落点切到现实窗面对应物",
+        "status": "PICTURE_OBSERVED",
+        "value": "A person and an object are visible in the window-side area.",
         "source_refs": [
           "WIRE-S01E04-OLD-CASES-001-S040"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "visible_state_out": {
         "claim_id": "S040-STATE-OUT",
-        "status": "INFERRED",
-        "value": "手指或小物靠近玻璃上的圆形破损/标记，窗外背景虚化",
+        "status": "PICTURE_OBSERVED",
+        "value": "The person and object remain visible in the window-side area.",
         "source_refs": [
           "WIRE-S01E04-OLD-CASES-001-S040"
         ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "event_or_reaction": {
         "claim_id": "S040-EVENT",
-        "status": "INFERRED",
-        "value": "INSERT",
-        "source_refs": [
-          "WIRE-S01E04-OLD-CASES-001-S040"
-        ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "status": "UNKNOWN",
+        "value": "The exact event or reaction classification remains unknown.",
+        "source_refs": [],
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "performance_beat": {
         "claim_id": "S040-PERF",
-        "status": "INFERRED",
-        "value": "不适用",
-        "source_refs": [
-          "WIRE-S01E04-OLD-CASES-001-S040"
-        ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "status": "UNKNOWN",
+        "value": "The exact performance beat remains unknown.",
+        "source_refs": [],
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "edit_in": {
         "claim_id": "S040-EDIT-IN",
@@ -9456,21 +9444,17 @@
       },
       "cut_motivation": {
         "claim_id": "S040-CUT-MOTIVE",
-        "status": "INFERRED",
-        "value": "证据/物件状态或尺度更新",
-        "source_refs": [
-          "WIRE-S01E04-OLD-CASES-001-S040"
-        ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "status": "UNKNOWN",
+        "value": "The exact cut motivation remains unknown.",
+        "source_refs": [],
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "narrative_function": {
         "claim_id": "S040-FUNCTION",
-        "status": "INFERRED",
-        "value": "把照片位置转到现实窗面小痕迹",
-        "source_refs": [
-          "WIRE-S01E04-OLD-CASES-001-S040"
-        ],
-        "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
+        "status": "UNKNOWN",
+        "value": "The exact narrative function remains unknown.",
+        "source_refs": [],
+        "notes": "Corrected after renewed multi-frame review of the canonical Shot interval; the legacy ledger is retained unchanged as provenance."
       },
       "picture_status": "PICTURE_OBSERVED",
       "audio_status": "BLOCKED_DIRECT_AUDITION",
@@ -9502,8 +9486,10 @@
         "project_original_only": true
       },
       "unknowns": [
+        "Exact object identity and meaning remain unknown.",
+        "Any relation to earlier records or a window-surface result remains unknown.",
         "Audio remains unknown and was not directly auditioned.",
-        "Cross-cut identities remain unknown."
+        "Cross-cut identities and causality remain unknown."
       ]
     },
     {
@@ -16197,6 +16183,71 @@
       "source_refs": [],
       "unknowns": [
         "All semantic audio facts remain unknown."
+      ]
+    },
+    {
+      "method_id": "WIRE-S01E04-OLD-CASES-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "WIRE-S01E04-OLD-CASES-001-S001",
+        "WIRE-S01E04-OLD-CASES-001-S007",
+        "WIRE-S01E04-OLD-CASES-001-S008",
+        "WIRE-S01E04-OLD-CASES-001-S009",
+        "WIRE-S01E04-OLD-CASES-001-S010",
+        "WIRE-S01E04-OLD-CASES-001-S011",
+        "WIRE-S01E04-OLD-CASES-001-S012",
+        "WIRE-S01E04-OLD-CASES-001-S013",
+        "WIRE-S01E04-OLD-CASES-001-S014",
+        "WIRE-S01E04-OLD-CASES-001-S015",
+        "WIRE-S01E04-OLD-CASES-001-S016",
+        "WIRE-S01E04-OLD-CASES-001-S017",
+        "WIRE-S01E04-OLD-CASES-001-S018",
+        "WIRE-S01E04-OLD-CASES-001-S019",
+        "WIRE-S01E04-OLD-CASES-001-S020",
+        "WIRE-S01E04-OLD-CASES-001-S021",
+        "WIRE-S01E04-OLD-CASES-001-S022",
+        "WIRE-S01E04-OLD-CASES-001-S023",
+        "WIRE-S01E04-OLD-CASES-001-S024",
+        "WIRE-S01E04-OLD-CASES-001-S025",
+        "WIRE-S01E04-OLD-CASES-001-S026",
+        "WIRE-S01E04-OLD-CASES-001-S027",
+        "WIRE-S01E04-OLD-CASES-001-S028",
+        "WIRE-S01E04-OLD-CASES-001-S029",
+        "WIRE-S01E04-OLD-CASES-001-S030",
+        "WIRE-S01E04-OLD-CASES-001-S031",
+        "WIRE-S01E04-OLD-CASES-001-S032",
+        "WIRE-S01E04-OLD-CASES-001-S033",
+        "WIRE-S01E04-OLD-CASES-001-S034",
+        "WIRE-S01E04-OLD-CASES-001-S035",
+        "WIRE-S01E04-OLD-CASES-001-S036",
+        "WIRE-S01E04-OLD-CASES-001-S037",
+        "WIRE-S01E04-OLD-CASES-001-S038",
+        "WIRE-S01E04-OLD-CASES-001-S039",
+        "WIRE-S01E04-OLD-CASES-001-S040",
+        "WIRE-S01E04-OLD-CASES-001-S041",
+        "WIRE-S01E04-OLD-CASES-001-S042",
+        "WIRE-S01E04-OLD-CASES-001-S050",
+        "WIRE-S01E04-OLD-CASES-001-S051",
+        "WIRE-S01E04-OLD-CASES-001-S052",
+        "WIRE-S01E04-OLD-CASES-001-S053",
+        "WIRE-S01E04-OLD-CASES-001-S054",
+        "WIRE-S01E04-OLD-CASES-001-S055",
+        "WIRE-S01E04-OLD-CASES-001-S056",
+        "WIRE-S01E04-OLD-CASES-001-S057",
+        "WIRE-S01E04-OLD-CASES-001-S058",
+        "WIRE-S01E04-OLD-CASES-001-S059",
+        "WIRE-S01E04-OLD-CASES-001-S060",
+        "WIRE-S01E04-OLD-CASES-001-S061",
+        "WIRE-S01E04-OLD-CASES-001-S062",
+        "WIRE-S01E04-OLD-CASES-001-S063",
+        "WIRE-S01E04-OLD-CASES-001-S064"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
       ]
     }
   ],

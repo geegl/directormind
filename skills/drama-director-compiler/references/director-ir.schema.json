@@ -118,10 +118,11 @@
           "items": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["rule_id", "rejection_reason_codes", "missing_fact_types", "blocking_fact_ids", "conflicting_rule_ids"],
+            "required": ["rule_id", "rejection_reason_codes", "matched_not_applicable_signal_ids", "missing_fact_types", "blocking_fact_ids", "conflicting_rule_ids"],
             "properties": {
               "rule_id": {"type": "string", "minLength": 1},
               "rejection_reason_codes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+              "matched_not_applicable_signal_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
               "missing_fact_types": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
               "blocking_fact_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
               "conflicting_rule_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}

@@ -8,11 +8,12 @@
     "status": "INFERRED",
     "source_refs": [
       "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
+      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S058",
       "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
-      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085",
-      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-TA-WAVE1-001"
+      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S061",
+      "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S065"
     ],
-    "notes": "The canonical problem is inferred from repeated visible relation resets plus one short, paraphrased visible-text anchor showing direct personal conflict; no dialogue wording is transferred."
+    "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown."
   },
   "scene_unit_type": "NATURAL_CONTINUOUS_SCENE",
   "boundary_status": "NATURAL_START_END_VERIFIED",
@@ -2150,7 +2151,18 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [],
+      "abstract_role_labels": [
+        {
+          "appearance_id": "APPEARANCE-S009",
+          "functional_role": "relation_anchor",
+          "status": "INFERRED",
+          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+          "appearance_track_id": null,
+          "source_refs": [
+            "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S009"
+          ]
+        }
+      ],
       "blocking": {
         "claim_id": "S009-BLOCK",
         "status": "INFERRED",
@@ -2386,7 +2398,18 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [],
+      "abstract_role_labels": [
+        {
+          "appearance_id": "APPEARANCE-S010",
+          "functional_role": "relation_anchor",
+          "status": "INFERRED",
+          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+          "appearance_track_id": null,
+          "source_refs": [
+            "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S010"
+          ]
+        }
+      ],
       "blocking": {
         "claim_id": "S010-BLOCK",
         "status": "INFERRED",
@@ -20427,6 +20450,75 @@
       "unknowns": [
         "Speaker identity, uncited dialogue, and semantic audio remain unknown."
       ]
+    },
+    {
+      "method_id": "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S001",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S002",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S003",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S004",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S005",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S006",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S007",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S008",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S009",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S010",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S011",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S012",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S013",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S014",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S015",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S016",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S017",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S018",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S019",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S020",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S021",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S022",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S023",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S024",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S025",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S026",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S027",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S028",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S029",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S030",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S031",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S032",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S033",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S034",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S035",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S036",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S037",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S038",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S039",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S040",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S041",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S042",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S043",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S044",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S045",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S046",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S047",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S048",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S049",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S058",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S059",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S061",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S065",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S082",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S083",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-S085"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],
@@ -20581,7 +20673,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "audio_dependency": true,
+      "audio_dependency": false,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -20622,7 +20714,8 @@
       "counterexample_ids": [],
       "source_method_ids": [
         "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-LEGACY-PICTURE-REVIEW",
-        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-STRUCTURAL-CONVERSION"
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-STRUCTURAL-CONVERSION",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
       ],
       "evidence_scene_ids": [
         "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001"
@@ -20754,7 +20847,8 @@
       "source_method_ids": [
         "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-LEGACY-PICTURE-REVIEW",
         "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-STRUCTURAL-CONVERSION",
-        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-WAVE1-PICTURE-REVIEW"
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-WAVE1-PICTURE-REVIEW",
+        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
       ],
       "evidence_scene_ids": [
         "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001"
@@ -20904,7 +20998,6 @@
       "scope": "AUDIO",
       "blocks_rule_ids": [
         "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C01-SPATIAL-ROUTE-BEFORE-ANCHORED-SEATING",
-        "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C02-STABLE-SEAT-ANCHORS-CARRY-DENSE-ALTERNATION",
         "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001-MS-APT-C04-LATE-HOLDS-NEED-VISIBLE-LEVEL-AND-PROXIMITY-ENDPOINTS"
       ]
     },
@@ -20939,6 +21032,7 @@
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
     "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
+    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+    "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
   ]
 }

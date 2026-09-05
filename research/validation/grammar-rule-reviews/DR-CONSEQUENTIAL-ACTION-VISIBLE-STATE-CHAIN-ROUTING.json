@@ -1,0 +1,34 @@
+{
+  "candidate_required_story_facts": [
+    "The project locks which action produces which result.",
+    "The result changes the next allowable action or response."
+  ],
+  "candidate_trigger": "A project-original consequential action has a locked source, target-state change and visible result that must remain attributable across brief or occluded contact.",
+  "promotion_source_candidate_id": "NOBODY-2021-BUS-001-NOBODY-C01-ACTION-CAUSAL-CHAIN",
+  "review_id": "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN-ROUTING-REVIEW",
+  "routing": {
+    "audit_subject_tags": [],
+    "conflicts_with": [],
+    "not_applicable_if_any": [
+      "action_causality_not_locked",
+      "continuous_view_preserves_action_chain"
+    ],
+    "required_fact_types": [
+      "cause_effect_chain",
+      "one_to_many_response",
+      "safe_resolution"
+    ],
+    "scene_problems": [
+      "ACTION_CAUSALITY"
+    ],
+    "trigger_all_of": [
+      "visible_action_source",
+      "target_state_change",
+      "result_readable"
+    ],
+    "trigger_any_of": []
+  },
+  "rule_id": "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+  "schema_version": "director-grammar-routing-review/0.1",
+  "status": "ROOT_VIDEO_VERIFIED"
+}

@@ -1,0 +1,434 @@
+{
+  "boundaries": [
+    "A PASS report proves repository bindings and deterministic routing, not creative approval.",
+    "All creative packages remain HUMAN_REVIEW_PENDING and do not authorize generation or publication.",
+    "Semantic audio remains outside rules whose audio_dependency is false.",
+    "IN_PROGRESS is mandatory while existing local material still requires direct review.",
+    "PARTIAL_EVIDENCE_GAP is reserved for the state where only fixed-corpus evidence gaps remain."
+  ],
+  "boundary_forward_case_count": 7,
+  "candidate_disposition_count": 124,
+  "candidate_final_status_counts": {
+    "BOUNDARY_OR_COUNTEREXAMPLE": 23,
+    "EVIDENCE_GAP_PENDING": 61,
+    "MERGED_DUPLICATE": 3,
+    "POSITIVE_RUNTIME_RULE": 7,
+    "REJECTED_WITH_REASON": 3,
+    "SUPPORTING_EVIDENCE": 27
+  },
+  "canonical_scene_evidence_count": 31,
+  "canonical_shot_edit_unit_count": 2344,
+  "directly_auditioned_audio_scene_count": 1,
+  "error_count": 0,
+  "existing_material_review_required_count": 0,
+  "family_results": [
+    {
+      "active_rule_ids": [
+        "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN"
+      ],
+      "candidate_count": 4,
+      "existing_material_review_required_count": 0,
+      "family_id": "ACTION-CAUSAL-CHAIN",
+      "final_disposition_count": 4,
+      "pending_evidence_gap_count": 0,
+      "runtime_status": "PARTICIPATING"
+    },
+    {
+      "active_rule_ids": [
+        "DR-AFTERMATH-BY-NEXT-ACTION"
+      ],
+      "candidate_count": 5,
+      "existing_material_review_required_count": 0,
+      "family_id": "AFTERMATH-AND-TERMINAL-STATE",
+      "final_disposition_count": 5,
+      "pending_evidence_gap_count": 0,
+      "runtime_status": "PARTICIPATING"
+    },
+    {
+      "active_rule_ids": [
+        "DR-STABLE-AXIS-STATE-LED-HOLDS"
+      ],
+      "candidate_count": 2,
+      "existing_material_review_required_count": 0,
+      "family_id": "AXIS-AND-COVERAGE-GRAMMAR",
+      "final_disposition_count": 2,
+      "pending_evidence_gap_count": 0,
+      "runtime_status": "PARTICIPATING"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 6,
+      "existing_material_review_required_count": 0,
+      "family_id": "CONTINUITY-LEDGER-AND-VERSIONING",
+      "final_disposition_count": 1,
+      "pending_evidence_gap_count": 5,
+      "runtime_status": "PARTICIPATING"
+    },
+    {
+      "active_rule_ids": [
+        "DR-MOBILE-ATTENTION-HANDOFF"
+      ],
+      "candidate_count": 10,
+      "existing_material_review_required_count": 0,
+      "family_id": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+      "final_disposition_count": 10,
+      "pending_evidence_gap_count": 0,
+      "runtime_status": "PARTICIPATING"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 4,
+      "existing_material_review_required_count": 0,
+      "family_id": "MULTI-THREAD-STATE-INTERCUT",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 4,
+      "runtime_status": "IN_PROGRESS"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 16,
+      "existing_material_review_required_count": 0,
+      "family_id": "OBJECT-STATE-AND-CUSTODY",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 16,
+      "runtime_status": "IN_PROGRESS"
+    },
+    {
+      "active_rule_ids": [
+        "DR-AFTERMATH-BY-NEXT-ACTION"
+      ],
+      "candidate_count": 5,
+      "existing_material_review_required_count": 0,
+      "family_id": "PROCEDURAL-HANDOFF-AND-WORKFLOW",
+      "final_disposition_count": 1,
+      "pending_evidence_gap_count": 4,
+      "runtime_status": "PARTICIPATING"
+    },
+    {
+      "active_rule_ids": [
+        "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+        "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+      ],
+      "candidate_count": 8,
+      "existing_material_review_required_count": 0,
+      "family_id": "PROXIMITY-AND-RELATION-GEOMETRY",
+      "final_disposition_count": 5,
+      "pending_evidence_gap_count": 3,
+      "runtime_status": "PARTICIPATING"
+    },
+    {
+      "active_rule_ids": [
+        "DR-PERFORMANCE-OWNER-HOLD"
+      ],
+      "candidate_count": 12,
+      "existing_material_review_required_count": 0,
+      "family_id": "RECEIVER-AND-REACTION-DISTRIBUTION",
+      "final_disposition_count": 12,
+      "pending_evidence_gap_count": 0,
+      "runtime_status": "PARTICIPATING"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 4,
+      "existing_material_review_required_count": 0,
+      "family_id": "SCALE-AND-REVEAL-LADDER",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 4,
+      "runtime_status": "IN_PROGRESS"
+    },
+    {
+      "active_rule_ids": [
+        "DR-AFTERMATH-BY-NEXT-ACTION",
+        "DR-PERFORMANCE-OWNER-HOLD",
+        "DR-STABLE-AXIS-STATE-LED-HOLDS"
+      ],
+      "candidate_count": 7,
+      "existing_material_review_required_count": 0,
+      "family_id": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
+      "final_disposition_count": 7,
+      "pending_evidence_gap_count": 0,
+      "runtime_status": "PARTICIPATING"
+    },
+    {
+      "active_rule_ids": [
+        "DR-PERFORMANCE-OWNER-HOLD",
+        "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+      ],
+      "candidate_count": 15,
+      "existing_material_review_required_count": 0,
+      "family_id": "SPATIAL-REGISTRATION-AND-RESET",
+      "final_disposition_count": 12,
+      "pending_evidence_gap_count": 3,
+      "runtime_status": "PARTICIPATING"
+    },
+    {
+      "active_rule_ids": [
+        "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN"
+      ],
+      "candidate_count": 6,
+      "existing_material_review_required_count": 0,
+      "family_id": "STATE-CHANGE-EDITING",
+      "final_disposition_count": 4,
+      "pending_evidence_gap_count": 2,
+      "runtime_status": "PARTICIPATING"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 3,
+      "existing_material_review_required_count": 0,
+      "family_id": "SUBJECTIVE-ACCESS-AND-INFORMATION",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 3,
+      "runtime_status": "IN_PROGRESS"
+    },
+    {
+      "active_rule_ids": [],
+      "candidate_count": 17,
+      "existing_material_review_required_count": 0,
+      "family_id": "THRESHOLD-AND-ROUTE-CONTINUITY",
+      "final_disposition_count": 0,
+      "pending_evidence_gap_count": 17,
+      "runtime_status": "IN_PROGRESS"
+    }
+  ],
+  "final_disposition_count": 63,
+  "issues": [],
+  "mechanism_family_count": 16,
+  "no_applicable_rule_case_count": 22,
+  "pending_evidence_gap_count": 61,
+  "phase_status": "PARTIAL_EVIDENCE_GAP",
+  "positive_forward_case_count": 7,
+  "prioritized_evidence_gaps": [
+    {
+      "candidate_count": 19,
+      "close_condition": "Close only when exact Shot/timecode review proves the full shared trigger, an unrelated same-trigger contrary directing choice, and opposite routing results.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
+        "EXHAUSTIVE-PICTURE-CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
+        "EXHAUSTIVE-PICTURE-CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+        "EXHAUSTIVE-PICTURE-DM-ANDOR-S01E10-SEL-001",
+        "EXHAUSTIVE-PICTURE-DM-BODYGUARD-S01E01-SEL-001",
+        "EXHAUSTIVE-PICTURE-DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1",
+        "EXHAUSTIVE-PICTURE-HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001",
+        "EXHAUSTIVE-PICTURE-KNIVES-OUT-2019-WILL-READING-001",
+        "EXHAUSTIVE-PICTURE-SICARIO-2015-BORDER-CHECKPOINT-001",
+        "EXHAUSTIVE-PICTURE-SUCCESSION-S01E06-BOARD-VOTE-001",
+        "EXHAUSTIVE-PICTURE-TLOU-BEDROOM-LOCAL-001",
+        "EXHAUSTIVE-PICTURE-TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001",
+        "EXHAUSTIVE-PICTURE-UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001"
+      ],
+      "gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_SAME_TRIGGER_CONTINUOUS_ROUTE_BOUNDARY",
+      "priority": 1,
+      "required_review": "Add an unrelated continuous real-time route across at least three necessary zones whose waypoints and action chain remain completely readable in one field, making extra waypoint coverage the wrong choice.",
+      "why_existing_material_cannot_close": "Fresh review found route candidates but no unrelated same-trigger case in the fixed corpus where one continuous field keeps every required waypoint and action legible and makes added waypoint coverage the wrong choice."
+    },
+    {
+      "candidate_count": 1,
+      "close_condition": "Close only when exact Shot and timecode review proves both the cross-work directing mechanism and a contrary same-trigger coverage choice.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-TED-LASSO-S01E08-DARTS-REVERSAL-001"
+      ],
+      "gap_id": "GAP-PUBLIC-OBJECT-CONTEST-GEOMETRY-CROSS-WORK",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_PUBLIC_OBJECT_CONTEST_SUPPORT_AND_SAME_TRIGGER_WITHHOLD_BOUNDARY",
+      "priority": 2,
+      "required_review": "Add one unrelated public object-mediated contest or reveal with the same registration trigger and one same-trigger case where early target or witness registration should be withheld.",
+      "why_existing_material_cannot_close": "The fixed corpus contains other public proof or procedural demonstration scenes, but their triggers differ; it lacks both a second object-mediated public contest or reveal and a same-trigger case where early target or witness registration is the wrong choice."
+    },
+    {
+      "candidate_count": 2,
+      "close_condition": "Close only when exact Shot and timecode review proves the shared return trigger, the contrary directing choice and a machine-routable non-applicability boundary.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-TED-LASSO-S01E08-DARTS-REVERSAL-001",
+        "EXHAUSTIVE-PICTURE-UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001"
+      ],
+      "gap_id": "GAP-DISTINCT-LOCATION-RETURN-ANCHOR-BOUNDARY",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "SAME_TRIGGER_DISTINCT_LOCATION_RETURN_WITHHOLD_BOUNDARY",
+      "priority": 3,
+      "required_review": "Add one unrelated same-trigger return from a distinct visible location where immediate primary-anchor and relation restoration would be the wrong choice.",
+      "why_existing_material_cannot_close": "The two reviewed works provide positive return-anchor patterns, while other fixed-corpus location changes have different primary triggers; no same-trigger instance shows that immediate anchor and relation restoration should be withheld."
+    },
+    {
+      "candidate_count": 12,
+      "close_condition": "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+        "EXHAUSTIVE-PICTURE-DM-BODYGUARD-S01E01-SEL-001",
+        "EXHAUSTIVE-PICTURE-GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001",
+        "EXHAUSTIVE-PICTURE-MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001",
+        "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
+        "EXHAUSTIVE-PICTURE-MRR-S04E07-ACT-FOUR-VISUAL-001",
+        "EXHAUSTIVE-PICTURE-NOBODY-2021-BUS-001",
+        "EXHAUSTIVE-PICTURE-THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
+        "EXHAUSTIVE-PICTURE-THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
+        "EXHAUSTIVE-PICTURE-TLOU-BEDROOM-LOCAL-001"
+      ],
+      "gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_OBJECT_CHECKPOINT_SUPPORT_AND_SAME_TRIGGER_BOUNDARY",
+      "priority": 4,
+      "required_review": "Add unrelated support for a portable-object handler or function change that governs a dependent next action, plus a same-trigger case where one continuous person-object view already makes the state readable without a dedicated checkpoint.",
+      "why_existing_material_cannot_close": "The reviewed fixed corpus does not contain both unrelated support for a function-changing portable object and a same-trigger continuous-view boundary."
+    },
+    {
+      "candidate_count": 8,
+      "close_condition": "Close only after exact Shot/timecode review proves the shared comparison trigger, the alternative coverage, and why the comparative-field rule must not fire.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
+        "EXHAUSTIVE-PICTURE-BEAR-S02E07-TASK-CLOSED-LOOP-001",
+        "EXHAUSTIVE-PICTURE-BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
+        "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
+        "EXHAUSTIVE-PICTURE-WIRE-S01E04-OLD-CASES-001"
+      ],
+      "gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_COMPARATIVE_FIELD_SAME_TRIGGER_BOUNDARY",
+      "priority": 5,
+      "required_review": "Add one unrelated, rights-cleared scene with multiple simultaneously visible referents whose comparison truly governs the next action, but where a separate comparative field would be the wrong coverage choice.",
+      "why_existing_material_cannot_close": "The reviewed fixed corpus has comparison candidates but no unrelated same-trigger case proving that a separate comparative field is the wrong coverage choice."
+    },
+    {
+      "candidate_count": 3,
+      "close_condition": "Close only after exact Shot/timecode review proves the proximity trigger, already-readable geometry, and the alternative coverage decision in a different work.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+        "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001"
+      ],
+      "gap_id": "GAP-RELATION-GEOMETRY-SAME-TRIGGER-BOUNDARY",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_PROXIMITY_GEOMETRY_ALREADY_READABLE_BOUNDARY",
+      "priority": 6,
+      "required_review": "Add an unrelated proximity scene with the same relation-change trigger where prior geometry remains fully registered, so another initial spatial master would be redundant.",
+      "why_existing_material_cannot_close": "The reviewed fixed corpus lacks an unrelated proximity case with the same trigger and already-readable geometry that makes another initial master redundant."
+    },
+    {
+      "candidate_count": 1,
+      "close_condition": "Close only when both cases have exact Shot/timecode evidence and distinguish one versioned object from unrelated items.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-BEAR-S02E07-TASK-CLOSED-LOOP-001"
+      ],
+      "gap_id": "GAP-VERSIONED-OBJECT-HANDOFF-COUNTERPART",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "VERSIONED_OBJECT_HANDOFF_SUPPORT_AND_INDEPENDENT_ITEMS_BOUNDARY",
+      "priority": 7,
+      "required_review": "Add one rights-cleared clip with a visually tagged source object transformed and handed across two people or zones, plus one same-surface independent-items boundary.",
+      "why_existing_material_cannot_close": "The reviewed fixed corpus contains no second rights-cleared case that proves a visibly transformed object handoff and separates it from same-surface independent items."
+    },
+    {
+      "candidate_count": 1,
+      "close_condition": "Close only when revised and unchanged repeats are separated by exact Shot/timecode evidence and change a concrete directing choice.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001"
+      ],
+      "gap_id": "GAP-REVISED-REPEAT-CONFIGURATION",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "REVISED_OPERATION_REPEAT_AND_UNCHANGED_REPEAT_BOUNDARY",
+      "priority": 8,
+      "required_review": "Add one rights-cleared revised-operation clip with a visible plan/configuration change and phase marker, plus one unchanged-repeat boundary.",
+      "why_existing_material_cannot_close": "The reviewed fixed corpus lacks a second case with a visible plan or configuration revision and a matched unchanged-repeat boundary."
+    },
+    {
+      "candidate_count": 4,
+      "close_condition": "Close when the positive trigger and the do-not-intercut boundary are both exact Shot/timecode bound and produce opposite routing results.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
+        "EXHAUSTIVE-PICTURE-DM-ANDOR-S01E10-SEL-001",
+        "EXHAUSTIVE-PICTURE-DM-BODYGUARD-S01E01-SEL-001",
+        "EXHAUSTIVE-PICTURE-SUCCESSION-S01E06-BOARD-VOTE-001"
+      ],
+      "gap_id": "GAP-MULTI-THREAD-NATURAL-BOUNDARY",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "MULTI_THREAD_CONTINUOUS_FIELD_BOUNDARY",
+      "priority": 9,
+      "required_review": "Add one rights-cleared same-trigger multi-thread scene whose simultaneous visible states are clearer in one continuous field than by intercutting.",
+      "why_existing_material_cannot_close": "The reviewed fixed corpus lacks a same-trigger multi-thread case where simultaneous visible states are demonstrably clearer in one continuous field than through intercutting."
+    },
+    {
+      "candidate_count": 3,
+      "close_condition": "Close only when the shared trigger, opposite scale order and changed Coverage/Edit decision are all Shot/timecode bound.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
+        "EXHAUSTIVE-PICTURE-CHERNOBYL-S01E05-HEARING-RECON-001",
+        "EXHAUSTIVE-PICTURE-MRR-S04E07-ACT-FOUR-VISUAL-001"
+      ],
+      "gap_id": "GAP-SCALE-ORDER-SAME-TRIGGER",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "DETAIL_FIRST_SUPPORT_AND_GEOMETRY_FIRST_BOUNDARY",
+      "priority": 10,
+      "required_review": "Add one rights-cleared same-trigger detail-to-container support and one same-trigger geometry-first boundary.",
+      "why_existing_material_cannot_close": "The reviewed fixed corpus does not provide both unrelated detail-first support and a matched geometry-first contrary choice under the same trigger."
+    },
+    {
+      "candidate_count": 3,
+      "close_condition": "Close only after both unrelated support and boundary are exact Shot/timecode bound without relying on dialogue or unauditioned sound.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001"
+      ],
+      "gap_id": "GAP-SUBJECTIVE-ACCESS-CROSS-WORK",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_SUBJECTIVE_ACCESS_SUPPORT_AND_ORDINARY_RELATION_BOUNDARY",
+      "priority": 11,
+      "required_review": "Add one rights-cleared unrelated subjective-access transition and one same-trigger boundary where ordinary relation coverage must remain primary.",
+      "why_existing_material_cannot_close": "The reviewed fixed corpus supplies one subjective-access lineage but no unrelated support plus same-trigger ordinary-relation boundary without unauditioned sound claims."
+    },
+    {
+      "candidate_count": 1,
+      "close_condition": "Close only when unrelated support and a same-trigger contrary case are directly auditioned, Shot/timecode bound, and separate audible state from unproved subjective ownership.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+      ],
+      "gap_id": "GAP-AUDIO-STATE-WITHIN-HELD-PICTURE",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_AUDITIONED_HELD_PICTURE_SUPPORT_AND_PICTURE_CHANGE_BOUNDARY",
+      "priority": 12,
+      "required_review": "Add one unrelated same-trigger case where an auditioned information-state change occurs inside a necessary held picture, plus one case where a picture change is required at the same trigger.",
+      "why_existing_material_cannot_close": "Direct audition closed the local sound facts, but the fixed corpus has no unrelated directly auditioned same-trigger support and contrary picture-change case."
+    },
+    {
+      "candidate_count": 1,
+      "close_condition": "Close only when shared event ownership, perceptual tolerance, unrelated support, and a same-trigger non-alignment boundary are directly auditioned and independently timed.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+      ],
+      "gap_id": "GAP-AUDIO-PICTURE-BOUNDARY-ALIGNMENT",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_AUDITIONED_ALIGNMENT_SUPPORT_AND_DIFFERENT_TIMING_BOUNDARY",
+      "priority": 13,
+      "required_review": "Add one unrelated event requiring picture and auditioned audio-state alignment, plus one same-trigger case where comprehension requires different picture and audio timing.",
+      "why_existing_material_cannot_close": "Direct audition closed the local event timings, but the fixed corpus lacks unrelated auditioned support and a same-trigger case requiring different picture and audio timing."
+    },
+    {
+      "candidate_count": 1,
+      "close_condition": "Close only when the visual-first trigger and measured offset are directly established in unrelated support and an audio-first or simultaneous same-trigger boundary.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+      ],
+      "gap_id": "GAP-PICTURE-FIRST-AUDIO-STATE-OFFSET",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_PICTURE_FIRST_SUPPORT_AND_AUDIO_FIRST_OR_SIMULTANEOUS_BOUNDARY",
+      "priority": 14,
+      "required_review": "Add one unrelated scene that must register a new picture field before an auditioned audio-information change, plus one same-trigger case requiring simultaneous or audio-first disclosure.",
+      "why_existing_material_cannot_close": "Direct audition established the local transition, but the fixed corpus lacks an unrelated picture-first case and a same-trigger audio-first or simultaneous contrary choice."
+    },
+    {
+      "candidate_count": 1,
+      "close_condition": "Close only when unrelated support and a same-trigger simpler-audio boundary prove that a recurring audio-state schedule changes a concrete continuity or edit decision.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+      ],
+      "gap_id": "GAP-RECURRING-AUDIO-STATE-VISUAL-LEDGER",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_RECURRING_AUDIO_STATE_SUPPORT_AND_STABLE_STATE_BOUNDARY",
+      "priority": 15,
+      "required_review": "Add one unrelated multi-state sequence requiring an independently auditioned audio schedule and visual continuity ledger, plus one same-trigger case where one stable audio state is clearer.",
+      "why_existing_material_cannot_close": "Direct audition established the local state schedule, but the fixed corpus lacks unrelated support and a same-trigger stable-audio case that should not use the ledger."
+    }
+  ],
+  "runtime_rule_count": 7,
+  "schema_version": "exhaustive-runtime-integration-validation/0.1",
+  "source_disposition_count": 33,
+  "status": "PASS"
+}

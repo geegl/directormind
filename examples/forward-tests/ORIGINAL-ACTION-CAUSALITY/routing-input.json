@@ -41,8 +41,9 @@
     "project_original": true
   },
   "routing_signals": [
-    "cause_effect_chain",
-    "one_to_many_response"
+    "visible_action_source",
+    "target_state_change",
+    "result_readable"
   ],
   "scene_problem": {
     "primary": "ACTION_CAUSALITY",

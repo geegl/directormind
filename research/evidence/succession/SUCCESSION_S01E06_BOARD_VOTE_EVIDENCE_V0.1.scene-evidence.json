@@ -20534,6 +20534,56 @@
       "unknowns": [
         "All semantic audio facts remain unknown."
       ]
+    },
+    {
+      "method_id": "SUCCESSION-S01E06-BOARD-VOTE-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S002",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S004",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S008",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S009",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S010",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S011",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S012",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S014",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S018",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S024",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S028",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S029",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S030",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S038",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S041",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S044",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S050",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S052",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S054",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S057",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S060",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S062",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S064",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S065",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S067",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S070",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S071",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S072",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S073",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S074",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S075",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S077",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S084",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S085",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S086",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S087",
+        "SUCCESSION-S01E06-BOARD-VOTE-001-S088"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],

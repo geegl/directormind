@@ -1,0 +1,330 @@
+{
+  "schema_version": "runtime-integration-audio-authority/0.1",
+  "authority_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-DIRECT-AUDIO-AUTHORITY-V01",
+  "evidence_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
+  "review_id": "EXHAUSTIVE-PICTURE-SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1",
+  "audio_method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
+  "required_observations": [
+    {
+      "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001",
+      "description": "The selected interval begins in a muffled-sounding state.",
+      "start_seconds": 561.352458,
+      "end_seconds": 571.352458,
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002"
+      ],
+      "authorized_candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+      ]
+    },
+    {
+      "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002",
+      "description": "The overall noise becomes less prominent around this point.",
+      "start_seconds": 571.352458,
+      "end_seconds": 571.352458,
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002"
+      ],
+      "authorized_candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003"
+      ]
+    },
+    {
+      "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003",
+      "description": "Speech is audibly clearer from around 26 seconds until it returns to a muffled-sounding state around 52 seconds; no words or speaker identity are retained.",
+      "start_seconds": 587.352458,
+      "end_seconds": 613.352458,
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S003",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004"
+      ],
+      "authorized_candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+      ]
+    },
+    {
+      "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004",
+      "description": "The speech returns to a muffled-sounding state around this point.",
+      "start_seconds": 613.352458,
+      "end_seconds": 613.352458,
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004"
+      ],
+      "authorized_candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+      ]
+    },
+    {
+      "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005",
+      "description": "A sudden drum passage is audible and ends near the end of this reported interval.",
+      "start_seconds": 641.352458,
+      "end_seconds": 661.352458,
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S005"
+      ],
+      "authorized_candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+      ]
+    },
+    {
+      "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006",
+      "description": "Gull-like calls and broad outdoor ambience are audible during this reported interval.",
+      "start_seconds": 672.352458,
+      "end_seconds": 678.352458,
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S005",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S006",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S007"
+      ],
+      "authorized_candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+      ]
+    },
+    {
+      "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E007",
+      "description": "The soundtrack becomes substantially quieter after the gull-like calls; absolute silence is not asserted.",
+      "start_seconds": 678.352458,
+      "end_seconds": 721.352458,
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S006",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S007",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S008",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S009"
+      ],
+      "authorized_candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+      ]
+    },
+    {
+      "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E008",
+      "description": "Intermittent short speech-like sounds are heavily muffled and difficult to understand before clearer speech begins.",
+      "start_seconds": 721.352458,
+      "end_seconds": 780.352458,
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S009",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S010",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S011",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S012",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S013",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S014",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S015",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S016"
+      ],
+      "authorized_candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+      ]
+    },
+    {
+      "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009",
+      "description": "Speech becomes audibly clearer around this point.",
+      "start_seconds": 780.352458,
+      "end_seconds": 780.352458,
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S015",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S016"
+      ],
+      "authorized_candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+      ]
+    },
+    {
+      "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E010",
+      "description": "Speech becomes muffled-sounding again around this point.",
+      "start_seconds": 801.352458,
+      "end_seconds": 801.352458,
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S017"
+      ],
+      "authorized_candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+      ]
+    },
+    {
+      "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E011",
+      "description": "Speech becomes audibly clearer around this point.",
+      "start_seconds": 819.352458,
+      "end_seconds": 819.352458,
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S018",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S019"
+      ],
+      "authorized_candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+      ]
+    },
+    {
+      "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E012",
+      "description": "A brief muffled-sounding interval is audible.",
+      "start_seconds": 831.352458,
+      "end_seconds": 833.352458,
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S019",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S020"
+      ],
+      "authorized_candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+      ]
+    },
+    {
+      "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013",
+      "description": "Road-like environmental noise is prominent during this reported interval.",
+      "start_seconds": 834.352458,
+      "end_seconds": 847.352458,
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S020",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S022"
+      ],
+      "authorized_candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+      ]
+    },
+    {
+      "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E014",
+      "description": "The ambience changes to an indoor-like state during this reported interval.",
+      "start_seconds": 847.352458,
+      "end_seconds": 854.352458,
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S022"
+      ],
+      "authorized_candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+      ]
+    },
+    {
+      "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E015",
+      "description": "The soundtrack returns to a muffled-sounding speech state before clearer speech resumes.",
+      "start_seconds": 854.352458,
+      "end_seconds": 901.352458,
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S022",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S023",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S024"
+      ],
+      "authorized_candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+      ]
+    },
+    {
+      "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E016",
+      "description": "Speech becomes clear and continues as repeated short name-like utterances; the names and speakers are not retained.",
+      "start_seconds": 901.352458,
+      "end_seconds": 952.534917,
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S023",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S024",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025"
+      ],
+      "authorized_candidate_rule_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
+      ]
+    }
+  ],
+  "candidate_bindings": [
+    {
+      "authorized_observation_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013"
+      ],
+      "binding_reason": "These five directly auditioned state boundaries are the complete audible basis used by this candidate; other observations in the same Shots describe different state transitions.",
+      "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S005",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S006",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S007",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S015",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S016",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S020",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021"
+      ]
+    },
+    {
+      "authorized_observation_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004"
+      ],
+      "binding_reason": "The clearer-speech interval and its return to a muffled state are the complete directly auditioned basis for holding picture across this candidate's stated entry; same-Shot observations of other changes are not authorized.",
+      "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001",
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S003",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004"
+      ]
+    },
+    {
+      "authorized_observation_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E007",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E008",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E010",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E011",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E012",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E014",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E015",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E016"
+      ],
+      "binding_reason": "The recurring-state ledger candidate explicitly depends on the complete directly auditioned sequence, so every recorded state observation and all twenty-five covered Shots are authorized and required.",
+      "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004",
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S003",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S005",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S006",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S007",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S008",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S009",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S010",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S011",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S012",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S013",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S014",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S015",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S016",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S017",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S018",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S019",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S020",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S022",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S023",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S024",
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025"
+      ]
+    },
+    {
+      "authorized_observation_ids": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002"
+      ],
+      "binding_reason": "Only the directly auditioned reduction in overall noise is authorized for this stagger candidate; the opening muffled-state observation overlaps the same Shot but is a different fact.",
+      "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003",
+      "source_refs": [
+        "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "case_id": "ORIGINAL-MOBILE-ATTENTION-HANDOFF",
+  "dramatic_structure": {
+    "goal": "carry one changing priority through connected work zones",
+    "objectives": [
+      "seal, carry, and check the tray"
+    ],
+    "obstacle": "attention cannot abandon a state before it becomes readable",
+    "stakes": "the handoff sequence would become ambiguous",
+    "subtext": "none asserted",
+    "tactic_change": "preparation becomes delivery and verification"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "current_attention_state",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "The cook must finish sealing one tray before attention leaves the prep table."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "next_attention_owner",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "The runner becomes visible at the service opening before carrying the sealed tray onward."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "connected_geography",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "The prep table, service opening, and checker station share one continuous readable route."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "connected_zone_attention_handoff",
+    "next_attention_owner_visible"
+  ],
+  "scene_problem": {
+    "primary": "PROCEDURAL_COLLAPSE",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "community_kitchen"
+  ],
+  "unknown_fact_types": []
+}

@@ -263,16 +263,17 @@ class DirectorGrammarRoutingTests(unittest.TestCase):
         cls.schema = read_json(GRAMMAR_SCHEMA_PATH)
         cls.cases = json.loads(CASES_PATH.read_text(encoding="utf-8"))
 
-    def test_repository_wave1_grammar_has_three_eligible_rules(self) -> None:
+    def test_repository_integration_grammar_has_exact_live_eligible_rules(self) -> None:
         report = validate_grammar(
             copy.deepcopy(self.grammar),
             copy.deepcopy(self.index),
             copy.deepcopy(self.matrix),
             copy.deepcopy(self.schema),
         )
+        rule_count = len(self.grammar["rules"])
         self.assertEqual(report["status"], "PASS")
-        self.assertEqual(report["eligible_candidate_count"], 3)
-        self.assertEqual(report["runtime_rule_count"], 3)
+        self.assertEqual(report["eligible_candidate_count"], rule_count)
+        self.assertEqual(report["runtime_rule_count"], rule_count)
         self.assertEqual(report["project_constraint_count"], 5)
         self.assertEqual(report["safety_constraint_count"], 6)
 

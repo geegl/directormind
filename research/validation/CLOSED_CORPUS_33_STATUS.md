@@ -1,17 +1,18 @@
 # Closed Corpus — 33 Local Source Status
 
-Updated: 2026-09-03
+Updated: 2026-09-05
 
 Status: `READ_ONLY_CORPUS_REGISTER_COMPLETE / NO_DELETE_AUTHORIZED`
 
-## Runtime Rule Promotion Wave 1 note
+## Exhaustive Runtime Integration note
 
-Nine existing evidence units were reopened from their local source videos for
-three runtime-rule promotions. This adds no work and changes no retention
-decision. Three source units now include one short paraphrased visible-text
-anchor each; semantic audio remains unauditioned. The remaining 24 evidence
-units were not freshly replayed in this phase. Exact rule-level review scope is
-recorded in `RUNTIME_RULE_PROMOTION_WAVE1_EVIDENCE_REVIEW.md`.
+All 31 existing evidence units were reopened from their local source videos for
+the exhaustive integration review. The complete selected *Sound of Metal*
+envelope was also directly auditioned across its 25 canonical Shots and recorded
+as 16 approximate audible-state observations. This adds no work and changes no
+retention decision. The other 30 evidence units do not have direct semantic
+audio review. Exact candidate-level review scope is recorded in
+`runtime_integration.review.json` and the exhaustive validation report.
 
 This register covers the 33 media files currently in the closed local corpus. A row is one local source file, not necessarily one different feature film: episodic sources and combined episode files are counted as files. *Fleabag* S02E01 is not included because no local file exists. No source media, still, audio excerpt, subtitle, dialogue transcript, raw release label, download-site label, or absolute local path is recorded here.
 
@@ -30,6 +31,7 @@ This register covers the 33 media files currently in the closed local corpus. A 
 - `NO_SCENE_EVIDENCE`: no Scene Evidence file exists for this local source.
 - `BLOCKED_DIRECT_AUDITION`: audio has not been directly auditioned and cannot support an observed semantic sound claim.
 - `SIGNAL_MEASURED_NOT_AUDITIONED`: decoded-signal measurements exist, but nobody directly auditioned the audio and no semantic sound conclusion is established.
+- `DIRECT_AUDITION_COMPLETE`: the selected evidence envelope was directly auditioned and its approximate audible states are bound to exact source-local time ranges; this does not authorize deletion.
 - Every `Current delete` value is `NO`. This register is not deletion authorization.
 
 Deletion blockers used below:
@@ -37,6 +39,7 @@ Deletion blockers used below:
 - `G2`: direct sound audit or an explicitly accepted local-only preservation substitute is incomplete.
 - `G5`: the retained source has no complete evidence unit yet.
 - `G6`: the requested target scene was rejected; final source-retention/deletion disposition still requires explicit user approval.
+- `G7`: direct audition is complete, but a separate per-source deletion and recovery review plus explicit user approval has not occurred.
 
 ## Per-source register
 
@@ -60,7 +63,7 @@ Deletion blockers used below:
 | 16 | First | *Brooklyn Nine-Nine* S05E03–04 combined source | RETAINED_EXTRA_SOURCE | NO_SCENE_EVIDENCE | S05E04 candidate range located; no complete shot evidence unit | NOT_DIRECTLY_AUDITIONED | NO | G2, G5 |
 | 17 | Post-16 | *Citizen Kane* (1941) | ACCEPTED_TARGET | `CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 27 edit-shot units | BLOCKED_DIRECT_AUDITION | NO | G2 |
 | 18 | Post-16 | *The Wire* S01E04 | ACCEPTED_TARGET | `WIRE-S01E04-OLD-CASES-001` / CURRENT_LOCAL_EVIDENCE | Complete visual envelope / 68 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |
-| 19 | Post-16 | *Chernobyl* S01E05 | ACCEPTED_TARGET | `CHERNOBYL-S01E05-HEARING-RECON-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 205 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |
+| 19 | Post-16 | *Chernobyl* S01E05 | ACCEPTED_TARGET | `CHERNOBYL-S01E05-HEARING-RECON-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 206 visible shots after frame-level split at `00:49:36.760` | BLOCKED_DIRECT_AUDITION | NO | G2 |
 | 20 | Post-16 | *Andor* S01E10 | ACCEPTED_TARGET | `DM-ANDOR-S01E10-SEL-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 121 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |
 | 21 | Post-16 | *Better Call Saul* S03E05 | ACCEPTED_TARGET | `BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 105 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |
 | 22 | Post-16 | *The Bear* S02E07 | ACCEPTED_TARGET | `BEAR-S02E07-TASK-CLOSED-LOOP-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 114 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |
@@ -70,7 +73,7 @@ Deletion blockers used below:
 | 26 | Post-16 | *True Detective* S01E04 | ACCEPTED_TARGET | `TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001` / CURRENT_LOCAL_EVIDENCE | One complete visible-shot envelope; production-take status UNKNOWN | BLOCKED_DIRECT_AUDITION | NO | G2 |
 | 27 | Post-16 | *Unbelievable* S01E02 | ACCEPTED_TARGET | `UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 77 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |
 | 28 | Post-16 | *The Haunting of Hill House* S01E06 | ACCEPTED_TARGET | `DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1` / CURRENT_LOCAL_EVIDENCE | One partial-at-end visible-shot analytical envelope; endpoint and production-take status UNKNOWN | BLOCKED_DIRECT_AUDITION | NO | G2 |
-| 29 | Post-16 | *Sound of Metal* | ACCEPTED_TARGET | `SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 25 visible shots | SIGNAL_MEASURED_NOT_AUDITIONED | NO | G2 |
+| 29 | Post-16 | *Sound of Metal* | ACCEPTED_TARGET | `SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 25 visible shots | DIRECT_AUDITION_COMPLETE | NO | G7 |
 | 30 | Post-16 | *Children of Men* (2006) | ACCEPTED_TARGET | `CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001` / CURRENT_LOCAL_EVIDENCE | One complete visible-shot envelope; production-take status UNKNOWN | BLOCKED_DIRECT_AUDITION | NO | G2 |
 | 31 | Post-16 | *Moonlight* (2016) | ACCEPTED_TARGET | `MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 79 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |
 | 32 | Post-16 | *Bodyguard* S01E01 | ACCEPTED_TARGET | `DM-BODYGUARD-S01E01-SEL-001` / CURRENT_LOCAL_EVIDENCE | Complete selected visual envelope / 211 visible shots | BLOCKED_DIRECT_AUDITION | NO | G2 |
@@ -78,7 +81,7 @@ Deletion blockers used below:
 
 ## Current retention recommendation
 
-- `RETAIN_FOR_REAUDIT`: `31` current-local evidence sources. Their picture analysis is preserved in JSON, but direct sound audition is incomplete and the full source remains the only complete route to re-check picture or sound.
+- `RETAIN_FOR_REAUDIT`: `31` current-local evidence sources. Their picture analysis is preserved in JSON. Direct sound audition remains incomplete for 30; *Sound of Metal* has one directly auditioned selected envelope but still lacks a separate deletion/recovery decision. The full sources remain the only complete route to re-check picture or sound.
 - `RETAIN_UNTIL_ANALYZE_OR_ABANDON`: `1` extra *Brooklyn Nine-Nine* source with no complete evidence unit.
 - `DELETE_CANDIDATE_PENDING_USER_CONFIRMATION`: `1` *Better Call Saul* S01E09-labelled source. It is unusable for the requested target scene, but it is not deleted or authorized for deletion by this report.
 
@@ -113,8 +116,8 @@ No original is currently declared safe for direct deletion. A source can enter a
 | Current-local evidence | 31 |
 | Old-PR-only evidence | 0 |
 | No scene evidence | 2 |
-| Directly auditioned | 0 |
-| Signal measured but not auditioned | 1 |
+| Directly auditioned | 1 |
+| Signal measured but not auditioned | 0 |
 | Broken artifact claims still asserted as present | 0 |
 | Explicit absent-legacy-artifact records | 13 |
 | Pending downloads | 0 |

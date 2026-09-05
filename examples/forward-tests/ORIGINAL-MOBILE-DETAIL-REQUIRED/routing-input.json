@@ -1,0 +1,57 @@
+{
+  "case_id": "ORIGINAL-MOBILE-DETAIL-REQUIRED",
+  "dramatic_structure": {
+    "goal": "verify one small required state",
+    "objectives": [
+      "read and accept the seal code"
+    ],
+    "obstacle": "the code is too small for the moving field",
+    "stakes": "an unread code prevents acceptance",
+    "subtext": "none asserted",
+    "tactic_change": "shared inspection becomes required detail"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "current_attention_state",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "The cook presents one sealed tray at the checker station."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "next_attention_owner",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "The checker must read a tiny three-character seal code before accepting it."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "connected_geography",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "Both people remain at one station, but the code is unreadable in the mobile field."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "connected_zone_attention_handoff",
+    "next_attention_owner_visible",
+    "required_detail_not_mobile_readable"
+  ],
+  "scene_problem": {
+    "primary": "PROCEDURAL_COLLAPSE",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "inspection"
+  ],
+  "unknown_fact_types": []
+}

@@ -1,0 +1,57 @@
+{
+  "case_id": "ORIGINAL-OBJECT-SECONDARY-HANDLING",
+  "dramatic_structure": {
+    "goal": "complete one written calibration check without over-covering secondary hand business",
+    "objectives": [
+      "record the reading"
+    ],
+    "obstacle": "the written value must remain readable",
+    "stakes": "the record must match the instrument",
+    "subtext": "none asserted",
+    "tactic_change": "measurement becomes notation"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "object_identity",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "A pencil remains with Technician A throughout the written check."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "object_state_change",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "The pencil moves between two boxes but never changes owner, function, or required state."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "dependent_next_action",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "The next action depends only on the written reading, not on pencil custody."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "portable_object_state_change",
+    "next_action_depends_on_object_state",
+    "object_state_not_required"
+  ],
+  "scene_problem": {
+    "primary": "PROCEDURAL_COMPETENCE",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "inspection"
+  ],
+  "unknown_fact_types": []
+}

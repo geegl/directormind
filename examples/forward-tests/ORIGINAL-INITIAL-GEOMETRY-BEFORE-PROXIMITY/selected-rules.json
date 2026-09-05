@@ -1,0 +1,144 @@
+{
+  "applied_constraint_ids": [
+    "PC-DIALOGUE-TEXT-LOCK",
+    "PC-LOCKED-STORY-AUTHORITY",
+    "PC-MODEL-INDEPENDENT-IR",
+    "PC-ORIGINAL-ASSETS",
+    "PC-SOURCE-COVERAGE",
+    "SC-AUTHORIZATION-GATES",
+    "SC-HIGH-RISK-FALLBACK",
+    "SC-HUMAN-REVIEW",
+    "SC-NO-SUBJECT-SHORTCUT",
+    "SC-NO-SURFACE-COPY",
+    "SC-NO-UNKNOWN-PROMOTION"
+  ],
+  "case_id": "ORIGINAL-INITIAL-GEOMETRY-BEFORE-PROXIMITY",
+  "conflict_trace": [],
+  "eligible_rule_ids": [
+    "DR-AFTERMATH-BY-NEXT-ACTION",
+    "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+    "DR-MOBILE-ATTENTION-HANDOFF",
+    "DR-PERFORMANCE-OWNER-HOLD",
+    "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+    "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+    "DR-STABLE-AXIS-STATE-LED-HOLDS"
+  ],
+  "human_review_status": "HUMAN_REVIEW_PENDING",
+  "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+  "rejected_rules": [
+    {
+      "blocking_fact_ids": [],
+      "conflicting_rule_ids": [],
+      "matched_not_applicable_signal_ids": [],
+      "missing_fact_types": [
+        "next_action_states",
+        "visible_result"
+      ],
+      "rejection_reason_codes": [
+        "REQUIRED_FACT_MISSING",
+        "SCENE_PROBLEM_MISMATCH",
+        "TRIGGER_NOT_MET"
+      ],
+      "rule_id": "DR-AFTERMATH-BY-NEXT-ACTION"
+    },
+    {
+      "blocking_fact_ids": [],
+      "conflicting_rule_ids": [],
+      "matched_not_applicable_signal_ids": [],
+      "missing_fact_types": [
+        "cause_effect_chain",
+        "one_to_many_response",
+        "safe_resolution"
+      ],
+      "rejection_reason_codes": [
+        "REQUIRED_FACT_MISSING",
+        "SCENE_PROBLEM_MISMATCH",
+        "TRIGGER_NOT_MET"
+      ],
+      "rule_id": "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN"
+    },
+    {
+      "blocking_fact_ids": [],
+      "conflicting_rule_ids": [],
+      "matched_not_applicable_signal_ids": [],
+      "missing_fact_types": [
+        "connected_geography",
+        "current_attention_state",
+        "next_attention_owner"
+      ],
+      "rejection_reason_codes": [
+        "REQUIRED_FACT_MISSING",
+        "SCENE_PROBLEM_MISMATCH",
+        "TRIGGER_NOT_MET"
+      ],
+      "rule_id": "DR-MOBILE-ATTENTION-HANDOFF"
+    },
+    {
+      "blocking_fact_ids": [],
+      "conflicting_rule_ids": [],
+      "matched_not_applicable_signal_ids": [],
+      "missing_fact_types": [
+        "performance_progression"
+      ],
+      "rejection_reason_codes": [
+        "REQUIRED_FACT_MISSING",
+        "SCENE_PROBLEM_MISMATCH",
+        "TRIGGER_NOT_MET"
+      ],
+      "rule_id": "DR-PERFORMANCE-OWNER-HOLD"
+    },
+    {
+      "blocking_fact_ids": [],
+      "conflicting_rule_ids": [],
+      "matched_not_applicable_signal_ids": [],
+      "missing_fact_types": [
+        "counterpart_relation",
+        "spatial_change"
+      ],
+      "rejection_reason_codes": [
+        "REQUIRED_FACT_MISSING",
+        "SCENE_PROBLEM_MISMATCH",
+        "TRIGGER_NOT_MET"
+      ],
+      "rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+    },
+    {
+      "blocking_fact_ids": [],
+      "conflicting_rule_ids": [],
+      "matched_not_applicable_signal_ids": [],
+      "missing_fact_types": [
+        "relation_endpoint",
+        "time_structure"
+      ],
+      "rejection_reason_codes": [
+        "REQUIRED_FACT_MISSING",
+        "TRIGGER_NOT_MET"
+      ],
+      "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT"
+    },
+    {
+      "blocking_fact_ids": [],
+      "conflicting_rule_ids": [],
+      "matched_not_applicable_signal_ids": [],
+      "missing_fact_types": [
+        "stable_axis",
+        "visible_state_progression"
+      ],
+      "rejection_reason_codes": [
+        "REQUIRED_FACT_MISSING",
+        "SCENE_PROBLEM_MISMATCH",
+        "TRIGGER_NOT_MET"
+      ],
+      "rule_id": "DR-STABLE-AXIS-STATE-LED-HOLDS"
+    }
+  ],
+  "rights_boundary": {
+    "subject_matter_used_for_selection": false,
+    "surface_copy_allowed": false
+  },
+  "scene_problem": "ROMANTIC_PROXIMITY",
+  "schema_version": "director-routing-result/0.1",
+  "selected_rules": [],
+  "selection_count": 0,
+  "status": "NO_APPLICABLE_RULE"
+}

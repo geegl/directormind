@@ -5492,6 +5492,41 @@
       "unknowns": [
         "Dialogue meaning, emotional cause, lens metadata, and all semantic audio remain unknown."
       ]
+    },
+    {
+      "method_id": "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S001",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S002",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S003",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S004",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S005",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S006",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S007",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S008",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S009",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S010",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S011",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S012",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S013",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S014",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S015",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S016",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S017",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S018",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S019",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S020",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S021",
+        "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-S022"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],

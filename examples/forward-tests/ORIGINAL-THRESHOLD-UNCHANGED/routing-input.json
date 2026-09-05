@@ -1,0 +1,57 @@
+{
+  "case_id": "ORIGINAL-THRESHOLD-UNCHANGED",
+  "dramatic_structure": {
+    "goal": "arrive at a known destination without over-covering an ordinary entry",
+    "objectives": [
+      "reach the receiving desk"
+    ],
+    "obstacle": "none at the doorway",
+    "stakes": "the delivery beat begins inside",
+    "subtext": "none asserted",
+    "tactic_change": "approach becomes arrival"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "threshold_state_change",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "The courier keeps the same sealed box and access state before and after an ordinary doorway."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "route_endpoint",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "The occupied receiving desk is the only required destination fact."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "unchanged_state",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "No custody, safety, readiness, or permission state changes at the doorway."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "threshold_changes_locked_state",
+    "before_after_route_required",
+    "threshold_state_unchanged"
+  ],
+  "scene_problem": {
+    "primary": "ACTION_CAUSALITY",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "delivery"
+  ],
+  "unknown_fact_types": []
+}

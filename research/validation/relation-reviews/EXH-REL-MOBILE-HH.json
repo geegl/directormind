@@ -1,0 +1,15 @@
+{
+  "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION",
+  "evidence_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1",
+  "record_id": "EXH-REL-MOBILE-HH",
+  "relation": "SUPPORTS",
+  "review_id": "EXH-REL-MOBILE-HH-REVIEW",
+  "same_trigger_status": "VERIFIED_SAME_TRIGGER",
+  "schema_version": "candidate-relation-review/0.1",
+  "source_candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C01",
+  "source_refs": [
+    "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
+  ],
+  "status": "ROOT_VIDEO_VERIFIED",
+  "work_id": "HILL-HOUSE-S01E06"
+}

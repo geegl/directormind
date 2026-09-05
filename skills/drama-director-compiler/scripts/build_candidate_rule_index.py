@@ -27,6 +27,7 @@ INDEX_PATH = GRAMMAR_ROOT / "candidate_rule_index.json"
 MATRIX_JSON_PATH = GRAMMAR_ROOT / "cross_work_support_matrix.json"
 MATRIX_MD_PATH = GRAMMAR_ROOT / "cross_work_support_matrix.md"
 WAVE1_REVIEW_PATH = GRAMMAR_ROOT / "runtime_rule_promotion_wave1.review.json"
+INTEGRATION_REVIEW_PATH = GRAMMAR_ROOT / "runtime_integration.review.json"
 RELATION_REVIEW_ROOT = REPOSITORY_ROOT / "research" / "validation" / "relation-reviews"
 
 
@@ -124,17 +125,18 @@ FAMILY_OVERRIDES: dict[str, str] = {
     "APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001-AP13-C01-ASSESSMENT-RECEIVER-TO-NEW-ROOM-ACTION": "PROCEDURAL-HANDOFF-AND-WORKFLOW",
     "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-MICRO-BRACKET-HOLD-002": "SCREEN-OWNERSHIP-AND-PERFORMANCE-HOLD",
     "B99-S05E14-THE-BOX-PRIDE-BAIT-CONFESSION-001-B99-CAND-MOBILE-ZONE-CAP-004": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
-    "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES": "SPATIAL-REGISTRATION-AND-RESET",
+    "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
     "BEAR-S01E07-REVIEW-001-BEAR-C03-SUBTRACTIVE-AFTERMATH": "AFTERMATH-AND-TERMINAL-STATE",
     "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C03-DUAL-RESULT-RECEIPT": "RECEIVER-AND-REACTION-DISTRIBUTION",
     "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C04-TASK-LEDGER-OVER-CAMERA-CONTINUITY": "CONTINUITY-LEDGER-AND-VERSIONING",
     "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-RETURN-TO-FORMAL-ROOM-AFTER-PEAK-004": "AFTERMATH-AND-TERMINAL-STATE",
     "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-APERTURE-EVENT-BEFORE-GROSS-BODY-RESPONSE-002": "ACTION-CAUSAL-CHAIN",
-    "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001": "SPATIAL-REGISTRATION-AND-RESET",
+    "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
     "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C01-INVARIANT-SPACE-MULTICHANNEL-DELTA": "CONTINUITY-LEDGER-AND-VERSIONING",
     "CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001-CK-C02-REPEATED-BRIDGE-AS-ELLIPSIS-PUNCTUATION": "STATE-CHANGE-EDITING",
     "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C01": "SPATIAL-REGISTRATION-AND-RESET",
     "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C01": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+    "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C02": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
     "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-MAKE-ASSISTANCE-AND-OBJECT-STATES-COMPLETE-003": "ACTION-CAUSAL-CHAIN",
     "HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001-HOTD-CAND-PUNCTUATE-LONG-AXIS-TRAVEL-002": "THRESHOLD-AND-ROUTE-CONTINUITY",
     "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C02-DISTRIBUTE-SCREEN-OWNERSHIP-WHEN-BODIES-DIVERGE": "RECEIVER-AND-REACTION-DISTRIBUTION",
@@ -328,7 +330,7 @@ def _candidate_record(
         },
         "counterexamples": [counterexample],
         "promotion": {
-            "status": "BLOCKED_BY_UNKNOWN",
+            "status": "EVIDENCE_GAP_PENDING",
             "reasons": [
                 "Canonical scene problem remains UNKNOWN.",
                 "No evidence-backed functional role is available.",
@@ -346,6 +348,7 @@ def _candidate_record(
             },
             "unknown_dependency_present": True,
         },
+        "runtime_integration": {},
         "rights_boundary": {
             "evidence_lineage_only": True,
             "surface_copy_allowed": False,
@@ -357,6 +360,115 @@ def _candidate_record(
 
 def _review_ref(record_id: str) -> str:
     return f"research/validation/relation-reviews/{record_id}.json"
+
+
+def assert_runtime_review_lineage(
+    review: dict[str, Any],
+    candidate_authority: dict[str, dict[str, Any]],
+) -> None:
+    """Refuse to label relations video-verified unless the authority binds them."""
+    reviews = {
+        item["review_id"]: item
+        for item in review.get("evidence_reviews", [])
+    }
+    dispositions = {
+        item["candidate_rule_id"]: item
+        for item in review.get("candidate_dispositions", [])
+    }
+
+    def assert_relation(
+        candidate_rule_id: str,
+        source_refs: list[str],
+        expected_status: str,
+        target_rule_id: str,
+        relation: dict[str, Any] | None = None,
+    ) -> None:
+        candidate = candidate_authority.get(candidate_rule_id)
+        disposition = dispositions.get(candidate_rule_id)
+        if candidate is None or disposition is None:
+            raise ValueError(f"unknown reviewed relation candidate: {candidate_rule_id}")
+        if (
+            disposition.get("final_status") != expected_status
+            or set(disposition.get("source_refs", [])) != set(source_refs)
+            or disposition.get("target_rule_id") != target_rule_id
+        ):
+            raise ValueError(f"runtime relation does not match its final disposition: {candidate_rule_id}")
+        moving_refs = {
+            shot_id
+            for review_id in disposition.get("review_ids", [])
+            for shot_id in reviews.get(review_id, {}).get("moving_image_reviewed_shot_ids", [])
+        }
+        if not source_refs or not set(source_refs).issubset(moving_refs):
+            raise ValueError(f"runtime relation lacks moving-image review: {candidate_rule_id}")
+        canonical_refs = set(candidate.get("source", {}).get("evidence_shot_ids", []))
+        if not set(source_refs).issubset(canonical_refs):
+            raise ValueError(f"runtime relation leaves canonical candidate lineage: {candidate_rule_id}")
+        if relation is not None:
+            source = candidate["source"]
+            if (
+                relation.get("evidence_id") != source.get("evidence_id")
+                or relation.get("work_id") != source.get("work_id")
+            ):
+                raise ValueError(f"runtime relation source metadata drift: {candidate_rule_id}")
+
+    for spec in review.get("runtime_rule_specs", []):
+        rule_id = spec["rule_id"]
+        assert_relation(
+            spec["candidate_rule_id"],
+            spec["source_refs"],
+            "POSITIVE_RUNTIME_RULE",
+            rule_id,
+        )
+        moving_refs = {
+            shot_id
+            for review_id in dispositions[spec["candidate_rule_id"]].get("review_ids", [])
+            for shot_id in reviews.get(review_id, {}).get("moving_image_reviewed_shot_ids", [])
+        }
+        for role in spec.get("functional_roles", []):
+            role_refs = set(role.get("source_refs", []))
+            if (
+                not role_refs
+                or role.get("shot_id") not in role_refs
+                or not role_refs.issubset(set(spec["source_refs"]))
+                or not role_refs.issubset(moving_refs)
+            ):
+                raise ValueError(f"runtime functional role lacks fresh source binding: {rule_id}")
+        support_ids = {
+            item["candidate_rule_id"]
+            for item in review.get("candidate_dispositions", [])
+            if item.get("final_status") == "SUPPORTING_EVIDENCE"
+            and item.get("target_rule_id") == rule_id
+        }
+        relation_ids = {
+            item["source_candidate_rule_id"]
+            for item in spec.get("supporting_relations", [])
+        }
+        if not relation_ids or not relation_ids.issubset(support_ids):
+            raise ValueError(f"runtime support relation set drift: {rule_id}")
+        for relation in spec.get("supporting_relations", []):
+            assert_relation(
+                relation["source_candidate_rule_id"],
+                relation["source_refs"],
+                "SUPPORTING_EVIDENCE",
+                rule_id,
+                relation,
+            )
+        boundary_ids = {
+            item["candidate_rule_id"]
+            for item in review.get("candidate_dispositions", [])
+            if item.get("final_status") == "BOUNDARY_OR_COUNTEREXAMPLE"
+            and item.get("target_rule_id") == rule_id
+        }
+        counterexample = spec.get("counterexample", {})
+        if counterexample.get("source_candidate_rule_id") not in boundary_ids:
+            raise ValueError(f"runtime counterexample relation set drift: {rule_id}")
+        assert_relation(
+            counterexample["source_candidate_rule_id"],
+            counterexample["source_refs"],
+            "BOUNDARY_OR_COUNTEREXAMPLE",
+            rule_id,
+            counterexample,
+        )
 
 
 def _promoted_candidate_record(
@@ -445,10 +557,10 @@ def _promoted_candidate_record(
             "family_assignment_status": "ROOT_REVIEWED_TEXTUAL_CLUSTER",
             "relation_to_family": "SUPPORTS",
             "scene_problem": {
-                "primary": evidence["scene_problem"]["primary"],
-                "secondary": evidence["scene_problem"]["secondary"],
-                "status": evidence["scene_problem"]["status"],
-                "source_refs": evidence["scene_problem"]["source_refs"],
+                "primary": promotion["scene_problem"],
+                "secondary": [],
+                "status": "INFERRED",
+                "source_refs": promotion["source_refs"],
                 "lineage_label": _lineage_problem(evidence["scene_problem"]),
             },
             "functional_roles": roles,
@@ -458,7 +570,10 @@ def _promoted_candidate_record(
             "applicability_evidence": {
                 "status": "VERIFIED",
                 "source_refs": evidence["boundary_evidence"]["source_refs"],
-                "notes": "The canonical natural scene has picture-observed start and end boundaries.",
+                "notes": (
+                    "The canonical analytical interval has picture-observed endpoints whose "
+                    "verified or explicitly internal status is recorded in Scene Evidence."
+                ),
             },
             "unknown_dependencies": {
                 "scene_problem": False,
@@ -526,12 +641,19 @@ def build_relation_reviews(index: dict[str, Any]) -> dict[Path, dict[str, Any]]:
 
 def build_index(sources: Iterable[Path] | None = None) -> dict[str, Any]:
     evidence_units = [_read_json(path) for path in (sources or discover_sources())]
-    review = _read_json(WAVE1_REVIEW_PATH)
+    review = _read_json(INTEGRATION_REVIEW_PATH)
     promotions = {
-        item["candidate_rule_id"]: item for item in review.get("promotions", [])
+        item["candidate_rule_id"]: item
+        for item in review.get("runtime_rule_specs", [])
     }
-    if len(promotions) != len(review.get("promotions", [])):
+    dispositions = {
+        item["candidate_rule_id"]: item
+        for item in review.get("candidate_dispositions", [])
+    }
+    if len(promotions) != len(review.get("runtime_rule_specs", [])):
         raise ValueError("duplicate promotion source candidate ID")
+    if len(dispositions) != len(review.get("candidate_dispositions", [])):
+        raise ValueError("duplicate runtime disposition candidate ID")
     assignments: list[tuple[dict[str, Any], dict[str, Any], str, str]] = []
     family_works: dict[str, set[str]] = defaultdict(set)
     family_descriptions = {family_id: description for family_id, description, _ in FAMILY_TERMS}
@@ -541,6 +663,18 @@ def build_index(sources: Iterable[Path] | None = None) -> dict[str, Any]:
             family_id, assignment_status = classify_family(rule)
             assignments.append((evidence, rule, family_id, assignment_status))
             family_works[family_id].add(evidence["work_id"])
+
+    candidate_authority = {
+        rule["candidate_rule_id"]: {
+            "source": {
+                "work_id": evidence["work_id"],
+                "evidence_id": evidence["evidence_id"],
+                "evidence_shot_ids": rule["evidence_shot_ids"],
+            }
+        }
+        for evidence, rule, _family_id, _assignment_status in assignments
+    }
+    assert_runtime_review_lineage(review, candidate_authority)
 
     candidates = []
     for evidence, rule, family_id, assignment_status in assignments:
@@ -552,10 +686,47 @@ def build_index(sources: Iterable[Path] | None = None) -> dict[str, Any]:
                     f"promotion family drift for {rule['candidate_rule_id']}: {family_id} != {promotion['family_id']}"
                 )
             record = _promoted_candidate_record(record, evidence, promotion)
+        disposition = dispositions.get(rule["candidate_rule_id"])
+        if disposition is None:
+            raise ValueError(f"missing runtime disposition: {rule['candidate_rule_id']}")
+        record["runtime_integration"] = {
+            key: disposition[key]
+            for key in (
+                "final_status",
+                "runtime_effect_key",
+                "review_ids",
+                "source_refs",
+                "target_rule_id",
+                "merged_into_candidate_id",
+                "boundary_signal_ids",
+                "rejection_reason_code",
+                "evidence_gap_id",
+            )
+        }
+        final_status = disposition["final_status"]
+        if final_status == "REJECTED_WITH_REASON":
+            record["promotion"]["status"] = "REJECTED"
+        elif final_status == "EVIDENCE_GAP_PENDING":
+            record["promotion"]["status"] = "EVIDENCE_GAP_PENDING"
+        elif final_status == "EXISTING_MATERIAL_REVIEW_REQUIRED":
+            record["promotion"]["status"] = "EXISTING_MATERIAL_REVIEW_REQUIRED"
+        elif final_status != "POSITIVE_RUNTIME_RULE":
+            record["promotion"]["status"] = "SINGLE_WORK_CANDIDATE"
+        record["relation_to_family"] = {
+            "SUPPORTING_EVIDENCE": "SUPPORTS",
+            "BOUNDARY_OR_COUNTEREXAMPLE": "COUNTEREXAMPLE",
+            "MERGED_DUPLICATE": "DUPLICATE",
+            "REJECTED_WITH_REASON": "CONTRADICTS",
+        }.get(final_status, record["relation_to_family"])
         candidates.append(record)
     unknown_promotions = sorted(set(promotions) - {item["candidate_rule_id"] for item in candidates})
     if unknown_promotions:
         raise ValueError(f"promotion sources not found: {unknown_promotions}")
+    unknown_dispositions = sorted(
+        set(dispositions) - {item["candidate_rule_id"] for item in candidates}
+    )
+    if unknown_dispositions:
+        raise ValueError(f"runtime dispositions not found: {unknown_dispositions}")
     candidates.sort(key=lambda item: item["candidate_rule_id"])
 
     family_members: dict[str, list[str]] = defaultdict(list)
@@ -583,7 +754,7 @@ def build_index(sources: Iterable[Path] | None = None) -> dict[str, Any]:
 
     return {
         "schema_version": "candidate-rule-index/0.1",
-        "status": "RUNTIME_RULES_AVAILABLE" if promotions else "EVIDENCE_LINEAGE_ONLY",
+        "status": review["declared_phase_status"],
         "source_scene_count": len(evidence_units),
         "source_candidate_count": len(candidates),
         "normalization_policy": {
@@ -610,6 +781,8 @@ def build_matrix(index: dict[str, Any]) -> dict[str, Any]:
                 "scene_problem_status": member["scene_problem"]["status"],
                 "unknown_dependency_present": member["promotion"]["unknown_dependency_present"],
                 "promotion_status": member["promotion"]["status"],
+                "runtime_final_status": member["runtime_integration"]["final_status"],
+                "runtime_effect_key": member["runtime_integration"]["runtime_effect_key"],
             }
             for member in members
         ]
@@ -641,7 +814,7 @@ def build_matrix(index: dict[str, Any]) -> dict[str, Any]:
                 "verified_support_relation_ids": support_ids,
                 "verified_unrelated_same_trigger_counterexample_ids": counterexample_ids,
                 "promotion_eligibility": (
-                    "CROSS_WORK_SUPPORTED" if promoted else "BLOCKED_BY_UNKNOWN"
+                    "CROSS_WORK_SUPPORTED" if promoted else "PARTIAL_EVIDENCE_GAP"
                 ),
                 "blocked_reasons": (
                     []
@@ -693,7 +866,7 @@ def render_matrix(matrix: dict[str, Any]) -> str:
             "",
             "## Boundary",
             "",
-            "- Only explicitly listed eligible candidates are runtime authorized; every other candidate remains BLOCKED_BY_UNKNOWN.",
+            "- Only POSITIVE_RUNTIME_RULE candidates are runtime authorized; every other candidate has a distinct runtime disposition or a precise EVIDENCE_GAP_PENDING entry.",
             "- Different-trigger comparisons and internal boundaries do not count as promotion counterexamples.",
             "- Work names and source-specific content remain evidence lineage, never runtime instructions.",
             "",

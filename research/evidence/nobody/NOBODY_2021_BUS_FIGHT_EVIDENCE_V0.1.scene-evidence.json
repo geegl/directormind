@@ -3,11 +3,19 @@
   "evidence_id": "NOBODY-2021-BUS-001",
   "work_id": "NOBODY-2021",
   "scene_problem": {
-    "primary": "LEGACY_SCENE_PROBLEM",
+    "primary": "ACTION_CAUSALITY",
     "secondary": [],
-    "status": "UNKNOWN",
-    "source_refs": [],
-    "notes": "The legacy primary label ACTION_CAUSALITY is retained only as non-operational lineage and was not proved by structural conversion."
+    "status": "INFERRED",
+    "source_refs": [
+      "NOBODY-2021-BUS-001-S111",
+      "NOBODY-2021-BUS-001-S112",
+      "NOBODY-2021-BUS-001-S113",
+      "NOBODY-2021-BUS-001-S114",
+      "NOBODY-2021-BUS-001-S115",
+      "NOBODY-2021-BUS-001-S116",
+      "NOBODY-2021-BUS-001-S117"
+    ],
+    "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown."
   },
   "scene_unit_type": "NATURAL_CONTINUOUS_SCENE",
   "boundary_status": "NATURAL_START_END_VERIFIED",
@@ -25887,7 +25895,18 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [],
+      "abstract_role_labels": [
+        {
+          "appearance_id": "APPEARANCE-S111",
+          "functional_role": "action_source",
+          "status": "INFERRED",
+          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+          "appearance_track_id": null,
+          "source_refs": [
+            "NOBODY-2021-BUS-001-S111"
+          ]
+        }
+      ],
       "blocking": {
         "claim_id": "S111-BLOCK",
         "status": "INFERRED",
@@ -27281,7 +27300,18 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [],
+      "abstract_role_labels": [
+        {
+          "appearance_id": "APPEARANCE-S117",
+          "functional_role": "result_receiver",
+          "status": "INFERRED",
+          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+          "appearance_track_id": null,
+          "source_refs": [
+            "NOBODY-2021-BUS-001-S117"
+          ]
+        }
+      ],
       "blocking": {
         "claim_id": "S117-BLOCK",
         "status": "INFERRED",
@@ -30110,6 +30140,78 @@
       "unknowns": [
         "All semantic audio facts remain unknown."
       ]
+    },
+    {
+      "method_id": "NOBODY-2021-BUS-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "NOBODY-2021-BUS-001-S016",
+        "NOBODY-2021-BUS-001-S029",
+        "NOBODY-2021-BUS-001-S030",
+        "NOBODY-2021-BUS-001-S031",
+        "NOBODY-2021-BUS-001-S032",
+        "NOBODY-2021-BUS-001-S033",
+        "NOBODY-2021-BUS-001-S034",
+        "NOBODY-2021-BUS-001-S035",
+        "NOBODY-2021-BUS-001-S036",
+        "NOBODY-2021-BUS-001-S037",
+        "NOBODY-2021-BUS-001-S038",
+        "NOBODY-2021-BUS-001-S039",
+        "NOBODY-2021-BUS-001-S040",
+        "NOBODY-2021-BUS-001-S041",
+        "NOBODY-2021-BUS-001-S042",
+        "NOBODY-2021-BUS-001-S043",
+        "NOBODY-2021-BUS-001-S044",
+        "NOBODY-2021-BUS-001-S045",
+        "NOBODY-2021-BUS-001-S046",
+        "NOBODY-2021-BUS-001-S059",
+        "NOBODY-2021-BUS-001-S060",
+        "NOBODY-2021-BUS-001-S061",
+        "NOBODY-2021-BUS-001-S062",
+        "NOBODY-2021-BUS-001-S068",
+        "NOBODY-2021-BUS-001-S069",
+        "NOBODY-2021-BUS-001-S070",
+        "NOBODY-2021-BUS-001-S071",
+        "NOBODY-2021-BUS-001-S088",
+        "NOBODY-2021-BUS-001-S091",
+        "NOBODY-2021-BUS-001-S092",
+        "NOBODY-2021-BUS-001-S093",
+        "NOBODY-2021-BUS-001-S094",
+        "NOBODY-2021-BUS-001-S095",
+        "NOBODY-2021-BUS-001-S096",
+        "NOBODY-2021-BUS-001-S097",
+        "NOBODY-2021-BUS-001-S098",
+        "NOBODY-2021-BUS-001-S099",
+        "NOBODY-2021-BUS-001-S100",
+        "NOBODY-2021-BUS-001-S101",
+        "NOBODY-2021-BUS-001-S102",
+        "NOBODY-2021-BUS-001-S103",
+        "NOBODY-2021-BUS-001-S111",
+        "NOBODY-2021-BUS-001-S112",
+        "NOBODY-2021-BUS-001-S113",
+        "NOBODY-2021-BUS-001-S114",
+        "NOBODY-2021-BUS-001-S115",
+        "NOBODY-2021-BUS-001-S116",
+        "NOBODY-2021-BUS-001-S117",
+        "NOBODY-2021-BUS-001-S118",
+        "NOBODY-2021-BUS-001-S119",
+        "NOBODY-2021-BUS-001-S120",
+        "NOBODY-2021-BUS-001-S121",
+        "NOBODY-2021-BUS-001-S122",
+        "NOBODY-2021-BUS-001-S123",
+        "NOBODY-2021-BUS-001-S124",
+        "NOBODY-2021-BUS-001-S125",
+        "NOBODY-2021-BUS-001-S126",
+        "NOBODY-2021-BUS-001-S127",
+        "NOBODY-2021-BUS-001-S128"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
+      ]
     }
   ],
   "auxiliary_evidence": [],
@@ -30165,7 +30267,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "audio_dependency": true,
+      "audio_dependency": false,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -30206,7 +30308,8 @@
       "counterexample_ids": [],
       "source_method_ids": [
         "NOBODY-2021-BUS-001-METHOD-LEGACY-PICTURE-REVIEW",
-        "NOBODY-2021-BUS-001-METHOD-STRUCTURAL-CONVERSION"
+        "NOBODY-2021-BUS-001-METHOD-STRUCTURAL-CONVERSION",
+        "NOBODY-2021-BUS-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
       ],
       "evidence_scene_ids": [
         "NOBODY-2021-BUS-001"
@@ -30598,7 +30701,6 @@
       "statement": "Semantic audio facts remain unknown and were not directly auditioned.",
       "scope": "AUDIO",
       "blocks_rule_ids": [
-        "NOBODY-2021-BUS-001-NOBODY-C01-ACTION-CAUSAL-CHAIN",
         "NOBODY-2021-BUS-001-NOBODY-C02-OBJECT-CONTROL-LEDGER",
         "NOBODY-2021-BUS-001-NOBODY-C03-SPATIAL-RESET-AFTER-BURST",
         "NOBODY-2021-BUS-001-NOBODY-C04-RECOVERY-AND-CARE-ARE-STATE"
@@ -30635,6 +30737,7 @@
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
     "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-    "80 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review."
+    "80 high-risk Shot rows lacked an explicit legacy FALLBACK; generic project-original fallbacks remain provisional pending human review.",
+    "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
   ]
 }

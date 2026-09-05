@@ -1,0 +1,9 @@
+{
+  "candidate_rule_id": "NOBODY-2021-BUS-001-NOBODY-C01-ACTION-CAUSAL-CHAIN",
+  "canonical_rule_family": "ACTION-CAUSAL-CHAIN",
+  "rule_id": "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+  "schema_version": "forward-test-result/0.1",
+  "status": "HUMAN_REVIEW_PENDING",
+  "test_case_id": "ORIGINAL-ACTION-CONTINUOUS-CHAIN",
+  "test_mode": "BOUNDARY_OR_NON_APPLICABLE"
+}

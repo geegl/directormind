@@ -11,18 +11,20 @@
     "audit_subject_tags": [],
     "conflicts_with": [],
     "not_applicable_if_any": [
+      "distance_change_across_ellipsis",
       "elliptical_time_change"
     ],
     "required_fact_types": [
       "distance_change",
-      "relation_endpoint"
+      "relation_endpoint",
+      "time_structure"
     ],
     "scene_problems": [
       "ROMANTIC_PROXIMITY"
     ],
     "trigger_all_of": [
       "relation_distance_change",
-      "continuous_present_time",
+      "time_structure_locked",
       "shared_endpoint_required"
     ],
     "trigger_any_of": []

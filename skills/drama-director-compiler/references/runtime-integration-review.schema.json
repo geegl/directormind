@@ -1,0 +1,305 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "runtime-integration-review.schema.json",
+  "title": "DirectorMind exhaustive runtime integration review v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "declared_phase_status",
+    "source_dispositions",
+    "evidence_reviews",
+    "candidate_dispositions",
+    "runtime_rule_specs",
+    "evidence_gaps"
+  ],
+  "properties": {
+    "schema_version": {"const": "runtime-integration-review/0.1"},
+    "declared_phase_status": {"enum": ["IN_PROGRESS", "PARTIAL_EVIDENCE_GAP", "COMPLETE"]},
+    "source_dispositions": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/sourceDisposition"}
+    },
+    "evidence_reviews": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/evidenceReview"}
+    },
+    "candidate_dispositions": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/candidateDisposition"}
+    },
+    "runtime_rule_specs": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/runtimeRuleSpec"}
+    },
+    "evidence_gaps": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/evidenceGap"}
+    }
+  },
+  "$defs": {
+    "stringArray": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "nonEmptyStringArray": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "timePoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["timecode", "seconds", "frame", "pts", "time_base"],
+      "properties": {
+        "timecode": {"type": "string", "pattern": "^[0-9]{2,}:[0-5][0-9]:[0-5][0-9](?:\\.[0-9]{1,9})?$"},
+        "seconds": {"type": "number", "minimum": 0},
+        "frame": {"anyOf": [{"type": "integer", "minimum": 0}, {"type": "null"}]},
+        "pts": {"anyOf": [{"type": "integer", "minimum": 0}, {"type": "null"}]},
+        "time_base": {"anyOf": [{"type": "string", "minLength": 1}, {"type": "null"}]}
+      }
+    },
+    "reviewedShot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["shot_id", "start", "end"],
+      "properties": {
+        "shot_id": {"type": "string", "minLength": 1},
+        "start": {"$ref": "#/$defs/timePoint"},
+        "end": {"$ref": "#/$defs/timePoint"}
+      }
+    },
+    "audioObservation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "observation_id", "status", "precision", "precision_seconds",
+        "clip_offset_start_seconds", "clip_offset_end_seconds", "start", "end",
+        "description", "audit_fields", "authorized_candidate_rule_ids", "source_refs", "unknowns"
+      ],
+      "properties": {
+        "observation_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+        "status": {"const": "AUDIO_OBSERVED"},
+        "precision": {"const": "APPROXIMATE_HUMAN_AUDITION"},
+        "precision_seconds": {"type": "number", "exclusiveMinimum": 0, "maximum": 5},
+        "clip_offset_start_seconds": {"type": "number", "minimum": 0},
+        "clip_offset_end_seconds": {"type": "number", "minimum": 0},
+        "start": {"$ref": "#/$defs/timePoint"},
+        "end": {"$ref": "#/$defs/timePoint"},
+        "description": {"type": "string", "minLength": 1},
+        "audit_fields": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"enum": ["silence_intervals", "ambience", "object_sound", "audio_information_change"]}
+        },
+        "authorized_candidate_rule_ids": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "source_refs": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "unknowns": {"$ref": "#/$defs/nonEmptyStringArray"}
+      }
+    },
+    "audioClaim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observation_id", "claim"],
+      "properties": {
+        "observation_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]+$"},
+        "claim": {"type": "string", "minLength": 1}
+      }
+    },
+    "audioCandidateBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_rule_id", "authorized_observation_ids", "binding_reason", "source_refs"
+      ],
+      "properties": {
+        "candidate_rule_id": {"type": "string", "minLength": 1},
+        "authorized_observation_ids": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "binding_reason": {"type": "string", "minLength": 1},
+        "source_refs": {"$ref": "#/$defs/nonEmptyStringArray"}
+      }
+    },
+    "sourceDisposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_number", "evidence_id", "status", "reason_code", "notes"],
+      "properties": {
+        "source_number": {"type": "integer", "minimum": 1, "maximum": 33},
+        "evidence_id": {"anyOf": [{"type": "string", "minLength": 1}, {"type": "null"}]},
+        "status": {"enum": ["EVIDENCE_MAPPED", "REJECTED_WITH_REASON", "EVIDENCE_GAP_PENDING"]},
+        "reason_code": {"anyOf": [{"type": "string", "minLength": 1}, {"type": "null"}]},
+        "notes": {"type": "string", "minLength": 1}
+      }
+    },
+    "evidenceReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "review_id", "evidence_id", "method_id", "picture_review_status",
+        "audio_review_status", "reviewed_shots", "moving_image_reviewed_shot_ids",
+        "observations", "unknowns"
+      ],
+      "properties": {
+        "review_id": {"type": "string", "minLength": 1},
+        "evidence_id": {"type": "string", "minLength": 1},
+        "method_id": {"type": "string", "minLength": 1},
+        "picture_review_status": {"enum": ["FRAME_REPLAY_COMPLETE", "MOVING_IMAGE_REVIEW_COMPLETE", "PICTURE_PARTIAL"]},
+        "audio_review_status": {"enum": ["DIRECT_AUDITION_COMPLETE", "NOT_AUDITIONED", "SIGNAL_MEASURED_NOT_AUDITIONED"]},
+        "audio_method_id": {"anyOf": [{"type": "string", "minLength": 1}, {"type": "null"}]},
+        "directly_auditioned_shot_ids": {"$ref": "#/$defs/stringArray"},
+        "audio_observations": {"type": "array", "items": {"$ref": "#/$defs/audioObservation"}},
+        "audio_candidate_bindings": {"type": "array", "items": {"$ref": "#/$defs/audioCandidateBinding"}},
+        "reviewed_shots": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/reviewedShot"}},
+        "moving_image_reviewed_shot_ids": {"$ref": "#/$defs/stringArray"},
+        "observations": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "unknowns": {"$ref": "#/$defs/stringArray"}
+      }
+    },
+    "candidateDisposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_rule_id", "family_id", "evidence_id", "review_ids", "source_refs",
+        "final_status", "runtime_effect_key", "decision_axes", "observations", "inferences",
+        "material_unknowns", "audio_dependency", "target_rule_id", "merged_into_candidate_id",
+        "boundary_signal_ids", "boundary_forward_test_id", "rejection_reason_code",
+        "evidence_gap_id", "notes"
+      ],
+      "properties": {
+        "candidate_rule_id": {"type": "string", "minLength": 1},
+        "family_id": {"type": "string", "minLength": 1},
+        "evidence_id": {"type": "string", "minLength": 1},
+        "review_ids": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "source_refs": {"$ref": "#/$defs/stringArray"},
+        "final_status": {"enum": ["POSITIVE_RUNTIME_RULE", "SUPPORTING_EVIDENCE", "BOUNDARY_OR_COUNTEREXAMPLE", "MERGED_DUPLICATE", "REJECTED_WITH_REASON", "EVIDENCE_GAP_PENDING", "EXISTING_MATERIAL_REVIEW_REQUIRED"]},
+        "runtime_effect_key": {"anyOf": [{"type": "string", "minLength": 1}, {"type": "null"}]},
+        "decision_axes": {"type": "array", "uniqueItems": true, "items": {"enum": ["COVERAGE", "BLOCKING", "REACTION", "PACING", "EDIT"]}},
+        "observations": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "inferences": {"$ref": "#/$defs/stringArray"},
+        "material_unknowns": {"$ref": "#/$defs/stringArray"},
+        "audio_dependency": {"type": "boolean"},
+        "audio_observation_ids": {"$ref": "#/$defs/stringArray"},
+        "audio_claims": {"type": "array", "items": {"$ref": "#/$defs/audioClaim"}},
+        "target_rule_id": {"anyOf": [{"type": "string", "pattern": "^DR-[A-Z0-9-]+$"}, {"type": "null"}]},
+        "merged_into_candidate_id": {"anyOf": [{"type": "string", "minLength": 1}, {"type": "null"}]},
+        "boundary_signal_ids": {"$ref": "#/$defs/stringArray"},
+        "boundary_forward_test_id": {"anyOf": [{"type": "string", "minLength": 1}, {"type": "null"}]},
+        "rejection_reason_code": {"anyOf": [{"enum": ["NO_DIRECTOR_DECISION_DELTA", "SURFACE_SPECIFIC_NOT_TRANSFERABLE", "DUPLICATE_WITHOUT_INDEPENDENT_EFFECT", "SEMANTIC_CAUSALITY_NOT_PICTURE_PROVABLE", "CONTINUITY_ONLY_NOT_DIRECTOR_GRAMMAR", "UNSAFE_OR_UNSUPPORTED_EXECUTION"]}, {"type": "null"}]},
+        "evidence_gap_id": {"anyOf": [{"type": "string", "minLength": 1}, {"type": "null"}]},
+        "notes": {"type": "string", "minLength": 1}
+      }
+    },
+    "runtimeRelation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relation_id", "source_candidate_rule_id", "work_id", "evidence_id",
+        "source_refs", "notes"
+      ],
+      "properties": {
+        "relation_id": {"type": "string", "minLength": 1},
+        "source_candidate_rule_id": {"type": "string", "minLength": 1},
+        "work_id": {"type": "string", "minLength": 1},
+        "evidence_id": {"type": "string", "minLength": 1},
+        "source_refs": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "notes": {"type": "string", "minLength": 1}
+      }
+    },
+    "functionalRole": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["appearance_id", "functional_role", "shot_id", "source_refs"],
+      "properties": {
+        "appearance_id": {"type": "string", "minLength": 1},
+        "functional_role": {"type": "string", "minLength": 1},
+        "shot_id": {"type": "string", "minLength": 1},
+        "source_refs": {"$ref": "#/$defs/nonEmptyStringArray"}
+      }
+    },
+    "runtimeRuleSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rule_id", "name", "candidate_rule_id", "family_id", "scene_problem",
+        "source_refs", "functional_roles", "trigger", "routing",
+        "required_story_facts", "applicable_when", "not_applicable_when",
+        "director_decision", "coverage", "blocking", "pacing", "edit_logic",
+        "continuity", "ai_risk", "failure_modes", "fallback", "confidence",
+        "supporting_relations", "counterexample", "positive_forward_test_id",
+        "boundary_forward_test_id", "designated_boundary_signal_id", "selection_rank", "audio_dependency",
+        "runtime_authorized", "surface_copy_allowed"
+      ],
+      "properties": {
+        "rule_id": {"type": "string", "pattern": "^DR-[A-Z0-9-]+$"},
+        "name": {"type": "string", "minLength": 1},
+        "candidate_rule_id": {"type": "string", "minLength": 1},
+        "family_id": {"type": "string", "minLength": 1},
+        "scene_problem": {"type": "string", "minLength": 1},
+        "source_refs": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "functional_roles": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/functionalRole"}},
+        "trigger": {"type": "string", "minLength": 1},
+        "routing": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["trigger_all_of", "trigger_any_of", "required_fact_types", "not_applicable_if_any"],
+          "properties": {
+            "trigger_all_of": {"$ref": "#/$defs/stringArray"},
+            "trigger_any_of": {"$ref": "#/$defs/stringArray"},
+            "required_fact_types": {"$ref": "#/$defs/nonEmptyStringArray"},
+            "not_applicable_if_any": {"$ref": "#/$defs/nonEmptyStringArray"}
+          }
+        },
+        "required_story_facts": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "applicable_when": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "not_applicable_when": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "director_decision": {"type": "string", "minLength": 1},
+        "coverage": {"type": "string", "minLength": 1},
+        "blocking": {"type": "string", "minLength": 1},
+        "pacing": {"type": "string", "minLength": 1},
+        "edit_logic": {"type": "string", "minLength": 1},
+        "continuity": {"type": "string", "minLength": 1},
+        "ai_risk": {"type": "object"},
+        "failure_modes": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "fallback": {"type": "object"},
+        "confidence": {"type": "object"},
+        "supporting_relations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/runtimeRelation"}
+        },
+        "counterexample": {"$ref": "#/$defs/runtimeRelation"},
+        "positive_forward_test_id": {"type": "string", "minLength": 1},
+        "boundary_forward_test_id": {"type": "string", "minLength": 1},
+        "designated_boundary_signal_id": {"type": "string", "minLength": 1},
+        "selection_rank": {"type": "integer", "minimum": 1},
+        "audio_dependency": {"type": "boolean", "const": false},
+        "runtime_authorized": {"type": "boolean", "const": true},
+        "surface_copy_allowed": {"type": "boolean", "const": false}
+      }
+    },
+    "evidenceGap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gap_id", "priority", "candidate_count", "candidate_rule_ids", "gap_scope",
+        "missing_evidence_type", "why_existing_material_cannot_close",
+        "existing_review_refs", "required_review", "close_condition"
+      ],
+      "properties": {
+        "gap_id": {"type": "string", "minLength": 1},
+        "priority": {"type": "integer", "minimum": 1},
+        "candidate_count": {"type": "integer", "minimum": 1},
+        "candidate_rule_ids": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "gap_scope": {"const": "EXTERNAL_SUPPLEMENTATION"},
+        "missing_evidence_type": {"type": "string", "minLength": 1},
+        "why_existing_material_cannot_close": {"type": "string", "minLength": 1},
+        "existing_review_refs": {"$ref": "#/$defs/nonEmptyStringArray"},
+        "required_review": {"type": "string", "minLength": 1},
+        "close_condition": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

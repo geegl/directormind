@@ -1,0 +1,57 @@
+{
+  "case_id": "ORIGINAL-COMPARISON-NOT-REQUIRED",
+  "dramatic_structure": {
+    "goal": "record one existing item state",
+    "objectives": [
+      "verify the seal"
+    ],
+    "obstacle": "the small seal must remain readable",
+    "stakes": "the record must match the visible item",
+    "subtext": "none asserted",
+    "tactic_change": "overview becomes detail check"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "referent_set",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "One sealed project-original container is the only item in the inspection area."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "relation_constraint",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "The task is to read that container's existing seal state, not to compare multiple referents."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "single_item_state",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "The inspector records the intact seal and leaves the container in place."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "multiple_visible_referents",
+    "comparative_relation_required",
+    "comparative_field_not_required"
+  ],
+  "scene_problem": {
+    "primary": "PROCEDURAL_COMPETENCE",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "inspection"
+  ],
+  "unknown_fact_types": []
+}

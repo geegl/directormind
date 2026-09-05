@@ -34,7 +34,7 @@
     },
     {
       "fact_id": "FACT-04",
-      "fact_type": "continuous_time_change",
+      "fact_type": "time_structure",
       "source_ref": "locked-script.md#FACT-04",
       "status": "LOCKED",
       "value": "The approach and stop occur in one continuous present-time interval without ellipsis."
@@ -48,7 +48,7 @@
   },
   "routing_signals": [
     "relation_distance_change",
-    "continuous_present_time",
+    "time_structure_locked",
     "shared_endpoint_required"
   ],
   "scene_problem": {

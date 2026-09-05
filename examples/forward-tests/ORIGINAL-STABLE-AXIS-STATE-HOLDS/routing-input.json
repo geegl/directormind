@@ -1,0 +1,56 @@
+{
+  "case_id": "ORIGINAL-STABLE-AXIS-STATE-HOLDS",
+  "dramatic_structure": {
+    "goal": "make a two-step visible authority transfer readable",
+    "objectives": [
+      "close the permit review"
+    ],
+    "obstacle": "both visible checks must occur before closure",
+    "stakes": "the permit cannot close after only one mark",
+    "subtext": "none asserted",
+    "tactic_change": "inspection becomes authorization"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "stable_axis",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "The seated reviewers remain on opposite sides of one marked desk axis."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "visible_state_progression",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "Reviewer A uncovers one permit mark; Reviewer B checks it, pauses, and adds a second mark."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "decision_authority",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "The second visible mark transfers authority to close the permit review."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "stationary_pair_state_progression",
+    "stable_two_side_axis"
+  ],
+  "scene_problem": {
+    "primary": "DIALOGUE_POWER_TRANSFER",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "permit_review"
+  ],
+  "unknown_fact_types": []
+}

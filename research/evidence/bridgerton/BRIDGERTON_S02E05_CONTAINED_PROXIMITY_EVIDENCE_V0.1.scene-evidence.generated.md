@@ -26,14 +26,17 @@
 
 ```json
 {
-  "notes": "The canonical problem is inferred from the continuous visible distance change, held endpoint, and one short paraphrased visible-text anchor establishing relationship stakes; motive, consent, and contact are not asserted.",
+  "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown.",
   "primary": "ROMANTIC_PROXIMITY",
   "secondary": [],
   "source_refs": [
     "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+    "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S012",
+    "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S013",
+    "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S017",
     "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
     "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
-    "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-TA-WAVE1-001"
+    "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S026"
   ],
   "status": "INFERRED"
 }
@@ -162,7 +165,8 @@
 [
   "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
   "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-  "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
+  "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+  "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
 ]
 ```
 
@@ -318,14 +322,17 @@
   "picture_evidence_status": "PICTURE_OBSERVED",
   "production_take_status": "PRODUCTION_METHOD_UNKNOWN",
   "scene_problem": {
-    "notes": "The canonical problem is inferred from the continuous visible distance change, held endpoint, and one short paraphrased visible-text anchor establishing relationship stakes; motive, consent, and contact are not asserted.",
+    "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown.",
     "primary": "ROMANTIC_PROXIMITY",
     "secondary": [],
     "source_refs": [
       "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S001",
+      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S012",
+      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S013",
+      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S017",
       "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S024",
       "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S025",
-      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-TA-WAVE1-001"
+      "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001-S026"
     ],
     "status": "INFERRED"
   },
@@ -3547,7 +3554,8 @@
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
     "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
-    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown."
+    "Runtime promotion Wave 1 adds fresh picture review only; semantic audio and unproved story meaning remain unknown.",
+    "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
   ],
   "work_id": "BRIDGERTON-S02E05"
 }

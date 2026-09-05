@@ -1,0 +1,63 @@
+{
+  "case_id": "ORIGINAL-INITIAL-GEOMETRY-BEFORE-PROXIMITY",
+  "dramatic_structure": {
+    "goal": "make one non-contact distance change spatially legible",
+    "objectives": [
+      "continue the archive review at the shared table"
+    ],
+    "obstacle": "the room distance changes before the work can resume",
+    "stakes": "the changed relation would read as a teleport without the path",
+    "subtext": "none asserted",
+    "tactic_change": "separated work becomes close shared review"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "relation_start_zones",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "The archivists begin on opposite room sides with a long table between them."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "distance_change",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "Archivist B crosses the open floor and stops at the opposite end of the table."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "path_anchor",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "The doorway, table, and open crossing path must remain readable before the stop."
+    },
+    {
+      "fact_id": "FACT-04",
+      "fact_type": "relationship_context",
+      "source_ref": "locked-script.md#FACT-04",
+      "status": "LOCKED",
+      "value": "The archivists' established personal bond makes the voluntary distance change the scene's primary relation event."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "distance_change_requires_initial_geometry",
+    "relation_path_must_read"
+  ],
+  "scene_problem": {
+    "primary": "ROMANTIC_PROXIMITY",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "relationship_tension"
+  ],
+  "unknown_fact_types": []
+}

@@ -1,0 +1,58 @@
+{
+  "case_id": "ORIGINAL-ACTION-CONTINUOUS-CHAIN",
+  "dramatic_structure": {
+    "goal": "preserve an already readable continuous action chain",
+    "objectives": [
+      "clear and stop the cart"
+    ],
+    "obstacle": "the cart is already moving",
+    "stakes": "the lane must be clear before the cart stops",
+    "subtext": "none asserted",
+    "tactic_change": "clearance becomes restraint"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "cause_effect_chain",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "A loose wheel stop is visibly displaced beside a rolling cart."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "one_to_many_response",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "The cart crosses one clear lane while both crew members remain visible."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "safe_resolution",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "The lead places a chock and the cart stops inside the same continuous view."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "visible_action_source",
+    "target_state_change",
+    "result_readable",
+    "continuous_view_preserves_action_chain"
+  ],
+  "scene_problem": {
+    "primary": "ACTION_CAUSALITY",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "safe_physical_action"
+  ],
+  "unknown_fact_types": []
+}

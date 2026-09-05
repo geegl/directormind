@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import contextlib
+import copy
 import io
 import json
 import re
@@ -34,6 +35,7 @@ from convert_legacy_scene_evidence import (  # noqa: E402
     split_risk,
     validate_generated,
 )
+from validate_scene_evidence import load_json, validate_evidence  # noqa: E402
 
 
 LEGACY_FIELDS = {
@@ -87,6 +89,18 @@ FROZEN_ORIGINAL_ORDINALS = {
     "UNBELIEVABLE_S01E02_CONTAINED_TWO_PERSON_SEQUENCE_EVIDENCE_V0.1": 117,
 }
 
+CHERNOBYL_SOURCE_STEM = (
+    "CHERNOBYL_S01E05_HEARING_RECONSTRUCTION_VISUAL_EVIDENCE_V0.1"
+)
+
+
+def legacy_aligned_shots(source: Path, evidence: dict) -> list[dict]:
+    """Align immutable legacy rows with canonical Shots after a reviewed split."""
+    shots = evidence["shots"]
+    if source.stem == CHERNOBYL_SOURCE_STEM:
+        return [*shots[:165], *shots[166:]]
+    return shots
+
 
 class LegacySceneEvidenceConverterTests(unittest.TestCase):
     @classmethod
@@ -124,6 +138,25 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
 
     def test_all_converted_evidence_validates_and_keeps_boundaries(self) -> None:
         converted = [build_evidence(source) for source in self.sources]
+        integration = json.loads(
+            (REPO_ROOT / "research" / "grammar" / "runtime_integration.review.json").read_text(encoding="utf-8")
+        )
+        positive_problems: dict[str, str] = {}
+        for spec in integration["runtime_rule_specs"]:
+            evidence_id = next(
+                evidence["evidence_id"]
+                for evidence in converted
+                if any(
+                    rule["candidate_rule_id"] == spec["candidate_rule_id"]
+                    for rule in evidence["candidate_rules"]
+                )
+            )
+            positive_problems.setdefault(evidence_id, spec["scene_problem"])
+        wave1_text_anchor_ids = {
+            "MRR-S04E07-ACT-FOUR-VISUAL-001",
+            "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
+            "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+        }
         candidate_ids: list[str] = []
         canonical_families: list[str] = []
         operational_signatures: set[tuple[str, ...]] = set()
@@ -142,21 +175,19 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
             self.assertGreaterEqual(len(evidence["validation_warnings"]), 2)
             self.assertTrue(any("legacy_migration" in warning for warning in evidence["validation_warnings"]))
             self.assertTrue(any("frame and PTS" in warning for warning in evidence["validation_warnings"]))
-            if evidence["evidence_id"] in {
-                "MRR-S04E07-ACT-FOUR-VISUAL-001",
-                "MARRIAGE-STORY-2019-APARTMENT-SEQUENCE-001",
-                "BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
-            }:
+            if evidence["evidence_id"] in wave1_text_anchor_ids:
                 self.assertEqual(evidence["text_anchor_status"], "TEXT_ANCHOR_VERIFIED")
                 self.assertEqual(len(evidence["text_anchors"]), 1)
                 self.assertTrue(any(method["method_type"] == "TEXT_ANCHOR_REVIEW" for method in evidence["methods"]))
-                self.assertEqual(evidence["scene_problem"]["primary"], SCENE_META[source.stem].primary_problem)
+            else:
+                self.assertEqual(evidence["text_anchor_status"], "TEXT_ANCHOR_NOT_USED")
+                self.assertEqual(evidence["text_anchors"], [])
+            if evidence["evidence_id"] in positive_problems:
+                self.assertEqual(evidence["scene_problem"]["primary"], positive_problems[evidence["evidence_id"]])
                 self.assertEqual(evidence["scene_problem"]["status"], "INFERRED")
                 self.assertTrue(evidence["scene_problem"]["source_refs"])
                 self.assertTrue(any(shot["abstract_role_labels"] for shot in evidence["shots"]))
             else:
-                self.assertEqual(evidence["text_anchor_status"], "TEXT_ANCHOR_NOT_USED")
-                self.assertEqual(evidence["text_anchors"], [])
                 self.assertEqual(evidence["scene_problem"]["primary"], "LEGACY_SCENE_PROBLEM")
                 self.assertEqual(evidence["scene_problem"]["status"], "UNKNOWN")
                 self.assertEqual(evidence["scene_problem"]["source_refs"], [])
@@ -203,7 +234,7 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
         self.assertEqual(len(set(canonical_families)), 124)
         statuses = [item["audio_evidence_status"] for item in converted]
         self.assertEqual(statuses.count("BLOCKED_DIRECT_AUDITION"), 30)
-        self.assertEqual(statuses.count("SIGNAL_MEASURED_NOT_AUDITIONED"), 1)
+        self.assertEqual(statuses.count("AUDIO_OBSERVED"), 1)
 
     def test_existing_ordinals_are_frozen_and_succession_uses_new_slots(self) -> None:
         self.assertEqual(
@@ -226,6 +257,22 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
             ],
             121,
         )
+
+    def test_wire_s040_renewed_video_correction_cannot_regress_to_legacy_insert_claim(self) -> None:
+        source = next(path for path in self.sources if path.stem.startswith("THE_WIRE_"))
+        evidence = build_evidence(source)
+        shot = next(
+            item
+            for item in evidence["shots"]
+            if item["shot_id"] == "WIRE-S01E04-OLD-CASES-001-S040"
+        )
+        self.assertEqual(shot["shot_size"]["status"], "PICTURE_OBSERVED")
+        self.assertIn("person", shot["shot_size"]["value"].lower())
+        self.assertIn("medium", shot["shot_size"]["value"].lower())
+        self.assertEqual(shot["visible_action"]["status"], "PICTURE_OBSERVED")
+        self.assertEqual(shot["camera_motion"]["status"], "UNKNOWN")
+        self.assertEqual(shot["cut_motivation"]["status"], "UNKNOWN")
+        self.assertNotIn("extreme close", shot["shot_size"]["value"].lower())
 
     def test_succession_migration_preserves_eighty_eight_units_and_four_lineage_rows(self) -> None:
         source = next(path for path in self.sources if path.stem.startswith("SUCCESSION_"))
@@ -277,10 +324,17 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
         for source in self.sources:
             shot_rows, _rule_rows = parse_tables(source.read_text(encoding="utf-8"))
             evidence = build_evidence(source)
-            for order, (legacy, converted) in enumerate(zip(shot_rows, evidence["shots"]), start=1):
-                self.assertEqual(converted["order"], order)
+            aligned_shots = legacy_aligned_shots(source, evidence)
+            for order, (legacy, converted) in enumerate(zip(shot_rows, aligned_shots), start=1):
+                is_chernobyl_split_source = source.stem == CHERNOBYL_SOURCE_STEM
+                expected_order = order + int(is_chernobyl_split_source and order >= 166)
+                is_corrected_display = is_chernobyl_split_source and order == 165
+                self.assertEqual(converted["order"], expected_order)
                 self.assertEqual(converted["start"]["timecode"], parse_timecode(legacy["start"])[0])
-                self.assertEqual(converted["end"]["timecode"], parse_timecode(legacy["end"])[0])
+                self.assertEqual(
+                    converted["end"]["timecode"],
+                    "00:49:36.760" if is_corrected_display else parse_timecode(legacy["end"])[0],
+                )
                 frame_match = re.search(r"\[\s*F(\d+)\s*,\s*F(\d+)\s*\)", legacy["evidence_timecode"], re.I)
                 bare_match = re.search(r"\bF(\d+)\s*(?:–|—|-|\.\.)\s*F(\d+)\b", legacy["evidence_timecode"], re.I)
                 if frame_match or bare_match:
@@ -297,7 +351,10 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
                     time_base = re.search(r"\btime_base\s+([1-9]\d*/[1-9]\d*)", legacy["evidence_timecode"], re.I)
                     self.assertIsNotNone(time_base)
                     self.assertEqual(converted["start"]["pts"], int(pts_match.group(1)))
-                    self.assertEqual(converted["end"]["pts"], int(pts_match.group(2)))
+                    self.assertEqual(
+                        converted["end"]["pts"],
+                        38102528 if is_corrected_display else int(pts_match.group(2)),
+                    )
                     self.assertEqual(converted["start"]["time_base"], time_base.group(1))
                     self.assertEqual(converted["end"]["time_base"], time_base.group(1))
                 else:
@@ -323,7 +380,7 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
             shot_rows, _rule_rows = parse_tables(source.read_text(encoding="utf-8"))
             evidence = build_evidence(source)
             source_missing_high_risk_fallbacks = 0
-            for legacy, shot in zip(shot_rows, evidence["shots"]):
+            for legacy, shot in zip(shot_rows, legacy_aligned_shots(source, evidence)):
                 fallback = extract_legacy_fallback(legacy["AI_complexity"])
                 risk = split_risk(legacy["AI_complexity"])
                 if fallback is not None:
@@ -356,13 +413,50 @@ class LegacySceneEvidenceConverterTests(unittest.TestCase):
         self.assertEqual(high_risk_missing_fallback, 599)
         self.assertEqual(high_axis_counts, {"camera": 1034, "performance": 1788, "continuity": 1669})
 
-    def test_sound_of_metal_signal_is_auxiliary_not_semantic_audio(self) -> None:
+    def test_sound_of_metal_keeps_waveform_and_direct_audition_tracks_separate(self) -> None:
         source = next(path for path in self.sources if path.stem.startswith("SOUND_OF_METAL"))
         evidence = build_evidence(source)
-        self.assertEqual(evidence["audio_evidence_status"], "SIGNAL_MEASURED_NOT_AUDITIONED")
-        self.assertEqual(len(evidence["auxiliary_evidence"]), 1)
-        self.assertEqual(evidence["auxiliary_evidence"][0]["status"], "SIGNAL_MEASURED_NOT_AUDITIONED")
+        self.assertEqual(evidence["audio_evidence_status"], "AUDIO_OBSERVED")
+        self.assertEqual({shot["audio_status"] for shot in evidence["shots"]}, {"AUDIO_OBSERVED"})
+        self.assertEqual(len(evidence["auxiliary_evidence"]), 17)
+        self.assertEqual(evidence["auxiliary_evidence"][0]["status"], "SIGNAL_MEASURED")
+        self.assertTrue(evidence["auxiliary_evidence"][0]["measurements"]["direct_audition_completed"])
+        audio_events = [
+            item for item in evidence["auxiliary_evidence"]
+            if item["kind"] == "AUDIO_AUDIT_EVENT"
+        ]
+        self.assertEqual(len(audio_events), 16)
+        self.assertTrue(all(item["status"] == "AUDIO_OBSERVED" for item in audio_events))
+        direct_methods = [
+            item for item in evidence["methods"]
+            if item["method_type"] == "AUDIO_DIRECT_AUDITION"
+        ]
+        self.assertEqual(len(direct_methods), 1)
+        self.assertEqual(direct_methods[0]["status"], "MANUAL_REVIEW_RECORDED")
+        self.assertEqual(len(direct_methods[0]["source_refs"]), 25)
+        self.assertEqual(evidence["audio_audit"]["ambience"]["status"], "AUDIO_OBSERVED")
+        self.assertEqual(evidence["audio_audit"]["silence_intervals"]["status"], "AUDIO_OBSERVED")
+        self.assertEqual(evidence["audio_audit"]["audio_information_change"]["status"], "AUDIO_OBSERVED")
+        self.assertEqual(evidence["audio_audit"]["subjective_sound"]["status"], "UNKNOWN")
+        self.assertEqual(evidence["audio_audit"]["object_sound"]["status"], "UNKNOWN")
+        self.assertIn("subjective", evidence["unknowns"][0]["statement"].lower())
+        self.assertNotIn("not directly auditioned", evidence["unknowns"][0]["statement"].lower())
         self.assertTrue(all(rule["promotion_status"] == "BLOCKED_BY_UNKNOWN" for rule in evidence["candidate_rules"]))
+
+        mutated = copy.deepcopy(evidence)
+        first_event = next(
+            item for item in mutated["auxiliary_evidence"]
+            if item["kind"] == "AUDIO_AUDIT_EVENT"
+        )
+        first_event["source_refs"].pop()
+        report = validate_evidence(
+            mutated,
+            load_json(SKILL_ROOT / "references" / "scene-evidence.schema.json"),
+        )
+        self.assertIn(
+            "AUXILIARY-AUDIO-TIME-REF",
+            {item["code"] for item in report["issues"]},
+        )
 
     def test_bear_missing_non_applicability_is_preserved_as_null_lineage(self) -> None:
         source = next(path for path in self.sources if path.stem == "THE_BEAR_S01E07_REVIEW_EVIDENCE_V0.1")

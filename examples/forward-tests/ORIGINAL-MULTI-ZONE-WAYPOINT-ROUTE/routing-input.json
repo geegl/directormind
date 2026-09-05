@@ -1,0 +1,56 @@
+{
+  "case_id": "ORIGINAL-MULTI-ZONE-WAYPOINT-ROUTE",
+  "dramatic_structure": {
+    "goal": "keep a three-zone delivery route readable",
+    "objectives": [
+      "reach the waiting receiver"
+    ],
+    "obstacle": "each threshold hides the next room until crossed",
+    "stakes": "the handoff cannot happen in the wrong service zone",
+    "subtext": "none asserted",
+    "tactic_change": "route following becomes terminal handoff"
+  },
+  "locked_facts": [
+    {
+      "fact_id": "FACT-01",
+      "fact_type": "route_continuity",
+      "source_ref": "locked-script.md#FACT-01",
+      "status": "LOCKED",
+      "value": "The courier's trip from service corridor through stair landing to filter room occurs in continuous present time."
+    },
+    {
+      "fact_id": "FACT-02",
+      "fact_type": "zone_waypoints",
+      "source_ref": "locked-script.md#FACT-02",
+      "status": "LOCKED",
+      "value": "A blue door and a yellow stair rail are the two project-original waypoints that keep the three zones distinct."
+    },
+    {
+      "fact_id": "FACT-03",
+      "fact_type": "destination_vector",
+      "source_ref": "locked-script.md#FACT-03",
+      "status": "LOCKED",
+      "value": "The filter-room hatch is the required destination vector because the receiver waits beyond it."
+    }
+  ],
+  "priority_constraints": [],
+  "rights_boundary": {
+    "contains_private_script": false,
+    "contains_reference_surface": false,
+    "project_original": true
+  },
+  "routing_signals": [
+    "continuous_multi_zone_route",
+    "waypoint_orientation_required"
+  ],
+  "scene_problem": {
+    "primary": "SUSPENSE_INFORMATION_ASYMMETRY",
+    "secondary": [],
+    "status": "LOCKED"
+  },
+  "schema_version": "director-routing-input/0.1",
+  "subject_matter_tags": [
+    "safe_handoff"
+  ],
+  "unknown_fact_types": []
+}

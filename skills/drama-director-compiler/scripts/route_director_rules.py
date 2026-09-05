@@ -129,6 +129,7 @@ def route_scene(scene: dict[str, Any], grammar: dict[str, Any]) -> dict[str, Any
             rejected.append({
                 "rule_id": rule_id,
                 "rejection_reason_codes": sorted(reasons),
+                "matched_not_applicable_signal_ids": sorted(not_applicable),
                 "missing_fact_types": sorted(missing_types),
                 "blocking_fact_ids": sorted(blocking_fact_ids),
                 "conflicting_rule_ids": sorted(conflicting_rule_ids),
@@ -155,6 +156,7 @@ def route_scene(scene: dict[str, Any], grammar: dict[str, Any]) -> dict[str, Any
             rejected.append({
                 "rule_id": rule_id,
                 "rejection_reason_codes": ["EXPLICIT_RULE_CONFLICT"],
+                "matched_not_applicable_signal_ids": [],
                 "missing_fact_types": [],
                 "blocking_fact_ids": [],
                 "conflicting_rule_ids": conflicting,
@@ -170,6 +172,7 @@ def route_scene(scene: dict[str, Any], grammar: dict[str, Any]) -> dict[str, Any
             rejected.append({
                 "rule_id": rule_id,
                 "rejection_reason_codes": ["CAP_EXCEEDED_LOWER_PRECEDENCE"],
+                "matched_not_applicable_signal_ids": [],
                 "missing_fact_types": [],
                 "blocking_fact_ids": [],
                 "conflicting_rule_ids": [],

@@ -19,7 +19,7 @@ INDEX_PATH = REPOSITORY_ROOT / "research" / "grammar" / "candidate_rule_index.js
 MATRIX_PATH = REPOSITORY_ROOT / "research" / "grammar" / "cross_work_support_matrix.json"
 REPORT_PATH = REPOSITORY_ROOT / "research" / "validation" / "candidate-rule-validation.json"
 SCHEMA_PATH = SKILL_ROOT / "references" / "candidate-director-rule.schema.json"
-WAVE1_REVIEW_PATH = REPOSITORY_ROOT / "research" / "grammar" / "runtime_rule_promotion_wave1.review.json"
+INTEGRATION_REVIEW_PATH = REPOSITORY_ROOT / "research" / "grammar" / "runtime_integration.review.json"
 
 sys.path.insert(0, str(SCRIPT_DIR))
 from build_candidate_rule_index import build_all, render_matrix  # noqa: E402
@@ -32,6 +32,8 @@ PROMOTION_STATES = {
     "GENERAL_DEFAULT",
     "REJECTED",
     "BLOCKED_BY_UNKNOWN",
+    "EVIDENCE_GAP_PENDING",
+    "EXISTING_MATERIAL_REVIEW_REQUIRED",
 }
 RELATIONS = {"SUPPORTS", "NARROWS", "CONTRADICTS", "COUNTEREXAMPLE", "DUPLICATE"}
 CANDIDATE_KEYS = {
@@ -50,6 +52,7 @@ CANDIDATE_KEYS = {
     "unknown_dependencies",
     "counterexamples",
     "promotion",
+    "runtime_integration",
     "rights_boundary",
     "legacy_lineage",
 }
@@ -243,12 +246,21 @@ def _validate_roles_problem_audio_boundary(
 
     boundary = candidate.get("applicability_evidence", {})
     if boundary.get("status") == "VERIFIED":
-        if evidence.get("boundary_status") != "NATURAL_START_END_VERIFIED":
+        definite_boundary_statuses = {
+            "NATURAL_START_END_VERIFIED",
+            "START_INTERNAL_END_VERIFIED",
+            "START_VERIFIED_END_INTERNAL",
+            "BOTH_INTERNAL_SELECTED",
+        }
+        if (
+            evidence.get("boundary_status") not in definite_boundary_statuses
+            or evidence.get("boundary_evidence", {}).get("status") != "PICTURE_OBSERVED"
+        ):
             _issue(
                 issues,
                 "NATURAL-BOUNDARY-PROVENANCE",
                 f"{path}.applicability_evidence.status",
-                "Natural-scene applicability evidence requires a verified natural source boundary.",
+                "Applicability evidence requires a picture-observed definite source interval boundary.",
             )
         _validate_source_refs(
             boundary.get("source_refs"),
@@ -307,8 +319,6 @@ def _verified_relations(
             and relation.get("work_id") == target_evidence["work_id"]
             and relation.get("evidence_id") == target_evidence["evidence_id"]
             and target_evidence["work_id"] != source_work
-            and target_normalized.get("canonical_rule_family")
-            == candidate.get("canonical_rule_family")
             and _verified_review_ref(
                 candidate.get("candidate_rule_id"),
                 relation,
@@ -354,8 +364,6 @@ def _verified_relations(
             and counterexample.get("work_id") == target_evidence["work_id"]
             and counterexample.get("evidence_id") == target_evidence["evidence_id"]
             and target_evidence["work_id"] != source_work
-            and target_normalized.get("canonical_rule_family")
-            == candidate.get("canonical_rule_family")
             and _verified_review_ref(
                 candidate.get("candidate_rule_id"),
                 counterexample,
@@ -391,11 +399,11 @@ def _verified_forward_tests(
     count = 0
     seen: set[str] = set()
     seen_refs: set[str] = set()
-    promotion_review = _read_json(WAVE1_REVIEW_PATH)
+    promotion_review = _read_json(INTEGRATION_REVIEW_PATH)
     promotion = next(
         (
             item
-            for item in promotion_review.get("promotions", [])
+            for item in promotion_review.get("runtime_rule_specs", [])
             if item.get("candidate_rule_id") == candidate.get("candidate_rule_id")
         ),
         None,
@@ -533,6 +541,13 @@ def _validate_promotion(
     actual_works = len(support_work_ids)
     actual_forward_tests = _verified_forward_tests(candidate, path, issues)
     approved = _human_review_approved(candidate, path, issues)
+    integration_status = candidate.get("runtime_integration", {}).get("final_status")
+    nonpositive_final = integration_status in {
+        "SUPPORTING_EVIDENCE",
+        "BOUNDARY_OR_COUNTEREXAMPLE",
+        "MERGED_DUPLICATE",
+        "REJECTED_WITH_REASON",
+    }
     if promotion.get("verified_support_work_count") != actual_works:
         _issue(issues, "PROMOTION-WORK-COUNT", path, "Declared support-work count does not match cited verified support relations.")
     if promotion.get("verified_same_trigger_counterexample_count") != actual_counterexamples:
@@ -569,9 +584,10 @@ def _validate_promotion(
             path,
             "Promotion UNKNOWN flag must match the candidate's actual dependencies.",
         )
-    if unknown and status != "BLOCKED_BY_UNKNOWN":
-        _issue(issues, "PROMOTION-UNKNOWN-LEAK", path, "UNKNOWN-dependent candidate must remain BLOCKED_BY_UNKNOWN.")
-    if status != "BLOCKED_BY_UNKNOWN":
+    pending_states = {"BLOCKED_BY_UNKNOWN", "EVIDENCE_GAP_PENDING", "EXISTING_MATERIAL_REVIEW_REQUIRED"}
+    if unknown and status not in pending_states and not nonpositive_final:
+        _issue(issues, "PROMOTION-UNKNOWN-LEAK", path, "UNKNOWN-dependent positive candidate must remain pending.")
+    if status not in pending_states and not nonpositive_final:
         dependency_codes = {
             "audio": "PROMOTION-AUDIO-UNKNOWN",
             "functional_roles": "PROMOTION-ROLE-UNKNOWN",
@@ -580,12 +596,12 @@ def _validate_promotion(
         for key, code in dependency_codes.items():
             if expected_dependencies[key]:
                 _issue(issues, code, path, f"UNKNOWN {key.replace('_', ' ')} blocks promotion.")
-    if candidate.get("scene_problem", {}).get("status") == "UNKNOWN" and status != "BLOCKED_BY_UNKNOWN":
+    if candidate.get("scene_problem", {}).get("status") == "UNKNOWN" and status not in pending_states and not nonpositive_final:
         _issue(issues, "PROMOTION-SCENE-PROBLEM-UNKNOWN", path, "UNKNOWN scene problem cannot be promoted.")
     if any(confidence.get(axis) == "UNKNOWN" for axis in ("within_source", "transfer", "execution")):
-        if status != "BLOCKED_BY_UNKNOWN":
+        if status not in pending_states and not nonpositive_final:
             _issue(issues, "PROMOTION-CONFIDENCE-UNKNOWN", path, "UNKNOWN confidence dimension blocks promotion.")
-    if status == "SINGLE_WORK_CANDIDATE" and actual_works != 1:
+    if status == "SINGLE_WORK_CANDIDATE" and actual_works != 1 and not nonpositive_final:
         _issue(issues, "PROMOTION-SINGLE-WORK", path, "SINGLE_WORK_CANDIDATE must have exactly one verified support work.")
     if status == "CROSS_WORK_SUPPORTED":
         if actual_works < 2 or actual_counterexamples < 1 or actual_unknown:
@@ -682,7 +698,7 @@ def validate_repository(
             _issue(issues, "MATRIX-MEMBER-COUNT", family_id, "Matrix member count is wrong.")
         if row.get("grouped_work_count") != len(set(family.get("work_ids", []))):
             _issue(issues, "MATRIX-GROUPED-WORK-COUNT", family_id, "Grouped-work count is wrong.")
-        if row.get("promotion_eligibility") != "BLOCKED_BY_UNKNOWN":
+        if row.get("promotion_eligibility") == "CROSS_WORK_SUPPORTED":
             if not row.get("verified_unrelated_same_trigger_counterexample_ids"):
                 _issue(issues, "MATRIX-COUNTEREXAMPLE-GATE", family_id, "Eligible family lacks a verified same-trigger contrary case.")
 

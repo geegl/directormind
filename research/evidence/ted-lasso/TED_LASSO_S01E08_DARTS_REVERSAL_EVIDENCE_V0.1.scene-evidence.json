@@ -3,11 +3,17 @@
   "evidence_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001",
   "work_id": "TED-LASSO-S01E08",
   "scene_problem": {
-    "primary": "LEGACY_SCENE_PROBLEM",
+    "primary": "PUBLIC_REVELATION",
     "secondary": [],
-    "status": "UNKNOWN",
-    "source_refs": [],
-    "notes": "The legacy primary label DIALOGUE_POWER_TRANSFER is retained only as non-operational lineage and was not proved by structural conversion."
+    "status": "INFERRED",
+    "source_refs": [
+      "TED-LASSO-S01E08-DARTS-REVERSAL-001-S128",
+      "TED-LASSO-S01E08-DARTS-REVERSAL-001-S129",
+      "TED-LASSO-S01E08-DARTS-REVERSAL-001-S133",
+      "TED-LASSO-S01E08-DARTS-REVERSAL-001-S140",
+      "TED-LASSO-S01E08-DARTS-REVERSAL-001-S147"
+    ],
+    "notes": "The source-neutral scene problem is inferred only for the promoted visual mechanism; semantic audio and source-specific identities remain unknown."
   },
   "scene_unit_type": "PARALLEL_INTERCUT_SEQUENCE",
   "boundary_status": "BOTH_INTERNAL_SELECTED",
@@ -29789,7 +29795,18 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [],
+      "abstract_role_labels": [
+        {
+          "appearance_id": "APPEARANCE-S128",
+          "functional_role": "result_receiver",
+          "status": "INFERRED",
+          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+          "appearance_track_id": null,
+          "source_refs": [
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S128"
+          ]
+        }
+      ],
       "blocking": {
         "claim_id": "S128-BLOCK",
         "status": "INFERRED",
@@ -34209,7 +34226,18 @@
         ],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "abstract_role_labels": [],
+      "abstract_role_labels": [
+        {
+          "appearance_id": "APPEARANCE-S147",
+          "functional_role": "action_source",
+          "status": "INFERRED",
+          "appearance_identity_status": "PICTURE_OBSERVED_WITHIN_SHOT",
+          "appearance_track_id": null,
+          "source_refs": [
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-S147"
+          ]
+        }
+      ],
       "blocking": {
         "claim_id": "S147-BLOCK",
         "status": "INFERRED",
@@ -34473,6 +34501,155 @@
       "source_refs": [],
       "unknowns": [
         "All semantic audio facts remain unknown."
+      ]
+    },
+    {
+      "method_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY",
+      "method_type": "PICTURE_FRAME_REVIEW",
+      "status": "MANUAL_REVIEW_RECORDED",
+      "description": "The exhaustive runtime-integration pass re-opened the registered local video at the listed canonical Shot intervals. Temporary review images remain outside the repository.",
+      "repository_command": null,
+      "tool_version_status": "VERSION_UNKNOWN",
+      "source_refs": [
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S001",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S002",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S003",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S004",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S005",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S006",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S007",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S008",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S009",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S010",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S011",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S012",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S013",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S014",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S015",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S016",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S017",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S018",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S019",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S020",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S021",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S022",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S023",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S024",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S025",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S026",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S027",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S028",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S029",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S030",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S031",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S032",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S033",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S034",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S035",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S036",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S037",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S038",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S039",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S040",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S041",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S042",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S043",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S044",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S045",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S046",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S047",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S048",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S049",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S050",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S051",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S052",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S053",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S054",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S055",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S056",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S057",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S058",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S059",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S060",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S061",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S062",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S063",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S064",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S065",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S066",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S067",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S068",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S069",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S070",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S071",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S072",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S073",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S074",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S075",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S076",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S077",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S078",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S079",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S080",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S081",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S082",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S083",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S084",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S085",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S086",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S087",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S088",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S089",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S090",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S091",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S092",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S093",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S094",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S095",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S096",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S097",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S098",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S099",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S100",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S101",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S102",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S103",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S104",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S105",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S106",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S107",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S108",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S109",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S110",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S111",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S112",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S113",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S114",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S115",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S122",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S128",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S129",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S130",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S131",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S132",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S133",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S134",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S135",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S136",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S137",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S138",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S139",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S140",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S141",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S142",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S143",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S144",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S145",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S146",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S147"
+      ],
+      "unknowns": [
+        "Exact identity, dialogue, sound, intention, and production method remain unknown."
       ]
     }
   ],
@@ -34962,7 +35139,7 @@
         "source_refs": [],
         "notes": "Migrated conservatively from the checked-in legacy evidence ledger."
       },
-      "audio_dependency": true,
+      "audio_dependency": false,
       "continuity": "PENDING_HUMAN_REVIEW: no operational continuity instruction is authorized.",
       "AI_risk": {
         "camera": {
@@ -35003,7 +35180,8 @@
       "counterexample_ids": [],
       "source_method_ids": [
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-METHOD-LEGACY-PICTURE-REVIEW",
-        "TED-LASSO-S01E08-DARTS-REVERSAL-001-METHOD-STRUCTURAL-CONVERSION"
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-METHOD-STRUCTURAL-CONVERSION",
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-METHOD-EXHAUSTIVE-LOCAL-FRAME-REPLAY"
       ],
       "evidence_scene_ids": [
         "TED-LASSO-S01E08-DARTS-REVERSAL-001"
@@ -35046,8 +35224,7 @@
       "blocks_rule_ids": [
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C01-REGISTER-PUBLIC-OBJECT-CONTEST-GEOMETRY",
         "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C02-RETURN-THROUGH-PRIMARY-ANCHOR-AFTER-DISTINCT-LOCATION-BLOCK",
-        "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C03-SEPARATE-PERFORMER-ACTION-TARGET-STATE-AND-RESULT-CLAIM",
-        "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C04-DISTRIBUTE-POST-RESULT-BODY-STATES-BY-NEXT-ACTION"
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C03-SEPARATE-PERFORMER-ACTION-TARGET-STATE-AND-RESULT-CLAIM"
       ]
     },
     {
@@ -35080,6 +35257,7 @@
   "validation_status": "HUMAN_REVIEW_PENDING",
   "validation_warnings": [
     "Legacy candidate rows are preserved only under legacy_migration; operational rule fields remain pending human review and are not authorized.",
-    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed."
+    "Only explicitly recorded frame and PTS endpoints were migrated; missing endpoints remain null, displayed source timecodes remain the deterministic basis, and source media was not replayed.",
+    "Exhaustive runtime integration adds source-bound picture review only; semantic audio, identities, and unproved causes remain unknown."
   ]
 }

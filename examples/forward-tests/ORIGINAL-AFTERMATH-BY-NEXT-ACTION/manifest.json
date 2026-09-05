@@ -1,0 +1,9 @@
+{
+  "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C04-DISTRIBUTE-POST-RESULT-BODY-STATES-BY-NEXT-ACTION",
+  "canonical_rule_family": "AFTERMATH-AND-TERMINAL-STATE",
+  "rule_id": "DR-AFTERMATH-BY-NEXT-ACTION",
+  "schema_version": "forward-test-result/0.1",
+  "status": "HUMAN_REVIEW_PENDING",
+  "test_case_id": "ORIGINAL-AFTERMATH-BY-NEXT-ACTION",
+  "test_mode": "POSITIVE"
+}
