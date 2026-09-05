@@ -70,6 +70,10 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
             existing_review_count,
         )
         self.assertEqual(final_count + pending_count + existing_review_count, 124)
+        self.assertEqual(final_count, 63)
+        self.assertEqual(pending_count, 61)
+        self.assertEqual(existing_review_count, 0)
+        self.assertEqual(len(self.review["evidence_gaps"]), 15)
         self.assertEqual(report["mechanism_family_count"], 16)
         self.assertEqual(report["runtime_rule_count"], rule_count)
         self.assertEqual(report["positive_forward_case_count"], rule_count)
@@ -210,12 +214,51 @@ class ExhaustiveRuntimeIntegrationTests(unittest.TestCase):
             )
         )
 
-        spatial_gap = gaps["GAP-SPATIAL-CANDIDATE-RULE-BINDING"]
-        self.assertEqual(spatial_gap["candidate_count"], 11)
+        self.assertNotIn("GAP-SPATIAL-CANDIDATE-RULE-BINDING", gaps)
+        reviewed_spatial_outcomes = {
+            "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES": "MERGED_DUPLICATE",
+            "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-ANCHOR-EXPLANATION-WITH-VISUALIZED-PROCESS-001": "BOUNDARY_OR_COUNTEREXAMPLE",
+            "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001": "SUPPORTING_EVIDENCE",
+            "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C01": "BOUNDARY_OR_COUNTEREXAMPLE",
+            "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C02": "MERGED_DUPLICATE",
+            "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C01-REGISTER-ENSEMBLE-GEOMETRY-BEFORE-DISTRIBUTED-CHANGE": "BOUNDARY_OR_COUNTEREXAMPLE",
+            "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C02-EXTRA-BODY-ANCHOR-IN-CONTAINED-ALTERNATION": "SUPPORTING_EVIDENCE",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C01-REGISTER-PUBLIC-OBJECT-CONTEST-GEOMETRY": "EVIDENCE_GAP_PENDING",
+            "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C02-RETURN-THROUGH-PRIMARY-ANCHOR-AFTER-DISTINCT-LOCATION-BLOCK": "EVIDENCE_GAP_PENDING",
+            "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C02-PARTIAL-COMPANION-ANCHOR-IN-CONTAINED-TWO-HANDER": "SUPPORTING_EVIDENCE",
+            "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C03-RE-REGISTER-CONTAINED-GEOMETRY-AFTER-PARALLEL-INSERT": "EVIDENCE_GAP_PENDING",
+        }
+        self.assertEqual(
+            {
+                candidate_id: dispositions[candidate_id]["final_status"]
+                for candidate_id in reviewed_spatial_outcomes
+            },
+            reviewed_spatial_outcomes,
+        )
+        public_gap = gaps["GAP-PUBLIC-OBJECT-CONTEST-GEOMETRY-CROSS-WORK"]
+        return_gap = gaps["GAP-DISTINCT-LOCATION-RETURN-ANCHOR-BOUNDARY"]
+        self.assertEqual(public_gap["candidate_count"], 1)
+        self.assertEqual(return_gap["candidate_count"], 2)
         self.assertTrue(
             all(
-                dispositions[candidate_id]["final_status"] == "EVIDENCE_GAP_PENDING"
-                for candidate_id in spatial_gap["candidate_rule_ids"]
+                gap["gap_scope"] == "EXTERNAL_SUPPLEMENTATION"
+                and gap["missing_evidence_type"]
+                and gap["why_existing_material_cannot_close"]
+                and gap["existing_review_refs"]
+                for gap in gaps.values()
+            )
+        )
+        report_gaps = {
+            item["gap_id"]: item for item in self.report["prioritized_evidence_gaps"]
+        }
+        self.assertEqual(set(report_gaps), set(gaps))
+        self.assertTrue(
+            all(
+                report_gaps[gap_id]["missing_evidence_type"]
+                == gap["missing_evidence_type"]
+                and report_gaps[gap_id]["existing_review_refs"]
+                == gap["existing_review_refs"]
+                for gap_id, gap in gaps.items()
             )
         )
         spatial_rule = "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"

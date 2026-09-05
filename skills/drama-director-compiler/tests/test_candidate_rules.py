@@ -553,7 +553,7 @@ class CandidateRuleContractTests(unittest.TestCase):
         candidate_ids = {
             candidate["candidate_rule_id"] for candidate in self.index["candidates"]
         }
-        self.assertEqual(len(FAMILY_OVERRIDES), 46)
+        self.assertEqual(len(FAMILY_OVERRIDES), 47)
         self.assertLessEqual(set(FAMILY_OVERRIDES), candidate_ids)
         self.assertEqual(
             {

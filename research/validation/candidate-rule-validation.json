@@ -10,9 +10,9 @@
   "issues": [],
   "promotion_status_counts": {
     "CROSS_WORK_SUPPORTED": 7,
-    "EVIDENCE_GAP_PENDING": 69,
+    "EVIDENCE_GAP_PENDING": 61,
     "REJECTED": 3,
-    "SINGLE_WORK_CANDIDATE": 45
+    "SINGLE_WORK_CANDIDATE": 53
   },
   "runtime_authorized_count": 7,
   "schema_version": "candidate-rule-validation/0.1",

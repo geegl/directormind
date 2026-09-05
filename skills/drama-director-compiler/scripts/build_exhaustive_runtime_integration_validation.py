@@ -268,6 +268,10 @@ def build_report() -> dict[str, Any]:
                 "priority": item["priority"],
                 "gap_id": item["gap_id"],
                 "candidate_count": len(item["candidate_rule_ids"]),
+                "gap_scope": item["gap_scope"],
+                "missing_evidence_type": item["missing_evidence_type"],
+                "why_existing_material_cannot_close": item["why_existing_material_cannot_close"],
+                "existing_review_refs": item["existing_review_refs"],
                 "required_review": item["required_review"],
                 "close_condition": item["close_condition"],
             }

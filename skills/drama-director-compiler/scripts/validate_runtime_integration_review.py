@@ -145,6 +145,8 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
     moving_shots_by_review: dict[str, set[str]] = {}
     auditioned_shots_by_review: dict[str, set[str]] = {}
     audio_observations_by_review: dict[str, dict[str, dict]] = {}
+    audio_candidate_bindings_by_candidate: dict[str, tuple[str, dict[str, Any]]] = {}
+    audio_candidate_binding_ids: list[str] = []
     for index, item in enumerate(evidence_reviews):
         if not isinstance(item, dict):
             continue
@@ -183,6 +185,7 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
         audio_status = item.get("audio_review_status")
         audio_method_id = item.get("audio_method_id")
         audio_observations = item.get("audio_observations", [])
+        audio_candidate_bindings = item.get("audio_candidate_bindings", [])
         if audio_status == "DIRECT_AUDITION_COMPLETE":
             if (
                 not isinstance(audio_method_id, str)
@@ -218,7 +221,7 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
                     f"{path}.audio_method_id",
                     "Direct audition must bind a recorded AUDIO_DIRECT_AUDITION method covering exactly the auditioned Shots in its canonical evidence record.",
                 )
-        elif audio_method_id is not None or auditioned_shot_ids or audio_observations:
+        elif audio_method_id is not None or auditioned_shot_ids or audio_observations or audio_candidate_bindings:
             add_issue(
                 issues,
                 "INTEGRATION-AUDIO-OBSERVATION-WITHOUT-AUDITION",
@@ -326,6 +329,102 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
                     "Direct-audition observations must collectively cover every declared auditioned Shot.",
                 )
 
+            binding_ids = [
+                binding.get("candidate_rule_id")
+                for binding in audio_candidate_bindings
+                if isinstance(binding, dict)
+            ]
+            expected_binding_ids = {
+                candidate.get("candidate_rule_id")
+                for candidate in evidence.get("candidate_rules", [])
+                if isinstance(candidate, dict) and candidate.get("audio_dependency") is True
+            }
+            if not _unique(binding_ids) or set(binding_ids) != expected_binding_ids:
+                add_issue(
+                    issues,
+                    "INTEGRATION-AUDIO-CANDIDATE-AUTHORITY-SET",
+                    f"{path}.audio_candidate_bindings",
+                    "Direct-audition candidate authority must uniquely and exactly cover every audio-dependent canonical candidate in this evidence record.",
+                )
+            for binding_index, binding in enumerate(audio_candidate_bindings):
+                if not isinstance(binding, dict):
+                    continue
+                binding_path = f"{path}.audio_candidate_bindings[{binding_index}]"
+                candidate_rule_id = binding.get("candidate_rule_id")
+                audio_candidate_binding_ids.append(candidate_rule_id)
+                if candidate_rule_id not in audio_candidate_bindings_by_candidate:
+                    audio_candidate_bindings_by_candidate[candidate_rule_id] = (
+                        item.get("review_id"),
+                        binding,
+                    )
+                source = candidate_by_id.get(candidate_rule_id)
+                if source is None or source[0].get("evidence_id") != item.get("evidence_id"):
+                    add_issue(
+                        issues,
+                        "INTEGRATION-AUDIO-CANDIDATE-AUTHORITY-CANDIDATE",
+                        binding_path,
+                        "Audio candidate authority must name an audio-dependent canonical candidate from this exact evidence review.",
+                    )
+                    continue
+                source_candidate = source[1]
+                if source_candidate.get("audio_dependency") is not True:
+                    add_issue(
+                        issues,
+                        "INTEGRATION-AUDIO-CANDIDATE-AUTHORITY-DEPENDENCY",
+                        binding_path,
+                        "Audio candidate authority may bind only a canonical audio-dependent candidate.",
+                    )
+                authorized_ids = binding.get("authorized_observation_ids", [])
+                authorized_observations = [
+                    audio_observations_by_review.get(item.get("review_id"), {}).get(observation_id)
+                    for observation_id in authorized_ids
+                ]
+                if (
+                    not authorized_ids
+                    or not _unique(authorized_ids)
+                    or any(observation is None for observation in authorized_observations)
+                ):
+                    add_issue(
+                        issues,
+                        "INTEGRATION-AUDIO-CANDIDATE-AUTHORITY-OBSERVATION",
+                        f"{binding_path}.authorized_observation_ids",
+                        "Authorized Observation IDs must be nonempty, unique and resolve inside this direct-audition review.",
+                    )
+                    continue
+                binding_refs = set(binding.get("source_refs", []))
+                canonical_refs = set(source_candidate.get("evidence_shot_ids", []))
+                observation_refs = {
+                    source_ref
+                    for observation in authorized_observations
+                    if isinstance(observation, dict)
+                    for source_ref in observation.get("source_refs", [])
+                }
+                expected_binding_refs = canonical_refs.intersection(observation_refs)
+                if (
+                    not binding_refs
+                    or binding_refs != expected_binding_refs
+                    or not binding_refs.issubset(set(auditioned_shot_ids))
+                    or any(
+                        not binding_refs.intersection(observation.get("source_refs", []))
+                        for observation in authorized_observations
+                        if isinstance(observation, dict)
+                    )
+                ):
+                    add_issue(
+                        issues,
+                        "INTEGRATION-AUDIO-CANDIDATE-AUTHORITY-REF",
+                        f"{binding_path}.source_refs",
+                        "Audio candidate authority refs must exactly equal the canonical candidate Shots covered by its authorized direct-audition observations.",
+                    )
+
+    if not _unique(audio_candidate_binding_ids):
+        add_issue(
+            issues,
+            "INTEGRATION-AUDIO-CANDIDATE-AUTHORITY-DUPLICATE",
+            "evidence_reviews",
+            "An audio candidate may be authorized by exactly one direct-audition evidence review.",
+        )
+
     dispositions = review.get("candidate_dispositions", [])
     disposition_ids = [item.get("candidate_rule_id") for item in dispositions if isinstance(item, dict)]
     if not _unique(disposition_ids) or set(disposition_ids) != authority_candidate_ids:
@@ -354,13 +453,50 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
     for gap_index, gap in enumerate(gaps):
         if not isinstance(gap, dict):
             continue
+        gap_path = f"evidence_gaps[{gap_index}]"
         gap_candidate_ids = gap.get("candidate_rule_ids", [])
         if gap.get("candidate_count") != len(gap_candidate_ids):
             add_issue(
                 issues,
                 "INTEGRATION-GAP-COUNT",
-                f"evidence_gaps[{gap_index}]",
+                gap_path,
                 "Evidence-gap candidate_count must equal the exact listed candidate set.",
+            )
+        expected_existing_review_refs = {
+            review_id
+            for candidate_rule_id in gap_candidate_ids
+            for review_id in disposition_by_id.get(candidate_rule_id, {}).get("review_ids", [])
+        }
+        if (
+            gap.get("gap_scope") != "EXTERNAL_SUPPLEMENTATION"
+            or set(gap.get("existing_review_refs", [])) != expected_existing_review_refs
+            or not gap.get("missing_evidence_type")
+            or not gap.get("why_existing_material_cannot_close")
+        ):
+            add_issue(
+                issues,
+                "INTEGRATION-EXTERNAL-GAP-EVIDENCE",
+                gap_path,
+                "An external evidence gap must name the missing evidence, explain why reviewed material cannot close it, and exactly cite every existing candidate review.",
+            )
+        external_gap_text = " ".join(
+            str(gap.get(key, ""))
+            for key in ("missing_evidence_type", "required_review", "close_condition")
+        ).casefold()
+        existing_material_markers = (
+            "reclassify",
+            "reclassify_existing",
+            "review existing",
+            "existing material",
+            "reopen existing",
+            "re-open existing",
+        )
+        if any(marker in external_gap_text for marker in existing_material_markers):
+            add_issue(
+                issues,
+                "INTEGRATION-EXTERNAL-GAP-RECLASSIFICATION",
+                gap_path,
+                "Reclassifying already reviewed material is unfinished existing-material review, not external supplementation.",
             )
         for candidate_rule_id in gap_candidate_ids:
             gap_memberships.setdefault(candidate_rule_id, []).append(gap.get("gap_id"))
@@ -398,6 +534,18 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
                 "INTEGRATION-CANDIDATE-CLAIM-REF",
                 path,
                 "Disposition refs must come only from the candidate's canonical Shot lineage.",
+            )
+        direct_audio_review = review_by_evidence.get(item.get("evidence_id"), {})
+        if (
+            direct_audio_review.get("audio_review_status") == "DIRECT_AUDITION_COMPLETE"
+            and source_candidate.get("audio_dependency") is True
+            and item.get("audio_dependency") is not True
+        ):
+            add_issue(
+                issues,
+                "INTEGRATION-CANDIDATE-AUDIO-DEPENDENCY",
+                f"{path}.audio_dependency",
+                "A canonical audio-dependent candidate in a direct-audition review cannot disable its audio dependency.",
             )
         status = item.get("final_status")
         if status in FINAL_STATUSES:
@@ -490,6 +638,10 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
             if not source_refs or not source_refs.issubset(auditioned_refs):
                 add_issue(issues, "INTEGRATION-AUDIO-REVIEW", path, "Audio-dependent final or corpus-gap disposition requires direct audition of every cited Shot.")
             selected_observation_ids = item.get("audio_observation_ids", [])
+            authority_entry = audio_candidate_bindings_by_candidate.get(item.get("candidate_rule_id"))
+            authority_review_id = authority_entry[0] if authority_entry is not None else None
+            authority_binding = authority_entry[1] if authority_entry is not None else {}
+            authorized_observation_ids = authority_binding.get("authorized_observation_ids", [])
             unresolved_observation_ids: list[str] = []
             off_lineage_observation_ids: list[str] = []
             for observation_id in selected_observation_ids:
@@ -537,6 +689,9 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
             ]
             if (
                 not selected_observation_ids
+                or authority_entry is None
+                or authority_review_id not in candidate_review_ids
+                or set(selected_observation_ids) != set(authorized_observation_ids)
                 or unresolved_observation_ids
                 or off_lineage_observation_ids
                 or not audio_claims
@@ -549,7 +704,7 @@ def validate(review: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
                     issues,
                     "INTEGRATION-CANDIDATE-AUDIO-OBSERVATION-BINDING",
                     f"{path}.audio_observation_ids",
-                    "An audio-dependent final or corpus-gap disposition must bind each audio claim exactly to its same-review observation; audition facts must not be copied into free text.",
+                    "An audio-dependent final or corpus-gap disposition must exactly match its independent direct-audition authority and bind each claim to the same Observation description; audition facts must not be copied into free text.",
                 )
         elif item.get("audio_observation_ids") or item.get("audio_claims"):
             add_issue(

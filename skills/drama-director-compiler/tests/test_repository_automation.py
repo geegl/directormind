@@ -138,7 +138,34 @@ class RepositoryAutomationTests(unittest.TestCase):
         )
         final_report = build_report(successful_live_evidence())
         state = (REPO_ROOT / "context" / "STATE.md").read_text(encoding="utf-8")
+        final_statuses = {
+            "POSITIVE_RUNTIME_RULE",
+            "SUPPORTING_EVIDENCE",
+            "BOUNDARY_OR_COUNTEREXAMPLE",
+            "MERGED_DUPLICATE",
+            "REJECTED_WITH_REASON",
+        }
         rule_count = len(review["runtime_rule_specs"])
+        final_count = sum(
+            item["final_status"] in final_statuses
+            for item in review["candidate_dispositions"]
+        )
+        support_count = sum(
+            item["final_status"] == "SUPPORTING_EVIDENCE"
+            for item in review["candidate_dispositions"]
+        )
+        boundary_count = sum(
+            item["final_status"] == "BOUNDARY_OR_COUNTEREXAMPLE"
+            for item in review["candidate_dispositions"]
+        )
+        merged_count = sum(
+            item["final_status"] == "MERGED_DUPLICATE"
+            for item in review["candidate_dispositions"]
+        )
+        rejected_count = sum(
+            item["final_status"] == "REJECTED_WITH_REASON"
+            for item in review["candidate_dispositions"]
+        )
         pending_count = sum(
             item["final_status"] == "EVIDENCE_GAP_PENDING"
             for item in review["candidate_dispositions"]
@@ -157,16 +184,43 @@ class RepositoryAutomationTests(unittest.TestCase):
             runtime_report["unresolved_candidate_count"],
             pending_count + existing_review_count,
         )
+        self.assertEqual(runtime_report["candidate_final_disposition_count"], final_count)
+        self.assertEqual(runtime_report["evidence_gap_count"], len(review["evidence_gaps"]))
         self.assertEqual(final_report["counts"]["runtime_rules"], rule_count)
+        self.assertEqual(final_report["counts"]["final_candidate_dispositions"], final_count)
         self.assertEqual(final_report["counts"]["pending_evidence_gap_candidates"], pending_count)
         self.assertEqual(
             final_report["counts"]["existing_material_review_required_candidates"],
             existing_review_count,
         )
+        self.assertEqual(final_report["counts"]["evidence_gaps"], len(review["evidence_gaps"]))
+        self.assertEqual(
+            final_report["counts"]["evidence_final_mappings"],
+            runtime_report["evidence_final_mapping_count"],
+        )
+        self.assertEqual(
+            final_report["counts"]["runtime_active_families"],
+            runtime_report["runtime_active_family_count"],
+        )
+        self.assertEqual(final_report["counts"]["supporting_evidence_candidates"], support_count)
+        self.assertEqual(final_report["counts"]["boundary_candidates"], boundary_count)
+        self.assertEqual(final_report["counts"]["merged_duplicate_candidates"], merged_count)
+        self.assertEqual(final_report["counts"]["rejected_candidates"], rejected_count)
+        self.assertIn(f"| Final candidate dispositions | {final_count} |", state)
         self.assertIn(f"| Runtime-authorized rules | {rule_count} |", state)
         self.assertIn(f"| Candidates pending evidence | {pending_count} |", state)
         self.assertIn(
             f"| Candidates awaiting direct review of existing material | {existing_review_count} |",
+            state,
+        )
+        self.assertIn(f"| Precise evidence gaps | {len(review['evidence_gaps'])} |", state)
+        self.assertIn(
+            f"| Evidence units with a final decision mapping | "
+            f"{runtime_report['evidence_final_mapping_count']} |",
+            state,
+        )
+        self.assertIn(
+            f"| Runtime-participating families | {runtime_report['runtime_active_family_count']} |",
             state,
         )
 

@@ -8,8 +8,8 @@ canonical Scene Evidence records, 2,343 Shot/edit units, 124 candidates and 16
 mechanism families.
 
 Fresh moving-image review covers 1,840 unique candidate-dependent Shot refs.
-Fifty-five candidates now have one of the five allowed final outcomes; the
-remaining 69 have genuine fixed-corpus evidence gaps. No candidate remains
+Sixty-three candidates now have one of the five allowed final outcomes; the
+remaining 61 have genuine external evidence gaps. No candidate remains
 waiting for direct review of identified existing material.
 
 ## Current decision result
@@ -17,11 +17,11 @@ waiting for direct review of identified existing material.
 | Outcome | Count |
 |---|---:|
 | `POSITIVE_RUNTIME_RULE` | 7 |
-| `SUPPORTING_EVIDENCE` | 24 |
-| `BOUNDARY_OR_COUNTEREXAMPLE` | 20 |
-| `MERGED_DUPLICATE` | 1 |
+| `SUPPORTING_EVIDENCE` | 27 |
+| `BOUNDARY_OR_COUNTEREXAMPLE` | 23 |
+| `MERGED_DUPLICATE` | 3 |
 | `REJECTED_WITH_REASON` | 3 |
-| `EVIDENCE_GAP_PENDING` | 69 |
+| `EVIDENCE_GAP_PENDING` | 61 |
 | `EXISTING_MATERIAL_REVIEW_REQUIRED` | 0 |
 
 The seven runtime rules span seven source families and create final runtime
@@ -31,7 +31,7 @@ fallback. Seven positive packages select one target rule each and change at
 least one of Coverage, Blocking, Reaction, Pacing or Edit. Seven paired
 boundary packages reject their target rules.
 
-The validation runner also injects every distinct signal compiled from all 20
+The validation runner also injects every distinct signal compiled from all 23
 reviewed boundary dispositions into the corresponding positive scene. Each
 signal independently produces `NOT_APPLICABLE_MATCH`; the proof therefore does
 not depend on one convenient synthetic boundary package.
@@ -46,11 +46,12 @@ speech, quieter intervals, drums and changing outdoor/indoor ambience.
 
 Those 16 observations collectively cover all 25 auditioned Shots. Candidate
 audio claims are structured as an Observation ID plus an exact copy of that
-Observation's description. The validator rejects incomplete scene coverage,
-missing or foreign observations, changed descriptions, and substitution of an
-unrelated observation from the same Shot. This closes the independent precommit
-attacks in which one unrelated observation, or deletion of the specific
-00:10:13 observation, previously passed.
+Observation's description. A separate four-row candidate authority now records
+the exact permitted Observation set, reason and directly auditioned Shot refs
+for each sound-dependent candidate. The validator requires the authority,
+candidate IDs and claims to agree exactly and rejects missing, added, swapped or
+same-Shot substitutions even when the attacker also copies the replacement
+Observation's correct description.
 
 It does not prove speaker identity, sound-source ownership, subjective hearing,
 narrative causality, edit intent or the legacy millisecond offsets. The four
@@ -70,45 +71,50 @@ range. No rule was kept merely to preserve the earlier count.
 
 A second independent review found that the waypoint rule also lacked a real
 same-trigger boundary. It was withdrawn and all 19 related candidates returned
-to one precise evidence gap. The spatial family was narrowed from a bulk
-classification to one actual support (`TSN-2010-C01`, Shots S088-S090), one
-actual boundary (`TSN-2010-C04`, Shots S090-S091), and eleven evidence gaps.
-The Ted Lasso mobile-view fallback was reclassified as an evidence-backed
-rejection instead of a duplicate of the authorized mobile-attention rule.
+to one precise evidence gap. A later P1 review then reopened the eleven spatial
+classification debts against existing video. Eight are now closed: two mobile
+attention variants are merged duplicates, three cases support existing runtime
+rules, and three cases add the `simultaneous_required_action` negative boundary
+to performance-owner routing. Three candidates remain in two new external gaps,
+each with the missing evidence type, reason existing material cannot close it,
+and exact existing review refs. The Ted Lasso mobile-view fallback remains an
+evidence-backed rejection rather than a duplicate.
 
 ## Prioritized fixed-corpus gaps
 
 All identified existing-material review is complete. The honest phase is now
-`PARTIAL_EVIDENCE_GAP`. The fourteen precise supplementation requests are:
+`PARTIAL_EVIDENCE_GAP`. The fifteen structured supplementation requests are:
 
 1. A continuous real-time route across at least three necessary zones where
    one field keeps every waypoint and the action chain readable — 19 candidates.
-2. Exact reclassification evidence for mixed ensemble, recurring-zone and
-   parallel-return spatial candidates — 11 candidates.
-3. Same-trigger support and a no-extra-checkpoint boundary for object custody
+2. Unrelated same-trigger support and a withholding boundary for registering a
+   public object-mediated contest or reveal — 1 candidate.
+3. A same-trigger distinct-location return where immediate anchor and relation
+   restoration is the wrong choice — 2 candidates.
+4. Same-trigger support and a no-extra-checkpoint boundary for object custody
    and function changes — 12 candidates.
-4. A same-trigger comparison scene where a separate comparative field is the
+5. A same-trigger comparison scene where a separate comparative field is the
    wrong coverage choice — 8 candidates.
-5. An unrelated proximity scene whose geometry is already readable, making a
+6. An unrelated proximity scene whose geometry is already readable, making a
    new initial master redundant — 3 candidates.
-6. One versioned-object transformation and handoff plus an independent-items
+7. One versioned-object transformation and handoff plus an independent-items
    boundary — 1 candidate.
-7. One revised-operation repeat plus an unchanged-repeat boundary — 1
+8. One revised-operation repeat plus an unchanged-repeat boundary — 1
    candidate.
-8. One same-trigger multi-thread scene where a continuous field is clearer
+9. One same-trigger multi-thread scene where a continuous field is clearer
    than intercutting — 4 candidates.
-9. Same-trigger opposite scale-order evidence separating detail-first from
+10. Same-trigger opposite scale-order evidence separating detail-first from
    geometry-first coverage — 3 candidates.
-10. Unrelated subjective-access support plus a same-trigger ordinary-relation
+11. Unrelated subjective-access support plus a same-trigger ordinary-relation
    boundary — 3 candidates.
-11. An unrelated directly auditioned information-state change inside a
+12. An unrelated directly auditioned information-state change inside a
     necessary held picture plus a same-trigger case requiring a picture change
     — 1 candidate.
-12. An unrelated picture/audio boundary alignment plus a same-trigger case
+13. An unrelated picture/audio boundary alignment plus a same-trigger case
     requiring different timing — 1 candidate.
-13. An unrelated picture-first audio-information handoff plus an audio-first or
+14. An unrelated picture-first audio-information handoff plus an audio-first or
     simultaneous same-trigger boundary — 1 candidate.
-14. An unrelated recurring audio-state/visual-ledger sequence plus a
+15. An unrelated recurring audio-state/visual-ledger sequence plus a
     same-trigger case where one stable audio state is clearer — 1 candidate.
 
 Exact candidate IDs, required reviews and closure conditions are in
@@ -127,20 +133,18 @@ immutable legacy ledger remains unchanged.
 
 - Structural `PASS` proves deterministic data binding and routing behavior,
   not product completion, creative quality or audience effect.
-- The independent missing, truncated, same-Shot substitution and stale-free-text
-  audio attacks are rejected; 307/307 unit and CLI tests, all 25 repository
-  checks and the working-tree whitespace check pass.
-- The latest implementation head passed GitHub CI. A new clean-checkout delta
-  review replayed the audio attacks, reran 40 directed and 307 full tests plus
-  all 25 repository checks, confirmed the seven rule identities and all live
-  counts unchanged, and reported `NO_MUST_FIX_FINDINGS`.
-- The prior full 16-family semantic review remains the family-wide evidence;
-  the final delta review did not re-open media or repeat that entire review.
+- Directed tests reject ID-and-description synchronized same-Shot audio
+  substitution, candidate swaps, missing and added authorizations, false
+  external-gap labeling and phase-status drift. All 314 unit and CLI tests and
+  all 25 repository checks pass and rebuild the final report. Hosted CI and the
+  independent clean-checkout review still remain pending at this report state.
+- The prior full 16-family and Sound reviews remain historical evidence, but
+  they do not sign off the current P1 remediation head.
 - All creative packages remain `HUMAN_REVIEW_PENDING`.
 - No generation, publication, deployment, source-media deletion or main-branch
   merge is authorized or performed.
-- Direct audition closes the existing-material review debt but does not close
-  the 69 fixed-corpus evidence gaps or justify `COMPLETE`.
+- Existing-material review closes the eleven classification debts but does not
+  close the 61 external evidence-gap candidates or justify `COMPLETE`.
 
 ## Rollback
 

@@ -253,13 +253,14 @@
       "blocked_reasons": [],
       "description": "Preserve orientation and state through sustained movement, occlusion or a continuous-looking route.",
       "family_id": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
-      "grouped_work_count": 5,
-      "member_count": 7,
+      "grouped_work_count": 6,
+      "member_count": 10,
       "promotion_eligibility": "CROSS_WORK_SUPPORTED",
       "relation_counts": {
         "CONTRADICTS": 2,
         "COUNTEREXAMPLE": 1,
-        "SUPPORTS": 4
+        "DUPLICATE": 2,
+        "SUPPORTS": 5
       },
       "relations": [
         {
@@ -283,6 +284,16 @@
           "work_id": "THE-BEAR-S01E07"
         },
         {
+          "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "DUPLICATE",
+          "runtime_effect_key": "MERGE:DR-MOBILE-ATTENTION-HANDOFF",
+          "runtime_final_status": "MERGED_DUPLICATE",
+          "scene_problem_status": "INFERRED",
+          "unknown_dependency_present": true,
+          "work_id": "THE-BEAR-S01E07"
+        },
+        {
           "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C04-FUNCTIONAL-LONG-TAKE-FALLBACK",
           "promotion_status": "REJECTED",
           "relation": "CONTRADICTS",
@@ -293,11 +304,31 @@
           "work_id": "THE-BEAR-S01E07"
         },
         {
+          "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-MOBILE-ATTENTION-HANDOFF",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
+          "scene_problem_status": "UNKNOWN",
+          "unknown_dependency_present": true,
+          "work_id": "CHILDREN-OF-MEN-2006"
+        },
+        {
           "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C01",
           "promotion_status": "SINGLE_WORK_CANDIDATE",
           "relation": "SUPPORTS",
           "runtime_effect_key": "SUPPORT:DR-MOBILE-ATTENTION-HANDOFF",
           "runtime_final_status": "SUPPORTING_EVIDENCE",
+          "scene_problem_status": "UNKNOWN",
+          "unknown_dependency_present": true,
+          "work_id": "HILL-HOUSE-S01E06"
+        },
+        {
+          "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C02",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "DUPLICATE",
+          "runtime_effect_key": "MERGE:DR-MOBILE-ATTENTION-HANDOFF",
+          "runtime_final_status": "MERGED_DUPLICATE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "HILL-HOUSE-S01E06"
@@ -1032,72 +1063,42 @@
       "blocked_reasons": [],
       "description": "Establish or restore readable geography before tighter coverage or a new state.",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "grouped_work_count": 13,
-      "member_count": 18,
+      "grouped_work_count": 10,
+      "member_count": 15,
       "promotion_eligibility": "CROSS_WORK_SUPPORTED",
       "relation_counts": {
-        "COUNTEREXAMPLE": 1,
+        "COUNTEREXAMPLE": 4,
         "DUPLICATE": 1,
-        "NARROWS": 11,
-        "SUPPORTS": 5
+        "NARROWS": 3,
+        "SUPPORTS": 7
       },
       "relations": [
         {
-          "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "INFERRED",
-          "unknown_dependency_present": true,
-          "work_id": "THE-BEAR-S01E07"
-        },
-        {
           "candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-ANCHOR-EXPLANATION-WITH-VISUALIZED-PROCESS-001",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous_required_action",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "CHERNOBYL-S01E05"
         },
         {
-          "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
-          "unknown_dependency_present": true,
-          "work_id": "CHILDREN-OF-MEN-2006"
-        },
-        {
           "candidate_rule_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C01",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous_required_action",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "ANDOR-S01E10"
         },
         {
-          "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C02",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
-          "scene_problem_status": "UNKNOWN",
-          "unknown_dependency_present": true,
-          "work_id": "HILL-HOUSE-S01E06"
-        },
-        {
           "candidate_rule_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C01-REGISTER-ENSEMBLE-GEOMETRY-BEFORE-DISTRIBUTED-CHANGE",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "COUNTEREXAMPLE",
+          "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous_required_action",
+          "runtime_final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "KNIVES-OUT-2019"
@@ -1134,10 +1135,10 @@
         },
         {
           "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C02-EXTRA-BODY-ANCHOR-IN-CONTAINED-ALTERNATION",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "INFERRED",
           "unknown_dependency_present": true,
           "work_id": "MR-ROBOT-S04E07"
@@ -1204,10 +1205,10 @@
         },
         {
           "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C02-PARTIAL-COMPANION-ANCHOR-IN-CONTAINED-TWO-HANDER",
-          "promotion_status": "EVIDENCE_GAP_PENDING",
-          "relation": "NARROWS",
-          "runtime_effect_key": null,
-          "runtime_final_status": "EVIDENCE_GAP_PENDING",
+          "promotion_status": "SINGLE_WORK_CANDIDATE",
+          "relation": "SUPPORTS",
+          "runtime_effect_key": "SUPPORT:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+          "runtime_final_status": "SUPPORTING_EVIDENCE",
           "scene_problem_status": "UNKNOWN",
           "unknown_dependency_present": true,
           "work_id": "UNBELIEVABLE-S01E02"

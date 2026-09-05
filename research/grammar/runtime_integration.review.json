@@ -521,29 +521,28 @@
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES",
-      "decision_axes": [],
-      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+      "decision_axes": [
+        "COVERAGE",
+        "BLOCKING"
+      ],
+      "evidence_gap_id": null,
       "evidence_id": "BEAR-S01E07-REVIEW-001",
-      "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "EVIDENCE_GAP_PENDING",
+      "family_id": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+      "final_status": "MERGED_DUPLICATE",
       "inferences": [
-        "BEAR-S01E07-REVIEW-001-S001: visible_action remains INFERRED after the fresh frame check: Prep and reading become rapid redirection, clustered confrontation, individual withdrawals, Sydney's visible departure, Carmy's crouch, and an empty-workspace ending",
-        "BEAR-S01E07-REVIEW-001-S001: blocking remains INFERRED after the fresh frame check: Multiple workers cross between cook line, pass, front counter, and rear corridor; entries, exits, body wipes, and work gestures motivate camera handoffs",
-        "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
+        "The recurring-zone description is a connected-zone handoff and re-anchor subtype of the existing mobile-attention mechanism in the same continuous Shot; it adds no independent trigger or directing-decision delta."
       ],
-      "material_unknowns": [
-        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
-      ],
-      "merged_into_candidate_id": null,
-      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
+      "material_unknowns": [],
+      "merged_into_candidate_id": "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION",
+      "notes": "Existing local moving-image review closes this classification without an audio claim; identity, dialogue, causality and production method remain outside the asserted directing mechanism.",
       "observations": [
-        "BEAR-S01E07-REVIEW-001-S001 00:02:22.768-00:19:31.379: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=Variable: hand/detail, close, medium, two-shot, clustered group, corridor wide, and empty-workspace view; camera_motion=Continuous translation, pans, follow moves, reversals, close approaches, pull-backs, and reframing; no visible cut. Burned text, if present, was ignored as picture evidence."
+        "BEAR-S01E07-REVIEW-001-S001 00:02:22.768-00:19:31.379: PICTURE_OBSERVED as one accepted continuous Shot. Moving-image checks around 00:03:40, 00:06:20, 00:07:40, 00:09:00, 00:10:20, 00:14:20, 00:15:40, 00:17:00 and 00:18:20 show the camera moving among distinct work zones and returning to recognizable environmental anchors while visible bodies enter, leave and occlude one another."
       ],
       "rejection_reason_code": null,
       "review_ids": [
         "EXHAUSTIVE-PICTURE-BEAR-S01E07-REVIEW-001"
       ],
-      "runtime_effect_key": null,
+      "runtime_effect_key": "MERGE:DR-MOBILE-ATTENTION-HANDOFF",
       "source_refs": [
         "BEAR-S01E07-REVIEW-001-S001"
       ],
@@ -1467,127 +1466,47 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": null,
-      "boundary_signal_ids": [],
+      "boundary_forward_test_id": "ORIGINAL-PERFORMANCE-CONCURRENT-STATE",
+      "boundary_signal_ids": [
+        "simultaneous_required_action"
+      ],
       "candidate_rule_id": "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-ANCHOR-EXPLANATION-WITH-VISUALIZED-PROCESS-001",
-      "decision_axes": [],
-      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+      "decision_axes": [
+        "COVERAGE",
+        "EDIT"
+      ],
+      "evidence_gap_id": null,
       "evidence_id": "CHERNOBYL-S01E05-HEARING-RECON-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "EVIDENCE_GAP_PENDING",
+      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
       "inferences": [
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S001: visible_action remains INFERRED after the fresh frame check: lectern adult changes head and hand positions while crowd remains mostly seated",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S169: blocking remains INFERRED after the fresh frame check: lectern, raised desk, boards and crowd share frame; exact marks, roles and cross-cut identity UNKNOWN",
-        "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
+        "When the locked project script requires both an attributable performance progression and independent visible process or system states, a single-owner hold would hide a simultaneously required visual fact and must not route."
       ],
-      "material_unknowns": [
-        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
-      ],
+      "material_unknowns": [],
       "merged_into_candidate_id": null,
-      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
+      "notes": "Existing local moving-image review closes this classification without an audio claim; identity, dialogue, causality and production method remain outside the asserted directing mechanism.",
       "observations": [
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S001 00:38:51.840-00:38:55.560: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=very wide; exact lens/focal length UNKNOWN; camera_motion=frame edges remain broadly stable; exact support, stabilization and micro-movement UNKNOWN. Burned text, if present, was ignored as picture evidence.",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S169 00:49:52.320-00:49:56.680: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=very wide; exact lens/focal length UNKNOWN; camera_motion=locked-looking room map; exact support, stabilization and micro-movement UNKNOWN. Burned text, if present, was ignored as picture evidence.",
-        "All 90 canonical candidate Shots were reopened as moving image at exact stored bounds."
+        "PICTURE_OBSERVED across exact canonical bounds: S001 00:38:51.840-00:38:55.560 shows a whole-room field with board and crowd; S008 00:39:26.120-00:39:38.200 holds a person with the board; S015 00:40:44.480-00:40:51.840, S024 00:41:13.200-00:41:15.760 and S040 00:41:53.720-00:41:56.120 show separate process or display states; S081 00:43:56.040-00:44:02.000 returns to the person-and-board anchor; S131 00:47:34.160-00:47:35.360, S134 00:47:38.920-00:47:41.520, S149 00:49:03.120-00:49:08.520 and S165 00:49:33.280-00:49:44.040 carry further ensemble, lit, exterior and display states; S169 00:49:52.320-00:49:56.680 restores the whole-room field."
       ],
       "rejection_reason_code": null,
       "review_ids": [
         "EXHAUSTIVE-PICTURE-CHERNOBYL-S01E05-HEARING-RECON-001"
       ],
-      "runtime_effect_key": null,
+      "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous_required_action",
       "source_refs": [
         "CHERNOBYL-S01E05-HEARING-RECON-001-S001",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S002",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S003",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S004",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S005",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S006",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S007",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S008",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S009",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S010",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S011",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S012",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S013",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S014",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S015",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S016",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S017",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S018",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S019",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S020",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S021",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S022",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S023",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S024",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S025",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S026",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S027",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S028",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S029",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S030",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S031",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S032",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S033",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S034",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S035",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S036",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S037",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S038",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S039",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S040",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S041",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S042",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S043",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S044",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S045",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S046",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S047",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S048",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S081",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S082",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S083",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S084",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S085",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S086",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S087",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S088",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S089",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S090",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S091",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S092",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S093",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S094",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S095",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S096",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S097",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S131",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S132",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S133",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S134",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S149",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S150",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S151",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S152",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S153",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S154",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S155",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S156",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S157",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S158",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S159",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S160",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S161",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S162",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S163",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S164",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S165",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S166",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S167",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-S168",
         "CHERNOBYL-S01E05-HEARING-RECON-001-S169"
       ],
-      "target_rule_id": null
+      "target_rule_id": "DR-PERFORMANCE-OWNER-HOLD"
     },
     {
       "audio_dependency": false,
@@ -1852,33 +1771,34 @@
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001",
-      "decision_axes": [],
-      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+      "decision_axes": [
+        "COVERAGE",
+        "BLOCKING",
+        "PACING",
+        "EDIT"
+      ],
+      "evidence_gap_id": null,
       "evidence_id": "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
-      "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "EVIDENCE_GAP_PENDING",
+      "family_id": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+      "final_status": "SUPPORTING_EVIDENCE",
       "inferences": [
-        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001: visible_action remains INFERRED after the fresh frame check: vehicle motion and outside optic flow continue; a bright burning vehicle-like object crosses/blocks the road; people and two-wheeled vehicles move near the car; dark/red spots and star-like cracks become visible on panes; the front-right red-haired adult becomes reclined with dark red material at neck/clothing; other occupants make large reach/contact movements; a blue/yellow marked vehicle approaches; vehicle stops or nearly stops; external uniform-like adults appear; a side door opens; a dark-haired adult-like figure is continuously visible during the door/exterior interval and moves back toward/through the door area; the vehicle then departs; the view settles on roadway and two horizontal dark-clothed forms before the cut. Whether this is the earlier rear-right occupant leaving and returning is INFERRED and requires locked-script confirmation",
-        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001: blocking remains INFERRED after the fresh frame check: adults begin in stable front-left/front-right/rear-left/rear-center/rear-right zones; they turn, lean and reach, and arms/hands enter or contact other body regions where visible while exterior bodies/vehicles move across windshield and side apertures; during the later door interval, a dark-haired appearance handle remains visible outside and moves back toward/through the side-door area. Grouping that handle with the earlier rear-right occupant is INFERRED; exact roles, contact function and identity through long occlusion UNKNOWN",
-        "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
+        "The continuous field supports handing attention to the next person, aperture or route anchor while preserving connected-zone orientation; no identity, attack, protection, causality or sound claim is required."
       ],
-      "material_unknowns": [
-        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
-      ],
+      "material_unknowns": [],
       "merged_into_candidate_id": null,
-      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
+      "notes": "Existing local moving-image review closes this classification without an audio claim; identity, dialogue, causality and production method remain outside the asserted directing mechanism.",
       "observations": [
-        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001 00:26:14.233333-00:30:22.000000: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=continuously changing medium/close/wide mobile coverage inside a compact vehicle, through its apertures, at an open door, and finally along the road; no single fixed shot size; exact lens/focal length UNKNOWN; camera_motion=camera repeatedly rotates/translates relative to cabin pillars and occupants, looks through front/side/rear apertures, passes the open door threshold, follows exterior movement, and ends facing roadway; direction/speed/distance, support system, vehicle rig, stabilization, hidden transition and single-take production method UNKNOWN. Burned text, if present, was ignored as picture evidence."
+        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001 00:26:14.233333-00:30:22.000000: PICTURE_OBSERVED as one accepted continuous Shot. Moving-image checks from 00:26:15 through 00:30:15 show successive seat zones, vehicle apertures, exterior fields and the open-door threshold while the camera continuously changes relation to seats, pillars, windows and visible bodies."
       ],
       "rejection_reason_code": null,
       "review_ids": [
         "EXHAUSTIVE-PICTURE-CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001"
       ],
-      "runtime_effect_key": null,
+      "runtime_effect_key": "SUPPORT:DR-MOBILE-ATTENTION-HANDOFF",
       "source_refs": [
         "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-S001"
       ],
-      "target_rule_id": null
+      "target_rule_id": "DR-MOBILE-ATTENTION-HANDOFF"
     },
     {
       "audio_dependency": false,
@@ -2102,58 +2022,39 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": null,
-      "boundary_signal_ids": [],
+      "boundary_forward_test_id": "ORIGINAL-PERFORMANCE-CONCURRENT-STATE",
+      "boundary_signal_ids": [
+        "simultaneous_required_action"
+      ],
       "candidate_rule_id": "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C01",
-      "decision_axes": [],
-      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+      "decision_axes": [
+        "COVERAGE",
+        "BLOCKING",
+        "EDIT"
+      ],
+      "evidence_gap_id": null,
       "evidence_id": "DM-ANDOR-S01E10-SEL-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "EVIDENCE_GAP_PENDING",
+      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
       "inferences": [
-        "DM-ANDOR-S01E10-SEL-001-S001: visible_action remains INFERRED after the fresh frame check: the nearer person crosses/turns within the console field",
-        "DM-ANDOR-S01E10-SEL-001-S030: blocking remains INFERRED after the fresh frame check: registered opposing zones reappear; exact metric distance, roles and off-frame positions UNKNOWN",
-        "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
+        "If the locked project script requires the person, object or system state and lighting or group state together, an uninterrupted single-owner hold is not applicable because it would suppress simultaneous required visual information."
       ],
-      "material_unknowns": [
-        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
-      ],
+      "material_unknowns": [],
       "merged_into_candidate_id": null,
-      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
+      "notes": "Existing local moving-image review closes this classification without an audio claim; identity, dialogue, causality and production method remain outside the asserted directing mechanism.",
       "observations": [
-        "DM-ANDOR-S01E10-SEL-001-S001 00:24:12.292-00:24:28.042: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium-wide control-room registration; camera_motion=from early/mid/late full-picture review: frame changes from a broad console view toward the nearer moving body; exact support/path UNKNOWN. Burned text, if present, was ignored as picture evidence.",
-        "DM-ANDOR-S01E10-SEL-001-S030 00:25:40.792-00:25:43.500: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=wide control-room light-return view; camera_motion=from early/mid/late full-picture review: wide composition persists through brightness increase; exact support UNKNOWN. Burned text, if present, was ignored as picture evidence.",
-        "All 30 canonical candidate Shots were reopened as moving image at exact stored bounds."
+        "PICTURE_OBSERVED at exact canonical bounds: S001 00:24:12.292-00:24:28.042 registers several visible bodies and consoles; S010 00:24:47.750-00:24:49.167 separates opposing room zones; S015 00:24:54.042-00:24:57.875 and S020 00:25:08.750-00:25:11.167 show body-object relations; S024 00:25:16.125-00:25:22.083 preserves foreground and far-console state; S025-S030 00:25:22.083-00:25:43.500 show room-darkening, exterior facility fields, a darkened group, a corridor-to-seated-body route and room-light return."
       ],
       "rejection_reason_code": null,
       "review_ids": [
         "EXHAUSTIVE-PICTURE-DM-ANDOR-S01E10-SEL-001"
       ],
-      "runtime_effect_key": null,
+      "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous_required_action",
       "source_refs": [
         "DM-ANDOR-S01E10-SEL-001-S001",
-        "DM-ANDOR-S01E10-SEL-001-S002",
-        "DM-ANDOR-S01E10-SEL-001-S003",
-        "DM-ANDOR-S01E10-SEL-001-S004",
-        "DM-ANDOR-S01E10-SEL-001-S005",
-        "DM-ANDOR-S01E10-SEL-001-S006",
-        "DM-ANDOR-S01E10-SEL-001-S007",
-        "DM-ANDOR-S01E10-SEL-001-S008",
-        "DM-ANDOR-S01E10-SEL-001-S009",
         "DM-ANDOR-S01E10-SEL-001-S010",
-        "DM-ANDOR-S01E10-SEL-001-S011",
-        "DM-ANDOR-S01E10-SEL-001-S012",
-        "DM-ANDOR-S01E10-SEL-001-S013",
-        "DM-ANDOR-S01E10-SEL-001-S014",
         "DM-ANDOR-S01E10-SEL-001-S015",
-        "DM-ANDOR-S01E10-SEL-001-S016",
-        "DM-ANDOR-S01E10-SEL-001-S017",
-        "DM-ANDOR-S01E10-SEL-001-S018",
-        "DM-ANDOR-S01E10-SEL-001-S019",
         "DM-ANDOR-S01E10-SEL-001-S020",
-        "DM-ANDOR-S01E10-SEL-001-S021",
-        "DM-ANDOR-S01E10-SEL-001-S022",
-        "DM-ANDOR-S01E10-SEL-001-S023",
         "DM-ANDOR-S01E10-SEL-001-S024",
         "DM-ANDOR-S01E10-SEL-001-S025",
         "DM-ANDOR-S01E10-SEL-001-S026",
@@ -2162,7 +2063,7 @@
         "DM-ANDOR-S01E10-SEL-001-S029",
         "DM-ANDOR-S01E10-SEL-001-S030"
       ],
-      "target_rule_id": null
+      "target_rule_id": "DR-PERFORMANCE-OWNER-HOLD"
     },
     {
       "audio_dependency": false,
@@ -2709,29 +2610,28 @@
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C02",
-      "decision_axes": [],
-      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+      "decision_axes": [
+        "COVERAGE",
+        "BLOCKING"
+      ],
+      "evidence_gap_id": null,
       "evidence_id": "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1",
-      "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "EVIDENCE_GAP_PENDING",
+      "family_id": "CONTINUOUS-MOVEMENT-AND-OCCLUSION",
+      "final_status": "MERGED_DUPLICATE",
       "inferences": [
-        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001: visible_action remains INFERRED after the fresh frame check: gradual reveal → hands near a still red-clad human form → departures and arrivals → repeated group reconfiguration → broad illumination pulses → upper-body contact where visible → group faces the central container → gray-haired figure walks through corridor/doorway → environment and apparent age mix change → two young-presenting figures become readable as a foreground adult moves laterally",
-        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001: blocking remains INFERRED after the fresh frame check: multiple adult-presenting figures enter, exit, sit, stand, cross foreground and reform clusters around chair rows, a seating alcove and the coffin-like anchor; one gray-haired male-presenting figure is followed through a corridor; later adult-presenting and young-presenting figures become readable in the darker stair hall",
-        "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
+        "Returning to the anchor is the re-anchor portion of the existing mobile-attention handoff; the same Shot already supports that rule through another candidate and this candidate adds no independent runtime effect."
       ],
-      "material_unknowns": [
-        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
-      ],
-      "merged_into_candidate_id": null,
-      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
+      "material_unknowns": [],
+      "merged_into_candidate_id": "BEAR-S01E07-REVIEW-001-BEAR-C01-MOVING-ATTENTION",
+      "notes": "Existing local moving-image review closes this classification without an audio claim; identity, dialogue, causality and production method remain outside the asserted directing mechanism.",
       "observations": [
-        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001 00:01:19.625-00:16:32.000: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=continuously changing from object/body detail and medium shared frames through wide ensemble, following medium and new-space wide/medium configurations; no single fixed size; camera_motion=prolonged continuous reframe with lateral arcs, forward/backward travel, pans/turns, body-follow and passes through doors/partial occlusion; motion direction and speed vary; exact stabilization, lens changes, hidden joins and production take structure UNKNOWN. Burned text, if present, was ignored as picture evidence."
+        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001 00:01:19.625-00:16:32.000: PICTURE_OBSERVED as one accepted continuous-looking mobile field. Checks around 00:01:40-00:02:10 register a central zone, 00:02:45 departs into group geography, 00:03:40-00:12:40 carries changing group and room relations, and 00:13:35-00:14:35 returns to the group and central-zone relation; hidden joins remain unknown."
       ],
       "rejection_reason_code": null,
       "review_ids": [
         "EXHAUSTIVE-PICTURE-DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1"
       ],
-      "runtime_effect_key": null,
+      "runtime_effect_key": "MERGE:DR-MOBILE-ATTENTION-HANDOFF",
       "source_refs": [
         "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-S001"
       ],
@@ -3227,122 +3127,47 @@
     },
     {
       "audio_dependency": false,
-      "boundary_forward_test_id": null,
-      "boundary_signal_ids": [],
+      "boundary_forward_test_id": "ORIGINAL-PERFORMANCE-CONCURRENT-STATE",
+      "boundary_signal_ids": [
+        "simultaneous_required_action"
+      ],
       "candidate_rule_id": "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C01-REGISTER-ENSEMBLE-GEOMETRY-BEFORE-DISTRIBUTED-CHANGE",
-      "decision_axes": [],
-      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+      "decision_axes": [
+        "COVERAGE",
+        "BLOCKING",
+        "EDIT"
+      ],
+      "evidence_gap_id": null,
       "evidence_id": "KNIVES-OUT-2019-WILL-READING-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "EVIDENCE_GAP_PENDING",
+      "final_status": "BOUNDARY_OR_COUNTEREXAMPLE",
       "inferences": [
-        "KNIVES-OUT-2019-WILL-READING-001-S006: visible_action remains INFERRED after the fresh frame check: The group holds dispersed seated and standing positions around P-A.",
-        "KNIVES-OUT-2019-WILL-READING-001-S090: blocking remains INFERRED after the fresh frame check: foreground and doorway/background people retain two visible depth layers around Z-DOORWAY; off-frame path/intent UNKNOWN",
-        "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
+        "When the locked project script requires independent updates across several clusters and an exit relation, a single-owner performance hold would hide simultaneously required body or route state and must not route."
       ],
-      "material_unknowns": [
-        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
-      ],
+      "material_unknowns": [],
       "merged_into_candidate_id": null,
-      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
+      "notes": "Existing local moving-image review closes this classification without an audio claim; identity, dialogue, causality and production method remain outside the asserted directing mechanism.",
       "observations": [
-        "KNIVES-OUT-2019-WILL-READING-001-S006 01:07:19.267-01:07:24.367: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=interior WS/master. Burned text, if present, was ignored as picture evidence.",
-        "KNIVES-OUT-2019-WILL-READING-001-S090 01:11:30.367-01:11:37.400: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=MS/doorway relation view. Burned text, if present, was ignored as picture evidence.",
-        "All 85 canonical candidate Shots were reopened as moving image at exact stored bounds."
+        "PICTURE_OBSERVED at exact canonical bounds: S006 01:07:19.267-01:07:24.367 maps the seated room; S017 01:07:51.100-01:07:54.867, S030 01:08:34.633-01:08:38.867 and S045 01:09:24.567-01:09:29.267 expose distinct body clusters; S060 01:10:10.567-01:10:12.933, S065 01:10:20.633-01:10:27.067, S070 01:10:36.967-01:10:39.100, S078 01:10:50.633-01:10:57.800, S085 01:11:18.067-01:11:20.867 and S090 01:11:30.367-01:11:37.400 carry table, doorway, standing and dense-group changes."
       ],
       "rejection_reason_code": null,
       "review_ids": [
         "EXHAUSTIVE-PICTURE-KNIVES-OUT-2019-WILL-READING-001"
       ],
-      "runtime_effect_key": null,
+      "runtime_effect_key": "BOUNDARY:DR-PERFORMANCE-OWNER-HOLD:simultaneous_required_action",
       "source_refs": [
         "KNIVES-OUT-2019-WILL-READING-001-S006",
-        "KNIVES-OUT-2019-WILL-READING-001-S007",
-        "KNIVES-OUT-2019-WILL-READING-001-S008",
-        "KNIVES-OUT-2019-WILL-READING-001-S009",
-        "KNIVES-OUT-2019-WILL-READING-001-S010",
-        "KNIVES-OUT-2019-WILL-READING-001-S011",
-        "KNIVES-OUT-2019-WILL-READING-001-S012",
-        "KNIVES-OUT-2019-WILL-READING-001-S013",
-        "KNIVES-OUT-2019-WILL-READING-001-S014",
-        "KNIVES-OUT-2019-WILL-READING-001-S015",
-        "KNIVES-OUT-2019-WILL-READING-001-S016",
         "KNIVES-OUT-2019-WILL-READING-001-S017",
-        "KNIVES-OUT-2019-WILL-READING-001-S018",
-        "KNIVES-OUT-2019-WILL-READING-001-S019",
-        "KNIVES-OUT-2019-WILL-READING-001-S020",
-        "KNIVES-OUT-2019-WILL-READING-001-S021",
-        "KNIVES-OUT-2019-WILL-READING-001-S022",
-        "KNIVES-OUT-2019-WILL-READING-001-S023",
-        "KNIVES-OUT-2019-WILL-READING-001-S024",
-        "KNIVES-OUT-2019-WILL-READING-001-S025",
-        "KNIVES-OUT-2019-WILL-READING-001-S026",
-        "KNIVES-OUT-2019-WILL-READING-001-S027",
-        "KNIVES-OUT-2019-WILL-READING-001-S028",
-        "KNIVES-OUT-2019-WILL-READING-001-S029",
         "KNIVES-OUT-2019-WILL-READING-001-S030",
-        "KNIVES-OUT-2019-WILL-READING-001-S031",
-        "KNIVES-OUT-2019-WILL-READING-001-S032",
-        "KNIVES-OUT-2019-WILL-READING-001-S033",
-        "KNIVES-OUT-2019-WILL-READING-001-S034",
-        "KNIVES-OUT-2019-WILL-READING-001-S035",
-        "KNIVES-OUT-2019-WILL-READING-001-S036",
-        "KNIVES-OUT-2019-WILL-READING-001-S037",
-        "KNIVES-OUT-2019-WILL-READING-001-S038",
-        "KNIVES-OUT-2019-WILL-READING-001-S039",
-        "KNIVES-OUT-2019-WILL-READING-001-S040",
-        "KNIVES-OUT-2019-WILL-READING-001-S041",
-        "KNIVES-OUT-2019-WILL-READING-001-S042",
-        "KNIVES-OUT-2019-WILL-READING-001-S043",
-        "KNIVES-OUT-2019-WILL-READING-001-S044",
         "KNIVES-OUT-2019-WILL-READING-001-S045",
-        "KNIVES-OUT-2019-WILL-READING-001-S046",
-        "KNIVES-OUT-2019-WILL-READING-001-S047",
-        "KNIVES-OUT-2019-WILL-READING-001-S048",
-        "KNIVES-OUT-2019-WILL-READING-001-S049",
-        "KNIVES-OUT-2019-WILL-READING-001-S050",
-        "KNIVES-OUT-2019-WILL-READING-001-S051",
-        "KNIVES-OUT-2019-WILL-READING-001-S052",
-        "KNIVES-OUT-2019-WILL-READING-001-S053",
-        "KNIVES-OUT-2019-WILL-READING-001-S054",
-        "KNIVES-OUT-2019-WILL-READING-001-S055",
-        "KNIVES-OUT-2019-WILL-READING-001-S056",
-        "KNIVES-OUT-2019-WILL-READING-001-S057",
-        "KNIVES-OUT-2019-WILL-READING-001-S058",
-        "KNIVES-OUT-2019-WILL-READING-001-S059",
         "KNIVES-OUT-2019-WILL-READING-001-S060",
-        "KNIVES-OUT-2019-WILL-READING-001-S061",
-        "KNIVES-OUT-2019-WILL-READING-001-S062",
-        "KNIVES-OUT-2019-WILL-READING-001-S063",
-        "KNIVES-OUT-2019-WILL-READING-001-S064",
         "KNIVES-OUT-2019-WILL-READING-001-S065",
-        "KNIVES-OUT-2019-WILL-READING-001-S066",
-        "KNIVES-OUT-2019-WILL-READING-001-S067",
-        "KNIVES-OUT-2019-WILL-READING-001-S068",
-        "KNIVES-OUT-2019-WILL-READING-001-S069",
         "KNIVES-OUT-2019-WILL-READING-001-S070",
-        "KNIVES-OUT-2019-WILL-READING-001-S071",
-        "KNIVES-OUT-2019-WILL-READING-001-S072",
-        "KNIVES-OUT-2019-WILL-READING-001-S073",
-        "KNIVES-OUT-2019-WILL-READING-001-S074",
-        "KNIVES-OUT-2019-WILL-READING-001-S075",
-        "KNIVES-OUT-2019-WILL-READING-001-S076",
-        "KNIVES-OUT-2019-WILL-READING-001-S077",
         "KNIVES-OUT-2019-WILL-READING-001-S078",
-        "KNIVES-OUT-2019-WILL-READING-001-S079",
-        "KNIVES-OUT-2019-WILL-READING-001-S080",
-        "KNIVES-OUT-2019-WILL-READING-001-S081",
-        "KNIVES-OUT-2019-WILL-READING-001-S082",
-        "KNIVES-OUT-2019-WILL-READING-001-S083",
-        "KNIVES-OUT-2019-WILL-READING-001-S084",
         "KNIVES-OUT-2019-WILL-READING-001-S085",
-        "KNIVES-OUT-2019-WILL-READING-001-S086",
-        "KNIVES-OUT-2019-WILL-READING-001-S087",
-        "KNIVES-OUT-2019-WILL-READING-001-S088",
-        "KNIVES-OUT-2019-WILL-READING-001-S089",
         "KNIVES-OUT-2019-WILL-READING-001-S090"
       ],
-      "target_rule_id": null
+      "target_rule_id": "DR-PERFORMANCE-OWNER-HOLD"
     },
     {
       "audio_dependency": false,
@@ -4156,65 +3981,34 @@
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C02-EXTRA-BODY-ANCHOR-IN-CONTAINED-ALTERNATION",
-      "decision_axes": [],
-      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+      "decision_axes": [
+        "COVERAGE",
+        "BLOCKING"
+      ],
+      "evidence_gap_id": null,
       "evidence_id": "MRR-S04E07-ACT-FOUR-VISUAL-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "EVIDENCE_GAP_PENDING",
+      "final_status": "SUPPORTING_EVIDENCE",
       "inferences": [
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S087: visible_action remains INFERRED after the fresh frame check: P-C moves the green folder into the shared frame and leans toward P-A; P-A turns gaze/head",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S058: blocking remains INFERRED after the fresh frame check: two bodies exchange standing/seated/aisle occupancy in the room-wide frame; roles and causal relation UNKNOWN",
-        "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
+        "The visible distance change supports making the changed shared relation and endpoint readable before returning to isolated coverage; identity, intent, hierarchy and sound are not used."
       ],
-      "material_unknowns": [
-        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
-      ],
+      "material_unknowns": [],
       "merged_into_candidate_id": null,
-      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
+      "notes": "Existing local moving-image review closes this classification without an audio claim; identity, dialogue, causality and production method remain outside the asserted directing mechanism.",
       "observations": [
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S087 00:37:52.687-00:37:57.066: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium two-person/depth view on seated P-A as P-C enters close with the green folder; camera_motion=delivered framing stays broadly stable in reviewed full-picture samples; support, focal length, micro-motion and exact path UNKNOWN. Burned text, if present, was ignored as picture evidence.",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S058 00:36:42.158-00:36:44.202: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=room-wide or multi-body medium-wide relation view; camera_motion=delivered room frame stays broadly stable in reviewed full-picture samples unless otherwise stated; support, lens and micro-motion UNKNOWN. Burned text, if present, was ignored as picture evidence.",
-        "All 31 canonical candidate Shots were reopened as moving image at exact stored bounds."
+        "PICTURE_OBSERVED at exact canonical bounds: S087 00:37:52.687-00:37:57.066 introduces an additional visible body and green file into a seated shared composition; S089 00:37:59.319-00:38:02.655 keeps a tight two-body shared endpoint; S090 00:38:02.655-00:38:06.576 shows that body leaving the near zone with the file."
       ],
       "rejection_reason_code": null,
       "review_ids": [
         "EXHAUSTIVE-PICTURE-MRR-S04E07-ACT-FOUR-VISUAL-001"
       ],
-      "runtime_effect_key": null,
+      "runtime_effect_key": "SUPPORT:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
       "source_refs": [
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S087",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S088",
         "MRR-S04E07-ACT-FOUR-VISUAL-001-S089",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S090",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S151",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S152",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S153",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S154",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S155",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S156",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S157",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S158",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S159",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S160",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S161",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S174",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S175",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S176",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S059",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S061",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S067",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S074",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S080",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S083",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S093",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S096",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S098",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S149",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S169",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S052",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-S058"
+        "MRR-S04E07-ACT-FOUR-VISUAL-001-S090"
       ],
-      "target_rule_id": null
+      "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
     },
     {
       "audio_dependency": false,
@@ -4732,6 +4526,28 @@
       "target_rule_id": "DR-AFTERMATH-BY-NEXT-ACTION"
     },
     {
+      "audio_claims": [
+        {
+          "claim": "The speech returns to a muffled-sounding state around this point.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004"
+        },
+        {
+          "claim": "A sudden drum passage is audible and ends near the end of this reported interval.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005"
+        },
+        {
+          "claim": "Gull-like calls and broad outdoor ambience are audible during this reported interval.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006"
+        },
+        {
+          "claim": "Speech becomes audibly clearer around this point.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009"
+        },
+        {
+          "claim": "Road-like environmental noise is prominent during this reported interval.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013"
+        }
+      ],
       "audio_dependency": true,
       "audio_observation_ids": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004",
@@ -4739,13 +4555,6 @@
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006",
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009",
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013"
-      ],
-      "audio_claims": [
-        {"claim": "The speech returns to a muffled-sounding state around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004"},
-        {"claim": "A sudden drum passage is audible and ends near the end of this reported interval.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005"},
-        {"claim": "Gull-like calls and broad outdoor ambience are audible during this reported interval.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006"},
-        {"claim": "Speech becomes audibly clearer around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009"},
-        {"claim": "Road-like environmental noise is prominent during this reported interval.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013"}
       ],
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
@@ -4789,14 +4598,20 @@
       "target_rule_id": null
     },
     {
+      "audio_claims": [
+        {
+          "claim": "Speech is audibly clearer from around 26 seconds until it returns to a muffled-sounding state around 52 seconds; no words or speaker identity are retained.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003"
+        },
+        {
+          "claim": "The speech returns to a muffled-sounding state around this point.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004"
+        }
+      ],
       "audio_dependency": true,
       "audio_observation_ids": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003",
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004"
-      ],
-      "audio_claims": [
-        {"claim": "Speech is audibly clearer from around 26 seconds until it returns to a muffled-sounding state around 52 seconds; no words or speaker identity are retained.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003"},
-        {"claim": "The speech returns to a muffled-sounding state around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004"}
       ],
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
@@ -4833,6 +4648,72 @@
       "target_rule_id": null
     },
     {
+      "audio_claims": [
+        {
+          "claim": "The selected interval begins in a muffled-sounding state.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001"
+        },
+        {
+          "claim": "The overall noise becomes less prominent around this point.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002"
+        },
+        {
+          "claim": "Speech is audibly clearer from around 26 seconds until it returns to a muffled-sounding state around 52 seconds; no words or speaker identity are retained.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003"
+        },
+        {
+          "claim": "The speech returns to a muffled-sounding state around this point.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004"
+        },
+        {
+          "claim": "A sudden drum passage is audible and ends near the end of this reported interval.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005"
+        },
+        {
+          "claim": "Gull-like calls and broad outdoor ambience are audible during this reported interval.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006"
+        },
+        {
+          "claim": "The soundtrack becomes substantially quieter after the gull-like calls; absolute silence is not asserted.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E007"
+        },
+        {
+          "claim": "Intermittent short speech-like sounds are heavily muffled and difficult to understand before clearer speech begins.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E008"
+        },
+        {
+          "claim": "Speech becomes audibly clearer around this point.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009"
+        },
+        {
+          "claim": "Speech becomes muffled-sounding again around this point.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E010"
+        },
+        {
+          "claim": "Speech becomes audibly clearer around this point.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E011"
+        },
+        {
+          "claim": "A brief muffled-sounding interval is audible.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E012"
+        },
+        {
+          "claim": "Road-like environmental noise is prominent during this reported interval.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013"
+        },
+        {
+          "claim": "The ambience changes to an indoor-like state during this reported interval.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E014"
+        },
+        {
+          "claim": "The soundtrack returns to a muffled-sounding speech state before clearer speech resumes.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E015"
+        },
+        {
+          "claim": "Speech becomes clear and continues as repeated short name-like utterances; the names and speakers are not retained.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E016"
+        }
+      ],
       "audio_dependency": true,
       "audio_observation_ids": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001",
@@ -4851,24 +4732,6 @@
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E014",
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E015",
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E016"
-      ],
-      "audio_claims": [
-        {"claim": "The selected interval begins in a muffled-sounding state.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001"},
-        {"claim": "The overall noise becomes less prominent around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002"},
-        {"claim": "Speech is audibly clearer from around 26 seconds until it returns to a muffled-sounding state around 52 seconds; no words or speaker identity are retained.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003"},
-        {"claim": "The speech returns to a muffled-sounding state around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004"},
-        {"claim": "A sudden drum passage is audible and ends near the end of this reported interval.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005"},
-        {"claim": "Gull-like calls and broad outdoor ambience are audible during this reported interval.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006"},
-        {"claim": "The soundtrack becomes substantially quieter after the gull-like calls; absolute silence is not asserted.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E007"},
-        {"claim": "Intermittent short speech-like sounds are heavily muffled and difficult to understand before clearer speech begins.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E008"},
-        {"claim": "Speech becomes audibly clearer around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009"},
-        {"claim": "Speech becomes muffled-sounding again around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E010"},
-        {"claim": "Speech becomes audibly clearer around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E011"},
-        {"claim": "A brief muffled-sounding interval is audible.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E012"},
-        {"claim": "Road-like environmental noise is prominent during this reported interval.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013"},
-        {"claim": "The ambience changes to an indoor-like state during this reported interval.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E014"},
-        {"claim": "The soundtrack returns to a muffled-sounding speech state before clearer speech resumes.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E015"},
-        {"claim": "Speech becomes clear and continues as repeated short name-like utterances; the names and speakers are not retained.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E016"}
       ],
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
@@ -4929,12 +4792,15 @@
       "target_rule_id": null
     },
     {
+      "audio_claims": [
+        {
+          "claim": "The overall noise becomes less prominent around this point.",
+          "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002"
+        }
+      ],
       "audio_dependency": true,
       "audio_observation_ids": [
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002"
-      ],
-      "audio_claims": [
-        {"claim": "The overall noise becomes less prominent around this point.", "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002"}
       ],
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
@@ -5161,24 +5027,20 @@
       "boundary_signal_ids": [],
       "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C01-REGISTER-PUBLIC-OBJECT-CONTEST-GEOMETRY",
       "decision_axes": [],
-      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+      "evidence_gap_id": "GAP-PUBLIC-OBJECT-CONTEST-GEOMETRY-CROSS-WORK",
       "evidence_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
       "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
-        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S001: visible_action remains INFERRED after the fresh frame check: P-G raises and extends one arm while the seated people hold their positions; purpose and causal meaning UNKNOWN",
-        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S017: blocking remains INFERRED after the fresh frame check: No person is visible; board and embedded object state are presented",
-        "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
+        "The pictures support one work's performer-object-witness registration pattern, but they cannot alone establish a cross-work runtime rule or its same-trigger non-applicability boundary."
       ],
       "material_unknowns": [
-        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
+        "The fixed corpus lacks an unrelated public object-mediated contest or reveal with the same trigger and a same-trigger case where early target or witness registration should be withheld."
       ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
+      "notes": "Existing moving-image review is complete. The remaining blocker is an external same-trigger support or boundary, not reclassification of this source.",
       "observations": [
-        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S001 00:19:24.288-00:19:25.915: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium-wide or medium group view. Burned text, if present, was ignored as picture evidence.",
-        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S017 00:19:54.110-00:19:54.568: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=circular-board object close-up; camera_motion=board remains primary in delivered frame; support/lens and any micro-movement UNKNOWN. Burned text, if present, was ignored as picture evidence.",
-        "All 82 canonical candidate Shots were reopened as moving image at exact stored bounds."
+        "PICTURE_OBSERVED across the candidate's exact canonical Shot bounds: S001-S016 00:19:24.288-00:19:54.110 establish layered people and object directions; S016 introduces a thin elongated object and S017 00:19:54.110-00:19:54.568 isolates a circular target; S035-S036 00:20:50.666-00:20:54.086 alternate body and target; S055-S060 00:21:44.637-00:21:57.691 return among people, box or target and group; S091-S094 00:23:22.860-00:23:28.949 lead with the target before group and record-board fields."
       ],
       "rejection_reason_code": null,
       "review_ids": [
@@ -5277,24 +5139,20 @@
       "boundary_signal_ids": [],
       "candidate_rule_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C02-RETURN-THROUGH-PRIMARY-ANCHOR-AFTER-DISTINCT-LOCATION-BLOCK",
       "decision_axes": [],
-      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+      "evidence_gap_id": "GAP-DISTINCT-LOCATION-RETURN-ANCHOR-BOUNDARY",
       "evidence_id": "TED-LASSO-S01E08-DARTS-REVERSAL-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
       "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
-        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S061: visible_action remains INFERRED after the fresh frame check: The pair move together through the exterior while other people cross nearby; purpose and causal meaning UNKNOWN",
-        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S092: blocking remains INFERRED after the fresh frame check: Several people face toward the board/central lane",
-        "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
+        "The edit order supports restoring an established object anchor and relation after a distinct visible location block; simultaneity, causality and elapsed story time remain unknown and are not used."
       ],
       "material_unknowns": [
-        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
+        "The fixed corpus has positive return-anchor examples but no same-trigger case proving when an immediate primary-anchor and relation reset should be withheld."
       ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
+      "notes": "Existing moving-image review is complete. The remaining blocker is an external same-trigger support or boundary, not reclassification of this source.",
       "observations": [
-        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S061 00:21:57.691-00:22:01.445: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=exterior wide or medium-wide view. Burned text, if present, was ignored as picture evidence.",
-        "TED-LASSO-S01E08-DARTS-REVERSAL-001-S092 00:23:23.569-00:23:24.695: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=medium-wide or medium group view. Burned text, if present, was ignored as picture evidence.",
-        "All 53 canonical candidate Shots were reopened as moving image at exact stored bounds."
+        "PICTURE_OBSERVED across exact canonical bounds: S060 00:21:55.439-00:21:57.691 ends a group field; S061-S090 00:21:57.691-00:23:22.860 occupy a visibly distinct exterior two-body block; S091 00:23:22.860-00:23:23.569 leads the return with the circular target; S092 00:23:23.569-00:23:24.695 restores the interior group; S093 00:23:24.695-00:23:26.697 shows a record board before subsequent people."
       ],
       "rejection_reason_code": null,
       "review_ids": [
@@ -6163,93 +6021,32 @@
       "boundary_forward_test_id": null,
       "boundary_signal_ids": [],
       "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C02-PARTIAL-COMPANION-ANCHOR-IN-CONTAINED-TWO-HANDER",
-      "decision_axes": [],
-      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+      "decision_axes": [
+        "COVERAGE",
+        "BLOCKING"
+      ],
+      "evidence_gap_id": null,
       "evidence_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
-      "final_status": "EVIDENCE_GAP_PENDING",
+      "final_status": "SUPPORTING_EVIDENCE",
       "inferences": [
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S010: visible_action remains INFERRED after the fresh frame check: P-A opens/enters the adjacent front seat and settles; P-B remains seated throughout; dialogue, purpose and causal meaning UNKNOWN",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S077: blocking remains INFERRED after the fresh frame check: P-A turns head/gaze from forward/up toward P-B while seated; off-frame intention UNKNOWN",
-        "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
+        "The physical entry makes the prior relation state stale, so shared continuous relation coverage registers both the change and its endpoint before any isolated coverage; identity, permission, dialogue and sound are not used."
       ],
-      "material_unknowns": [
-        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
-      ],
+      "material_unknowns": [],
       "merged_into_candidate_id": null,
-      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
+      "notes": "Existing local moving-image review closes this classification without an audio claim; identity, dialogue, causality and production method remain outside the asserted directing mechanism.",
       "observations": [
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S010 00:06:20.875-00:06:32.958: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=rear-seat medium two-person cabin relation shot. Burned text, if present, was ignored as picture evidence.",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S077 00:11:44.250-00:11:50.250: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=vehicle-interior close-up on P-A. Burned text, if present, was ignored as picture evidence.",
-        "All 59 canonical candidate Shots were reopened as moving image at exact stored bounds."
+        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S010 00:06:20.875-00:06:32.958: PICTURE_OBSERVED in one complete Shot: one visible body begins in a front seating zone, another opens the adjacent door, enters that zone and sits, and both the transition and new two-body endpoint remain readable from the shared rear relation."
       ],
       "rejection_reason_code": null,
       "review_ids": [
         "EXHAUSTIVE-PICTURE-UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001"
       ],
-      "runtime_effect_key": null,
+      "runtime_effect_key": "SUPPORT:DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
       "source_refs": [
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S010",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S011",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S012",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S013",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S014",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S015",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S016",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S017",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S018",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S019",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S020",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S021",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S022",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S023",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S024",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S025",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S026",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S027",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S028",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S029",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S030",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S031",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S032",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S033",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S034",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S035",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S036",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S037",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S038",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S039",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S040",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S050",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S051",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S052",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S053",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S054",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S055",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S056",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S057",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S058",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S059",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S060",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S061",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S062",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S063",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S064",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S065",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S066",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S067",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S068",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S069",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S070",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S071",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S072",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S073",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S074",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S075",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S076",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S077"
+        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S010"
       ],
-      "target_rule_id": null
+      "target_rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
     },
     {
       "audio_dependency": false,
@@ -6257,24 +6054,20 @@
       "boundary_signal_ids": [],
       "candidate_rule_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C03-RE-REGISTER-CONTAINED-GEOMETRY-AFTER-PARALLEL-INSERT",
       "decision_axes": [],
-      "evidence_gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
+      "evidence_gap_id": "GAP-DISTINCT-LOCATION-RETURN-ANCHOR-BOUNDARY",
       "evidence_id": "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001",
       "family_id": "SPATIAL-REGISTRATION-AND-RESET",
       "final_status": "EVIDENCE_GAP_PENDING",
       "inferences": [
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S041: visible_action remains INFERRED after the fresh frame check: Dark-clothed adult opens rear compartment and lifts yellow hard case outward; dialogue, purpose and causal meaning UNKNOWN",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S050: blocking remains INFERRED after the fresh frame check: Both occupy prior front-seat sides; P-B turns toward P-A while P-A later lowers gaze; off-frame intention UNKNOWN",
-        "Fresh frames either preserve the relevant relation continuously, require an ensemble/process anchor rather than a two-person endpoint, or return after a non-continuous parallel block. Those cases do not satisfy this runtime rule's continuous material-change plus counterpart-endpoint trigger."
+        "The visible sequence supports restoring the original contained relation after a distinct location block; parallel timing, causality and story duration remain unknown and are not used."
       ],
       "material_unknowns": [
-        "The reviewed pictures do not prove this candidate's current non-applicability reason; exact Shot/timecode evidence must bind it to a genuine material spatial change plus counterpart-relation decision, or to a different rule."
+        "The fixed corpus has positive return-anchor examples but no same-trigger case proving when an immediate primary-anchor and relation reset should be withheld."
       ],
       "merged_into_candidate_id": null,
-      "notes": "Fresh picture review is retained, but the fixed corpus does not supply the same-trigger boundary required for runtime authorization.",
+      "notes": "Existing moving-image review is complete. The remaining blocker is an external same-trigger support or boundary, not reclassification of this source.",
       "observations": [
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S041 00:08:56.625-00:09:01.792: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=close object/hand view at marked vehicle. Burned text, if present, was ignored as picture evidence.",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-S050 00:09:27.375-00:09:44.750: PICTURE_OBSERVED by exact-range ffmpeg multi-frame sweep; shot_size=vehicle-interior medium two-person relation shot. Burned text, if present, was ignored as picture evidence.",
-        "All 38 canonical candidate Shots were reopened as moving image at exact stored bounds."
+        "PICTURE_OBSERVED across exact canonical bounds: S040 00:08:51.083-00:08:56.625 ends an interior single; S041-S049 00:08:56.625-00:09:27.375 occupy a visibly distinct location with other bodies and objects; S050 00:09:27.375-00:09:44.750 first returns to the original contained two-body relation before later isolated or partial coverage."
       ],
       "rejection_reason_code": null,
       "review_ids": [
@@ -6627,29 +6420,27 @@
         "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C01-APPROACH-TO-CONTAINER-STATE-HANDOFF"
       ],
       "close_condition": "Close only when exact Shot/timecode review proves the full shared trigger, an unrelated same-trigger contrary directing choice, and opposite routing results.",
-      "gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
-      "priority": 1,
-      "required_review": "Add an unrelated continuous real-time route across at least three necessary zones whose waypoints and action chain remain completely readable in one field, making extra waypoint coverage the wrong choice."
-    },
-    {
-      "candidate_count": 11,
-      "candidate_rule_ids": [
-        "BEAR-S01E07-REVIEW-001-BEAR-C02-RECURRING-ZONES",
-        "CHERNOBYL-S01E05-HEARING-RECON-001-CHERNOBYL-CAND-ANCHOR-EXPLANATION-WITH-VISUALIZED-PROCESS-001",
-        "CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001-CHILDREN-CAND-CABIN-ZONES-AS-MOBILE-GEOGRAPHY-001",
-        "DM-ANDOR-S01E10-SEL-001-ANDOR-W4-C01",
-        "DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1-HILL-HOUSE-ECR-C02",
-        "KNIVES-OUT-2019-WILL-READING-001-KNIVES-C01-REGISTER-ENSEMBLE-GEOMETRY-BEFORE-DISTRIBUTED-CHANGE",
-        "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C02-EXTRA-BODY-ANCHOR-IN-CONTAINED-ALTERNATION",
-        "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C01-REGISTER-PUBLIC-OBJECT-CONTEST-GEOMETRY",
-        "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C02-RETURN-THROUGH-PRIMARY-ANCHOR-AFTER-DISTINCT-LOCATION-BLOCK",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C02-PARTIAL-COMPANION-ANCHOR-IN-CONTAINED-TWO-HANDER",
-        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C03-RE-REGISTER-CONTAINED-GEOMETRY-AFTER-PARALLEL-INSERT"
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
+        "EXHAUSTIVE-PICTURE-CHILDREN-OF-MEN-2006-MOVING-CAR-EXTERIOR-DISRUPTION-001",
+        "EXHAUSTIVE-PICTURE-CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+        "EXHAUSTIVE-PICTURE-DM-ANDOR-S01E10-SEL-001",
+        "EXHAUSTIVE-PICTURE-DM-BODYGUARD-S01E01-SEL-001",
+        "EXHAUSTIVE-PICTURE-DM-EVID-HH-S01E06-ENSEMBLE-CONTINUOUS-REFRAMING-V0.1",
+        "EXHAUSTIVE-PICTURE-HOUSE-OF-THE-DRAGON-S01E08-THRONE-ROOM-INGRESS-TO-SEATED-STATE-001",
+        "EXHAUSTIVE-PICTURE-KNIVES-OUT-2019-WILL-READING-001",
+        "EXHAUSTIVE-PICTURE-SICARIO-2015-BORDER-CHECKPOINT-001",
+        "EXHAUSTIVE-PICTURE-SUCCESSION-S01E06-BOARD-VOTE-001",
+        "EXHAUSTIVE-PICTURE-TLOU-BEDROOM-LOCAL-001",
+        "EXHAUSTIVE-PICTURE-TRUE-DETECTIVE-S01E04-MULTI-ZONE-MOBILE-ROUTE-001",
+        "EXHAUSTIVE-PICTURE-UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001"
       ],
-      "close_condition": "Close only after each candidate has a picture-supported relation to a material spatial change and an exact reset or alternative decision; otherwise bind it to another rule.",
-      "gap_id": "GAP-SPATIAL-CANDIDATE-RULE-BINDING",
-      "priority": 2,
-      "required_review": "Reclassify the eleven mixed ensemble, recurring-zone and parallel-return candidates using exact Shot/timecode evidence instead of the disproved counterpart-absent signal."
+      "gap_id": "GAP-WAYPOINT-SAME-TRIGGER-BOUNDARY",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_SAME_TRIGGER_CONTINUOUS_ROUTE_BOUNDARY",
+      "priority": 1,
+      "required_review": "Add an unrelated continuous real-time route across at least three necessary zones whose waypoints and action chain remain completely readable in one field, making extra waypoint coverage the wrong choice.",
+      "why_existing_material_cannot_close": "Fresh review found route candidates but no unrelated same-trigger case in the fixed corpus where one continuous field keeps every required waypoint and action legible and makes added waypoint coverage the wrong choice."
     },
     {
       "candidate_count": 12,
@@ -6668,9 +6459,24 @@
         "TLOU-BEDROOM-LOCAL-001-TLOU-BED-C02"
       ],
       "close_condition": "Close only when exact Shot/timecode evidence proves object identity/state, the dependent action, one cross-work support, and one same-trigger no-extra-checkpoint boundary.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-CITIZEN-KANE-1941-BREAKFAST-MONTAGE-001",
+        "EXHAUSTIVE-PICTURE-DM-BODYGUARD-S01E01-SEL-001",
+        "EXHAUSTIVE-PICTURE-GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001",
+        "EXHAUSTIVE-PICTURE-MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001",
+        "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
+        "EXHAUSTIVE-PICTURE-MRR-S04E07-ACT-FOUR-VISUAL-001",
+        "EXHAUSTIVE-PICTURE-NOBODY-2021-BUS-001",
+        "EXHAUSTIVE-PICTURE-THE-DEVIL-WEARS-PRADA-2006-CERULEAN-CORRECTION-001",
+        "EXHAUSTIVE-PICTURE-THE-SOCIAL-NETWORK-2010-OPENING-TWO-PERSON-EXCHANGE-001",
+        "EXHAUSTIVE-PICTURE-TLOU-BEDROOM-LOCAL-001"
+      ],
       "gap_id": "GAP-OBJECT-CHECKPOINT-SUPPORT-AND-BOUNDARY",
-      "priority": 3,
-      "required_review": "Add unrelated support for a portable-object handler or function change that governs a dependent next action, plus a same-trigger case where one continuous person-object view already makes the state readable without a dedicated checkpoint."
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_OBJECT_CHECKPOINT_SUPPORT_AND_SAME_TRIGGER_BOUNDARY",
+      "priority": 4,
+      "required_review": "Add unrelated support for a portable-object handler or function change that governs a dependent next action, plus a same-trigger case where one continuous person-object view already makes the state readable without a dedicated checkpoint.",
+      "why_existing_material_cannot_close": "The reviewed fixed corpus does not contain both unrelated support for a function-changing portable object and a same-trigger continuous-view boundary."
     },
     {
       "candidate_count": 8,
@@ -6685,9 +6491,19 @@
         "WIRE-S01E04-OLD-CASES-001-WIRE-C02-EMBODY-HYPOTHESIS-THEN-TEST-TRACE"
       ],
       "close_condition": "Close only after exact Shot/timecode review proves the shared comparison trigger, the alternative coverage, and why the comparative-field rule must not fire.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-APOLLO-13-1995-CONSTRAINED-MATERIAL-HANDOFF-001",
+        "EXHAUSTIVE-PICTURE-BEAR-S02E07-TASK-CLOSED-LOOP-001",
+        "EXHAUSTIVE-PICTURE-BETTER-CALL-SAUL-S03E05-PUBLIC-PROOF-001",
+        "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001",
+        "EXHAUSTIVE-PICTURE-WIRE-S01E04-OLD-CASES-001"
+      ],
       "gap_id": "GAP-COMPARATIVE-SAME-TRIGGER-BOUNDARY",
-      "priority": 4,
-      "required_review": "Add one unrelated, rights-cleared scene with multiple simultaneously visible referents whose comparison truly governs the next action, but where a separate comparative field would be the wrong coverage choice."
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_COMPARATIVE_FIELD_SAME_TRIGGER_BOUNDARY",
+      "priority": 5,
+      "required_review": "Add one unrelated, rights-cleared scene with multiple simultaneously visible referents whose comparison truly governs the next action, but where a separate comparative field would be the wrong coverage choice.",
+      "why_existing_material_cannot_close": "The reviewed fixed corpus has comparison candidates but no unrelated same-trigger case proving that a separate comparative field is the wrong coverage choice."
     },
     {
       "candidate_count": 3,
@@ -6697,9 +6513,16 @@
         "MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001-MOONLIGHT-CAND-SEPARATED-ZONES-BEFORE-SHARED-DISTANCE-001"
       ],
       "close_condition": "Close only after exact Shot/timecode review proves the proximity trigger, already-readable geometry, and the alternative coverage decision in a different work.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-BRIDGERTON-S02E05-CONTAINED-PROXIMITY-001",
+        "EXHAUSTIVE-PICTURE-MOONLIGHT-2016-TWO-APPEARANCE-MULTI-ZONE-EDITORIAL-001"
+      ],
       "gap_id": "GAP-RELATION-GEOMETRY-SAME-TRIGGER-BOUNDARY",
-      "priority": 5,
-      "required_review": "Add an unrelated proximity scene with the same relation-change trigger where prior geometry remains fully registered, so another initial spatial master would be redundant."
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_PROXIMITY_GEOMETRY_ALREADY_READABLE_BOUNDARY",
+      "priority": 6,
+      "required_review": "Add an unrelated proximity scene with the same relation-change trigger where prior geometry remains fully registered, so another initial spatial master would be redundant.",
+      "why_existing_material_cannot_close": "The reviewed fixed corpus lacks an unrelated proximity case with the same trigger and already-readable geometry that makes another initial master redundant."
     },
     {
       "candidate_count": 1,
@@ -6707,9 +6530,15 @@
         "BEAR-S02E07-TASK-CLOSED-LOOP-001-BEAR-S02-C02-VERSIONED-OBJECT-HANDOFF"
       ],
       "close_condition": "Close only when both cases have exact Shot/timecode evidence and distinguish one versioned object from unrelated items.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-BEAR-S02E07-TASK-CLOSED-LOOP-001"
+      ],
       "gap_id": "GAP-VERSIONED-OBJECT-HANDOFF-COUNTERPART",
-      "priority": 6,
-      "required_review": "Add one rights-cleared clip with a visually tagged source object transformed and handed across two people or zones, plus one same-surface independent-items boundary."
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "VERSIONED_OBJECT_HANDOFF_SUPPORT_AND_INDEPENDENT_ITEMS_BOUNDARY",
+      "priority": 7,
+      "required_review": "Add one rights-cleared clip with a visually tagged source object transformed and handed across two people or zones, plus one same-surface independent-items boundary.",
+      "why_existing_material_cannot_close": "The reviewed fixed corpus contains no second rights-cleared case that proves a visibly transformed object handoff and separates it from same-surface independent items."
     },
     {
       "candidate_count": 1,
@@ -6717,9 +6546,15 @@
         "MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001-MARTIAN-MSOSES-C04"
       ],
       "close_condition": "Close only when revised and unchanged repeats are separated by exact Shot/timecode evidence and change a concrete directing choice.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-MARTIAN-MULTI-SPACE-OBJECT-STATE-EDITORIAL-SEQUENCE-LOCAL-001"
+      ],
       "gap_id": "GAP-REVISED-REPEAT-CONFIGURATION",
-      "priority": 7,
-      "required_review": "Add one rights-cleared revised-operation clip with a visible plan/configuration change and phase marker, plus one unchanged-repeat boundary."
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "REVISED_OPERATION_REPEAT_AND_UNCHANGED_REPEAT_BOUNDARY",
+      "priority": 8,
+      "required_review": "Add one rights-cleared revised-operation clip with a visible plan/configuration change and phase marker, plus one unchanged-repeat boundary.",
+      "why_existing_material_cannot_close": "The reviewed fixed corpus lacks a second case with a visible plan or configuration revision and a matched unchanged-repeat boundary."
     },
     {
       "candidate_count": 4,
@@ -6730,9 +6565,18 @@
         "SUCCESSION-S01E06-BOARD-VOTE-001-SUC-C02"
       ],
       "close_condition": "Close when the positive trigger and the do-not-intercut boundary are both exact Shot/timecode bound and produce opposite routing results.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
+        "EXHAUSTIVE-PICTURE-DM-ANDOR-S01E10-SEL-001",
+        "EXHAUSTIVE-PICTURE-DM-BODYGUARD-S01E01-SEL-001",
+        "EXHAUSTIVE-PICTURE-SUCCESSION-S01E06-BOARD-VOTE-001"
+      ],
       "gap_id": "GAP-MULTI-THREAD-NATURAL-BOUNDARY",
-      "priority": 8,
-      "required_review": "Add one rights-cleared same-trigger multi-thread scene whose simultaneous visible states are clearer in one continuous field than by intercutting."
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "MULTI_THREAD_CONTINUOUS_FIELD_BOUNDARY",
+      "priority": 9,
+      "required_review": "Add one rights-cleared same-trigger multi-thread scene whose simultaneous visible states are clearer in one continuous field than by intercutting.",
+      "why_existing_material_cannot_close": "The reviewed fixed corpus lacks a same-trigger multi-thread case where simultaneous visible states are demonstrably clearer in one continuous field than through intercutting."
     },
     {
       "candidate_count": 3,
@@ -6742,9 +6586,17 @@
         "MRR-S04E07-ACT-FOUR-VISUAL-001-MRR-S04E07-C01-DETAIL-THEN-CONTAINER-REGISTER"
       ],
       "close_condition": "Close only when the shared trigger, opposite scale order and changed Coverage/Edit decision are all Shot/timecode bound.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-A-QUIET-PLACE-2018-PARALLEL-BODY-STATE-RADIAL-LIGHT-001",
+        "EXHAUSTIVE-PICTURE-CHERNOBYL-S01E05-HEARING-RECON-001",
+        "EXHAUSTIVE-PICTURE-MRR-S04E07-ACT-FOUR-VISUAL-001"
+      ],
       "gap_id": "GAP-SCALE-ORDER-SAME-TRIGGER",
-      "priority": 9,
-      "required_review": "Add one rights-cleared same-trigger detail-to-container support and one same-trigger geometry-first boundary."
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "DETAIL_FIRST_SUPPORT_AND_GEOMETRY_FIRST_BOUNDARY",
+      "priority": 10,
+      "required_review": "Add one rights-cleared same-trigger detail-to-container support and one same-trigger geometry-first boundary.",
+      "why_existing_material_cannot_close": "The reviewed fixed corpus does not provide both unrelated detail-first support and a matched geometry-first contrary choice under the same trigger."
     },
     {
       "candidate_count": 3,
@@ -6754,9 +6606,15 @@
         "GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001-GETOUT-C04-BRIEF-ROOM-RESET-CAN-REOPEN-SUBJECTIVE-LOOP"
       ],
       "close_condition": "Close only after both unrelated support and boundary are exact Shot/timecode bound without relying on dialogue or unauditioned sound.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-GETOUT-2017-HYPNOSIS-SUBJECTIVE-SPACE-001"
+      ],
       "gap_id": "GAP-SUBJECTIVE-ACCESS-CROSS-WORK",
-      "priority": 10,
-      "required_review": "Add one rights-cleared unrelated subjective-access transition and one same-trigger boundary where ordinary relation coverage must remain primary."
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_SUBJECTIVE_ACCESS_SUPPORT_AND_ORDINARY_RELATION_BOUNDARY",
+      "priority": 11,
+      "required_review": "Add one rights-cleared unrelated subjective-access transition and one same-trigger boundary where ordinary relation coverage must remain primary.",
+      "why_existing_material_cannot_close": "The reviewed fixed corpus supplies one subjective-access lineage but no unrelated support plus same-trigger ordinary-relation boundary without unauditioned sound claims."
     },
     {
       "candidate_count": 1,
@@ -6764,9 +6622,15 @@
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001"
       ],
       "close_condition": "Close only when unrelated support and a same-trigger contrary case are directly auditioned, Shot/timecode bound, and separate audible state from unproved subjective ownership.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+      ],
       "gap_id": "GAP-AUDIO-STATE-WITHIN-HELD-PICTURE",
-      "priority": 11,
-      "required_review": "Add one unrelated same-trigger case where an auditioned information-state change occurs inside a necessary held picture, plus one case where a picture change is required at the same trigger."
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_AUDITIONED_HELD_PICTURE_SUPPORT_AND_PICTURE_CHANGE_BOUNDARY",
+      "priority": 12,
+      "required_review": "Add one unrelated same-trigger case where an auditioned information-state change occurs inside a necessary held picture, plus one case where a picture change is required at the same trigger.",
+      "why_existing_material_cannot_close": "Direct audition closed the local sound facts, but the fixed corpus has no unrelated directly auditioned same-trigger support and contrary picture-change case."
     },
     {
       "candidate_count": 1,
@@ -6774,9 +6638,15 @@
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002"
       ],
       "close_condition": "Close only when shared event ownership, perceptual tolerance, unrelated support, and a same-trigger non-alignment boundary are directly auditioned and independently timed.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+      ],
       "gap_id": "GAP-AUDIO-PICTURE-BOUNDARY-ALIGNMENT",
-      "priority": 12,
-      "required_review": "Add one unrelated event requiring picture and auditioned audio-state alignment, plus one same-trigger case where comprehension requires different picture and audio timing."
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_AUDITIONED_ALIGNMENT_SUPPORT_AND_DIFFERENT_TIMING_BOUNDARY",
+      "priority": 13,
+      "required_review": "Add one unrelated event requiring picture and auditioned audio-state alignment, plus one same-trigger case where comprehension requires different picture and audio timing.",
+      "why_existing_material_cannot_close": "Direct audition closed the local event timings, but the fixed corpus lacks unrelated auditioned support and a same-trigger case requiring different picture and audio timing."
     },
     {
       "candidate_count": 1,
@@ -6784,9 +6654,15 @@
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003"
       ],
       "close_condition": "Close only when the visual-first trigger and measured offset are directly established in unrelated support and an audio-first or simultaneous same-trigger boundary.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+      ],
       "gap_id": "GAP-PICTURE-FIRST-AUDIO-STATE-OFFSET",
-      "priority": 13,
-      "required_review": "Add one unrelated scene that must register a new picture field before an auditioned audio-information change, plus one same-trigger case requiring simultaneous or audio-first disclosure."
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_PICTURE_FIRST_SUPPORT_AND_AUDIO_FIRST_OR_SIMULTANEOUS_BOUNDARY",
+      "priority": 14,
+      "required_review": "Add one unrelated scene that must register a new picture field before an auditioned audio-information change, plus one same-trigger case requiring simultaneous or audio-first disclosure.",
+      "why_existing_material_cannot_close": "Direct audition established the local transition, but the fixed corpus lacks an unrelated picture-first case and a same-trigger audio-first or simultaneous contrary choice."
     },
     {
       "candidate_count": 1,
@@ -6794,9 +6670,49 @@
         "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004"
       ],
       "close_condition": "Close only when unrelated support and a same-trigger simpler-audio boundary prove that a recurring audio-state schedule changes a concrete continuity or edit decision.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1"
+      ],
       "gap_id": "GAP-RECURRING-AUDIO-STATE-VISUAL-LEDGER",
-      "priority": 14,
-      "required_review": "Add one unrelated multi-state sequence requiring an independently auditioned audio schedule and visual continuity ledger, plus one same-trigger case where one stable audio state is clearer."
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_RECURRING_AUDIO_STATE_SUPPORT_AND_STABLE_STATE_BOUNDARY",
+      "priority": 15,
+      "required_review": "Add one unrelated multi-state sequence requiring an independently auditioned audio schedule and visual continuity ledger, plus one same-trigger case where one stable audio state is clearer.",
+      "why_existing_material_cannot_close": "Direct audition established the local state schedule, but the fixed corpus lacks unrelated support and a same-trigger stable-audio case that should not use the ledger."
+    },
+    {
+      "candidate_count": 1,
+      "candidate_rule_ids": [
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C01-REGISTER-PUBLIC-OBJECT-CONTEST-GEOMETRY"
+      ],
+      "close_condition": "Close only when exact Shot and timecode review proves both the cross-work directing mechanism and a contrary same-trigger coverage choice.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-TED-LASSO-S01E08-DARTS-REVERSAL-001"
+      ],
+      "gap_id": "GAP-PUBLIC-OBJECT-CONTEST-GEOMETRY-CROSS-WORK",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "UNRELATED_PUBLIC_OBJECT_CONTEST_SUPPORT_AND_SAME_TRIGGER_WITHHOLD_BOUNDARY",
+      "priority": 2,
+      "required_review": "Add one unrelated public object-mediated contest or reveal with the same registration trigger and one same-trigger case where early target or witness registration should be withheld.",
+      "why_existing_material_cannot_close": "The fixed corpus contains other public proof or procedural demonstration scenes, but their triggers differ; it lacks both a second object-mediated public contest or reveal and a same-trigger case where early target or witness registration is the wrong choice."
+    },
+    {
+      "candidate_count": 2,
+      "candidate_rule_ids": [
+        "TED-LASSO-S01E08-DARTS-REVERSAL-001-TED-S01E08-C02-RETURN-THROUGH-PRIMARY-ANCHOR-AFTER-DISTINCT-LOCATION-BLOCK",
+        "UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001-UNB-S01E02-C03-RE-REGISTER-CONTAINED-GEOMETRY-AFTER-PARALLEL-INSERT"
+      ],
+      "close_condition": "Close only when exact Shot and timecode review proves the shared return trigger, the contrary directing choice and a machine-routable non-applicability boundary.",
+      "existing_review_refs": [
+        "EXHAUSTIVE-PICTURE-TED-LASSO-S01E08-DARTS-REVERSAL-001",
+        "EXHAUSTIVE-PICTURE-UNBELIEVABLE-S01E02-CONTAINED-TWO-PERSON-SEQUENCE-001"
+      ],
+      "gap_id": "GAP-DISTINCT-LOCATION-RETURN-ANCHOR-BOUNDARY",
+      "gap_scope": "EXTERNAL_SUPPLEMENTATION",
+      "missing_evidence_type": "SAME_TRIGGER_DISTINCT_LOCATION_RETURN_WITHHOLD_BOUNDARY",
+      "priority": 3,
+      "required_review": "Add one unrelated same-trigger return from a distinct visible location where immediate primary-anchor and relation restoration would be the wrong choice.",
+      "why_existing_material_cannot_close": "The two reviewed works provide positive return-anchor patterns, while other fixed-corpus location changes have different primary triggers; no same-trigger instance shows that immediate anchor and relation restoration should be withheld."
     }
   ],
   "evidence_reviews": [
@@ -32091,14 +32007,117 @@
       ]
     },
     {
+      "audio_candidate_bindings": [
+        {
+          "authorized_observation_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013"
+          ],
+          "binding_reason": "These five directly auditioned state boundaries are the complete audible basis used by this candidate; other observations in the same Shots describe different state transitions.",
+          "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-ALIGN-PICTURE-AND-MEASURED-BOUNDARY-002",
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S005",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S006",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S007",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S015",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S016",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S020",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021"
+          ]
+        },
+        {
+          "authorized_observation_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004"
+          ],
+          "binding_reason": "The clearer-speech interval and its return to a muffled state are the complete directly auditioned basis for holding picture across this candidate's stated entry; same-Shot observations of other changes are not authorized.",
+          "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-HOLD-PICTURE-ACROSS-MEASURED-ENTRY-001",
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S003",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004"
+          ]
+        },
+        {
+          "authorized_observation_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E007",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E008",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E010",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E011",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E012",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E014",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E015",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E016"
+          ],
+          "binding_reason": "The recurring-state ledger candidate explicitly depends on the complete directly auditioned sequence, so every recorded state observation and all twenty-five covered Shots are authorized and required.",
+          "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-PLAN-RECURRING-STATES-WITH-INDEPENDENT-VISUAL-LEDGER-004",
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S003",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S005",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S006",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S007",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S008",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S009",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S010",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S011",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S012",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S013",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S014",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S015",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S016",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S017",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S018",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S019",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S020",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S022",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S023",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S024",
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025"
+          ]
+        },
+        {
+          "authorized_observation_ids": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002"
+          ],
+          "binding_reason": "Only the directly auditioned reduction in overall noise is authorized for this stagger candidate; the opening muffled-state observation overlaps the same Shot but is a different fact.",
+          "candidate_rule_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-SOM-SIGNAL-CAND-STAGGER-SIGNAL-AFTER-PICTURE-HANDOFF-003",
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002"
+          ]
+        }
+      ],
       "audio_method_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-METHOD-DIRECT-AUDIO",
       "audio_observations": [
         {
-          "audit_fields": ["ambience", "audio_information_change"],
+          "audit_fields": [
+            "ambience",
+            "audio_information_change"
+          ],
           "clip_offset_end_seconds": 10.0,
           "clip_offset_start_seconds": 0.0,
           "description": "The selected interval begins in a muffled-sounding state.",
-          "end": {"frame": null, "pts": null, "seconds": 571.352458, "time_base": null, "timecode": "00:09:31.352458"},
+          "end": {
+            "frame": null,
+            "pts": null,
+            "seconds": 571.352458,
+            "time_base": null,
+            "timecode": "00:09:31.352458"
+          },
           "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E001",
           "precision": "APPROXIMATE_HUMAN_AUDITION",
           "precision_seconds": 1.0,
@@ -32106,16 +32125,32 @@
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001",
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002"
           ],
-          "start": {"frame": null, "pts": null, "seconds": 561.352458, "time_base": null, "timecode": "00:09:21.352458"},
+          "start": {
+            "frame": null,
+            "pts": null,
+            "seconds": 561.352458,
+            "time_base": null,
+            "timecode": "00:09:21.352458"
+          },
           "status": "AUDIO_OBSERVED",
-          "unknowns": ["Exact endpoints inside the declared one-second precision, physical source, subjective ownership, dramatic causality, and edit intent remain unknown."]
+          "unknowns": [
+            "Exact endpoints inside the declared one-second precision, physical source, subjective ownership, dramatic causality, and edit intent remain unknown."
+          ]
         },
         {
-          "audit_fields": ["audio_information_change"],
+          "audit_fields": [
+            "audio_information_change"
+          ],
           "clip_offset_end_seconds": 10.0,
           "clip_offset_start_seconds": 10.0,
           "description": "The overall noise becomes less prominent around this point.",
-          "end": {"frame": null, "pts": null, "seconds": 571.352458, "time_base": null, "timecode": "00:09:31.352458"},
+          "end": {
+            "frame": null,
+            "pts": null,
+            "seconds": 571.352458,
+            "time_base": null,
+            "timecode": "00:09:31.352458"
+          },
           "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E002",
           "precision": "APPROXIMATE_HUMAN_AUDITION",
           "precision_seconds": 1.0,
@@ -32123,16 +32158,32 @@
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S001",
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S002"
           ],
-          "start": {"frame": null, "pts": null, "seconds": 571.352458, "time_base": null, "timecode": "00:09:31.352458"},
+          "start": {
+            "frame": null,
+            "pts": null,
+            "seconds": 571.352458,
+            "time_base": null,
+            "timecode": "00:09:31.352458"
+          },
           "status": "AUDIO_OBSERVED",
-          "unknowns": ["Exact onset inside the declared one-second precision, physical source, subjective ownership, dramatic causality, and edit intent remain unknown."]
+          "unknowns": [
+            "Exact onset inside the declared one-second precision, physical source, subjective ownership, dramatic causality, and edit intent remain unknown."
+          ]
         },
         {
-          "audit_fields": ["audio_information_change"],
+          "audit_fields": [
+            "audio_information_change"
+          ],
           "clip_offset_end_seconds": 52.0,
           "clip_offset_start_seconds": 26.0,
           "description": "Speech is audibly clearer from around 26 seconds until it returns to a muffled-sounding state around 52 seconds; no words or speaker identity are retained.",
-          "end": {"frame": null, "pts": null, "seconds": 613.352458, "time_base": null, "timecode": "00:10:13.352458"},
+          "end": {
+            "frame": null,
+            "pts": null,
+            "seconds": 613.352458,
+            "time_base": null,
+            "timecode": "00:10:13.352458"
+          },
           "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E003",
           "precision": "APPROXIMATE_HUMAN_AUDITION",
           "precision_seconds": 1.0,
@@ -32141,30 +32192,65 @@
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S003",
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004"
           ],
-          "start": {"frame": null, "pts": null, "seconds": 587.352458, "time_base": null, "timecode": "00:09:47.352458"},
+          "start": {
+            "frame": null,
+            "pts": null,
+            "seconds": 587.352458,
+            "time_base": null,
+            "timecode": "00:09:47.352458"
+          },
           "status": "AUDIO_OBSERVED",
-          "unknowns": ["Exact endpoints inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."]
+          "unknowns": [
+            "Exact endpoints inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."
+          ]
         },
         {
-          "audit_fields": ["audio_information_change"],
+          "audit_fields": [
+            "audio_information_change"
+          ],
           "clip_offset_end_seconds": 52.0,
           "clip_offset_start_seconds": 52.0,
           "description": "The speech returns to a muffled-sounding state around this point.",
-          "end": {"frame": null, "pts": null, "seconds": 613.352458, "time_base": null, "timecode": "00:10:13.352458"},
+          "end": {
+            "frame": null,
+            "pts": null,
+            "seconds": 613.352458,
+            "time_base": null,
+            "timecode": "00:10:13.352458"
+          },
           "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E004",
           "precision": "APPROXIMATE_HUMAN_AUDITION",
           "precision_seconds": 1.0,
-          "source_refs": ["SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004"],
-          "start": {"frame": null, "pts": null, "seconds": 613.352458, "time_base": null, "timecode": "00:10:13.352458"},
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004"
+          ],
+          "start": {
+            "frame": null,
+            "pts": null,
+            "seconds": 613.352458,
+            "time_base": null,
+            "timecode": "00:10:13.352458"
+          },
           "status": "AUDIO_OBSERVED",
-          "unknowns": ["Exact onset inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."]
+          "unknowns": [
+            "Exact onset inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."
+          ]
         },
         {
-          "audit_fields": ["ambience", "audio_information_change"],
+          "audit_fields": [
+            "ambience",
+            "audio_information_change"
+          ],
           "clip_offset_end_seconds": 100.0,
           "clip_offset_start_seconds": 80.0,
           "description": "A sudden drum passage is audible and ends near the end of this reported interval.",
-          "end": {"frame": null, "pts": null, "seconds": 661.352458, "time_base": null, "timecode": "00:11:01.352458"},
+          "end": {
+            "frame": null,
+            "pts": null,
+            "seconds": 661.352458,
+            "time_base": null,
+            "timecode": "00:11:01.352458"
+          },
           "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E005",
           "precision": "APPROXIMATE_HUMAN_AUDITION",
           "precision_seconds": 1.0,
@@ -32172,16 +32258,33 @@
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S004",
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S005"
           ],
-          "start": {"frame": null, "pts": null, "seconds": 641.352458, "time_base": null, "timecode": "00:10:41.352458"},
+          "start": {
+            "frame": null,
+            "pts": null,
+            "seconds": 641.352458,
+            "time_base": null,
+            "timecode": "00:10:41.352458"
+          },
           "status": "AUDIO_OBSERVED",
-          "unknowns": ["Exact endpoints inside the declared one-second precision, production-layer ownership, subjective ownership, dramatic causality, and edit intent remain unknown."]
+          "unknowns": [
+            "Exact endpoints inside the declared one-second precision, production-layer ownership, subjective ownership, dramatic causality, and edit intent remain unknown."
+          ]
         },
         {
-          "audit_fields": ["ambience", "audio_information_change"],
+          "audit_fields": [
+            "ambience",
+            "audio_information_change"
+          ],
           "clip_offset_end_seconds": 117.0,
           "clip_offset_start_seconds": 111.0,
           "description": "Gull-like calls and broad outdoor ambience are audible during this reported interval.",
-          "end": {"frame": null, "pts": null, "seconds": 678.352458, "time_base": null, "timecode": "00:11:18.352458"},
+          "end": {
+            "frame": null,
+            "pts": null,
+            "seconds": 678.352458,
+            "time_base": null,
+            "timecode": "00:11:18.352458"
+          },
           "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E006",
           "precision": "APPROXIMATE_HUMAN_AUDITION",
           "precision_seconds": 1.0,
@@ -32190,16 +32293,34 @@
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S006",
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S007"
           ],
-          "start": {"frame": null, "pts": null, "seconds": 672.352458, "time_base": null, "timecode": "00:11:12.352458"},
+          "start": {
+            "frame": null,
+            "pts": null,
+            "seconds": 672.352458,
+            "time_base": null,
+            "timecode": "00:11:12.352458"
+          },
           "status": "AUDIO_OBSERVED",
-          "unknowns": ["Exact endpoints inside the declared one-second precision, physical location and source, subjective ownership, dramatic causality, and edit intent remain unknown."]
+          "unknowns": [
+            "Exact endpoints inside the declared one-second precision, physical location and source, subjective ownership, dramatic causality, and edit intent remain unknown."
+          ]
         },
         {
-          "audit_fields": ["silence_intervals", "ambience", "audio_information_change"],
+          "audit_fields": [
+            "silence_intervals",
+            "ambience",
+            "audio_information_change"
+          ],
           "clip_offset_end_seconds": 160.0,
           "clip_offset_start_seconds": 117.0,
           "description": "The soundtrack becomes substantially quieter after the gull-like calls; absolute silence is not asserted.",
-          "end": {"frame": null, "pts": null, "seconds": 721.352458, "time_base": null, "timecode": "00:12:01.352458"},
+          "end": {
+            "frame": null,
+            "pts": null,
+            "seconds": 721.352458,
+            "time_base": null,
+            "timecode": "00:12:01.352458"
+          },
           "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E007",
           "precision": "APPROXIMATE_HUMAN_AUDITION",
           "precision_seconds": 1.0,
@@ -32209,16 +32330,33 @@
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S008",
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S009"
           ],
-          "start": {"frame": null, "pts": null, "seconds": 678.352458, "time_base": null, "timecode": "00:11:18.352458"},
+          "start": {
+            "frame": null,
+            "pts": null,
+            "seconds": 678.352458,
+            "time_base": null,
+            "timecode": "00:11:18.352458"
+          },
           "status": "AUDIO_OBSERVED",
-          "unknowns": ["Exact endpoints inside the declared one-second precision, absolute silence, subjective ownership, dramatic causality, and edit intent remain unknown."]
+          "unknowns": [
+            "Exact endpoints inside the declared one-second precision, absolute silence, subjective ownership, dramatic causality, and edit intent remain unknown."
+          ]
         },
         {
-          "audit_fields": ["ambience", "audio_information_change"],
+          "audit_fields": [
+            "ambience",
+            "audio_information_change"
+          ],
           "clip_offset_end_seconds": 219.0,
           "clip_offset_start_seconds": 160.0,
           "description": "Intermittent short speech-like sounds are heavily muffled and difficult to understand before clearer speech begins.",
-          "end": {"frame": null, "pts": null, "seconds": 780.352458, "time_base": null, "timecode": "00:13:00.352458"},
+          "end": {
+            "frame": null,
+            "pts": null,
+            "seconds": 780.352458,
+            "time_base": null,
+            "timecode": "00:13:00.352458"
+          },
           "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E008",
           "precision": "APPROXIMATE_HUMAN_AUDITION",
           "precision_seconds": 1.0,
@@ -32232,16 +32370,32 @@
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S015",
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S016"
           ],
-          "start": {"frame": null, "pts": null, "seconds": 721.352458, "time_base": null, "timecode": "00:12:01.352458"},
+          "start": {
+            "frame": null,
+            "pts": null,
+            "seconds": 721.352458,
+            "time_base": null,
+            "timecode": "00:12:01.352458"
+          },
           "status": "AUDIO_OBSERVED",
-          "unknowns": ["Exact speech intervals inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."]
+          "unknowns": [
+            "Exact speech intervals inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."
+          ]
         },
         {
-          "audit_fields": ["audio_information_change"],
+          "audit_fields": [
+            "audio_information_change"
+          ],
           "clip_offset_end_seconds": 219.0,
           "clip_offset_start_seconds": 219.0,
           "description": "Speech becomes audibly clearer around this point.",
-          "end": {"frame": null, "pts": null, "seconds": 780.352458, "time_base": null, "timecode": "00:13:00.352458"},
+          "end": {
+            "frame": null,
+            "pts": null,
+            "seconds": 780.352458,
+            "time_base": null,
+            "timecode": "00:13:00.352458"
+          },
           "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E009",
           "precision": "APPROXIMATE_HUMAN_AUDITION",
           "precision_seconds": 1.0,
@@ -32249,30 +32403,64 @@
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S015",
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S016"
           ],
-          "start": {"frame": null, "pts": null, "seconds": 780.352458, "time_base": null, "timecode": "00:13:00.352458"},
+          "start": {
+            "frame": null,
+            "pts": null,
+            "seconds": 780.352458,
+            "time_base": null,
+            "timecode": "00:13:00.352458"
+          },
           "status": "AUDIO_OBSERVED",
-          "unknowns": ["Exact onset inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."]
+          "unknowns": [
+            "Exact onset inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."
+          ]
         },
         {
-          "audit_fields": ["audio_information_change"],
+          "audit_fields": [
+            "audio_information_change"
+          ],
           "clip_offset_end_seconds": 240.0,
           "clip_offset_start_seconds": 240.0,
           "description": "Speech becomes muffled-sounding again around this point.",
-          "end": {"frame": null, "pts": null, "seconds": 801.352458, "time_base": null, "timecode": "00:13:21.352458"},
+          "end": {
+            "frame": null,
+            "pts": null,
+            "seconds": 801.352458,
+            "time_base": null,
+            "timecode": "00:13:21.352458"
+          },
           "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E010",
           "precision": "APPROXIMATE_HUMAN_AUDITION",
           "precision_seconds": 1.0,
-          "source_refs": ["SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S017"],
-          "start": {"frame": null, "pts": null, "seconds": 801.352458, "time_base": null, "timecode": "00:13:21.352458"},
+          "source_refs": [
+            "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S017"
+          ],
+          "start": {
+            "frame": null,
+            "pts": null,
+            "seconds": 801.352458,
+            "time_base": null,
+            "timecode": "00:13:21.352458"
+          },
           "status": "AUDIO_OBSERVED",
-          "unknowns": ["Exact onset inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."]
+          "unknowns": [
+            "Exact onset inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."
+          ]
         },
         {
-          "audit_fields": ["audio_information_change"],
+          "audit_fields": [
+            "audio_information_change"
+          ],
           "clip_offset_end_seconds": 258.0,
           "clip_offset_start_seconds": 258.0,
           "description": "Speech becomes audibly clearer around this point.",
-          "end": {"frame": null, "pts": null, "seconds": 819.352458, "time_base": null, "timecode": "00:13:39.352458"},
+          "end": {
+            "frame": null,
+            "pts": null,
+            "seconds": 819.352458,
+            "time_base": null,
+            "timecode": "00:13:39.352458"
+          },
           "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E011",
           "precision": "APPROXIMATE_HUMAN_AUDITION",
           "precision_seconds": 1.0,
@@ -32280,16 +32468,32 @@
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S018",
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S019"
           ],
-          "start": {"frame": null, "pts": null, "seconds": 819.352458, "time_base": null, "timecode": "00:13:39.352458"},
+          "start": {
+            "frame": null,
+            "pts": null,
+            "seconds": 819.352458,
+            "time_base": null,
+            "timecode": "00:13:39.352458"
+          },
           "status": "AUDIO_OBSERVED",
-          "unknowns": ["Exact onset inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."]
+          "unknowns": [
+            "Exact onset inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."
+          ]
         },
         {
-          "audit_fields": ["audio_information_change"],
+          "audit_fields": [
+            "audio_information_change"
+          ],
           "clip_offset_end_seconds": 272.0,
           "clip_offset_start_seconds": 270.0,
           "description": "A brief muffled-sounding interval is audible.",
-          "end": {"frame": null, "pts": null, "seconds": 833.352458, "time_base": null, "timecode": "00:13:53.352458"},
+          "end": {
+            "frame": null,
+            "pts": null,
+            "seconds": 833.352458,
+            "time_base": null,
+            "timecode": "00:13:53.352458"
+          },
           "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E012",
           "precision": "APPROXIMATE_HUMAN_AUDITION",
           "precision_seconds": 1.0,
@@ -32297,16 +32501,33 @@
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S019",
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S020"
           ],
-          "start": {"frame": null, "pts": null, "seconds": 831.352458, "time_base": null, "timecode": "00:13:51.352458"},
+          "start": {
+            "frame": null,
+            "pts": null,
+            "seconds": 831.352458,
+            "time_base": null,
+            "timecode": "00:13:51.352458"
+          },
           "status": "AUDIO_OBSERVED",
-          "unknowns": ["Exact endpoints inside the declared one-second precision, speech content, subjective ownership, dramatic causality, and edit intent remain unknown."]
+          "unknowns": [
+            "Exact endpoints inside the declared one-second precision, speech content, subjective ownership, dramatic causality, and edit intent remain unknown."
+          ]
         },
         {
-          "audit_fields": ["ambience", "audio_information_change"],
+          "audit_fields": [
+            "ambience",
+            "audio_information_change"
+          ],
           "clip_offset_end_seconds": 286.0,
           "clip_offset_start_seconds": 273.0,
           "description": "Road-like environmental noise is prominent during this reported interval.",
-          "end": {"frame": null, "pts": null, "seconds": 847.352458, "time_base": null, "timecode": "00:14:07.352458"},
+          "end": {
+            "frame": null,
+            "pts": null,
+            "seconds": 847.352458,
+            "time_base": null,
+            "timecode": "00:14:07.352458"
+          },
           "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E013",
           "precision": "APPROXIMATE_HUMAN_AUDITION",
           "precision_seconds": 1.0,
@@ -32315,16 +32536,33 @@
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021",
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S022"
           ],
-          "start": {"frame": null, "pts": null, "seconds": 834.352458, "time_base": null, "timecode": "00:13:54.352458"},
+          "start": {
+            "frame": null,
+            "pts": null,
+            "seconds": 834.352458,
+            "time_base": null,
+            "timecode": "00:13:54.352458"
+          },
           "status": "AUDIO_OBSERVED",
-          "unknowns": ["Exact endpoints inside the declared one-second precision, physical location and source, subjective ownership, dramatic causality, and edit intent remain unknown."]
+          "unknowns": [
+            "Exact endpoints inside the declared one-second precision, physical location and source, subjective ownership, dramatic causality, and edit intent remain unknown."
+          ]
         },
         {
-          "audit_fields": ["ambience", "audio_information_change"],
+          "audit_fields": [
+            "ambience",
+            "audio_information_change"
+          ],
           "clip_offset_end_seconds": 293.0,
           "clip_offset_start_seconds": 286.0,
           "description": "The ambience changes to an indoor-like state during this reported interval.",
-          "end": {"frame": null, "pts": null, "seconds": 854.352458, "time_base": null, "timecode": "00:14:14.352458"},
+          "end": {
+            "frame": null,
+            "pts": null,
+            "seconds": 854.352458,
+            "time_base": null,
+            "timecode": "00:14:14.352458"
+          },
           "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E014",
           "precision": "APPROXIMATE_HUMAN_AUDITION",
           "precision_seconds": 1.0,
@@ -32332,16 +32570,33 @@
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S021",
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S022"
           ],
-          "start": {"frame": null, "pts": null, "seconds": 847.352458, "time_base": null, "timecode": "00:14:07.352458"},
+          "start": {
+            "frame": null,
+            "pts": null,
+            "seconds": 847.352458,
+            "time_base": null,
+            "timecode": "00:14:07.352458"
+          },
           "status": "AUDIO_OBSERVED",
-          "unknowns": ["Exact endpoints inside the declared one-second precision, physical location and source, subjective ownership, dramatic causality, and edit intent remain unknown."]
+          "unknowns": [
+            "Exact endpoints inside the declared one-second precision, physical location and source, subjective ownership, dramatic causality, and edit intent remain unknown."
+          ]
         },
         {
-          "audit_fields": ["ambience", "audio_information_change"],
+          "audit_fields": [
+            "ambience",
+            "audio_information_change"
+          ],
           "clip_offset_end_seconds": 340.0,
           "clip_offset_start_seconds": 293.0,
           "description": "The soundtrack returns to a muffled-sounding speech state before clearer speech resumes.",
-          "end": {"frame": null, "pts": null, "seconds": 901.352458, "time_base": null, "timecode": "00:15:01.352458"},
+          "end": {
+            "frame": null,
+            "pts": null,
+            "seconds": 901.352458,
+            "time_base": null,
+            "timecode": "00:15:01.352458"
+          },
           "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E015",
           "precision": "APPROXIMATE_HUMAN_AUDITION",
           "precision_seconds": 1.0,
@@ -32350,16 +32605,33 @@
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S023",
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S024"
           ],
-          "start": {"frame": null, "pts": null, "seconds": 854.352458, "time_base": null, "timecode": "00:14:14.352458"},
+          "start": {
+            "frame": null,
+            "pts": null,
+            "seconds": 854.352458,
+            "time_base": null,
+            "timecode": "00:14:14.352458"
+          },
           "status": "AUDIO_OBSERVED",
-          "unknowns": ["Exact speech intervals inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."]
+          "unknowns": [
+            "Exact speech intervals inside the declared one-second precision, speaker identity, dialogue content, subjective ownership, dramatic causality, and edit intent remain unknown."
+          ]
         },
         {
-          "audit_fields": ["ambience", "audio_information_change"],
+          "audit_fields": [
+            "ambience",
+            "audio_information_change"
+          ],
           "clip_offset_end_seconds": 391.182459,
           "clip_offset_start_seconds": 340.0,
           "description": "Speech becomes clear and continues as repeated short name-like utterances; the names and speakers are not retained.",
-          "end": {"frame": null, "pts": null, "seconds": 952.534917, "time_base": null, "timecode": "00:15:52.534917"},
+          "end": {
+            "frame": null,
+            "pts": null,
+            "seconds": 952.534917,
+            "time_base": null,
+            "timecode": "00:15:52.534917"
+          },
           "observation_id": "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-AUDITION-E016",
           "precision": "APPROXIMATE_HUMAN_AUDITION",
           "precision_seconds": 1.0,
@@ -32368,9 +32640,17 @@
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S024",
             "SOUND-OF-METAL-SIGNAL-STATE-EE-V0.1-S025"
           ],
-          "start": {"frame": null, "pts": null, "seconds": 901.352458, "time_base": null, "timecode": "00:15:01.352458"},
+          "start": {
+            "frame": null,
+            "pts": null,
+            "seconds": 901.352458,
+            "time_base": null,
+            "timecode": "00:15:01.352458"
+          },
           "status": "AUDIO_OBSERVED",
-          "unknowns": ["Exact endpoints inside the declared one-second precision, speaker identity, exact wording, subjective ownership, dramatic causality, and edit intent remain unknown."]
+          "unknowns": [
+            "Exact endpoints inside the declared one-second precision, speaker identity, exact wording, subjective ownership, dramatic causality, and edit intent remain unknown."
+          ]
         }
       ],
       "audio_review_status": "DIRECT_AUDITION_COMPLETE",

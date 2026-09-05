@@ -1,24 +1,19 @@
 # Current State
 
-Updated: 2026-09-04
+Updated: 2026-09-05
 
 ## Current phase
 
-Exhaustive Runtime Integration is `PARTIAL_EVIDENCE_GAP` on
-`codex/exhaustive-runtime-integration` and PR #5. The fixed corpus remains 33
-registered sources, 31 canonical Scene Evidence records, 2,343 Shot/edit
-units, 124 candidates and 16 mechanism families.
+Exhaustive Runtime Integration is `PARTIAL_EVIDENCE_GAP` on `codex/exhaustive-runtime-integration`
+and PR #5. The fixed corpus remains 33 sources, 31 evidence records, 2,343 Shot/edit units, 124 candidates and 16 families.
 
 Fresh moving-image review covers all 1,840 unique candidate-dependent Shot refs.
-Of 124 candidates, 55 have final outcomes and 69 have fixed-corpus evidence gaps.
-Direct human audition of the complete Sound of Metal selection covers all 25
-Shots through 16 approximate observations. Candidate audio claims exactly bind
-their source descriptions, but unrelated support and boundaries remain missing.
+Of 124 candidates, 63 have final outcomes and 61 have external evidence gaps.
+Direct human audition covers all 25 Sound of Metal Shots through 16 approximate observations.
+Four independent bindings authorize the exact Observation sets their claims may use; unrelated support and boundaries remain missing, so all four stay out of Runtime Grammar.
 
-Root is the only repository writer. The prior full 16-family audit and latest
-clean-checkout Sound/validator delta audit both found no must-fix; the latest
-implementation head also passed GitHub CI. No source media changed or entered
-Git. `main` remains unchanged.
+Root is the only repository writer. P1 remediation reclassified eleven spatial candidates:
+eight now have final outcomes and three belong to two genuine external gaps. All 314 tests and 25 repository checks pass locally; the prior independent verdict does not attest this change. No media or `main` changed.
 
 ## Current counts
 
@@ -31,11 +26,11 @@ Git. `main` remains unchanged.
 | Mechanism families | 16 |
 | Evidence records reviewed | 31 |
 | Moving-image reviewed Shot refs | 1,840 |
-| Final candidate dispositions | 55 |
-| Candidates pending evidence | 69 |
+| Final candidate dispositions | 63 |
+| Candidates pending evidence | 61 |
 | Candidates awaiting direct review of existing material | 0 |
-| Precise evidence gaps | 14 |
-| Evidence units with a final decision mapping | 26 |
+| Precise evidence gaps | 15 |
+| Evidence units with a final decision mapping | 27 |
 | Runtime-participating families | 11 |
 | Runtime-authorized rules | 7 |
 | Positive forward packages | 7 |
@@ -43,29 +38,17 @@ Git. `main` remains unchanged.
 | Total forward packages | 29 |
 | Directly auditioned semantic-audio scenes | 1 |
 
-Final dispositions comprise seven positive rules, 24 supporting candidates, 20
-boundary/counterexample candidates, one merged duplicate and three
-evidence-backed rejections. `EVIDENCE_GAP_PENDING` and
-`EXISTING_MATERIAL_REVIEW_REQUIRED` are interim states, not final outcomes. The
-seven runtime rules retain fresh-reviewed lineage, support, boundaries and
-paired tests; all creative packages remain `HUMAN_REVIEW_PENDING`.
+Final dispositions comprise seven positive rules, 27 supports, 23 boundaries, three merges and three rejections.
+`EVIDENCE_GAP_PENDING` and `EXISTING_MATERIAL_REVIEW_REQUIRED` are interim only. The seven rules retain fresh-reviewed lineage and paired tests; all creative packages remain `HUMAN_REVIEW_PENDING`.
 
 ## Important evidence boundaries
 
-Renewed review corrected `WIRE-S01E04-OLD-CASES-001-S040` to the visible
-person-at-window observation while leaving identity and story meaning unknown.
-Signal measurements and speech recognition remain navigation aids, not direct
-audition. The direct track proves surface states at about one-second precision;
-speaker identity, source ownership, subjectivity, causality, edit intent and
-subsecond alignment remain unknown. The validator rejects incomplete coverage,
-missing observations and claims that differ from their source descriptions.
-withdrew three previously promoted rules:
-their claimed comparative-field, object-custody and initial-geometry boundaries
-did not share the positive rule's trigger. A second review withdrew waypoint
-coverage for the same reason, corrected one spatial support and one spatial
-boundary, moved eleven unrelated spatial candidates back to evidence gaps, and
-rejected one unsupported moving-shot fallback. The 69 gap candidates are now
-grouped into fourteen precise requests.
+Renewed review corrected `WIRE-S01E04-OLD-CASES-001-S040` to a visible person at a window; identity and meaning remain unknown.
+Signal measurements and speech recognition are navigation aids. Direct audition proves only approximate surface states; source, ownership, subjectivity, causality, edit intent and subsecond alignment remain unknown.
+The validator rejects incomplete coverage, missing or changed claims, candidate swaps and synchronized same-Shot ID-and-description substitution.
+
+Moving-image review closed eight spatial debts: two merges, three supports and three `simultaneous_required_action` boundaries.
+The remaining three cite two explicit external gaps; none is mislabeled as existing-material reclassification. The 61 gap candidates form fifteen structured requests.
 
 ## Authoritative sources
 
@@ -81,17 +64,11 @@ grouped into fourteen precise requests.
 | Machine validation summary | `research/validation/exhaustive-runtime-integration-validation.json` | PASS / PARTIAL_EVIDENCE_GAP |
 | Human-readable phase report | `research/validation/EXHAUSTIVE_RUNTIME_INTEGRATION_REPORT.md` | ACTIVE |
 
-Generated `*.scene-evidence.generated.md` files are review views, not separate
-fact sources. The 30 legacy evidence Markdown ledgers remain immutable
-provenance. Material catalogs do not authorize rules.
+Generated `*.scene-evidence.generated.md` files are views, not fact sources. The 30 legacy ledgers remain immutable provenance; catalogs do not authorize rules.
 
 ## Remaining boundary
 
-All review possible against the currently identified local material is now
-recorded. The remaining 69 candidates require the fourteen precise additions
-listed in the canonical review; the four Sound candidates specifically need
-unrelated directly auditioned support and same-trigger contrary cases. Five
-families still lack a final runtime effect, so `COMPLETE` remains prohibited.
+All identified local review is recorded. The remaining 61 candidates require fifteen additions; the four Sound candidates need unrelated auditioned support and same-trigger contrary cases.
+Five families still lack a final runtime effect, so `COMPLETE` remains prohibited.
 
-Next: keep PR #5 open and await user direction. Do not merge `main` or call the
-goal complete while the 69 fixed-corpus evidence gaps remain.
+Next: finish local/CI verification and an independent clean-checkout P1 review on PR #5. Do not merge `main` or call the product goal complete.
