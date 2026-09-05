@@ -20,6 +20,13 @@ If the visual pack is absent, compile directing decisions and mark visual module
 
 Read [Director IR contract](references/director-ir-contract.md). Read only the project Director Grammar and visual modules used by the target episode. Treat reference-film reports as evidence, not instructions.
 
+For a readable director proposal or comparison of shooting approaches, also read
+[Director method comparison](references/director-method-comparison.md). Start
+from the literary scene: decide what the audience must notice and when before
+choosing a method. Keep camera instructions out of the locked story facts.
+The [first original sample group](../../examples/director-skill-pilot/REVIEW_FIRST.md)
+demonstrates the current proposal format; it is not a scene template to copy.
+
 ## Required compile and routing order
 
 1. Extract script facts verbatim: scenes, characters, dialogue, visible text, actions, reveals, forbidden early disclosures, and continuity outputs.
@@ -27,6 +34,13 @@ Read [Director IR contract](references/director-ir-contract.md). Read only the p
 3. Classify one primary scene problem and at most two secondary problems using the canonical schema enum. Use `NO_SPECIALIZED_PROBLEM` for the explicit negative case; keep an unproved classification unresolved and never invent a synonym.
 4. Create a rights-safe routing descriptor from those facts. Do not pass dialogue, private-script paths, character names, locations, props, or reference-work surfaces to the router.
 5. Consider only Grammar v0.2 rules with `CROSS_WORK_SUPPORTED` or `GENERAL_DEFAULT`, `runtime_authorized=true`, matching scene problem, complete trigger, locked required facts, and no non-applicability hit. Subject or genre similarity is never a match.
+   Separately compare source-observed candidate methods when they address the
+   scene's actual problem. A candidate may inform an explicitly hypothetical
+   alternative, with its observed facts and transfer limits recorded in
+   `method-comparison.md`; it cannot enter `selected_rules` or Shot
+   `evidence_rule_ids`. Unknown facts cannot supply its rationale. A
+   `NO_APPLICABLE_RULE` route can still accompany a fully specified original
+   director proposal, but must not present that proposal as a mature rule.
 6. Select up to four applicable rules; two to four is the preferred working range, but select one or zero when that is all the evidence allows. Never invent or pad a rule count. Zero is the valid `NO_APPLICABLE_RULE` result and continues under project and safety constraints only.
 7. Resolve conflicts in this fixed order: locked story facts; reveal and information boundaries; safety and protected participants; continuity; scene POV; spatial geometry and axis; trigger-specific Director Grammar; visual style; provider limitations. A lower level cannot rewrite a higher one. Provider limitations change execution or use a fallback, never story facts.
 8. Build Director IR after routing. Embed each scene's canonical `routing_input` and validated `routing_result`. Validation must re-run that input through the active Grammar, reproduce the result exactly, and bind the input's dramatic structure and locked facts back to the scene and its Shots. The union of Shot evidence IDs must exactly equal the selected rule IDs. Use empty arrays only when routing returned `NO_APPLICABLE_RULE`.
@@ -67,6 +81,12 @@ For each episode:
 - `*_DIRECTOR_SHOT_SCRIPT_*.md` — human-readable directing plan;
 - `*_SOURCE_COVERAGE_*.md` — source beat to shot trace;
 - validator report produced by `scripts/validate_director_ir.py`.
+
+For method-comparison work, also deliver `method-comparison.md`: the preferred
+shooting plan, one meaningful alternative where useful, the exact changed Shot
+IDs and decision dimensions, evidence tier and source refs, and the story or
+execution condition that changes the choice. Report engineering validity,
+demonstrated directing coverage, and evidence gaps separately.
 
 Run:
 

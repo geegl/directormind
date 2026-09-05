@@ -1,0 +1,48 @@
+{
+  "validator": "drama-director-compiler/0.1",
+  "episode_id": "EP34",
+  "status": "PASS",
+  "errors": 0,
+  "warnings": 6,
+  "scene_count": 1,
+  "shot_count": 5,
+  "total_duration_seconds": 44.0,
+  "issues": [
+    {
+      "level": "warning",
+      "code": "IR-VISUAL-PACK",
+      "path": "visual_style_pack_path",
+      "message": "visual style pack is not yet bound"
+    },
+    {
+      "level": "warning",
+      "code": "IR-VISUAL-MODULE",
+      "path": "EP34-SC01-SH01",
+      "message": "visual module is unresolved"
+    },
+    {
+      "level": "warning",
+      "code": "IR-VISUAL-MODULE",
+      "path": "EP34-SC01-SH02",
+      "message": "visual module is unresolved"
+    },
+    {
+      "level": "warning",
+      "code": "IR-VISUAL-MODULE",
+      "path": "EP34-SC01-SH03",
+      "message": "visual module is unresolved"
+    },
+    {
+      "level": "warning",
+      "code": "IR-VISUAL-MODULE",
+      "path": "EP34-SC01-SH04",
+      "message": "visual module is unresolved"
+    },
+    {
+      "level": "warning",
+      "code": "IR-VISUAL-MODULE",
+      "path": "EP34-SC01-SH05",
+      "message": "visual module is unresolved"
+    }
+  ]
+}

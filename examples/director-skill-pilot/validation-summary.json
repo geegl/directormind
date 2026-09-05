@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "scope": "FIRST_BATCH_ONLY",
+  "checks": [
+    {
+      "check": "IR_AND_SCRIPT:01b-concurrent-boundary",
+      "status": "PASS",
+      "shots": 5,
+      "warnings": 6
+    },
+    {
+      "check": "IR_AND_SCRIPT:03b-detail-alternative",
+      "status": "PASS",
+      "shots": 5,
+      "warnings": 6
+    },
+    {
+      "check": "IR_AND_SCRIPT:02-doorway",
+      "status": "PASS",
+      "shots": 5,
+      "warnings": 6
+    },
+    {
+      "check": "IR_AND_SCRIPT:01-after-closing",
+      "status": "PASS",
+      "shots": 5,
+      "warnings": 6
+    },
+    {
+      "check": "IR_AND_SCRIPT:03-two-samples",
+      "status": "PASS",
+      "shots": 4,
+      "warnings": 5
+    },
+    {
+      "check": "CONCURRENT_STORY_FACT_CHANGES_COVERAGE_AND_REJECTS_OWNER_HOLD",
+      "status": "PASS"
+    },
+    {
+      "check": "CANDIDATE_ALTERNATIVE_PRESERVES_STORY_AND_DIALOGUE_CHANGES_EDIT",
+      "status": "PASS"
+    },
+    {
+      "check": "CANDIDATE_CANNOT_IMPERSONATE_SELECTED_MATURE_RULE",
+      "status": "PASS",
+      "rejected_error_codes": [
+        "IR-EVIDENCE-UNKNOWN",
+        "IR-ROUTING-NO-MATCH-DRIFT"
+      ]
+    },
+    {
+      "check": "124_UNIQUE_CANDIDATES_PRESENT_IN_PLANNING_REGISTER",
+      "status": "PASS"
+    },
+    {
+      "check": "UNCHANGED_FRONTMATTER_AND_SKILL_REFERENCE_LINKS",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 10,
+  "packages": 5,
+  "shot_units": 24,
+  "skill_quick_validate": "ENVIRONMENT_BLOCKED_MISSING_PYYAML; unchanged frontmatter and local links checked separately",
+  "independent_read_only_review": {
+    "status": "READY_FOR_FIRST_HUMAN_DIRECTING_REVIEW",
+    "shot_units_compared_to_ir": 24,
+    "remaining_blockers_in_reviewed_scope": 0,
+    "corrected_findings": [
+      "Boundary-version camera and edit continuity",
+      "Object withdrawal order and terminal state",
+      "Unsupported story duration and deadline additions",
+      "Confession information-release beat"
+    ],
+    "not_verified": [
+      "Filmed or generated result",
+      "Actor table-read and audience response",
+      "Complete 16-family directing coverage",
+      "New source-video or semantic-audio review"
+    ]
+  },
+  "human_review_status": "HUMAN_REVIEW_PENDING",
+  "new_source_video_reviews": 0,
+  "new_audio_auditions": 0,
+  "whole_phase_complete": false
+}

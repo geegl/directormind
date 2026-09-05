@@ -1,0 +1,770 @@
+{
+  "schema_version": "director-ir/0.2",
+  "project_id": "DIRECTORMIND-ORIGINAL-PILOT",
+  "episode_id": "EP33",
+  "source_script": "examples/director-skill-pilot/03-two-samples/locked-script.md",
+  "target_duration_seconds": 39,
+  "duration_tolerance_seconds": 0,
+  "aspect_ratio": "16:9",
+  "status": "HUMAN_REVIEW_PENDING",
+  "execution_medium": "AI_PHOTOREAL_HUMAN",
+  "dialogue_must_be_verbatim": true,
+  "generation_authorized": false,
+  "publication_authorized": false,
+  "director_grammar_path": "research/grammar/director_grammar_v0.2.json",
+  "visual_style_pack_path": null,
+  "source_facts": {
+    "source_unit_count": 4,
+    "continuity_output": [
+      "陶已拿走左侧短条返工，右侧长条留在桌面；岚的手已移开，她留在台前。"
+    ],
+    "cross_episode_state_in": [],
+    "cross_episode_state_out": []
+  },
+  "scenes": [
+    {
+      "scene_id": "EP33-SC01",
+      "source_scene": "locked-script.md",
+      "title": "差了一指",
+      "duration_seconds": 39,
+      "location": "小型戏服修整间",
+      "time_of_day": "下午",
+      "allowed_characters": [
+        "LAN",
+        "TAO"
+      ],
+      "narrative_goal": "让观众自己看出两份样件长度不同，再理解是谁愿意承担返工。",
+      "dramatic_engine": {
+        "goal": "让观众自己看出两份样件长度不同，再理解是谁愿意承担返工。",
+        "objectives": [
+          "学徒想确认是否是自己裁错",
+          "师傅要排除材料变化再决定返工"
+        ],
+        "obstacle": "分别拿在手里看时，两份相近样件难以直接比较",
+        "stakes": "是否错误归责给学徒，以及谁承担返工",
+        "tactic_change": "争论记忆转为对齐实物，再主动接下返工",
+        "subtext": "把判断放在物体关系上，避免用师傅口吻代替证据。"
+      },
+      "pov": {
+        "character": "LAN",
+        "identification_level": "和岚一起观察，先于师傅的解释看见差异。"
+      },
+      "audience_information": {
+        "locked_fact_ids": [
+          "FACT-01",
+          "FACT-02",
+          "FACT-03",
+          "FACT-04"
+        ],
+        "knowledge_progression": "开场不知道差异原因；对齐后只知道长度有差，直到师傅最后一句才知道短条是已洗样。",
+        "forbidden_early_disclosures": [
+          "比较之前不展示洗水、尺码标注或洗前洗后字幕；不捏造缩水数值。"
+        ]
+      },
+      "spatial_plan": {
+        "geometry": "同一工作台，岚左陶右；左边短织带、右边长织带，二者未对齐。",
+        "primary_axis": "两人轴线东西向，摄影机南侧；物体端点近台南沿。",
+        "close_positions": "陶已拿走左侧短条返工，右侧长条留在桌面；岚的手已移开，她留在台前。"
+      },
+      "routing_input": {
+        "schema_version": "director-routing-input/0.1",
+        "case_id": "PILOT-TWO-SAMPLES",
+        "dramatic_structure": {
+          "goal": "让观众自己看出两份样件长度不同，再理解是谁愿意承担返工。",
+          "objectives": [
+            "学徒想确认是否是自己裁错",
+            "师傅要排除材料变化再决定返工"
+          ],
+          "obstacle": "分别拿在手里看时，两份相近样件难以直接比较",
+          "stakes": "是否错误归责给学徒，以及谁承担返工",
+          "tactic_change": "争论记忆转为对齐实物，再主动接下返工",
+          "subtext": "把判断放在物体关系上，避免用师傅口吻代替证据。"
+        },
+        "locked_facts": [
+          {
+            "fact_id": "FACT-01",
+            "fact_type": "initial_objects",
+            "value": "两份外观相近的样件由两人分别持有，尚未对齐；学徒询问是否是自己裁错。",
+            "status": "LOCKED",
+            "source_ref": "locked-script.md#BEAT-01"
+          },
+          {
+            "fact_id": "FACT-02",
+            "fact_type": "comparison_required",
+            "value": "两份样件的同一端被对齐并同时放在桌面，另一端出现一指宽的长度差。",
+            "status": "LOCKED",
+            "source_ref": "locked-script.md#BEAT-02"
+          },
+          {
+            "fact_id": "FACT-03",
+            "fact_type": "relation_read",
+            "value": "学徒沿两份样件看向不齐的末端；师傅按住已对齐的起点，没有拉伸任一样件。",
+            "status": "LOCKED",
+            "source_ref": "locked-script.md#BEAT-03"
+          },
+          {
+            "fact_id": "FACT-04",
+            "fact_type": "responsibility",
+            "value": "师傅说短的是自己洗过的样件，接下返工；拿走短条，长条留在桌面。",
+            "status": "LOCKED",
+            "source_ref": "locked-script.md#BEAT-04"
+          }
+        ],
+        "scene_problem": {
+          "primary": "PROCEDURAL_COMPETENCE",
+          "secondary": [],
+          "status": "LOCKED"
+        },
+        "routing_signals": [],
+        "unknown_fact_types": [],
+        "subject_matter_tags": [],
+        "priority_constraints": [],
+        "rights_boundary": {
+          "contains_private_script": false,
+          "contains_reference_surface": false,
+          "project_original": true
+        }
+      },
+      "routing_result": {
+        "schema_version": "director-routing-result/0.1",
+        "case_id": "PILOT-TWO-SAMPLES",
+        "status": "NO_APPLICABLE_RULE",
+        "scene_problem": "PROCEDURAL_COMPETENCE",
+        "applied_constraint_ids": [
+          "PC-DIALOGUE-TEXT-LOCK",
+          "PC-LOCKED-STORY-AUTHORITY",
+          "PC-MODEL-INDEPENDENT-IR",
+          "PC-ORIGINAL-ASSETS",
+          "PC-SOURCE-COVERAGE",
+          "SC-AUTHORIZATION-GATES",
+          "SC-HIGH-RISK-FALLBACK",
+          "SC-HUMAN-REVIEW",
+          "SC-NO-SUBJECT-SHORTCUT",
+          "SC-NO-SURFACE-COPY",
+          "SC-NO-UNKNOWN-PROMOTION"
+        ],
+        "eligible_rule_ids": [
+          "DR-AFTERMATH-BY-NEXT-ACTION",
+          "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+          "DR-MOBILE-ATTENTION-HANDOFF",
+          "DR-PERFORMANCE-OWNER-HOLD",
+          "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+          "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+          "DR-STABLE-AXIS-STATE-LED-HOLDS"
+        ],
+        "selected_rules": [],
+        "rejected_rules": [
+          {
+            "rule_id": "DR-AFTERMATH-BY-NEXT-ACTION",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "next_action_states",
+              "visible_result"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          },
+          {
+            "rule_id": "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "cause_effect_chain",
+              "one_to_many_response",
+              "safe_resolution"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          },
+          {
+            "rule_id": "DR-MOBILE-ATTENTION-HANDOFF",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "connected_geography",
+              "current_attention_state",
+              "next_attention_owner"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          },
+          {
+            "rule_id": "DR-PERFORMANCE-OWNER-HOLD",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "performance_progression"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          },
+          {
+            "rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "counterpart_relation",
+              "spatial_change"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          },
+          {
+            "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "distance_change",
+              "relation_endpoint",
+              "time_structure"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          },
+          {
+            "rule_id": "DR-STABLE-AXIS-STATE-LED-HOLDS",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "stable_axis",
+              "visible_state_progression"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          }
+        ],
+        "conflict_trace": [],
+        "selection_count": 0,
+        "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+        "human_review_status": "HUMAN_REVIEW_PENDING",
+        "rights_boundary": {
+          "surface_copy_allowed": false,
+          "subject_matter_used_for_selection": false
+        }
+      },
+      "shots": [
+        {
+          "shot_id": "EP33-SC01-SH01",
+          "order": 1,
+          "duration_seconds": 7,
+          "narrative_goal": "提出判断问题并登记两物来源；尚不靠反应镜头宣布谁错。",
+          "source_refs": [
+            "locked-script.md#BEAT-01"
+          ],
+          "allowed_characters": [
+            "LAN",
+            "TAO"
+          ],
+          "shot_type": "双人中景",
+          "framing": "两人各持一段织带，但不提供虚假的可比较比例。",
+          "camera_angle": "平视",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "镜内动作由人物承担；固定机位让指定关系可读。"
+          },
+          "camera_start": "南侧35mm等效，腰上双人景，镜头高1.3米。",
+          "camera_path": {
+            "mode": "LOCKED",
+            "direction": "NONE",
+            "speed": "NONE",
+            "distance": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-01"
+          },
+          "camera_end": "南侧35mm等效，腰上双人景，镜头高1.3米。",
+          "focus_strategy": "两位人物及必要手部保持可读的景深；不以虚焦隐藏关键并行动作。",
+          "blocking": "岚左陶右，分别持带；岚不交叉遮住陶的物体。",
+          "performance_beats": [
+            "0–2秒：两人和两物。",
+            "2–6秒：岚发问。",
+            "6–7秒：陶示意放台。"
+          ],
+          "dialogue": [
+            {
+              "speaker": "LAN",
+              "text": "我照着它裁的，怎么会短？",
+              "verbatim": true
+            }
+          ],
+          "visible_text": [],
+          "audio": {
+            "status": "PROJECT_ORIGINAL_ONLY",
+            "instruction": "按锁定原文收录对白；保留现场动作声，不用新增音乐提示人物结论。",
+            "source_refs": [
+              "locked-script.md#BEAT-01"
+            ]
+          },
+          "edit_in": "直接开场。",
+          "edit_out": "两物下放时切桌面，保持短左长右。",
+          "continuity_in": "二人各持一条。",
+          "continuity_out": "开始放下织带。",
+          "constraints": {
+            "must_hold": [
+              "两份外观相近的样件由两人分别持有，尚未对齐；学徒询问是否是自己裁错。"
+            ],
+            "changes_here": [
+              "开始放下织带。"
+            ],
+            "must_not_appear": [
+              "比较之前不展示洗水、尺码标注或洗前洗后字幕；不捏造缩水数值。",
+              "参考作品的角色、台词、服装或标志性构图"
+            ]
+          },
+          "ai_complexity": {
+            "camera": "LOW",
+            "performance": "MEDIUM",
+            "continuity": "MEDIUM",
+            "reasons": [
+              "机位固定，保留明确动作端点；表演节奏仍待围读。"
+            ]
+          },
+          "fallback": null,
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "本原创场景人物、环境与可见道具"
+              ]
+            },
+            "composite_layers": [],
+            "state_versions": [],
+            "continuity_owners": {
+              "identity": "BASE_GENERATION",
+              "surface": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "environment": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "decision": "NONE",
+              "action": ""
+            }
+          },
+          "reference_plan": {
+            "required": true,
+            "reference_type": "SHOT_GOLDEN",
+            "reference_id": "REF-PILOT-TWO-SAMPLES-GEOMETRY",
+            "scope": "仅计划本原创场景开场几何与人物位置，尚未制作图像。",
+            "inherit": [
+              "本场人物位置",
+              "左右关系",
+              "原创道具状态"
+            ],
+            "exclude": [
+              "参考电影画面",
+              "未经剧本允许的表情、动作和信息"
+            ],
+            "status": "PLANNED",
+            "rights_status": "PROJECT_ORIGINAL"
+          },
+          "visual_style_module": "UNRESOLVED",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "confidence": "LOW"
+        },
+        {
+          "shot_id": "EP33-SC01-SH02",
+          "order": 2,
+          "duration_seconds": 12,
+          "narrative_goal": "采用有真实画面依据的候选比较法：让两件物品在同一尺度下可直接比较；不用两个不同画幅特写让观众靠记忆估尺寸。该迁移仍是本样例假设。",
+          "source_refs": [
+            "locked-script.md#BEAT-02",
+            "locked-script.md#BEAT-03"
+          ],
+          "allowed_characters": [
+            "LAN",
+            "TAO"
+          ],
+          "shot_type": "两条织带共享俯拍近景",
+          "framing": "一幅画面同时包含对齐端和错开端；短左长右，宽度、透视一致。",
+          "camera_angle": "垂直俯拍",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "镜内动作由人物承担；固定机位让指定关系可读。"
+          },
+          "camera_start": "桌面正上方约0.9米，50mm等效，光轴垂直桌面。",
+          "camera_path": {
+            "mode": "LOCKED",
+            "direction": "NONE",
+            "speed": "NONE",
+            "distance": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-02,FACT-03"
+          },
+          "camera_end": "桌面正上方约0.9米，50mm等效，光轴垂直桌面。",
+          "focus_strategy": "两个比较对象同焦平面，无拉焦来替代比较。",
+          "blocking": "陶将近端对齐，左手压起点；岚的视线顺两条走向末端，手不遮差口。",
+          "performance_beats": [
+            "0–4秒：放下并对齐。",
+            "4–7秒：陶短句和压住起点。",
+            "7–10秒：观众沿双条读到差口。",
+            "10–12秒：差口稳定。"
+          ],
+          "dialogue": [
+            {
+              "speaker": "TAO",
+              "text": "先把这头放齐。",
+              "verbatim": true
+            }
+          ],
+          "visible_text": [],
+          "audio": {
+            "status": "PROJECT_ORIGINAL_ONLY",
+            "instruction": "按锁定原文收录对白；保留现场动作声，不用新增音乐提示人物结论。",
+            "source_refs": [
+              "locked-script.md#BEAT-02",
+              "locked-script.md#BEAT-03"
+            ]
+          },
+          "edit_in": "同一放带动作承接，压起点之前两带必须还未对齐。",
+          "edit_out": "两端关系读完后才切岚，不在差口刚出现时抢反应。",
+          "continuity_in": "两条开始落台；短左长右。",
+          "continuity_out": "起点齐平，末端差一指，陶指压起点。",
+          "constraints": {
+            "must_hold": [
+              "两份样件的同一端被对齐并同时放在桌面，另一端出现一指宽的长度差。",
+              "学徒沿两份样件看向不齐的末端；师傅按住已对齐的起点，没有拉伸任一样件。"
+            ],
+            "changes_here": [
+              "起点齐平，末端差一指，陶指压起点。"
+            ],
+            "must_not_appear": [
+              "比较之前不展示洗水、尺码标注或洗前洗后字幕；不捏造缩水数值。",
+              "参考作品的角色、台词、服装或标志性构图"
+            ]
+          },
+          "ai_complexity": {
+            "camera": "LOW",
+            "performance": "MEDIUM",
+            "continuity": "HIGH",
+            "reasons": [
+              "位置或物体状态关系是本镜判断依据，需要固定参考。"
+            ]
+          },
+          "fallback": "先实物摆放两条可重复长度的原创织带，固定端点和左右标记在画外；如桌面过长容不下双方端点，改更高的固定俯拍，不用分离特写假装证明长度。",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "本原创场景人物、环境与可见道具"
+              ]
+            },
+            "composite_layers": [],
+            "state_versions": [],
+            "continuity_owners": {
+              "identity": "BASE_GENERATION",
+              "surface": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "environment": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "decision": "EDIT_RESTRUCTURE",
+              "action": "先实物摆放两条可重复长度的原创织带，固定端点和左右标记在画外；如桌面过长容不下双方端点，改更高的固定俯拍，不用分离特写假装证明长度。"
+            }
+          },
+          "reference_plan": {
+            "required": false,
+            "reference_type": "NONE",
+            "reference_id": null,
+            "scope": "",
+            "inherit": [],
+            "exclude": [],
+            "status": "NOT_REQUIRED",
+            "rights_status": "NOT_APPLICABLE"
+          },
+          "visual_style_module": "UNRESOLVED",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "confidence": "LOW"
+        },
+        {
+          "shot_id": "EP33-SC01-SH03",
+          "order": 3,
+          "duration_seconds": 6,
+          "narrative_goal": "先给观众实物证据，再给人的反应；只表现等待，不提前演出知道原因。",
+          "source_refs": [
+            "locked-script.md#BEAT-03"
+          ],
+          "allowed_characters": [
+            "LAN",
+            "TAO"
+          ],
+          "shot_type": "岚的侧近景",
+          "framing": "脸在上方，两条末端在下方近景虚边但不作为尺寸证据。",
+          "camera_angle": "平视",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "镜内动作由人物承担；固定机位让指定关系可读。"
+          },
+          "camera_start": "回南侧偏陶方向，65mm等效，岚视线向下。",
+          "camera_path": {
+            "mode": "LOCKED",
+            "direction": "NONE",
+            "speed": "NONE",
+            "distance": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-03"
+          },
+          "camera_end": "回南侧偏陶方向，65mm等效，岚视线向下。",
+          "focus_strategy": "主表演者脸与本镜关键手部同焦，不追加焦点变化。",
+          "blocking": "岚只沿织带看到差口，再看陶；手仍留在长条边，不提前撤手。",
+          "performance_beats": [
+            "0–3秒：确认差口。",
+            "3–6秒：视线转向陶，等待解释。"
+          ],
+          "dialogue": [],
+          "visible_text": [],
+          "audio": {
+            "status": "PROJECT_ORIGINAL_ONLY",
+            "instruction": "保留本场现场底声与可见动作声；不添加指示情绪或因果的声音。",
+            "source_refs": [
+              "locked-script.md#BEAT-03"
+            ]
+          },
+          "edit_in": "对齐关系已明确后切人。",
+          "edit_out": "岚视线到陶后切共享中景。",
+          "continuity_in": "两带不动，陶按起点。",
+          "continuity_out": "岚等解释，未碰织带。",
+          "constraints": {
+            "must_hold": [
+              "学徒沿两份样件看向不齐的末端；师傅按住已对齐的起点，没有拉伸任一样件。"
+            ],
+            "changes_here": [
+              "岚等解释，未碰织带。"
+            ],
+            "must_not_appear": [
+              "比较之前不展示洗水、尺码标注或洗前洗后字幕；不捏造缩水数值。",
+              "参考作品的角色、台词、服装或标志性构图"
+            ]
+          },
+          "ai_complexity": {
+            "camera": "LOW",
+            "performance": "MEDIUM",
+            "continuity": "MEDIUM",
+            "reasons": [
+              "机位固定，保留明确动作端点；表演节奏仍待围读。"
+            ]
+          },
+          "fallback": null,
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "本原创场景人物、环境与可见道具"
+              ]
+            },
+            "composite_layers": [],
+            "state_versions": [],
+            "continuity_owners": {
+              "identity": "BASE_GENERATION",
+              "surface": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "environment": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "decision": "NONE",
+              "action": ""
+            }
+          },
+          "reference_plan": {
+            "required": false,
+            "reference_type": "NONE",
+            "reference_id": null,
+            "scope": "",
+            "inherit": [],
+            "exclude": [],
+            "status": "NOT_REQUIRED",
+            "rights_status": "NOT_APPLICABLE"
+          },
+          "visual_style_module": "UNRESOLVED",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "confidence": "LOW"
+        },
+        {
+          "shot_id": "EP33-SC01-SH04",
+          "order": 4,
+          "duration_seconds": 14,
+          "narrative_goal": "责任通过师傅接下返工落实，不加崇拜表情或额外感言；共享视野保留物体去向。",
+          "source_refs": [
+            "locked-script.md#BEAT-04"
+          ],
+          "allowed_characters": [
+            "LAN",
+            "TAO"
+          ],
+          "shot_type": "双人中景",
+          "framing": "两人脸部和桌面取带动作同框，保留短左长右。",
+          "camera_angle": "平视",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "镜内动作由人物承担；固定机位让指定关系可读。"
+          },
+          "camera_start": "复用开场南侧35mm等效。",
+          "camera_path": {
+            "mode": "LOCKED",
+            "direction": "NONE",
+            "speed": "NONE",
+            "distance": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-04"
+          },
+          "camera_end": "复用开场南侧35mm等效。",
+          "focus_strategy": "两位人物及必要手部保持可读的景深；不以虚焦隐藏关键并行动作。",
+          "blocking": "陶先解释，随后拿左侧短条；岚把手从右侧长条边移开。",
+          "performance_beats": [
+            "0–8秒：陶解释三句。",
+            "8–11秒：拿走短条。",
+            "11–14秒：岚留在长条前。"
+          ],
+          "dialogue": [
+            {
+              "speaker": "TAO",
+              "text": "短的这条我洗过。不是你裁错。这个我重做。",
+              "verbatim": true
+            }
+          ],
+          "visible_text": [],
+          "audio": {
+            "status": "PROJECT_ORIGINAL_ONLY",
+            "instruction": "按锁定原文收录对白；保留现场动作声，不用新增音乐提示人物结论。",
+            "source_refs": [
+              "locked-script.md#BEAT-04"
+            ]
+          },
+          "edit_in": "岚看向陶时回双人。",
+          "edit_out": "短条离台，长条留台，停两秒结束。",
+          "continuity_in": "短左长右、起点齐。",
+          "continuity_out": "陶拿短条，长条留台。",
+          "constraints": {
+            "must_hold": [
+              "师傅说短的是自己洗过的样件，接下返工；拿走短条，长条留在桌面。"
+            ],
+            "changes_here": [
+              "陶拿短条，长条留台。"
+            ],
+            "must_not_appear": [
+              "比较之前不展示洗水、尺码标注或洗前洗后字幕；不捏造缩水数值。",
+              "参考作品的角色、台词、服装或标志性构图"
+            ]
+          },
+          "ai_complexity": {
+            "camera": "LOW",
+            "performance": "MEDIUM",
+            "continuity": "MEDIUM",
+            "reasons": [
+              "机位固定，保留明确动作端点；表演节奏仍待围读。"
+            ]
+          },
+          "fallback": null,
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "本原创场景人物、环境与可见道具"
+              ]
+            },
+            "composite_layers": [],
+            "state_versions": [],
+            "continuity_owners": {
+              "identity": "BASE_GENERATION",
+              "surface": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "environment": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "decision": "NONE",
+              "action": ""
+            }
+          },
+          "reference_plan": {
+            "required": false,
+            "reference_type": "NONE",
+            "reference_id": null,
+            "scope": "",
+            "inherit": [],
+            "exclude": [],
+            "status": "NOT_REQUIRED",
+            "rights_status": "NOT_APPLICABLE"
+          },
+          "visual_style_module": "UNRESOLVED",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "confidence": "LOW"
+        }
+      ]
+    }
+  ],
+  "source_coverage": [
+    {
+      "source_ref": "locked-script.md#BEAT-01",
+      "description": "两份外观相近的样件由两人分别持有，尚未对齐；学徒询问是否是自己裁错。",
+      "status": "covered",
+      "covered_by": [
+        "EP33-SC01-SH01"
+      ],
+      "notes": "逐拍覆盖；对白原文一致，节奏与实际拍摄效果待人工审看。"
+    },
+    {
+      "source_ref": "locked-script.md#BEAT-02",
+      "description": "两份样件的同一端被对齐并同时放在桌面，另一端出现一指宽的长度差。",
+      "status": "covered",
+      "covered_by": [
+        "EP33-SC01-SH02"
+      ],
+      "notes": "逐拍覆盖；对白原文一致，节奏与实际拍摄效果待人工审看。"
+    },
+    {
+      "source_ref": "locked-script.md#BEAT-03",
+      "description": "学徒沿两份样件看向不齐的末端；师傅按住已对齐的起点，没有拉伸任一样件。",
+      "status": "covered",
+      "covered_by": [
+        "EP33-SC01-SH02",
+        "EP33-SC01-SH03"
+      ],
+      "notes": "逐拍覆盖；对白原文一致，节奏与实际拍摄效果待人工审看。"
+    },
+    {
+      "source_ref": "locked-script.md#BEAT-04",
+      "description": "师傅说短的是自己洗过的样件，接下返工；拿走短条，长条留在桌面。",
+      "status": "covered",
+      "covered_by": [
+        "EP33-SC01-SH04"
+      ],
+      "notes": "逐拍覆盖；对白原文一致，节奏与实际拍摄效果待人工审看。"
+    }
+  ],
+  "unresolved": [
+    "本样例为原创作者固定文本，尚未获用户导演审看批准。",
+    "时长为剪辑设计预算，未做真人围读或实拍测试。",
+    "焦段与机位是本原创场景的设计选择，不是参考影片摄影参数。"
+  ]
+}

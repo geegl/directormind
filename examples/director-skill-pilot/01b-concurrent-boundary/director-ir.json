@@ -1,0 +1,923 @@
+{
+  "schema_version": "director-ir/0.2",
+  "project_id": "DIRECTORMIND-ORIGINAL-PILOT",
+  "episode_id": "EP34",
+  "source_script": "examples/director-skill-pilot/01b-concurrent-boundary/locked-script.md",
+  "target_duration_seconds": 44,
+  "duration_tolerance_seconds": 0,
+  "aspect_ratio": "16:9",
+  "status": "HUMAN_REVIEW_PENDING",
+  "execution_medium": "AI_PHOTOREAL_HUMAN",
+  "dialogue_must_be_verbatim": true,
+  "generation_authorized": false,
+  "publication_authorized": false,
+  "director_grammar_path": "research/grammar/director_grammar_v0.2.json",
+  "visual_style_pack_path": null,
+  "source_facts": {
+    "source_unit_count": 6,
+    "continuity_output": [
+      "两人留在原位，铅笔回到宁面前笔筒；尚未决定继续营业。"
+    ],
+    "cross_episode_state_in": [],
+    "cross_episode_state_out": []
+  },
+  "scenes": [
+    {
+      "scene_id": "EP34-SC01",
+      "source_scene": "locked-script.md",
+      "title": "关门以后：她也在作决定",
+      "duration_seconds": 44,
+      "location": "修补店内，工作台两侧",
+      "time_of_day": "夜，打烊后",
+      "allowed_characters": [
+        "NING",
+        "ZHOU"
+      ],
+      "narrative_goal": "让观众同时看见坦白和对方结束营业安排的动作，保留两个人互相影响的过程。",
+      "dramatic_engine": {
+        "goal": "让观众同时看见坦白和对方结束营业安排的动作，保留两个人互相影响的过程。",
+        "objectives": [
+          "提问者要知道次日是否继续营业",
+          "答话者必须承认停业是自己的选择"
+        ],
+        "obstacle": "坦白过程中接收者也在作决定，隔离任一人都会漏掉同时发生的事实。",
+        "stakes": "两人的合伙关系和次日顾客安排",
+        "tactic_change": "借外部原因回避转为承认自己的决定",
+        "subtext": "坦白承担责任，但不要求对方立刻原谅。"
+      },
+      "pov": {
+        "character": "NING",
+        "identification_level": "先靠近宁的疑问，再把坦白段的观看时间交给舟。"
+      },
+      "audience_information": {
+        "locked_fact_ids": [
+          "FACT-01",
+          "FACT-02",
+          "FACT-03",
+          "FACT-04",
+          "FACT-05",
+          "FACT-06"
+        ],
+        "knowledge_progression": "坦白前只知道店可能停业；到BEAT-02末“是我先打的电话”这句才知道电话由舟主动拨出。",
+        "forbidden_early_disclosures": [
+          "BEAT-02的“是我先打的电话”这句之前，不插电话回忆、来电画面或宁预先知道真相的反应。"
+        ]
+      },
+      "spatial_plan": {
+        "geometry": "工作台东西向。宁在左端，舟在右端，间距1.8米；门在舟后右侧。",
+        "primary_axis": "宁—舟连线；摄影机始终在工作台南侧。",
+        "close_positions": "两人留在原位，铅笔回到宁面前笔筒；尚未决定继续营业。"
+      },
+      "routing_input": {
+        "schema_version": "director-routing-input/0.1",
+        "case_id": "PILOT-CONCURRENT-BOUNDARY",
+        "dramatic_structure": {
+          "goal": "让观众同时看见坦白和对方结束营业安排的动作，保留两个人互相影响的过程。",
+          "objectives": [
+            "提问者要知道次日是否继续营业",
+            "答话者必须承认停业是自己的选择"
+          ],
+          "obstacle": "坦白过程中接收者也在作决定，隔离任一人都会漏掉同时发生的事实。",
+          "stakes": "两人的合伙关系和次日顾客安排",
+          "tactic_change": "借外部原因回避转为承认自己的决定",
+          "subtext": "坦白承担责任，但不要求对方立刻原谅。"
+        },
+        "locked_facts": [
+          {
+            "fact_id": "FACT-01",
+            "fact_type": "relation_state",
+            "value": "提问者和答话者隔着工作台坐定。提问者问次日是否继续接预约。",
+            "status": "LOCKED",
+            "source_ref": "locked-script.md#BEAT-01"
+          },
+          {
+            "fact_id": "FACT-02",
+            "fact_type": "performance_progression",
+            "value": "答话者看门、捏松围裙、放手并坦白；与此同时，提问者缓慢折起预约纸。答话者在两句之间看见折纸，才抬头说出自己主动打电话。",
+            "status": "LOCKED",
+            "source_ref": "locked-script.md#BEAT-02"
+          },
+          {
+            "fact_id": "FACT-03",
+            "fact_type": "receiver_change",
+            "value": "提问者听完后低头看铅笔，再抬头追问购买新灯的原因。",
+            "status": "LOCKED",
+            "source_ref": "locked-script.md#BEAT-03"
+          },
+          {
+            "fact_id": "FACT-04",
+            "fact_type": "answer",
+            "value": "答话者承认自己曾寄望买灯改变关店决定。",
+            "status": "LOCKED",
+            "source_ref": "locked-script.md#BEAT-04"
+          },
+          {
+            "fact_id": "FACT-05",
+            "fact_type": "terminal_state",
+            "value": "提问者把铅笔放回笔筒。两人都留在原位，没有继续预约，也没有承诺留下。",
+            "status": "LOCKED",
+            "source_ref": "locked-script.md#BEAT-05"
+          },
+          {
+            "fact_id": "FACT-06",
+            "fact_type": "simultaneous_state",
+            "value": "折纸和坦白在同一时段发生；折纸完成在坦白句尾，不能重排成坦白之后的单独反应。",
+            "status": "LOCKED",
+            "source_ref": "locked-script.md#BEAT-06"
+          }
+        ],
+        "scene_problem": {
+          "primary": "INTERROGATION",
+          "secondary": [],
+          "status": "LOCKED"
+        },
+        "routing_signals": [
+          "single_performance_progression",
+          "simultaneous_required_action"
+        ],
+        "unknown_fact_types": [],
+        "subject_matter_tags": [],
+        "priority_constraints": [],
+        "rights_boundary": {
+          "contains_private_script": false,
+          "contains_reference_surface": false,
+          "project_original": true
+        }
+      },
+      "routing_result": {
+        "schema_version": "director-routing-result/0.1",
+        "case_id": "PILOT-CONCURRENT-BOUNDARY",
+        "status": "NO_APPLICABLE_RULE",
+        "scene_problem": "INTERROGATION",
+        "applied_constraint_ids": [
+          "PC-DIALOGUE-TEXT-LOCK",
+          "PC-LOCKED-STORY-AUTHORITY",
+          "PC-MODEL-INDEPENDENT-IR",
+          "PC-ORIGINAL-ASSETS",
+          "PC-SOURCE-COVERAGE",
+          "SC-AUTHORIZATION-GATES",
+          "SC-HIGH-RISK-FALLBACK",
+          "SC-HUMAN-REVIEW",
+          "SC-NO-SUBJECT-SHORTCUT",
+          "SC-NO-SURFACE-COPY",
+          "SC-NO-UNKNOWN-PROMOTION"
+        ],
+        "eligible_rule_ids": [
+          "DR-AFTERMATH-BY-NEXT-ACTION",
+          "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+          "DR-MOBILE-ATTENTION-HANDOFF",
+          "DR-PERFORMANCE-OWNER-HOLD",
+          "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+          "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+          "DR-STABLE-AXIS-STATE-LED-HOLDS"
+        ],
+        "selected_rules": [],
+        "rejected_rules": [
+          {
+            "rule_id": "DR-AFTERMATH-BY-NEXT-ACTION",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "next_action_states",
+              "visible_result"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          },
+          {
+            "rule_id": "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "cause_effect_chain",
+              "one_to_many_response",
+              "safe_resolution"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          },
+          {
+            "rule_id": "DR-MOBILE-ATTENTION-HANDOFF",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "connected_geography",
+              "current_attention_state",
+              "next_attention_owner"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          },
+          {
+            "rule_id": "DR-PERFORMANCE-OWNER-HOLD",
+            "rejection_reason_codes": [
+              "NOT_APPLICABLE_MATCH"
+            ],
+            "matched_not_applicable_signal_ids": [
+              "simultaneous_required_action"
+            ],
+            "missing_fact_types": [],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          },
+          {
+            "rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "counterpart_relation",
+              "spatial_change"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          },
+          {
+            "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "distance_change",
+              "relation_endpoint",
+              "time_structure"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          },
+          {
+            "rule_id": "DR-STABLE-AXIS-STATE-LED-HOLDS",
+            "rejection_reason_codes": [
+              "NOT_APPLICABLE_MATCH",
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [
+              "single_performance_progression"
+            ],
+            "missing_fact_types": [
+              "stable_axis",
+              "visible_state_progression"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          }
+        ],
+        "conflict_trace": [],
+        "selection_count": 0,
+        "ir_handoff": "CONTINUE_WITH_PROJECT_CONSTRAINTS_ONLY",
+        "human_review_status": "HUMAN_REVIEW_PENDING",
+        "rights_boundary": {
+          "surface_copy_allowed": false,
+          "subject_matter_used_for_selection": false
+        }
+      },
+      "shots": [
+        {
+          "shot_id": "EP34-SC01-SH01",
+          "order": 1,
+          "duration_seconds": 7,
+          "narrative_goal": "先交代谁在问谁、距离和出口；不给门单独镜头，以免把店外编成答案。",
+          "source_refs": [
+            "locked-script.md#BEAT-01"
+          ],
+          "allowed_characters": [
+            "NING",
+            "ZHOU"
+          ],
+          "shot_type": "双人中景",
+          "framing": "宁左舟右，工作台横过下三分之一；看得见两人手部。",
+          "camera_angle": "平视",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "镜内动作由人物承担；固定机位让指定关系可读。"
+          },
+          "camera_start": "南侧正对工作台，镜头高1.25米，约35mm等效，中景。",
+          "camera_path": {
+            "mode": "LOCKED",
+            "direction": "NONE",
+            "speed": "NONE",
+            "distance": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-01"
+          },
+          "camera_end": "南侧正对工作台，镜头高1.25米，约35mm等效，中景。",
+          "focus_strategy": "两位人物及必要手部保持可读的景深；不以虚焦隐藏关键并行动作。",
+          "blocking": "宁左舟右坐定；宁的铅笔停在手边，舟手抓围裙。",
+          "performance_beats": [
+            "0–2秒：宁停笔。",
+            "2–5秒：问句。",
+            "5–7秒：舟看向门，准备接下一镜。"
+          ],
+          "dialogue": [
+            {
+              "speaker": "NING",
+              "text": "明天的预约，我还接吗？",
+              "verbatim": true
+            }
+          ],
+          "visible_text": [],
+          "audio": {
+            "status": "PROJECT_ORIGINAL_ONLY",
+            "instruction": "按锁定原文收录对白；保留现场动作声，不用新增音乐提示人物结论。",
+            "source_refs": [
+              "locked-script.md#BEAT-01"
+            ]
+          },
+          "edit_in": "直接开场，不加店外建立镜头。",
+          "edit_out": "舟视线偏向门时切到南侧斜双人中景；宁开始折纸的动作完整落在下一镜。",
+          "continuity_in": "二人坐定；宁持笔，舟抓围裙。",
+          "continuity_out": "宁仍持笔；舟开始回避视线。",
+          "constraints": {
+            "must_hold": [
+              "提问者和答话者隔着工作台坐定。提问者问次日是否继续接预约。"
+            ],
+            "changes_here": [
+              "宁仍持笔；舟开始回避视线。"
+            ],
+            "must_not_appear": [
+              "BEAT-02的“是我先打的电话”这句之前，不插电话回忆、来电画面或宁预先知道真相的反应。",
+              "参考作品的角色、台词、服装或标志性构图"
+            ]
+          },
+          "ai_complexity": {
+            "camera": "LOW",
+            "performance": "MEDIUM",
+            "continuity": "MEDIUM",
+            "reasons": [
+              "机位固定，保留明确动作端点；表演节奏仍待围读。"
+            ]
+          },
+          "fallback": null,
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "本原创场景人物、环境与可见道具"
+              ]
+            },
+            "composite_layers": [],
+            "state_versions": [],
+            "continuity_owners": {
+              "identity": "BASE_GENERATION",
+              "surface": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "environment": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "decision": "NONE",
+              "action": ""
+            }
+          },
+          "reference_plan": {
+            "required": true,
+            "reference_type": "SHOT_GOLDEN",
+            "reference_id": "REF-PILOT-CONCURRENT-BOUNDARY-GEOMETRY",
+            "scope": "仅计划本原创场景开场几何与人物位置，尚未制作图像。",
+            "inherit": [
+              "本场人物位置",
+              "左右关系",
+              "原创道具状态"
+            ],
+            "exclude": [
+              "参考电影画面",
+              "未经剧本允许的表情、动作和信息"
+            ],
+            "status": "PLANNED",
+            "rights_status": "PROJECT_ORIGINAL"
+          },
+          "visual_style_module": "UNRESOLVED",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "confidence": "LOW"
+        },
+        {
+          "shot_id": "EP34-SC01-SH02",
+          "order": 2,
+          "duration_seconds": 18,
+          "narrative_goal": "成熟单人长停留规则被同时动作边界拒绝；改用固定共享构图，把宁的主动决定保留在坦白期间，不能伪装成事后反应。",
+          "source_refs": [
+            "locked-script.md#BEAT-02",
+            "locked-script.md#BEAT-06"
+          ],
+          "allowed_characters": [
+            "NING",
+            "ZHOU"
+          ],
+          "shot_type": "能同时看清两人手与脸的斜侧双人中景",
+          "framing": "宁左前、舟右后，两人在近似同一焦平面；预约纸位于宁胸下，折动不挡脸。",
+          "camera_angle": "平视",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "镜内动作由人物承担；固定机位让指定关系可读。"
+          },
+          "camera_start": "南侧略偏宁外侧，35mm等效，镜头高1.25米，固定中景。",
+          "camera_path": {
+            "mode": "LOCKED",
+            "direction": "NONE",
+            "speed": "NONE",
+            "distance": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-02,FACT-06"
+          },
+          "camera_end": "南侧略偏宁外侧，35mm等效，镜头高1.25米，固定中景。",
+          "focus_strategy": "两位人物及必要手部保持可读的景深；不以虚焦隐藏关键并行动作。",
+          "blocking": "宁从舟看门时开始折纸，舟放手后看见纸边合拢，抬头完成坦白；纸边在句尾压齐。",
+          "performance_beats": [
+            "0–5秒：舟捏松围裙；宁开始折纸。",
+            "5–8秒：第一句与折叠同时。",
+            "8–11秒：舟看见折纸，抬头。",
+            "11–16秒：坦白继续，宁压纸边。",
+            "16–18秒：两人的行动终点同框。"
+          ],
+          "dialogue": [
+            {
+              "speaker": "ZHOU",
+              "text": "不是房东要收回。",
+              "verbatim": true
+            },
+            {
+              "speaker": "ZHOU",
+              "text": "是我先打的电话。",
+              "verbatim": true
+            }
+          ],
+          "visible_text": [],
+          "audio": {
+            "status": "PROJECT_ORIGINAL_ONLY",
+            "instruction": "按锁定原文收录对白；保留现场动作声，不用新增音乐提示人物结论。",
+            "source_refs": [
+              "locked-script.md#BEAT-02",
+              "locked-script.md#BEAT-06"
+            ]
+          },
+          "edit_in": "接前镜舟看门的方向；切入斜双人中景，宁在画内左，折纸开始前即清楚可见。",
+          "edit_out": "坦白和折纸都完成后才切宁。",
+          "continuity_in": "预约纸平放，宁持笔；舟抓围裙。",
+          "continuity_out": "纸已对折压齐；舟双手在膝上并看宁。",
+          "constraints": {
+            "must_hold": [
+              "答话者看门、捏松围裙、放手并坦白；与此同时，提问者缓慢折起预约纸。答话者在两句之间看见折纸，才抬头说出自己主动打电话。",
+              "折纸和坦白在同一时段发生；折纸完成在坦白句尾，不能重排成坦白之后的单独反应。"
+            ],
+            "changes_here": [
+              "纸已对折压齐；舟双手在膝上并看宁。"
+            ],
+            "must_not_appear": [
+              "BEAT-02的“是我先打的电话”这句之前，不插电话回忆、来电画面或宁预先知道真相的反应。",
+              "参考作品的角色、台词、服装或标志性构图"
+            ]
+          },
+          "ai_complexity": {
+            "camera": "LOW",
+            "performance": "HIGH",
+            "continuity": "MEDIUM",
+            "reasons": [
+              "一次长段表演包含多个台词与身体端点，需要排练。"
+            ]
+          },
+          "fallback": "保持完整固定宽双人镜头，分段排练折纸与台词两个动作；不靠两个单人镜头拼出同时性。必要时少拍微表情，只保留看纸、抬眼与压齐三个明确端点。",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "本原创场景人物、环境与可见道具"
+              ]
+            },
+            "composite_layers": [],
+            "state_versions": [],
+            "continuity_owners": {
+              "identity": "BASE_GENERATION",
+              "surface": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "environment": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "decision": "EDIT_RESTRUCTURE",
+              "action": "保持完整固定宽双人镜头，分段排练折纸与台词两个动作；不靠两个单人镜头拼出同时性。必要时少拍微表情，只保留看纸、抬眼与压齐三个明确端点。"
+            }
+          },
+          "reference_plan": {
+            "required": false,
+            "reference_type": "NONE",
+            "reference_id": null,
+            "scope": "",
+            "inherit": [],
+            "exclude": [],
+            "status": "NOT_REQUIRED",
+            "rights_status": "NOT_APPLICABLE"
+          },
+          "visual_style_module": "UNRESOLVED",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "confidence": "LOW"
+        },
+        {
+          "shot_id": "EP34-SC01-SH03",
+          "order": 3,
+          "duration_seconds": 8,
+          "narrative_goal": "反应在坦白后才改变问题：宁追究共同投入，而不是泛泛难过。",
+          "source_refs": [
+            "locked-script.md#BEAT-03"
+          ],
+          "allowed_characters": [
+            "NING",
+            "ZHOU"
+          ],
+          "shot_type": "宁的近景",
+          "framing": "宁脸部和铅笔上端，画外视线向右。",
+          "camera_angle": "平视",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "镜内动作由人物承担；固定机位让指定关系可读。"
+          },
+          "camera_start": "仍在南侧，约65mm等效，镜头高1.25米。",
+          "camera_path": {
+            "mode": "LOCKED",
+            "direction": "NONE",
+            "speed": "NONE",
+            "distance": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-03"
+          },
+          "camera_end": "仍在南侧，约65mm等效，镜头高1.25米。",
+          "focus_strategy": "主表演者脸与本镜关键手部同焦，不追加焦点变化。",
+          "blocking": "宁先看手边铅笔，再抬眼；不微笑、不落泪。",
+          "performance_beats": [
+            "0–2秒：低头。",
+            "2–6秒：抬眼并追问。",
+            "6–8秒：等答复。"
+          ],
+          "dialogue": [
+            {
+              "speaker": "NING",
+              "text": "那你为什么让我去买新灯？",
+              "verbatim": true
+            }
+          ],
+          "visible_text": [],
+          "audio": {
+            "status": "PROJECT_ORIGINAL_ONLY",
+            "instruction": "按锁定原文收录对白；保留现场动作声，不用新增音乐提示人物结论。",
+            "source_refs": [
+              "locked-script.md#BEAT-03"
+            ]
+          },
+          "edit_in": "从舟完成坦白后切入。",
+          "edit_out": "宁目光停在舟身上后切回。",
+          "continuity_in": "宁持笔，仍坐左端。",
+          "continuity_out": "宁看舟，没有记录预约。",
+          "constraints": {
+            "must_hold": [
+              "提问者听完后低头看铅笔，再抬头追问购买新灯的原因。"
+            ],
+            "changes_here": [
+              "宁看舟，没有记录预约。"
+            ],
+            "must_not_appear": [
+              "BEAT-02的“是我先打的电话”这句之前，不插电话回忆、来电画面或宁预先知道真相的反应。",
+              "参考作品的角色、台词、服装或标志性构图"
+            ]
+          },
+          "ai_complexity": {
+            "camera": "LOW",
+            "performance": "MEDIUM",
+            "continuity": "MEDIUM",
+            "reasons": [
+              "机位固定，保留明确动作端点；表演节奏仍待围读。"
+            ]
+          },
+          "fallback": null,
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "本原创场景人物、环境与可见道具"
+              ]
+            },
+            "composite_layers": [],
+            "state_versions": [],
+            "continuity_owners": {
+              "identity": "BASE_GENERATION",
+              "surface": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "environment": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "decision": "NONE",
+              "action": ""
+            }
+          },
+          "reference_plan": {
+            "required": false,
+            "reference_type": "NONE",
+            "reference_id": null,
+            "scope": "",
+            "inherit": [],
+            "exclude": [],
+            "status": "NOT_REQUIRED",
+            "rights_status": "NOT_APPLICABLE"
+          },
+          "visual_style_module": "UNRESOLVED",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "confidence": "LOW"
+        },
+        {
+          "shot_id": "EP34-SC01-SH04",
+          "order": 4,
+          "duration_seconds": 7,
+          "narrative_goal": "并行动作已经完成，此时才给舟单人答复；从共享几何进入同侧单人景，把变化留给话和身体。",
+          "source_refs": [
+            "locked-script.md#BEAT-04"
+          ],
+          "allowed_characters": [
+            "NING",
+            "ZHOU"
+          ],
+          "shot_type": "舟的中近景",
+          "framing": "舟腰上中近景，保留膝上手部；宁在画外左，仍处于既定同侧轴线。",
+          "camera_angle": "平视",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "镜内动作由人物承担；固定机位让指定关系可读。"
+          },
+          "camera_start": "南侧偏宁肩外的新单人机位，约50mm等效；不复用第二镜的双人构图。",
+          "camera_path": {
+            "mode": "LOCKED",
+            "direction": "NONE",
+            "speed": "NONE",
+            "distance": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-04"
+          },
+          "camera_end": "南侧偏宁肩外的新单人机位，约50mm等效；不复用第二镜的双人构图。",
+          "focus_strategy": "主表演者脸与本镜关键手部同焦，不追加焦点变化。",
+          "blocking": "舟手留膝上，直面宁回答，身体不前倾求原谅。",
+          "performance_beats": [
+            "0–5秒：说完整句。",
+            "5–7秒：把答复留在画面里。"
+          ],
+          "dialogue": [
+            {
+              "speaker": "ZHOU",
+              "text": "我以为买回来，就舍不得关了。",
+              "verbatim": true
+            }
+          ],
+          "visible_text": [],
+          "audio": {
+            "status": "PROJECT_ORIGINAL_ONLY",
+            "instruction": "按锁定原文收录对白；保留现场动作声，不用新增音乐提示人物结论。",
+            "source_refs": [
+              "locked-script.md#BEAT-04"
+            ]
+          },
+          "edit_in": "接宁的等待。",
+          "edit_out": "答复落下两秒后切回双人。",
+          "continuity_in": "舟双手在膝上。",
+          "continuity_out": "双方知道真实动机。",
+          "constraints": {
+            "must_hold": [
+              "答话者承认自己曾寄望买灯改变关店决定。"
+            ],
+            "changes_here": [
+              "双方知道真实动机。"
+            ],
+            "must_not_appear": [
+              "BEAT-02的“是我先打的电话”这句之前，不插电话回忆、来电画面或宁预先知道真相的反应。",
+              "参考作品的角色、台词、服装或标志性构图"
+            ]
+          },
+          "ai_complexity": {
+            "camera": "LOW",
+            "performance": "MEDIUM",
+            "continuity": "MEDIUM",
+            "reasons": [
+              "机位固定，保留明确动作端点；表演节奏仍待围读。"
+            ]
+          },
+          "fallback": null,
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "本原创场景人物、环境与可见道具"
+              ]
+            },
+            "composite_layers": [],
+            "state_versions": [],
+            "continuity_owners": {
+              "identity": "BASE_GENERATION",
+              "surface": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "environment": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "decision": "NONE",
+              "action": ""
+            }
+          },
+          "reference_plan": {
+            "required": false,
+            "reference_type": "NONE",
+            "reference_id": null,
+            "scope": "",
+            "inherit": [],
+            "exclude": [],
+            "status": "NOT_REQUIRED",
+            "rights_status": "NOT_APPLICABLE"
+          },
+          "visual_style_module": "UNRESOLVED",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "confidence": "LOW"
+        },
+        {
+          "shot_id": "EP34-SC01-SH05",
+          "order": 5,
+          "duration_seconds": 4,
+          "narrative_goal": "用停止安排工作的动作结束，不添加和解；空着的距离承接下一场。",
+          "source_refs": [
+            "locked-script.md#BEAT-05"
+          ],
+          "allowed_characters": [
+            "NING",
+            "ZHOU"
+          ],
+          "shot_type": "双人中景",
+          "framing": "复用开场；留出宁与舟之间空桌面。",
+          "camera_angle": "平视",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "镜内动作由人物承担；固定机位让指定关系可读。"
+          },
+          "camera_start": "同第一镜。",
+          "camera_path": {
+            "mode": "LOCKED",
+            "direction": "NONE",
+            "speed": "NONE",
+            "distance": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-05"
+          },
+          "camera_end": "同第一镜。",
+          "focus_strategy": "两位人物及必要手部保持可读的景深；不以虚焦隐藏关键并行动作。",
+          "blocking": "宁把笔放回笔筒；舟不动。",
+          "performance_beats": [
+            "0–2秒：笔回筒。",
+            "2–4秒：二人留在画中。"
+          ],
+          "dialogue": [],
+          "visible_text": [],
+          "audio": {
+            "status": "PROJECT_ORIGINAL_ONLY",
+            "instruction": "保留本场现场底声与可见动作声；不添加指示情绪或因果的声音。",
+            "source_refs": [
+              "locked-script.md#BEAT-05"
+            ]
+          },
+          "edit_in": "答复后回共享关系。",
+          "edit_out": "笔回筒后停两秒，硬切下一场。",
+          "continuity_in": "宁持笔。",
+          "continuity_out": "铅笔回筒，预约未继续。",
+          "constraints": {
+            "must_hold": [
+              "提问者把铅笔放回笔筒。两人都留在原位，没有继续预约，也没有承诺留下。"
+            ],
+            "changes_here": [
+              "铅笔回筒，预约未继续。"
+            ],
+            "must_not_appear": [
+              "BEAT-02的“是我先打的电话”这句之前，不插电话回忆、来电画面或宁预先知道真相的反应。",
+              "参考作品的角色、台词、服装或标志性构图"
+            ]
+          },
+          "ai_complexity": {
+            "camera": "LOW",
+            "performance": "MEDIUM",
+            "continuity": "MEDIUM",
+            "reasons": [
+              "机位固定，保留明确动作端点；表演节奏仍待围读。"
+            ]
+          },
+          "fallback": null,
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "本原创场景人物、环境与可见道具"
+              ]
+            },
+            "composite_layers": [],
+            "state_versions": [],
+            "continuity_owners": {
+              "identity": "BASE_GENERATION",
+              "surface": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "environment": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "decision": "NONE",
+              "action": ""
+            }
+          },
+          "reference_plan": {
+            "required": false,
+            "reference_type": "NONE",
+            "reference_id": null,
+            "scope": "",
+            "inherit": [],
+            "exclude": [],
+            "status": "NOT_REQUIRED",
+            "rights_status": "NOT_APPLICABLE"
+          },
+          "visual_style_module": "UNRESOLVED",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "confidence": "LOW"
+        }
+      ]
+    }
+  ],
+  "source_coverage": [
+    {
+      "source_ref": "locked-script.md#BEAT-01",
+      "description": "提问者和答话者隔着工作台坐定。提问者问次日是否继续接预约。",
+      "status": "covered",
+      "covered_by": [
+        "EP34-SC01-SH01"
+      ],
+      "notes": "逐拍覆盖；对白原文一致，节奏与实际拍摄效果待人工审看。"
+    },
+    {
+      "source_ref": "locked-script.md#BEAT-02",
+      "description": "答话者看门、捏松围裙、放手并坦白；与此同时，提问者缓慢折起预约纸。答话者在两句之间看见折纸，才抬头说出自己主动打电话。",
+      "status": "covered",
+      "covered_by": [
+        "EP34-SC01-SH02"
+      ],
+      "notes": "逐拍覆盖；对白原文一致，节奏与实际拍摄效果待人工审看。"
+    },
+    {
+      "source_ref": "locked-script.md#BEAT-03",
+      "description": "提问者听完后低头看铅笔，再抬头追问购买新灯的原因。",
+      "status": "covered",
+      "covered_by": [
+        "EP34-SC01-SH03"
+      ],
+      "notes": "逐拍覆盖；对白原文一致，节奏与实际拍摄效果待人工审看。"
+    },
+    {
+      "source_ref": "locked-script.md#BEAT-04",
+      "description": "答话者承认自己曾寄望买灯改变关店决定。",
+      "status": "covered",
+      "covered_by": [
+        "EP34-SC01-SH04"
+      ],
+      "notes": "逐拍覆盖；对白原文一致，节奏与实际拍摄效果待人工审看。"
+    },
+    {
+      "source_ref": "locked-script.md#BEAT-05",
+      "description": "提问者把铅笔放回笔筒。两人都留在原位，没有继续预约，也没有承诺留下。",
+      "status": "covered",
+      "covered_by": [
+        "EP34-SC01-SH05"
+      ],
+      "notes": "逐拍覆盖；对白原文一致，节奏与实际拍摄效果待人工审看。"
+    },
+    {
+      "source_ref": "locked-script.md#BEAT-06",
+      "description": "折纸和坦白在同一时段发生；折纸完成在坦白句尾，不能重排成坦白之后的单独反应。",
+      "status": "covered",
+      "covered_by": [
+        "EP34-SC01-SH02"
+      ],
+      "notes": "逐拍覆盖；对白原文一致，节奏与实际拍摄效果待人工审看。"
+    }
+  ],
+  "unresolved": [
+    "本样例为原创作者固定文本，尚未获用户导演审看批准。",
+    "时长为剪辑设计预算，未做真人围读或实拍测试。",
+    "焦段与机位是本原创场景的设计选择，不是参考影片摄影参数。"
+  ]
+}

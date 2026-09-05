@@ -1,0 +1,899 @@
+{
+  "schema_version": "director-ir/0.2",
+  "project_id": "DIRECTORMIND-ORIGINAL-PILOT",
+  "episode_id": "EP32",
+  "source_script": "examples/director-skill-pilot/02-doorway/locked-script.md",
+  "target_duration_seconds": 48,
+  "duration_tolerance_seconds": 0,
+  "aspect_ratio": "16:9",
+  "status": "HUMAN_REVIEW_PENDING",
+  "execution_medium": "AI_PHOTOREAL_HUMAN",
+  "dialogue_must_be_verbatim": true,
+  "generation_authorized": false,
+  "publication_authorized": false,
+  "director_grammar_path": "research/grammar/director_grammar_v0.2.json",
+  "visual_style_pack_path": null,
+  "source_facts": {
+    "source_unit_count": 4,
+    "continuity_output": [
+      "梅把椅子移开，余在敞开的门内停住；两人间距约3米，路径畅通。"
+    ],
+    "cross_episode_state_in": [],
+    "cross_episode_state_out": []
+  },
+  "scenes": [
+    {
+      "scene_id": "EP32-SC01",
+      "source_scene": "locked-script.md",
+      "title": "门还开着",
+      "duration_seconds": 48,
+      "location": "社区活动室",
+      "time_of_day": "傍晚",
+      "allowed_characters": [
+        "MEI",
+        "YU"
+      ],
+      "narrative_goal": "先让争执由两人的可见反应交接，再让一次走向门口的行动改变谈话关系。",
+      "dramatic_engine": {
+        "goal": "先让争执由两人的可见反应交接，再让一次走向门口的行动改变谈话关系。",
+        "objectives": [
+          "留任者希望对方当面说清退出原因",
+          "离开者想结束谈话并离开"
+        ],
+        "obstacle": "双方都把先让步视为承认全部责任",
+        "stakes": "共同负责的活动是否还可能继续合作",
+        "tactic_change": "坐着争论转为走到出口，留任者主动移开阻挡",
+        "subtext": "让出离开的路不等于结束关系；留下是尚未作出的决定。"
+      },
+      "pov": {
+        "character": "MEI",
+        "identification_level": "靠近梅，但同时保留余是否离开的可见选择。"
+      },
+      "audience_information": {
+        "locked_fact_ids": [
+          "FACT-01",
+          "FACT-02",
+          "FACT-03",
+          "FACT-04"
+        ],
+        "knowledge_progression": "开场知道余要退出；不能在余到门口前暗示她已经决定留下。",
+        "forbidden_early_disclosures": [
+          "不补拥抱、不补回忆、不把最后停步写成答应留任。"
+        ]
+      },
+      "spatial_plan": {
+        "geometry": "两椅隔1.4米，梅左余右，北墙门在右后方；梅的椅子处在通往门口的直线上。",
+        "primary_axis": "开场两椅连线，摄影机在南侧；门口全景可见移动全过程，在新端点后才恢复单人机位。",
+        "close_positions": "梅把椅子移开，余在敞开的门内停住；两人间距约3米，路径畅通。"
+      },
+      "routing_input": {
+        "schema_version": "director-routing-input/0.1",
+        "case_id": "PILOT-DOORWAY",
+        "dramatic_structure": {
+          "goal": "先让争执由两人的可见反应交接，再让一次走向门口的行动改变谈话关系。",
+          "objectives": [
+            "留任者希望对方当面说清退出原因",
+            "离开者想结束谈话并离开"
+          ],
+          "obstacle": "双方都把先让步视为承认全部责任",
+          "stakes": "共同负责的活动是否还可能继续合作",
+          "tactic_change": "坐着争论转为走到出口，留任者主动移开阻挡",
+          "subtext": "让出离开的路不等于结束关系；留下是尚未作出的决定。"
+        },
+        "locked_facts": [
+          {
+            "fact_id": "FACT-01",
+            "fact_type": "stable_axis",
+            "value": "两名交谈者坐在原位相对而谈；一个人的掌心松开后，另一个人才把手从椅背移开。",
+            "status": "LOCKED",
+            "source_ref": "locked-script.md#BEAT-01"
+          },
+          {
+            "fact_id": "FACT-02",
+            "fact_type": "visible_state_progression",
+            "value": "第一人松开掌心后，第二人放开椅背并改口，请对方自己解释；两人此时仍坐定。",
+            "status": "LOCKED",
+            "source_ref": "locked-script.md#BEAT-02"
+          },
+          {
+            "fact_id": "FACT-03",
+            "fact_type": "spatial_change",
+            "value": "离开者起身，绕过另一人的椅子走到门口，停在门内，没有离开房间。",
+            "status": "LOCKED",
+            "source_ref": "locked-script.md#BEAT-03"
+          },
+          {
+            "fact_id": "FACT-04",
+            "fact_type": "counterpart_relation",
+            "value": "另一人留在房间内，把挡路的椅子挪开；门口的人看着她，出口畅通，但尚未离开。",
+            "status": "LOCKED",
+            "source_ref": "locked-script.md#BEAT-04"
+          }
+        ],
+        "scene_problem": {
+          "primary": "RELATIONSHIP_FRACTURE",
+          "secondary": [
+            "DIALOGUE_POWER_TRANSFER"
+          ],
+          "status": "LOCKED"
+        },
+        "routing_signals": [
+          "material_spatial_change",
+          "counterpart_relation_context_locked",
+          "stationary_pair_state_progression",
+          "stable_two_side_axis"
+        ],
+        "unknown_fact_types": [],
+        "subject_matter_tags": [],
+        "priority_constraints": [],
+        "rights_boundary": {
+          "contains_private_script": false,
+          "contains_reference_surface": false,
+          "project_original": true
+        }
+      },
+      "routing_result": {
+        "schema_version": "director-routing-result/0.1",
+        "case_id": "PILOT-DOORWAY",
+        "status": "SELECTED",
+        "scene_problem": "RELATIONSHIP_FRACTURE",
+        "applied_constraint_ids": [
+          "PC-DIALOGUE-TEXT-LOCK",
+          "PC-LOCKED-STORY-AUTHORITY",
+          "PC-MODEL-INDEPENDENT-IR",
+          "PC-ORIGINAL-ASSETS",
+          "PC-SOURCE-COVERAGE",
+          "SC-AUTHORIZATION-GATES",
+          "SC-HIGH-RISK-FALLBACK",
+          "SC-HUMAN-REVIEW",
+          "SC-NO-SUBJECT-SHORTCUT",
+          "SC-NO-SURFACE-COPY",
+          "SC-NO-UNKNOWN-PROMOTION"
+        ],
+        "eligible_rule_ids": [
+          "DR-AFTERMATH-BY-NEXT-ACTION",
+          "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+          "DR-MOBILE-ATTENTION-HANDOFF",
+          "DR-PERFORMANCE-OWNER-HOLD",
+          "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+          "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+          "DR-STABLE-AXIS-STATE-LED-HOLDS"
+        ],
+        "selected_rules": [
+          {
+            "rule_id": "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE",
+            "selection_reason_codes": [
+              "PRIMARY_PROBLEM_MATCH",
+              "REQUIRED_FACTS_LOCKED",
+              "RUNTIME_AUTHORIZED",
+              "TRIGGER_MATCH"
+            ],
+            "matched_fact_ids": [
+              "FACT-03",
+              "FACT-04"
+            ]
+          },
+          {
+            "rule_id": "DR-STABLE-AXIS-STATE-LED-HOLDS",
+            "selection_reason_codes": [
+              "REQUIRED_FACTS_LOCKED",
+              "RUNTIME_AUTHORIZED",
+              "SECONDARY_PROBLEM_MATCH",
+              "TRIGGER_MATCH"
+            ],
+            "matched_fact_ids": [
+              "FACT-01",
+              "FACT-02"
+            ]
+          }
+        ],
+        "rejected_rules": [
+          {
+            "rule_id": "DR-AFTERMATH-BY-NEXT-ACTION",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "next_action_states",
+              "visible_result"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          },
+          {
+            "rule_id": "DR-CONSEQUENTIAL-ACTION-VISIBLE-STATE-CHAIN",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "cause_effect_chain",
+              "one_to_many_response",
+              "safe_resolution"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          },
+          {
+            "rule_id": "DR-MOBILE-ATTENTION-HANDOFF",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "connected_geography",
+              "current_attention_state",
+              "next_attention_owner"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          },
+          {
+            "rule_id": "DR-PERFORMANCE-OWNER-HOLD",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "performance_progression"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          },
+          {
+            "rule_id": "DR-SHARED-FRAME-FOR-RELATION-ENDPOINT",
+            "rejection_reason_codes": [
+              "REQUIRED_FACT_MISSING",
+              "SCENE_PROBLEM_MISMATCH",
+              "TRIGGER_NOT_MET"
+            ],
+            "matched_not_applicable_signal_ids": [],
+            "missing_fact_types": [
+              "distance_change",
+              "relation_endpoint",
+              "time_structure"
+            ],
+            "blocking_fact_ids": [],
+            "conflicting_rule_ids": []
+          }
+        ],
+        "conflict_trace": [],
+        "selection_count": 2,
+        "ir_handoff": "CONTINUE_WITH_SELECTED_RULES",
+        "human_review_status": "HUMAN_REVIEW_PENDING",
+        "rights_boundary": {
+          "surface_copy_allowed": false,
+          "subject_matter_used_for_selection": false
+        }
+      },
+      "shots": [
+        {
+          "shot_id": "EP32-SC01-SH01",
+          "order": 1,
+          "duration_seconds": 7,
+          "narrative_goal": "先交代椅子为什么会成为之后的障碍，让后面的挪椅子有意义。",
+          "source_refs": [
+            "locked-script.md#BEAT-01"
+          ],
+          "allowed_characters": [
+            "MEI",
+            "YU"
+          ],
+          "shot_type": "双人中景",
+          "framing": "梅左余右，右后方门与挡路椅子都可见。",
+          "camera_angle": "平视",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "镜内动作由人物承担；固定机位让指定关系可读。"
+          },
+          "camera_start": "南侧35mm等效，镜头高1.2米，平视。",
+          "camera_path": {
+            "mode": "LOCKED",
+            "direction": "NONE",
+            "speed": "NONE",
+            "distance": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-01"
+          },
+          "camera_end": "南侧35mm等效，镜头高1.2米，平视。",
+          "focus_strategy": "两位人物及必要手部保持可读的景深；不以虚焦隐藏关键并行动作。",
+          "blocking": "梅手抓椅背；余双手合拢，身体朝梅。",
+          "performance_beats": [
+            "0–2秒：建立坐姿与门。",
+            "2–6秒：梅质问。",
+            "6–7秒：余手开始松开。"
+          ],
+          "dialogue": [
+            {
+              "speaker": "MEI",
+              "text": "你把钥匙留下，就算说完了？",
+              "verbatim": true
+            }
+          ],
+          "visible_text": [],
+          "audio": {
+            "status": "PROJECT_ORIGINAL_ONLY",
+            "instruction": "按锁定原文收录对白；保留现场动作声，不用新增音乐提示人物结论。",
+            "source_refs": [
+              "locked-script.md#BEAT-01"
+            ]
+          },
+          "edit_in": "直接开在二人坐定的关系里。",
+          "edit_out": "余掌心开始松开时切她。",
+          "continuity_in": "梅抓椅背，余手合拢。",
+          "continuity_out": "余开始摊手，两人未移位。",
+          "constraints": {
+            "must_hold": [
+              "两名交谈者坐在原位相对而谈；一个人的掌心松开后，另一个人才把手从椅背移开。"
+            ],
+            "changes_here": [
+              "余开始摊手，两人未移位。"
+            ],
+            "must_not_appear": [
+              "不补拥抱、不补回忆、不把最后停步写成答应留任。",
+              "参考作品的角色、台词、服装或标志性构图"
+            ]
+          },
+          "ai_complexity": {
+            "camera": "LOW",
+            "performance": "MEDIUM",
+            "continuity": "MEDIUM",
+            "reasons": [
+              "机位固定，保留明确动作端点；表演节奏仍待围读。"
+            ]
+          },
+          "fallback": null,
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "本原创场景人物、环境与可见道具"
+              ]
+            },
+            "composite_layers": [],
+            "state_versions": [],
+            "continuity_owners": {
+              "identity": "BASE_GENERATION",
+              "surface": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "environment": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "decision": "NONE",
+              "action": ""
+            }
+          },
+          "reference_plan": {
+            "required": true,
+            "reference_type": "SHOT_GOLDEN",
+            "reference_id": "REF-PILOT-DOORWAY-GEOMETRY",
+            "scope": "仅计划本原创场景开场几何与人物位置，尚未制作图像。",
+            "inherit": [
+              "本场人物位置",
+              "左右关系",
+              "原创道具状态"
+            ],
+            "exclude": [
+              "参考电影画面",
+              "未经剧本允许的表情、动作和信息"
+            ],
+            "status": "PLANNED",
+            "rights_status": "PROJECT_ORIGINAL"
+          },
+          "visual_style_module": "UNRESOLVED",
+          "evidence_rule_ids": [],
+          "evidence_status": "HYPOTHESIS",
+          "confidence": "LOW"
+        },
+        {
+          "shot_id": "EP32-SC01-SH02",
+          "order": 2,
+          "duration_seconds": 8,
+          "narrative_goal": "按可见状态接话，不在每个短句上改机位；摊手从防守变成让对方听。",
+          "source_refs": [
+            "locked-script.md#BEAT-01"
+          ],
+          "allowed_characters": [
+            "MEI",
+            "YU"
+          ],
+          "shot_type": "余的中近景",
+          "framing": "余的掌心与面部同框，视线向画外左。",
+          "camera_angle": "平视",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "镜内动作由人物承担；固定机位让指定关系可读。"
+          },
+          "camera_start": "南侧50mm等效，保持门在背景右边。",
+          "camera_path": {
+            "mode": "LOCKED",
+            "direction": "NONE",
+            "speed": "NONE",
+            "distance": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-01"
+          },
+          "camera_end": "南侧50mm等效，保持门在背景右边。",
+          "focus_strategy": "主表演者脸与本镜关键手部同焦，不追加焦点变化。",
+          "blocking": "余摊手后说话，坐姿保持。",
+          "performance_beats": [
+            "0–2秒：摊手完成。",
+            "2–6秒：回答。",
+            "6–8秒：看着梅。"
+          ],
+          "dialogue": [
+            {
+              "speaker": "YU",
+              "text": "你每次都先替我说完。",
+              "verbatim": true
+            }
+          ],
+          "visible_text": [],
+          "audio": {
+            "status": "PROJECT_ORIGINAL_ONLY",
+            "instruction": "按锁定原文收录对白；保留现场动作声，不用新增音乐提示人物结论。",
+            "source_refs": [
+              "locked-script.md#BEAT-01"
+            ]
+          },
+          "edit_in": "接同一个摊手动作。",
+          "edit_out": "话后眼神落稳，切梅的手与脸。",
+          "continuity_in": "手由合到开。",
+          "continuity_out": "余掌心松开。",
+          "constraints": {
+            "must_hold": [
+              "两名交谈者坐在原位相对而谈；一个人的掌心松开后，另一个人才把手从椅背移开。"
+            ],
+            "changes_here": [
+              "余掌心松开。"
+            ],
+            "must_not_appear": [
+              "不补拥抱、不补回忆、不把最后停步写成答应留任。",
+              "参考作品的角色、台词、服装或标志性构图"
+            ]
+          },
+          "ai_complexity": {
+            "camera": "LOW",
+            "performance": "MEDIUM",
+            "continuity": "MEDIUM",
+            "reasons": [
+              "机位固定，保留明确动作端点；表演节奏仍待围读。"
+            ]
+          },
+          "fallback": null,
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "本原创场景人物、环境与可见道具"
+              ]
+            },
+            "composite_layers": [],
+            "state_versions": [],
+            "continuity_owners": {
+              "identity": "BASE_GENERATION",
+              "surface": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "environment": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "decision": "NONE",
+              "action": ""
+            }
+          },
+          "reference_plan": {
+            "required": false,
+            "reference_type": "NONE",
+            "reference_id": null,
+            "scope": "",
+            "inherit": [],
+            "exclude": [],
+            "status": "NOT_REQUIRED",
+            "rights_status": "NOT_APPLICABLE"
+          },
+          "visual_style_module": "UNRESOLVED",
+          "evidence_rule_ids": [
+            "DR-STABLE-AXIS-STATE-LED-HOLDS"
+          ],
+          "evidence_status": "HYPOTHESIS",
+          "confidence": "MEDIUM"
+        },
+        {
+          "shot_id": "EP32-SC01-SH03",
+          "order": 3,
+          "duration_seconds": 7,
+          "narrative_goal": "宁可让松手占三秒，也不插门口空镜；这里权力变化发生在梅放弃代答。",
+          "source_refs": [
+            "locked-script.md#BEAT-02"
+          ],
+          "allowed_characters": [
+            "MEI",
+            "YU"
+          ],
+          "shot_type": "梅的中近景",
+          "framing": "手搭椅背的关系和面部同框；画外余在右。",
+          "camera_angle": "平视",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "镜内动作由人物承担；固定机位让指定关系可读。"
+          },
+          "camera_start": "南侧相对机位50mm等效，保持开场左右关系。",
+          "camera_path": {
+            "mode": "LOCKED",
+            "direction": "NONE",
+            "speed": "NONE",
+            "distance": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-02"
+          },
+          "camera_end": "南侧相对机位50mm等效，保持开场左右关系。",
+          "focus_strategy": "主表演者脸与本镜关键手部同焦，不追加焦点变化。",
+          "blocking": "梅放开椅背，再改口。",
+          "performance_beats": [
+            "0–3秒：松手。",
+            "3–5秒：短句。",
+            "5–7秒：等余。"
+          ],
+          "dialogue": [
+            {
+              "speaker": "MEI",
+              "text": "那你说。",
+              "verbatim": true
+            }
+          ],
+          "visible_text": [],
+          "audio": {
+            "status": "PROJECT_ORIGINAL_ONLY",
+            "instruction": "按锁定原文收录对白；保留现场动作声，不用新增音乐提示人物结论。",
+            "source_refs": [
+              "locked-script.md#BEAT-02"
+            ]
+          },
+          "edit_in": "余的状态完成后接梅。",
+          "edit_out": "余在画外起身发出衣料响动时转共享全景，起身仍要在下一镜看见。",
+          "continuity_in": "梅抓椅背。",
+          "continuity_out": "梅手离椅背；余尚未离开座位。",
+          "constraints": {
+            "must_hold": [
+              "第一人松开掌心后，第二人放开椅背并改口，请对方自己解释；两人此时仍坐定。"
+            ],
+            "changes_here": [
+              "梅手离椅背；余尚未离开座位。"
+            ],
+            "must_not_appear": [
+              "不补拥抱、不补回忆、不把最后停步写成答应留任。",
+              "参考作品的角色、台词、服装或标志性构图"
+            ]
+          },
+          "ai_complexity": {
+            "camera": "LOW",
+            "performance": "MEDIUM",
+            "continuity": "MEDIUM",
+            "reasons": [
+              "机位固定，保留明确动作端点；表演节奏仍待围读。"
+            ]
+          },
+          "fallback": null,
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "本原创场景人物、环境与可见道具"
+              ]
+            },
+            "composite_layers": [],
+            "state_versions": [],
+            "continuity_owners": {
+              "identity": "BASE_GENERATION",
+              "surface": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "environment": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "decision": "NONE",
+              "action": ""
+            }
+          },
+          "reference_plan": {
+            "required": false,
+            "reference_type": "NONE",
+            "reference_id": null,
+            "scope": "",
+            "inherit": [],
+            "exclude": [],
+            "status": "NOT_REQUIRED",
+            "rights_status": "NOT_APPLICABLE"
+          },
+          "visual_style_module": "UNRESOLVED",
+          "evidence_rule_ids": [
+            "DR-STABLE-AXIS-STATE-LED-HOLDS"
+          ],
+          "evidence_status": "HYPOTHESIS",
+          "confidence": "MEDIUM"
+        },
+        {
+          "shot_id": "EP32-SC01-SH04",
+          "order": 4,
+          "duration_seconds": 15,
+          "narrative_goal": "人物从可争论的距离走到可离开的距离；全景重建这个事实，不能靠两个新特写让观众猜位置。",
+          "source_refs": [
+            "locked-script.md#BEAT-03"
+          ],
+          "allowed_characters": [
+            "MEI",
+            "YU"
+          ],
+          "shot_type": "门、两人和路径的双人全景",
+          "framing": "梅左前，余由右侧椅子走向右后门口；始终容纳两人和被绕过的椅子。",
+          "camera_angle": "平视",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "镜内动作由人物承担；固定机位让指定关系可读。"
+          },
+          "camera_start": "同南侧后退约1.5米，28–35mm等效，预留门口端点。",
+          "camera_path": {
+            "mode": "LOCKED",
+            "direction": "NONE",
+            "speed": "NONE",
+            "distance": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-03"
+          },
+          "camera_end": "同南侧后退约1.5米，28–35mm等效，预留门口端点。",
+          "focus_strategy": "两位人物及必要手部保持可读的景深；不以虚焦隐藏关键并行动作。",
+          "blocking": "余在镜内起身、绕椅、走到门内停；梅留在原椅旁。",
+          "performance_beats": [
+            "0–3秒：余起身。",
+            "3–8秒：绕椅走向门。",
+            "8–10秒：门内停。",
+            "10–13秒：说话。",
+            "13–15秒：两人端点停住。"
+          ],
+          "dialogue": [
+            {
+              "speaker": "YU",
+              "text": "我今天没有力气了。",
+              "verbatim": true
+            }
+          ],
+          "visible_text": [],
+          "audio": {
+            "status": "PROJECT_ORIGINAL_ONLY",
+            "instruction": "按锁定原文收录对白；保留现场动作声，不用新增音乐提示人物结论。",
+            "source_refs": [
+              "locked-script.md#BEAT-03"
+            ]
+          },
+          "edit_in": "切在起身开始前，完整保留移动。",
+          "edit_out": "余停稳且一句说完后，同机位不中断进入下一叙事段，注意力转向梅挪椅子。",
+          "continuity_in": "余仍坐着，梅手离椅背。",
+          "continuity_out": "余停在门内，梅仍靠椅；门路尚被椅子占着。",
+          "constraints": {
+            "must_hold": [
+              "离开者起身，绕过另一人的椅子走到门口，停在门内，没有离开房间。"
+            ],
+            "changes_here": [
+              "余停在门内，梅仍靠椅；门路尚被椅子占着。"
+            ],
+            "must_not_appear": [
+              "不补拥抱、不补回忆、不把最后停步写成答应留任。",
+              "参考作品的角色、台词、服装或标志性构图"
+            ]
+          },
+          "ai_complexity": {
+            "camera": "LOW",
+            "performance": "MEDIUM",
+            "continuity": "HIGH",
+            "reasons": [
+              "位置或物体状态关系是本镜判断依据，需要固定参考。"
+            ]
+          },
+          "fallback": "改为固定侧面宽双人镜头，缩短原场景内两椅到门的拍摄布局但保留先绕椅、再到门口的顺序和端点；整段不使用跟拍或跨轴拼接。",
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "本原创场景人物、环境与可见道具"
+              ]
+            },
+            "composite_layers": [],
+            "state_versions": [],
+            "continuity_owners": {
+              "identity": "BASE_GENERATION",
+              "surface": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "environment": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "decision": "EDIT_RESTRUCTURE",
+              "action": "改为固定侧面宽双人镜头，缩短原场景内两椅到门的拍摄布局但保留先绕椅、再到门口的顺序和端点；整段不使用跟拍或跨轴拼接。"
+            }
+          },
+          "reference_plan": {
+            "required": false,
+            "reference_type": "NONE",
+            "reference_id": null,
+            "scope": "",
+            "inherit": [],
+            "exclude": [],
+            "status": "NOT_REQUIRED",
+            "rights_status": "NOT_APPLICABLE"
+          },
+          "visual_style_module": "UNRESOLVED",
+          "evidence_rule_ids": [
+            "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+          ],
+          "evidence_status": "HYPOTHESIS",
+          "confidence": "MEDIUM"
+        },
+        {
+          "shot_id": "EP32-SC01-SH05",
+          "order": 5,
+          "duration_seconds": 11,
+          "narrative_goal": "用让出通道给余真正选择；不切余的孤立眼泪，把出口和梅同时留在画中。",
+          "source_refs": [
+            "locked-script.md#BEAT-04"
+          ],
+          "allowed_characters": [
+            "MEI",
+            "YU"
+          ],
+          "shot_type": "同侧宽双人镜头",
+          "framing": "门口余在右后，梅和椅子在左前；可见完整挪椅路径。",
+          "camera_angle": "平视",
+          "camera_motion": {
+            "mode": "LOCKED",
+            "reason": "镜内动作由人物承担；固定机位让指定关系可读。"
+          },
+          "camera_start": "复用上一镜机位；通过表演节奏承接，不换到反面。",
+          "camera_path": {
+            "mode": "LOCKED",
+            "direction": "NONE",
+            "speed": "NONE",
+            "distance": "NONE",
+            "stability": "LOCKED",
+            "trigger": "FACT-04"
+          },
+          "camera_end": "复用上一镜机位；通过表演节奏承接，不换到反面。",
+          "focus_strategy": "两位人物及必要手部保持可读的景深；不以虚焦隐藏关键并行动作。",
+          "blocking": "梅把椅子挪到左墙，说话；余回头，仍在门内。",
+          "performance_beats": [
+            "0–4秒：梅起身挪椅。",
+            "4–7秒：梅说话。",
+            "7–9秒：余回头。",
+            "9–11秒：留出畅通出口与未作的决定。"
+          ],
+          "dialogue": [
+            {
+              "speaker": "MEI",
+              "text": "我没要你今天留下。",
+              "verbatim": true
+            }
+          ],
+          "visible_text": [],
+          "audio": {
+            "status": "PROJECT_ORIGINAL_ONLY",
+            "instruction": "按锁定原文收录对白；保留现场动作声，不用新增音乐提示人物结论。",
+            "source_refs": [
+              "locked-script.md#BEAT-04"
+            ]
+          },
+          "edit_in": "同一空间连续承接，实际拍摄可连拍与上一镜合成26秒段，剪辑保留决策端点。",
+          "edit_out": "余回头停两秒，硬切；不补走回去。",
+          "continuity_in": "椅子占路，余停门内。",
+          "continuity_out": "椅子靠墙，出口畅通，余未走未答应。",
+          "constraints": {
+            "must_hold": [
+              "另一人留在房间内，把挡路的椅子挪开；门口的人看着她，出口畅通，但尚未离开。"
+            ],
+            "changes_here": [
+              "椅子靠墙，出口畅通，余未走未答应。"
+            ],
+            "must_not_appear": [
+              "不补拥抱、不补回忆、不把最后停步写成答应留任。",
+              "参考作品的角色、台词、服装或标志性构图"
+            ]
+          },
+          "ai_complexity": {
+            "camera": "LOW",
+            "performance": "MEDIUM",
+            "continuity": "MEDIUM",
+            "reasons": [
+              "机位固定，保留明确动作端点；表演节奏仍待围读。"
+            ]
+          },
+          "fallback": null,
+          "execution_plan": {
+            "base_generation": {
+              "mode": "AI_VIDEO",
+              "owns": [
+                "本原创场景人物、环境与可见道具"
+              ]
+            },
+            "composite_layers": [],
+            "state_versions": [],
+            "continuity_owners": {
+              "identity": "BASE_GENERATION",
+              "surface": "BASE_GENERATION",
+              "prop": "BASE_GENERATION",
+              "environment": "BASE_GENERATION"
+            },
+            "fallback_route": {
+              "decision": "NONE",
+              "action": ""
+            }
+          },
+          "reference_plan": {
+            "required": false,
+            "reference_type": "NONE",
+            "reference_id": null,
+            "scope": "",
+            "inherit": [],
+            "exclude": [],
+            "status": "NOT_REQUIRED",
+            "rights_status": "NOT_APPLICABLE"
+          },
+          "visual_style_module": "UNRESOLVED",
+          "evidence_rule_ids": [
+            "DR-RELATION-RESET-AFTER-SPATIAL-CHANGE"
+          ],
+          "evidence_status": "HYPOTHESIS",
+          "confidence": "MEDIUM"
+        }
+      ]
+    }
+  ],
+  "source_coverage": [
+    {
+      "source_ref": "locked-script.md#BEAT-01",
+      "description": "两名交谈者坐在原位相对而谈；一个人的掌心松开后，另一个人才把手从椅背移开。",
+      "status": "covered",
+      "covered_by": [
+        "EP32-SC01-SH01",
+        "EP32-SC01-SH02"
+      ],
+      "notes": "逐拍覆盖；对白原文一致，节奏与实际拍摄效果待人工审看。"
+    },
+    {
+      "source_ref": "locked-script.md#BEAT-02",
+      "description": "第一人松开掌心后，第二人放开椅背并改口，请对方自己解释；两人此时仍坐定。",
+      "status": "covered",
+      "covered_by": [
+        "EP32-SC01-SH03"
+      ],
+      "notes": "逐拍覆盖；对白原文一致，节奏与实际拍摄效果待人工审看。"
+    },
+    {
+      "source_ref": "locked-script.md#BEAT-03",
+      "description": "离开者起身，绕过另一人的椅子走到门口，停在门内，没有离开房间。",
+      "status": "covered",
+      "covered_by": [
+        "EP32-SC01-SH04"
+      ],
+      "notes": "逐拍覆盖；对白原文一致，节奏与实际拍摄效果待人工审看。"
+    },
+    {
+      "source_ref": "locked-script.md#BEAT-04",
+      "description": "另一人留在房间内，把挡路的椅子挪开；门口的人看着她，出口畅通，但尚未离开。",
+      "status": "covered",
+      "covered_by": [
+        "EP32-SC01-SH05"
+      ],
+      "notes": "逐拍覆盖；对白原文一致，节奏与实际拍摄效果待人工审看。"
+    }
+  ],
+  "unresolved": [
+    "本样例为原创作者固定文本，尚未获用户导演审看批准。",
+    "时长为剪辑设计预算，未做真人围读或实拍测试。",
+    "焦段与机位是本原创场景的设计选择，不是参考影片摄影参数。"
+  ]
+}

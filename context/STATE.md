@@ -4,6 +4,21 @@ Updated: 2026-09-05
 
 ## Current phase
 
+Script-to-storyboard Director Skill is at `FIRST_BATCH_REVIEW` on
+`codex/director-skill-first-batch`, based on the verified PR #5 branch.
+The first delivery contains three original stories, a changed-story boundary
+version and a same-story shooting alternative: five Director IR packages and
+24 shot-planning units, all `HUMAN_REVIEW_PENDING`. It demonstrates three mature
+rules plus one source-observed candidate comparison; it does not claim full
+124-candidate or 16-family directing coverage.
+
+Implementation and remaining scope: `context/DIRECTOR_SKILL_DELIVERY_PLAN.md`.
+Start with `examples/director-skill-pilot/REVIEW_FIRST.md` for readable scripts
+and shot decisions. The original Skill now includes a candidate-comparison
+entrypoint without changing Grammar qualification or mature route authority.
+
+## Preserved verified research baseline
+
 Exhaustive Runtime Integration is `PARTIAL_EVIDENCE_GAP` on `codex/exhaustive-runtime-integration`
 and PR #5. The fixed corpus now contains 33 sources, 31 evidence records, 2,344 Shot/edit units, 124 candidates and 16 families.
 
@@ -73,4 +88,7 @@ Generated `*.scene-evidence.generated.md` files are views, not fact sources. The
 All identified local review is recorded. The remaining 61 candidates require fifteen additions; the four Sound candidates need unrelated auditioned support and same-trigger contrary cases.
 Five families still lack a final runtime effect, so `COMPLETE` remains prohibited.
 
-Next: stop on PR #5 and wait for the user's decision. Do not merge `main` or call the product goal complete.
+Next: obtain directing feedback on the first original sample group before
+propagating its method-card and comparison format across all 124 candidates and
+16 families. The current research baseline remains `PARTIAL_EVIDENCE_GAP`;
+the new Skill delivery is not complete. Do not merge `main`.
